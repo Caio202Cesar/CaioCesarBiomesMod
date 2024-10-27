@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/pomegranate_leaves"},
+      {"model": "caiocesarbiomes:block/pomegranate_flowering_leaves"},
+      {"model": "caiocesarbiomes:block/pomegranate_fruiting_leaves"}
+    ]
+  }}

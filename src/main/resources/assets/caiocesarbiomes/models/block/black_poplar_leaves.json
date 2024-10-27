@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/black_poplar_leaves",
+    "particle": "caiocesarbiomes:block/black_poplar_leaves"
+  }
+}

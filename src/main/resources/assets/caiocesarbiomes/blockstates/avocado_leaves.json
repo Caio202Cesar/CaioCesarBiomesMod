@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/avocado_leaves"},
+      {"model": "caiocesarbiomes:block/avocado_fruiting_leaves"}
+    ]
+  }}

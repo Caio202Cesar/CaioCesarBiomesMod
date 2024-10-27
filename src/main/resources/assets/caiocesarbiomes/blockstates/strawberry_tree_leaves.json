@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/strawberry_tree_leaves"},
+      {"model": "caiocesarbiomes:block/strawberry_tree_flowering_leaves"},
+      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves"}
+    ]
+  }}

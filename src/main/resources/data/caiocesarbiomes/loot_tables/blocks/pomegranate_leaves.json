@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:pomegranate_sapling",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:pomegranate",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

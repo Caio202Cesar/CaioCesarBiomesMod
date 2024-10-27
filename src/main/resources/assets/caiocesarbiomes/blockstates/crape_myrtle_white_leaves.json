@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/crape_myrtle_white_leaves",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/crape_myrtle_leaves",
+        "weight": 2}
+    ]
+  }}

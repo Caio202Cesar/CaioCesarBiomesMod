@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/anis",
+    "particle": "caiocesarbiomes:block/anis"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/gardenia_bush_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/gardenia_bush_bottom"
+    }
+  }
+}

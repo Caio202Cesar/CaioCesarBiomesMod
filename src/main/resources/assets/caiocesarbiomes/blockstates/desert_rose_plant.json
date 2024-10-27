@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/desert_rose_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/desert_rose_bottom"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:oleander_dark_pink_sapling",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:poison_sap",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

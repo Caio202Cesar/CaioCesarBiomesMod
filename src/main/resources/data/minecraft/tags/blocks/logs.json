@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "caiocesarbiomes:holm_oak_log",
+    "caiocesarbiomes:cork_oak_log",
+    "caiocesarbiomes:oleander_log",
+    "caiocesarbiomes:ocotea_forest_log",
+    "caiocesarbiomes:ocotea_jungle_log",
+    "caiocesarbiomes:mesquite_log",
+    "caiocesarbiomes:coast_cottonwood_log",
+    "caiocesarbiomes:fig_log",
+    "caiocesarbiomes:olive_log",
+    "caiocesarbiomes:pomegranate_log",
+    "caiocesarbiomes:erythrina_log",
+    "caiocesarbiomes:tropical_almond_log",
+    "caiocesarbiomes:southern_magnolia_log",
+    "caiocesarbiomes:myrtle_log",
+    "caiocesarbiomes:avocado_log",
+    "caiocesarbiomes:stone_pine_log",
+    "caiocesarbiomes:crabapple_log",
+    "caiocesarbiomes:loquat_log",
+    "caiocesarbiomes:elderberry_log",
+    "caiocesarbiomes:strawberry_tree_log"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/gardenia_top",
+    "particle": "caiocesarbiomes:block/gardenia_top"
+  }
+}
