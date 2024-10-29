@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -9,8 +10,6 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
@@ -27,7 +26,8 @@ public class MediterraneanConiferSavannaBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> MEDITERRANEAN_CONIFER_SAVANNA = BIOMES.register("mediterranean_conifer_savanna",
-           () -> makeMediterraneanConiferSavannaBiome(() -> DefaultSurfaceBuilder, 0.125f, 0.4f));
+           () -> makeMediterraneanConiferSavannaBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.4f));
+
 
    private static Biome makeMediterraneanConiferSavannaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
@@ -41,9 +41,12 @@ public class MediterraneanConiferSavannaBiome {
       biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
       biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
       biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
+      biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
+      biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
 
       DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
-
+      DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
@@ -54,7 +57,9 @@ public class MediterraneanConiferSavannaBiome {
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-
+      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.STONE_PINE_TREE);
+      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.STONE_PINE_TREE2);
+      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
       DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
