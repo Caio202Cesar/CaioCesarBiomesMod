@@ -12,10 +12,14 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 26, HOT, SPARSE, DRY,
-                SAVANNA, CONIFEROUS, LUSH);
-        addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 13, HOT, SPARSE, DRY,
-                SAVANNA, LUSH);
+        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
+                SAVANNA, CONIFEROUS);
+        addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 13, SPARSE,
+                DRY, SAVANNA);
+        addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 50,
+                DRY, FOREST);
+        addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
+                SAVANNA);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
