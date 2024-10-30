@@ -20,6 +20,8 @@ public class ModBiomeGeneration {
                 DRY, FOREST);
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
                 SAVANNA);
+        addBiome(ToxicFloweringMediterraneanScrublandBiome.TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
+                SAVANNA);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

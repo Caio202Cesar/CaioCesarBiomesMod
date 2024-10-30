@@ -292,6 +292,13 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(4, 4, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Italian Cypress Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(1)),
+                    new StraightTrunkPlacer(2, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     public static final class States {
 
@@ -362,6 +369,9 @@ public class TreeFeatures {
 
         protected static final BlockState STRAWBERRY_TREE_LOG = ModBlocks.STRAWBERRY_TREE_LOG.get().getDefaultState();
         protected static final BlockState STRAWBERRY_TREE_LEAVES = ModBlocks.STRAWBERRY_TREE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ITALIAN_CYPRESS_LOG = ModBlocks.ITALIAN_CYPRESS_LOG.get().getDefaultState();
+        protected static final BlockState ITALIAN_CYPRESS_LEAVES = ModBlocks.ITALIAN_CYPRESS_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
@@ -375,6 +385,9 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.1F), FORKY_STRAWBERRY_TREE.withChance(0.5F)),
                     DARK_PINK_OLEANDER_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_CONIFER_TREES = register("trees_scrubland", Feature.RANDOM_SELECTOR
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE.withChance(0.1F), ITALIAN_CYPRESS_TREE.withChance(0.5F)),
+                    STONE_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
