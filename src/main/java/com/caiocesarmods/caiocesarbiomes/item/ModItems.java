@@ -23,7 +23,11 @@ public class ModItems {
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+    public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> ARBUTUS = ITEMS.register("arbutus",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

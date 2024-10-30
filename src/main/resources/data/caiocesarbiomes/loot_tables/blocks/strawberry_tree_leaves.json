@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:strawberry_tree_sapling",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:arbutus",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}
