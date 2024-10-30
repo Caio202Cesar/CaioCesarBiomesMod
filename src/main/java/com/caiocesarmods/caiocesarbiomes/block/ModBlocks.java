@@ -253,6 +253,8 @@ public class ModBlocks {
             BlueSpruceSapling::new);
     public static final RegistryObject<Block> STRAWBERRY_TREE_SAPLING = registerBlock("strawberry_tree_sapling",
             StrawberryTreeSapling::new);
+    public static final RegistryObject<Block> ITALIAN_CYPRESS_SAPLING = registerBlock("italian_cypress_sapling",
+            ItalianCypressSapling::new);
 
     //Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

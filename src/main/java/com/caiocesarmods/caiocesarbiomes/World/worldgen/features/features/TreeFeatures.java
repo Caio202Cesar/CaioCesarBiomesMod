@@ -296,7 +296,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(1)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(10)),
                     new StraightTrunkPlacer(2, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
