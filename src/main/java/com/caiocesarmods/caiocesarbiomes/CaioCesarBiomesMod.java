@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.structures.ModStructures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -53,16 +54,6 @@ public class CaioCesarBiomesMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-
-        ModBiomeGeneration.generateBiomes();
-        ModStructures.setupStructures();
-    }
-
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
@@ -104,4 +95,16 @@ public class CaioCesarBiomesMod
         registry.register(entry);
         return entry;
     }
-}
+
+    private void setup(final FMLCommonSetupEvent event)
+    {
+        event.enqueueWork(() -> {
+
+            ModBiomeGeneration.generateBiomes();
+            ModStructures.setupStructures();
+
+            // some preinit code
+            LOGGER.info("HELLO FROM PREINIT");
+            LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        });
+}}

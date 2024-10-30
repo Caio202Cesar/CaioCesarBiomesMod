@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
