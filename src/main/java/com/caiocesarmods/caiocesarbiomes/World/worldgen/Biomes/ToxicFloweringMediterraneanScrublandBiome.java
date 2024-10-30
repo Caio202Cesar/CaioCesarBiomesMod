@@ -3,7 +3,6 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -21,16 +20,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MediterraneanScrublandBiome {
+public class ToxicFloweringMediterraneanScrublandBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> MEDITERRANEAN_SCRUBLAND = BIOMES.register("mediterranean_scrubland",
-           () -> makeMediterraneanScrublandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+   public static final RegistryObject<Biome> TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND = BIOMES.register("toxic_flowering_mediterranean_scrubland",
+           () -> makeToxicFloweringScrublandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
 
 
-   private static Biome makeMediterraneanScrublandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+   private static Biome makeToxicFloweringScrublandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -56,7 +55,7 @@ public class MediterraneanScrublandBiome {
       DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withScrublandTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
