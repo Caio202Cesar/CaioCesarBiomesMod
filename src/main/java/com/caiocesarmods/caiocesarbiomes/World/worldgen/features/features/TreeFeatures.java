@@ -155,9 +155,9 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_OLIVE_TREE = register("olive_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLIVE_LOG),
                     new SimpleBlockStateProvider(States.OLIVE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(2)),
-                    new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1), new ThreeLayerFeature(1, 1, 0, 1, 2,
+                    OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Tropical Almond Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TROPICAL_ALMOND_BIG_TREE = register("tropical_almond_big_tree",
@@ -277,29 +277,34 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_SPRUCE_TREE = register("blue_spruce_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
                     new SimpleBlockStateProvider(States.BLUE_SPRUCE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(5, 3, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
     //Strawberry Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STRAWBERRY_TREE = register("strawberry_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
                     new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 4, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new StraightTrunkPlacer(4, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FORKY_STRAWBERRY_TREE = register("forky_strawberry_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
                     new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new ForkyTrunkPlacer(4, 4, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new ForkyTrunkPlacer(4, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
-    //Italian Cypress Tree
+    //Italian Cypress Tree *PROBLEMATIC: does not reach the shape it should.
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), FeatureSpread.create(10)),
-                    new StraightTrunkPlacer(12, 1, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new PineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(3, 1)),
+                    new StraightTrunkPlacer(6, 4, 0),
+                    new TwoLayerFeature(2, 6, 2))).setIgnoreVines().build()));
 
+    
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();

@@ -58,13 +58,17 @@ public class MediterraneanConiferSavannaBiome {
       DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
       DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-              .temperature(1.3F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+              .temperature(3.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(7441937)
                       .withGrassColor(12564309).setFogColor(14807295)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

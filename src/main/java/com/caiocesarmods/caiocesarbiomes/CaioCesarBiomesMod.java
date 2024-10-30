@@ -44,10 +44,10 @@ public class CaioCesarBiomesMod
 
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
-        OliveGroveBiome.register(eventBus);
         MediterraneanOakWoodlandBiome.register(eventBus);
         MediterraneanScrublandBiome.register(eventBus);
         ToxicFloweringMediterraneanScrublandBiome.register(eventBus);
+        OliveGroveBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

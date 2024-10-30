@@ -22,12 +22,16 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final class Configs {
         public static final BlockClusterFeatureConfig MEDITERRANEAN_FLOWER_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.ANIS, 2)
+                        .addWeightedBlockstate(States.ANIS, 1)
                         .addWeightedBlockstate(States.CINERARIA, 1)
                         .addWeightedBlockstate(States.SAGE, 1)
                         .addWeightedBlockstate(States.FENNEL, 1)
                         .addWeightedBlockstate(States.LAVENDER, 1)
-                        .addWeightedBlockstate(States.SANTOLINA, 1),
+                        .addWeightedBlockstate(States.SANTOLINA, 1)
+                        .addWeightedBlockstate(States.MARJORAN, 1)
+                        .addWeightedBlockstate(States.OREGANO, 1)
+                        .addWeightedBlockstate(States.ROSEMARY, 1)
+                        .addWeightedBlockstate(States.THYME, 1),
                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -38,6 +42,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState FENNEL = ModBlocks.FENNEL.get().getDefaultState();
         protected static final BlockState LAVENDER = ModBlocks.LAVENDER.get().getDefaultState();
         protected static final BlockState SANTOLINA = ModBlocks.SANTOLINA.get().getDefaultState();
+        protected static final BlockState MARJORAN = ModBlocks.MARJORAN.get().getDefaultState();
+        protected static final BlockState OREGANO = ModBlocks.OREGANO.get().getDefaultState();
+        protected static final BlockState ROSEMARY = ModBlocks.ROSEMARY.get().getDefaultState();
+        protected static final BlockState THYME = ModBlocks.THYME.get().getDefaultState();
+
     }
 
 }
