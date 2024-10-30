@@ -40,6 +40,5 @@ public class ItalianCypressSapling extends SaplingBlock {
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.ITALIAN_CYPRESS_TREE;
         }
-
     }
 }
