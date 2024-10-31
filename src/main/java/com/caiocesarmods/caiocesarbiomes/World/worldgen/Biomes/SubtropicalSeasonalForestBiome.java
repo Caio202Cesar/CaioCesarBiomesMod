@@ -68,8 +68,8 @@ public class SubtropicalSeasonalForestBiome {
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
               .temperature(0.8F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                      .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(7441937)
-                      .withGrassColor(12564309).setFogColor(14807295)
+                      .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(3168686)
+                      .withGrassColor(7979098).setFogColor(7907327)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                       .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                       .build())
@@ -77,7 +77,7 @@ public class SubtropicalSeasonalForestBiome {
    }
 
    private static int getSkyColorWithTemperatureModifier(float temperature) {
-      float lvt_1_1_ = temperature / 3.0F;
+      float lvt_1_1_ = temperature / 0.8F;
       lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
       return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
    }
