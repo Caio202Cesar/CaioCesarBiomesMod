@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.structures.ModStructures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -49,6 +49,7 @@ public class CaioCesarBiomesMod
         MediterraneanScrublandBiome.register(eventBus);
         ToxicFloweringMediterraneanScrublandBiome.register(eventBus);
         OliveGroveBiome.register(eventBus);
+        MediterraneanCorkOakSavanna.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

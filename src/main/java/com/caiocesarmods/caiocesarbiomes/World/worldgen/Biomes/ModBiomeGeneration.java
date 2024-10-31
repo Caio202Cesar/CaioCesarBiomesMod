@@ -1,6 +1,5 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -22,6 +21,8 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
                 SAVANNA);
         addBiome(ToxicFloweringMediterraneanScrublandBiome.TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
+                SAVANNA);
+        addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
                 SAVANNA);
     }
 

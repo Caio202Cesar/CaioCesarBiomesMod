@@ -20,4 +20,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withMediterraneanConiferTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_CONIFER_TREES);
     }
+    public static void withFancyCorkOakTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CORK_OAK_FANCY_TREE);
+    }
 }

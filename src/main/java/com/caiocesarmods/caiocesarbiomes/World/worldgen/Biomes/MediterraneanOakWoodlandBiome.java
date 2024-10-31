@@ -62,6 +62,7 @@ public class MediterraneanOakWoodlandBiome {
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
