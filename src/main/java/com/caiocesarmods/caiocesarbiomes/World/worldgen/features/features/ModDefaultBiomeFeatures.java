@@ -26,4 +26,13 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSubtropicalVanillaOak(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_FOREST_OAKS);
     }
+    public static void withAvocadoTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.AVOCADO_TREE);
+    }
+    public static void withElderberryTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
+    }
+    public static void withLoquatTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.LOQUAT_TREE);
+    }
 }
