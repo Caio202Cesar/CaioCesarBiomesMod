@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -17,13 +18,14 @@ public class ModBiomeGeneration {
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 13, SPARSE,
                 DRY, SAVANNA);
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 50,
-                DRY, FOREST);
+                DRY, SPARSE, FOREST);
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
                 SAVANNA);
         addBiome(ToxicFloweringMediterraneanScrublandBiome.TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
                 SAVANNA);
-        addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
+        addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 20, SPARSE, DRY,
                 SAVANNA);
+        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 30, FOREST, LUSH);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

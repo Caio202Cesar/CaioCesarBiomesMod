@@ -56,6 +56,10 @@ public class MediterraneanScrublandBiome {
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withScrublandTrees(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
