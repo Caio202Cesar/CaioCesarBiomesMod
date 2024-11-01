@@ -53,17 +53,15 @@ public class TropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withTropicalForestDeciduousTrees(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-      DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
-
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
               .temperature(0.8F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                      .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(3168686)
+                      .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(5877296)
                       .withGrassColor(7979098).setFogColor(7907327)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                       .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))

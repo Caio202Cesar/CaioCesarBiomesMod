@@ -38,4 +38,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withIndianCoralTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.INDIAN_CORAL_TREES);
     }
+    public static void withTropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FOREST_DECIDUOUS_TREES);
+    }
+
 }
