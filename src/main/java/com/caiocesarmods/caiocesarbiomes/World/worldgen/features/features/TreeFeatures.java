@@ -300,10 +300,17 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new PineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(14, 1)),
-                    new StraightTrunkPlacer(15, 12, 10),
-                    new TwoLayerFeature(10, 10, 10))).setIgnoreVines().build()));
+                    new PineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(3, 1)),
+                    new StraightTrunkPlacer(15, 13, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines().build()));
 
+    //Red Kapok Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(States.RED_KAPOK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final class States {
 
@@ -377,6 +384,9 @@ public class TreeFeatures {
 
         protected static final BlockState ITALIAN_CYPRESS_LOG = ModBlocks.ITALIAN_CYPRESS_LOG.get().getDefaultState();
         protected static final BlockState ITALIAN_CYPRESS_LEAVES = ModBlocks.ITALIAN_CYPRESS_LEAVES.get().getDefaultState();
+
+        protected static final BlockState RED_KAPOK_LEAVES = ModBlocks.RED_KAPOK_LEAVES.get().getDefaultState();
+        protected static final BlockState JUNGLE_LOG = Blocks.JUNGLE_LOG.getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
