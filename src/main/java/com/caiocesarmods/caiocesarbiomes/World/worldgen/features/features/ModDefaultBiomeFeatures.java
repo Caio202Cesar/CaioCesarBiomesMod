@@ -32,8 +32,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withElderberryTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
     }
-    public static void withLoquatTree(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.LOQUAT_TREE);
+    public static void withItalianCypressTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ITALIAN_CYPRESS_TREE);
     }
     public static void withIndianCoralTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.INDIAN_CORAL_TREES);

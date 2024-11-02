@@ -12,12 +12,12 @@
         {
           "type": "minecraft:item",
           "name": "caiocesarbiomes:figfruit",
-          "weight": 20
+          "weight": 10
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 15
+          "weight": 2
         }
       ]
     }

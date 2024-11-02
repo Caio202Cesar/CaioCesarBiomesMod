@@ -17,7 +17,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 15
+          "weight": 2
         }
       ]
     }

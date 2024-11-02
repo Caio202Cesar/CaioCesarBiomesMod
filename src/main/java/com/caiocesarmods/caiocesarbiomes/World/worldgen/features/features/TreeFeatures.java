@@ -297,12 +297,14 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Italian Cypress Tree *PROBLEMATIC: does not reach the shape it should.
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new PineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(1), FeatureSpread.create(3, 1)),
-                    new StraightTrunkPlacer(15, 13, 0),
-                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = new ItalianCypressTreeFeature(BaseTreeFeatureConfig.CODEC)
+            .withConfiguration((new BaseTreeFeatureConfig.Builder(
+                    new SimpleBlockStateProvider(ModBlocks.ITALIAN_CYPRESS_LOG.get().getDefaultState()), // Log type
+                    new SimpleBlockStateProvider(ModBlocks.ITALIAN_CYPRESS_LEAVES.get().getDefaultState()), // Leaf type
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build());
+
 
     //Red Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
