@@ -16,6 +16,7 @@ public class ItalianCypressTreeFeature extends Feature<BaseTreeFeatureConfig> {
         super(codec);
     }
 
+
     @Override
     public boolean generate(ISeedReader reader, ChunkGenerator generator, Random rand, BlockPos pos, BaseTreeFeatureConfig config) {
         int trunkHeight = 10 + rand.nextInt(5); // Customizable height range

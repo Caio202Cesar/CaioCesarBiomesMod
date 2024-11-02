@@ -14,6 +14,7 @@ import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.trunkplacer.*;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -296,7 +297,7 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(4, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
-    //Italian Cypress Tree *PROBLEMATIC: does not reach the shape it should.
+    //Italian Cypress Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = new ItalianCypressTreeFeature(BaseTreeFeatureConfig.CODEC)
             .withConfiguration((new BaseTreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(ModBlocks.ITALIAN_CYPRESS_LOG.get().getDefaultState()), // Log type
