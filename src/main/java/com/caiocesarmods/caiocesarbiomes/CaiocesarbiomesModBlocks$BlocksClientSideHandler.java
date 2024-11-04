@@ -1,10 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.block.CreepingFigVine;
-import com.caiocesarmods.caiocesarbiomes.block.DesertRosePlant;
-import com.caiocesarmods.caiocesarbiomes.block.MediterraneanFlower;
+import com.caiocesarmods.caiocesarbiomes.block.*;
 import com.caiocesarmods.caiocesarbiomes.block.Saplings.*;
-import com.caiocesarmods.caiocesarbiomes.block.SpanishMoss;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +23,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CreepingFigVine.registerRenderLayer();
         SpanishMoss.registerRenderLayer();
         MediterraneanFlower.registerRenderLayer();
+        SubtropicalForestPlant.registerRenderLayer();
 
         AvocadoSapling.registerRenderLayer();
         BlueSpruceSapling.registerRenderLayer();

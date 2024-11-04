@@ -51,7 +51,11 @@ public class SubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withMushroomBiomeVegetation(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
@@ -60,7 +64,7 @@ public class SubtropicalLaurelJungleBiome {
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-              .temperature(0.8F).downfall(0.85F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+              .temperature(0.8F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                       .withGrassColor(2791997).setFogColor(14807295)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
@@ -74,4 +78,3 @@ public class SubtropicalLaurelJungleBiome {
    }
 
 }
-   }

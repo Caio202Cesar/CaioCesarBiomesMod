@@ -52,6 +52,8 @@ public class SubtropicalLaurelForestBiome {
       DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);

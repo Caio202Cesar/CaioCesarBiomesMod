@@ -52,6 +52,8 @@ public class CaioCesarBiomesMod
         MediterraneanCorkOakSavanna.register(eventBus);
         SubtropicalSeasonalForestBiome.register(eventBus);
         TropicalSeasonalForestBiome.register(eventBus);
+        SubtropicalLaurelForestBiome.register(eventBus);
+        SubtropicalLaurelJungleBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
