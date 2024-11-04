@@ -263,6 +263,8 @@ public class ModBlocks {
             DesertRosePlant::new);
     public static final RegistryObject<Block> GARDENIA_BUSH = registerBlock("gardenia_bush",
             DesertRosePlant::new);
+    public static final RegistryObject<Block> BUSH = registerBlock("bush",
+            SubtropicalForestPlant::new);
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",
             CreepingFigVine::new);
     public static final RegistryObject<Block> CREEPING_FIG_FRUITING_VINE = registerBlock("creeping_fig_fruiting_vine",

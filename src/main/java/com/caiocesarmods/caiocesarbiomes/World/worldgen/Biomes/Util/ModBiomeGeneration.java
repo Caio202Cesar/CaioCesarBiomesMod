@@ -15,18 +15,27 @@ public class ModBiomeGeneration {
     public static void generateBiomes() {
         addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
                 SAVANNA, CONIFEROUS);
+
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 13, SPARSE,
                 DRY, SAVANNA);
+
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 50,
                 DRY, SPARSE, FOREST);
+
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, SPARSE, DRY,
                 SAVANNA);
+
         addBiome(ToxicFloweringMediterraneanScrublandBiome.TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 9, SPARSE, DRY,
                 SAVANNA);
+
         addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 20, SPARSE, DRY,
                 SAVANNA);
-        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 30, FOREST, LUSH);
-        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 30, HOT, FOREST, LUSH);
+
+        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 30, FOREST, LUSH, DENSE);
+
+        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 30, HOT, FOREST, LUSH, DENSE);
+
+        addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 20, FOREST, LUSH, WET, DENSE, RARE);
 
     }
 

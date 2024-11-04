@@ -3,7 +3,6 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -14,7 +13,6 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,16 +20,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SubtropicalSeasonalForestBiome {
+public class SubtropicalLaurelForestBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST = BIOMES.register("subtropical_seasonal_forest",
-           () -> makeSubtropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+   public static final RegistryObject<Biome> SUBTROPICAL_LAUREL_FOREST = BIOMES.register("subtropical_laurel_forest",
+           () -> makeSubtropicalLaurelForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.4f));
 
 
-   private static Biome makeSubtropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+   private static Biome makeSubtropicalLaurelForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -39,7 +37,7 @@ public class SubtropicalSeasonalForestBiome {
               (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
       biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-      biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_SWAMP);
+      biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
       biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
       biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
       biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
@@ -57,18 +55,16 @@ public class SubtropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withElderberryTree(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestDeciduousTrees(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-              .temperature(0.8F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                      .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5877296)
-                      .withGrassColor(7979098).setFogColor(7907327)
+              .temperature(0.8F).downfall(0.85F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                      .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
+                      .withGrassColor(2791997).setFogColor(14807295)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                       .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                       .build())
@@ -78,5 +74,5 @@ public class SubtropicalSeasonalForestBiome {
    public static void register(IEventBus eventBus) {
       BIOMES.register(eventBus);
    }
-}
 
+   }

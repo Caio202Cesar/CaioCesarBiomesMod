@@ -58,7 +58,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState OREGANO = ModBlocks.OREGANO.get().getDefaultState();
         protected static final BlockState ROSEMARY = ModBlocks.ROSEMARY.get().getDefaultState();
         protected static final BlockState THYME = ModBlocks.THYME.get().getDefaultState();
-
+        protected static final BlockState GARDENIA = ModBlocks.GARDENIA_BUSH.get().getDefaultState();
+        protected static final BlockState BUSH = ModBlocks.BUSH.get().getDefaultState();
     }
 
 }
