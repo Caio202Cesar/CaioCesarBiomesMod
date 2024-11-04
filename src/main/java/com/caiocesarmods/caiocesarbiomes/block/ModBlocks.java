@@ -293,6 +293,10 @@ public class ModBlocks {
             MediterraneanFlower::new);
     public static final RegistryObject<Block> THYME = registerBlock("thyme",
             MediterraneanFlower::new);
+    public static final RegistryObject<Block> AGAPANTHUS_PURPLE = registerBlock("agapanthus_purple",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AGAPANTHUS_WHITE = registerBlock("agapanthus_white",
+            SubtropicalForestPlant::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

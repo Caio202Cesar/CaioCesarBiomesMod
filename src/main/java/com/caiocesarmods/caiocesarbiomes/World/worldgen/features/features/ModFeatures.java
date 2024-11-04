@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
@@ -25,6 +26,14 @@ public class ModFeatures extends Features implements IFeatureConfig {
                     FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.33333334F)), OAK)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PLANTS = register("humid_subtropical_plants",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.HUMID_SUBTROPICAL_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
+    public static final ConfiguredFeature<?, ?> PATCH_GARDENIA_PLANT = register("patch_gardenia_plant",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.GARDENIA),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -45,6 +54,13 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.ROSEMARY, 1)
                         .addWeightedBlockstate(States.THYME, 1),
                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig HUMID_SUBTROPICAL_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.BUSH, 5)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
@@ -60,6 +76,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState THYME = ModBlocks.THYME.get().getDefaultState();
         protected static final BlockState GARDENIA = ModBlocks.GARDENIA_BUSH.get().getDefaultState();
         protected static final BlockState BUSH = ModBlocks.BUSH.get().getDefaultState();
+        protected static final BlockState AGAPANTHUS_PURPLE = ModBlocks.AGAPANTHUS_PURPLE.get().getDefaultState();
+        protected static final BlockState AGAPANTHUS_WHITE = ModBlocks.AGAPANTHUS_WHITE.get().getDefaultState();
     }
 
 }

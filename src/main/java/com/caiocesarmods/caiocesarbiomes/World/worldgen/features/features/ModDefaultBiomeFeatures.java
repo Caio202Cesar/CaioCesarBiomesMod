@@ -50,4 +50,10 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withForestOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_OCOTEA_TREES);
     }
-}
+    public static void withGardeniaBush(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_GARDENIA_PLANT);
+    }
+    public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);
+}}
+
