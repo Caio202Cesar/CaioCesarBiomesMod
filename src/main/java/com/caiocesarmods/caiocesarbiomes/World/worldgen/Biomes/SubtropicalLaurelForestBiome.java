@@ -59,7 +59,7 @@ public class SubtropicalLaurelForestBiome {
       DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalForestDeciduousTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withGardeniaBush(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);

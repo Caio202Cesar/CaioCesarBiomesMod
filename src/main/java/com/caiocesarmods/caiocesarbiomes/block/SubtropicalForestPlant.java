@@ -21,7 +21,8 @@ public class SubtropicalForestPlant extends BushBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.BUSH.get(), RenderType.getCutout());
-
+        RenderTypeLookup.setRenderLayer(ModBlocks.AGAPANTHUS_PURPLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.AGAPANTHUS_WHITE.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

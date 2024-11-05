@@ -41,7 +41,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FOREST_DECIDUOUS_TREES);
     }
-    public static void withSubtropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
+    public static void withSubtropicalForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_TREES);
     }
     public static void withJungleOcoteaTrees(BiomeGenerationSettings.Builder builder) {
