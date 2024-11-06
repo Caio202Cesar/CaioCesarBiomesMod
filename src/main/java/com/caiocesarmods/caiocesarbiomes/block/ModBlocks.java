@@ -74,7 +74,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAPANESE_MAPLE_LOG = registerBlock("japanese_maple_log",
             ModLogs::new);
     public static final RegistryObject<Block> MULBERRY_LOG = registerBlock("mulberry_log",
-            ModLeaves::new);
+            ModLogs::new);
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
             ModLogs::new);
 
