@@ -265,12 +265,10 @@ public class ModBlocks {
             StrawberryTreeSapling::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_SAPLING = registerBlock("italian_cypress_sapling",
             ItalianCypressSapling::new);
-    public static final RegistryObject<Block> JAPANESE_MAPLE_SAPLING = registerBlock("italian_cypress_sapling",
-            ItalianCypressSapling::new);
-    public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("strawberry_tree_sapling",
-            StrawberryTreeSapling::new);
-    public static final RegistryObject<Block> BAY_LAUREL_SAPLING = registerBlock("italian_cypress_sapling",
-            ItalianCypressSapling::new);
+    public static final RegistryObject<Block> JAPANESE_MAPLE_SAPLING = registerBlock("japanese_maple_sapling",
+            JapaneseMapleSapling::new);
+    public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("red_kapok_sapling",
+            RedKapokSapling::new);
 
     //Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
