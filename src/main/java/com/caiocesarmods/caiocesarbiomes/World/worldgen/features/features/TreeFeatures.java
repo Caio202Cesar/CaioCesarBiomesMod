@@ -331,6 +331,22 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Mulberry Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MULBERRY_TREE = register("mulberry_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MULBERRY_LOG),
+                    new SimpleBlockStateProvider(States.MULBERRY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
+    //Starfruit Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE = register("starfruit_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STARFRUIT_LOG),
+                    new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -413,6 +429,11 @@ public class TreeFeatures {
         protected static final BlockState JAPANESE_MAPLE_LOG = ModBlocks.JAPANESE_MAPLE_LOG.get().getDefaultState();
         protected static final BlockState JAPANESE_MAPLE_LEAVES = ModBlocks.JAPANESE_MAPLE_LEAVES.get().getDefaultState();
 
+        protected static final BlockState MULBERRY_LOG = ModBlocks.MULBERRY_LOG.get().getDefaultState();
+        protected static final BlockState MULBERRY_LEAVES = ModBlocks.MULBERRY_LEAVES.get().getDefaultState();
+
+        protected static final BlockState STARFRUIT_LOG = ModBlocks.STARFRUIT_LOG.get().getDefaultState();
+        protected static final BlockState STARFRUIT_LEAVES = ModBlocks.STARFRUIT_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
@@ -452,8 +473,8 @@ public class TreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_TREES = register("subtropical_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F)),
-                    SOUTHERN_MAGNOLIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
+                            SOUTHERN_MAGNOLIA_TREE.withChance(0.1F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
@@ -464,6 +485,12 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.3F)),
                             OCOTEA_FOREST_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.2F),
+                    ELDERBERRY_TREE.withChance(0.2F)), MULBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);

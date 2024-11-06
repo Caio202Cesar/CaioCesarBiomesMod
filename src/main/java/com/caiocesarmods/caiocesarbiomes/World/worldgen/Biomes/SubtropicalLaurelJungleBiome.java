@@ -59,11 +59,10 @@ public class SubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withDeciduousSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withGardeniaBush(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

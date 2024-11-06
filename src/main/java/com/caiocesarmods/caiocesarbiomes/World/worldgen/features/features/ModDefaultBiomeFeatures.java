@@ -55,5 +55,12 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);
-}}
+    }
+    public static void withDeciduousSubtropicalForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.DECIDUOUS_SUBTROPICAL_FOREST_TREES);
+    }
+    public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_MAPLE_TREE);
+    }
+}
 
