@@ -24,7 +24,7 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanFruitingScrublandBiome.MEDITERRANEAN_FRUITING_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 26, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
 
-        addBiome(ToxicFloweringMediterraneanScrublandBiome.TOXIC_FLOWERING_MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 9, OVERWORLD,
+        addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 9, OVERWORLD,
                 SPARSE, DRY, SAVANNA);
 
         addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, DRY,
