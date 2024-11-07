@@ -62,5 +62,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_MAPLE_TREE);
     }
+    public static void withTropicalDesertTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_DESERT_TREES);
+    }
 }
 

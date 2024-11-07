@@ -57,6 +57,7 @@ public class ToxicFloweringMediterraneanScrublandBiome {
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withItalianCypressTree(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
