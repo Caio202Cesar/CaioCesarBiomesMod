@@ -53,7 +53,7 @@ public class TropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withAvocadoTree(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withTropicalForestDeciduousTrees(biomegenerationsettings$builder);
 
@@ -61,18 +61,12 @@ public class TropicalSeasonalForestBiome {
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
               .temperature(0.8F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                      .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(5877296)
-                      .withGrassColor(7979098).setFogColor(7907327)
+                      .setWaterFogColor(4159204).withSkyColor(7842047).withFoliageColor(4110351)
+                      .withGrassColor(5877296).setFogColor(7907327)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                       .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                       .build())
               .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
-   }
-
-   private static int getSkyColorWithTemperatureModifier(float temperature) {
-      float lvt_1_1_ = temperature / 0.8F;
-      lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
-      return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
    }
 
    public static void register(IEventBus eventBus) {

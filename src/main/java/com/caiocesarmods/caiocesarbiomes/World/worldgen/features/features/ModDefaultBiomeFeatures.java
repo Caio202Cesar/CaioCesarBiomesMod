@@ -68,5 +68,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withOakShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.OAK_SHRUBS);
     }
+    public static void withTropicalFruitTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FRUIT_TREES);
+    }
 }
 
