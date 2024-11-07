@@ -51,6 +51,29 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Oak Bushes
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CORK_OAK_SHRUB = register("cork_oak_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLM_OAK_SHRUB = register("holm_oak_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HOLM_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.HOLM_OAK_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_SHRUB = register("oak_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+
     //Oleander Shrubs
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_OLEANDER_SHRUB = register("red_oleander_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLEANDER_LOG),
@@ -425,6 +448,9 @@ public class TreeFeatures {
         protected static final BlockState ACACIA_LOG = Blocks.ACACIA_LOG.getDefaultState();
         protected static final BlockState ACACIA_LEAVES = Blocks.ACACIA_LEAVES.getDefaultState();
 
+        protected static final BlockState OAK_LOG = Blocks.OAK_LOG.getDefaultState();
+        protected static final BlockState OAK_LEAVES = Blocks.OAK_LEAVES.getDefaultState();
+
         protected static final BlockState JAPANESE_MAPLE_LOG = ModBlocks.JAPANESE_MAPLE_LOG.get().getDefaultState();
         protected static final BlockState JAPANESE_MAPLE_LEAVES = ModBlocks.JAPANESE_MAPLE_LEAVES.get().getDefaultState();
 
@@ -443,11 +469,15 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> OLEANDER_SHRUBS = register("oleander_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_OLEANDER_SHRUB.withChance(0.3F),
                             DARK_PINK_OLEANDER_SHRUB.withChance(0.3F), RED_OLEANDER_SHRUB.withChance(0.3F)), PINK_OLEANDER_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F), FORKY_STRAWBERRY_TREE.withChance(0.1F)),
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F), FORKY_STRAWBERRY_TREE.withChance(0.3F)),
                     POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> OAK_SHRUBS = register("oak_shrubs", Feature.RANDOM_SELECTOR
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HOLM_OAK_SHRUB.withChance(0.3F), CORK_OAK_SHRUB.withChance(0.3F)),
+                    OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_CONIFER_TREES = register("mediterranean_conifer_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE2.withChance(0.1F), ITALIAN_CYPRESS_TREE.withChance(0.2F)),
