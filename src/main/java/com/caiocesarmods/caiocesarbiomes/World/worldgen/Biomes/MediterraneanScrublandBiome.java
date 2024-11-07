@@ -20,12 +20,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MediterraneanFruitingScrublandBiome {
+public class MediterraneanScrublandBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> MEDITERRANEAN_FRUITING_SCRUBLAND = BIOMES.register("mediterranean_fruiting_scrubland",
+    public static final RegistryObject<Biome> MEDITERRANEAN_SCRUBLAND = BIOMES.register("mediterranean_scrubland",
             () -> makeFruitingScrublandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
 
 

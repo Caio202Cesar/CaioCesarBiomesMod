@@ -46,7 +46,7 @@ public class CaioCesarBiomesMod
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
         MediterraneanOakWoodlandBiome.register(eventBus);
-        MediterraneanFruitingScrublandBiome.register(eventBus);
+        MediterraneanScrublandBiome.register(eventBus);
         OleanderGardensBiome.register(eventBus);
         OliveGroveBiome.register(eventBus);
         MediterraneanCorkOakSavanna.register(eventBus);

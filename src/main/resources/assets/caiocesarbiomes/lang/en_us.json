@@ -1,4 +1,6 @@
 {
+  "block.caiocesarbiomes.agapanthus_purple": "Purple Agapanthus",
+  "block.caiocesarbiomes.agapanthus_white": "White Agapanthus",
   "block.caiocesarbiomes.anis": "Anis",
   "block.caiocesarbiomes.avocado_leaves": "Avocado Leaves",
   "block.caiocesarbiomes.avocado_log": "Avocado Log",
@@ -104,7 +106,7 @@
 
   "biome.caiocesarbiomes.mediterranean_conifer_savanna": "Mediterranean Conifer Savanna",
   "biome.caiocesarbiomes.cork_oak_savanna": "Cork Oak Savanna",
-  "biome.caiocesarbiomes.mediterranean_fruiting_scrubland": "Mediterranean Fruiting Scrubland",
+  "biome.caiocesarbiomes.mediterranean_scrubland": "Mediterranean Scrubland",
   "biome.caiocesarbiomes.mediterranean_oak_woodland": "Mediterranean Oak Woodland",
   "biome.caiocesarbiomes.olive_grove": "Olive Grove",
   "biome.caiocesarbiomes.subtropical_laurel_forest": "Subtropical Laurel Forest",
@@ -114,7 +116,6 @@
   "biome.caiocesarbiomes.tropical_seasonal_forest": "Tropical Seasonal Forest",
   "biome.caiocesarbiomes.tropical_desert": "Tropical Desert",
   "biome.caiocesarbiomes.coastal_subtropical_desert": "Coastal Subtropical Desert"
-
 }
 
 
