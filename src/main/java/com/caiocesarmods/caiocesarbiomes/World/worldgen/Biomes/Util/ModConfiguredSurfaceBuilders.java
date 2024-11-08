@@ -17,6 +17,20 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.SAND.getDefaultState()
             )));
 
+    public static ConfiguredSurfaceBuilder<?> VEGETATION_TUNDRA_SURFACE = register("vegetation_tundra_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.GRASS_BLOCK.getDefaultState(),
+                    Blocks.STONE.getDefaultState(),
+                    Blocks.GRAVEL.getDefaultState()
+            )));
+
+    public static ConfiguredSurfaceBuilder<?> MOSSY_TUNDRA_SURFACE = register("mossy_tundra_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.GRAVEL.getDefaultState(),
+                    Blocks.STONE.getDefaultState(),
+                    Blocks.GRAVEL.getDefaultState()
+            )));
+
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name,
                                                                                            ConfiguredSurfaceBuilder<SC> csb) {
         return WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER,

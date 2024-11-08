@@ -48,6 +48,8 @@ public class ModBiomeGeneration {
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 8, OVERWORLD, SPARSE, MOUNTAIN, PLATEAU,
                 RARE, LUSH, WET);
 
+        addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 24, OVERWORLD, COLD, WET, WASTELAND);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
