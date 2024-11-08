@@ -57,6 +57,7 @@ public class MediterraneanOakWoodlandBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanOakTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
