@@ -309,6 +309,8 @@ public class ModBlocks {
             SubtropicalForestPlant::new);
     public static final RegistryObject<Block> AGAPANTHUS_WHITE = registerBlock("agapanthus_white",
             SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> TUSSOCK_GRASS = registerBlock("tussock_grass",
+            SubtropicalForestPlant::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
