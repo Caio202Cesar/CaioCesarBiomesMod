@@ -1,11 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.placers;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;

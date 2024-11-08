@@ -9,7 +9,6 @@ import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,6 +44,7 @@ public class CaioCesarBiomesMod
         ModBlocks.register(eventBus);
         ModStructures.register(eventBus);
         ModFoliagePlacers.register(eventBus);
+        //ModTrunkPlacers.register(eventBus);
 
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
