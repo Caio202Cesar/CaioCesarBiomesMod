@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ItalianCypressFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -324,7 +325,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new ItalianCypressFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(15, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 

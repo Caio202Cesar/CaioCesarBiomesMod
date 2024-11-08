@@ -2,12 +2,14 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ModFoliagePlacers;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.structures.ModStructures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,6 +44,7 @@ public class CaioCesarBiomesMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModStructures.register(eventBus);
+        ModFoliagePlacers.register(eventBus);
 
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
@@ -112,4 +115,5 @@ public class CaioCesarBiomesMod
         registry.register(entry);
         return entry;
     }
+
 }
