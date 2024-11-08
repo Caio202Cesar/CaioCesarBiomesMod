@@ -32,63 +32,83 @@ public class ItalianCypressFoliagePlacer extends FoliagePlacer {
         return ModFoliagePlacers.ITALIAN_CYPRESS_FOLIAGE_PLACER.get();
     }
 
+    @Override
     protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int foliageHeight, int radius, Set<BlockPos> leaves, int offset, MutableBoundingBox boundingBox) {
-        BlockPos startPos = foliage.func_236763_a_(); // Start foliage from base
+        // Position from which leaves start covering the trunk
+        BlockPos basePos = foliage.func_236763_a_();
 
-        // Loop through each level of the trunk to cover with leaves
-        for (int dy = 1; dy <= trunkHeight; dy++) {
-            BlockPos currentPos = startPos.up(dy);
-            placeLeavesAroundTrunk(world, random, config, currentPos, leaves, boundingBox);
+        // Cover the trunk with leaves from the base to the top
+        for (int dy = 0; dy < trunkHeight; dy++) {
+            BlockPos trunkPos = basePos.up(dy);
+            placeLeavesAround(world, random, config, trunkPos, leaves, boundingBox);
         }
 
-        // Optional: Add top foliage with a cross pattern
-        placeTopLeaves(world, random, config, startPos.up(trunkHeight + 1), leaves, boundingBox);
+        // Decide randomly which option to use for the top leaves
+        if (random.nextBoolean()) {
+            // Option 1: Column of 1-3 leaves at the top of the trunk
+            addTopLeafColumn(world, random, config, basePos.up(trunkHeight), leaves, boundingBox);
+        } else {
+            // Option 2: Cross pattern leaves at the top
+            placeTopLeaves(world, random, config, basePos.up(trunkHeight), leaves, boundingBox);
+        }
     }
 
-    @Override
-    public int func_230374_a_(Random p_230374_1_, int p_230374_2_, BaseTreeFeatureConfig p_230374_3_) {
-        return 0;
-    }
-
-    @Override
-    protected boolean func_230373_a_(Random p_230373_1_, int p_230373_2_, int p_230373_3_, int p_230373_4_, int p_230373_5_, boolean p_230373_6_) {
-        return false;
-    }
-
-    private void placeLeavesAroundTrunk(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+    private void placeLeavesAround(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos trunkPos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        // Generate a 3x3 ring of leaves around each trunk block
         for (int dx = -1; dx <= 1; dx++) {
             for (int dz = -1; dz <= 1; dz++) {
-                BlockPos leafPos = pos.add(dx, 0, dz);
-
-                // Skip the trunk position itself but place leaves around it
-                if ((dx != 0 || dz != 0) && world.hasBlockState(leafPos, state -> state.isAir() || state.getMaterial().isReplaceable())) {
-                    placeLeafAt(world, random, config, leafPos, leaves, boundingBox);
+                if (dx != 0 || dz != 0) { // Skip trunk position itself
+                    BlockPos leafPos = trunkPos.add(dx, 0, dz);
+                    placeLeafIfAir(world, random, config, leafPos, leaves, boundingBox);
                 }
             }
         }
     }
 
-    // Place top leaves in a cross pattern for a distinct upper canopy effect
+    private void addTopLeafColumn(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos topTrunkPos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        // Option 1: Column of 1-2 leaves at the top of the trunk
+        for (int i = 1; i <= 2; i++) {
+            BlockPos leafPos = topTrunkPos.up(i);
+            placeLeafIfAir(world, random, config, leafPos, leaves, boundingBox);
+        }
+    }
+
     private void placeTopLeaves(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        // Option 2: Cross pattern leaves around the top, including a leaf block in the center
         for (int dy = 0; dy < MathHelper.nextInt(random, 1, 3); dy++) {
             BlockPos leafPos = pos.up(dy);
+
+            // Place a leaf in the center
+            placeLeafIfAir(world, random, config, leafPos, leaves, boundingBox);
+
+            // Place the cross pattern (North, South, East, West) around the center
             placeCrossPatternLeaves(world, random, config, leafPos, leaves, boundingBox);
         }
     }
 
-    // Cross pattern for the upper foliage
     private void placeCrossPatternLeaves(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
-        placeLeafAt(world, random, config, pos.north(), leaves, boundingBox);
-        placeLeafAt(world, random, config, pos.south(), leaves, boundingBox);
-        placeLeafAt(world, random, config, pos.east(), leaves, boundingBox);
-        placeLeafAt(world, random, config, pos.west(), leaves, boundingBox);
+        // Cross pattern around the trunk for the second half of the top canopy
+        placeLeafIfAir(world, random, config, pos.north(), leaves, boundingBox);
+        placeLeafIfAir(world, random, config, pos.south(), leaves, boundingBox);
+        placeLeafIfAir(world, random, config, pos.east(), leaves, boundingBox);
+        placeLeafIfAir(world, random, config, pos.west(), leaves, boundingBox);
     }
 
-    private void placeLeafAt(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
-        if (world.hasBlockState(pos, state -> state.isAir())) {
+    private void placeLeafIfAir(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        if (world.hasBlockState(pos, state -> state.isAir((IBlockReader) world, pos))) {
             world.setBlockState(pos, config.leavesProvider.getBlockState(random, pos), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));
         }
+    }
+
+    @Override
+    public int func_230374_a_(Random random, int trunkHeight, BaseTreeFeatureConfig config) {
+        return MathHelper.nextInt(random, 3, 5); // Adjust foliage height if needed
+    }
+
+    @Override
+    protected boolean func_230373_a_(Random random, int dx, int y, int dz, int radius, boolean large) {
+        return false; // Uniform placement without skipping
     }
 }

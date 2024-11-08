@@ -41,6 +41,13 @@ public class ModBiomeGeneration {
         addBiome(CoastalSubtropicalDesertBiome.COAST_SUBTROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 6, OVERWORLD, SANDY, DRY, RARE, SPOOKY);
 
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT_LEGACY, 27, OVERWORLD, SANDY, HOT, DRY, RARE);
+
+        addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 9, OVERWORLD,
+                FOREST, LUSH, WET, DENSE, JUNGLE, RARE);
+
+        addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 8, OVERWORLD, SPARSE, MOUNTAIN, PLATEAU,
+                RARE, LUSH, WET);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
