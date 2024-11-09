@@ -29,7 +29,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.GARDENIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_OAKS = register("trees_giant",
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_OAKS = register("subtropical_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OAK_BEES_002.withChance(0.025641026F),
                     FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.33333334F)), OAK)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
@@ -76,7 +76,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
                         .addWeightedBlockstate(States.ALLIUM, 1)
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
-                        .addWeightedBlockstate(States.OXEYE_DAISY, 1),
+                        .addWeightedBlockstate(States.OXEYE_DAISY, 1)
+                        .addWeightedBlockstate(States.SUNFLOWER, 1),
         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -99,6 +100,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
+        protected static final BlockState SUNFLOWER = Blocks.SUNFLOWER.getDefaultState();
 
     }
 
