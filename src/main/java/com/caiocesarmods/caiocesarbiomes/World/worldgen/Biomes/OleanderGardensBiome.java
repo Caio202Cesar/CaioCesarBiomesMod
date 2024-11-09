@@ -57,10 +57,9 @@ public class OleanderGardensBiome {
       ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withScrublandCypress(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);

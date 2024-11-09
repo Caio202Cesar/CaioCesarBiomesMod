@@ -1,9 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ColumnarPineFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ItalianCypressFoliagePlacer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ItalianCypressTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -327,7 +325,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
                     new ItalianCypressFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new ItalianCypressTrunkPlacer(17, 2, 0),
+                    new StraightTrunkPlacer(17, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Red Kapok Tree

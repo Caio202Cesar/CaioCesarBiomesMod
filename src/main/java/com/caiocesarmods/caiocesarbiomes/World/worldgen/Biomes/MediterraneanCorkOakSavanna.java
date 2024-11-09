@@ -57,7 +57,7 @@ public class MediterraneanCorkOakSavanna {
         DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CORK_OAK_FANCY_TREE);
-        DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
 
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
