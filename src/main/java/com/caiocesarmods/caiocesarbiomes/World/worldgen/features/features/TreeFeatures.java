@@ -242,12 +242,12 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STONE_PINE_TREE = register("stone_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(States.STONE_PINE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(8, 6, 0), new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STONE_PINE_TREE2 = register("stone_pine_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(States.STONE_PINE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(8, 6, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Indian Coral Tree
