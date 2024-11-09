@@ -1,7 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ColumnarPineFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ItalianCypressFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ItalianCypressTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -15,7 +17,6 @@ import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.trunkplacer.*;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -325,8 +326,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new ItalianCypressFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(17, 2, 0),
+                    new ItalianCypressFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new ItalianCypressTrunkPlacer(17, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Red Kapok Tree

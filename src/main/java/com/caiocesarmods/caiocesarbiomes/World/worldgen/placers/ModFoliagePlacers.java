@@ -18,6 +18,10 @@ public class ModFoliagePlacers {
             FOLIAGE_PLACERS.register("italian_cypress_foliage_placer",
                     () -> new FoliagePlacerType<>(ItalianCypressFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<ColumnarPineFoliagePlacer>> COLUMNAR_PINE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("columnar_pine_foliage_placer",
+                    () -> new FoliagePlacerType<>(ColumnarPineFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
