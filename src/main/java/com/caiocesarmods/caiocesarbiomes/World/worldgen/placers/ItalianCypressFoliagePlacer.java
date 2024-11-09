@@ -39,8 +39,8 @@ public class ItalianCypressFoliagePlacer extends FoliagePlacer {
         BlockPos basePos = foliage.func_236763_a_();
 
         // Cover the trunk with leaves from the base to the top
-        for (int dy = 0; dy < trunkHeight; dy++) {
-            BlockPos trunkPos = basePos.up(dy);
+        for (int i = 0; i < trunkHeight; i++) {
+            BlockPos trunkPos = basePos.up(i);
             placeLeavesAround(world, random, config, trunkPos, leaves, boundingBox);
         }
 
@@ -67,8 +67,8 @@ public class ItalianCypressFoliagePlacer extends FoliagePlacer {
     }
 
     private void addTopLeafColumn(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos topTrunkPos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
-        // Option 1: Column of 1-2 leaves at the top of the trunk
-        for (int i = 1; i <= 3; i++) {
+        // Option 1: Column of 1-3 leaves at the top of the trunk
+        for (int i = 0; i <= 3; i++) {
             BlockPos leafPos = topTrunkPos.up(i);
             placeLeafIfAir(world, random, config, leafPos, leaves, boundingBox);
         }

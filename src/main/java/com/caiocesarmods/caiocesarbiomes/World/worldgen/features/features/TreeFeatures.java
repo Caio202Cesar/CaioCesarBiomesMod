@@ -325,7 +325,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
                     new ItalianCypressFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(17, 2, 0),
+                    new StraightTrunkPlacer(17, 0, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Red Kapok Tree
