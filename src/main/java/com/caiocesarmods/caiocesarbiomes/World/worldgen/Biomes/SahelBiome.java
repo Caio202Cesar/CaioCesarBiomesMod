@@ -25,7 +25,7 @@ public class SahelBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> SAHEL = BIOMES.register("sahel",
-            () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.125f, 0.2f));
+            () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.125f, 0.3f));
 
     private static Biome makeSahelBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
@@ -49,7 +49,7 @@ public class SahelBiome {
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withBadlandsGrassAndBush(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
