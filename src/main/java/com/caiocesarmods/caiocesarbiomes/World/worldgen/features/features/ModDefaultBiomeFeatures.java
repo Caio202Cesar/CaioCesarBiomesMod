@@ -3,7 +3,10 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 
 public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withMediterraneanFlowers(BiomeGenerationSettings.Builder builder) {
@@ -51,8 +54,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withHighlandOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HIGHLAND_OCOTEA_TREE);
     }
-    public static void withGardeniaBush(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_GARDENIA_PLANT);
+    public static void withDesertRose(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_DESERT_ROSE);
     }
     public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);
@@ -74,5 +77,6 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withSubtropicalForestFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_FOREST_FLOWER_VEGETATION);
-}}
+    }
+}
 

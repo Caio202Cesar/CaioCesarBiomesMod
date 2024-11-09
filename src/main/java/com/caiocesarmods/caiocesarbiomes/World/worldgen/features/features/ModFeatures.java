@@ -38,15 +38,14 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.HUMID_SUBTROPICAL_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> PATCH_GARDENIA_PLANT = register("patch_gardenia_plant",
-            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.GARDENIA),
+    public static final ConfiguredFeature<?, ?> PATCH_DESERT_ROSE = register("patch_desert_rose",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE),
                             new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_FLOWER_VEGETATION = register("subtropical_forest_flower_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
-
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));;
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -96,6 +95,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BUSH = ModBlocks.BUSH.get().getDefaultState();
         protected static final BlockState AGAPANTHUS_PURPLE = ModBlocks.AGAPANTHUS_PURPLE.get().getDefaultState();
         protected static final BlockState AGAPANTHUS_WHITE = ModBlocks.AGAPANTHUS_WHITE.get().getDefaultState();
+        protected static final BlockState DESERT_ROSE = ModBlocks.DESERT_ROSE_PLANT.get().getDefaultState();
         protected static final BlockState ROSE_BUSH = Blocks.ROSE_BUSH.getDefaultState();
         protected static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
@@ -103,5 +103,4 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState SUNFLOWER = Blocks.SUNFLOWER.getDefaultState();
 
     }
-
 }

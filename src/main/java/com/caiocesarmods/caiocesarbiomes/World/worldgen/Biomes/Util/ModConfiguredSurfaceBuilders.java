@@ -38,6 +38,13 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.GRAVEL.getDefaultState()
             )));
 
+    public static ConfiguredSurfaceBuilder<?> STEEPE_SURFACE = register("steepe_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.COARSE_DIRT.getDefaultState(),
+                    Blocks.STONE.getDefaultState(),
+                    Blocks.SAND.getDefaultState()
+            )));
+
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name,
                                                                                            ConfiguredSurfaceBuilder<SC> csb) {
         return WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER,
