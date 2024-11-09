@@ -24,9 +24,16 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.GRAVEL.getDefaultState()
             )));
 
-    public static ConfiguredSurfaceBuilder<?> MOSSY_TUNDRA_SURFACE = register("mossy_tundra_surface",
+    public static ConfiguredSurfaceBuilder<?> GRAVEL_TUNDRA_SURFACE = register("gravel_tundra_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
                     Blocks.GRAVEL.getDefaultState(),
+                    Blocks.STONE.getDefaultState(),
+                    Blocks.GRAVEL.getDefaultState()
+            )));
+
+    public static ConfiguredSurfaceBuilder<?> MOSSY_TUNDRA_SURFACE = register("mossy_tundra_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.MOSSY_COBBLESTONE.getDefaultState(),
                     Blocks.STONE.getDefaultState(),
                     Blocks.GRAVEL.getDefaultState()
             )));

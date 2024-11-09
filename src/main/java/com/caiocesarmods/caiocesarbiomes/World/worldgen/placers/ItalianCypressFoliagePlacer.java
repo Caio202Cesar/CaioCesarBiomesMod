@@ -38,7 +38,7 @@ public class ItalianCypressFoliagePlacer extends FoliagePlacer {
         BlockPos basePos = foliage.func_236763_a_();
 
         // Cover the trunk with leaves from the base to the top
-        for (int dy = 0; dy < trunkHeight; dy++) {
+        for (int dy = 0; dy < trunkHeight - 17; dy++) {
             BlockPos trunkPos = basePos.up(dy);
             placeLeavesAround(world, random, config, trunkPos, leaves, boundingBox);
         }
