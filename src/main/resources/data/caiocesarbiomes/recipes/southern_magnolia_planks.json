@@ -1,9 +1,9 @@
 {
-  "type": "crafting_shapeless",
+  "type": "minecraft:crafting_shapeless",
   "group": "planks",
   "ingredients": [
     {
-      "tag": "caiocesarbiomes:southern_magnolia_log"
+      "item": "caiocesarbiomes:southern_magnolia_log"
     }
   ],
   "result": {
