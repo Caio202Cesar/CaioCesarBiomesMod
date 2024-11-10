@@ -52,8 +52,10 @@ public class OliveGroveBiome {
         DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
+
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BIG_OLIVE_TREE);
 
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
@@ -62,7 +64,7 @@ public class OliveGroveBiome {
                 .temperature(1.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(13494015)
-                        .setAmbientSound(SoundEvents.AMBIENT_CAVE)
+                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();

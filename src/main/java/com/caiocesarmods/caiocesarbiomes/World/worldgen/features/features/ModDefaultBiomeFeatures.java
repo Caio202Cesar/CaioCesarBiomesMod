@@ -30,8 +30,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSubtropicalVanillaOak(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_FOREST_OAKS);
     }
-    public static void withScrublandCypress(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SCRUBLAND_ITALIAN_CYPRESS);
+    public static void withScrublandConifers(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SCRUBLAND_MEDITERRANEAN_CONIFERS);
     }
     public static void withSubtropicalBambooVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.BAMBOO);
