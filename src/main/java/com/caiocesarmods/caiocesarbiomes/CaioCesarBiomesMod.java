@@ -63,6 +63,7 @@ public class CaioCesarBiomesMod
         MontaneLaurelGroveBiome.register(eventBus);
         GravelTundraBiome.register(eventBus);
         SahelBiome.register(eventBus);
+        TropicalBeachBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

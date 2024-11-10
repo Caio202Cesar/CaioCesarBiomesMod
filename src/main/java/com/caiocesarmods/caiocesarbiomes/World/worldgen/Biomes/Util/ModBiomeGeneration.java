@@ -51,6 +51,8 @@ public class ModBiomeGeneration {
         addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 24, OVERWORLD, COLD, WET, WASTELAND);
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 28, OVERWORLD, HOT, DRY, SPARSE, SANDY);
+
+        addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 28, OVERWORLD, HOT, BEACH, SPARSE, SANDY);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
