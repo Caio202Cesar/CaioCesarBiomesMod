@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:olive_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:olive_planks",
+    "count": 4
+  }
+}
