@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:strawberry_tree_log"
+      "item": "caiocesarbiomes:tropical_almond_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:strawberry_tree_planks",
+    "item": "caiocesarbiomes:tropical_almond_planks",
     "count": 4
   }
 }
