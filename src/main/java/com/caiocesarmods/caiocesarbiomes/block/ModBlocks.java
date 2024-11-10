@@ -294,19 +294,25 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("red_kapok_sapling",
             RedKapokSapling::new);
 
-    //Plants
+    //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
             DesertRosePlant::new);
     public static final RegistryObject<Block> GARDENIA_BUSH = registerBlock("gardenia_bush",
             ModTallPlant::new);
-    public static final RegistryObject<Block> BUSH = registerBlock("bush",
-            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> CHINESE_HIBISCUS = registerBlock("chinese_hibiscus",
+            ModTallPlant::new);
+
+    //Vines
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",
             CreepingFigVine::new);
     public static final RegistryObject<Block> CREEPING_FIG_FRUITING_VINE = registerBlock("creeping_fig_fruiting_vine",
             CreepingFigVine::new);
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
+
+    //Plants
+    public static final RegistryObject<Block> BUSH = registerBlock("bush",
+            SubtropicalForestPlant::new);
     public static final RegistryObject<Block> ANIS = registerBlock("anis",
             MediterraneanFlower::new);
     public static final RegistryObject<Block> BASIL = registerBlock("basil",

@@ -23,7 +23,7 @@ public class ModTallPlant extends DoublePlantBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.GARDENIA_BUSH.get(), RenderType.getCutout());
-
+        RenderTypeLookup.setRenderLayer(ModBlocks.CHINESE_HIBISCUS.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -35,7 +35,7 @@ public class ModTallPlant extends DoublePlantBlock {
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.DESERT;
+        return PlantType.PLAINS;
     }
 }
 

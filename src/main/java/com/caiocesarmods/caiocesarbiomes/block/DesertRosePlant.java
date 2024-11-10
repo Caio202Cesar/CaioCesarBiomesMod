@@ -23,6 +23,11 @@ public class DesertRosePlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.DESERT_ROSE_PLANT.get(), RenderType.getCutout());
     }
 
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
+                || state.matchesBlock(Blocks.RED_SAND);
+    }
+
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }
