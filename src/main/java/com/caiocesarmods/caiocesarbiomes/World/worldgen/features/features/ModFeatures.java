@@ -38,6 +38,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.HUMID_SUBTROPICAL_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> TROPICAL_PLANTS = register("tropical_plants",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.TROPICAL_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(6));
+
     public static final ConfiguredFeature<?, ?> PATCH_DESERT_ROSE = register("patch_desert_rose",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE),
                             new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -75,14 +79,22 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
                         .addWeightedBlockstate(States.ALLIUM, 1)
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
-                        .addWeightedBlockstate(States.OXEYE_DAISY, 1)
-                        .addWeightedBlockstate(States.SUNFLOWER, 1),
+                        .addWeightedBlockstate(States.OXEYE_DAISY, 1),
         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig TROPICAL_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.BASIL, 1)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
+                        .addWeightedBlockstate(States.BLUE_ORCHID, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
         protected static final BlockState ANIS = ModBlocks.ANIS.get().getDefaultState();
         protected static final BlockState SAGE = ModBlocks.SAGE.get().getDefaultState();
+        protected static final BlockState BASIL = ModBlocks.BASIL.get().getDefaultState();
         protected static final BlockState CINERARIA = ModBlocks.CINERARIA.get().getDefaultState();
         protected static final BlockState FENNEL = ModBlocks.FENNEL.get().getDefaultState();
         protected static final BlockState LAVENDER = ModBlocks.LAVENDER.get().getDefaultState();
@@ -100,7 +112,5 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
-        protected static final BlockState SUNFLOWER = Blocks.SUNFLOWER.getDefaultState();
-
     }
 }

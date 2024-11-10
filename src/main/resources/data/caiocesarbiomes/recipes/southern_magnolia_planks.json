@@ -1,0 +1,13 @@
+{
+  "type": "crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "caiocesarbiomes:southern_magnolia_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:southern_magnolia_planks",
+    "count": 4
+  }
+}

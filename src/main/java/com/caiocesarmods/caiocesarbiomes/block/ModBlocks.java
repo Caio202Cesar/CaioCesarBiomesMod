@@ -131,7 +131,31 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> TROPICAL_ALMOND_PLANKS = registerBlock("fig",
+    public static final RegistryObject<Block> TROPICAL_ALMOND_PLANKS = registerBlock("tropical_almond_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STONE_PINE_PLANKS = registerBlock("stone_pine_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ERYTHRINA_PLANKS = registerBlock("erythrina_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CRABAPPLE_PLANKS = registerBlock("crabapple_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ELDERBERRY_PLANKS = registerBlock("elderberry_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> JAPANESE_MAPLE_PLANKS = registerBlock("japanese_maple_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
             ModPlanks::new);
 
     //Leaves
@@ -274,7 +298,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
             DesertRosePlant::new);
     public static final RegistryObject<Block> GARDENIA_BUSH = registerBlock("gardenia_bush",
-            DesertRosePlant::new);
+            ModTallPlant::new);
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",

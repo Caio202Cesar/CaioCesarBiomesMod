@@ -1,0 +1,13 @@
+{
+  "type": "crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "caiocesarbiomes:avocado_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:avocado_planks",
+    "count": 4
+  }
+}

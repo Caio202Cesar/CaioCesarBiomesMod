@@ -56,6 +56,7 @@ public class TropicalSeasonalForestBiome {
       ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withTropicalForestDeciduousTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

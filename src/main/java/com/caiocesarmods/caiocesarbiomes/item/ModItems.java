@@ -28,6 +28,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> ARBUTUS = ITEMS.register("arbutus",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> MULBERRIES = ITEMS.register("mulberries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
