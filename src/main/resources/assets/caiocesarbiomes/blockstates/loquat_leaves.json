@@ -1,7 +1,9 @@
 {
   "variants":{
     "":[
-      {"model": "caiocesarbiomes:block/loquat_leaves"},
-      {"model": "caiocesarbiomes:block/loquat_fruiting_leaves"}
+      {"model": "caiocesarbiomes:block/loquat_leaves",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/loquat_fruiting_leaves",
+        "weight": 2}
     ]
   }}
