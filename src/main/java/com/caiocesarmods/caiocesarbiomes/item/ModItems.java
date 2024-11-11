@@ -17,21 +17,21 @@ public class ModItems {
     public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> FENNEL_STALK = ITEMS.register("fennel_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FENNEL_STALK)));
     public static final RegistryObject<Item> FIGFRUIT = ITEMS.register("figfruit",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FIGFRUIT)));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.POMEGRANATE)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.OLIVES)));
     public static final RegistryObject<Item> ARBUTUS = ITEMS.register("arbutus",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ARBUTUS)));
     public static final RegistryObject<Item> MULBERRIES = ITEMS.register("mulberries",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MULBERRIES)));
     public static final RegistryObject<Item> LOQUAT = ITEMS.register("loquat",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.LOQUAT)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
