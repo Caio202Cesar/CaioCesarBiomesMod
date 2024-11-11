@@ -69,7 +69,8 @@ public class CaioCesarBiomesMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
+    @SubscribeEvent
+    public static void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModBiomeGeneration::generateBiomes);
     }
 

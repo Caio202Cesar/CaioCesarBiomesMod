@@ -64,5 +64,6 @@ public class ModBiomeGeneration {
         BiomeDictionary.addTypes(key, types);
         BiomeManager.addBiome(type, new BiomeManager.BiomeEntry(key, weight));
     }
+
 }
 
