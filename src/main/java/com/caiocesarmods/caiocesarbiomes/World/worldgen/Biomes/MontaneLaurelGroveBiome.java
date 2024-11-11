@@ -5,6 +5,8 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDef
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
@@ -54,11 +56,14 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+    DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
+
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
             .temperature(0.7F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                     .withGrassColor(8762696).setFogColor(14807295)
-                    .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+                    .setAmbientSound(SoundEvents.MUSIC_CREATIVE).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
             .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();

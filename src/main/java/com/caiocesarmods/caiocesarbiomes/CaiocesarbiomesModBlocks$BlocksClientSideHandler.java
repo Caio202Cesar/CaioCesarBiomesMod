@@ -24,6 +24,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         SpanishMoss.registerRenderLayer();
         MediterraneanFlower.registerRenderLayer();
         SubtropicalForestPlant.registerRenderLayer();
+        ModTallPlant.registerRenderLayer();
 
         AvocadoSapling.registerRenderLayer();
         BlueSpruceSapling.registerRenderLayer();
@@ -34,8 +35,11 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         FigSapling.registerRenderLayer();
         HolmOakSapling.registerRenderLayer();
         IndianCoralSapling.registerRenderLayer();
+        ItalianCypressSapling.registerRenderLayer();
+        JapaneseMapleSapling.registerRenderLayer();
         LoquatSapling.registerRenderLayer();
         MesquiteSapling.registerRenderLayer();
+        MulberrySapling.registerRenderLayer();
         OcoteaForestSapling.registerRenderLayer();
         OcoteaJungleSapling.registerRenderLayer();
         OliveSapling.registerRenderLayer();
@@ -44,6 +48,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PomegranateSapling.registerRenderLayer();
         PurpleCrapeMyrtleSapling.registerRenderLayer();
         RedCrapeMyrtleSapling.registerRenderLayer();
+        RedKapokSapling.registerRenderLayer();
         RedOleanderSapling.registerRenderLayer();
         SouthernMagnoliaSapling.registerRenderLayer();
         SouthernWaxMyrtleSapling.registerRenderLayer();

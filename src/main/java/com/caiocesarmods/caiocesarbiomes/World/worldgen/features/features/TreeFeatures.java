@@ -229,6 +229,11 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.WHITE_CRAPE_MYRTLE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_CRAPE_MYRTLE_TREE = register("pink_crape_myrtle_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
+                    new SimpleBlockStateProvider(States.PINK_CRAPE_MYRTLE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).build()));
 
     //Southern Wax Myrtle Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_WAX_MYRTLE_SHRUB = register("southern_wax_myrtle_shrub",
@@ -327,6 +332,12 @@ public class TreeFeatures {
                     new ItalianCypressFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(17, 0, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIGHT_ITALIAN_CYPRESS_TREE = register("right_italian_cypress_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(17, 0, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Red Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
@@ -417,6 +428,8 @@ public class TreeFeatures {
         protected static final BlockState RED_CRAPE_MYRTLE_LEAVES = ModBlocks.RED_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
         protected static final BlockState PURPLE_CRAPE_MYRTLE_LEAVES = ModBlocks.PURPLE_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = ModBlocks.WHITE_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = ModBlocks.PINK_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
+
         protected static final BlockState SOUTHERN_WAX_MYRTLE_LEAVES = ModBlocks.SOUTHERN_WAX_MYRTLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState STONE_PINE_LOG = ModBlocks.STONE_PINE_LOG.get().getDefaultState();
@@ -479,12 +492,13 @@ public class TreeFeatures {
                     OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_CONIFER_TREES = register("mediterranean_conifer_trees", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE2.withChance(0.1F), ITALIAN_CYPRESS_TREE.withChance(0.2F)),
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE2.withChance(0.1F), RIGHT_ITALIAN_CYPRESS_TREE.withChance(0.2F)),
                     STONE_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> CRAPE_MYRTLE_TREES = register("crap_myrtles", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_CRAPE_MYRTLE_TREE.withChance(0.3F), WHITE_CRAPE_MYRTLE_TREE.withChance(0.3F)),
-                    PURPLE_CRAPE_MYRTLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+    public static final ConfiguredFeature<?, ?> CRAPE_MYRTLE_TREES = register("crape_myrtle_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_CRAPE_MYRTLE_TREE.withChance(0.1F),
+                            PINK_CRAPE_MYRTLE_TREE.withChance(0.3F), RED_CRAPE_MYRTLE_TREE.withChance(0.3F)), PURPLE_CRAPE_MYRTLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_BEACH_TREES = register("tropical_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TROPICAL_ALMOND_TREE.withChance(0.1F),
@@ -535,7 +549,7 @@ public class TreeFeatures {
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SCRUBLAND_MEDITERRANEAN_CONIFERS = register("scrubland_mediterranean_conifers",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ITALIAN_CYPRESS_TREE.withChance(0.1F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RIGHT_ITALIAN_CYPRESS_TREE.withChance(0.1F)),
                     STONE_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 

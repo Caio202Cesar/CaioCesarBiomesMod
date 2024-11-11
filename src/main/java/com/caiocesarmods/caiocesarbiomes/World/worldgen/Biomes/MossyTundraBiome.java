@@ -47,6 +47,7 @@ public class MossyTundraBiome {
         DefaultBiomeFeatures.withInfestedStone(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.ICY).depth(depth).scale(scale)
                 .temperature(0.18F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4020182)
