@@ -41,7 +41,7 @@ public class PinkCrapeMyrtleSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.PURPLE_CRAPE_MYRTLE_TREE;
+            return TreeFeatures.PINK_CRAPE_MYRTLE_TREE;
         }
     }
 }

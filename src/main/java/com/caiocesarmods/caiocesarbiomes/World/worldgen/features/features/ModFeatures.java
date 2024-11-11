@@ -49,7 +49,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_FLOWER_VEGETATION = register("subtropical_forest_flower_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));;
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -87,8 +87,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.BASIL, 1)
                         .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1)
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
-                        .addWeightedBlockstate(States.BLUE_ORCHID, 1),
-                        SimpleBlockPlacer.PLACER)).tries(64).build();
+                        .addWeightedBlockstate(States.BLUE_ORCHID, 1)
+                        .addWeightedBlockstate(States.TROPICAL_HIBISCUS, 1),
+        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
@@ -112,5 +113,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
+        protected static final BlockState TROPICAL_HIBISCUS = ModBlocks.CHINESE_HIBISCUS.get().getDefaultState();
     }
 }
