@@ -235,6 +235,10 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
