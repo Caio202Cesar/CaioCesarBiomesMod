@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AVOCADO)));
     public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> FENNEL_STALK = ITEMS.register("fennel_stalk",
