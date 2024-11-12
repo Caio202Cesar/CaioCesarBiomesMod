@@ -47,6 +47,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                             new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
 
+    public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_HIBISCUS = register("patch_tropical_hibiscus",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_HIBISCUS),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
+
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_FLOWER_VEGETATION = register("subtropical_forest_flower_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
@@ -88,7 +93,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1)
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
-                        .addWeightedBlockstate(States.TROPICAL_HIBISCUS, 1),
+                        .addWeightedBlockstate(States.PURPLE_BASIL, 1),
         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -96,6 +101,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ANIS = ModBlocks.ANIS.get().getDefaultState();
         protected static final BlockState SAGE = ModBlocks.SAGE.get().getDefaultState();
         protected static final BlockState BASIL = ModBlocks.BASIL.get().getDefaultState();
+        protected static final BlockState PURPLE_BASIL = ModBlocks.PURPLE_BASIL.get().getDefaultState();
         protected static final BlockState CINERARIA = ModBlocks.CINERARIA.get().getDefaultState();
         protected static final BlockState FENNEL = ModBlocks.FENNEL.get().getDefaultState();
         protected static final BlockState LAVENDER = ModBlocks.LAVENDER.get().getDefaultState();

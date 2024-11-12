@@ -329,6 +329,8 @@ public class ModBlocks {
             MediterraneanFlower::new);
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             MediterraneanFlower::new);
+    public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
+            MediterraneanFlower::new);
     public static final RegistryObject<Block> CINERARIA = registerBlock("cineraria",
             MediterraneanFlower::new);
     public static final RegistryObject<Block> FENNEL = registerBlock("fennel",
