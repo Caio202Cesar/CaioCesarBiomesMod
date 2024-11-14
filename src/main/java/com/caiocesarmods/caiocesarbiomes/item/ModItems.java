@@ -36,7 +36,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MANDARIN).food(ModFoods.MANDARIN)));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ORANGE).food(ModFoods.ORANGE)));
-    public static final RegistryObject<Item> LEMON = ITEMS.register("orange",
+    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.LEMON).food(ModFoods.LEMON)));
 
     public static void register(IEventBus eventBus) {
