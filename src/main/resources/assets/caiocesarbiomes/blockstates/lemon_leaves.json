@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/citrus_leaves"},
+      {"model": "caiocesarbiomes:block/citrus_flowering_leaves"},
+      {"model": "caiocesarbiomes:block/lemon_fruiting_leaves"}
+    ]
+  }}
