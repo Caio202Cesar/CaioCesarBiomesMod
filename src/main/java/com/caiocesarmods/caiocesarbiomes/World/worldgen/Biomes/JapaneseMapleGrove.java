@@ -54,13 +54,12 @@ public class JapaneseMapleGrove {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withMountainTrees(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withForestBirchTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJapaneseMapleTree(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrabappleTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withJapaneseGroveTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
