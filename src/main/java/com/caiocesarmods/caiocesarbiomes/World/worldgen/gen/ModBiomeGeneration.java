@@ -53,6 +53,8 @@ public class ModBiomeGeneration {
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 13, OVERWORLD, HOT, DRY, SPARSE);
 
         addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, HOT, BEACH, SANDY);
+
+        addBiome(JapaneseMapleGrove.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 14, OVERWORLD, FOREST, LUSH);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

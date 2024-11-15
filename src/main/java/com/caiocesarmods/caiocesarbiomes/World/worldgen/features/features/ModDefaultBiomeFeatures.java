@@ -93,5 +93,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCitrusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CITRUS_TREES);
     }
+    public static void withCrabappleTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRABAPPLE_TREES);
+    }
 }
 
