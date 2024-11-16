@@ -56,6 +56,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
+    public static final ConfiguredFeature<?, ?> ROCK_BOULDER = register("rock_boulder", ModConfiguredFeature.ROCK_BOULDER
+            .withConfiguration(new BlockStateFeatureConfig(States.COBBLESTONE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            .variableCount(2));
+
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
     }
@@ -120,5 +124,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
         protected static final BlockState TROPICAL_HIBISCUS = ModBlocks.CHINESE_HIBISCUS.get().getDefaultState();
+        protected static final BlockState COBBLESTONE = Blocks.COBBLESTONE.getDefaultState();
+
     }
 }

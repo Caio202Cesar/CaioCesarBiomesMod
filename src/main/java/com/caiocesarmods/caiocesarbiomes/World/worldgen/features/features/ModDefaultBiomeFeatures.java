@@ -99,5 +99,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withJapaneseGroveTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_GROVE_TREES);
     }
+    public static void withRockBoulder(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, ModFeatures.ROCK_BOULDER);
+    }
 }
 

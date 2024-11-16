@@ -62,6 +62,7 @@ public class MediterraneanOakWoodlandBiome {
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withOakShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withRockBoulder(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
