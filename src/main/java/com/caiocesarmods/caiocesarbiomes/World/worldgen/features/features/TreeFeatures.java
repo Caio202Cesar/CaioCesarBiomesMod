@@ -14,6 +14,9 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
+import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
+import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunkplacer.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -417,9 +420,19 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LEMON_TREE = register("lemon_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.LEMON_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
+    //Southern Live Oak
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE = register("southern_live_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
+                    new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(LeaveVineTreeDecorator.field_236871_b_)).build()));
+
 
     public static final class States {
 
@@ -522,6 +535,9 @@ public class TreeFeatures {
         protected static final BlockState ORANGE_LEAVES = ModBlocks.ORANGE_LEAVES.get().getDefaultState();
         protected static final BlockState LEMON_LEAVES = ModBlocks.LEMON_LEAVES.get().getDefaultState();
         protected static final BlockState MANDARIN_LEAVES = ModBlocks.MANDARIN_LEAVES.get().getDefaultState();
+
+        protected static final BlockState LIVE_OAK_LOG = ModBlocks.LIVE_OAK_LOG.get().getDefaultState();
+        protected static final BlockState LIVE_OAK_LEAVES = ModBlocks.LIVE_OAK_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
@@ -581,6 +597,11 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.3F)),
                             OCOTEA_FOREST_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
+                            ELDERBERRY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.2F),

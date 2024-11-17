@@ -102,5 +102,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withRockBoulder(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, ModFeatures.ROCK_BOULDER);
     }
+    public static void withMediterraneanSavannaSmallTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_SAVANNA_SMALL_TREES);
+    }
 }
 

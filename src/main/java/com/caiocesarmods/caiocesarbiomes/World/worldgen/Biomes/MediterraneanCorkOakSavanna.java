@@ -60,6 +60,8 @@ public class MediterraneanCorkOakSavanna {
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRockBoulder(biomegenerationsettings$builder);
 
+        ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
+
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)

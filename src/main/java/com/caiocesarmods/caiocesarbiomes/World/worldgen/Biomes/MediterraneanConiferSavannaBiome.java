@@ -63,9 +63,9 @@ public class MediterraneanConiferSavannaBiome {
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withRockBoulder(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
               .temperature(1.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
