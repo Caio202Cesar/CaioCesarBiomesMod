@@ -57,6 +57,7 @@ public class TropicalBeachBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalBeachTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(0.95F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)

@@ -26,6 +26,11 @@ public class ModTallPlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.CHINESE_HIBISCUS.get(), RenderType.getCutout());
     }
 
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.GRASS_BLOCK)
+                || state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.FARMLAND);
+    }
+
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }
