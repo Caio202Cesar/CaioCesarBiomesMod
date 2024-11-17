@@ -6,8 +6,15 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ModFoliagePlacer
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.structures.ModStructures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
+import net.minecraft.block.WoodType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.item.AxeItem;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,6 +52,8 @@ public class CaioCesarBiomesMod
         ModFoliagePlacers.register(eventBus);
         //ModTrunkPlacers.register(eventBus);
 
+        eventBus.addListener(this::setup);
+
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
         MediterraneanOakWoodlandBiome.register(eventBus);
@@ -69,9 +78,12 @@ public class CaioCesarBiomesMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    @SubscribeEvent
-    public static void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(ModBiomeGeneration::generateBiomes);
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+
+            ModBiomeGeneration.generateBiomes();
+
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
