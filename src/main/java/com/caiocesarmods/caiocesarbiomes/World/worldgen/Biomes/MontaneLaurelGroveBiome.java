@@ -23,7 +23,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> MONTANE_LAUREL_GROVE = BIOMES.register("montane_laurel_grove",
-        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1f, 0.4f));
+        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.4f, 0.3f));
 
 
 private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
