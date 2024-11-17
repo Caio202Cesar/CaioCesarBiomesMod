@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/mandarin_leaves",
-    "particle": "caiocesarbiomes:block/mandarin_leaves"
-  }
-}

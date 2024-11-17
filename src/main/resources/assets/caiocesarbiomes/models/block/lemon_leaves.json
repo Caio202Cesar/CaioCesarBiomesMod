@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/lemon_leaves",
-    "particle": "caiocesarbiomes:block/lemon_leaves"
-  }
-}

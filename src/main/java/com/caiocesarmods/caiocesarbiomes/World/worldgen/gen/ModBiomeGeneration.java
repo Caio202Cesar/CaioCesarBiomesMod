@@ -19,7 +19,7 @@ public class ModBiomeGeneration {
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 8, OVERWORLD, SPARSE, DRY, SAVANNA);
 
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 15,
-                OVERWORLD, DRY, FOREST);
+                OVERWORLD);
 
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
@@ -32,7 +32,7 @@ public class ModBiomeGeneration {
 
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 15, OVERWORLD, FOREST, LUSH, DENSE);
 
-        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 11, OVERWORLD, HOT, FOREST, LUSH, DENSE);
+        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.DESERT, 11, OVERWORLD, HOT, FOREST, LUSH, DENSE);
 
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 7, OVERWORLD, FOREST, LUSH, DENSE);
 
@@ -52,7 +52,7 @@ public class ModBiomeGeneration {
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 13, OVERWORLD, HOT, DRY, SPARSE);
 
-        addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, HOT, BEACH, SANDY);
+        addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 12, OVERWORLD, HOT, BEACH, SANDY);
 
         addBiome(JapaneseMapleGrove.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 14, OVERWORLD, FOREST, LUSH);
     }
