@@ -1,4 +1,4 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
-public class SubtropicalTemperateEucalyptusForest {
+public class SubtropicalEucalyptusDryForest {
 }
