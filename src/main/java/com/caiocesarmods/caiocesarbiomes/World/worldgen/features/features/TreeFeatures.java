@@ -451,8 +451,8 @@ public class TreeFeatures {
 
     //Eucalyptus Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_TALL_TREE = register("eucalyptus_tall_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Features.States.EUCALYPTUS_LOG),
-                    new SimpleBlockStateProvider(Features.States.EUCALYPTUS_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
@@ -568,6 +568,15 @@ public class TreeFeatures {
 
         protected static final BlockState LIVE_OAK_LOG = ModBlocks.LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState LIVE_OAK_LEAVES = ModBlocks.LIVE_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ROYAL_POINCIANA_LOG = ModBlocks.ROYAL_POINCIANA_LOG.get().getDefaultState();
+        protected static final BlockState ROYAL_POINCIANA_LEAVES = ModBlocks.ROYAL_POINCIANA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState TAMARIND_LOG = ModBlocks.TAMARIND_LOG.get().getDefaultState();
+        protected static final BlockState TAMARIND_LEAVES = ModBlocks.TAMARIND_LEAVES.get().getDefaultState();
+
+        protected static final BlockState EUCALYPTUS_LOG = ModBlocks.EUCALYPTUS_LOG.get().getDefaultState();
+        protected static final BlockState EUCALYPTUS_LEAVES = ModBlocks.EUCALYPTUS_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
@@ -609,9 +618,9 @@ public class TreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.2F)),
-                    FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.2F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F)), FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_TREES = register("subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
@@ -645,8 +654,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FRUIT_TREES = register("tropical_fruit_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.3F)),
-                            AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.3F),
+                            AVOCADO_TREE.withChance(0.2F)), TAMARIND_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JAPANESE_MAPLE = register("japanese_maple", JAPANESE_MAPLE_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

@@ -31,6 +31,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CoastCottonwoodSapling.registerRenderLayer();
         CorkOakSapling.registerRenderLayer();
         DarkPinkOleanderSapling.registerRenderLayer();
+        EucalyptusSapling.registerRenderLayer();
         ElderberrySapling.registerRenderLayer();
         FigSapling.registerRenderLayer();
         HolmOakSapling.registerRenderLayer();
@@ -51,10 +52,12 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         RedCrapeMyrtleSapling.registerRenderLayer();
         RedKapokSapling.registerRenderLayer();
         RedOleanderSapling.registerRenderLayer();
+        RoyalPoincianaSapling.registerRenderLayer();
         SouthernMagnoliaSapling.registerRenderLayer();
         SouthernWaxMyrtleSapling.registerRenderLayer();
         StonePineSapling.registerRenderLayer();
         StrawberryTreeSapling.registerRenderLayer();
+        TamarindSapling.registerRenderLayer();
         TropicalAlmondSapling.registerRenderLayer();
         WhiteCrabappleSapling.registerRenderLayer();
         WhiteCrapeMyrtleSapling.registerRenderLayer();

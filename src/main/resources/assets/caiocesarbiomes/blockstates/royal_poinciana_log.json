@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "caiocesarbiomes:block/royal_poinciana_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "caiocesarbiomes:block/royal_poinciana_log"
+    },
+    "axis=z": {
+      "model": "caiocesarbiomes:block/royal_poinciana_log_horizontal",
+      "x": 90
+    }
+  }
+}

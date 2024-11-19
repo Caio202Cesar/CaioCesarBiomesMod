@@ -81,6 +81,12 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CITRUS_LOG = registerBlock("citrus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
+            ModLogs::new);
 
     //Woods
     public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
@@ -245,6 +251,12 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
@@ -313,6 +325,12 @@ public class ModBlocks {
             RedKapokSapling::new);
     public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
             MulberrySapling::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_SAPLING = registerBlock("royal_poinciana_sapling",
+            RoyalPoincianaSapling::new);
+    public static final RegistryObject<Block> TAMARIND_SAPLING = registerBlock("tamarind_sapling",
+            TamarindSapling::new);
+    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
+            EucalyptusSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
