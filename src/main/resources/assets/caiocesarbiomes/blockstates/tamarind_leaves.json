@@ -2,7 +2,7 @@
   "variants":{
     "":[
       {"model": "caiocesarbiomes:block/tamarind_leaves",
-        "weight": 3},
+        "weight": 1},
       {"model": "caiocesarbiomes:block/tamarind_fruiting_leaves",
         "weight": 5}
     ]
