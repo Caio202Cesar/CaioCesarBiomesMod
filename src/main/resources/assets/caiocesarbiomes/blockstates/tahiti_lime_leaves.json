@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/citrus_leaves"},
+      {"model": "caiocesarbiomes:block/tahiti_lime_fruiting_leaves"}
+    ]
+  }}
