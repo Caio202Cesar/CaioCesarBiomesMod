@@ -15,6 +15,8 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ModFoliagePlacers.ITALIAN_CYPRESS_FOLIAGE_PLACER;
+
 public class ItalianCypressFoliagePlacer extends FoliagePlacer {
     public static final Codec<ItalianCypressFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(

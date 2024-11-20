@@ -6,6 +6,7 @@ import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.Heightmap;
@@ -334,7 +335,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ITALIAN_CYPRESS_TREE = register("italian_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new ItalianCypressFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new ItalianCypressFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1)),
                     new StraightTrunkPlacer(17, 0, 0),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIGHT_ITALIAN_CYPRESS_TREE = register("right_italian_cypress_tree",
@@ -343,6 +344,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(17, 0, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
 
     //Red Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
@@ -427,7 +429,7 @@ public class TreeFeatures {
     //Citrus Trees - Limes
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAHITI_LIME_TREE = register("tahiti_lime_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
-                    new SimpleBlockStateProvider(States.TAHITI_LIME_LEAVES),
+                    new SimpleBlockStateProvider(States.LEMON_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
@@ -474,14 +476,14 @@ public class TreeFeatures {
 
     //Casuarina Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASUARINA_FANCY_TREE = register("casuarina_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CASUARINA_LOG),
-                    new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINE_LIKE_CASUARINA_TREE = register("pine_like_casuarina_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CASUARINA_LOG),
-                    new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(5, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));

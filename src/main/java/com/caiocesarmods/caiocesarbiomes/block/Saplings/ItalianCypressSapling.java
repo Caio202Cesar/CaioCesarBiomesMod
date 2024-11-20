@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
@@ -14,7 +15,6 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.Nullable;
 import java.util.Random;
 
 public class ItalianCypressSapling extends SaplingBlock {
@@ -37,9 +37,8 @@ public class ItalianCypressSapling extends SaplingBlock {
     }
 
     private static class ItalianCypressTree extends Tree {
-        @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean hasBees) {
             return TreeFeatures.ITALIAN_CYPRESS_TREE;
         }
     }

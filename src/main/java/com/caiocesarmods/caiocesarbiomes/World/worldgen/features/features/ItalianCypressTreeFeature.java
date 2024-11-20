@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.ISeedReader;
@@ -15,7 +16,6 @@ public class ItalianCypressTreeFeature extends Feature<BaseTreeFeatureConfig> {
     public ItalianCypressTreeFeature(Codec<BaseTreeFeatureConfig> codec) {
         super(codec);
     }
-
 
     @Override
     public boolean generate(ISeedReader reader, ChunkGenerator generator, Random rand, BlockPos pos, BaseTreeFeatureConfig config) {
@@ -65,5 +65,11 @@ public class ItalianCypressTreeFeature extends Feature<BaseTreeFeatureConfig> {
         }
 
         return true;
-    }}
+    }
+
+    private boolean isValidGround(ISeedReader reader, BlockPos pos) {
+        BlockState state = reader.getBlockState(pos.down());
+        return state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.GRASS_BLOCK);
+    }
+}
 
