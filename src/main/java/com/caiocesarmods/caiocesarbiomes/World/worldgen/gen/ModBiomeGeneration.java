@@ -48,7 +48,11 @@ public class ModBiomeGeneration {
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD, SPARSE, MOUNTAIN,
                 RARE, LUSH);
 
-        addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 10, OVERWORLD, COLD);
+        addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 10, OVERWORLD, COLD, DRY);
+
+        addBiome(MossyTundraBiome.MOSSY_TUNDRA.get(), BiomeManager.BiomeType.ICY, 7, OVERWORLD, COLD, WET);
+
+        addBiome(TussockTundraBiome.TUSSOCK_TUNDRA.get(), BiomeManager.BiomeType.ICY, 8, OVERWORLD, COLD, WET);
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 13, OVERWORLD, HOT, DRY, SPARSE);
 
