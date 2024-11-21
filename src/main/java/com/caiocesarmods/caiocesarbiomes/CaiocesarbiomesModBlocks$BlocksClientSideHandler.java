@@ -49,6 +49,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PinkCrapeMyrtleSapling.registerRenderLayer();
         PinkOleanderSapling.registerRenderLayer();
         PomegranateSapling.registerRenderLayer();
+        PohutukawaSapling.registerRenderLayer();
         PurpleCrapeMyrtleSapling.registerRenderLayer();
         RedCrapeMyrtleSapling.registerRenderLayer();
         RedKapokSapling.registerRenderLayer();

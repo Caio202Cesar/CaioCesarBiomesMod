@@ -32,6 +32,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.GARDENIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_ROSE_BUSH_PATCH = register("mediterranean_rose_bush_patch",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROSE_BUSH),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
+
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_OAKS = register("subtropical_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OAK_BEES_002.withChance(0.025641026F),
                     FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.33333334F)), OAK)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -52,7 +57,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> PATCH_TUSSOCK = register("patch_tussock",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TUSSOCK_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(50));
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(100));
 
     public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_HIBISCUS = register("patch_tropical_hibiscus",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_HIBISCUS),
@@ -84,7 +89,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.OREGANO, 1)
                         .addWeightedBlockstate(States.ROSEMARY, 1)
                         .addWeightedBlockstate(States.THYME, 1)
-                        .addWeightedBlockstate(States.ROSE_BUSH, 1)
                         .addWeightedBlockstate(States.OXEYE_DAISY, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
