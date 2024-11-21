@@ -42,6 +42,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.STARFRUIT)));
     public static final RegistryObject<Item> STARFRUIT_SLICE = ITEMS.register("starfruit_slice",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.STARFRUIT_SLICE)));
+    public static final RegistryObject<Item> ELDERBERRIES = ITEMS.register("elderberries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ELDERBERRIES)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
