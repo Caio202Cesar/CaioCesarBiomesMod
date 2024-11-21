@@ -498,7 +498,7 @@ public class TreeFeatures {
 
     //Cherry Plum Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHERRY_PLUM_TREE = register("cherry_plum_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHERRY_PLUM_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
                     new SimpleBlockStateProvider(States.CHERRY_PLUM_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -627,7 +627,7 @@ public class TreeFeatures {
         protected static final BlockState POHUTUKAWA_LOG = ModBlocks.POHUTUKAWA_LOG.get().getDefaultState();
         protected static final BlockState POHUTUKAWA_LEAVES = ModBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CHERRY_PLUM_LOG = ModBlocks.CHERRY_PLUM_LOG.get().getDefaultState();
+        protected static final BlockState PLUM_LOG = ModBlocks.PLUM_LOG.get().getDefaultState();
         protected static final BlockState CHERRY_PLUM_LEAVES = ModBlocks.CHERRY_PLUM_LEAVES.get().getDefaultState();
     }
 

@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/cherry_plum_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/cherry_plum_flowering_leaves",
+        "weight": 1}
+    ]
+  }}
