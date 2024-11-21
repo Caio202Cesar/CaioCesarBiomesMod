@@ -348,6 +348,8 @@ public class ModBlocks {
             TamarindSapling::new);
     public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
             EucalyptusSapling::new);
+    public static final RegistryObject<Block> POHUTUKAWA_SAPLING = registerBlock("pohutukawa_sapling",
+            PohutukawaSapling::new);
     public static final RegistryObject<Block> CHERRY_PLUM_SAPLING = registerBlock("cherry_plum_sapling",
             CherryPlumSapling::new);
 

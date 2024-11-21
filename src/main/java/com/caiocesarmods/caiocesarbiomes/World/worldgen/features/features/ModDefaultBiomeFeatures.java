@@ -96,6 +96,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCrabappleTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRABAPPLE_TREES);
     }
+    public static void withTemperateFruitTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEMPERATE_FRUIT_TREES);
+    }
     public static void withJapaneseGroveTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_GROVE_TREES);
     }
@@ -107,6 +110,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.EUCALYPTUS_TREES);
+    }
+    public static void withPohutukawaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.POHUTUKAWA_TREES);
     }
 }
 

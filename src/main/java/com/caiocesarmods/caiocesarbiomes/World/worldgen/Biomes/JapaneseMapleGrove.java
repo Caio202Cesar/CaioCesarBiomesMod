@@ -58,7 +58,7 @@ public class JapaneseMapleGrove {
         ModDefaultBiomeFeatures.withJapaneseMapleTree(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrabappleTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTemperateFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJapaneseGroveTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
