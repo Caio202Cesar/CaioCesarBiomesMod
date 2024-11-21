@@ -54,7 +54,7 @@ public class TussockTundraBiome {
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.ICY).depth(depth).scale(scale)
                 .temperature(0.18F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4020182)
                         .setWaterFogColor(329011).withSkyColor(8103167).withFoliageColor(9153185)
-                        .withGrassColor(10139053).setFogColor(13028309)
+                        .withGrassColor(11437360).setFogColor(13028309)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
