@@ -52,7 +52,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> PATCH_TUSSOCK = register("patch_tussock",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TUSSOCK_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(50));
 
     public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_HIBISCUS = register("patch_tropical_hibiscus",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_HIBISCUS),
