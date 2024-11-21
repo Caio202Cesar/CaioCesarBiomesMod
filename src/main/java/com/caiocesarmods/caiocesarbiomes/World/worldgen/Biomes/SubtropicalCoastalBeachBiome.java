@@ -55,10 +55,11 @@ public class SubtropicalCoastalBeachBiome  {
       ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
-      return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
+      return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
               .temperature(0.8F).downfall(0.6F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(5216810)
                       .withGrassColor(6604607).setFogColor(15658734)

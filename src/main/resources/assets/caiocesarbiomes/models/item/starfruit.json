@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "caiocesarbiomes:item/starfruit_fruit"
+    "layer0": "caiocesarbiomes:item/starfruit"
   }
 }

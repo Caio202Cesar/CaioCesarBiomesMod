@@ -29,6 +29,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
 
         AvocadoSapling.registerRenderLayer();
         BlueSpruceSapling.registerRenderLayer();
+        CherryPlumSapling.registerRenderLayer();
         CoastCottonwoodSapling.registerRenderLayer();
         CorkOakSapling.registerRenderLayer();
         DarkPinkOleanderSapling.registerRenderLayer();

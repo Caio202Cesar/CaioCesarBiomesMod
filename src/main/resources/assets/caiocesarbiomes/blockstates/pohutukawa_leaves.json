@@ -1,7 +1,9 @@
 {
   "variants":{
     "":[
-      {"model": "caiocesarbiomes:block/pohutukawa_leaves"},
-      {"model": "caiocesarbiomes:block/pohutukawa_flowering_leaves"}
+      {"model": "caiocesarbiomes:block/pohutukawa_leaves",
+        "weight": 1},
+      {"model": "caiocesarbiomes:block/pohutukawa_flowering_leaves",
+        "weight": 5}
     ]
   }}
