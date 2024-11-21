@@ -63,7 +63,6 @@ public class MediterraneanScrublandBiome {
         ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withOakShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withRockBoulder(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
