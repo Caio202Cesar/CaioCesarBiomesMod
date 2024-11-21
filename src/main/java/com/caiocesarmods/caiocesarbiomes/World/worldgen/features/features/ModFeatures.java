@@ -51,9 +51,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
 
     public static final ConfiguredFeature<?, ?> PATCH_TUSSOCK = register("patch_tussock",
-            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TUSSOCK_GRASS),
-                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(30));
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.TUSSOCK_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
 
     public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_HIBISCUS = register("patch_tropical_hibiscus",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_HIBISCUS),
@@ -107,7 +106,13 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
                         .addWeightedBlockstate(States.PURPLE_BASIL, 1),
         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig TUSSOCK_GRASS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.TUSSOCK_GRASS, 6),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
+
 
     public static final class States {
         protected static final BlockState ANIS = ModBlocks.ANIS.get().getDefaultState();
