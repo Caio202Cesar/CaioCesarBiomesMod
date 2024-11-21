@@ -33,11 +33,15 @@ public class ModItems {
     public static final RegistryObject<Item> LOQUAT = ITEMS.register("loquat",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.LOQUAT)));
     public static final RegistryObject<Item> MANDARIN = ITEMS.register("mandarin",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MANDARIN).food(ModFoods.MANDARIN)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MANDARIN)));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ORANGE).food(ModFoods.ORANGE)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ORANGE)));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.LEMON).food(ModFoods.LEMON)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.LEMON)));
+    public static final RegistryObject<Item> STARFRUIT = ITEMS.register("starfruit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.STARFRUIT)));
+    public static final RegistryObject<Item> STARFRUIT_SLICE = ITEMS.register("starfruit_slice",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.STARFRUIT_SLICE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -19,5 +19,8 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
     public static final Food ORANGE = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MANDARIN = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food STARFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
+    public static final Food STARFRUIT_SLICE = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
 }

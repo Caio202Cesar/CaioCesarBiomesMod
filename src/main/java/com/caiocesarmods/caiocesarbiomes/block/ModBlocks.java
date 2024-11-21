@@ -91,6 +91,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CHERRY_PLUM_LOG = registerBlock("cherry_plum_log",
+            ModLogs::new);
 
     //Woods
     public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
@@ -335,6 +337,8 @@ public class ModBlocks {
             RedKapokSapling::new);
     public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
             MulberrySapling::new);
+    public static final RegistryObject<Block> STARFRUIT_SAPLING = registerBlock("starfruit_sapling",
+            StarfruitSapling::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_SAPLING = registerBlock("royal_poinciana_sapling",
             RoyalPoincianaSapling::new);
     public static final RegistryObject<Block> TAMARIND_SAPLING = registerBlock("tamarind_sapling",

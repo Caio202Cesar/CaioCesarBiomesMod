@@ -620,6 +620,15 @@ public class TreeFeatures {
 
         protected static final BlockState EUCALYPTUS_LOG = ModBlocks.EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState EUCALYPTUS_LEAVES = ModBlocks.EUCALYPTUS_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CASUARINA_LOG = ModBlocks.CASUARINA_LOG.get().getDefaultState();
+        protected static final BlockState CASUARINA_LEAVES = ModBlocks.CASUARINA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState POHUTUKAWA_LOG = ModBlocks.POHUTUKAWA_LOG.get().getDefaultState();
+        protected static final BlockState POHUTUKAWA_LEAVES = ModBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CHERRY_PLUM_LOG = ModBlocks.CHERRY_PLUM_LOG.get().getDefaultState();
+        protected static final BlockState CHERRY_PLUM_LEAVES = ModBlocks.CHERRY_PLUM_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
