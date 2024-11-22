@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:tamarind_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:tamarind_planks",
+    "count": 4
+  }
+}

@@ -38,7 +38,7 @@ public class TamarindSapling extends SaplingBlock {
     private static class TamarindTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.ROYAL_POINCIANA_TREE;
+            return TreeFeatures.TAMARIND_TREE;
         }
 
     }
