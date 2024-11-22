@@ -29,6 +29,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
 
         AvocadoSapling.registerRenderLayer();
         BlueSpruceSapling.registerRenderLayer();
+        CamelliaSapling.registerRenderLayer();
         CherryPlumSapling.registerRenderLayer();
         CoastCottonwoodSapling.registerRenderLayer();
         CorkOakSapling.registerRenderLayer();
@@ -65,6 +66,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         StonePineSapling.registerRenderLayer();
         StrawberryTreeSapling.registerRenderLayer();
         TamarindSapling.registerRenderLayer();
+        TeaSapling.registerRenderLayer();
         TropicalAlmondSapling.registerRenderLayer();
         WhiteCrabappleSapling.registerRenderLayer();
         WhiteCrapeMyrtleSapling.registerRenderLayer();

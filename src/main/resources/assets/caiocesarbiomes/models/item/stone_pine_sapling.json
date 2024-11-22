@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/stone_pine_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/stone_pine_sapling"
+  }
 }

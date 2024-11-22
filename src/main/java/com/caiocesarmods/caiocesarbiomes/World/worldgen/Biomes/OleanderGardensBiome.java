@@ -62,6 +62,7 @@ public class OleanderGardensBiome {
       ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanRoseBush(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
       DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

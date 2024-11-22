@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/lemon_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/lemon_sapling"
+  }
 }

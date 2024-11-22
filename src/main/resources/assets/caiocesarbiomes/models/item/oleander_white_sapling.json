@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/oleander_white_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/white_oleander_sapling"
+  }
 }

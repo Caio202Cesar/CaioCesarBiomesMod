@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/southern_magnolia_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/southern_magnolia_sapling"
+  }
 }

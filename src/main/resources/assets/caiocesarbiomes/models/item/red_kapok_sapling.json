@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/red_kapok_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/red_kapok_sapling"
+  }
 }

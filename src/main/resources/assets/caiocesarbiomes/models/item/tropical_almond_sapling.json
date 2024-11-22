@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/tropical_almond_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/tropical_almond_sapling"
+  }
 }

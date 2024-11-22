@@ -392,7 +392,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMELLIA_LOG),
                     new SimpleBlockStateProvider(States.TEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
-                    new StraightTrunkPlacer(4, 2, 0),
+                    new StraightTrunkPlacer(2, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Citrus Trees - Mandarin

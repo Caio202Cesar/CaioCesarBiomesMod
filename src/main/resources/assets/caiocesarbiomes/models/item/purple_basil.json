@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/purple_basil"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/purple_basil"
+  }
 }

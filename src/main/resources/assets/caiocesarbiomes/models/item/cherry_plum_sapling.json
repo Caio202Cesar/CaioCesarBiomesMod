@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/cherry_plum_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/cherry_plum_sapling"
+  }
 }

@@ -56,6 +56,7 @@ public class OliveGroveBiome {
         ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanRoseBush(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BIG_OLIVE_TREE);
 

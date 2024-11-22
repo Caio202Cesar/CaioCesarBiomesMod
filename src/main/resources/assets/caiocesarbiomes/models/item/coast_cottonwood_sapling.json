@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/coast_cottonwood_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/coast_cottonwood_sapling"
+  }
 }

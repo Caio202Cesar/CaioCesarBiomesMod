@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/tussock_grass"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/tussock_grass"
+  }
 }

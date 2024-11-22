@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/crape_myrtle_purple_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/crape_myrtle_purple_sapling"
+  }
 }

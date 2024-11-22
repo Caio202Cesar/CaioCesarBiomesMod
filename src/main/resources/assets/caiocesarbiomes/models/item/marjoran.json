@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/marjoran"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/marjoran"
+  }
 }
