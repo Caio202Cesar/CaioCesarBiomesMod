@@ -2,12 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
@@ -21,52 +19,53 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class HumidSubtropicalBeachBiome {
+//Eucalyptus semiarid plains
+public class EucalyptusPlainsBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> HUMID_SUBTROPICAL_BEACH = BIOMES.register("humid_subtropical_beach",
-            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.12f));
+    public static final RegistryObject<Biome> EUCALYPTUS_PLAINS = BIOMES.register("eucalyptus_plains",
+            () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
 
 
-    private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));
+        DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
         biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.SHIPWRECK_BEACHED);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withBadlandsGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSwampVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanRoseBush(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_WAX_MYRTLE_SHRUB);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
-                        .withGrassColor(2791997).setFogColor(14807295)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
+                .temperature(0.8F).downfall(0.15F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(9218863)
+                        .withGrassColor(10075481).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
@@ -77,5 +76,3 @@ public class HumidSubtropicalBeachBiome {
         BIOMES.register(eventBus);
     }
 }
-
-

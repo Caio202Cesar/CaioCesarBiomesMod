@@ -3,7 +3,6 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
@@ -19,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class TropicalEucalyptusDryForest {
+public class TropicalEucalyptusDryForestBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 

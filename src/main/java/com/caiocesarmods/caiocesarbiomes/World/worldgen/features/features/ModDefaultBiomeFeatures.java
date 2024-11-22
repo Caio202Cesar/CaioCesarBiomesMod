@@ -117,6 +117,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.EUCALYPTUS_TREES);
     }
+    public static void withPlainsEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PLAINS_EUCALYPTUS_TREES);
+    }
     public static void withPohutukawaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.POHUTUKAWA_TREES);
     }

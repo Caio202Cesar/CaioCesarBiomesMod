@@ -27,7 +27,7 @@ public class ModBiomeGeneration {
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD,
                 SPARSE, DRY, SAVANNA, RARE);
 
-        addBiome(MediterraneanCorkOakSavanna.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 9, OVERWORLD, SPARSE, DRY,
+        addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 9, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
 
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 15, OVERWORLD, FOREST, LUSH, DENSE);
@@ -62,10 +62,15 @@ public class ModBiomeGeneration {
 
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 14, OVERWORLD, FOREST, LUSH);
 
-        addBiome(TropicalEucalyptusDryForest.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, FOREST, DRY, DENSE);
+        addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, FOREST, DRY, DENSE);
 
-        addBiome(SubtropicalEucalyptusDryForest.SUBTROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, DRY, DENSE);
+        addBiome(SubtropicalEucalyptusDryForestBiome.SUBTROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, DRY, DENSE);
 
+        addBiome(EucalyptusPlainsBiome.EUCALYPTUS_PLAINS.get(), BiomeManager.BiomeType.WARM, 15, OVERWORLD, PLAINS, DRY, SPARSE);
+
+        addBiome(HotMediterraneanBeachBiome.HOT_MEDITERRANEAN_BEACH.get(), BiomeManager.BiomeType.WARM, 10, OVERWORLD, BEACH, SANDY);
+
+        addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, BEACH, SANDY, WET, LUSH);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

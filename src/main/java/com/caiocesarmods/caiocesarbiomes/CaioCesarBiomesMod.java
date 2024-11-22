@@ -53,7 +53,7 @@ public class CaioCesarBiomesMod
         MediterraneanScrublandBiome.register(eventBus);
         OleanderGardensBiome.register(eventBus);
         OliveGroveBiome.register(eventBus);
-        MediterraneanCorkOakSavanna.register(eventBus);
+        CorkOakSavannaBiome.register(eventBus);
         SubtropicalSeasonalForestBiome.register(eventBus);
         TropicalSeasonalForestBiome.register(eventBus);
         SubtropicalLaurelForestBiome.register(eventBus);
@@ -66,11 +66,14 @@ public class CaioCesarBiomesMod
         SahelBiome.register(eventBus);
         TropicalBeachBiome.register(eventBus);
         JapaneseMapleGroveBiome.register(eventBus);
-        TropicalEucalyptusDryForest.register(eventBus);
+        TropicalEucalyptusDryForestBiome.register(eventBus);
         MossyTundraBiome.register(eventBus);
         TussockTundraBiome.register(eventBus);
         SubtropicalCoastalBeachBiome.register(eventBus);
-        SubtropicalEucalyptusDryForest.register(eventBus);
+        SubtropicalEucalyptusDryForestBiome.register(eventBus);
+        EucalyptusPlainsBiome.register(eventBus);
+        HotMediterraneanBeachBiome.register(eventBus);
+        HumidSubtropicalBeachBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
