@@ -6,13 +6,18 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "caiocesarbiomes:orange_sapling",
+          "weight": 0.1
+        },
+        {
+          "type": "minecraft:item",
           "name": "caiocesarbiomes:orange",
           "weight": 10
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 2
+          "weight": 1
         }
       ]
     }

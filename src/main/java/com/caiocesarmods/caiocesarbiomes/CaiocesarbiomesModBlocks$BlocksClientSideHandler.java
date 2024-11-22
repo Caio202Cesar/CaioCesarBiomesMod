@@ -40,12 +40,15 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         IndianCoralSapling.registerRenderLayer();
         ItalianCypressSapling.registerRenderLayer();
         JapaneseMapleSapling.registerRenderLayer();
+        LemonSapling.registerRenderLayer();
         LoquatSapling.registerRenderLayer();
+        MandarinSapling.registerRenderLayer();
         MesquiteSapling.registerRenderLayer();
         MulberrySapling.registerRenderLayer();
         OcoteaForestSapling.registerRenderLayer();
         OcoteaJungleSapling.registerRenderLayer();
         OliveSapling.registerRenderLayer();
+        OrangeSapling.registerRenderLayer();
         PinkCrabappleSapling.registerRenderLayer();
         PinkCrapeMyrtleSapling.registerRenderLayer();
         PinkOleanderSapling.registerRenderLayer();
