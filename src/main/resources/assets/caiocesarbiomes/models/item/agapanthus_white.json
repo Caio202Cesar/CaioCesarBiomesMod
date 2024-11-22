@@ -1,3 +1,6 @@
 {
-  "parent": "caiocesarbiomes:block/agapanthus_white"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/agapanthus_white"
+  }
 }

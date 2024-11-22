@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-//Eucalyptus semiarid plains
+//Eucalyptus subtropical semiarid plains
 public class EucalyptusPlainsBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
@@ -55,9 +55,8 @@ public class EucalyptusPlainsBiome {
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSwampVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanRoseBush(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
