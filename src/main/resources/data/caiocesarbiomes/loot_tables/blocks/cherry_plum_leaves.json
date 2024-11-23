@@ -6,13 +6,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:fig_sapling",
+          "name": "caiocesarbiomes:stone_pine_sapling",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:figfruit",
-          "weight": 10
+          "name": "caiocesarbiomes:cherry_plum",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",

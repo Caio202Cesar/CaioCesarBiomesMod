@@ -12,12 +12,12 @@
         {
           "type": "minecraft:item",
           "name": "caiocesarbiomes:poison_sap",
-          "weight": 20
+          "weight": 10
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 2
+          "weight": 10
         }
       ]
     }

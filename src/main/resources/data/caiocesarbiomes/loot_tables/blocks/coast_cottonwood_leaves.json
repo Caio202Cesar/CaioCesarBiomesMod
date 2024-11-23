@@ -7,12 +7,12 @@
         {
           "type": "minecraft:item",
           "name": "caiocesarbiomes:coast_cottonwood_sapling",
-          "weight": 0.1
+          "weight": 1
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 1
+          "weight": 10
         }
       ]
     }
