@@ -51,7 +51,6 @@ public class SubtropicalCoastalBeachBiome  {
       DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);

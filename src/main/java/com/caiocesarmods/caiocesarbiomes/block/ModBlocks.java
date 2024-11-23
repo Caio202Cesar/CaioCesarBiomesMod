@@ -183,6 +183,8 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> POHUTUKAWA_PLANKS = registerBlock("pohutukawa_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> CAMELLIA_PLANKS = registerBlock("camellia_planks",
+            ModPlanks::new);
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
@@ -376,6 +378,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> GARDENIA_BUSH = registerBlock("gardenia_bush",
             ModTallPlant::new);
     public static final RegistryObject<Block> CHINESE_HIBISCUS = registerBlock("chinese_hibiscus",
+            ModTallPlant::new);
+    public static final RegistryObject<Block> BAY_LAUREL = registerBlock("bay_laurel",
+            ModTallPlant::new);
+    public static final RegistryObject<Block> BAY_LAUREL_FLOWERING = registerBlock("bay_laurel_flowering",
             ModTallPlant::new);
 
     //Vines

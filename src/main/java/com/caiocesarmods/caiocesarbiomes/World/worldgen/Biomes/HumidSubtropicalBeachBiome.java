@@ -57,7 +57,6 @@ public class HumidSubtropicalBeachBiome {
         ModDefaultBiomeFeatures.withSubtropicalForestTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_WAX_MYRTLE_SHRUB);

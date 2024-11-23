@@ -108,8 +108,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTussockGrass(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, ModFeatures.PATCH_TUSSOCK);
     }
-    public static void withMediterraneanRoseBush(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, ModFeatures.MEDITERRANEAN_ROSE_BUSH_PATCH);
+    public static void withMediterraneanShrubs(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, ModFeatures.MEDITERRANEAN_SHRUB_VEGETATION);
     }
     public static void withMediterraneanSavannaSmallTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_SAVANNA_SMALL_TREES);

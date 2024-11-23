@@ -32,10 +32,13 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.GARDENIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
-    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_ROSE_BUSH_PATCH = register("mediterranean_rose_bush_patch",
-            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROSE_BUSH),
-                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MEDITERRANEAN_SHRUB_VEGETATION_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAY_LAUREL), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+                return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAY_LAUREL_FLOWERING), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+            });
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_OAKS = register("subtropical_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OAK_BEES_002.withChance(0.025641026F),
@@ -66,6 +69,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_FLOWER_VEGETATION = register("subtropical_forest_flower_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SHRUB_VEGETATION = register("mediterranean_shrub_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(MEDITERRANEAN_SHRUB_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     public static final ConfiguredFeature<?, ?> ROCK_BOULDER = register("rock_boulder", new BlockBlobFeature(BlockStateFeatureConfig.CODEC)
@@ -143,6 +150,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState TROPICAL_HIBISCUS = ModBlocks.CHINESE_HIBISCUS.get().getDefaultState();
         protected static final BlockState COBBLESTONE = Blocks.COBBLESTONE.getDefaultState();
         protected static final BlockState TUSSOCK_GRASS = ModBlocks.TUSSOCK_GRASS.get().getDefaultState();
+        protected static final BlockState BAY_LAUREL = ModBlocks.BAY_LAUREL.get().getDefaultState();
+        protected static final BlockState BAY_LAUREL_FLOWERING = ModBlocks.BAY_LAUREL_FLOWERING.get().getDefaultState();
 
     }
 

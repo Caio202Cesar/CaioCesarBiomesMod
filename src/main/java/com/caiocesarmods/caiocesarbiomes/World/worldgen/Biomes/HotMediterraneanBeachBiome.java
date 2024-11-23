@@ -54,7 +54,7 @@ public class HotMediterraneanBeachBiome {
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanRoseBush(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
 
