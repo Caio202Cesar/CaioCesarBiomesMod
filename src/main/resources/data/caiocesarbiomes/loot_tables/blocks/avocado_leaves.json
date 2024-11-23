@@ -12,7 +12,7 @@
         {
           "type": "minecraft:item",
           "name": "caiocesarbiomes:avocado",
-          "weight": 10
+          "weight": 5
         },
         {
           "type": "minecraft:item",

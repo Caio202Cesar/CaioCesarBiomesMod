@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "caiocesarbiomes:blocks/gardenia_bush",
+  "random_sequence": "caiocesarbiomes:blocks/bay_laurel_flowering",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,10 +12,10 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:gardenia_bush",
+          "name": "caiocesarbiomes:bay_laurel_flowering",
           "conditions": [
             {
-              "block": "caiocesarbiomes:gardenia_bush",
+              "block": "caiocesarbiomes:bay_laurel_flowering",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"
