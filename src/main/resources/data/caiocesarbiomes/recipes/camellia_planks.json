@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:camellia_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:camellia_planks",
+    "count": 4
+  }
+}
