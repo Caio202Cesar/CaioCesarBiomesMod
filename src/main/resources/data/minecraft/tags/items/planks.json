@@ -21,11 +21,16 @@
     "caiocesarbiomes:elderberry_planks",
     "caiocesarbiomes:strawberry_tree_planks",
     "caiocesarbiomes:italian_cypress_planks",
+    "caiocesarbiomes:starfruit_planks",
     "caiocesarbiomes:mulberry_planks",
     "caiocesarbiomes:japanese_maple_planks",
     "caiocesarbiomes:camellia_planks",
+    "caiocesarbiomes:citrus_planks",
     "caiocesarbiomes:tamarind_planks",
     "caiocesarbiomes:royal_poinciana_planks",
-    "caiocesarbiomes:eucalyptus_planks"
+    "caiocesarbiomes:eucalyptus_planks",
+    "caiocesarbiomes:pohutukawa_planks",
+    "caiocesarbiomes:casuarina_planks",
+    "caiocesarbiomes:plum_planks"
   ]
 }
