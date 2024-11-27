@@ -343,7 +343,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_TREE = register("black_poplar_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
                     new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 3), FeatureSpread.create(3, 0)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
