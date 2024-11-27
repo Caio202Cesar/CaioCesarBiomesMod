@@ -339,6 +339,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
+    //Black Poplar Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_TREE = register("black_poplar_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 3), FeatureSpread.create(3, 0)),
+                    new StraightTrunkPlacer(16, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+
     //Red Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
@@ -623,6 +631,9 @@ public class TreeFeatures {
 
         protected static final BlockState PLUM_LOG = ModBlocks.PLUM_LOG.get().getDefaultState();
         protected static final BlockState CHERRY_PLUM_LEAVES = ModBlocks.CHERRY_PLUM_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BLACK_POPLAR_LOG = ModBlocks.BLACK_POPLAR_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_POPLAR_LEAVES = ModBlocks.BLACK_POPLAR_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",

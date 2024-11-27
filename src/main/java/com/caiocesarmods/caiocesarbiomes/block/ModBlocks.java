@@ -185,6 +185,8 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> CAMELLIA_PLANKS = registerBlock("camellia_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> CASUARINA_PLANKS = registerBlock("casuarina_planks",
+            ModPlanks::new);
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
@@ -371,6 +373,10 @@ public class ModBlocks {
             CamelliaSapling::new);
     public static final RegistryObject<Block> TEA_SAPLING = registerBlock("tea_sapling",
             TeaSapling::new);
+    public static final RegistryObject<Block> CASUARINA_SAPLING = registerBlock("casuarina_sapling",
+            CasuarinaSapling::new);
+    public static final RegistryObject<Block> BLACK_POPLAR_SAPLING = registerBlock("black_poplar_sapling",
+            BlackPoplarSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
