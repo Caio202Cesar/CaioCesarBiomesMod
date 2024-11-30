@@ -63,6 +63,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         RedOleanderSapling.registerRenderLayer();
         RoyalPoincianaSapling.registerRenderLayer();
         StarfruitSapling.registerRenderLayer();
+        SouthernBeechSapling.registerRenderLayer();
         SouthernMagnoliaSapling.registerRenderLayer();
         SouthernWaxMyrtleSapling.registerRenderLayer();
         StonePineSapling.registerRenderLayer();

@@ -62,7 +62,7 @@ public class ModBiomeGeneration {
 
         addBiome(SubtropicalCoastalBeachBiome.SUBTROPICAL_COASTAL_BEACH.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD, BEACH, SANDY, RARE);
 
-        addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 14, OVERWORLD, FOREST, LUSH);
+        addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, FOREST, LUSH);
 
         addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, FOREST, DRY, DENSE);
 
@@ -73,6 +73,10 @@ public class ModBiomeGeneration {
         addBiome(HotMediterraneanBeachBiome.HOT_MEDITERRANEAN_BEACH.get(), BiomeManager.BiomeType.WARM, 10, OVERWORLD, BEACH, SANDY);
 
         addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, BEACH, SANDY, WET, LUSH);
+
+        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 7, OVERWORLD, COLD, FOREST, WET, LUSH);
+
+        addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 8, OVERWORLD, COLD, WET, LUSH);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

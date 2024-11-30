@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:nothofagus_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:nothofagus_planks",
+    "count": 4
+  }
+}

@@ -516,6 +516,13 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_BEECH_TREE = register("southern_beech_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.SOUTHERN_BEECH_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
 
@@ -644,6 +651,9 @@ public class TreeFeatures {
 
         protected static final BlockState BLACK_POPLAR_LOG = ModBlocks.BLACK_POPLAR_LOG.get().getDefaultState();
         protected static final BlockState BLACK_POPLAR_LEAVES = ModBlocks.BLACK_POPLAR_LEAVES.get().getDefaultState();
+
+        protected static final BlockState NOTHOFAGUS_LOG = ModBlocks.NOTHOFAGUS_LOG.get().getDefaultState();
+        protected static final BlockState SOUTHERN_BEECH_LEAVES = ModBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
