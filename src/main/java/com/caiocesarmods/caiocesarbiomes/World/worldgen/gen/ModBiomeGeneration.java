@@ -74,7 +74,7 @@ public class ModBiomeGeneration {
 
         addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, BEACH, SANDY, WET, LUSH);
 
-        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 7, OVERWORLD, COLD, FOREST, WET, LUSH);
+        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 7, OVERWORLD, COLD, FOREST, WET, DENSE, LUSH);
 
         addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 8, OVERWORLD, COLD, WET, LUSH);
     }
