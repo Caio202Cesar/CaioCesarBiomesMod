@@ -339,14 +339,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
-    //Black Poplar Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_TREE = register("black_poplar_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
-                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
-                    new StraightTrunkPlacer(16, 2, 1),
-                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
-
     //Red Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_KAPOK_TREE = register("red_kapok_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
@@ -508,7 +500,7 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Southern Beech
-    //Southern Beech Shrub composes the "Mossy Tundra" vegetation, as it shall be renamed to Green Tundra biome and have forest stones.
+    // Shrub composes the "Mossy Tundra" vegetation, as it shall be renamed to Green Tundra biome and have forest stones.
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_BEECH_SHRUB = register("southern_beech_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SOUTHERN_BEECH_LEAVES),
@@ -523,6 +515,28 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Black Poplar Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_TREE = register("black_poplar_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
+                    new StraightTrunkPlacer(16, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+
+    //Araucaria
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOK_PINE_TREE = register("cock_pine_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
+                    new StraightTrunkPlacer(16, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> NORFOLK_ISLAND_PINE_TREE = register("norfolk_island_pine_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(16, 2, 1),
+                    new TwoLayerFeature(1, 1, 2))).setIgnoreVines().build()));
 
 
 
