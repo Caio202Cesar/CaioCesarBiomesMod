@@ -12,6 +12,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -46,6 +47,9 @@ public class CaioCesarBiomesMod
         //ModTrunkPlacers.register(eventBus);
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::enqueueIMC);
+        eventBus.addListener(this::processIMC);
+        eventBus.addListener(this::doClientStuff);
 
         //Biomes
         MediterraneanConiferSavannaBiome.register(eventBus);
@@ -95,9 +99,11 @@ public class CaioCesarBiomesMod
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
-
+    private void enqueueIMC(final InterModEnqueueEvent event) {
+        InterModComms.sendTo("caiocesarbiomes", "helloworld", () -> {
+            LOGGER.info("Hello world from the MDK");
+            return "Hello world";
+        });
     }
 
     private void processIMC(final InterModProcessEvent event)
