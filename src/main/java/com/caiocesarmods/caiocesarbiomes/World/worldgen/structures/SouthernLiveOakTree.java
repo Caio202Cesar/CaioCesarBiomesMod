@@ -25,7 +25,7 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 
-public class SouthernLiveOakTree extends Structure<NoFeatureConfig> {
+/*public class SouthernLiveOakTree extends Structure<NoFeatureConfig> {
     public SouthernLiveOakTree() {
         super(NoFeatureConfig.CODEC);
     }
@@ -87,4 +87,4 @@ public class SouthernLiveOakTree extends Structure<NoFeatureConfig> {
                     this.components.get(0).getBoundingBox().minZ);
         }
     }
-}
+}*/

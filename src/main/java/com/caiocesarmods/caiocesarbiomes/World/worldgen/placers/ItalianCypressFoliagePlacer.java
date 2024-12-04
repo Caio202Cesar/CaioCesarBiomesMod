@@ -15,9 +15,7 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.placers.ModFoliagePlacers.ITALIAN_CYPRESS_FOLIAGE_PLACER;
-
-public class ItalianCypressFoliagePlacer extends FoliagePlacer {
+/*public class ItalianCypressFoliagePlacer extends FoliagePlacer {
     public static final Codec<ItalianCypressFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(placer -> placer.radius),
@@ -113,4 +111,4 @@ public class ItalianCypressFoliagePlacer extends FoliagePlacer {
     protected boolean func_230373_a_(Random random, int dx, int y, int dz, int radius, boolean large) {
         return false; // Uniform placement without skipping
     }
-}
+}*/
