@@ -25,5 +25,8 @@ public class ModFoods extends Foods {
     public static final Food ELDERBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food TAMARINDS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CHERRY_PLUM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food ROASTED_FENNEL_SEEDS = (new Food.Builder()).hunger(1).saturation(0.1F).build();
+    public static final Food COOKED_FENNEL_STALK = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+
 
 }
