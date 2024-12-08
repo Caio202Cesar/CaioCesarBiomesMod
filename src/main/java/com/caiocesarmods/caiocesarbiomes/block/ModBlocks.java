@@ -291,7 +291,9 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> ARAUCARIA_LEAVES = registerBlock("araucaria_leaves",
+    public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> NORFOLK_PINE_LEAVES = registerBlock("norfolk_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MONKEY_PUZZLE_LEAVES = registerBlock("monkey_puzzle_leaves",
             ModLeaves::new);
