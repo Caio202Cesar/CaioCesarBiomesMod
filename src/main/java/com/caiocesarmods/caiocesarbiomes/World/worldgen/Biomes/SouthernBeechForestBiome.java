@@ -23,7 +23,7 @@ public class SouthernBeechForestBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> SOUTHERN_BEECH_FOREST = BIOMES.register("southern_beech_forest",
-            () -> makeSouthernBeechForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.4f));
+            () -> makeSouthernBeechForestBiome(() -> ModConfiguredSurfaceBuilders.VEGETATION_TUNDRA_SURFACE, 0.1f, 0.4f));
 
 
     private static Biome makeSouthernBeechForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -53,7 +53,6 @@ public class SouthernBeechForestBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_BEECH_FOREST_VEGETATION);
 
@@ -64,7 +63,7 @@ public class SouthernBeechForestBiome {
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.2F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7972607).withFoliageColor(7055681)
-                        .withGrassColor(8960871).setFogColor(14807295)
+                        .withGrassColor(7584615).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
