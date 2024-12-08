@@ -105,6 +105,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTemperateFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEMPERATE_FRUIT_TREES);
     }
+    public static void withMediterraneanSavannaFruitTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_SAVANNA_FRUIT_TREES);
+    }
     public static void withJapaneseGroveTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_GROVE_TREES);
     }
