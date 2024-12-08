@@ -97,6 +97,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("araucaria_log",
+            ModLogs::new);
 
     //Woods
     public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",

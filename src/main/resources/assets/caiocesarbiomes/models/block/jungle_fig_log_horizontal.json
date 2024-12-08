@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/jungle_fig_log_middle",
+    "side": "caiocesarbiomes:block/jungle_fig_bark"
+  }
+}
