@@ -10,7 +10,7 @@
   "block.caiocesarbiomes.basil": "Basil",
   "block.caiocesarbiomes.black_poplar_leaves": "Black Poplar Leaves",
   "block.caiocesarbiomes.black_poplar_log": "Black Poplar Log",
-  "block.caiocesarbiomes.black_poplar_sapling": "Black Poplar Sapling",
+  "block.caiocesarbiomes.black_poplar_sapling": "Black Poplar Saplingee",
   "block.caiocesarbiomes.blue_spruce_leaves": "Blue Spruce Leaves",
   "block.caiocesarbiomes.blue_spruce_sapling": "Blue Spruce Sapling",
   "block.caiocesarbiomes.bush": "Bush",
@@ -104,6 +104,7 @@
   "block.caiocesarbiomes.myrtle_log": "Myrtle Log",
   "block.caiocesarbiomes.myrtle_planks": "Myrtle Planks",
   "block.caiocesarbiomes.myrtle_wood": "Myrtle Wood",
+  "block.caiocesarbiomes.nothofagus_log": "Nothofagus Log",
   "block.caiocesarbiomes.ocotea_forest_log": "Forest Ocotea Log",
   "block.caiocesarbiomes.ocotea_forest_sapling": "Forest Ocotea Sapling",
   "block.caiocesarbiomes.ocotea_forest_wood": "Forest Ocotea Wood",
@@ -183,7 +184,9 @@
 
   "item.caiocesarbiomes.avocado": "Avocado",
   "item.caiocesarbiomes.fennel_seeds": "Fennel Seeds",
+  "item.caiocesarbiomes.roasted_fennel_seeds": "Roasted Fennel Seeds",
   "item.caiocesarbiomes.fennel_stalk": "Fennel Stalk",
+  "item.caiocesarbiomes.cooked_fennel_stalk": "Cooked Fennel Stalk",
   "item.caiocesarbiomes.figfruit": "Fig",
   "item.caiocesarbiomes.pomegranate": "Pomegranate",
   "item.caiocesarbiomes.poison_sap": "Poison Sap",
@@ -194,6 +197,11 @@
   "item.caiocesarbiomes.lemon": "Lemon",
   "item.caiocesarbiomes.mandarin": "Mandarin",
   "item.caiocesarbiomes.orange": "Orange",
+  "item.caiocesarbiomes.starfruit": "Starfruit",
+  "item.caiocesarbiomes.starfruit_slice": "Starfruit Slice",
+  "item.caiocesarbiomes.elderberries": "Elderberries",
+  "item.caiocesarbiomes.tamarinds": "Tamarinds",
+  "item.caiocesarbiomes.cherry_plum": "Cherry Plum",
 
   "biome.caiocesarbiomes.mediterranean_conifer_savanna": "Mediterranean Coniferous Savanna",
   "biome.caiocesarbiomes.cork_oak_savanna": "Cork Oak Savanna",
@@ -217,7 +225,13 @@
   "biome.caiocesarbiomes.subtropical_coastal_beach": "Subtropical Coastal Beach",
   "biome.caiocesarbiomes.tussock_tundra": "Tussock Tundra",
   "biome.caiocesarbiomes.tropical_eucalyptus_dry_forest": "Tropical Eucalyptus Dry Forest",
-  "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Subtropical Eucalyptus Dry Forest"
+  "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Subtropical Eucalyptus Dry Forest",
+  "biome.caiocesarbiomes.eucalyptus_plains": "Eucalyptus Plains",
+  "biome.caiocesarbiomes.eucalyptus_sahel": "Eucalyptus Sahel",
+  "biome.caiocesarbiomes.hot_mediterranean_beach": "Hot Mediterranean Beach",
+  "biome.caiocesarbiomes.humid_subtropical_beach": "Humid Subtropical Beach",
+  "biome.caiocesarbiomes.lush_southern_tundra": "Lush Southern Tundra",
+  "biome.caiocesarbiomes.southern_beech_forest": "Southern Beech Tundra"
 
 }
 
