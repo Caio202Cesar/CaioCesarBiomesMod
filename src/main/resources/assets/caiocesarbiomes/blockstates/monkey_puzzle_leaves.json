@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "caiocesarbiomes:block/monkey_puzzle_leaves"
-    }
-  }
-}
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/monkey_puzzle_leaves"},
+      {"model": "caiocesarbiomes:block/monkey_puzzle_fruiting_leaves"}
+    ]
+  }}

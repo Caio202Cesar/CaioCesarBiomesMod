@@ -595,6 +595,11 @@ public class TreeFeatures {
         protected static final BlockState COOK_PINE_LEAVES = ModBlocks.COOK_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState NORFOLK_PINE_LEAVES = ModBlocks.NORFOLK_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState MONKEY_PUZZLE_LEAVES = ModBlocks.MONKEY_PUZZLE_LEAVES.get().getDefaultState();
+        protected static final BlockState BUNYA_PINE_LEAVES = ModBlocks.BUNYA_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JUNGLE_FIG_LOG = ModBlocks.JUNGLE_FIG_LOG.get().getDefaultState();
+        protected static final BlockState WEEPING_FIG_LEAVES = ModBlocks.WEEPING_FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState INDIAN_LAUREL_LEAVES = ModBlocks.INDIAN_LAUREL_LEAVES.get().getDefaultState();
 
         protected static final BlockState HOLM_OAK_LOG = ModBlocks.HOLM_OAK_LOG.get().getDefaultState();
         protected static final BlockState HOLM_OAK_LEAVES = ModBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
@@ -771,6 +776,11 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(INDIAN_CORAL_TREE.withChance(0.5F)),
                     INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> JUNGLE_FIG_TREES = register("jungle_fig_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.1F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.3F), INDIAN_LAUREL_TREE.withChance(0.3F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CASUARINA_TREES = register("casuarina_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINE_LIKE_CASUARINA_TREE.withChance(0.5F)),
