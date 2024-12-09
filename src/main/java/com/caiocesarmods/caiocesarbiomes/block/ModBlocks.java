@@ -97,7 +97,7 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
-    public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("araucaria_log",
+    public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             ModLogs::new);
 
     //Woods
@@ -402,17 +402,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> SOUTHERN_BEECH_SAPLING = registerBlock("southern_beech_sapling",
             SouthernBeechSapling::new);
     public static final RegistryObject<Block> MONKEY_PUZZLE_SAPLING = registerBlock("monkey_puzzle_sapling",
-            SouthernBeechSapling::new);
+            MonkeyPuzzleSapling::new);
     public static final RegistryObject<Block> COOK_PINE_SAPLING = registerBlock("cook_pine_sapling",
-            SouthernBeechSapling::new);
+            CookPineSapling::new);
     public static final RegistryObject<Block> NORFOLK_PINE_SAPLING = registerBlock("norfolk_pine_sapling",
-            SouthernBeechSapling::new);
+            NorfolkPineSapling::new);
     public static final RegistryObject<Block> BUNYA_PINE_SAPLING = registerBlock("bunya_pine_sapling",
-            SouthernBeechSapling::new);
+            BunyaPineSapling::new);
     public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
-            SouthernBeechSapling::new);
+            WeepingFigSapling::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
-            SouthernBeechSapling::new);
+            IndianLaurelSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
