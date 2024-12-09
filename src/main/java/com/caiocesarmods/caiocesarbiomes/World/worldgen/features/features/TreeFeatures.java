@@ -527,8 +527,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.COOK_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
-                    new TwoLayerFeature(2, 0, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> NORFOLK_ISLAND_PINE_TREE = register("norfolk_island_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.NORFOLK_PINE_LEAVES),
