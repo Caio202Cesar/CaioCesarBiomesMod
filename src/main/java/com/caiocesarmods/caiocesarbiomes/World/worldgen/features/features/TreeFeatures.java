@@ -776,6 +776,11 @@ public class TreeFeatures {
                     INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> MONKEY_PUZZLE_TREES = register("monkey_puzzle_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_MONKEY_PUZZLE_TREE.withChance(0.3F)),
+                    MONKEY_PUZZLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> JUNGLE_FIG_TREES = register("jungle_fig_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.1F),
                             BIG_WEEPING_FIG_TREE.withChance(0.3F), INDIAN_LAUREL_TREE.withChance(0.3F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -886,7 +891,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> CRABAPPLE_TREES = register("crabapple_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.5F)),
-                    PINK_CRABAPPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    WHITE_CRABAPPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_TREES = register("japanese_grove_trees", Feature.RANDOM_SELECTOR
