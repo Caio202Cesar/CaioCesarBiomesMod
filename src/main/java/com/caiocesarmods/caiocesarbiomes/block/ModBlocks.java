@@ -281,6 +281,12 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CITRON_LEAVES = registerBlock("citron_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> TAHITI_LIME_LEAVES = registerBlock("tahiti_lime_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
+            ModLeaves::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
