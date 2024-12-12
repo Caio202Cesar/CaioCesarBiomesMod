@@ -421,6 +421,12 @@ public class ModBlocks {
             WeepingFigSapling::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
             IndianLaurelSapling::new);
+    public static final RegistryObject<Block> BUDDHA_HAND_SAPLING = registerBlock("buddha_hand_sapling",
+            BuddhaHandSapling::new);
+    public static final RegistryObject<Block> CITRON_SAPLING = registerBlock("citron_sapling",
+            CitronSapling::new);
+    public static final RegistryObject<Block> TAHITI_LIME_SAPLING = registerBlock("tahiti_lime_sapling",
+            TahitiLimeSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

@@ -75,5 +75,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         WhiteCrabappleSapling.registerRenderLayer();
         WhiteCrapeMyrtleSapling.registerRenderLayer();
         WhiteOleanderSapling.registerRenderLayer();
+        TahitiLimeSapling.registerRenderLayer();
+        CitronSapling.registerRenderLayer();
+        BuddhaHandSapling.registerRenderLayer();
     }
 }
