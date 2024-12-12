@@ -77,6 +77,7 @@ public class CaioCesarBiomesMod
         StonyMediterraneanShoreBiome.register(eventBus);
         CookPineIslandBiome.register(eventBus);
         PewenConiferousGrove.register(eventBus);
+        MonsoonFicusTropicalForest.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

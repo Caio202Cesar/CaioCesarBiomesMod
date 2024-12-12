@@ -24,7 +24,7 @@ public class CookPineIslandBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> COOK_PINE_ISLAND = BIOMES.register("cook_pine_island",
+    public static final RegistryObject<Biome> COOK_PINE_ISLAND = BIOMES.register("tropical_pine_island",
             () -> makeCookPineIslandBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.26f));
 
 
