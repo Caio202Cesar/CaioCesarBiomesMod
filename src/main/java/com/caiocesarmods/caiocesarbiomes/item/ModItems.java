@@ -52,6 +52,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TAMARINDS)));
     public static final RegistryObject<Item> CHERRY_PLUM = ITEMS.register("cherry_plum",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CHERRY_PLUM)));
+    public static final RegistryObject<Item> CITRON = ITEMS.register("citron",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CITRON)));
+    public static final RegistryObject<Item> TAHITI_LIME = ITEMS.register("tahiti_lime",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TAHITI_LIME)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
