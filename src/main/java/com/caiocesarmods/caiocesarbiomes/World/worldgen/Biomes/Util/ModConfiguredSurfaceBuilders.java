@@ -19,7 +19,7 @@ public class ModConfiguredSurfaceBuilders {
 
     public static ConfiguredSurfaceBuilder<?> MEDITERRANEAN_STONY_SHORE_SURFACE = register("mediterranean_stony_shore_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
-                    Blocks.STONE.getBlock().getDefaultState(), //top material
+                    Blocks.COBBLESTONE.getBlock().getDefaultState(), //top material
                     Blocks.COARSE_DIRT.getBlock().getDefaultState(), //under material
                     Blocks.SAND.getBlock().getDefaultState() //underwater material
             )));

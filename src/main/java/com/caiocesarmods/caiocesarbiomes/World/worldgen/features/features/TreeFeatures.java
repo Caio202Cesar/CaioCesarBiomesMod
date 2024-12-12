@@ -424,6 +424,20 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Citrus Trees - Citron
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CITRON_TREE = register("lemon_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
+                    new SimpleBlockStateProvider(States.CITRON_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BUDDHA_HAND_TREE = register("buddha_hand_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
+                    new SimpleBlockStateProvider(States.BUDDAH_HAND_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     //Southern Live Oak
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE = register("southern_live_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
@@ -696,6 +710,9 @@ public class TreeFeatures {
         protected static final BlockState ORANGE_LEAVES = ModBlocks.ORANGE_LEAVES.get().getDefaultState();
         protected static final BlockState LEMON_LEAVES = ModBlocks.LEMON_LEAVES.get().getDefaultState();
         protected static final BlockState MANDARIN_LEAVES = ModBlocks.MANDARIN_LEAVES.get().getDefaultState();
+        protected static final BlockState TAHITI_LIME_LEAVES = ModBlocks.TAHITI_LIME_LEAVES.get().getDefaultState();
+        protected static final BlockState CITRON_LEAVES = ModBlocks.CITRON_LEAVES.get().getDefaultState();
+        protected static final BlockState BUDDAH_HAND_LEAVES = ModBlocks.BUDDHA_HAND_LEAVES.get().getDefaultState();
 
         protected static final BlockState LIVE_OAK_LOG = ModBlocks.LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState LIVE_OAK_LEAVES = ModBlocks.LIVE_OAK_LEAVES.get().getDefaultState();
@@ -784,7 +801,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> JUNGLE_FIG_TREES = register("jungle_fig_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.1F),
                             BIG_WEEPING_FIG_TREE.withChance(0.3F), INDIAN_LAUREL_TREE.withChance(0.3F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CASUARINA_TREES = register("casuarina_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINE_LIKE_CASUARINA_TREE.withChance(0.5F)),
@@ -882,6 +899,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_CITRUS_TREES = register("subtropical_citrus_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANDARIN_TREE.withChance(0.5F)), ORANGE_TREE))
+            .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_CITRUS_TREES = register("tropical_citrus_trees", Feature.RANDOM_SELECTOR
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAHITI_LIME_TREE.withChance(0.5F), CITRON_TREE.withChance(0.3F),
+                    BUDDHA_HAND_TREE.withChance(0.1F)), LEMON_TREE))
             .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 

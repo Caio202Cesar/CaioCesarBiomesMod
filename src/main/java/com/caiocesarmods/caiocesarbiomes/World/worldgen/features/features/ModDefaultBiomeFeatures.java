@@ -9,6 +9,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withMediterraneanFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.FLOWER_MEDITERRANEAN);
     }
+    public static void withMediterraneanBeachFlowers(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BEACH_FLOWER_MEDITERRANEAN);
+    }
     public static void withMediterraneanOakTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_OAK_TREES);
     }
@@ -96,11 +99,17 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTropicalHibiscus(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_TROPICAL_HIBISCUS);
     }
-    public static void withCitrusTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CITRUS_TREES);
+    public static void withTropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FOREST_CITRUS_TREES);
+    }
+    public static void withSubtropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_CITRUS_TREES);
     }
     public static void withCrabappleTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRABAPPLE_TREES);
+    }
+    public static void withJungleFicuses(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JUNGLE_FIG_TREES);
     }
     public static void withMonkeyPuzzleTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MONKEY_PUZZLE_TREES);

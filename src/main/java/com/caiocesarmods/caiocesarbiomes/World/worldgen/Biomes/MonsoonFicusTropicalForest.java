@@ -17,16 +17,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MonsoonFicusJungle {
+public class MonsoonFicusTropicalForest {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> TROPICAL_SEASONAL_FOREST = BIOMES.register("tropical_seasonal_forest",
-            () -> makeTropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+    public static final RegistryObject<Biome> MONSOON_FICUS_FOREST = BIOMES.register("monsoon_ficus_tropical_forest",
+            () -> makeMonsoonFicusTropicalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
 
 
-    private static Biome makeTropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeMonsoonFicusTropicalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -53,17 +53,18 @@ public class MonsoonFicusJungle {
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withBambooVegetation(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withJungleTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
+                .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7842047).withFoliageColor(4110351)
                         .withGrassColor(5877296).setFogColor(7907327)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
@@ -76,4 +77,4 @@ public class MonsoonFicusJungle {
         BIOMES.register(eventBus);
     }
 }
-}
+

@@ -63,7 +63,7 @@ public class SubtropicalLaurelForestBiome {
       ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withCitrusTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

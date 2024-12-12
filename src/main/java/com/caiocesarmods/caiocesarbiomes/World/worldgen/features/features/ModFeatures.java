@@ -25,6 +25,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> BEACH_FLOWER_MEDITERRANEAN = register("beach_flower_mediterranean",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_BEACH_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
@@ -96,6 +99,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.OXEYE_DAISY, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
+        public static final BlockClusterFeatureConfig MEDITERRANEAN_BEACH_FLOWER_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.WHITE_CISTUS, 1)
+                        .addWeightedBlockstate(States.PINK_CISTUS, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
         public static final BlockClusterFeatureConfig HUMID_SUBTROPICAL_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.BUSH, 5)
@@ -149,6 +158,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState TUSSOCK_GRASS = ModBlocks.TUSSOCK_GRASS.get().getDefaultState();
         protected static final BlockState BAY_LAUREL = ModBlocks.BAY_LAUREL.get().getDefaultState();
         protected static final BlockState BAY_LAUREL_FLOWERING = ModBlocks.BAY_LAUREL_FLOWERING.get().getDefaultState();
+        protected static final BlockState PINK_CISTUS = ModBlocks.PINK_CISTUS.get().getDefaultState();
+        protected static final BlockState WHITE_CISTUS = ModBlocks.WHITE_CISTUS.get().getDefaultState();
 
     }
 
