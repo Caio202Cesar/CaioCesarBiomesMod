@@ -880,7 +880,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> BUNYA_PINES = register("bunya_pines",
             BUNYA_PINE_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PRAIRIE_POPLAR = register("prairie_poplar",
             BLACK_POPLAR_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

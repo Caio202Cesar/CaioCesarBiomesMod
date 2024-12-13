@@ -99,7 +99,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCamelliaAndTeaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMELLIA_TREES);
     }
-    public static void withBunyaTrees(BiomeGenerationSettings.Builder builder) {
+    public static void withBunyaPines(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BUNYA_PINES);
     }
     public static void withTropicalHibiscus(BiomeGenerationSettings.Builder builder) {
