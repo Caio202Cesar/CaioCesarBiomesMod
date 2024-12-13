@@ -78,5 +78,9 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         TahitiLimeSapling.registerRenderLayer();
         CitronSapling.registerRenderLayer();
         BuddhaHandSapling.registerRenderLayer();
+        MonkeyPuzzleSapling.registerRenderLayer();
+        CookPineSapling.registerRenderLayer();
+        WeepingFigSapling.registerRenderLayer();
+        IndianLaurelSapling.registerRenderLayer();
     }
 }

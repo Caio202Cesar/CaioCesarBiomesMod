@@ -884,7 +884,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> PRAIRIE_POPLAR = register("prairie_poplar",
             BLACK_POPLAR_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
             POHUTUKAWA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
