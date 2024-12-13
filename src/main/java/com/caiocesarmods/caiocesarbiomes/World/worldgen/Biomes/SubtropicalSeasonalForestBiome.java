@@ -28,7 +28,7 @@ public class SubtropicalSeasonalForestBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST = BIOMES.register("subtropical_seasonal_forest",
-           () -> makeSubtropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+           () -> makeSubtropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1F, 0.2f));
 
 
    private static Biome makeSubtropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
