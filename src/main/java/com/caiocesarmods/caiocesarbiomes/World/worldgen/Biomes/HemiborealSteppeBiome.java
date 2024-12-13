@@ -48,6 +48,7 @@ public class HemiborealSteppeBiome {
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
