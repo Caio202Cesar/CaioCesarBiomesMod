@@ -85,6 +85,10 @@ public class ModBiomeGeneration {
         addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 4, HOT, OVERWORLD, SAVANNA, RARE);
 
         addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 8, COLD, OVERWORLD, MOUNTAIN, CONIFEROUS);
+
+        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 12, COLD, OVERWORLD, DRY, PLAINS, SPARSE);
+
+        addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, FOREST, WET, LUSH, DENSE);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

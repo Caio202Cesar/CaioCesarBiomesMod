@@ -869,9 +869,22 @@ public class TreeFeatures {
                             AVOCADO_TREE.withChance(0.2F)), TAMARIND_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.5F)),
+                            AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> JAPANESE_MAPLE = register("japanese_maple",
             JAPANESE_MAPLE_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> BUNYA_PINES = register("bunya_pines",
+            BUNYA_PINE_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> PRAIRIE_POPLAR = register("prairie_poplar",
+            BLACK_POPLAR_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
             POHUTUKAWA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

@@ -84,6 +84,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTropicalFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FRUIT_TREES);
     }
+    public static void withTropicalJungleFruitTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_JUNGLE_FRUIT_TREES);
+    }
     public static void withSubtropicalForestFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_FOREST_FLOWER_VEGETATION);
     }
@@ -95,6 +98,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withCamelliaAndTeaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMELLIA_TREES);
+    }
+    public static void withBunyaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BUNYA_PINES);
     }
     public static void withTropicalHibiscus(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_TROPICAL_HIBISCUS);

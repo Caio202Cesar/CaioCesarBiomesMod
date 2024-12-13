@@ -54,7 +54,7 @@ public class HemiborealSteppeBiome {
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BLACK_POPLAR_TREE);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PRAIRIE_POPLAR);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

@@ -58,7 +58,7 @@ public class MonsoonFicusTropicalForest {
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalJungleFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
