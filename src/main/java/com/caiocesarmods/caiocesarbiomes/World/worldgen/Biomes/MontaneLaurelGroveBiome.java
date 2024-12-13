@@ -23,7 +23,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> MONTANE_LAUREL_GROVE = BIOMES.register("montane_laurel_grove",
-        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.4f, 0.3f));
+        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.45F, 0.3F));
 
 
 private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -61,7 +61,7 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
             .temperature(0.7F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                     .withGrassColor(8762696).setFogColor(14807295)

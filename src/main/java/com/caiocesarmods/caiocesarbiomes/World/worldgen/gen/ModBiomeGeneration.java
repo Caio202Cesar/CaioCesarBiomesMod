@@ -46,7 +46,7 @@ public class ModBiomeGeneration {
                 DENSE, JUNGLE, WET, RARE);
 
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD, SPARSE, MOUNTAIN,
-                RARE, LUSH);
+                RARE, LUSH, HILLS);
 
         addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 10, OVERWORLD, COLD, DRY);
 

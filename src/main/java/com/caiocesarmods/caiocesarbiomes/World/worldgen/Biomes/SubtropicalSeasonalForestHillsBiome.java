@@ -3,18 +3,13 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,13 +17,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SubtropicalSeasonalForestBiome {
+public class SubtropicalSeasonalForestHillsBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST = BIOMES.register("subtropical_seasonal_forest",
-           () -> makeSubtropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+   public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST_HILLS = BIOMES.register("subtropical_seasonal_forest_hills",
+           () -> makeSubtropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.45F, 0.3F));
 
 
    private static Biome makeSubtropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -61,6 +56,7 @@ public class SubtropicalSeasonalForestBiome {
       ModDefaultBiomeFeatures.withDeciduousSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
