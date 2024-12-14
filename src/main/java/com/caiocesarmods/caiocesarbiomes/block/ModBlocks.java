@@ -197,6 +197,8 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
+            ModPlanks::new);
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
