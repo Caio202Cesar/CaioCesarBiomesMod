@@ -6,9 +6,17 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:sage"
+          "name": "caiocesarbiomes:sage",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
         }
       ]
-    }
-  ]
-}
+    }]}

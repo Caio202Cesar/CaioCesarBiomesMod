@@ -2,11 +2,11 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:oregano",
+          "name": "caiocesarbiomes:white_cistus",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -16,7 +16,7 @@
                 "type": "minecraft:uniform"
               }
             }
-          ]
-        }
       ]
-    }]}
+    }
+  ]
+}]}
