@@ -31,5 +31,6 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
     public static final Food TAHITI_LIME = (new Food.Builder()).hunger(2).saturation(0.1F)
             .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
-
+    public static final Food BUDDHA_HAND_CITRON = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HUNGER, 40, 0), 0.2F).build();
 }

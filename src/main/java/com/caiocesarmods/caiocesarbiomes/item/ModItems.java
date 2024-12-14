@@ -54,6 +54,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CHERRY_PLUM)));
     public static final RegistryObject<Item> CITRON = ITEMS.register("citron",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CITRON)));
+    public static final RegistryObject<Item> BUDDHA_HAND_CITRON = ITEMS.register("buddha_hand_citron",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BUDDHA_HAND_CITRON)));
     public static final RegistryObject<Item> TAHITI_LIME = ITEMS.register("tahiti_lime",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TAHITI_LIME)));
 
