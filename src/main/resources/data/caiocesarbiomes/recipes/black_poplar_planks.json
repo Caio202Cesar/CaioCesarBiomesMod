@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:black_poplar_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:black_poplar_planks",
+    "count": 4
+  }
+}

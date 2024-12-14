@@ -82,5 +82,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CookPineSapling.registerRenderLayer();
         WeepingFigSapling.registerRenderLayer();
         IndianLaurelSapling.registerRenderLayer();
+        BunyaPineSapling.registerRenderLayer();
     }
 }
