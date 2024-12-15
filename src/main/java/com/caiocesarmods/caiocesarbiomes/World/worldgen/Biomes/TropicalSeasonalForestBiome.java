@@ -37,7 +37,7 @@ public class TropicalSeasonalForestBiome {
       biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
       biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
       biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-      biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
+      biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
       biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
 
       DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);

@@ -37,6 +37,7 @@ public class EucalyptusSahelBiome {
         biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
