@@ -58,6 +58,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BUDDHA_HAND_CITRON)));
     public static final RegistryObject<Item> TAHITI_LIME = ITEMS.register("tahiti_lime",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TAHITI_LIME)));
+    public static final RegistryObject<Item> GRAPEFRUIT = ITEMS.register("grapefruit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GRAPEFRUIT)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

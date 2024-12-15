@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/grapefruit_fruiting_leaves",
+    "particle": "caiocesarbiomes:block/grapefruit_fruiting_leaves"
+  }
+}
