@@ -16,6 +16,7 @@
   "block.caiocesarbiomes.black_poplar_leaves": "Black Poplar Leaves",
   "block.caiocesarbiomes.black_poplar_log": "Black Poplar Log",
   "block.caiocesarbiomes.black_poplar_sapling": "Black Poplar Sapling",
+  "block.caiocesarbiomes.black_poplar_planks": "Black Poplar Planks",
   "block.caiocesarbiomes.blue_spruce_leaves": "Blue Spruce Leaves",
   "block.caiocesarbiomes.blue_spruce_sapling": "Blue Spruce Sapling",
   "block.caiocesarbiomes.buddha_hand_leaves": "Buddha's Hand Leaves",
@@ -30,6 +31,7 @@
   "block.caiocesarbiomes.casuarina_leaves": "Casuarina Leaves",
   "block.caiocesarbiomes.casuarina_log": "Casuarina Log",
   "block.caiocesarbiomes.casuarina_planks": "Casuarina Planks",
+  "block.caiocesarbiomes.casuarina_sapling": "Casuarina Sapling",
   "block.caiocesarbiomes.cineraria": "Cineraria",
   "block.caiocesarbiomes.citron_leaves": "Citron Leaves",
   "block.caiocesarbiomes.citron_sapling": "Citron Sapling",
@@ -239,6 +241,7 @@
   "item.caiocesarbiomes.orange": "Orange",
   "item.caiocesarbiomes.tahiti_lime": "Tahiti Limes",
   "item.caiocesarbiomes.citron": "Citron",
+  "item.caiocesarbiomes.buddha_hand_citron": "Buddha's Hand Citron",
   "item.caiocesarbiomes.starfruit": "Starfruit",
   "item.caiocesarbiomes.starfruit_slice": "Starfruit Slice",
   "item.caiocesarbiomes.elderberries": "Elderberries",
@@ -254,6 +257,7 @@
   "biome.caiocesarbiomes.subtropical_laurel_jungle": "Subtropical Laurel Jungle",
   "biome.caiocesarbiomes.bamboo_subtropical_laurel_jungle": "Bamboo Subtropical Laurel Jungle",
   "biome.caiocesarbiomes.subtropical_seasonal_forest": "Subtropical Seasonal Forest",
+  "biome.caiocesarbiomes.subtropical_seasonal_forest_hills": "Subtropical Seasonal Forest Hills",
   "biome.caiocesarbiomes.oleander_gardens": "Oleander Gardens",
   "biome.caiocesarbiomes.tropical_seasonal_forest": "Tropical Seasonal Forest",
   "biome.caiocesarbiomes.tropical_desert": "Tropical Desert",
@@ -276,8 +280,10 @@
   "biome.caiocesarbiomes.southern_beech_forest": "Southern Beech Tundra Forest",
   "biome.caiocesarbiomes.dry_tropical_beach": "Dry Tropical Beach",
   "biome.caiocesarbiomes.stony_mediterranean_shore": "Stony Mediterranean Shore",
-  "biome.caiocesarbiomes.tropical_pine_island": "Tropical Pine Island"
-
+  "biome.caiocesarbiomes.tropical_pine_island": "Tropical Pine Island",
+  "biome.caiocesarbiomes.hemiboreal_steppe": "Hemiboreal Steppe",
+  "biome.caiocesarbiomes.monsoon_ficus_tropical_forest": "Monsoonal Ficus Jungle",
+  "biome.caiocesarbiomes.pewen_coniferous_grove": "Pewen Coniferous Grove"
 }
 
 
