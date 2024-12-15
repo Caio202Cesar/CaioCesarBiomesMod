@@ -52,7 +52,6 @@ public class CoastalSubtropicalDesertBiome {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalDesertTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
