@@ -42,12 +42,7 @@ public class CasuarinaSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 7) {
-                return TreeFeatures.CASUARINA_FANCY_TREE;
-            } else {
                 return TreeFeatures.PINE_LIKE_CASUARINA_TREE;
             }
         }
-
-    }
 }
