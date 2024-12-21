@@ -598,6 +598,29 @@ public class TreeFeatures {
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Holly Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLLY_TREE1 = register("holly_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ILEX_LOG),
+                    new SimpleBlockStateProvider(States.HOLLY_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLLY_TREE2 = register("holly_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ILEX_LOG),
+                    new SimpleBlockStateProvider(States.HOLLY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
+    //Christmas Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHRISTMAS_TREE = register("christmas_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
+                    new SimpleBlockStateProvider(States.CHRISTMAS_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
 
     public static final class States {
@@ -742,6 +765,12 @@ public class TreeFeatures {
 
         protected static final BlockState NOTHOFAGUS_LOG = ModBlocks.NOTHOFAGUS_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_BEECH_LEAVES = ModBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ILEX_LOG = ModBlocks.ILEX_LOG.get().getDefaultState();
+        protected static final BlockState HOLLY_LEAVES = ModBlocks.HOLLY_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CHRISTMAS_LEAVES = ModBlocks.CHRISTMAS_LEAVES.get().getDefaultState();
+
 
         protected static final BlockState PODZOL = Blocks.PODZOL.getDefaultState();
 
