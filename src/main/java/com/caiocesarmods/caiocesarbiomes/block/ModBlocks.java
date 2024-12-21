@@ -5,8 +5,11 @@ import com.caiocesarmods.caiocesarbiomes.block.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -465,6 +468,9 @@ public class ModBlocks {
             CreepingFigVine::new);
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
+    //*public static final RegistryObject<Block> FICUS_ROOTS = registerBlock("ficus_roots", new FicusRootsBlock::new);
+    //*public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant", new FicusRootsDownBlock(AbstractBlock.Properties.create(Material.PLANTS,MaterialColor.BROWN).tickRandomly().doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+
 
     //Plants
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
