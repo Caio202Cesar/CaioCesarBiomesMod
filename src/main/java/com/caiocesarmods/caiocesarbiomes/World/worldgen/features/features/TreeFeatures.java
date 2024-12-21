@@ -622,6 +622,8 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(5, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
+    //Sycamore fig tree (netive of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
+
 
     public static final class States {
 
