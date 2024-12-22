@@ -286,7 +286,9 @@
   "biome.caiocesarbiomes.tropical_pine_island": "Tropical Pine Island",
   "biome.caiocesarbiomes.hemiboreal_steppe": "Hemiboreal Steppe",
   "biome.caiocesarbiomes.monsoon_ficus_tropical_forest": "Monsoonal Ficus Jungle",
-  "biome.caiocesarbiomes.pewen_coniferous_grove": "Pewen Coniferous Grove"
+  "biome.caiocesarbiomes.pewen_coniferous_grove": "Pewen Coniferous Grove",
+
+  "itemGroup.CCB_GROUP": "Caio Cesar Biomes"
 }
 
 
