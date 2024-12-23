@@ -468,8 +468,12 @@ public class ModBlocks {
             CreepingFigVine::new);
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
-    //*public static final RegistryObject<Block> FICUS_ROOTS = registerBlock("ficus_roots", new FicusRootsBlock::new);
-    //*public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant", new FicusRootsDownBlock(AbstractBlock.Properties.create(Material.PLANTS,MaterialColor.BROWN).tickRandomly().doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+    public static final RegistryObject<Block> FICUS_ROOTS = registerBlock("ficus_roots",
+            () -> new FicusRootsBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+    public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
+            () -> new FicusRootsDownBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
 
 
     //Plants

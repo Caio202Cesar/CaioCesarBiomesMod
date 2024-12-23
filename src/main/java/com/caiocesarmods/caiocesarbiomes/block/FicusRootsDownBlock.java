@@ -11,26 +11,31 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
-/*public class FicusRootsDownBlock extends AbstractBodyPlantBlock {
-    public FicusRootsDownBlock() {
-        super(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly()
-                .doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE));
-    }
+import java.util.Random;
 
+public class FicusRootsDownBlock extends AbstractBodyPlantBlock {
     public static final VoxelShape SHAPE = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
-    public FicusRootsDownBlock(Properties p_i241195_1_) {
+    public FicusRootsDownBlock(AbstractBlock.Properties p_i241195_1_) {
         super(p_i241195_1_, Direction.DOWN, SHAPE, false);
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.FICUS_ROOTS_PLANT, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
+    }
+
+    protected int getGrowthAmount(Random rand) {
+        return PlantBlockHelper.getGrowthAmount(rand);
+    }
+
+    protected Block getBodyPlantBlock() {
+        return ModBlocks.FICUS_ROOTS_PLANT.get();
     }
 
     @Override
     protected AbstractTopPlantBlock getTopPlantBlock() {
-        return (AbstractTopPlantBlock)ModBlocks.FICUS_ROOTS;
+        return (AbstractTopPlantBlock)ModBlocks.FICUS_ROOTS_PLANT.get();
     }
 
-}*/
+}

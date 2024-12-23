@@ -3,17 +3,14 @@ package com.caiocesarmods.caiocesarbiomes.block;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IWorldReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-/*public class FicusRootsBlock extends AbstractBodyPlantBlock {
+public class FicusRootsBlock extends AbstractBodyPlantBlock {
     public static final VoxelShape SHAPE = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
     public FicusRootsBlock(AbstractBlock.Properties p_i241195_1_) {
@@ -30,12 +27,12 @@ import java.util.Random;
     }
 
     protected Block getBodyPlantBlock() {
-        return ModBlocks.FICUS_ROOTS_PLANT;
+        return ModBlocks.FICUS_ROOTS.get();
     }
 
     @Override
     protected AbstractTopPlantBlock getTopPlantBlock() {
-        return (AbstractTopPlantBlock)ModBlocks.FICUS_ROOTS;
+        return (AbstractTopPlantBlock)ModBlocks.FICUS_ROOTS.get();
     }
 
-}*/
+}
