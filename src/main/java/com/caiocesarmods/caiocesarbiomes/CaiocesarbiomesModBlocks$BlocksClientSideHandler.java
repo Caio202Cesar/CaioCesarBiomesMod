@@ -84,7 +84,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         IndianLaurelSapling.registerRenderLayer();
         BunyaPineSapling.registerRenderLayer();
         GrapefruitSapling.registerRenderLayer();
-        ChristmasSapling.registerRenderLayer();
+        YewSapling.registerRenderLayer();
         HollySapling.registerRenderLayer();
     }
 }

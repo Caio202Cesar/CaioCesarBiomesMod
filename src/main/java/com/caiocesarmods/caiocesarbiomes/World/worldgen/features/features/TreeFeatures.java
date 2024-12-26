@@ -614,15 +614,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
-    //Christmas Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHRISTMAS_TREE = register("christmas_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
-                    new SimpleBlockStateProvider(States.CHRISTMAS_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
-                            FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(5, 2, 1),
-                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
-
     //Red Oak Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_OAK_TREE = register("red_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
@@ -639,14 +630,24 @@ public class TreeFeatures {
 
     //Yew Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
-                    new SimpleBlockStateProvider(States.SOUTHERN_BEECH_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(0), 4),
-                    new StraightTrunkPlacer(4, 2, 0),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
+                    new SimpleBlockStateProvider(States.YEW_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Sycamore fig tree (netive of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
+    //Western Hemlock Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_TREE = register("western_hemlock_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+                    new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
+
+    //Sycamore fig tree (native of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
 
 
     public static final class States {
@@ -656,6 +657,9 @@ public class TreeFeatures {
 
         protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();
+
+        protected static final BlockState WESTERN_HEMLOCK_LOG = ModBlocks.WESTERN_HEMLOCK_LOG.get().getDefaultState();
+        protected static final BlockState WESTERN_HEMLOCK_LEAVES = ModBlocks.WESTERN_HEMLOCK_LEAVES.get().getDefaultState();
 
         protected static final BlockState ARAUCARIA_LOG = ModBlocks.ARAUCARIA_LOG.get().getDefaultState();
         protected static final BlockState COOK_PINE_LEAVES = ModBlocks.COOK_PINE_LEAVES.get().getDefaultState();

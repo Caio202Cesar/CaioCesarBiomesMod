@@ -20,15 +20,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class ChristmasSapling extends SaplingBlock {
-    public ChristmasSapling() {
-        super(new ChristmasSapling.ChristmasTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class YewSapling extends SaplingBlock {
+    public YewSapling() {
+        super(new YewSapling.YewTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.CHRISTMAS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.YEW_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -41,11 +41,11 @@ public class ChristmasSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class ChristmasTree extends Tree {
+    private static class YewTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.CHRISTMAS_TREE;
+            return TreeFeatures.YEW_TREE;
         }
     }
 }
