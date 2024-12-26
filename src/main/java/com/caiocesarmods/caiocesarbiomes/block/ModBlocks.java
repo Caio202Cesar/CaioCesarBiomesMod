@@ -104,6 +104,12 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> WESTERN_HEMLOCK_LOG = registerBlock("western_hemlock_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> YEW_LOG = registerBlock("western_hemlock_log",
+            ModLogs::new);
 
     //Woods
     public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
@@ -205,6 +211,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BLACK_POPLAR_PLANKS = registerBlock("black_poplar_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> BEECH_PLANKS = registerBlock("beech_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> WESTERN_HEMLOCK_PLANKS = registerBlock("western_hemlock_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> YEW_PLANKS = registerBlock("western_hemlock_planks",
             ModPlanks::new);
 
 
@@ -328,6 +340,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CHRISTMAS_LEAVES = registerBlock("christmas_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WESTERN_HEMLOCK_LEAVES = registerBlock("western_hemlock_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             ModLeaves::new);
 
     //Saplings

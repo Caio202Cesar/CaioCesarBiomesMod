@@ -623,6 +623,23 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(5, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
+    //Red Oak Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_OAK_TREE = register("red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_OAK_FANCY_TREE = register("red_oak_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Yew Tree
+
+
     //Sycamore fig tree (netive of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
 
 
@@ -630,6 +647,9 @@ public class TreeFeatures {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
+        protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();
 
         protected static final BlockState ARAUCARIA_LOG = ModBlocks.ARAUCARIA_LOG.get().getDefaultState();
         protected static final BlockState COOK_PINE_LEAVES = ModBlocks.COOK_PINE_LEAVES.get().getDefaultState();
@@ -643,6 +663,8 @@ public class TreeFeatures {
 
         protected static final BlockState HOLM_OAK_LOG = ModBlocks.HOLM_OAK_LOG.get().getDefaultState();
         protected static final BlockState HOLM_OAK_LEAVES = ModBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState RED_OAK_LEAVES = ModBlocks.RED_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState CORK_OAK_LOG = ModBlocks.CORK_OAK_LOG.get().getDefaultState();
         protected static final BlockState CORK_OAK_LEAVES = ModBlocks.CORK_OAK_LEAVES.get().getDefaultState();
