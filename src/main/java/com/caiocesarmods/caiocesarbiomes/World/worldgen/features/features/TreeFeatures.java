@@ -638,7 +638,13 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Yew Tree
-
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.SOUTHERN_BEECH_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(0), 4),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Sycamore fig tree (netive of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
 
