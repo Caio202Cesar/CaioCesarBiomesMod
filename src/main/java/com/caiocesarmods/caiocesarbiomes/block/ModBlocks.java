@@ -138,210 +138,75 @@ public class ModBlocks {
     //Planks and wood stuffs
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> AVOCADO_STAIRS = registerBlock("avocado_stairs",
-            () -> new StairsBlock(() -> AVOCADO_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_STAIRS = registerBlock("coast_cottonwood_stairs",
-            () -> new StairsBlock(() -> COAST_COTTONWOOD_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> FIG_STAIRS = registerBlock("fig_stairs",
-            () -> new StairsBlock(() -> FIG_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> ITALIAN_CYPRESS_PLANKS = registerBlock("italian_cypress_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_STAIRS = registerBlock("italian_cypress_stairs",
-            () -> new StairsBlock(() -> ITALIAN_CYPRESS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> LIVE_OAK_PLANKS = registerBlock("live_oak_planks",
             ModPlanks::new);
-
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> MESQUITE_STAIRS = registerBlock("mesquite_stairs",
-            () -> new StairsBlock(() -> MESQUITE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> MYRTLE_PLANKS = registerBlock("myrtle_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> MYRTLE_STAIRS = registerBlock("myrtle_stairs",
-            () -> new StairsBlock(() -> MYRTLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> OCOTEA_PLANKS = registerBlock("ocotea_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> OCOTEA_STAIRS = registerBlock("ocotea_stairs",
-            () -> new StairsBlock(() -> OCOTEA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> OLEANDER_STAIRS = registerBlock("oleander_stairs",
-            () -> new StairsBlock(() -> OLEANDER_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> POMEGRANATE_STAIRS = registerBlock("pomegranate_stairs",
-            () -> new StairsBlock(() -> POMEGRANATE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> TROPICAL_ALMOND_PLANKS = registerBlock("tropical_almond_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> TROPICAL_ALMOND_STAIRS = registerBlock("tropical_almond_stairs",
-            () -> new StairsBlock(() -> TROPICAL_ALMOND_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> HOLM_OAK_STAIRS = registerBlock("holm_oak_stairs",
-            () -> new StairsBlock(() -> HOLM_OAK_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> CORK_OAK_STAIRS = registerBlock("cork_oak_stairs",
-            () -> new StairsBlock(() -> CORK_OAK_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> STONE_PINE_PLANKS = registerBlock("stone_pine_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> STONE_PINE_STAIRS = registerBlock("stone_pine_stairs",
-            () -> new StairsBlock(() -> STONE_PINE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> OLIVE_STAIRS = registerBlock("olive_stairs",
-            () -> new StairsBlock(() -> OLIVE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> ERYTHRINA_PLANKS = registerBlock("erythrina_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> ERYTHRINA_STAIRS = registerBlock("erythrina_stairs",
-            () -> new StairsBlock(() -> ERYTHRINA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CRABAPPLE_PLANKS = registerBlock("crabapple_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> CRABAPPLE_STAIRS = registerBlock("crabapple_stairs",
-            () -> new StairsBlock(() -> CRABAPPLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> LOQUAT_STAIRS = registerBlock("loquat_stairs",
-            () -> new StairsBlock(() -> LOQUAT_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> ELDERBERRY_PLANKS = registerBlock("elderberry_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> ELDERBERRY_STAIRS = registerBlock("elderberry_stairs",
-            () -> new StairsBlock(() -> ELDERBERRY_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> STRAWBERRY_TREE_STAIRS = registerBlock("strawberry_tree_stairs",
-            () -> new StairsBlock(() -> STRAWBERRY_TREE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> JAPANESE_MAPLE_PLANKS = registerBlock("japanese_maple_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> JAPANESE_MAPLE_STAIRS = registerBlock("japanese_maple_stairs",
-            () -> new StairsBlock(() -> JAPANESE_MAPLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> MULBERRY_STAIRS = registerBlock("mulberry_stairs",
-            () -> new StairsBlock(() -> MULBERRY_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
-    public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
+     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> EUCALYPTUS_PLANKS = registerBlock("eucalyptus_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> PLUM_PLANKS = registerBlock("plum_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> POHUTUKAWA_PLANKS = registerBlock("pohutukawa_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CAMELLIA_PLANKS = registerBlock("camellia_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CASUARINA_PLANKS = registerBlock("casuarina_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> BLACK_POPLAR_PLANKS = registerBlock("black_poplar_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
-            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
