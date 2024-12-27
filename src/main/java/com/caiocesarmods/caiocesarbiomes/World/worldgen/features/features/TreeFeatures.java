@@ -646,8 +646,22 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+    //Cooper Beech Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOPER_BEECH_TREE = register("cooper_beech_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BEECH_LOG),
+                    new SimpleBlockStateProvider(States.COOPER_BEECH_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Sycamore fig tree (native of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
     public static final class States {
@@ -657,6 +671,9 @@ public class TreeFeatures {
 
         protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BEECH_LOG = ModBlocks.BEECH_LOG.get().getDefaultState();
+        protected static final BlockState COOPER_BEECH_LEAVES = ModBlocks.COOPER_BEECH_LEAVES.get().getDefaultState();
 
         protected static final BlockState WESTERN_HEMLOCK_LOG = ModBlocks.WESTERN_HEMLOCK_LOG.get().getDefaultState();
         protected static final BlockState WESTERN_HEMLOCK_LEAVES = ModBlocks.WESTERN_HEMLOCK_LEAVES.get().getDefaultState();
@@ -697,6 +714,7 @@ public class TreeFeatures {
 
         protected static final BlockState FIG_LOG = ModBlocks.FIG_LOG.get().getDefaultState();
         protected static final BlockState FIG_LEAVES = ModBlocks.FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState SYCAMORE_FIG_LEAVES = ModBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLIVE_LOG = ModBlocks.OLIVE_LOG.get().getDefaultState();
         protected static final BlockState OLIVE_LEAVES = ModBlocks.OLIVE_LEAVES.get().getDefaultState();
@@ -803,9 +821,6 @@ public class TreeFeatures {
 
         protected static final BlockState ILEX_LOG = ModBlocks.ILEX_LOG.get().getDefaultState();
         protected static final BlockState HOLLY_LEAVES = ModBlocks.HOLLY_LEAVES.get().getDefaultState();
-
-        protected static final BlockState CHRISTMAS_LEAVES = ModBlocks.CHRISTMAS_LEAVES.get().getDefaultState();
-
 
         protected static final BlockState PODZOL = Blocks.PODZOL.getDefaultState();
 
