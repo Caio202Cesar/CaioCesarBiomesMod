@@ -45,7 +45,7 @@ public class YewSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.YEW_TREE;
+            return TreeFeatures.BAOBAB_TREE;
         }
     }
 }
