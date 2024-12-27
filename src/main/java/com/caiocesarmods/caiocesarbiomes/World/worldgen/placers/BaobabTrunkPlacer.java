@@ -21,7 +21,7 @@ public class BaobabTrunkPlacer extends MegaJungleTrunkPlacer {
             BlockPos currentPos = position.up(y);
 
             // Place a 3x3 trunk at each height
-            for (int dx = -1; dx <= 1; dx++) {
+            for (int dx = -1; dx <= 2; dx++) {
                 for (int dz = -1; dz <= 1; dz++) {
                     BlockPos trunkPos = currentPos.add(dx, 0, dz);
                     placeTrunk(world, random, height, trunkPos, trunkBlocks, boundingBox, config);

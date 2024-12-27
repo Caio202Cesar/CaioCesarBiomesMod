@@ -639,18 +639,18 @@ public class TreeFeatures {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Baobab Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB_TREE = register("baobab_tree",
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB_TREE = register("baobab_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new BaobabTrunkPlacer(10, 5, 3),
                     new TwoLayerFeature(1, 0, 2,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
     //Dragon Blood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRAGON_BLOOD_TREE = register("dragon_blood_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DRAGON_BLOOD_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.DRAGON_BLOOD_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
@@ -689,6 +689,9 @@ public class TreeFeatures {
 
         protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();
+
+        protected static final BlockState DRAGON_BLOOD_LOG = ModBlocks.DRAGON_BLOOD_LOG.get().getDefaultState();
+        protected static final BlockState DRAGON_BLOOD_LEAVES = ModBlocks.DRAGON_BLOOD_LEAVES.get().getDefaultState();
 
         protected static final BlockState BEECH_LOG = ModBlocks.BEECH_LOG.get().getDefaultState();
         protected static final BlockState COOPER_BEECH_LEAVES = ModBlocks.COOPER_BEECH_LEAVES.get().getDefaultState();

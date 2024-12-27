@@ -2,10 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -20,32 +17,30 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class YewSapling extends SaplingBlock {
-    public YewSapling() {
-        super(new YewSapling.YewTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class DragonBloodSapling extends SaplingBlock {
+    public DragonBloodSapling() {
+        super(new DragonBloodSapling.DragonBloodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.YEW_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DRAGON_BLOOD_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-
         return 80;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-
         return 60;
     }
 
-    private static class YewTree extends Tree {
+    private static class DragonBloodTree extends Tree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.YEW_TREE;
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
+            return TreeFeatures.DRAGON_BLOOD_TREE;
         }
     }
 }

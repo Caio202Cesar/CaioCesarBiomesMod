@@ -30,7 +30,7 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
             ModLogs::new);
-    public static final RegistryObject<Block> DRAGON_BLOOD_TREE_LOG = registerBlock("dragon_blood_log",
+    public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             ModLogs::new);
@@ -441,6 +441,8 @@ public class ModBlocks {
             HollySapling::new);
     public static final RegistryObject<Block> YEW_SAPLING = registerBlock("yew_sapling",
             YewSapling::new);
+    public static final RegistryObject<Block> DRAGON_BLOOD_SAPLING = registerBlock("dragon_blood_sapling",
+            DragonBloodSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

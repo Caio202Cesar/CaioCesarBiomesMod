@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "caiocesarbiomes:block/dragon_blood_leaves"
-    }
+    "": [
+      {"model": "caiocesarbiomes:block/dragon_blood_leaves"},
+      {"model": "caiocesarbiomes:block/dragon_blood_flowering_leaves"}
+    ]
   }
 }
