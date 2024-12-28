@@ -563,7 +563,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.MONKEY_PUZZLE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(13, 2, 14),
+                    new StraightTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BUNYA_PINE_TREE = register("bunya_pine_tree",
@@ -577,7 +577,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.BUNYA_PINE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(13, 2, 14),
+                    new StraightTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
