@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemTier;
@@ -63,8 +64,23 @@ public class ModItems {
     public static final RegistryObject<Item> GRAPEFRUIT = ITEMS.register("grapefruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GRAPEFRUIT)));
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
-            () -> new SwordItem(ItemTier.WOOD, 3, -2.4F,
-            new Item.Properties().group(ItemGroup.COMBAT)));;
+            () -> new PoisonSwordItem(ItemTier.WOOD, 3, -2.4F,
+            new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> POISONED_SWORD_STONE = ITEMS.register("stone_poisoned_sword",
+            () -> new PoisonSwordItem(ItemTier.STONE, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> POISONED_SWORD_IRON = ITEMS.register("iron_poisoned_sword",
+            () -> new PoisonSwordItem(ItemTier.IRON, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> POISONED_SWORD_GOLD = ITEMS.register("gold_poisoned_sword",
+            () -> new PoisonSwordItem(ItemTier.GOLD, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> POISONED_SWORD_DIAMOND = ITEMS.register("diamond_poisoned_sword",
+            () -> new PoisonSwordItem(ItemTier.DIAMOND, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> POISONED_SWORD_NETHERITE = ITEMS.register("netherite_poisoned_sword",
+            () -> new PoisonSwordItem(ItemTier.NETHERITE, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
