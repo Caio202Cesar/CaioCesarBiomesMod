@@ -29,6 +29,9 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         MediterraneanBeachFlower.registerRenderLayer();
         RibesShrub.registerRenderLayer();
 
+        RedCurrantCropBlock.registerRenderLayer();
+        BlackCurrantCropBlock.registerRenderLayer();
+
         AvocadoSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
         BlueSpruceSapling.registerRenderLayer();

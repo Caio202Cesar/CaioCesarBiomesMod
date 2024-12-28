@@ -1,11 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemTier;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -63,6 +61,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TAHITI_LIME)));
     public static final RegistryObject<Item> GRAPEFRUIT = ITEMS.register("grapefruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GRAPEFRUIT)));
+
+    public static final RegistryObject<Item> RED_CURRANT_SEEDS = ITEMS.register("red_currant_seeds",
+            () -> new BlockItem(ModBlocks.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
+            () -> new BlockItem(ModBlocks.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
             () -> new PoisonSwordItem(ItemTier.WOOD, 3, -2.4F,
             new Item.Properties().group(ItemGroup.COMBAT)));

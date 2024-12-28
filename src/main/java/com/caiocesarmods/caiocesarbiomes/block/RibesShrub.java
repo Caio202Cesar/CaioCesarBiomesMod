@@ -23,8 +23,8 @@ public class RibesShrub extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.ANIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BASIL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
 
     }
 

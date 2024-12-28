@@ -470,6 +470,11 @@ public class ModBlocks {
             () -> new FicusRootsTopBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
                     doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
 
+    //Crops
+    public static final  RegistryObject<Block> RED_CURRANT_CROP = BLOCKS.register("red_currant_crop",
+            () -> new RedCurrantCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
+    public static final  RegistryObject<Block> BLACK_CURRANT_CROP = BLOCKS.register("black_currant_crop",
+            () -> new BlackCurrantCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
