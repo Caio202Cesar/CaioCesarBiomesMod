@@ -80,6 +80,7 @@ public class CaioCesarBiomesMod
         PewenConiferousGrove.register(eventBus);
         MonsoonFicusTropicalForest.register(eventBus);
         HemiborealSteppeBiome.register(eventBus);
+        TemperateRainforest.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
