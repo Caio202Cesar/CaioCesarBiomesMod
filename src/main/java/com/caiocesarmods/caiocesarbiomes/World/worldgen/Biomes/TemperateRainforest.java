@@ -62,6 +62,7 @@ public class TemperateRainforest {
         ModDefaultBiomeFeatures.withTemperateFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

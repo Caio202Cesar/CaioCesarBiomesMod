@@ -703,7 +703,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOPER_BEECH_BIG_TREE = register("cooper_beech_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BEECH_LOG),
                     new SimpleBlockStateProvider(States.COOPER_BEECH_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
                     new MegaJungleTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));

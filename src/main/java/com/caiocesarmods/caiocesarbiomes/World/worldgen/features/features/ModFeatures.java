@@ -25,6 +25,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_PLANTS = register("temperate_rainforest_plants",
+            Feature.FLOWER.withConfiguration(Configs.TEMPERATE_RAINFOREST_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> BEACH_FLOWER_MEDITERRANEAN = register("beach_flower_mediterranean",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_BEACH_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -105,6 +109,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.PINK_CISTUS, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
+        public static final BlockClusterFeatureConfig TEMPERATE_RAINFOREST_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 1)
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
         public static final BlockClusterFeatureConfig HUMID_SUBTROPICAL_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.BUSH, 5)
@@ -112,8 +122,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
                         .addWeightedBlockstate(States.ALLIUM, 1)
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
-                        .addWeightedBlockstate(States.OXEYE_DAISY, 1),
-        SimpleBlockPlacer.PLACER)).tries(64).build();
+                        .addWeightedBlockstate(States.OXEYE_DAISY, 1)
+                        .addWeightedBlockstate(States.RED_AZALEA, 2)
+                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
+                        .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
+                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
+                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
+                        .addWeightedBlockstate(States.GREEN_AZALEA, 1)
+                        .addWeightedBlockstate(States.WHITE_AZALEA, 2),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TROPICAL_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
@@ -126,7 +143,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig TUSSOCK_GRASS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.TUSSOCK_GRASS, 6),
+                        .addWeightedBlockstate(States.TUSSOCK_GRASS, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -154,12 +171,20 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
         protected static final BlockState TROPICAL_HIBISCUS = ModBlocks.CHINESE_HIBISCUS.get().getDefaultState();
-        protected static final BlockState COBBLESTONE = Blocks.COBBLESTONE.getDefaultState();
         protected static final BlockState TUSSOCK_GRASS = ModBlocks.TUSSOCK_GRASS.get().getDefaultState();
         protected static final BlockState BAY_LAUREL = ModBlocks.BAY_LAUREL.get().getDefaultState();
         protected static final BlockState BAY_LAUREL_FLOWERING = ModBlocks.BAY_LAUREL_FLOWERING.get().getDefaultState();
         protected static final BlockState PINK_CISTUS = ModBlocks.PINK_CISTUS.get().getDefaultState();
         protected static final BlockState WHITE_CISTUS = ModBlocks.WHITE_CISTUS.get().getDefaultState();
+        protected static final BlockState WHITE_AZALEA = ModBlocks.AZALEA_WHITE.get().getDefaultState();
+        protected static final BlockState GREEN_AZALEA = ModBlocks.AZALEA_GREEN.get().getDefaultState();
+        protected static final BlockState PURPLE_AZALEA = ModBlocks.AZALEA_PURPLE.get().getDefaultState();
+        protected static final BlockState RED_AZALEA = ModBlocks.AZALEA_RED.get().getDefaultState();
+        protected static final BlockState MAGENTA_AZALEA = ModBlocks.AZALEA_MAGENTA.get().getDefaultState();
+        protected static final BlockState ORANGE_AZALEA = ModBlocks.AZALEA_ORANGE.get().getDefaultState();
+        protected static final BlockState PINK_AZALEA = ModBlocks.AZALEA_PINK.get().getDefaultState();
+        protected static final BlockState RED_CURRANT_BUSH = ModBlocks.RED_CURRANT_SHRUB.get().getDefaultState();
+        protected static final BlockState BLACK_CURRANT_BUSH = ModBlocks.BLACK_CURRANT_SHRUB.get().getDefaultState();
 
     }
 
