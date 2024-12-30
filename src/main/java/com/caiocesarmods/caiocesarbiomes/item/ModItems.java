@@ -15,14 +15,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AVOCADO)));
-    public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
-    public static final RegistryObject<Item> ROASTED_FENNEL_SEEDS = ITEMS.register("roasted_fennel_seeds",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ROASTED_FENNEL_SEEDS)));
-    public static final RegistryObject<Item> FENNEL_STALK = ITEMS.register("fennel_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FENNEL_STALK)));
-    public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_FENNEL_STALK)));
     public static final RegistryObject<Item> FIGFRUIT = ITEMS.register("figfruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FIGFRUIT)));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
@@ -70,6 +62,15 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
             () -> new BlockItem(ModBlocks.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+
+    public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
+            () -> new BlockItem(ModBlocks.FENNEL_CROP.get(), new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> ROASTED_FENNEL_SEEDS = ITEMS.register("roasted_fennel_seeds",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ROASTED_FENNEL_SEEDS)));
+    public static final RegistryObject<Item> FENNEL_STALK = ITEMS.register("fennel_stalk",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FENNEL_STALK)));
+    public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_FENNEL_STALK)));
 
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
             () -> new PoisonSwordItem(ItemTier.WOOD, 3, -2.4F,

@@ -480,6 +480,8 @@ public class ModBlocks {
             () -> new RedCurrantCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
     public static final  RegistryObject<Block> BLACK_CURRANT_CROP = BLOCKS.register("black_currant_crop",
             () -> new BlackCurrantCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
+    public static final  RegistryObject<Block> FENNEL_CROP = BLOCKS.register("fennel_crop",
+            () -> new FennelCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
     public static final RegistryObject<Block> BUSH = registerBlock("bush",

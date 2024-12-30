@@ -31,6 +31,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
 
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();
+        FennelCropBlock.registerRenderLayer();
 
         AvocadoSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
