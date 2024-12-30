@@ -65,6 +65,7 @@ public class TemperateRainforest {
         ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.6F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
