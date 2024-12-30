@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/beech_log_middle",
+    "side": "caiocesarbiomes:block/beech_bark"
+  }
+}
