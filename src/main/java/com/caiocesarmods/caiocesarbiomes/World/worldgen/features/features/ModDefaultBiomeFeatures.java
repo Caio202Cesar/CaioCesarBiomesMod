@@ -30,6 +30,15 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withMediterraneanConiferTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MEDITERRANEAN_CONIFER_TREES);
     }
+    public static void withWesternHemlock(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.WESTERN_HEMLOCK_TREES);
+    }
+    public static void withTemperateRainforestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TREES_TEMPERATE_RAINFOREST);
+    }
+    public static void withTemperateRainforestShrubs(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEMPERATE_RAINFOREST_SHRUBS);
+    }
     public static void withCrapeMyrtles(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRAPE_MYRTLE_TREES);
     }
