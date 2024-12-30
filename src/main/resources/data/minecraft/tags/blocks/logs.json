@@ -40,7 +40,9 @@
     "caiocesarbiomes:ilex_log",
     "caiocesarbiomes:yew_log",
     "caiocesarbiomes:western_hemlock_log",
-    "caiocesarbiomes:beech_log"
+    "caiocesarbiomes:beech_log",
+    "caiocesarbiomes:plane_log",
+    "caiocesarbiomes:live_oak_log"
 
   ]
 }

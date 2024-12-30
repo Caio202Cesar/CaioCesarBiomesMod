@@ -110,6 +110,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -188,7 +190,8 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
             ModPlanks::new);
-
+    public static final RegistryObject<Block> PLANE_PLANKS = registerBlock("plane_planks",
+            ModPlanks::new);
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
@@ -309,8 +312,6 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> CHRISTMAS_LEAVES = registerBlock("christmas_leaves",
-            ModLeaves::new);
     public static final RegistryObject<Block> WESTERN_HEMLOCK_LEAVES = registerBlock("western_hemlock_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
@@ -320,6 +321,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             ModLeaves::new);
 
     //Saplings

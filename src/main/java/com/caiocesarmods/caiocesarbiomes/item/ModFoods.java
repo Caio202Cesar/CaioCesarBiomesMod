@@ -10,6 +10,8 @@ public class ModFoods extends Foods {
     public static final Food AVOCADO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food FIGFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MULBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food RED_CURRANT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food BLACK_CURRANT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food LOQUAT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food ARBUTUS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food OLIVES = (new Food.Builder()).hunger(2).saturation(0.1F).build();

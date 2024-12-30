@@ -62,6 +62,10 @@ public class ModItems {
     public static final RegistryObject<Item> GRAPEFRUIT = ITEMS.register("grapefruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GRAPEFRUIT)));
 
+    public static final RegistryObject<Item> RED_CURRANT = ITEMS.register("red_currant",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.RED_CURRANT)));
+    public static final RegistryObject<Item> BLACK_CURRANT = ITEMS.register("black_currant",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BLACK_CURRANT)));
     public static final RegistryObject<Item> RED_CURRANT_SEEDS = ITEMS.register("red_currant_seeds",
             () -> new BlockItem(ModBlocks.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",

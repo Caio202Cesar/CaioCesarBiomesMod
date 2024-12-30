@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/red_currant_shrub",
+    "particle": "caiocesarbiomes:block/red_currant_shrub"
+  }
+}
