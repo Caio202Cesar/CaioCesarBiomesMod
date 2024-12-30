@@ -58,6 +58,8 @@ public class TemperateRainforest {
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestBirchTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withWesternHemlock(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHollyTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTemperateFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
 

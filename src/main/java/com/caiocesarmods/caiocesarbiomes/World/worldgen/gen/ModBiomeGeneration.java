@@ -14,7 +14,7 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 public class ModBiomeGeneration {
     public static void generateBiomes() {
         addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, SPARSE, DRY,
-                SAVANNA);
+                SAVANNA, CONIFEROUS);
 
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 8, OVERWORLD, SPARSE, DRY, SAVANNA);
 
@@ -77,7 +77,7 @@ public class ModBiomeGeneration {
 
         addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, BEACH, SANDY, WET, LUSH);
 
-        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 7, OVERWORLD, COLD, FOREST, WET, DENSE, LUSH);
+        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 7, OVERWORLD, COLD, FOREST, WET, DENSE, LUSH);
 
         addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 8, OVERWORLD, COLD, WET, LUSH);
 
@@ -92,6 +92,8 @@ public class ModBiomeGeneration {
         addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 12, COLD, OVERWORLD, DRY, PLAINS, SPARSE);
 
         addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, FOREST, WET, LUSH, DENSE);
+
+        addBiome(TemperateRainforest.TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.COOL, 15, OVERWORLD, COLD, CONIFEROUS, WET, LUSH, DENSE, FOREST);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
