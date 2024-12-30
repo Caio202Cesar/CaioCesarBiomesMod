@@ -519,7 +519,20 @@ public class ModBlocks {
             RibesShrub::new);
     public static final RegistryObject<Block> BLACK_CURRANT_SHRUB = registerBlock("black_currant_shrub",
             RibesShrub::new);
-
+    public static final RegistryObject<Block> AZALEA_PURPLE = registerBlock("azalea_purple",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_RED = registerBlock("azalea_red",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_PINK = registerBlock("azalea_pink",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_ORANGE = registerBlock("azalea_orange",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_MAGENTA = registerBlock("azalea_magenta",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_GREEN = registerBlock("azalea_green",
+            SubtropicalForestPlant::new);
+    public static final RegistryObject<Block> AZALEA_WHITE = registerBlock("azalea_white",
+            SubtropicalForestPlant::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
