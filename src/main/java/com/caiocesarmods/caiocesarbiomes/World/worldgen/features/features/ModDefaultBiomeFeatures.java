@@ -66,6 +66,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSubtropicalForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_TREES);
     }
+    public static void withSubtropicalEucalyptusForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
+    }
     public static void withJungleOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JUNGLE_OCOTEA_TREES);
     }
