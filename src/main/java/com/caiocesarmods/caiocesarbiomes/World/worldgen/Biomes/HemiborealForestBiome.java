@@ -59,7 +59,7 @@ public class HemiborealForestBiome {
         DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withMountainTrees(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withTaigaVegetation(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
