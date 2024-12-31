@@ -556,7 +556,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.COOK_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
-                    new StraightTrunkPlacer(16, 2, 1),
+                    new StraightTrunkPlacer(19, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> NORFOLK_ISLAND_PINE_TREE = register("norfolk_island_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
@@ -1070,8 +1070,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.5F)),
-                            AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.5F),
+                            TAMARIND_TREE.withChance(0.3F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JAPANESE_MAPLE = register("japanese_maple",
