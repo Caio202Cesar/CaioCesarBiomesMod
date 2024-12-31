@@ -65,7 +65,9 @@ public class ModBiomeGeneration {
 
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD, FOREST, LUSH, RARE);
 
-        addBiome(TropicalEucalyptusForest.TROPICAL_EUCALYPTUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 8, OVERWORLD, FOREST, HOT, DRY, DENSE);
+        addBiome(HemiborealForestBiome.HEMIBOREAL_FOREST.get(), BiomeManager.BiomeType.COOL, 15, OVERWORLD, FOREST, LUSH, COLD);
+
+        addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 8, OVERWORLD, FOREST, HOT, DRY, DENSE);
 
         addBiome(SubtropicalEucalyptusDryForestBiome.SUBTROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, DRY, DENSE);
 

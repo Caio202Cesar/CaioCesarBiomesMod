@@ -62,9 +62,7 @@ public class CaioCesarBiomesMod
         GravelTundraBiome.register(eventBus);
         SahelBiome.register(eventBus);
         TropicalBeachBiome.register(eventBus);
-
-        TropicalEucalyptusForest.register(eventBus);
-
+        TropicalEucalyptusDryForestBiome.register(eventBus);
         JapaneseMapleGroveBiome.register(eventBus);
         TussockTundraBiome.register(eventBus);
         SubtropicalCoastalBeachBiome.register(eventBus);
@@ -82,6 +80,7 @@ public class CaioCesarBiomesMod
         MonsoonFicusTropicalForest.register(eventBus);
         HemiborealSteppeBiome.register(eventBus);
         TemperateRainforest.register(eventBus);
+        HemiborealForestBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
