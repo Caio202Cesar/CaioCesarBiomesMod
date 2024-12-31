@@ -1027,6 +1027,12 @@ public class TreeFeatures {
                             AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("subtropical_eucalyptus_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
+                            STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F)), AVOCADO_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.3F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
