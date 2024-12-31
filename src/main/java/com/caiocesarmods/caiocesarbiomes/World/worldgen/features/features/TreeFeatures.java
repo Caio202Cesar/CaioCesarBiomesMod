@@ -1048,7 +1048,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.2F),
-                    ELDERBERRY_TREE.withChance(0.2F)), MULBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.3F)), MULBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
