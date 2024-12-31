@@ -1,9 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -19,19 +20,21 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 //Eucalyptus subtropical plains
-public class HemiborealSteppeBiome {
+public class HemiborealForestBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> HEMIBOREAL_STEPPE = BIOMES.register("hemiboreal_steppe",
-            () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+    public static final RegistryObject<Biome> HEMIBOREAL_FOREST = BIOMES.register("hemiboreal_forest",
+            () -> makeForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
 
 
-    private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.WOLF, 8, 4, 4));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.FOX, 2, 4, 4));
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
@@ -46,24 +49,25 @@ public class HemiborealSteppeBiome {
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
-
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PRAIRIE_BLACK_POPLAR_TREES);
+        DefaultBiomeFeatures.withForestBirchTrees(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withMountainTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.5F).downfall(0.1F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(8960871)
-                        .withGrassColor(11713383).setFogColor(14807295)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
+                .temperature(0.6F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(5877296)
+                        .withGrassColor(7979098).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())

@@ -448,6 +448,8 @@ public class ModBlocks {
             DragonBloodSapling::new);
     public static final RegistryObject<Block> WESTERN_HEMLOCK_SAPLING = registerBlock("western_hemlock_sapling",
             WesternHemlockSapling::new);
+    public static final RegistryObject<Block> LIVE_OAK_SAPLING = registerBlock("live_oak_sapling",
+            LiveOakSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

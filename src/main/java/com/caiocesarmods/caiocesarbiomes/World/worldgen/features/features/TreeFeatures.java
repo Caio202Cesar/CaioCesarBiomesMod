@@ -544,6 +544,12 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_FANCY_TREE = register("black_poplar_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Araucaria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOK_PINE_TREE = register("cook_pine_tree",
@@ -927,6 +933,11 @@ public class TreeFeatures {
                             HOLLY_TREE1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> PRAIRIE_BLACK_POPLAR_TREES = register("prairie_black_poplar_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.2F)),
+                            BLACK_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_SHRUBS = register("temperate_rainforest_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_OAK_SHRUB.withChance(0.3F)),
                             OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -1059,10 +1070,6 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_BUNYA_PINE_TREE.withChance(0.2F)),
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
-
-    public static final ConfiguredFeature<?, ?> PRAIRIE_POPLAR = register("prairie_poplar",
-            BLACK_POPLAR_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
             POHUTUKAWA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
