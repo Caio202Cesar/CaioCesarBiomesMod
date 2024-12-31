@@ -62,9 +62,10 @@ public class CaioCesarBiomesMod
         GravelTundraBiome.register(eventBus);
         SahelBiome.register(eventBus);
         TropicalBeachBiome.register(eventBus);
+
+        TropicalEucalyptusForest.register(eventBus);
+
         JapaneseMapleGroveBiome.register(eventBus);
-        TropicalEucalyptusDryForestBiome.register(eventBus);
-        MossyTundraBiome.register(eventBus);
         TussockTundraBiome.register(eventBus);
         SubtropicalCoastalBeachBiome.register(eventBus);
         SubtropicalEucalyptusDryForestBiome.register(eventBus);

@@ -53,8 +53,6 @@ public class ModBiomeGeneration {
 
         addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 10, OVERWORLD, COLD, DRY);
 
-        addBiome(MossyTundraBiome.MOSSY_TUNDRA.get(), BiomeManager.BiomeType.ICY, 7, OVERWORLD, COLD, WET);
-
         addBiome(TussockTundraBiome.TUSSOCK_TUNDRA.get(), BiomeManager.BiomeType.ICY, 8, OVERWORLD, COLD, WET);
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 13, OVERWORLD, HOT, DRY, SPARSE);
@@ -67,8 +65,7 @@ public class ModBiomeGeneration {
 
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.WARM, 4, OVERWORLD, FOREST, LUSH, RARE);
 
-        addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 14,
-                OVERWORLD, HOT, FOREST, DRY, DENSE);
+        addBiome(TropicalEucalyptusForest.TROPICAL_EUCALYPTUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 8, OVERWORLD, FOREST, HOT, DRY, DENSE);
 
         addBiome(SubtropicalEucalyptusDryForestBiome.SUBTROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, DRY, DENSE);
 
