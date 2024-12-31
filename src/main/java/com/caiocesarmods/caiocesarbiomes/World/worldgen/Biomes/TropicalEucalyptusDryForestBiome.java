@@ -49,7 +49,6 @@ public class TropicalEucalyptusDryForestBiome {
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
@@ -62,7 +61,7 @@ public class TropicalEucalyptusDryForestBiome {
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.FOREST).depth(depth).scale(scale)
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(4110351)
                         .withGrassColor(12564309).setFogColor(7907327)
