@@ -1023,7 +1023,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_TREES = register("subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
-                            SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.2F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.2F)), AVOCADO_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
