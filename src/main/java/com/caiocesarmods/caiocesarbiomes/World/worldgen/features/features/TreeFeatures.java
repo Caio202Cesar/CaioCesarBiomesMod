@@ -1043,7 +1043,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TROPICAL_TREES = register("savanna_tropical_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(INDIAN_CORAL_TREE.withChance(0.3F),
-                            ROYAL_POINCIANA_TREE.withChance(0.1F)), INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            ROYAL_POINCIANA_TREE.withChance(0.1F), RED_KAPOK_TREE.withChance(0.1F)), INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
