@@ -94,6 +94,9 @@ public class ModBiomeGeneration {
         addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, FOREST, WET, LUSH, DENSE);
 
         addBiome(TemperateRainforest.TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.COOL, 15, OVERWORLD, COLD, CONIFEROUS, WET, LUSH, DENSE, FOREST);
+
+
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

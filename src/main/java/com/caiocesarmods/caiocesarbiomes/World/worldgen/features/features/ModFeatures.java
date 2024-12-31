@@ -111,8 +111,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig TEMPERATE_RAINFOREST_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 1)
-                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 1),
+                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 3)
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 3)
+                        .addWeightedBlockstate(States.RED_AZALEA, 2)
+                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
+                        .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
+                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
+                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
+                        .addWeightedBlockstate(States.GREEN_AZALEA, 1)
+                        .addWeightedBlockstate(States.WHITE_AZALEA, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig HUMID_SUBTROPICAL_PLANTS_CONFIG =

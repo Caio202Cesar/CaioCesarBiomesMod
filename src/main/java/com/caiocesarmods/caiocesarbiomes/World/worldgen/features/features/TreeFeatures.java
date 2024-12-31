@@ -1041,6 +1041,11 @@ public class TreeFeatures {
                             ELDERBERRY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
+    public static final ConfiguredFeature<?, ?> SAVANNA_TROPICAL_TREES = register("savanna_tropical_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(INDIAN_CORAL_TREE.withChance(0.3F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F)), INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
+
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_TREE.withChance(0.2F),
                     ELDERBERRY_TREE.withChance(0.2F)), MULBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

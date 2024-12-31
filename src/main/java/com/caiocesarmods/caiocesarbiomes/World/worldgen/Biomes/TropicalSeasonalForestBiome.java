@@ -51,7 +51,6 @@ public class TropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withTropicalFruitTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withTropicalForestDeciduousTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
