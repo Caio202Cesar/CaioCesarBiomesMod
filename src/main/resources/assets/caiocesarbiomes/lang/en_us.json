@@ -260,6 +260,10 @@
   "block.caiocesarbiomes.azalea_white": "White Azalea",
   "block.caiocesarbiomes.azalea_magenta": "Magenta Azalea",
 
+  "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
+  "block.caiocesarbiomes.black_currant_crop": "Black Currant Seeds",
+  "block.caiocesarbiomes.fennel_crop": "Fennel Seeds",
+
   "item.caiocesarbiomes.avocado": "Avocado",
   "item.caiocesarbiomes.fennel_seeds": "Fennel Seeds",
   "item.caiocesarbiomes.roasted_fennel_seeds": "Roasted Fennel Seeds",
