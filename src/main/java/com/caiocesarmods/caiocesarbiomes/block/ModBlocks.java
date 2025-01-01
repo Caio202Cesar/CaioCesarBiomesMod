@@ -452,6 +452,8 @@ public class ModBlocks {
             LiveOakSapling::new);
     public static final RegistryObject<Block> COOPER_BEECH_SAPLING = registerBlock("cooper_beech_sapling",
             CooperBeechSapling::new);
+    public static final RegistryObject<Block> RED_OAK_SAPLING = registerBlock("red_oak_sapling",
+            RedOakSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

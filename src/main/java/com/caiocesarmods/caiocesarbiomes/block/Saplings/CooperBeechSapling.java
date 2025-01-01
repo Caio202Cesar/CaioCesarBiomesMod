@@ -17,16 +17,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CoastCottonwoodSapling extends SaplingBlock {
-    public CoastCottonwoodSapling() {
-        super(new CoastCottonwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class CooperBeechSapling extends SaplingBlock {
+    public CooperBeechSapling() {
+        super(new CooperBeechSapling.CooperBeechTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.COAST_COTTONWOOD_SAPLING.get(), RenderType.getCutout());
-}
+        RenderTypeLookup.setRenderLayer(ModBlocks.COOPER_BEECH_SAPLING.get(), RenderType.getCutout());
+    }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
@@ -38,15 +38,16 @@ public class CoastCottonwoodSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CoastCottonwoodTree extends Tree {
+    private static class CooperBeechTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.COAST_COTTONWOOD_FANCY_TREE;
+                return TreeFeatures.COOPER_BEECH_BIG_TREE;
             } else {
-                return TreeFeatures.COAST_COTTONWOOD_TREE;
+                return TreeFeatures.COOPER_BEECH_TREE;
             }
         }
+
     }
 }
