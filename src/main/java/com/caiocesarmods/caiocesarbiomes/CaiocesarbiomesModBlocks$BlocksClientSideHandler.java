@@ -92,5 +92,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         YewSapling.registerRenderLayer();
         HollySapling.registerRenderLayer();
         DragonBloodSapling.registerRenderLayer();
+        NorfolkPineSapling.registerRenderLayer();
     }
 }
