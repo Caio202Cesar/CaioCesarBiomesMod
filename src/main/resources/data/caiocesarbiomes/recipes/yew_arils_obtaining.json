@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:yew_berries"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:yew_arils",
+    "count": 1
+  }
+}

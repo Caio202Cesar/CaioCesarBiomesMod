@@ -36,4 +36,9 @@ public class ModFoods extends Foods {
     public static final Food BUDDHA_HAND_CITRON = (new Food.Builder()).hunger(4).saturation(0.3F)
             .effect(new EffectInstance(Effects.HUNGER, 40, 0), 0.2F).build();
     public static final Food GRAPEFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food YEW_BERRIES = (new Food.Builder()).hunger(1).saturation(0.1F)
+            .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F).build();
+    public static final Food YEW_ARILS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+
 }
