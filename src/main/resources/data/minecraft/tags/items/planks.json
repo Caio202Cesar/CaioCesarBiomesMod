@@ -34,6 +34,11 @@
     "caiocesarbiomes:nothofagus_planks",
     "caiocesarbiomes:araucaria_planks",
     "caiocesarbiomes:citrus_planks",
-    "caiocesarbiomes:black_poplar_planks"
+    "caiocesarbiomes:black_poplar_planks",
+    "caiocesarbiomes:yew_planks",
+    "caiocesarbiomes:western_hemlock_planks",
+    "caiocesarbiomes:beech_planks",
+    "caiocesarbiomes:plane_planks"
+
   ]
 }
