@@ -671,8 +671,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRAGON_BLOOD_TREE = register("dragon_blood_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DRAGON_BLOOD_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.DRAGON_BLOOD_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
+                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(11, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Western Hemlock Tree
