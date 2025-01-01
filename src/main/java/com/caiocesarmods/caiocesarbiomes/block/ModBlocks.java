@@ -112,6 +112,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -324,6 +326,8 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
@@ -454,6 +458,8 @@ public class ModBlocks {
             CooperBeechSapling::new);
     public static final RegistryObject<Block> RED_OAK_SAPLING = registerBlock("red_oak_sapling",
             RedOakSapling::new);
+    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_SAPLING = registerBlock("socotra_desert_rose_sapling",
+            SocotraDesertRoseSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
