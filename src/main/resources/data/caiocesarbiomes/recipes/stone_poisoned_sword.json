@@ -10,11 +10,11 @@
       "item": "minecraft:stone_sword"
     },
     "X": {
-      "item": "brbiomesmod:poison_sap"
+      "item": "caiocesarbiomes:poison_sap"
     }
   },
   "result": {
-    "item": "brbiomesmod:stone_poisoned_sword",
+    "item": "caiocesarbiomes:stone_poisoned_sword",
     "count": 1
   }
 }
