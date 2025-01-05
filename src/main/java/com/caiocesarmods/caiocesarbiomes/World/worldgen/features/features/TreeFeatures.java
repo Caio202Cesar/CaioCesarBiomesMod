@@ -334,7 +334,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
                     new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new ForkyTrunkPlacer(7, 6, 0),
+                    new ForkyTrunkPlacer(5, 6, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Italian Cypress Tree
