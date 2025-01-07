@@ -29,6 +29,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(Configs.TEMPERATE_RAINFOREST_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_FLOWERS = register("japanese_grove_plants",
+            Feature.FLOWER.withConfiguration(Configs.JAPANESE_GROVE_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> BEACH_FLOWER_MEDITERRANEAN = register("beach_flower_mediterranean",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_BEACH_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -113,6 +117,17 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.RED_CURRANT_BUSH, 3)
                         .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 3)
+                        .addWeightedBlockstate(States.RED_AZALEA, 2)
+                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
+                        .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
+                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
+                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
+                        .addWeightedBlockstate(States.GREEN_AZALEA, 1)
+                        .addWeightedBlockstate(States.WHITE_AZALEA, 2),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig JAPANESE_GROVE_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.RED_AZALEA, 2)
                         .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
                         .addWeightedBlockstate(States.PURPLE_AZALEA, 1)

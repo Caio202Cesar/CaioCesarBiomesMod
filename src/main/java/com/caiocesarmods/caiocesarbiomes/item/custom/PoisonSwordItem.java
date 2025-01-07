@@ -22,7 +22,7 @@ public class PoisonSwordItem extends SwordItem {
      */
     @Override
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addPotionEffect(new EffectInstance(Effects.POISON, 200, 5));
+        target.addPotionEffect(new EffectInstance(Effects.POISON, 200, 7));
 
         return super.hitEntity(stack, target, attacker);
     }
