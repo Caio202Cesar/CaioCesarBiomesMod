@@ -717,14 +717,14 @@ public class TreeFeatures {
 
     //Plane Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE = register("plane_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_FANCY_TREE = register("plane_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -737,6 +737,15 @@ public class TreeFeatures {
                     new MegaJungleTrunkPlacer(4, 16, 8),
                     new TwoLayerFeature(2, 0, 1))).build()));
 
+    //Japanese Pine Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_PINE_LOG),
+                    new SimpleBlockStateProvider(States.JAPANESE_PINE_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+
+
 
     public static final class States {
 
@@ -748,6 +757,9 @@ public class TreeFeatures {
 
         protected static final BlockState PLANE_LOG = ModBlocks.PLANE_LOG.get().getDefaultState();
         protected static final BlockState PLANE_LEAVES = ModBlocks.PLANE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JAPANESE_PINE_LOG = ModBlocks.JAPANESE_PINE_LOG.get().getDefaultState();
+        protected static final BlockState JAPANESE_PINE_LEAVES = ModBlocks.JAPANESE_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState DRAGON_BLOOD_LOG = ModBlocks.DRAGON_BLOOD_LOG.get().getDefaultState();
         protected static final BlockState DRAGON_BLOOD_LEAVES = ModBlocks.DRAGON_BLOOD_LEAVES.get().getDefaultState();

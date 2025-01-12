@@ -328,6 +328,8 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> JAPANESE_PINE_LEAVES = registerBlock("japanese_pine_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
@@ -460,6 +462,8 @@ public class ModBlocks {
             RedOakSapling::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_SAPLING = registerBlock("socotra_desert_rose_sapling",
             SocotraDesertRoseSapling::new);
+    public static final RegistryObject<Block> JAPANESE_PINE_SAPLING = registerBlock("japanese_pine_sapling",
+            JapanesePineSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
