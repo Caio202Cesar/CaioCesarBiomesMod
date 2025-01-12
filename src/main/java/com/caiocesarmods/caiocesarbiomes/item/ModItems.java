@@ -19,8 +19,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FIGFRUIT)));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.POMEGRANATE)));
-    public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.OLIVES)));
     public static final RegistryObject<Item> ARBUTUS = ITEMS.register("arbutus",
@@ -76,6 +74,8 @@ public class ModItems {
     public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_FENNEL_STALK)));
 
+    public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
             () -> new PoisonSwordItem(ItemTier.WOOD, 3, -2.4F,
             new Item.Properties().group(ItemGroup.COMBAT)));
