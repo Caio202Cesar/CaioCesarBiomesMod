@@ -114,6 +114,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -144,7 +146,7 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> STONE_PINE_PLANKS = registerBlock("stone_pine_planks",
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("stone_pine_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
             ModPlanks::new);
