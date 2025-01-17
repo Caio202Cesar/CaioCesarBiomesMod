@@ -405,7 +405,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANDARIN_TREE = register("mandarin_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.MANDARIN_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(2), 2),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
@@ -541,8 +541,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_TREE = register("black_poplar_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
                     new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
-                    new StraightTrunkPlacer(16, 2, 1),
+                    new SpruceFoliagePlacer(FeatureSpread.create(1, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
+                    new StraightTrunkPlacer(12, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_FANCY_TREE = register("black_poplar_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LOG),

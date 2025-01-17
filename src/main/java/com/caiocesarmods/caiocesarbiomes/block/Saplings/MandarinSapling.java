@@ -38,7 +38,7 @@ public class MandarinSapling extends SaplingBlock {
     private static class MandarinTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.ORANGE_TREE;
+            return TreeFeatures.MANDARIN_TREE;
         }
     }
 }
