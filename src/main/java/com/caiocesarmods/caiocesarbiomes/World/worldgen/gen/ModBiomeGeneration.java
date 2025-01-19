@@ -18,7 +18,7 @@ public class ModBiomeGeneration {
 
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 8, OVERWORLD, SPARSE, DRY, SAVANNA);
 
-        addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 15,
+        addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 15, DRY, DENSE,
                 OVERWORLD);
 
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, SPARSE, DRY,
