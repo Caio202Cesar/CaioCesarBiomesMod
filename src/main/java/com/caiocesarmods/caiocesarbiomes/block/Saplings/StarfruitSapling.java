@@ -40,7 +40,10 @@ public class StarfruitSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-            return TreeFeatures.STARFRUIT_TREE;
-        }
-    }
+            if (random.nextInt(10) == 5) {
+                return TreeFeatures.STARFRUIT_FANCY_TREE;
+            } else {
+                return TreeFeatures.STARFRUIT_TREE;
+            }
+        }}
 }
