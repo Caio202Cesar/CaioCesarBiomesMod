@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/pohutukawa_flowering_leaves2",
-    "particle": "caiocesarbiomes:block/pohutukawa_flowering_leaves2"
-  }
-}
