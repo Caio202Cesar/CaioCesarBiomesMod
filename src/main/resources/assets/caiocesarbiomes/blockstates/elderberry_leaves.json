@@ -2,10 +2,10 @@
   "variants":{
     "":[
       {"model": "caiocesarbiomes:block/elderberry_leaves",
-        "weight": 2},
+        "weight": 3},
       {"model": "caiocesarbiomes:block/elderberry_flowering_leaves",
         "weight": 4},
       {"model": "caiocesarbiomes:block/elderberry_fruiting_leaves",
-        "weight": 1}
+        "weight": 2}
     ]
   }}
