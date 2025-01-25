@@ -14,6 +14,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class RoyalPoincianaSapling extends SaplingBlock {
@@ -36,10 +37,14 @@ public class RoyalPoincianaSapling extends SaplingBlock {
     }
 
     private static class RoyalPoincianaTree extends Tree {
+        @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.ROYAL_POINCIANA_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.ROYAL_POINCIANA_BIG_TREE;
+            } else {
+                return TreeFeatures.ROYAL_POINCIANA_TREE;
+            }
         }
-
     }
 }
