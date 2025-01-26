@@ -67,19 +67,13 @@ public class HotMediterraneanBeachBiome {
 
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(7441937)
+                .temperature(0.89F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
-    }
-
-    private static int getSkyColorWithTemperatureModifier(float temperature) {
-        float lvt_1_1_ = temperature / 3.0F;
-        lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
-        return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
     }
 
     public static void register(IEventBus eventBus) {
