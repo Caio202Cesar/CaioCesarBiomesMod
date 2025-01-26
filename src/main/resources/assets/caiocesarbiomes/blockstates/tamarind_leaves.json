@@ -4,6 +4,6 @@
       {"model": "caiocesarbiomes:block/tamarind_leaves",
         "weight": 5},
       {"model": "caiocesarbiomes:block/tamarind_fruiting_leaves",
-        "weight": 1}
+        "weight": 3}
     ]
   }}
