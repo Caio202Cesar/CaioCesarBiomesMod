@@ -723,6 +723,12 @@ public class TreeFeatures {
 
     //Sycamore fig tree (native of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_FANCY_TREE = register("sycamore_fig_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
