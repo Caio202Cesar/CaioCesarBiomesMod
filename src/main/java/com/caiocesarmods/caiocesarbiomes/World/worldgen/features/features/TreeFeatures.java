@@ -969,7 +969,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F),
-                            FORKY_STRAWBERRY_TREE.withChance(0.2F), ELDERBERRY_TREE.withChance(0.2F)), POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            FORKY_STRAWBERRY_TREE.withChance(0.2F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> HOLLY_TREES = register("holly_trees",
@@ -1090,7 +1090,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
-                            ELDERBERRY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            ELDERBERRY_TREE.withChance(0.3F), CORK_OAK_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TROPICAL_TREES = register("savanna_tropical_trees",
