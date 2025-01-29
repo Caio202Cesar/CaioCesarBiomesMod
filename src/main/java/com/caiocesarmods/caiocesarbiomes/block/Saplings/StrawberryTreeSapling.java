@@ -39,10 +39,10 @@ public class StrawberryTreeSapling extends SaplingBlock {
     private static class StrawberryTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.STRAWBERRY_TREE;
+            if (random.nextInt(10) == 9) {
+                return TreeFeatures.STRAWBERRY_TREE2;
             } else {
-                return TreeFeatures.FORKY_STRAWBERRY_TREE;
+                return TreeFeatures.STRAWBERRY_TREE1;
             }
         }
     }

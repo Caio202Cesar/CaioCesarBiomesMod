@@ -324,17 +324,17 @@ public class TreeFeatures {
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
     //Strawberry Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STRAWBERRY_TREE = register("strawberry_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STRAWBERRY_TREE1 = register("strawberry_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
                     new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FORKY_STRAWBERRY_TREE = register("forky_strawberry_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STRAWBERRY_TREE2 = register("strawberry_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
                     new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new ForkyTrunkPlacer(5, 6, 0),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Italian Cypress Tree
@@ -969,7 +969,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F),
-                            FORKY_STRAWBERRY_TREE.withChance(0.2F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            STRAWBERRY_TREE2.withChance(0.2F), STRAWBERRY_TREE1.withChance(0.1F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> HOLLY_TREES = register("holly_trees",
@@ -1046,8 +1047,8 @@ public class TreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> STRAWBERRY_TREES = register("strawberry_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STRAWBERRY_TREE.withChance(0.5F)),
-                    FORKY_STRAWBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STRAWBERRY_TREE1.withChance(0.5F)),
+                    STRAWBERRY_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FIG_TREES = register("fig_trees",
