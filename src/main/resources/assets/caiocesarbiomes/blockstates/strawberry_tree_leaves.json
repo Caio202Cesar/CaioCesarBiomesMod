@@ -5,7 +5,9 @@
         "weight": 5},
       {"model": "caiocesarbiomes:block/strawberry_tree_flowering_leaves",
         "weight": 2},
-      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves",
+      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves1",
+        "weight": 3},
+      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves2",
         "weight": 3}
     ]
   }}
