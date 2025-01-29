@@ -55,7 +55,7 @@ public class CookPineIslandBiome {
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalSavannaTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalPineIslandTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COOK_PINE_TREE);
 
