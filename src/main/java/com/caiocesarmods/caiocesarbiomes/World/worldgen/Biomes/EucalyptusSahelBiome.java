@@ -59,7 +59,7 @@ public class EucalyptusSahelBiome {
                 .temperature(1.6F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(13494015)
-                        .setAmbientSound(SoundEvents.AMBIENT_CAVE)
+                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
