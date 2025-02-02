@@ -484,8 +484,6 @@ public class TreeFeatures {
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-
-
     //Tamarind Tree (Tropical Deciduous Forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAMARIND_TREE = register("tamarind_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.TAMARIND_LOG),
