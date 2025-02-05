@@ -4,7 +4,6 @@ import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
@@ -16,8 +15,6 @@ import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 
 import java.util.function.Supplier;
-
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.ITALIAN_CYPRESS_TREE;
 
 public class ModFeatures extends Features implements IFeatureConfig {
 

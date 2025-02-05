@@ -1,6 +1,6 @@
 /*package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.entity.ModBlocks;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.AbstractTopPlantBlock;
 import net.minecraft.block.BlockState;
