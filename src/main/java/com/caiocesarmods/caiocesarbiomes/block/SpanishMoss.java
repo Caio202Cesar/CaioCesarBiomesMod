@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;

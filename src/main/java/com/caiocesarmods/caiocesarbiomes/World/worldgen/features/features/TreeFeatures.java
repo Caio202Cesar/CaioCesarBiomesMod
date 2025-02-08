@@ -15,10 +15,12 @@ import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
 import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
+import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunkplacer.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
 import java.util.OptionalInt;
 
 import static net.minecraft.world.gen.feature.Features.*;
@@ -616,7 +618,9 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_TREE = register("indian_laurel_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
@@ -628,7 +632,9 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Holly Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLLY_TREE1 = register("holly_tree1",

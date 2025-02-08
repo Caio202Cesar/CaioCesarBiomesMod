@@ -491,7 +491,7 @@ public class ModBlocks {
             () -> new FicusRootsBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
                     doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
-            () -> new FicusRootsTopBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+            () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
                     doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
 
     //Crops
