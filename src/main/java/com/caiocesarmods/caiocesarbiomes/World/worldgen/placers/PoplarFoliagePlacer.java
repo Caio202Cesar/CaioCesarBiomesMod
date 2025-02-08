@@ -1,20 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.placers;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.MutableBoundingBox;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.gen.IWorldGenerationReader;
-import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
-import net.minecraft.world.gen.feature.FeatureSpread;
-import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
-import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
-
-import java.util.Random;
-import java.util.Set;
-
 /*public class ItalianCypressFoliagePlacer extends FoliagePlacer {
     public static final Codec<ItalianCypressFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
