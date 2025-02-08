@@ -763,9 +763,6 @@ public class TreeFeatures {
         protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PLANE_LOG = ModBlocks.PLANE_LOG.get().getDefaultState();
-        protected static final BlockState PLANE_LEAVES = ModBlocks.PLANE_LEAVES.get().getDefaultState();
-
         protected static final BlockState JAPANESE_PINE_LOG = ModBlocks.JAPANESE_PINE_LOG.get().getDefaultState();
         protected static final BlockState JAPANESE_PINE_LEAVES = ModBlocks.JAPANESE_PINE_LEAVES.get().getDefaultState();
 

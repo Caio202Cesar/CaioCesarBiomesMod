@@ -109,8 +109,6 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
             ModLogs::new);
-    public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
-            ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             ModLogs::new);
     public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
@@ -326,8 +324,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
             ModLeaves::new);

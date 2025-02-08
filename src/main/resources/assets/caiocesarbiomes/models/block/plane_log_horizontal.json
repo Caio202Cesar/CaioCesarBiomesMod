@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "caiocesarbiomes:block/plane_log_middle",
-    "side": "caiocesarbiomes:block/plane_bark"
-  }
-}
