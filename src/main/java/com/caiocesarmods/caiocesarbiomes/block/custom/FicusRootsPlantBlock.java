@@ -2,9 +2,13 @@ package com.caiocesarmods.caiocesarbiomes.block.custom;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
@@ -26,4 +30,8 @@ public class FicusRootsPlantBlock extends BushBlock {
         return state.getBlock() == ModBlocks.FICUS_ROOTS.get() || state.getBlock() == this;
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(ModBlocks.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
+    }
 }
