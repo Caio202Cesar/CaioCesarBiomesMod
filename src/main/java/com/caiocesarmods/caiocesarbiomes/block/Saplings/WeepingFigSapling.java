@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -41,16 +42,22 @@ public class WeepingFigSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class WeepingFigTree extends Tree {
+    private static class WeepingFigTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.BIG_WEEPING_FIG_TREE;
-            } else {
                 return TreeFeatures.WEEPING_FIG_TREE;
             }
-        }
 
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.BIG_WEEPING_FIG_TREE;
+        }
     }
 }
