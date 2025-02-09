@@ -955,7 +955,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F),
-                            STRAWBERRY_TREE2.withChance(0.2F), STRAWBERRY_TREE1.withChance(0.1F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE))
+                            STRAWBERRY_TREE2.withChance(0.091F), STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
