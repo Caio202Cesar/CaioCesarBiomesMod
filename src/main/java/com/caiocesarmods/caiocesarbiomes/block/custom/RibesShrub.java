@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -14,23 +15,18 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class MediterraneanBeachFlower extends BushBlock {
+public class RibesShrub extends BushBlock {
 
-    public MediterraneanBeachFlower() {
+    public RibesShrub() {
         super(Properties.from(Blocks.DANDELION).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CISTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CISTUS.get(), RenderType.getCutout());
-    }
+        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
 
-    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
-                || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
-                || state.matchesBlock(Blocks.GRAVEL) || state.matchesBlock(Blocks.SAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -42,6 +38,6 @@ public class MediterraneanBeachFlower extends BushBlock {
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.BEACH;
+        return PlantType.CROP;
     }
 }

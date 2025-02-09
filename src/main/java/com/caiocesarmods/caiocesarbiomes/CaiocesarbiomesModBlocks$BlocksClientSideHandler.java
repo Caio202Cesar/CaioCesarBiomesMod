@@ -1,7 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.block.*;
 import com.caiocesarmods.caiocesarbiomes.block.Saplings.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.crops.RedCurrantCropBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

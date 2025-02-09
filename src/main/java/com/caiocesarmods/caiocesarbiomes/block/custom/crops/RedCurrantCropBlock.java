@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom.crops;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,7 +15,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class BlackCurrantCropBlock extends CropsBlock {
+public class RedCurrantCropBlock extends CropsBlock {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
             Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
@@ -26,18 +27,18 @@ public class BlackCurrantCropBlock extends CropsBlock {
             Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
             Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    public BlackCurrantCropBlock(Properties builder) {
+    public RedCurrantCropBlock(Properties builder) {
         super(builder);
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLACK_CURRANT_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_CROP.get(), RenderType.getCutout());
     }
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return ModItems.BLACK_CURRANT_SEEDS.get();
+        return ModItems.RED_CURRANT_SEEDS.get();
     }
 
     @Override

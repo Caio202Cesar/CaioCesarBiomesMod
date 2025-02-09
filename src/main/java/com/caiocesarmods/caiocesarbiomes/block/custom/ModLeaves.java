@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;

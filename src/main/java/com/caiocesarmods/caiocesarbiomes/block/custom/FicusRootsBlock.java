@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;

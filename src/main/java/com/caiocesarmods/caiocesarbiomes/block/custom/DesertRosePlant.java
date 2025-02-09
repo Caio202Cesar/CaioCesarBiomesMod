@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -11,26 +12,32 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class SpanishMoss extends VineBlock {
-    public SpanishMoss() {
-        super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().doesNotBlockMovement().notSolid()
-                .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
+public class DesertRosePlant extends DoublePlantBlock {
+    public DesertRosePlant() {
+        super(AbstractBlock.Properties.from(Blocks.CHORUS_PLANT).hardnessAndResistance(0.2f).tickRandomly()
+                .sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.SPANISH_MOSS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DESERT_ROSE_PLANT.get(), RenderType.getCutout());
+    }
+
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
+                || state.matchesBlock(Blocks.RED_SAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 55;
+        return 80;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 85;
+        return 60;
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.PLAINS;
+        return PlantType.DESERT;
     }
 }
+

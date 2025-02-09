@@ -1,8 +1,9 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.DoublePlantBlock;
+import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -14,23 +15,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class ModTallPlant extends DoublePlantBlock {
-    public ModTallPlant() {
-        super(Properties.from(Blocks.ROSE_BUSH).hardnessAndResistance(0.2f).tickRandomly()
-                .sound(SoundType.PLANT).harvestTool(ToolType.HOE).notSolid());
+public class MediterraneanBeachFlower extends BushBlock {
+
+    public MediterraneanBeachFlower() {
+        super(Properties.from(Blocks.DANDELION).tickRandomly().doesNotBlockMovement().notSolid()
+                .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.GARDENIA_BUSH.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.CHINESE_HIBISCUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL_FLOWERING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CISTUS.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.GRASS_BLOCK)
-                || state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.FARMLAND);
+        return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
+                || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
+                || state.matchesBlock(Blocks.GRAVEL) || state.matchesBlock(Blocks.SAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -42,7 +43,6 @@ public class ModTallPlant extends DoublePlantBlock {
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.PLAINS;
+        return PlantType.BEACH;
     }
 }
-

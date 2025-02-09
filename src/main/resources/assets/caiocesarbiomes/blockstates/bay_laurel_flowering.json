@@ -4,7 +4,7 @@
       "model": "caiocesarbiomes:block/bay_laurel_flowering_top"
     },
     "half=lower": {
-      "model": "caiocesarbiomes:block/bay_laurel_bottom"
+      "model": "caiocesarbiomes:block/bay_laurel_flowering_bottom"
     }
   }
 }

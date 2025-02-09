@@ -1,9 +1,7 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BushBlock;
-import net.minecraft.block.SoundType;
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -14,29 +12,26 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class RibesShrub extends BushBlock {
-
-    public RibesShrub() {
-        super(Properties.from(Blocks.DANDELION).tickRandomly().doesNotBlockMovement().notSolid()
-                .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
+public class SpanishMoss extends VineBlock {
+    public SpanishMoss() {
+        super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().doesNotBlockMovement().notSolid()
+                .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
-
+        RenderTypeLookup.setRenderLayer(ModBlocks.SPANISH_MOSS.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 80;
+        return 55;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 60;
+        return 85;
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.CROP;
+        return PlantType.PLAINS;
     }
 }

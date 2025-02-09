@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.block;
+package com.caiocesarmods.caiocesarbiomes.block.custom.crops;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
