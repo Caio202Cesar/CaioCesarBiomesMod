@@ -195,8 +195,6 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> PLANE_PLANKS = registerBlock("plane_planks",
-            ModPlanks::new);
     public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
             ModPlanks::new);
 
