@@ -378,18 +378,11 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Starfruit Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_FANCY_TREE = register("starfruit_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STARFRUIT_LOG),
-                    new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE = register("starfruit_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STARFRUIT_LOG),
                     new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-
 
     //Camellia Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMELLIA_TREE = register("camellia_tree",
@@ -1053,7 +1046,7 @@ public class TreeFeatures {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_forest_trees",
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.4F),
                             ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.1F)), AVOCADO_TREE))
@@ -1101,8 +1094,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STARFRUIT_FANCY_TREE.withChance(0.2F),
-                            STARFRUIT_TREE.withChance(0.3F), TAMARIND_TREE.withChance(0.3F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            STARFRUIT_TREE.withChance(0.4F), TAMARIND_TREE.withChance(0.4F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> JAPANESE_MAPLE = register("japanese_maple",
