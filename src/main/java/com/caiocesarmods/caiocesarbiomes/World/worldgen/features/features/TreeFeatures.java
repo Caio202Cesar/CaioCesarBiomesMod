@@ -743,7 +743,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(3, 7, 0),
-                    new TwoLayerFeature(0, 0, 0))).build()));
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))).build())));
 
     //Japanese Pine Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
