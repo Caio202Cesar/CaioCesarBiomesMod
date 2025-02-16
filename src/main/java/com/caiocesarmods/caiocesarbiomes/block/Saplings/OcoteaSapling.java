@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block.Saplings;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -14,11 +15,12 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
-public class OcoteaForestSapling extends SaplingBlock {
-    public OcoteaForestSapling() {
-        super(new ForestOcoteaTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class OcoteaSapling extends SaplingBlock {
+    public OcoteaSapling() {
+        super(new OcoteaTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -35,7 +37,7 @@ public class OcoteaForestSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class ForestOcoteaTree extends Tree {
+    private static class OcoteaTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
@@ -43,4 +45,21 @@ public class OcoteaForestSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.OCOTEA_FOREST_TREE;
             }
-}}}
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            if (rand.nextInt(10) == 0) {
+                return TreeFeatures.OCOTEA_JUNGLE_TREE;
+            } else {
+                return TreeFeatures.OCOTEA_JUNGLE_FANCY_TREE;
+            }
+        }
+    }
+}

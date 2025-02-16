@@ -59,8 +59,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         MandarinSapling.registerRenderLayer();
         MesquiteSapling.registerRenderLayer();
         MulberrySapling.registerRenderLayer();
-        OcoteaForestSapling.registerRenderLayer();
-        OcoteaJungleSapling.registerRenderLayer();
+        OcoteaSapling.registerRenderLayer();
         OliveSapling.registerRenderLayer();
         OrangeSapling.registerRenderLayer();
         PinkCrabappleSapling.registerRenderLayer();
