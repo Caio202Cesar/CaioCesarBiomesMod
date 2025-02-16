@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:tea_leaf"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:matcha_powder",
+    "count": 1
+  }
+}
