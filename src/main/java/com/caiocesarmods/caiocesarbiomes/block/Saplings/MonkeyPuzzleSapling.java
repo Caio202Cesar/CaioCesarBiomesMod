@@ -26,6 +26,8 @@ public class MonkeyPuzzleSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.MONKEY_PUZZLE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_MONKEY_PUZZLE_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -42,13 +44,8 @@ public class MonkeyPuzzleSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 6) {
-                return TreeFeatures.MONKEY_PUZZLE_TREE;
-            } else {
                 return TreeFeatures.YOUNG_MONKEY_PUZZLE_TREE;
-            }
         }
-
     }
 }
 

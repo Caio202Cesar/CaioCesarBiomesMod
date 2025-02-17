@@ -25,6 +25,8 @@ public class WhiteCrabappleSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CRABAPPLE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_WHITE_CRABAPPLE_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -41,5 +43,5 @@ public class WhiteCrabappleSapling extends SaplingBlock {
             return TreeFeatures.WHITE_CRABAPPLE_TREE;
         }
     }
-    }
+}
 

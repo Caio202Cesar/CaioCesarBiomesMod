@@ -26,6 +26,8 @@ public class EucalyptusSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.EUCALYPTUS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_EUCALYPTUS_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -40,7 +42,7 @@ public class EucalyptusSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
+            if (random.nextInt(10) == 5) {
                 return TreeFeatures.EUCALYPTUS_FANCY_TREE;
             } else {
                 return TreeFeatures.EUCALYPTUS_TALL_TREE;

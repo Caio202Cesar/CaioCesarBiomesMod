@@ -26,6 +26,7 @@ public class RedCrapeMyrtleSapling extends SaplingBlock {
         @OnlyIn(Dist.CLIENT)
         public static void registerRenderLayer() {
             RenderTypeLookup.setRenderLayer(ModBlocks.RED_CRAPE_MYRTLE_SAPLING.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_RED_CRAPE_MYRTLE_SAPLING.get(), RenderType.getCutout());
         }
 
         public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
