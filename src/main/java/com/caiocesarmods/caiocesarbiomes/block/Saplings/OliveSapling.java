@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block.Saplings;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -38,15 +39,22 @@ public class OliveSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class OliveTree extends Tree {
+    private static class OliveTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 4) {
-                return TreeFeatures.BIG_OLIVE_TREE;
-            } else {
                 return TreeFeatures.OLIVE_TREE;
-            }
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.BIG_OLIVE_TREE;
         }
     }
 }
