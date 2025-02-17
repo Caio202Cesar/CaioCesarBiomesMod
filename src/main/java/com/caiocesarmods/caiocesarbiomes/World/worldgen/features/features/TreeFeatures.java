@@ -667,15 +667,6 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Baobab Tree
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB_TREE = register("baobab_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
-                    new SimpleBlockStateProvider(States.YEW_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
-                    new BaobabTrunkPlacer(10, 5, 3),
-                    new TwoLayerFeature(1, 0, 2,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
-
     //Dragon Blood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRAGON_BLOOD_TREE = register("dragon_blood_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DRAGON_BLOOD_LOG),
@@ -924,7 +915,7 @@ public class TreeFeatures {
                             HOLM_OAK_FANCY_TREE.withChance(0.3F), CORK_OAK_FANCY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
-    //Add eventually the yellow aspen tree, as well as other trees like crataegus and rowan
+    //Add eventually the yellow aspen tree, as well as other trees like crataegus, larch and rowan
     public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.3F),
                             WHITE_CRABAPPLE_TREE.withChance(0.3F), PINK_CRABAPPLE_TREE.withChance(0.3F), COOPER_BEECH_TREE.withChance(0.5F),
