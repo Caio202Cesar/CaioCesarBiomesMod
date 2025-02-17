@@ -924,6 +924,11 @@ public class TreeFeatures {
                             HOLM_OAK_FANCY_TREE.withChance(0.3F), CORK_OAK_FANCY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.3F),
+                            WHITE_CRABAPPLE_TREE.withChance(0.3F), PINK_CRABAPPLE_TREE.withChance(0.3F)), )).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_MOUNTAIN_GROVE_TREES = register("mediterranean_mountain_grove_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ITALIAN_CYPRESS_TREE.withChance(0.4F),
                             LOMBARDY_POPLAR_TREE.withChance(0.3F), SPRUCE.withChance(0.01F)),
