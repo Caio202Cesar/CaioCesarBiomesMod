@@ -57,6 +57,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withScrublandConifers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SCRUBLAND_MEDITERRANEAN_CONIFERS);
     }
+    public static void withHemiborealForestVegetation(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MIXED_CONTINENTAL_FOREST_TREES);
+    }
     public static void withSubtropicalBambooVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.BAMBOO);
     }
