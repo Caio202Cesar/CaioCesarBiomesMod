@@ -14,6 +14,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class HolmOakSapling extends SaplingBlock {
@@ -39,6 +40,8 @@ public class HolmOakSapling extends SaplingBlock {
 
     private static class HolmOakTree extends Tree {
         @Override
+        @Nullable
+
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
                 return TreeFeatures.HOLM_OAK_FANCY_TREE;
@@ -46,6 +49,5 @@ public class HolmOakSapling extends SaplingBlock {
                 return TreeFeatures.HOLM_OAK_TREE;
             }
         }
-
     }
 }

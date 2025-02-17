@@ -40,6 +40,7 @@ public class OcoteaSapling extends SaplingBlock {
     }
 
     private static class OcoteaTree extends BigTree {
+        @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {

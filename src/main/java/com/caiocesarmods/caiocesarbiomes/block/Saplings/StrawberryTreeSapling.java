@@ -14,6 +14,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class StrawberryTreeSapling extends SaplingBlock {
@@ -38,6 +39,7 @@ public class StrawberryTreeSapling extends SaplingBlock {
     }
 
     private static class StrawberryTree extends Tree {
+        @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 9) {

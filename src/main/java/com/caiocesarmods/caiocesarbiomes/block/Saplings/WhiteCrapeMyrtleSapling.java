@@ -40,7 +40,7 @@ public class WhiteCrapeMyrtleSapling extends SaplingBlock {
 
     private static class WhiteCrapeMyrtleTree extends Tree {
             @Nullable
-        @Override
+            @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.WHITE_CRAPE_MYRTLE_TREE;
         }

@@ -48,10 +48,5 @@ public class TropicalAlmondSapling extends SaplingBlock {
                 return TreeFeatures.TROPICAL_ALMOND_BIG_TREE;
             }
         }
-
-        protected boolean placeOn(BlockState state, IBlockReader worldIn, BlockPos pos) {
-            return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
-                    || state.matchesBlock(Blocks.RED_SAND);
-        }
-        }
+    }
 }

@@ -50,6 +50,5 @@ public class CooperBeechSapling extends SaplingBlock {
                 return TreeFeatures.COOPER_BEECH_TREE;
             }
         }
-
     }
 }

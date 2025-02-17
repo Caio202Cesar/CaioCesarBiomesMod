@@ -53,6 +53,5 @@ public class HollySapling extends SaplingBlock {
                 return TreeFeatures.HOLLY_TREE2;
             }
         }
-
     }
 }

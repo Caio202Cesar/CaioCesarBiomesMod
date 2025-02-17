@@ -14,6 +14,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class LemonSapling extends SaplingBlock {
@@ -36,6 +37,7 @@ public class LemonSapling extends SaplingBlock {
     }
 
     private static class LemonTree extends Tree {
+        @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.LEMON_TREE;
