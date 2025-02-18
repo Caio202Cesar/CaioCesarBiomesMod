@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "caiocesarbiomes:block/ocotea_jungle_sapling",
-    "particle": "caiocesarbiomes:block/ocotea_jungle_sapling"
-  }
-}

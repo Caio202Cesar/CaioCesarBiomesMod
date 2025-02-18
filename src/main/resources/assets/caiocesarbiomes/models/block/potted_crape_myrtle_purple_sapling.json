@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "caiocesarbiomes:block/crape_myrtle_purple_sapling"
+  }
+}
