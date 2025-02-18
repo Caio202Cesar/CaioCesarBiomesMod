@@ -812,6 +812,10 @@ public class ModBlocks {
     //Plants
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BUSH = BLOCKS.register("potted_bush",
+            () -> new FlowerPotBlock(ModBlocks.BUSH.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> ANIS = registerBlock("anis",
             MediterraneanFlower::new);
@@ -824,11 +828,16 @@ public class ModBlocks {
             MediterraneanFlower::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_BASIL = BLOCKS.register("potted_basil",
-            () -> new FlowerPotBlock(ModBlocks.LIVE_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new FlowerPotBlock(ModBlocks.BASIL.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             MediterraneanFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PURPLE_BASIL = BLOCKS.register("potted_purple_basil",
+            () -> new FlowerPotBlock(ModBlocks.PURPLE_BASIL.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> CINERARIA = registerBlock("cineraria",
             MediterraneanFlower::new);
     public static final RegistryObject<Block> FENNEL = registerBlock("fennel",

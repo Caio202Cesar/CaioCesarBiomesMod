@@ -25,6 +25,7 @@ public class LemonSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(ModBlocks.LEMON_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_LEMON_SAPLING.get(), RenderType.getCutout());
     }
 
