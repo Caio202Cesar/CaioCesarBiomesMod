@@ -470,7 +470,7 @@ public class ModBlocks {
             WhiteCrapeMyrtleSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_CRAPE_MYRTLE_SAPLING = BLOCKS.register("potted_crape_myrtle_white_sapling",
-            () -> new FlowerPotBlock(ModBlocks.WHITE_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new FlowerPotBlock(ModBlocks.WHITE_CRAPE_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_pink_sapling",
