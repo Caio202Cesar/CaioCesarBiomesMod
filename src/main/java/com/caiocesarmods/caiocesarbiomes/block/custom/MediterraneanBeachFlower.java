@@ -26,6 +26,8 @@ public class MediterraneanBeachFlower extends BushBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CISTUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_PINK_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_WHITE_CISTUS.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
