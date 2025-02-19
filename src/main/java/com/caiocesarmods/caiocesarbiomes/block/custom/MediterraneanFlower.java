@@ -33,6 +33,19 @@ public class MediterraneanFlower extends BushBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.SAGE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.SANTOLINA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.THYME.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_ANIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_BASIL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_PURPLE_BASIL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_CINERARIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_FENNEL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_LAVENDER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_MARJORAN.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_OREGANO.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_ROSEMARY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_SAGE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_SANTOLINA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_THYME.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
