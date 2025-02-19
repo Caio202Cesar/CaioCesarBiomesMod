@@ -810,26 +810,20 @@ public class ModBlocks {
             () -> new FennelCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
+    //These ones are too large that they need a flower bed and are incompatible with the flower pot.
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_BUSH = BLOCKS.register("potted_bush",
-            () -> new FlowerPotBlock(ModBlocks.BUSH.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new FlowerBedBlock(ModBlocks.BUSH.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> ANIS = registerBlock("anis",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_ANIS = BLOCKS.register("potted_anis",
-            () -> new FlowerPotBlock(ModBlocks.ANIS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_BASIL = BLOCKS.register("potted_basil",
-            () -> new FlowerPotBlock(ModBlocks.BASIL.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             MediterraneanFlower::new);
