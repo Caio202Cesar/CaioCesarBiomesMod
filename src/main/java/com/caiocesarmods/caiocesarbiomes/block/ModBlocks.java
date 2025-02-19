@@ -690,7 +690,7 @@ public class ModBlocks {
             IndianLaurelSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_INDIAN_LAUREL_SAPLING = BLOCKS.register("potted_indian_laurel_sapling",
-            () -> new FlowerPotBlock(ModBlocks.INDIAN_CORAL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new FlowerPotBlock(ModBlocks.INDIAN_LAUREL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> BUDDHA_HAND_SAPLING = registerBlock("buddha_hand_sapling",
