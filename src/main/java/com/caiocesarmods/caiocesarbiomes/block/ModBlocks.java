@@ -22,6 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+import static net.minecraft.block.Blocks.AIR;
+
 public class ModBlocks {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -810,10 +812,14 @@ public class ModBlocks {
             () -> new FennelCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
-    //These ones are too large that they need a flower bed and are incompatible with the flower pot.
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> FLOWER_BED = BLOCKS.register("flower_bed",
+            () -> new FlowerPotBlock(AIR, AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().notSolid()));
+
+    //These are too large that they need a flower bed and are incompatible with the flower pot.
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
-    @SuppressWarnings("deprecation")
+
     public static final RegistryObject<Block> POTTED_BUSH = BLOCKS.register("potted_bush",
             () -> new FlowerBedBlock(ModBlocks.BUSH.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
@@ -823,7 +829,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             MediterraneanFlower::new);
-
 
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             MediterraneanFlower::new);

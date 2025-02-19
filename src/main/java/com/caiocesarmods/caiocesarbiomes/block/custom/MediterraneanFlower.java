@@ -34,8 +34,6 @@ public class MediterraneanFlower extends BushBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.SANTOLINA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.THYME.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_ANIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_BASIL.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_PURPLE_BASIL.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_CINERARIA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_FENNEL.get(), RenderType.getCutout());
