@@ -42,7 +42,7 @@ public class StrawberryTreeSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 9) {
+            if (random.nextInt(10) == 7) {
                 return TreeFeatures.STRAWBERRY_TREE2;
             } else {
                 return TreeFeatures.STRAWBERRY_TREE1;
