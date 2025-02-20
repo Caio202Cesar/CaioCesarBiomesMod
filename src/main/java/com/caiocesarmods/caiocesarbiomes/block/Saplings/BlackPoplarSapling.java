@@ -42,8 +42,12 @@ public class BlackPoplarSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.LOMBARDY_POPLAR_TREE;
-        }
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.BLACK_POPLAR_FANCY_TREE;
+            } else {
+                return TreeFeatures.LOMBARDY_POPLAR_TREE;
+            }
 
+        }
     }
 }
