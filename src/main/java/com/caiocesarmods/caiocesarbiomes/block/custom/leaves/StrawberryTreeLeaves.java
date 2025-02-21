@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.SoundType;
@@ -19,9 +18,9 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
-    public StarfruitLeaves() {
-        super(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+public class StrawberryTreeLeaves extends LeavesBlock implements IForgeShearable {
+    public StrawberryTreeLeaves() {
+        super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                 .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 
@@ -29,10 +28,10 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             Random random = new Random();
-            double chance = 0.17;
+            double chance = 0.2;
 
             if (random.nextDouble() < chance) {
-                ItemStack itemStack = new ItemStack(ModItems.STARFRUIT.get());
+                ItemStack itemStack = new ItemStack(ModItems.ARBUTUS.get());
                 ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
                 worldIn.addEntity(itemEntity);

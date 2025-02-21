@@ -6,7 +6,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.RedCurrantCropBlock;
-import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.StarfruitLeaves;
+import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
@@ -203,13 +203,13 @@ public class ModBlocks {
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
-            ModLeaves::new);
+            AvocadoLeaves::new);
     public static final RegistryObject<Block> COAST_COTTONWOOD_LEAVES = registerBlock("coast_cottonwood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> DRAGON_BLOOD_LEAVES = registerBlock("dragon_blood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
-            ModLeaves::new);
+            FigLeaves::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
@@ -227,7 +227,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> OLEANDER_WHITE_LEAVES = registerBlock("oleander_white_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
-            ModLeaves::new);
+            PomegranateLeaves::new);
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_LEAVES = registerBlock("southern_magnolia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TROPICAL_ALMOND_LEAVES = registerBlock("tropical_almond_leaves",
@@ -241,7 +241,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_POPLAR_LEAVES = registerBlock("black_poplar_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> OLIVE_LEAVES = registerBlock("olive_leaves",
-            ModLeaves::new);
+            OliveLeaves::new);
     public static final RegistryObject<Block> INDIAN_CORAL_LEAVES = registerBlock("indian_coral_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_red_leaves",
@@ -259,19 +259,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> WHITE_CRABAPPLE_LEAVES = registerBlock("crabapple_white_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> LOQUAT_LEAVES = registerBlock("loquat_leaves",
-            ModLeaves::new);
+            LoquatLeaves::new);
     public static final RegistryObject<Block> ELDERBERRY_LEAVES = registerBlock("elderberry_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> STRAWBERRY_TREE_LEAVES = registerBlock("strawberry_tree_leaves",
-            ModLeaves::new);
+            StrawberryTreeLeaves::new);
     public static final RegistryObject<Block> JAPANESE_MAPLE_LEAVES = registerBlock("japanese_maple_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RED_KAPOK_LEAVES = registerBlock("red_kapok_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MULBERRY_LEAVES = registerBlock("mulberry_leaves",
-            ModLeaves::new);
+            MulberryLeaves::new);
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             StarfruitLeaves::new);
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
@@ -279,23 +279,23 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
-            ModLeaves::new);
+            OrangeLeaves::new);
     public static final RegistryObject<Block> MANDARIN_LEAVES = registerBlock("mandarin_leaves",
-            ModLeaves::new);
+            MandarinLeaves::new);
     public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
-            ModLeaves::new);
+            LemonLeaves::new);
     public static final RegistryObject<Block> CITRON_LEAVES = registerBlock("citron_leaves",
-            ModLeaves::new);
+            CitronLeaves::new);
     public static final RegistryObject<Block> TAHITI_LIME_LEAVES = registerBlock("tahiti_lime_leaves",
-            ModLeaves::new);
+            TahitiLimeLeaves::new);
     public static final RegistryObject<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
-            ModLeaves::new);
+            BuddhaHandLeaves::new);
     public static final RegistryObject<Block> GRAPEFRUIT_LEAVES = registerBlock("grapefruit_leaves",
-            ModLeaves::new);
+            GrapefruitLeaves::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
-            ModLeaves::new);
+            TamarindLeaves::new);
     public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
@@ -303,7 +303,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CASUARINA_LEAVES = registerBlock("casuarina_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CHERRY_PLUM_LEAVES = registerBlock("cherry_plum_leaves",
-            ModLeaves::new);
+            CherryPlumLeaves::new);
     public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
@@ -325,9 +325,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
-            ModLeaves::new);
+            YewLeaves::new);
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             ModLeaves::new);
+
     public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
