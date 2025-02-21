@@ -6,6 +6,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.RedCurrantCropBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.StarfruitLeaves;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
@@ -272,7 +273,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MULBERRY_LEAVES = registerBlock("mulberry_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
-            ModLeaves::new);
+            StarfruitLeaves::new);
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
