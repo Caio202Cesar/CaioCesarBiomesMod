@@ -38,7 +38,7 @@ public class FicusRootsDecorator extends TreeDecorator {
 
     private void placeHangingVines(IWorldWriter world, BlockPos pos, Random rand) {
         BlockPos below = pos.down();
-        int maxLength = 2 + rand.nextInt(4); // Vines can hang between 3-6 blocks
+        int maxLength = 3 + rand.nextInt(4); // Vines can hang between 3-6 blocks
         boolean firstBlock = true;
 
         for (int i = 0; i < maxLength; i++) {
