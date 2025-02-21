@@ -818,13 +818,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> FLOWER_BED = BLOCKS.register("flower_bed",
             () -> new FlowerPotBlock(AIR, AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().notSolid()));
 
-    //These are too large that they need a flower bed and are incompatible with the flower pot.
+    //These are too large that they need a FLOWER BED and are incompatible with the flower pot.
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
-
-    public static final RegistryObject<Block> POTTED_BUSH = BLOCKS.register("potted_bush",
-            () -> new FlowerBedBlock(ModBlocks.BUSH.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> ANIS = registerBlock("anis",
             MediterraneanFlower::new);
@@ -834,94 +830,42 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PURPLE_BASIL = BLOCKS.register("potted_purple_basil",
-            () -> new FlowerPotBlock(ModBlocks.PURPLE_BASIL.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> CINERARIA = registerBlock("cineraria",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_CINERARIA = BLOCKS.register("potted_cineraria",
-            () -> new FlowerPotBlock(ModBlocks.CINERARIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> FENNEL = registerBlock("fennel",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_FENNEL = BLOCKS.register("potted_fennel",
-            () -> new FlowerPotBlock(ModBlocks.FENNEL.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_LAVENDER = BLOCKS.register("potted_lavender",
-            () -> new FlowerPotBlock(ModBlocks.LAVENDER.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> MARJORAN = registerBlock("marjoran",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MARJORAN = BLOCKS.register("potted_marjoran",
-            () -> new FlowerPotBlock(ModBlocks.MARJORAN.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> OREGANO = registerBlock("oregano",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OREGANO = BLOCKS.register("potted_oregano",
-            () -> new FlowerPotBlock(ModBlocks.OREGANO.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> ROSEMARY = registerBlock("rosemary",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_ROSEMARY = BLOCKS.register("potted_rosemary",
-            () -> new FlowerPotBlock(ModBlocks.ROSEMARY.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> SAGE = registerBlock("sage",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_SAGE = BLOCKS.register("potted_sage",
-            () -> new FlowerPotBlock(ModBlocks.SAGE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> SANTOLINA = registerBlock("santolina",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_SANTOLINA = BLOCKS.register("potted_santolina",
-            () -> new FlowerPotBlock(ModBlocks.SANTOLINA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> THYME = registerBlock("thyme",
             MediterraneanFlower::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_THYME = BLOCKS.register("potted_thyme",
-            () -> new FlowerPotBlock(ModBlocks.THYME.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AGAPANTHUS_PURPLE = registerBlock("agapanthus_purple",
             SubtropicalForestPlant::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_AGAPANTHUS_PURPLE = BLOCKS.register("potted_agapanthus_purple",
-            () -> new FlowerPotBlock(ModBlocks.AGAPANTHUS_PURPLE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AGAPANTHUS_WHITE = registerBlock("agapanthus_white",
             SubtropicalForestPlant::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_AGAPANTHUS_WHITE = BLOCKS.register("potted_agapanthus_white",
-            () -> new FlowerPotBlock(ModBlocks.AGAPANTHUS_WHITE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> TUSSOCK_GRASS = registerBlock("tussock_grass",
             ModGrasses::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_TUSSOCK_GRASS = BLOCKS.register("potted_tussock_grass",
-            () -> new FlowerPotBlock(ModBlocks.TUSSOCK_GRASS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> WHITE_CISTUS = registerBlock("white_cistus",
             MediterraneanFlower::new);

@@ -32,9 +32,6 @@ public class SubtropicalForestPlant extends BushBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_GREEN.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_WHITE.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_BUSH.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AGAPANTHUS_PURPLE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AGAPANTHUS_WHITE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_ORANGE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_RED.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_PURPLE.get(), RenderType.getCutout());
