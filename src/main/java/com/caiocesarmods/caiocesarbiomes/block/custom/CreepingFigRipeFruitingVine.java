@@ -58,7 +58,7 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.PLAINS;
+        return PlantType.CROP;
     }
 }
 

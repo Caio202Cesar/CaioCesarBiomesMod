@@ -70,7 +70,7 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.PLAINS;
+        return PlantType.CROP;
     }
 }
 

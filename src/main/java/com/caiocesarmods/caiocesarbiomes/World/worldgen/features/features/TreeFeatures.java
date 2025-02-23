@@ -1104,9 +1104,9 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
-                            SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.4F),
-                            ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.1F)), CREEPING_FIG_AVOCADO_TREE))
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
+                            SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.4F),
+                            ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.3F)), CREEPING_FIG_AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.2F, 2))));
 

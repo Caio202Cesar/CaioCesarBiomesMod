@@ -65,6 +65,7 @@
   "block.caiocesarbiomes.cherry_plum_sapling": "Muda de Ameixeira-de-Jardim",
   "block.caiocesarbiomes.creeping_fig_vine": "Trepadeira Unha-de-Gato",
   "block.caiocesarbiomes.creeping_fig_fruiting_vine": "Trepadeira Unha-de-Gato com Frutos",
+  "block.caiocesarbiomes.creeping_fig_ripe_fruiting_vine": "Trepadeira Unha-de-Gato com Frutos Maduros",
   "block.caiocesarbiomes.desert_rose_plant": "Rosa-do-deserto",
   "block.caiocesarbiomes.dragon_blood_leaves": "Folhas de Árvore Sangue-de-dragão",
   "block.caiocesarbiomes.dragon_blood_sapling": "Muda de Árvore Sangue-de-dragão",
@@ -251,6 +252,9 @@
   "block.caiocesarbiomes.azalea_pink": "Azaleia Rosa",
   "block.caiocesarbiomes.azalea_white": "Azaleia Branca",
   "block.caiocesarbiomes.azalea_magenta": "Azaleia Magenta",
+  "block.caiocesarbiomes.white_fig_leaves": "Folhas de Figueira com Figos Brancos",
+  "block.caiocesarbiomes.ficus_roots": "Ficus Aerial Roots",
+  "block.caiocesarbiomes.ficus_roots_plant": "Ficus Aerial Roots",
 
   "block.caiocesarbiomes.red_currant_crop": "Sementes de Groselha",
   "block.caiocesarbiomes.black_currant_crop": "Sementes de Cassis",
