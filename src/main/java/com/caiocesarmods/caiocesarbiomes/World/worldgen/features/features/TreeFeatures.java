@@ -461,7 +461,7 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(LeaveVineTreeDecorator.field_236871_b_)).build()));
+                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).build()));
 
     //Royal Poinciana Tree (Tropical Deciduous Forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROYAL_POINCIANA_TREE = register("royal_poinciana",

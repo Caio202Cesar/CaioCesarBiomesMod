@@ -15,6 +15,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("ficus_hanging_roots",
                     () -> new TreeDecoratorType<>(FicusRootsDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<SpanishMossLeavesDecorator>> SPANISH_MOSS_DECORATOR =
+            TREE_DECORATORS.register("spanish_moss_decorator",
+                    () -> new TreeDecoratorType<>(SpanishMossLeavesDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
