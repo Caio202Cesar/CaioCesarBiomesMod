@@ -253,8 +253,9 @@
   "block.caiocesarbiomes.azalea_white": "White Azalea",
   "block.caiocesarbiomes.azalea_magenta": "Magenta Azalea",
   "block.caiocesarbiomes.white_fig_leaves": "White Fig Leaves",
-  "block.caiocesarbiomes.ficus_roots": "Raízes Adventícias de Figueira",
-  "block.caiocesarbiomes.ficus_roots_plant": "Raízes Adventícias de Figueira",
+
+  "block.caiocesarbiomes.ficus_roots": "Ficus Aerial Roots",
+  "block.caiocesarbiomes.ficus_roots_plant": "Ficus Aerial Roots",
 
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
   "block.caiocesarbiomes.black_currant_crop": "Black Currant Seeds",
