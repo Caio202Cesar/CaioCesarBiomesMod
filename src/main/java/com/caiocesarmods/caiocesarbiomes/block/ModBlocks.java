@@ -892,49 +892,49 @@ public class ModBlocks {
             RibesShrub::new);
 
     public static final RegistryObject<Block> AZALEA_PURPLE = registerBlock("azalea_purple",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_PURPLE = BLOCKS.register("potted_azalea_purple",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_PURPLE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_RED = registerBlock("azalea_red",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_RED = BLOCKS.register("potted_azalea_red",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_RED.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_PINK = registerBlock("azalea_pink",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_PINK = BLOCKS.register("potted_azalea_pink",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_PINK.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_ORANGE = registerBlock("azalea_orange",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_ORANGE = BLOCKS.register("potted_azalea_orange",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_ORANGE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_MAGENTA = registerBlock("azalea_magenta",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_MAGENTA = BLOCKS.register("potted_azalea_magenta",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_MAGENTA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_GREEN = registerBlock("azalea_green",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_GREEN = BLOCKS.register("potted_azalea_green",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_GREEN.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> AZALEA_WHITE = registerBlock("azalea_white",
-            SubtropicalForestPlant::new);
+            AzaleaPlant::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_AZALEA_WHITE = BLOCKS.register("potted_azalea_white",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_WHITE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)

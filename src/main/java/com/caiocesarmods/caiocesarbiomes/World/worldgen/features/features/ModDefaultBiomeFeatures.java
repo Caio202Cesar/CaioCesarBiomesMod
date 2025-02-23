@@ -82,7 +82,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_OCOTEA_TREES);
     }
     public static void withHighlandOcoteaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HIGHLAND_OCOTEA_TREE);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HIGHLAND_OCOTEA_TREES);
     }
     public static void withDesertRose(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_DESERT_ROSE);
