@@ -1127,6 +1127,11 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            STARFRUIT_TREE.withChance(0.4F), CREEPING_FIG_AVOCADO_TREE.withChance(0.4F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 0))));
+
+    public static final ConfiguredFeature<?, ?> TROPICAL_SEASONAL_FRUIT_TREES = register("tropical_jungle_seasonal_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             STARFRUIT_TREE.withChance(0.4F), TAMARIND_TREE.withChance(0.4F)), AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 0))));
 
