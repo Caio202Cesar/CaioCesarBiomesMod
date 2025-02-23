@@ -60,7 +60,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> MATCHA = ITEMS.register("matcha",
+    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
