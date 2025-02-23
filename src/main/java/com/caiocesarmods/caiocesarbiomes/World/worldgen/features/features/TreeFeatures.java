@@ -147,7 +147,7 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
-                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE, TrunkVineTreeDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE = register("highland_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
