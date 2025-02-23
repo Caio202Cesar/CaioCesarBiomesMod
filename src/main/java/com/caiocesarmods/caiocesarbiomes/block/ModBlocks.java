@@ -798,6 +798,8 @@ public class ModBlocks {
             CreepingFigVine::new);
     public static final RegistryObject<Block> CREEPING_FIG_FRUITING_VINE = registerBlock("creeping_fig_fruiting_vine",
             CreepingFigFruitingVine::new);
+    public static final RegistryObject<Block> CREEPING_FIG_RIPE_FRUITING_VINE = registerBlock("creeping_fig_ripe_fruiting_vine",
+            CreepingFigRipeFruitingVine::new);
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
 

@@ -58,6 +58,7 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.CREEPING_FIG_VINE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.CREEPING_FIG_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.CREEPING_FIG_RIPE_FRUITING_VINE.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
