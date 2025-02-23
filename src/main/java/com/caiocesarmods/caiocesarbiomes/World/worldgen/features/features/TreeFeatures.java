@@ -190,6 +190,12 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_FIG_TREE = register("white_fig_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
+                    new SimpleBlockStateProvider(States.WHITE_FIG_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new ForkyTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Olive Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OLIVE_TREE = register("olive_tree",
@@ -845,6 +851,7 @@ public class TreeFeatures {
 
         protected static final BlockState FIG_LOG = ModBlocks.FIG_LOG.get().getDefaultState();
         protected static final BlockState FIG_LEAVES = ModBlocks.FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_FIG_LEAVES = ModBlocks.WHITE_FIG_LEAVES.get().getDefaultState();
         protected static final BlockState SYCAMORE_FIG_LEAVES = ModBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLIVE_LOG = ModBlocks.OLIVE_LOG.get().getDefaultState();

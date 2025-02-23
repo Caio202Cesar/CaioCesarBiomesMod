@@ -17,6 +17,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AVOCADO)));
     public static final RegistryObject<Item> FIGFRUIT = ITEMS.register("figfruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FIGFRUIT)));
+    public static final RegistryObject<Item> WHITE_FIG = ITEMS.register("white_fig",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FIGFRUIT)));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.POMEGRANATE)));
     public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
@@ -55,9 +57,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.YEW_BERRIES)));
     public static final RegistryObject<Item> YEW_ARILS = ITEMS.register("yew_arils",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.YEW_ARILS)));
+
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MATCHA = ITEMS.register("matcha",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<Item> RED_CURRANT = ITEMS.register("red_currant",

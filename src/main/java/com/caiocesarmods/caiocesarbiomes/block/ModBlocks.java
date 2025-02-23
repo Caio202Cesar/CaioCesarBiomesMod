@@ -210,6 +210,8 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
             FigLeaves::new);
+    public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
+            WhiteFigLeaves::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",

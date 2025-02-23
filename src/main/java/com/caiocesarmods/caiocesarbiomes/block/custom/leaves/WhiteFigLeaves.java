@@ -18,8 +18,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class FigLeaves extends LeavesBlock implements IForgeShearable {
-    public FigLeaves() {
+public class WhiteFigLeaves extends LeavesBlock implements IForgeShearable {
+    public WhiteFigLeaves() {
         super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                 .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
@@ -31,7 +31,7 @@ public class FigLeaves extends LeavesBlock implements IForgeShearable {
             double chance = 0.2;
 
             if (random.nextDouble() < chance) {
-                ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get());
+                ItemStack itemStack = new ItemStack(ModItems.WHITE_FIG.get());
                 ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
                 worldIn.addEntity(itemEntity);

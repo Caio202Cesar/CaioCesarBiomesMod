@@ -31,7 +31,7 @@ public class AvocadoLeaves extends LeavesBlock implements IForgeShearable {
             double chance = 0.17;
 
             if (random.nextDouble() < chance) {
-                ItemStack itemStack = new ItemStack(ModItems.STARFRUIT.get());
+                ItemStack itemStack = new ItemStack(ModItems.AVOCADO.get());
                 ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
                 worldIn.addEntity(itemEntity);
