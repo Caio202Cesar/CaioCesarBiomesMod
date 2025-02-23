@@ -14,9 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
+
+import java.util.Random;
 
 public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShearable {
     public CreepingFigRipeFruitingVine() {
@@ -24,6 +27,37 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
                 .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
     }
 
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.007;
+
+        if (random.nextDouble() < chance) {
+
+            BlockState currentState = state;
+            BlockState newState = ModBlocks.CREEPING_FIG_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, ModBlocks.CREEPING_FIG_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
+    }
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
