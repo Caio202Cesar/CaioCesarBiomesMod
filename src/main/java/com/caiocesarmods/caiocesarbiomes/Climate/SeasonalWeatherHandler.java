@@ -2,23 +2,12 @@ package com.caiocesarmods.caiocesarbiomes.Climate;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.lang.reflect.Field;
-import java.util.*;
-
 import static com.caiocesarmods.caiocesarbiomes.Climate.ClimateType.MEDITERRANEAN;
+import static com.caiocesarmods.caiocesarbiomes.Climate.ClimateType.TROPICAL_SAVANNA;
 
 @Mod.EventBusSubscriber
 public class SeasonalWeatherHandler {
@@ -35,7 +24,6 @@ public class SeasonalWeatherHandler {
         // Check if this biome matches Olive Grove
         ResourceLocation oliveGroveID = OliveGroveBiome.OLIVE_GROVE.get().getRegistryName();
         CaioCesarBiomesMod.LOGGER.info("getBiomeClimate: Olive Grove ID = " + oliveGroveID);
-
         ResourceLocation mediterraneanConiferSavannaID = MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get().getRegistryName();
         CaioCesarBiomesMod.LOGGER.info("getBiomeClimate: Mediterranean Conifer Savanna ID = " + mediterraneanConiferSavannaID);
 
@@ -47,18 +35,6 @@ public class SeasonalWeatherHandler {
 
         return null;
     }
-
-    /*private static boolean shouldDisableRain(Season season, ClimateType climate) {
-        return (climate == MEDITERRANEAN && season == Season.SPRING) ||
-                (climate == ClimateType.TROPICAL_SAVANNA && season == Season.WINTER);
-    }
-
-    private static void enableRain(World world, Biome biome) {
-        if (!world.isRaining()) return;
-
-        System.out.println("Enabling rain in Mediterranean biome for WINTER and other seasons.");
-        ((ServerWorld) world).setWeather(24000, 6000, true, false);}*/ // Set rain for a duration
-
 
     public static String getSeason(long dayTime) {
         long days = dayTime / 24000; // Convert ticks to days
@@ -74,22 +50,45 @@ public class SeasonalWeatherHandler {
             return "WINTER";
         }
     }
+}
 
-    /*private static boolean isMediterraneanBiome(Object biome) {
-        return MEDITERRANEAN_BIOMES.contains(biome);
+    /*public static boolean isRainingAt(World world, BlockPos position) {
+        if (!world.isRaining()) return false;
+        if (!world.canSeeSky(position)) return false;
+        if (world.getHeight(Heightmap.Type.MOTION_BLOCKING, position.getX(), position.getZ()) > position.getY())
+            return false;
+
+        Biome biome = world.getBiome(position);
+        ClimateType climate = SeasonalWeatherHandler.getBiomeClimate(biome);
+        long dayTime = world.getDayTime();
+        String season = SeasonalWeatherHandler.getSeason(dayTime);
+
+        if (climate == MEDITERRANEAN) {
+            if ("SPRING".equals(season)) {
+                return false;
+            }
+        } else if (climate == TROPICAL_SAVANNA)
+            return "SUMMER".equals(season);
+        return true;
     }
 
-    private static final Set<ResourceLocation> MEDITERRANEAN_BIOMES = new HashSet<>(Arrays.asList(
-            new ResourceLocation("caiocesarbiomes:olive_grove"),
-            new ResourceLocation("caiocesarbiomes:subtropical_eucalyptus_dry_forest"),
-            new ResourceLocation("caiocesarbiomes:mediterranean_conifer_savanna")
-    ));
+    public static boolean isThunderingAt(World world, BlockPos position) {
+        if (!world.isThundering()) return false;
+        if (!world.canSeeSky(position)) return false;
+        if (world.getHeight(Heightmap.Type.MOTION_BLOCKING, position.getX(), position.getZ()) > position.getY())
+            return false;
 
-    /*private static void applyMediterraneanWeather(ServerWorld world, Biome biome, Season season) {
-        if (season == Season.SUMMER) {
-            world.setWeather(0, 6000, false, false); //No rain
+        Biome biome = world.getBiome(position);
+        ClimateType climate = SeasonalWeatherHandler.getBiomeClimate(biome);
+        long dayTime = world.getDayTime();
+        String season = SeasonalWeatherHandler.getSeason(dayTime);
 
-        } else {
-            world.setWeather(12000, 0, true, false); //Normal rain
-        }*/
-}
+        if (climate == TROPICAL_SAVANNA) {
+            if ("SUMMER".equals(season)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}*/
+
