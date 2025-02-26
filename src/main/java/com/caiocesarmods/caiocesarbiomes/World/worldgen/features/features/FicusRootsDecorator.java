@@ -2,9 +2,12 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.mojang.serialization.Codec;
+import net.minecraft.block.BlockState;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.ISeedReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorldWriter;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
@@ -36,6 +39,12 @@ public class FicusRootsDecorator extends TreeDecorator {
         }
     }
 
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        if (world.getBlockState(pos.up()).getBlock().isIn(BlockTags.LEAVES))
+            return true;
+        return false;
+    }
+
     private void placeHangingVines(IWorldWriter world, BlockPos pos, Random rand) {
         BlockPos below = pos.down();
         int maxLength = 3 + rand.nextInt(4); // Vines can hang between 3-6 blocks
@@ -50,9 +59,7 @@ public class FicusRootsDecorator extends TreeDecorator {
                     world.setBlockState(below, ModBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
                 }
                 below = below.down();
-            } else {
-                break; // Stop placing if we hit a solid block
-            }
+            }  // Stop placing if we hit a solid block
         }
     }
 }
