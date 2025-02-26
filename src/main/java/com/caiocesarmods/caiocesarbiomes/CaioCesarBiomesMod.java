@@ -30,7 +30,7 @@ public class CaioCesarBiomesMod
     public static final String MOD_ID = "caiocesarbiomes";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public CaioCesarBiomesMod() {
         // Register the setup method for modloading

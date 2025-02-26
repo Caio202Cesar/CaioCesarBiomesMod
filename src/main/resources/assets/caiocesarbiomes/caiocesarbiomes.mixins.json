@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.caiocesarmods.caiocesarbiomes.mixins",
+  "refmap": "caiocesarbiomes.refmap.json",
+  "mixins": [
+    "WeatherMixin",
+    "BiomeBuilderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -31,6 +31,8 @@ displayName="Caio Cesar Biomes" #mandatory
 # A text field displayed in the mod UI
 authors="${mod_authors}" #optional
 
+mixins = "caiocesarbiomes.mixins.json"
+
 # The description text for the mod (multi line!) (#mandatory)
 description='''${mod_description}'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
