@@ -68,7 +68,7 @@ public class MediterraneanConiferSavannaBiome {
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-      return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
+      return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
               .temperature(0.89F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                       .withGrassColor(12564309).setFogColor(14807295)

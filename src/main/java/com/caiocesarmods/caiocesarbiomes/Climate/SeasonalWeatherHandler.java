@@ -36,7 +36,12 @@ public class SeasonalWeatherHandler {
         ResourceLocation oliveGroveID = OliveGroveBiome.OLIVE_GROVE.get().getRegistryName();
         CaioCesarBiomesMod.LOGGER.info("getBiomeClimate: Olive Grove ID = " + oliveGroveID);
 
+        ResourceLocation mediterraneanConiferSavannaID = MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get().getRegistryName();
+        CaioCesarBiomesMod.LOGGER.info("getBiomeClimate: Mediterranean Conifer Savanna ID = " + mediterraneanConiferSavannaID);
+
         if (biomeID.equals(oliveGroveID)) {
+            return ClimateType.MEDITERRANEAN;
+        } else if (biomeID.equals(mediterraneanConiferSavannaID)) {
             return ClimateType.MEDITERRANEAN;
         }
 

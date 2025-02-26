@@ -27,26 +27,17 @@ public abstract class WeatherMixin {
             Biome biome = world.getBiomeManager().getBiome(pos);
             ClimateType climate = SeasonalWeatherHandler.getBiomeClimate(biome);
 
-            boolean shouldRain = false;
-            boolean shouldThunder = false;
+            CaioCesarBiomesMod.LOGGER.info("Checking weather override: Season = " + season + ", Climate = " + climate + ", Biome = " + biome.getRegistryName());
 
-            // Apply Mediterranean climate season effects
             if (climate == ClimateType.MEDITERRANEAN) {
-                switch (season) {
-                    case "SPRING":
-                        shouldRain = false; // Dry summer, no rain
-                        break;
-                    case "WINTER":
-                        shouldRain = true; // Wet winter, heavy rain
-                        shouldThunder = false; // Optional: thunderstorms in winter
-                        break;
-                    default:
-                        shouldRain = world.isRaining(); // Keep default behavior for other seasons
+                if ("SPRING".equals(season)) {
+                    world.setWeather(0, 12000, false, false);
+                    CaioCesarBiomesMod.LOGGER.info("✅ Preventing rain in Mediterranean biome during SUMMER!");
+                } else {
+                    world.setWeather(12000, 12000, true, false);
+                    CaioCesarBiomesMod.LOGGER.info("🌧️ Allowing rain in Mediterranean biome during WINTER.");
                 }
             }
-
-            // Apply weather changes
-            world.setWeather(shouldRain ? 12000 : 0, 12000, shouldRain, shouldThunder);
         }
     }
 }
