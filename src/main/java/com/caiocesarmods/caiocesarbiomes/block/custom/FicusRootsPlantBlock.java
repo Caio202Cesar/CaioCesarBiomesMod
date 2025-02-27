@@ -15,7 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class FicusRootsPlantBlock extends BushBlock {
+public class FicusRootsPlantBlock extends Block implements IGrowable {
     public FicusRootsPlantBlock(Properties properties) {
         super(properties);
     }
@@ -29,9 +29,23 @@ public class FicusRootsPlantBlock extends BushBlock {
     }
 
     @Override
-    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.getBlock() == ModBlocks.FICUS_ROOTS.get() || state.getBlock() == this;
+    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+        return true;
     }
+
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        return true;
+    }
+
+    @Override
+    public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
+        BlockPos down = pos.down();
+        if (worldIn.isAirBlock(down)) {
+            worldIn.setBlockState(down, ModBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
+        }
+    }
+
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {

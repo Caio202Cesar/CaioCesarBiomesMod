@@ -6,17 +6,23 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import static com.caiocesarmods.caiocesarbiomes.Climate.SeasonalWeatherHandler.getSeason;
-
 public enum Season {
     SPRING, SUMMER, AUTUMN, WINTER;
 
-    /*public static Season getCurrentSeason(long dayTime) {
-        int seasonLength = 30 * 24000;
-        int seasonIndex = (int)((dayTime / seasonLength) % 4);
-        return Season.values()
-                [seasonIndex];
-    }*/
+    public static String getSeason(long dayTime) {
+        long days = dayTime / 24000; // Convert ticks to days
+        long cycle = days % 40; // Assume a full year is 40 days (10 per season)
+
+        if (cycle < 10) {
+            return "SPRING";
+        } else if (cycle < 20) {
+            return "SUMMER";
+        } else if (cycle < 30) {
+            return "FALL";
+        } else {
+            return "WINTER";
+        }
+    }
 
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {

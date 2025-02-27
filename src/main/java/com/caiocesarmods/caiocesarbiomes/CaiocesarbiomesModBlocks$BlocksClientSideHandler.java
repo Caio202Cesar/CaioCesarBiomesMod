@@ -31,7 +31,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         ModGrasses.registerRenderLayer();
         MediterraneanBeachFlower.registerRenderLayer();
         RibesShrub.registerRenderLayer();
-        FicusRootsBlock.registerRenderLayer();
         FicusRootsPlantBlock.registerRenderLayer();
 
         RedCurrantCropBlock.registerRenderLayer();

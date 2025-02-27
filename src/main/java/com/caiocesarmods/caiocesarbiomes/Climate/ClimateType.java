@@ -8,11 +8,9 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import static com.caiocesarmods.caiocesarbiomes.Climate.SeasonalWeatherHandler.getBiomeClimate;
-import static com.caiocesarmods.caiocesarbiomes.Climate.SeasonalWeatherHandler.getSeason;
-
 public enum ClimateType {
-    MEDITERRANEAN, TROPICAL_SAVANNA;
+    MEDITERRANEAN, TROPICAL_SAVANNA, HUMID_SUBTROPICAL, MILD_COASTAL_DESERT, TROPICAL_JUNGLE_EDGE, TROPICAL_JUNGLE, TROPICAL_STEEPE, TUNDRA,
+    TEMPERATE_HEMIBOREAL;
 
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {

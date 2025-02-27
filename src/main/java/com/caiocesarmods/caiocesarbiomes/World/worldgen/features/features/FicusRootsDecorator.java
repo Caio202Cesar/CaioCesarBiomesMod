@@ -32,7 +32,7 @@ public class FicusRootsDecorator extends TreeDecorator {
         for (BlockPos pos : leafPositions) {
             if (world.getBlockState(pos.down()).isAir()) {
                 if (rand.nextInt(2) == 0) {
-                    world.setBlockState(pos.down(), ModBlocks.FICUS_ROOTS.get().getDefaultState(), 3);
+                    world.setBlockState(pos.down(), ModBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 3);
                 }
             }
         }
