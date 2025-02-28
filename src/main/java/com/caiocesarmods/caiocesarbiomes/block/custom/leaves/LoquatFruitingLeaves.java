@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.Climate.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

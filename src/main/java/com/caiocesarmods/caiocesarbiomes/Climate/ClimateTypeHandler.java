@@ -7,7 +7,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
-public class SeasonalWeatherHandler {
+public class ClimateTypeHandler {
 
     public static ClimateType getBiomeClimate(Biome biome) {
         if (biome == null) {

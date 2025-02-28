@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.Climate;
+package com.caiocesarmods.caiocesarbiomes.Seasons;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.ClientPlayerEntity;

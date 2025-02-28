@@ -22,7 +22,7 @@ public enum ClimateType {
 
         BlockPos pos = player.getPosition();
         Biome biome = world.getBiomeManager().getBiome(pos);
-        ClimateType climate = SeasonalWeatherHandler.getBiomeClimate(biome);
+        ClimateType climate = ClimateTypeHandler.getBiomeClimate(biome);
 
         event.getLeft().add("Biome Climate: " + climate);
     }
