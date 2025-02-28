@@ -1,31 +1,22 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Climate.Season;
-import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class LoquatLeaves extends LeavesBlock implements IForgeShearable {
+public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public LoquatLeaves(Properties properties, Supplier<Block> nextStage) {
+    public LoquatFloweringLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,9 +36,7 @@ public class LoquatLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
-
-        if ("AUTUMN".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
