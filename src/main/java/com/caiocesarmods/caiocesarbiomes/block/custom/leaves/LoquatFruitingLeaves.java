@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
+import com.caiocesarmods.caiocesarbiomes.Climate.Season;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -42,7 +43,9 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(15) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 
