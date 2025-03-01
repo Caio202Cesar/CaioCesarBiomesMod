@@ -1,9 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/starfruit_leaves"},
-      {"model": "caiocesarbiomes:block/starfruit_flowering_leaves"},
-      {"model": "caiocesarbiomes:block/starfruit_fruiting_leaves"}
-    ]
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/starfruit_leaves"
+    }
   }
 }
