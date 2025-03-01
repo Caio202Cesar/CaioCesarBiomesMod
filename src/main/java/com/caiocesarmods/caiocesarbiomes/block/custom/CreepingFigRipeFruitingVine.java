@@ -43,7 +43,7 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.007;
+        double chance = 0.2;
 
         if (random.nextDouble() < chance) {
 

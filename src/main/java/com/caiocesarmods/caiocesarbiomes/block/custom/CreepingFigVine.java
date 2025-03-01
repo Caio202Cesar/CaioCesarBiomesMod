@@ -38,7 +38,7 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.007;
+        double chance = 0.00001;
 
         if (random.nextDouble() < chance) {
 
