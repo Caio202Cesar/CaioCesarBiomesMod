@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -13,10 +12,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class TahitiLimeLeaves extends LeavesBlock implements IForgeShearable {
+public class TahitiLimeFloweringLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public TahitiLimeLeaves(Properties properties, Supplier<Block> nextStage) {
+    public TahitiLimeFloweringLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -36,7 +35,7 @@ public class TahitiLimeLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(35) == 0) {
+        if (nextStage != null && random.nextInt(30) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -47,7 +46,6 @@ public class TahitiLimeLeaves extends LeavesBlock implements IForgeShearable {
 
         }
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
