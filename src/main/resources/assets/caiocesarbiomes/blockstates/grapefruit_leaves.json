@@ -1,14 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/citrus_leaves",
-        "weight": 5
-      },
-      {"model": "caiocesarbiomes:block/citrus_flowering_leaves",
-        "weight": 2
-      },
-      {"model": "caiocesarbiomes:block/grapefruit_fruiting_leaves",
-        "weight": 3
-      }
-    ]
-  }}
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/citrus_leaves"
+    }
+  }
+}

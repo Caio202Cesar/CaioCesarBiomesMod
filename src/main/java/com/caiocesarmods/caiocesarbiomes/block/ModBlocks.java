@@ -297,18 +297,29 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARFRUIT_FRUITING_LEAVES = registerBlock("starfruit_fruiting_leaves",
             () -> new StarfruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.STARFRUIT_LEAVES));
+
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
             ModLeaves::new);
+
     public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
-            OrangeLeaves::new);
+            () -> new OrangeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ORANGE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> ORANGE_FLOWERING_LEAVES = registerBlock("orange_flowering_leaves",
+            () -> new OrangeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ORANGE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> ORANGE_FRUITING_LEAVES = registerBlock("orange_fruiting_leaves",
+            () -> new OrangeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ORANGE_LEAVES));
+
     public static final RegistryObject<Block> MANDARIN_LEAVES = registerBlock("mandarin_leaves",
             MandarinLeaves::new);
     public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
             LemonLeaves::new);
     public static final RegistryObject<Block> CITRON_LEAVES = registerBlock("citron_leaves",
             CitronLeaves::new);
+
     public static final RegistryObject<Block> TAHITI_LIME_LEAVES = registerBlock("tahiti_lime_leaves",
             () -> new TahitiLimeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.TAHITI_LIME_FLOWERING_LEAVES));
@@ -318,6 +329,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TAHITI_LIME_FRUITING_LEAVES = registerBlock("tahiti_lime_fruiting_leaves",
             () -> new TahitiLimeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.TAHITI_LIME_LEAVES));
+
     public static final RegistryObject<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
             () -> new BuddhaHandLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.BUDDHA_HAND_FLOWERING_LEAVES));
@@ -327,6 +339,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BUDDHA_HAND_FRUITING_LEAVES = registerBlock("buddha_hand_fruiting_leaves",
             () -> new BuddhaHandFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.BUDDHA_HAND_LEAVES));
+
     public static final RegistryObject<Block> GRAPEFRUIT_LEAVES = registerBlock("grapefruit_leaves",
             GrapefruitLeaves::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
