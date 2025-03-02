@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
@@ -20,10 +19,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class LemonFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public TahitiLimeFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public LemonFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -47,7 +46,7 @@ public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.TAHITI_LIME.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LEMON.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -67,12 +66,12 @@ public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.TAHITI_LIME.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LEMON.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.TAHITI_LIME_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, ModBlocks.LEMON_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
