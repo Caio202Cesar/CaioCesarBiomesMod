@@ -292,9 +292,6 @@ public class ModBlocks {
             () -> new ElderberryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ELDERBERRY_LEAVES));
 
-    public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
-            ModLeaves::new);
-
     public static final RegistryObject<Block> STRAWBERRY_TREE_LEAVES = registerBlock("strawberry_tree_leaves",
             StrawberryTreeLeaves::new);
 
@@ -356,7 +353,14 @@ public class ModBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.LEMON_LEAVES));
 
     public static final RegistryObject<Block> CITRON_LEAVES = registerBlock("citron_leaves",
-            CitronLeaves::new);
+            () -> new CitronLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CITRON_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> CITRON_FLOWERING_LEAVES = registerBlock("citron_flowering_leaves",
+            () -> new CitronFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CITRON_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CITRON_FRUITING_LEAVES = registerBlock("citron_fruiting_leaves",
+            () -> new CitronFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CITRON_LEAVES));
 
     public static final RegistryObject<Block> TAHITI_LIME_LEAVES = registerBlock("tahiti_lime_leaves",
             () -> new TahitiLimeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -379,7 +383,14 @@ public class ModBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.BUDDHA_HAND_LEAVES));
 
     public static final RegistryObject<Block> GRAPEFRUIT_LEAVES = registerBlock("grapefruit_leaves",
-            GrapefruitLeaves::new);
+            () -> new GrapefruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.GRAPEFRUIT_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> GRAPEFRUIT_FLOWERING_LEAVES = registerBlock("grapefruit_flowering_leaves",
+            () -> new GrapefruitFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.GRAPEFRUIT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> GRAPEFRUIT_FRUITING_LEAVES = registerBlock("grapefruit_fruiting_leaves",
+            () -> new GrapefruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.GRAPEFRUIT_LEAVES));
 
     public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
             ModLeaves::new);
@@ -619,9 +630,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_ELDERBERRY_SAPLING = BLOCKS.register("potted_elderberry_sapling",
             () -> new FlowerPotBlock(ModBlocks.ELDERBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
-    public static final RegistryObject<Block> BLUE_SPRUCE_SAPLING = registerBlock("blue_spruce_sapling",
-            BlueSpruceSapling::new);
 
     public static final RegistryObject<Block> STRAWBERRY_TREE_SAPLING = registerBlock("strawberry_tree_sapling",
             StrawberryTreeSapling::new);

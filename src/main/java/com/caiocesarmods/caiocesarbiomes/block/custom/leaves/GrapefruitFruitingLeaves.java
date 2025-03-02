@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class BuddhaHandFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class GrapefruitFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public BuddhaHandFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public GrapefruitFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -49,7 +49,7 @@ public class BuddhaHandFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.BUDDHA_HAND_CITRON.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.GRAPEFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -69,12 +69,12 @@ public class BuddhaHandFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.BUDDHA_HAND_CITRON.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.GRAPEFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.BUDDHA_HAND_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, ModBlocks.GRAPEFRUIT_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

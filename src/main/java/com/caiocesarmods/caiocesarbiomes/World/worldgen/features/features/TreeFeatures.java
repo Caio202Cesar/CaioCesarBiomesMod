@@ -344,15 +344,6 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
-    //Blue Spruce Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_SPRUCE_TREE = register("blue_spruce_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
-                    new SimpleBlockStateProvider(States.BLUE_SPRUCE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
-                            FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(5, 2, 1),
-                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
-
     //Strawberry Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STRAWBERRY_TREE1 = register("strawberry_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STRAWBERRY_TREE_LOG),
@@ -902,9 +893,6 @@ public class TreeFeatures {
 
         protected static final BlockState ELDERBERRY_LOG = ModBlocks.ELDERBERRY_LOG.get().getDefaultState();
         protected static final BlockState ELDERBERRY_LEAVES = ModBlocks.ELDERBERRY_LEAVES.get().getDefaultState();
-
-        protected static final BlockState SPRUCE_LOG = Blocks.SPRUCE_LOG.getDefaultState();
-        protected static final BlockState BLUE_SPRUCE_LEAVES = ModBlocks.BLUE_SPRUCE_LEAVES.get().getDefaultState();
 
         protected static final BlockState STRAWBERRY_TREE_LOG = ModBlocks.STRAWBERRY_TREE_LOG.get().getDefaultState();
         protected static final BlockState STRAWBERRY_TREE_LEAVES = ModBlocks.STRAWBERRY_TREE_LEAVES.get().getDefaultState();
