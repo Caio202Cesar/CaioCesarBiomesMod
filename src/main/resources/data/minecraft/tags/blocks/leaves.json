@@ -45,9 +45,17 @@
     "caiocesarbiomes:camellia_leaves",
     "caiocesarbiomes:tea_leaves",
     "caiocesarbiomes:orange_leaves",
+    "caiocesarbiomes:orange_flowering_leaves",
+    "caiocesarbiomes:orange_fruiting_leaves",
     "caiocesarbiomes:mandarin_leaves",
+    "caiocesarbiomes:mandarin_flowering_leaves",
+    "caiocesarbiomes:mandarin_fruiting_leaves",
     "caiocesarbiomes:lemon_leaves",
+    "caiocesarbiomes:lemon_flowering_leaves",
+    "caiocesarbiomes:lemon_fruiting_leaves",
     "caiocesarbiomes:citron_leaves",
+    "caiocesarbiomes:citron_flowering_leaves",
+    "caiocesarbiomes:citron_fruiting_leaves",
     "caiocesarbiomes:buddha_hand_leaves",
     "caiocesarbiomes:buddha_hand_flowering_leaves",
     "caiocesarbiomes:buddha_hand_fruiting_leaves",
@@ -77,7 +85,8 @@
     "caiocesarbiomes:cooper_beech_leaves",
     "caiocesarbiomes:live_oak_leaves",
     "caiocesarbiomes:dragon_blood_leaves",
-    "caiocesarbiomes:red_oak_leaves"
+    "caiocesarbiomes:red_oak_leaves",
+    "caiocesarbiomes:japanese_pine_leaves"
 
   ]
 }
