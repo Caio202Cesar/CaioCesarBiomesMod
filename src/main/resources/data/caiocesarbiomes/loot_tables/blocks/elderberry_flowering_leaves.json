@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:olive_leaves"
+              "name": "caiocesarbiomes:elderberry_flowering_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:olive_sapling"
+              "name": "caiocesarbiomes:elderberry_sapling"
             }
           ]
         }

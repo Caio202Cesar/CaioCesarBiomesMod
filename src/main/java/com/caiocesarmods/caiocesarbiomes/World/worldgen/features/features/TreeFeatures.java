@@ -774,8 +774,8 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Sycamore fig tree (native of dry biomes, like sahel and subtropical steepe, it has Fig Log and fancy tree shape)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
+    //Sycamore fig tree (native of dry biomes, it has Fig Log and fancy tree shape and must grow in Savannah, Tropical Desert or mediterranean dry scrub)
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
@@ -786,7 +786,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
     //Desert Rose Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_DESERT_ROSE_TREE = register("socotra_desert_rose_tree",
@@ -866,7 +866,6 @@ public class TreeFeatures {
         protected static final BlockState FIG_LOG = ModBlocks.FIG_LOG.get().getDefaultState();
         protected static final BlockState FIG_LEAVES = ModBlocks.FIG_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIG_LEAVES = ModBlocks.WHITE_FIG_LEAVES.get().getDefaultState();
-        protected static final BlockState SYCAMORE_FIG_LEAVES = ModBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLIVE_LOG = ModBlocks.OLIVE_LOG.get().getDefaultState();
         protected static final BlockState OLIVE_LEAVES = ModBlocks.OLIVE_LEAVES.get().getDefaultState();
