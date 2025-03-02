@@ -25,6 +25,7 @@
     "caiocesarbiomes:starfruit_log",
     "caiocesarbiomes:mulberry_log",
     "caiocesarbiomes:japanese_maple_log",
+    "caiocesarbiomes:japanese_pine_log",
     "caiocesarbiomes:camellia_log",
     "caiocesarbiomes:citrus_log",
     "caiocesarbiomes:tamarind_log",
@@ -36,7 +37,12 @@
     "caiocesarbiomes:black_poplar_log",
     "caiocesarbiomes:nothofagus_log",
     "caiocesarbiomes:araucaria_log",
-    "caiocesarbiomes:jungle_fig_log"
-
+    "caiocesarbiomes:jungle_fig_log",
+    "caiocesarbiomes:ilex_log",
+    "caiocesarbiomes:yew_log",
+    "caiocesarbiomes:western_hemlock_log",
+    "caiocesarbiomes:beech_log",
+    "caiocesarbiomes:live_oak_log",
+    "caiocesarbiomes:dragon_blood_log"
   ]
 }

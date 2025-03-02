@@ -25,6 +25,7 @@
     "caiocesarbiomes:starfruit_log",
     "caiocesarbiomes:mulberry_log",
     "caiocesarbiomes:japanese_maple_log",
+    "caiocesarbiomes:japanese_pine_log",
     "caiocesarbiomes:camellia_log",
     "caiocesarbiomes:citrus_log",
     "caiocesarbiomes:tamarind_log",
@@ -43,5 +44,6 @@
     "caiocesarbiomes:beech_log",
     "caiocesarbiomes:live_oak_log",
     "caiocesarbiomes:dragon_blood_log"
+
   ]
 }

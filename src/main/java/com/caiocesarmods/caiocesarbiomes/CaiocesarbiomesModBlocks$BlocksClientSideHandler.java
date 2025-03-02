@@ -53,6 +53,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         IndianCoralSapling.registerRenderLayer();
         ItalianCypressSapling.registerRenderLayer();
         JapaneseMapleSapling.registerRenderLayer();
+        JapanesePineSapling.registerRenderLayer();
         LemonSapling.registerRenderLayer();
         LoquatSapling.registerRenderLayer();
         MandarinSapling.registerRenderLayer();
