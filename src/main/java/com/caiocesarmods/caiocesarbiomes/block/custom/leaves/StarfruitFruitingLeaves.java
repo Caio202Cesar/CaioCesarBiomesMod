@@ -47,7 +47,7 @@ public class StarfruitFruitingLeaves extends LeavesBlock implements IForgeSheara
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
-            int dropCount = 3;
+            int dropCount = 5;
 
             ItemStack itemStack = new ItemStack(ModItems.STARFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -67,7 +67,7 @@ public class StarfruitFruitingLeaves extends LeavesBlock implements IForgeSheara
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 3;
+            int dropCount = 5;
 
             ItemStack itemStack = new ItemStack(ModItems.STARFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
