@@ -15,6 +15,8 @@
     "caiocesarbiomes:oleander_red_leaves",
     "caiocesarbiomes:oleander_white_leaves",
     "caiocesarbiomes:pomegranate_leaves",
+    "caiocesarbiomes:pomegranate_flowering_leaves",
+    "caiocesarbiomes:pomegranate_fruiting_leaves",
     "caiocesarbiomes:southern_magnolia_leaves",
     "caiocesarbiomes:tropical_almond_leaves",
     "caiocesarbiomes:holm_oak_leaves",
@@ -67,6 +69,8 @@
     "caiocesarbiomes:pohutukawa_leaves",
     "caiocesarbiomes:pohutukawa_flowering_leaves",
     "caiocesarbiomes:cherry_plum_leaves",
+    "caiocesarbiomes:cherry_plum_flowering_leaves",
+    "caiocesarbiomes:cherry_plum_fruiting_leaves",
     "caiocesarbiomes:casuarina_leaves",
     "caiocesarbiomes:black_poplar_leaves",
     "caiocesarbiomes:southern_beech_leaves",
@@ -76,8 +80,9 @@
     "caiocesarbiomes:bunya_pine_leaves",
     "caiocesarbiomes:weeping_fig_leaves",
     "caiocesarbiomes:indian_laurel_leaves",
-    "caiocesarbiomes:buddha_hand_leaves",
     "caiocesarbiomes:grapefruit_leaves",
+    "caiocesarbiomes:grapefruit_flowering_leaves",
+    "caiocesarbiomes:grapefruit_fruiting_leaves",
     "caiocesarbiomes:holly_leaves",
     "caiocesarbiomes:yew_leaves",
     "caiocesarbiomes:western_hemlock_leaves",
@@ -86,6 +91,5 @@
     "caiocesarbiomes:dragon_blood_leaves",
     "caiocesarbiomes:red_oak_leaves",
     "caiocesarbiomes:japanese_pine_leaves"
-
   ]
 }

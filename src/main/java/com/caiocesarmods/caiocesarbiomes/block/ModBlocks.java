@@ -233,7 +233,14 @@ public class ModBlocks {
             ModLeaves::new);
 
     public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
-            PomegranateLeaves::new);
+            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES = registerBlock("pomegranate_flowering_leaves",
+            () -> new PomegranateFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> POMEGRANATE_FRUITING_LEAVES = registerBlock("pomegranate_fruiting_leaves",
+            () -> new PomegranateFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_LEAVES));
 
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_LEAVES = registerBlock("southern_magnolia_leaves",
             ModLeaves::new);
@@ -932,9 +939,6 @@ public class ModBlocks {
             () -> new FennelCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> FLOWER_BED = BLOCKS.register("flower_bed",
-            () -> new FlowerPotBlock(AIR, AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().notSolid()));
 
     //These are too large that they need a FLOWER BED and are incompatible with the flower pot.
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
