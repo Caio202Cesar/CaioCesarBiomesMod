@@ -796,11 +796,23 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
+    //Socotra Cucumber Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_CUCUMBER_TREE = register("socotra_cucumber_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
+                    new MegaJungleTrunkPlacer(3, 13, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(CucumberTreeVinesDecorator.INSTANCE)).build()));
 
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SOCOTRA_CUCUMBER_LOG = ModBlocks.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
+        protected static final BlockState SOCOTRA_CUCUMBER_LEAVES = ModBlocks.SOCOTRA_CUCUMBER_LEAVES.get().getDefaultState();
 
         protected static final BlockState YEW_LOG = ModBlocks.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = ModBlocks.YEW_LEAVES.get().getDefaultState();

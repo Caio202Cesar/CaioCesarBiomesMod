@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/socotra_cucumber_log_middle",
+    "side": "caiocesarbiomes:block/socotra_cucumber_bark"
+  }
+}

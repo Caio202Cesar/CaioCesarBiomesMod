@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/socotra_cucumber_leaves"
+  }
+}

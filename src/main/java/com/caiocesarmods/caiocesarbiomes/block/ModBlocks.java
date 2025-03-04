@@ -121,6 +121,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -208,6 +210,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> COAST_COTTONWOOD_LEAVES = registerBlock("coast_cottonwood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> DRAGON_BLOOD_LEAVES = registerBlock("dragon_blood_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
             ModLeaves::new);
 
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
@@ -904,6 +908,13 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.JAPANESE_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_SAPLING = registerBlock("socotra_cucumber_sapling",
+            SocotraCucumberSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SOCOTRA_CUCUMBER_SAPLING = BLOCKS.register("potted_socotra_cucumber_sapling",
+            () -> new FlowerPotBlock(ModBlocks.SOCOTRA_CUCUMBER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
             DesertRosePlant::new);
@@ -928,6 +939,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
             () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES_VINE = registerBlock("socotra_cucumber_leaves_vine",
+            () -> new SocotraCucumberLeavesVineBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN_TERRACOTTA).tickRandomly().
                     doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
 
     //Crops

@@ -32,6 +32,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         MediterraneanBeachFlower.registerRenderLayer();
         RibesShrub.registerRenderLayer();
         FicusRootsPlantBlock.registerRenderLayer();
+        SocotraCucumberLeavesVineBlock.registerRenderLayer();
 
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();
@@ -101,5 +102,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         RedOakSapling.registerRenderLayer();
         SocotraDesertRoseSapling.registerRenderLayer();
         WesternHemlockSapling.registerRenderLayer();
+        SocotraCucumberSapling.registerRenderLayer();
     }
 }
