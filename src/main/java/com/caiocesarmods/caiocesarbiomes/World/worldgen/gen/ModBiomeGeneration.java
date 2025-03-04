@@ -91,7 +91,7 @@ public class ModBiomeGeneration {
 
         addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 25, COLD, OVERWORLD, MOUNTAIN, CONIFEROUS);
 
-        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 15, COLD, OVERWORLD, DRY, PLAINS, SPARSE);
+        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 5, COLD, OVERWORLD, DRY, PLAINS, SPARSE, RARE);
 
         addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, WET, LUSH, DENSE);
 
