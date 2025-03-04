@@ -26,11 +26,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:anis"
+          "name": "caiocesarbiomes:crape_myrtle_red_sapling"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "caiocesarbiomes:blocks/anis"
+  "random_sequence": "caiocesarbiomes:blocks/crape_myrtle_red_sapling"
 }
