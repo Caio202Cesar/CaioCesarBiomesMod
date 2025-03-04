@@ -57,9 +57,9 @@ public class ModBiomeGeneration {
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DRY, SPARSE);
 
-        addBiome(EucalyptusSahelBiome.EUCALYPTUS_SAHEL.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, DRY, SPARSE, RARE);
+        addBiome(EucalyptusSahelBiome.EUCALYPTUS_SAHEL.get(), BiomeManager.BiomeType.DESERT, 9, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
-        addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, DRY, SPARSE, RARE);
+        addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 7, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
         addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, SANDY);
 
