@@ -798,8 +798,8 @@ public class TreeFeatures {
 
     //Socotra Cucumber Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_CUCUMBER_TREE = register("socotra_cucumber_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SOCOTRA_CUCUMBER_LOG),
+                    new SimpleBlockStateProvider(States.SOCOTRA_CUCUMBER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
                     new MegaJungleTrunkPlacer(3, 13, 0),
                     new TwoLayerFeature(0, 0, 0,
@@ -1045,7 +1045,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> SOCOTRA_TREES = register("socotra_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOCOTRA_DESERT_ROSE_TREE.withChance(0.07F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOCOTRA_DESERT_ROSE_TREE.withChance(0.1F),
+                            SOCOTRA_CUCUMBER_TREE.withChance(0.07F)),
                             DRAGON_BLOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
