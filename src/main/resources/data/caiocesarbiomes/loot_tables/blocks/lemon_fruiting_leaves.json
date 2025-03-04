@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:cherry_plum_leaves"
+              "name": "caiocesarbiomes:lemon_fruiting_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:cherry_plum_sapling"
+              "name": "caiocesarbiomes:lemon_sapling"
             }
           ]
         }
@@ -70,11 +70,11 @@
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune",
               "chances": [
-                0.02,
-                0.022222223,
-                0.025,
-                0.033333335,
-                0.1
+                0.4,
+                0.45,
+                0.425,
+                0.4333334,
+                0.45
               ]
             }
           ],
@@ -92,6 +92,60 @@
             }
           ],
           "name": "minecraft:stick"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "item": "minecraft:shears"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune",
+              "chances": [
+                0.02,
+                0.022222223,
+                0.025,
+                0.033333335,
+                0.1
+              ]
+            }
+          ],
+          "name": "caiocesarbiomes:lemon"
         }
       ],
       "conditions": [

@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:cherry_plum_leaves"
+              "name": "caiocesarbiomes:starfruit_flowering_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:cherry_plum_sapling"
+              "name": "caiocesarbiomes:starfruit_sapling"
             }
           ]
         }
