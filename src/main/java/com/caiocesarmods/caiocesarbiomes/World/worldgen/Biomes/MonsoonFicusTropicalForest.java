@@ -56,7 +56,7 @@ public class MonsoonFicusTropicalForest {
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalHibiscus(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalJungleFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);

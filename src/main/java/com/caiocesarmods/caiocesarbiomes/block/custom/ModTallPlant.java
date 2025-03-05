@@ -27,6 +27,7 @@ public class ModTallPlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(ModBlocks.CHINESE_HIBISCUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL_FLOWERING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SPIDER_LILY.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
