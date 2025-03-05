@@ -1142,7 +1142,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("subtropical_eucalyptus_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
-                            MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F)), AVOCADO_TREE))
+                            MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F)), AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
