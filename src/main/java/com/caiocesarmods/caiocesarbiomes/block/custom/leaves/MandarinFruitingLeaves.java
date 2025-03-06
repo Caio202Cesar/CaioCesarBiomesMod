@@ -42,7 +42,7 @@ public class MandarinFruitingLeaves extends LeavesBlock implements IForgeShearab
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(35) == 0) {
+        if (nextStage != null && random.nextInt(45) == 0) {
 
             int dropCount = 5;
 
