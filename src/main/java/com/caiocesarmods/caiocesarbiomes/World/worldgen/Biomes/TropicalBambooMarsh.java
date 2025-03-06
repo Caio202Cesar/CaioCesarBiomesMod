@@ -34,6 +34,7 @@ public class TropicalBambooMarsh {
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SLIME, 7, 5, 7));
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
@@ -61,8 +62,8 @@ public class TropicalBambooMarsh {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.BAMBOO);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
-                .temperature(0.95F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
-                        .setWaterFogColor(270131).withSkyColor(8103167).withFoliageColor(4110351)
+                .temperature(0.95F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(13028309)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))

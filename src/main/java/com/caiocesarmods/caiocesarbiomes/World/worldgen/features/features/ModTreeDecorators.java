@@ -23,6 +23,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("spanish_moss_decorator",
                     () -> new TreeDecoratorType<>(SpanishMossLeavesDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<SpanishMossTrunkDecorator>> TRUNK_SPANISH_MOSS_DECORATOR =
+            TREE_DECORATORS.register("spanish_moss_trunk_decorator",
+                    () -> new TreeDecoratorType<>(SpanishMossTrunkDecorator.CODEC));
+
     public static final RegistryObject<TreeDecoratorType<CreepingFigLeavesDecorator>> CREEPING_FIG_LEAVES_DECORATOR =
             TREE_DECORATORS.register("creeping_fig_leaves_decorator",
                     () -> new TreeDecoratorType<>(CreepingFigLeavesDecorator.CODEC));
