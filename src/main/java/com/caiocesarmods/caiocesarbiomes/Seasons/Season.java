@@ -11,13 +11,13 @@ public enum Season {
 
     public static String getSeason(long dayTime) {
         long days = dayTime / 24000; // Convert ticks to days
-        long cycle = days % 60; // Assume a full year is 60 days (15 per season)
+        long cycle = days % 84; // Assume a full year is 60 days (21 per season)
 
-        if (cycle < 15) {
+        if (cycle < 21) {
             return "SPRING";
-        } else if (cycle < 30) {
+        } else if (cycle < 42) {
             return "SUMMER";
-        } else if (cycle < 45) {
+        } else if (cycle < 63) {
             return "FALL";
         } else {
             return "WINTER";
