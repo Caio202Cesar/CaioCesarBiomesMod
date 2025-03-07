@@ -36,7 +36,7 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
 
         if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(20) == 0) {
 

@@ -43,7 +43,7 @@ public class StarfruitFruitingLeaves extends LeavesBlock implements IForgeSheara
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 

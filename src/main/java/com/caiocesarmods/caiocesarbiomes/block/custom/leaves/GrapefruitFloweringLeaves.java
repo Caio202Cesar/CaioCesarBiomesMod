@@ -36,7 +36,7 @@ public class GrapefruitFloweringLeaves extends LeavesBlock implements IForgeShea
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 

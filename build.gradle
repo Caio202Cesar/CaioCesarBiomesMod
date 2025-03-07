@@ -111,6 +111,13 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        url "https://cursemaven.com"
+    }
+
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -121,6 +128,8 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     //implementation 'org.spongepowered:mixin:0.8.2'
+
+    implementation files('SereneSeasons-1.16.5-4.0.1.130')
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
