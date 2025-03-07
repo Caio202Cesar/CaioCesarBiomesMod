@@ -41,7 +41,7 @@ public enum Season {
 
         } else {
             long days = dayTime / 24000; // Convert ticks to days
-            long cycle = days % 96; // Assume a full year is 120 days (30 per season)
+            long cycle = days % 120; // Assume a full year is 120 days (30 per season)
 
             if (cycle < 30) {
                 return "SPRING";
