@@ -28,7 +28,7 @@ public class AvocadoLeaves extends LeavesBlock implements IForgeShearable {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             Random random = new Random();
-            double chance = 0.017;
+            double chance = 0.17;
 
             if (random.nextDouble() < chance) {
                 ItemStack itemStack = new ItemStack(ModItems.AVOCADO.get());
