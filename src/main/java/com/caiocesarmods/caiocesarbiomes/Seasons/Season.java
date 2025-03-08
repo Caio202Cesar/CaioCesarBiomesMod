@@ -10,36 +10,7 @@ import net.minecraftforge.fml.ModList;
 public enum Season {
     SPRING, SUMMER, AUTUMN, WINTER;
 
-    public static String getSeason(long dayTime, World world) {
-        if (ModList.get().isLoaded("sereneseasons")) {
-            long days = dayTime / 24000; // Convert ticks to days
-            long cycle = days % 96; // Assume a full year is 96 days (24 per season)
-
-            if (cycle < 24) {
-                return "SPRING";
-            } else if (cycle < 48) {
-                return "SUMMER";
-            } else if (cycle < 72) {
-                return "FALL";
-            } else {
-                return "WINTER";
-            }
-        } else if (ModList.get().isLoaded("simplyseasons")) {
-            //duração de cada estação em SimplySeasons
-            long days = dayTime / 24000; // Convert ticks to days
-            long cycle = days % 96; // Assume a full year is 96 days (24 per season)
-
-            if (cycle < 24) {
-                return "SPRING";
-            } else if (cycle < 48) {
-                return "SUMMER";
-            } else if (cycle < 72) {
-                return "FALL";
-            } else {
-                return "WINTER";
-            }
-
-        } else {
+    public static String getSeason(long dayTime) {
             long days = dayTime / 24000; // Convert ticks to days
             long cycle = days % 120; // Assume a full year is 120 days (30 per season)
 
@@ -52,7 +23,6 @@ public enum Season {
             } else {
                 return "WINTER";
             }
-        }
     }
 
     @SubscribeEvent
@@ -63,7 +33,7 @@ public enum Season {
         World world = player.world;
         long dayTime = world.getDayTime();
 
-        String season = getSeason(dayTime, world);
+        String season = Season.getSeason(dayTime);
 
         mc.fontRenderer.drawString(event.getMatrixStack(), "Season: " + season, 10, 10, 0xFFFFFF);
     }

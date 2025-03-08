@@ -36,7 +36,7 @@ public class PohutukawaFloweringLeaves extends LeavesBlock implements IForgeShea
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 

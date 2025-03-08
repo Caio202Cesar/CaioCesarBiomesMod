@@ -36,7 +36,7 @@ public class MulberryLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(20) == 0) {
 

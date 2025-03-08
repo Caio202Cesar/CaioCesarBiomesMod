@@ -38,7 +38,7 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         if (nextStage != null && random.nextInt(25) == 0) {
 
-            String currentSeason = Season.getSeason(worldIn.getDayTime(), worldIn);
+            String currentSeason = Season.getSeason(worldIn.getDayTime());
             String excludedSeason = "WINTER";
 
             if (! currentSeason.equals(excludedSeason)) {
