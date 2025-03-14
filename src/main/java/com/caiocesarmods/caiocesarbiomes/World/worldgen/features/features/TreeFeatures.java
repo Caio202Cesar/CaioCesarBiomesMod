@@ -1112,6 +1112,12 @@ public class TreeFeatures {
                             INDIAN_LAUREL_TREE.withChance(0.3F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.08F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> TROPICAL_PINE_ISLAND_JUNGLE_FIGS = register("tropical_pine_jungle_figs",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.1F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.3F), WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.07F),
+                            INDIAN_LAUREL_TREE.withChance(0.3F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.08F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> CASUARINA_TREES = register("casuarina_trees",
             PINE_LIKE_CASUARINA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
@@ -1157,7 +1163,7 @@ public class TreeFeatures {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
-    //Sweet Chestnut just spawns here and maybe in the laurel forests
+    //Sweet Chestnut just spawns here and in the temperate rainforest and maybe in the laurel forests
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.1F), SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), MULBERRY_TREE.withChance(0.4F),
@@ -1183,8 +1189,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> TROPICAL_PINE_ISLAND_TREES = register("tropical_pine_island_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(INDIAN_CORAL_TREE.withChance(0.3F),
                             ROYAL_POINCIANA_TREE.withChance(0.1F), ROYAL_POINCIANA_BIG_TREE.withChance(0.1F), RED_KAPOK_TREE.withChance(0.1F),
-                            INDIAN_CORAL_FANCY_TREE.withChance(0.2F)), FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
+                            INDIAN_CORAL_FANCY_TREE.withChance(0.2F), TAMARIND_TREE.withChance(0.2F)), FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
     public static final ConfiguredFeature<?, ?> TROPICAL_DESERT_TREES = register("tropical_desert_trees",

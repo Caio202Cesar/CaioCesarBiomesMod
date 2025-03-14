@@ -105,6 +105,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTropicalPineIslandTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_PINE_ISLAND_TREES);
     }
+    public static void withTropicalPineIslandFigTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_PINE_ISLAND_JUNGLE_FIGS);
+    }
     public static void withSouthernBeechVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_BEECH_FOREST_VEGETATION);
     }
