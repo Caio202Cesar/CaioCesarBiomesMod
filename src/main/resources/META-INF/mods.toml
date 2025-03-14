@@ -56,10 +56,4 @@ mandatory=true
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
-[[dependencies.${mod_id}]]
-modId="sereneseasons"
-mandatory=false
-# This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[1.16.5,)"
-ordering="NONE"
-side="BOTH"
+

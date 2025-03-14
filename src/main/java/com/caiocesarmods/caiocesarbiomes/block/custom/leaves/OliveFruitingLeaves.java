@@ -43,7 +43,9 @@ public class OliveFruitingLeaves extends LeavesBlock implements IForgeShearable 
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(60) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(60) == 0) {
 
             int dropCount = 6;
 
