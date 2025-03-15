@@ -43,7 +43,7 @@ public class BuddhaHandFruitingLeaves extends LeavesBlock implements IForgeShear
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(45) == 0) {
+        if (nextStage != null && random.nextInt(100) == 0) {
 
             int dropCount = 1;
 
