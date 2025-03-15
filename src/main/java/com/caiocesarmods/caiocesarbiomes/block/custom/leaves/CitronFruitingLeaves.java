@@ -28,39 +28,6 @@ public class CitronFruitingLeaves extends LeavesBlock implements IForgeShearable
         this.nextStage = nextStage;
     }
 
-
-    public boolean ticksRandomly(BlockState state) {
-        return true;
-    }
-
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param worldIn
-     * @param pos
-     * @param random
-     */
-    @Override
-    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(45) == 0) {
-
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.CITRON.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
-    }
-
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
