@@ -40,5 +40,6 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F).build();
     public static final Food YEW_ARILS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food AIYU_JELLY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
 }
