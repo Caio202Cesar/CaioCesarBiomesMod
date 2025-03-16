@@ -28,14 +28,6 @@ public class DesertRosePlant extends DoublePlantBlock {
                 || state.matchesBlock(Blocks.RED_SAND);
     }
 
-    public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 80;
-    }
-
-    public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 60;
-    }
-
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
         return PlantType.DESERT;
     }
