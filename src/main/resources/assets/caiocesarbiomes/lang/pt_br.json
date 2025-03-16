@@ -66,8 +66,8 @@
   "block.caiocesarbiomes.crape_myrtle_white_leaves": "Folhas de Resedá Branca",
   "block.caiocesarbiomes.crape_myrtle_white_sapling": "Muda de Resedá Branca",
   "block.caiocesarbiomes.cherry_plum_leaves": "Folhas de Abrunheiro-de-Jardim",
-  "block.caiocesarbiomes.cherry_plum_flowering_leaves": "Cherry Plum Flowering Leaves",
-  "block.caiocesarbiomes.cherry_plum_fruiting_leaves": "Cherry Plum Fruiting Leaves",
+  "block.caiocesarbiomes.cherry_plum_flowering_leaves": "Folhas de Abrunheiro-de-Jardim em Flor",
+  "block.caiocesarbiomes.cherry_plum_fruiting_leaves": "Folhas de Abrunheiro-de-Jardim com Frutos",
   "block.caiocesarbiomes.cherry_plum_sapling": "Muda de Abrunheiro-de-Jardim",
   "block.caiocesarbiomes.creeping_fig_vine": "Trepadeira Unha-de-Gato",
   "block.caiocesarbiomes.creeping_fig_fruiting_vine": "Trepadeira Unha-de-Gato com Frutos",
@@ -83,6 +83,8 @@
   "block.caiocesarbiomes.eucalyptus_planks": "Tábuas de Eucalipto",
   "block.caiocesarbiomes.elderberry_log": "Tronco de Sabugueiro",
   "block.caiocesarbiomes.elderberry_leaves": "Folhas de Sabugueiro",
+  "block.caiocesarbiomes.elderberry_flowering_leaves": "Folhas de Sabugueiro em Flor",
+  "block.caiocesarbiomes.elderberry_fruiting_leaves": "Folhas de Sabugueiro com Frutos",
   "block.caiocesarbiomes.elderberry_sapling": "Muda de Sabugueiro",
   "block.caiocesarbiomes.elderberry_planks": "Tábuas de Sabugueiro",
   "block.caiocesarbiomes.erythrina_log": "Tronco de Eritrina",
@@ -114,6 +116,8 @@
   "block.caiocesarbiomes.jungle_fig_log": "Tronco de Figueira da Selva",
   "block.caiocesarbiomes.lavender": "Lavanda",
   "block.caiocesarbiomes.lemon_leaves": "Folhas de Limoeiro",
+  "block.caiocesarbiomes.lemon_flowering_leaves": "Folhas de Limoeiro em Flor",
+  "block.caiocesarbiomes.lemon_fruiting_leaves": "Folhas de Limoeiro com Frutos",
   "block.caiocesarbiomes.lemon_sapling": "Muda de Limoeiro",
   "block.caiocesarbiomes.live_oak_leaves": "Folhas de Carvalho-vivo-do-sul",
   "block.caiocesarbiomes.live_oak_sapling": "Muda de Carvalho-vivo-do-sul",
@@ -121,10 +125,14 @@
   "block.caiocesarbiomes.live_oak_planks": "Tábuas de Carvalho-vivo-do-sul",
   "block.caiocesarbiomes.live_oak_wood": "Madeira de Carvalho-vivo-do-sul",
   "block.caiocesarbiomes.loquat_leaves": "Folhas de Nespereira",
+  "block.caiocesarbiomes.loquat_flowering_leaves": "Folhas de Nespereira em Flor",
+  "block.caiocesarbiomes.loquat_fruiting_leaves": "Folhas de Nespereira com Frutos",
   "block.caiocesarbiomes.loquat_log": "Tronco de Nespereira",
   "block.caiocesarbiomes.loquat_sapling": "Muda de Nespereira",
   "block.caiocesarbiomes.loquat_planks": "Tábuas de Nespereira",
   "block.caiocesarbiomes.mandarin_leaves": "Folhas de Tangerineira",
+  "block.caiocesarbiomes.mandarin_flowering_leaves": "Folhas de Tangerineira em Flor",
+  "block.caiocesarbiomes.mandarin_fruiting_leaves": "Folhas de Tangerineira com Frutos",
   "block.caiocesarbiomes.mandarin_sapling": "Muda de Tangerineira",
   "block.caiocesarbiomes.marjoran": "Manjerona",
   "block.caiocesarbiomes.mesquite_leaves": "Folhas de Algaroba",
@@ -135,6 +143,7 @@
   "block.caiocesarbiomes.monkey_puzzle_leaves": "Folhas de Araucaria-chilena",
   "block.caiocesarbiomes.monkey_puzzle_sapling": "Muda de Araucaria-chilena",
   "block.caiocesarbiomes.mulberry_leaves": "Folhas de Amoreira",
+  "block.caiocesarbiomes.mulberry_fruiting_leaves": "Folhas de Amoreira com Frutos",
   "block.caiocesarbiomes.mulberry_log": "Tronco de Amoreira",
   "block.caiocesarbiomes.mulberry_sapling": "Muda de Amoreira",
   "block.caiocesarbiomes.mulberry_planks": "Tábuas de Amoreira",
@@ -369,8 +378,6 @@
   "biome.caiocesarbiomes.pewen_coniferous_grove": "Bosque Conífero de Pehuén",
 
   "itemGroup.CCB_GROUP": "Caio Cesar Biomes"
-
-
 
 }
 

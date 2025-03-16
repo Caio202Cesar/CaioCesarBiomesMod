@@ -23,7 +23,7 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockPos down = pos.down();
-        if (world.isAirBlock(down) && random.nextFloat() < 0.25F) { // 25% chance to grow
+        if (world.isAirBlock(down) && random.nextFloat() < 0.01F) { //1% chance to grow
             world.setBlockState(down, this.getDefaultState(), 2);
         }
     }
