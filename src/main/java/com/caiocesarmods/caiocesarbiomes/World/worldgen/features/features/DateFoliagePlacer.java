@@ -15,16 +15,16 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-public class PalmFoliagePlacer extends FoliagePlacer {
-    public PalmFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
+public class DateFoliagePlacer extends FoliagePlacer {
+    public DateFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
     }
 
-    public static final Codec<PalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<DateFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
                     FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
-            ).apply(instance, PalmFoliagePlacer::new)
+            ).apply(instance, DateFoliagePlacer::new)
     );
 
     @Override
@@ -36,11 +36,11 @@ public class PalmFoliagePlacer extends FoliagePlacer {
     protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
         BlockPos center = foliage.func_236763_a_();
 
-        // First layers (original canopy structure)
+        // First two layers (original canopy structure)
         int frondCount = 4 + random.nextInt(3);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 6 + random.nextInt(2); //Shorter
+            int length = 3 + random.nextInt(2); //Shorter
             generateFrond(world, random, config, center, angle, length, leaves, boundingBox);
         }
 
@@ -48,7 +48,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         BlockPos lowerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2);
+            int length = 4 + random.nextInt(2);
             generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
         }
 
@@ -57,7 +57,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         int denserFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 7 + random.nextInt(1); // Larger fronds
+            int length = 4 + random.nextInt(1); // Larger fronds
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
         }
     }

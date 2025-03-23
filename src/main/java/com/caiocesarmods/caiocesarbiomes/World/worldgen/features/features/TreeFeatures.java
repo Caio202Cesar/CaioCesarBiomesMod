@@ -838,7 +838,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
                     new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(16, 2, 0),
+                    new GiantTrunkPlacer(17, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Coconut Palm
