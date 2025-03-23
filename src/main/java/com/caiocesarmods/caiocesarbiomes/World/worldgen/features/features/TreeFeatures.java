@@ -827,12 +827,26 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(8, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Canary Date Palm
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
+    //Date Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DATE_PALM_TREE = register("date_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
                     new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new GiantTrunkPlacer(13, 2, 14),
+                    new StraightTrunkPlacer(12, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("date_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
+                    new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
+                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(16, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Coconut Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCONUT_PALM_TREE = register("coconut_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
+                    new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
+                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(9, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {

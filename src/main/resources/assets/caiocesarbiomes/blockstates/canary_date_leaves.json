@@ -1,6 +1,7 @@
 {
   "variants":{
-    "":
-      {"model": "caiocesarbiomes:block/canary_date_leaves"}
+    "": {
+        "model": "caiocesarbiomes:block/canary_date_leaves"
+    }
   }
 }
