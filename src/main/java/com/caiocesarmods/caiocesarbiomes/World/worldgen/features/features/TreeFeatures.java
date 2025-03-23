@@ -813,6 +813,20 @@ public class TreeFeatures {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(CucumberTreeVinesDecorator.INSTANCE)).build()));
 
+    //Sabal Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SABAL_PALM_TREE = register("sabal_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BRAZILNUT_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BRAZILNUT_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(8, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SABAL_PALM_FANCY_TREE = register("sabal_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SABAL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SABAL_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(8, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -1204,6 +1218,11 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE_WITH_CREEPING_FIG.withChance(0.2F)),
+                            POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_BEECH_VEGETATION = register("pohutukawa_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE_WITH_CREEPING_FIG.withChance(0.2F)),
                             POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
