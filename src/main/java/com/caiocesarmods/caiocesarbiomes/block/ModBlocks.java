@@ -123,6 +123,10 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
             ModLogs::new);
+    public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SABAL_LOG = registerBlock("sabal_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -212,6 +216,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> DRAGON_BLOOD_LEAVES = registerBlock("dragon_blood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CANARY_DATE_LEAVES = registerBlock("canary_date_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
             ModLeaves::new);
 
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
@@ -914,6 +922,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_SOCOTRA_CUCUMBER_SAPLING = BLOCKS.register("potted_socotra_cucumber_sapling",
             () -> new FlowerPotBlock(ModBlocks.SOCOTRA_CUCUMBER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_data_sapling",
+            CanaryDateSapling::new);
+    public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
+            SabalSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",

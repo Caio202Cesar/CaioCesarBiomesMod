@@ -815,8 +815,8 @@ public class TreeFeatures {
 
     //Sabal Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SABAL_PALM_TREE = register("sabal_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BRAZILNUT_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.BRAZILNUT_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SABAL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SABAL_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(8, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
@@ -827,10 +827,24 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(8, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Canary Date Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
+                    new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
+                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SABAL_LOG = ModBlocks.SABAL_LOG.get().getDefaultState();
+        protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
+
+        protected static final BlockState DATE_LOG = ModBlocks.DATE_LOG.get().getDefaultState();
+        protected static final BlockState CANARY_DATE_LEAVES = ModBlocks.CANARY_DATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOCOTRA_CUCUMBER_LOG = ModBlocks.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
         protected static final BlockState SOCOTRA_CUCUMBER_LEAVES = ModBlocks.SOCOTRA_CUCUMBER_LEAVES.get().getDefaultState();

@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
@@ -88,6 +89,9 @@ public class CaioCesarBiomesMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {
