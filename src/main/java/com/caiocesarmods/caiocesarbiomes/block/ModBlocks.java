@@ -125,6 +125,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CANARY_DATE_LOG = registerBlock("canary_date_log",
+            ModLogs::new);
     public static final RegistryObject<Block> SABAL_LOG = registerBlock("sabal_log",
             ModLogs::new);
     

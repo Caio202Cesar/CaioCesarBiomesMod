@@ -62,11 +62,14 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         }
     }
 
-    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos center, double angle, int length, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos trunkBase, double angle, int length, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        double trunkCenterX = trunkBase.getX() + 0.5;
+        double trunkCenterZ = trunkBase.getZ() + 0.5;
+
         for (int i = 1; i <= length; i++) {
-            int x = (int) (center.getX() + i * Math.cos(angle));
-            int z = (int) (center.getZ() + i * Math.sin(angle));
-            int y = center.getY() - (i / 2);
+            int x = (int) Math.round(trunkCenterX + i * Math.cos(angle));
+            int z = (int) Math.round(trunkCenterZ + i * Math.sin(angle));
+            int y = trunkBase.getY() - (i / 2);
             BlockPos leafPos = new BlockPos(x, y, z);
             placeLeafAt(world, leafPos, leaves, boundingBox);
         }

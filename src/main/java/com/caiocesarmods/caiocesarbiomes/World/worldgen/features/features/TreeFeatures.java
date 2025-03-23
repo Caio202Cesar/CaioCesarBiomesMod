@@ -834,8 +834,8 @@ public class TreeFeatures {
                     new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(12, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("date_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
                     new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(17, 2, 0),
@@ -858,6 +858,7 @@ public class TreeFeatures {
         protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
 
         protected static final BlockState DATE_LOG = ModBlocks.DATE_LOG.get().getDefaultState();
+        protected static final BlockState CANARY_DATE_LOG = ModBlocks.CANARY_DATE_LOG.get().getDefaultState();
         protected static final BlockState CANARY_DATE_LEAVES = ModBlocks.CANARY_DATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOCOTRA_CUCUMBER_LOG = ModBlocks.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
