@@ -925,7 +925,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.SOCOTRA_CUCUMBER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_data_sapling",
+    public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_date_sapling",
             CanaryDateSapling::new);
     public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
             SabalSapling::new);
