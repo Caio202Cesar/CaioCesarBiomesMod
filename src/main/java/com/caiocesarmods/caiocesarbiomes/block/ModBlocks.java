@@ -129,6 +129,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SABAL_LOG = registerBlock("sabal_log",
             ModLogs::new);
+    public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
+            ModLogs::new);
     
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -222,6 +224,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> CANARY_DATE_LEAVES = registerBlock("canary_date_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
             ModLeaves::new);
 
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",

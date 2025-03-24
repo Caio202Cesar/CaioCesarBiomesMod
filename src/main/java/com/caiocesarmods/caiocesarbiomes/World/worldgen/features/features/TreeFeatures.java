@@ -857,6 +857,9 @@ public class TreeFeatures {
         protected static final BlockState SABAL_LOG = ModBlocks.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
 
+        protected static final BlockState COCONUT_LOG = ModBlocks.COCONUT_LOG.get().getDefaultState();
+        protected static final BlockState COCONUT_LEAVES = ModBlocks.COCONUT_LEAVES.get().getDefaultState();
+
         protected static final BlockState DATE_LOG = ModBlocks.DATE_LOG.get().getDefaultState();
         protected static final BlockState CANARY_DATE_LOG = ModBlocks.CANARY_DATE_LOG.get().getDefaultState();
         protected static final BlockState CANARY_DATE_LEAVES = ModBlocks.CANARY_DATE_LEAVES.get().getDefaultState();

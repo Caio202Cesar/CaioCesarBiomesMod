@@ -37,7 +37,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_();
 
         // First layers (original canopy structure)
-        int frondCount = 4 + random.nextInt(3);
+        int frondCount = 6 + random.nextInt(3);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
             int length = 6 + random.nextInt(2); //Shorter
