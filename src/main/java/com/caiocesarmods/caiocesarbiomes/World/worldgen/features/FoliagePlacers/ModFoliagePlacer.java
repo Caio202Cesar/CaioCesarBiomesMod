@@ -18,6 +18,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("coconut_foliage_placer",
                     () -> new FoliagePlacerType<>(CoconutFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<DateFoliagePlacer>> DATE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("date_foliage_placer",
+                    () -> new FoliagePlacerType<>(DateFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }

@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.DateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
@@ -831,7 +832,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DATE_PALM_TREE = register("date_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
-                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new DateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(12, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
@@ -1035,7 +1036,7 @@ public class TreeFeatures {
                             HOLM_OAK_FANCY_TREE.withChance(0.3F), CORK_OAK_FANCY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_BEACH_VEGETATION = register("humid_subtropical_vegetation",
+    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_BEACH_VEGETATION = register("humid_subtropical_beach_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SABAL_PALM_FANCY_TREE.withChance(0.6F),
                             SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F)), SABAL_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));

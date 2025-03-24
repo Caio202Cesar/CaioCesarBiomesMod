@@ -59,7 +59,7 @@ public class SubtropicalCoastalBeachBiome  {
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalBeachVegetation(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withHumidSubtropicalBeachVegetation(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
 

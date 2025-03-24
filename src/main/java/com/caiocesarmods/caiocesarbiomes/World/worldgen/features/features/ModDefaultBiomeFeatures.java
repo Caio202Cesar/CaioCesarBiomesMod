@@ -102,7 +102,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withStrawberryTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.STRAWBERRY_TREES);
     }
-    public static void withSubtropicalBeachVegetation(BiomeGenerationSettings.Builder builder) {
+    public static void withHumidSubtropicalBeachVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HUMID_SUBTROPICAL_BEACH_VEGETATION);
     }
     public static void withOakShrubs(BiomeGenerationSettings.Builder builder) {

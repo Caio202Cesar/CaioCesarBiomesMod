@@ -29,7 +29,7 @@ public class DateFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.PALM_FOLIAGE_PLACER.get(); // Register your foliage placer type
+        return ModFoliagePlacer.DATE_FOLIAGE_PLACER.get(); // Register your foliage placer type
     }
 
     @Override
