@@ -58,8 +58,8 @@ public class HumidSubtropicalBeachBiome {
         ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_WAX_MYRTLE_SHRUB);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)

@@ -60,10 +60,11 @@ public class HotMediterraneanBeachBiome {
         ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withFigTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanBeachFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withStrawberryTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.STRAWBERRY_TREES);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
 
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
