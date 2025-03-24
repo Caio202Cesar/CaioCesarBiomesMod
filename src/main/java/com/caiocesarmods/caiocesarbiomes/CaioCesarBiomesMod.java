@@ -1,8 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFoliagePlacer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModTreeDecorators;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;

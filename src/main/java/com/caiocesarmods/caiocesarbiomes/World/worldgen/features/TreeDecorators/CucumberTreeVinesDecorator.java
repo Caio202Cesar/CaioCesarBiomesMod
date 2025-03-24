@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.mojang.serialization.Codec;

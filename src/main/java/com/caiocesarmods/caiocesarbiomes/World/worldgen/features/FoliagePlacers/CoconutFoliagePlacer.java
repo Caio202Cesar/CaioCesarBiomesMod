@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.mojang.serialization.Codec;
@@ -15,21 +15,21 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-public class DateFoliagePlacer extends FoliagePlacer {
-    public DateFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
+public class CoconutFoliagePlacer extends FoliagePlacer {
+    public CoconutFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
     }
 
-    public static final Codec<DateFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<CoconutFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
                     FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
-            ).apply(instance, DateFoliagePlacer::new)
+            ).apply(instance, CoconutFoliagePlacer::new)
     );
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.PALM_FOLIAGE_PLACER.get(); // Register your foliage placer type
+        return ModFoliagePlacer.COCONUT_FOLIAGE_PLACER.get(); // Register your foliage placer type
     }
 
     @Override

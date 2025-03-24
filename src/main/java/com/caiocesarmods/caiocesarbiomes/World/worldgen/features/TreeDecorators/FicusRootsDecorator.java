@@ -1,17 +1,12 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.mojang.serialization.Codec;
-import net.minecraft.block.BlockState;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.ISeedReader;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.IWorldWriter;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
-import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 
 import java.util.List;
 import java.util.Random;

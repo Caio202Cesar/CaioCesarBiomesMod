@@ -1,6 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -14,13 +17,10 @@ import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
-import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
-import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunkplacer.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.List;
 import java.util.OptionalInt;
 
 import static net.minecraft.world.gen.feature.Features.*;
@@ -831,13 +831,13 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DATE_PALM_TREE = register("date_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
-                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(12, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
-                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(17, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 

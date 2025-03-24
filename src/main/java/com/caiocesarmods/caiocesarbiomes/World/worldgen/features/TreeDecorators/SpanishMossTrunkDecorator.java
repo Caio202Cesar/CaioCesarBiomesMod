@@ -1,7 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
-import com.caiocesarmods.caiocesarbiomes.block.custom.CreepingFigVine;
 import com.caiocesarmods.caiocesarbiomes.block.custom.SpanishMoss;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
