@@ -60,6 +60,7 @@ public class HumidSubtropicalBeachBiome {
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withHumidSubtropicalBeachVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
