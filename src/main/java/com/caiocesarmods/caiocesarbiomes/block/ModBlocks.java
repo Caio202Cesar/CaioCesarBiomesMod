@@ -934,6 +934,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
             SabalSapling::new);
 
+    public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
+            PalmBunchBlock::new);
+    public static final RegistryObject<Block> DATE_BUNCH = registerBlock("date_bunch",
+            PalmBunchBlock::new);
+
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
             DesertRosePlant::new);
