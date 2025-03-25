@@ -37,7 +37,7 @@ public class CanaryDateFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_();
 
         // First layers (original canopy structure)
-        int frondCount = 6 + random.nextInt(3);
+        int frondCount = 5 + random.nextInt(3);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
             int length = 6 + random.nextInt(2); //Shorter
@@ -48,7 +48,7 @@ public class CanaryDateFoliagePlacer extends FoliagePlacer {
         BlockPos lowerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2);
+            int length = 6 + random.nextInt(2);
             generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
         }
 
@@ -57,7 +57,7 @@ public class CanaryDateFoliagePlacer extends FoliagePlacer {
         int denserFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 7 + random.nextInt(1); // Larger fronds
+            int length = 6 + random.nextInt(1); // Larger fronds
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
         }
     }

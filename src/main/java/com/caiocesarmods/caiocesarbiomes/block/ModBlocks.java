@@ -24,8 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static net.minecraft.block.Blocks.AIR;
-
 public class ModBlocks {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -941,9 +939,9 @@ public class ModBlocks {
             CoconutSapling::new);
 
     public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
-            PalmBunchBlock::new);
+            CoconutBunchBlock::new);
     public static final RegistryObject<Block> DATE_BUNCH = registerBlock("date_bunch",
-            PalmBunchBlock::new);
+            DateBunchBlock::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
