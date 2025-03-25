@@ -226,7 +226,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
-            ModLeaves::new);
+            () -> new CoconutLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
 
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
             FigLeaves::new);
@@ -932,6 +936,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_date_sapling",
             CanaryDateSapling::new);
     public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
+            SabalSapling::new);
+    public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
             SabalSapling::new);
 
     public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
