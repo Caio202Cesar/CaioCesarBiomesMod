@@ -220,7 +220,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CANARY_DATE_LEAVES = registerBlock("canary_date_leaves",
-            ModLeaves::new);
+            () -> new DateLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
