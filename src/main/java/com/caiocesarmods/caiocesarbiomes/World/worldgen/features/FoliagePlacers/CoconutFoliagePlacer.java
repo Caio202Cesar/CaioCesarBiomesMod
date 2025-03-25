@@ -74,7 +74,7 @@ public class CoconutFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, ModBlocks.CANARY_DATE_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, ModBlocks.COCONUT_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

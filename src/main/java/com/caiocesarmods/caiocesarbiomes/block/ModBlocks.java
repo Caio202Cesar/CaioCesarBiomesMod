@@ -938,7 +938,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
             SabalSapling::new);
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
-            SabalSapling::new);
+            CoconutSapling::new);
 
     public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
             PalmBunchBlock::new);
