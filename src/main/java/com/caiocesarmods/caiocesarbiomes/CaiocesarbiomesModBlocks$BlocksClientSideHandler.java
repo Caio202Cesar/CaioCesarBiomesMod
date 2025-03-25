@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.block.Saplings.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
