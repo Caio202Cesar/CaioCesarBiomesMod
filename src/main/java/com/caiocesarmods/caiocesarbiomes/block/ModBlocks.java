@@ -7,6 +7,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBloc
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.RedCurrantCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.tree.DatePalmTree;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
@@ -943,10 +944,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_date_sapling",
             CanaryDateSapling::new);
+
     public static final RegistryObject<Block> DATE_SAPLING = registerBlock("date_sapling",
-            DateSapling::new);
+                    () -> new SaplingBlock(new DatePalmTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+
     public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
             SabalSapling::new);
+
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
             CoconutSapling::new);
 

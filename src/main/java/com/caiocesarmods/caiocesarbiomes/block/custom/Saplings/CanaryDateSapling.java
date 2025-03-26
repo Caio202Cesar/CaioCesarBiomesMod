@@ -29,6 +29,7 @@ public class CanaryDateSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModBlocks.CANARY_DATE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DATE_SAPLING.get(), RenderType.getCutout());
 
     }
 
