@@ -49,5 +49,6 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.SPEED, 100, 2), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 2), 1.0F)
             .effect(new EffectInstance(Effects.HASTE, 100, 2), 1.0F).build();
+    public static final Food DATES = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
 }
