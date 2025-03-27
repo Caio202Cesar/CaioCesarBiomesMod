@@ -35,7 +35,7 @@ public enum Season {
 
         String season = Season.getSeason(dayTime);
 
-        mc.fontRenderer.drawString(event.getMatrixStack(), "Season: " + season, 10, 10, 0xFFFFFF);
+        mc.fontRenderer.drawString(event.getMatrixStack(), "Harvest Season: " + season, 10, 10, 0xFFFFFF);
     }
 }
 
