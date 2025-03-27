@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -20,16 +21,17 @@ public class DateLeaves extends LeavesBlock {
     }
 
     @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        super.randomTick(state, world, pos, random);
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if (random.nextFloat() < 0.05f) {
+        if ("SUMMER".equals(currentSeason) && random.nextFloat() < 0.05f) {
             BlockPos belowPos = pos.down();
-            BlockState belowState = world.getBlockState(belowPos);
+            BlockState belowState = worldIn.getBlockState(belowPos);
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, ModBlocks.DATE_BUNCH.get().getDefaultState(), 2);
+                worldIn.setBlockState(belowPos, ModBlocks.DATE_BUNCH.get().getDefaultState(), 2);
             }
         }
     }
