@@ -4,7 +4,6 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.custom.CoconutWaterItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
-import com.caiocesarmods.caiocesarbiomes.item.custom.RipeCreepingFig;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -75,7 +74,7 @@ public class ModItems {
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
-            () -> new RipeCreepingFig(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> AIYU_JELLY = ITEMS.register("aiyu_jelly",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AIYU_JELLY)));
 
