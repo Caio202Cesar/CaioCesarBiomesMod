@@ -2,7 +2,9 @@ package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.custom.CoconutWaterItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
+import com.caiocesarmods.caiocesarbiomes.item.custom.RipeCreepingFig;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -54,7 +56,7 @@ public class ModItems {
     public static final RegistryObject<Item> GRAPEFRUIT = ITEMS.register("grapefruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GRAPEFRUIT)));
     public static final RegistryObject<Item> YEW_BERRIES = ITEMS.register("yew_berries",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.YEW_BERRIES)));
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC).food(ModFoods.YEW_BERRIES)));
     public static final RegistryObject<Item> YEW_ARILS = ITEMS.register("yew_arils",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.YEW_ARILS)));
     public static final RegistryObject<Item> DATES = ITEMS.register("dates",
@@ -64,7 +66,7 @@ public class ModItems {
     public static final RegistryObject<Item> GREEN_COCONUT = ITEMS.register("green_coconut",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> COCONUT_WATER = ITEMS.register("coconut_water",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT_WATER)));
+            () -> new CoconutWaterItem(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT_WATER)));
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -73,7 +75,7 @@ public class ModItems {
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new RipeCreepingFig(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> AIYU_JELLY = ITEMS.register("aiyu_jelly",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AIYU_JELLY)));
 
