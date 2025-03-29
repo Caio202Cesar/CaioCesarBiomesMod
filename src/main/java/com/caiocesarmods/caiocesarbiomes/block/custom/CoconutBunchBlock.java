@@ -19,7 +19,7 @@ import net.minecraftforge.common.ToolType;
 public class CoconutBunchBlock extends Block {
     public CoconutBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
-                .sound(SoundType.BAMBOO).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+                .sound(SoundType.BAMBOO).notSolid().harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
