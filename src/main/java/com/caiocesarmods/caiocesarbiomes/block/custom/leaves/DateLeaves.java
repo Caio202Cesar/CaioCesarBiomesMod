@@ -25,7 +25,7 @@ public class DateLeaves extends LeavesBlock {
         super.randomTick(state, worldIn, pos, random);
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && random.nextFloat() < 0.05f) {
+        if ("SUMMER".equals(currentSeason) && random.nextFloat() < 0.0125f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = worldIn.getBlockState(belowPos);
 
