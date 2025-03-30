@@ -104,5 +104,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         SocotraDesertRoseSapling.registerRenderLayer();
         WesternHemlockSapling.registerRenderLayer();
         SocotraCucumberSapling.registerRenderLayer();
+        CanaryDateSapling.registerRenderLayer();
+        SabalSapling.registerRenderLayer();
+        CoconutSapling.registerRenderLayer();
     }
 }
