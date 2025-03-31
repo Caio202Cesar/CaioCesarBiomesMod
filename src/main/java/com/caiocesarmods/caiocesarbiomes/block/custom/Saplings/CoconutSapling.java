@@ -45,7 +45,11 @@ public class CoconutSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.COCONUT_PALM_TREE;
+            if (random.nextInt(10) == 3) {
+                return TreeFeatures.COCONUT_PALM_TREE;
+            } else {
+                return TreeFeatures.SMALL_COCONUT_PALM_TREE;
+            }
         }
     }
 }
