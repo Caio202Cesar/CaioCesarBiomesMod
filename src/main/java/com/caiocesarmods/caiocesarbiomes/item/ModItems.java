@@ -78,6 +78,9 @@ public class ModItems {
     public static final RegistryObject<Item> AIYU_JELLY = ITEMS.register("aiyu_jelly",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AIYU_JELLY)));
 
+    public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     public static final RegistryObject<Item> RED_CURRANT = ITEMS.register("red_currant",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.RED_CURRANT)));
     public static final RegistryObject<Item> BLACK_CURRANT = ITEMS.register("black_currant",
