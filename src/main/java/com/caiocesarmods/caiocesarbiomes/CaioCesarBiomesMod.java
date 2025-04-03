@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
+import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
+import com.caiocesarmods.caiocesarbiomes.Util.ModBrewingRecipes;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
@@ -7,7 +9,9 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.potion.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,6 +44,8 @@ public class CaioCesarBiomesMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
+
+        ModPotions.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -98,6 +104,12 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
 
+            BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.WATER,
+                    ModItems.TEA_LEAF.get(), ModPotions.GREEN_TEA.get()));
+            BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.WATER,
+                    ModItems.MATCHA_POWDER.get(), ModPotions.MATCHA_TEA.get()));
+            BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.AWKWARD,
+                    ModItems.POISON_SAP.get(), Potions.STRONG_POISON));
         });
     }
 
