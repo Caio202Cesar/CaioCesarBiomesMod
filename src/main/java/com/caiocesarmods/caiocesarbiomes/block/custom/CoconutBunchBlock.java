@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,14 +13,38 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
+
+import java.util.Random;
 
 public class CoconutBunchBlock extends Block {
     public CoconutBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).hardnessAndResistance(0.2F).tickRandomly()
                 .sound(SoundType.BAMBOO).notSolid().harvestTool(ToolType.HOE));
+    }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        if (random.nextFloat() < 0.0025F) {
+
+            worldIn.destroyBlock(pos, false);
+
+        }
     }
 
     @OnlyIn(Dist.CLIENT)
