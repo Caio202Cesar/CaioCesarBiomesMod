@@ -108,8 +108,7 @@ public class CaioCesarBiomesMod
                     ModItems.TEA_LEAF.get(), ModPotions.GREEN_TEA.get()));
             BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.WATER,
                     ModItems.MATCHA_POWDER.get(), ModPotions.MATCHA_TEA.get()));
-            BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.AWKWARD,
-                    ModItems.POISON_SAP.get(), Potions.STRONG_POISON));
+            //BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.AWKWARD, ModItems.POISON_SAP.get(), Potions.STRONG_POISON));
         });
     }
 
