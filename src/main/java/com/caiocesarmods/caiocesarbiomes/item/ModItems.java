@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.item;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.custom.CoconutWaterItem;
+import com.caiocesarmods.caiocesarbiomes.item.custom.BeverageItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -69,8 +70,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> TEA_LEAF_FOR_INFUSION = ITEMS.register("tea_leaf_for_infusion",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> GREEN_TEA = ITEMS.register("green_tea",
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)
+                    .food(ModFoods.GREEN_TEA)));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MATCHA_POWDER_FOR_INFUSION = ITEMS.register("matcha_powder_for_infusion",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)
+                    .food(ModFoods.MATCHA_TEA)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",

@@ -15,11 +15,8 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS
             = DeferredRegister.create(ForgeRegistries.POTION_TYPES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<Potion> GREEN_TEA = POTIONS.register("green_tea",
-            () -> new Potion(new EffectInstance(Effects.HASTE, 200, 2)));
-
-    public static final RegistryObject<Potion> MATCHA_TEA = POTIONS.register("matcha_tea",
-            () -> new Potion(new EffectInstance(Effects.REGENERATION, 200, 1)));
+    //public static final RegistryObject<Potion> GREEN_TEA = POTIONS.register("green_tea", () -> new Potion(new EffectInstance(Effects.HASTE, 200, 2)));
+    //public static final RegistryObject<Potion> MATCHA_TEA = POTIONS.register("matcha_tea", () -> new Potion(new EffectInstance(Effects.REGENERATION, 200, 1)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
