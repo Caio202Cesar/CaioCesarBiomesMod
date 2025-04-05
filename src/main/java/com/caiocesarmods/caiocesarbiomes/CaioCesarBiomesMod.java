@@ -8,7 +8,10 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.potion.PotionBrewing;
+import net.minecraft.potion.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -101,7 +104,7 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
 
-            //BrewingRecipeRegistry.addRecipe(new GreenTeaRecipe(Potions.WATER, ModItems.TEA_LEAF.get(), ModPotions.GREEN_TEA.get()));
+            //BrewingRecipeRegistry.addRecipe(new PotionBrewing(Potions.WATER, ModItems.TEA_LEAF.get(), Potions.STRONG_POISON));
             //BrewingRecipeRegistry.addRecipe(new GreenTeaRecipe(Potions.WATER, ModItems.MATCHA_POWDER.get(), ModPotions.MATCHA_TEA.get()));
             //BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.AWKWARD, ModItems.POISON_SAP.get(), Potions.STRONG_POISON));
         });
