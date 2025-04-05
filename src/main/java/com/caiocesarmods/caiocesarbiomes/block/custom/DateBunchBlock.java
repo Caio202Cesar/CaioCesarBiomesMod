@@ -37,9 +37,9 @@ public class DateBunchBlock extends Block {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && random.nextFloat() < 0.0325F) {
+        if ("FALL".equals(currentSeason) && random.nextFloat() < 0.0925F) {
 
-            worldIn.destroyBlock(pos, false);
+            worldIn.destroyBlock(pos, true);
 
         }
     }
