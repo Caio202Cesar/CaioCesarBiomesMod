@@ -82,6 +82,9 @@ public class ModItems {
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)
                     .food(ModFoods.MATCHA_TEA)));
+    public static final RegistryObject<Item> MATCHA_LATTE = ITEMS.register("matcha_latte",
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.FOOD)
+                    .food(ModFoods.MATCHA_LATTE)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
