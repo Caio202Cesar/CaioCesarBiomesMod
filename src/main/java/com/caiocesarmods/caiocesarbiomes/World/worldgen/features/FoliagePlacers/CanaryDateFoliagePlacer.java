@@ -52,13 +52,35 @@ public class CanaryDateFoliagePlacer extends FoliagePlacer {
             generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
         }
 
-        // Third layer (shorter and denser)
+        // Third layer (denser)
         BlockPos thirdLayerCenter = center.down(3);
         int denserFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
             int length = 5 + random.nextInt(1); // Larger fronds
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
+        }
+
+        BlockPos fourthLayerCenter = center.down(3);
+        int lastFrondCount = frondCount + 2; // More fronds for density
+        for (int i = 0; i < lastFrondCount; i++) {
+            double angle = 2 * Math.PI * i / lastFrondCount;
+            int length = 5 + random.nextInt(1); // Larger fronds
+            generateFrond(world, random, config, fourthLayerCenter, angle, length, leaves, boundingBox);
+        }
+
+        BlockPos fifthLayerCenter = center.down(2);
+        for (int i = 0; i < frondCount; i++) {
+            double angle = 2 * Math.PI * i / frondCount;
+            int length = 5 + random.nextInt(2);
+            generateFrond(world, random, config, fifthLayerCenter, angle, length, leaves, boundingBox);
+        }
+
+        BlockPos sixthLayerCenter = center.down(2);
+        for (int i = 0; i < frondCount; i++) {
+            double angle = 2 * Math.PI * i / frondCount;
+            int length = 5 + random.nextInt(2);
+            generateFrond(world, random, config, sixthLayerCenter, angle, length, leaves, boundingBox);
         }
     }
 
