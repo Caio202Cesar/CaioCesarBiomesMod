@@ -21,7 +21,4 @@ public class ModLogs extends RotatedPillarBlock {
         return 10;
     }
 
-    public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
-        return true;
-    }
 }
