@@ -774,7 +774,7 @@ public class TreeFeatures {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Sycamore fig tree (native of dry biomes, it has Fig Log and fancy tree shape and must grow in Savannah, Tropical Desert or mediterranean dry scrub)
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
@@ -785,7 +785,21 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Plane tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE = register("plane_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_FANCY_TREE = register("plane_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Desert Rose Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_DESERT_ROSE_TREE = register("socotra_desert_rose_tree",
@@ -860,6 +874,9 @@ public class TreeFeatures {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PLANE_LOG = ModBlocks.PLANE_LOG.get().getDefaultState();
+        protected static final BlockState PLANE_LEAVES = ModBlocks.PLANE_LEAVES.get().getDefaultState();
 
         protected static final BlockState SABAL_LOG = ModBlocks.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
@@ -1063,16 +1080,22 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_EXTRA_VEGETATION = register("forest_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.5F),
-                            WHITE_CRABAPPLE_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.05F), MULBERRY_TREE.withChance(0.6F)),
-                            ELDERBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.3F),
+                            WHITE_CRABAPPLE_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.07F), MULBERRY_TREE.withChance(0.6F),
+                            ELDERBERRY_TREE.withChance(0.7F), PLANE_TREE.withChance(0.8F)),
+                            PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WESTERN_HEMLOCK_TREES = register("western_hemlock_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WESTERN_HEMLOCK_TREE_TALL.withChance(0.3F),
                             WESTERN_HEMLOCK_WITH_CREEPING_FIG.withChance(0.003F)),
                            WESTERN_HEMLOCK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.3F, 3))));
+
+    public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F)),
+                            SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> OLEANDER_SHRUBS = register("oleander_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_OLEANDER_SHRUB.withChance(0.3F),
@@ -1219,6 +1242,11 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
                             MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F)), AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PLANE_TREES = register("subtropical_forest_plane_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PLANE_TREE.withChance(0.6F)),
+                            PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     //Sweet Chestnut just spawns here and in the temperate rainforest and maybe in the laurel forests

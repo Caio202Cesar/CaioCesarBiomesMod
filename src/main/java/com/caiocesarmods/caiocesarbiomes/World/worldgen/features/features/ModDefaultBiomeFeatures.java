@@ -45,6 +45,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCasuarinaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CASUARINA_TREES);
     }
+    public static void withSubtropicalPlaneTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_PLANE_TREES);
+    }
     public static void withFigTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FIG_TREES);
     }
