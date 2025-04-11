@@ -130,7 +130,9 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
             ModLogs::new);
-    
+    public static final RegistryObject<Block> CHESTNUT_LOG = registerBlock("chestnut_log",
+            ModLogs::new);
+
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
             ModPlanks::new);
@@ -210,6 +212,8 @@ public class ModBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> CHESTNUT_PLANKS = registerBlock("chestnut_planks",
+            ModLogs::new);
 
     //Leaves
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
@@ -485,6 +489,9 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> JAPANESE_PINE_LEAVES = registerBlock("japanese_pine_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CHESTNUT_LEAVES = registerBlock("chestnut_leaves",
+            ModLeaves::new);
+
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
