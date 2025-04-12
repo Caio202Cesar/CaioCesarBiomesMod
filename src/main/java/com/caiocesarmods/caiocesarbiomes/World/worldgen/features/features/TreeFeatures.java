@@ -965,6 +965,7 @@ public class TreeFeatures {
         protected static final BlockState FIG_LOG = ModBlocks.FIG_LOG.get().getDefaultState();
         protected static final BlockState FIG_LEAVES = ModBlocks.FIG_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIG_LEAVES = ModBlocks.WHITE_FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState SYCAMORE_FIG_LEAVES = ModBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLIVE_LOG = ModBlocks.OLIVE_LOG.get().getDefaultState();
         protected static final BlockState OLIVE_LEAVES = ModBlocks.OLIVE_LEAVES.get().getDefaultState();
@@ -1099,8 +1100,9 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
                             BIG_WEEPING_FIG_TREE.withChance(0.35F), INDIAN_LAUREL_TREE.withChance(0.5F), AVOCADO_TREE.withChance(0.4F),
                             WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.24F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.28F),
-                    STARFRUIT_TREE.withChance(0.4F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+                    STARFRUIT_TREE.withChance(0.4F), RED_CRAPE_MYRTLE_TREE.withChance(0.2F), PINK_CRAPE_MYRTLE_TREE.withChance(0.2F),
+                            WHITE_CRAPE_MYRTLE_TREE.withChance(0.2F), PURPLE_CRAPE_MYRTLE_TREE.withChance(0.2F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 3))));
 
     //Add eventually the yellow aspen tree, as well as other trees like crataegus, larch and rowan
     public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
