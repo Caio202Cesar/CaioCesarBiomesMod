@@ -1,8 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/sweet_chestnut_leaves"},
-      {"model": "caiocesarbiomes:block/sweet_chestnut_fruiting_leaves"}
-    ]
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/sweet_chestnut_leaves"
+    }
   }
 }

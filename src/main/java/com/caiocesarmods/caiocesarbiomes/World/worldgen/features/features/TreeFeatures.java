@@ -885,10 +885,21 @@ public class TreeFeatures {
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Carob Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAROB_TREE = register("carob_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
+                    new SimpleBlockStateProvider(States.FIG_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new ForkyTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAROB_LOG = ModBlocks.CAROB_LOG.get().getDefaultState();
+        protected static final BlockState CAROB_LEAVES = ModBlocks.CAROB_LEAVES.get().getDefaultState();
 
         protected static final BlockState PLANE_LOG = ModBlocks.PLANE_LOG.get().getDefaultState();
         protected static final BlockState PLANE_LEAVES = ModBlocks.PLANE_LEAVES.get().getDefaultState();
@@ -1090,7 +1101,7 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> DARK_FOREST_EXTRA_VEGETATION = register("dark_oak_forest_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BIG_SWEET_CHESTNUT_TREE.withChance(0.5F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BIG_SWEET_CHESTNUT_TREE.withChance(0.095F),
                             SWEET_CHESTNUT_TREE.withChance(0.3F), RED_OAK_SHRUB.withChance(0.2F), OAK_SHRUB.withChance(0.4F),
                             YEW_TREE.withChance(0.4F), COOPER_BEECH_BIG_TREE.withChance(0.5F)),
                             RED_OAK_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -1286,7 +1297,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PLANE_TREES = register("subtropical_forest_plane_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PLANE_TREE.withChance(0.6F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+                            .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),

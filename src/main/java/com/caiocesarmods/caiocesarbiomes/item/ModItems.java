@@ -71,6 +71,9 @@ public class ModItems {
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
+    public static final RegistryObject<Item> CAROB_BEANS = ITEMS.register("carob_beans",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> TEA_LEAF_FOR_INFUSION = ITEMS.register("tea_leaf_for_infusion",
