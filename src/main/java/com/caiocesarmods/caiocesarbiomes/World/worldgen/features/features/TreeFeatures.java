@@ -1161,8 +1161,9 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F),
-                            STRAWBERRY_TREE2.withChance(0.091F), STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)), POMEGRANATE_TREE))
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CANARY_DATE_PALM_TREE.withChance(0.05F),
+                    FORKY_FIG_TREE.withChance(0.3F), STRAWBERRY_TREE2.withChance(0.091F), STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)),
+                            POMEGRANATE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
@@ -1375,7 +1376,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SCRUBLAND_MEDITERRANEAN_CONIFERS = register("scrubland_mediterranean_conifers",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ITALIAN_CYPRESS_TREE.withChance(0.5F)),
                     STONE_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> CAMELLIA_TREES = register("camellia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMELLIA_TREE.withChance(0.3F)),
