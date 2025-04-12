@@ -39,6 +39,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTemperateRainforestShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEMPERATE_RAINFOREST_SHRUBS);
     }
+    public static void withRainforestChestnuts(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.RAINFOREST_CHESTNUT_TREES);
+    }
     public static void withCrapeMyrtles(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRAPE_MYRTLE_TREES);
     }

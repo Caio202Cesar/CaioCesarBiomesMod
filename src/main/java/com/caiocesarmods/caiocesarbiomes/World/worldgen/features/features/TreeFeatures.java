@@ -870,6 +870,21 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Sweet Chestnut
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SWEET_CHESTNUT_TREE = register("sweet_chestnut_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SWEET_CHESTNUT_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SWEET_CHESTNUT_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    //The big chestnut variant spawns only in Temperate Rainforest, Roofed Forests, Subtropical Jungle and Laurel Montane Grove.
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_SWEET_CHESTNUT_TREE = register("sweet_chestnut_big_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SWEET_CHESTNUT_LOG),
+                    new SimpleBlockStateProvider(States.SWEET_CHESTNUT_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -877,6 +892,9 @@ public class TreeFeatures {
 
         protected static final BlockState PLANE_LOG = ModBlocks.PLANE_LOG.get().getDefaultState();
         protected static final BlockState PLANE_LEAVES = ModBlocks.PLANE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SWEET_CHESTNUT_LOG = ModBlocks.SWEET_CHESTNUT_LOG.get().getDefaultState();
+        protected static final BlockState SWEET_CHESTNUT_LEAVES = ModBlocks.SWEET_CHESTNUT_LEAVES.get().getDefaultState();
 
         protected static final BlockState SABAL_LOG = ModBlocks.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
@@ -1065,6 +1083,11 @@ public class TreeFeatures {
                             SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F)), SABAL_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> RAINFOREST_CHESTNUT_TREES = register("rainforest_chestnut",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BIG_SWEET_CHESTNUT_TREE.withChance(0.5F)),
+                            SWEET_CHESTNUT_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
     //Add eventually the yellow aspen tree, as well as other trees like crataegus, larch and rowan
     public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.3F),
@@ -1082,7 +1105,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> FOREST_EXTRA_VEGETATION = register("forest_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.3F),
                             WHITE_CRABAPPLE_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.07F), MULBERRY_TREE.withChance(0.6F),
-                            ELDERBERRY_TREE.withChance(0.7F), PLANE_TREE.withChance(0.8F)),
+                            ELDERBERRY_TREE.withChance(0.7F), SWEET_CHESTNUT_TREE.withChance(0.6F), PLANE_TREE.withChance(0.8F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
@@ -1233,14 +1256,14 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
-                            SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.4F),
-                            ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.3F)), CREEPING_FIG_AVOCADO_TREE))
+                            SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), SWEET_CHESTNUT_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F),
+                            MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.3F)), CREEPING_FIG_AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("subtropical_eucalyptus_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
-                            MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F)), AVOCADO_TREE))
+                            MULBERRY_TREE.withChance(0.4F), SWEET_CHESTNUT_TREE.withChance(0.3F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F)), AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
@@ -1249,11 +1272,10 @@ public class TreeFeatures {
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
-    //Sweet Chestnut just spawns here and in the temperate rainforest and maybe in the laurel forests
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.1F), SOUTHERN_MAGNOLIA_TREE.withChance(0.1F), MULBERRY_TREE.withChance(0.4F),
-                            AVOCADO_TREE.withChance(0.3F), CREEPING_FIG_AVOCADO_TREE.withChance(0.06F),
+                            AVOCADO_TREE.withChance(0.3F), SWEET_CHESTNUT_TREE.withChance(0.6F), CREEPING_FIG_AVOCADO_TREE.withChance(0.06F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.08F)), SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
 
