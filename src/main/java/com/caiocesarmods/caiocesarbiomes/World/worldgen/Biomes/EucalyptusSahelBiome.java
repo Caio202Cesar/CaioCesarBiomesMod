@@ -52,7 +52,7 @@ public class EucalyptusSahelBiome {
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalDesertTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)

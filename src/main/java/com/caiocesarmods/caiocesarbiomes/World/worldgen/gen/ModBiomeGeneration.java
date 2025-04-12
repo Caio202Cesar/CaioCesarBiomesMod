@@ -56,7 +56,7 @@ public class ModBiomeGeneration {
 
         addBiome(SahelBiome.SAHEL.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DRY, SPARSE);
 
-        addBiome(EucalyptusSahelBiome.EUCALYPTUS_SAHEL.get(), BiomeManager.BiomeType.DESERT, 9, OVERWORLD, HOT, DRY, SPARSE, RARE);
+        addBiome(EucalyptusSahelBiome.EUCALYPTUS_SAHEL.get(), BiomeManager.BiomeType.DESERT, 4, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
         addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 7, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
@@ -88,7 +88,7 @@ public class ModBiomeGeneration {
 
         addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 25, COLD, OVERWORLD, MOUNTAIN, CONIFEROUS);
 
-        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 5, COLD, OVERWORLD, DRY, PLAINS, SPARSE, RARE);
+        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 3, COLD, OVERWORLD, DRY, PLAINS, SPARSE, RARE);
 
         addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, JUNGLE, WET, LUSH, DENSE);
 

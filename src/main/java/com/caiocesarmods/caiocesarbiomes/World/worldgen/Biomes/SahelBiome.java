@@ -55,7 +55,7 @@ public class SahelBiome {
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalDesertTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
                 .temperature(1.6F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
