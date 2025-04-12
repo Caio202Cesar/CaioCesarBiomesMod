@@ -887,8 +887,8 @@ public class TreeFeatures {
 
     //Carob Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAROB_TREE = register("carob_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
-                    new SimpleBlockStateProvider(States.FIG_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAROB_LOG),
+                    new SimpleBlockStateProvider(States.CAROB_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
