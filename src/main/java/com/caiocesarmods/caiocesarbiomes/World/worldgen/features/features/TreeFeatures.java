@@ -1120,9 +1120,9 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.3F),
                             WHITE_CRABAPPLE_TREE.withChance(0.3F), LOMBARDY_POPLAR_TREE.withChance(0.05F), PINK_CRABAPPLE_TREE.withChance(0.3F),
-                            COOPER_BEECH_TREE.withChance(0.5F),
-                                    COOPER_BEECH_BIG_TREE.withChance(0.1F), RED_OAK_TREE.withChance(0.2F),
-                            RED_OAK_FANCY_TREE.withChance(0.4F)), BLACK_POPLAR_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            COOPER_BEECH_TREE.withChance(0.5F), COOPER_BEECH_BIG_TREE.withChance(0.1F), RED_OAK_TREE.withChance(0.2F),
+                            RED_OAK_FANCY_TREE.withChance(0.4F), BLACK_POPLAR_FANCY_TREE.withChance(0.4F), PLANE_TREE.withChance(0.7F)),
+                            PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_MOUNTAIN_GROVE_TREES = register("mediterranean_mountain_grove_trees",
@@ -1132,11 +1132,11 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_EXTRA_VEGETATION = register("forest_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.3F),
-                            WHITE_CRABAPPLE_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.07F), MULBERRY_TREE.withChance(0.6F),
-                            ELDERBERRY_TREE.withChance(0.7F), SWEET_CHESTNUT_TREE.withChance(0.6F), PLANE_TREE.withChance(0.8F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.087F),
+                            WHITE_CRABAPPLE_TREE.withChance(0.089F), JAPANESE_MAPLE_TREE.withChance(0.07F), MULBERRY_TREE.withChance(0.2F),
+                            ELDERBERRY_TREE.withChance(0.2F), SWEET_CHESTNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WESTERN_HEMLOCK_TREES = register("western_hemlock_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WESTERN_HEMLOCK_TREE_TALL.withChance(0.3F),
