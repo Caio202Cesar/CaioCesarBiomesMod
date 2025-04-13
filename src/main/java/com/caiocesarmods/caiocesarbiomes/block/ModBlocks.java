@@ -508,7 +508,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
-            ModLeaves::new);
+            CarobLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",

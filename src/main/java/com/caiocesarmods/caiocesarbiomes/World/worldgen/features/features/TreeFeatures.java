@@ -1162,7 +1162,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CANARY_DATE_PALM_TREE.withChance(0.05F),
-                    FORKY_FIG_TREE.withChance(0.3F), STRAWBERRY_TREE2.withChance(0.091F), STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)),
+                    FORKY_FIG_TREE.withChance(0.3F), STRAWBERRY_TREE2.withChance(0.091F),
+                            STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)),
                             POMEGRANATE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
@@ -1323,7 +1324,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
-                            LOMBARDY_POPLAR_TREE.withChance(0.1F), ELDERBERRY_TREE.withChance(0.3F), CORK_OAK_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            LOMBARDY_POPLAR_TREE.withChance(0.1F), CAROB_TREE.withChance(0.1F), ELDERBERRY_TREE.withChance(0.3F),
+                            CORK_OAK_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_PINE_ISLAND_TREES = register("tropical_pine_island_trees",
