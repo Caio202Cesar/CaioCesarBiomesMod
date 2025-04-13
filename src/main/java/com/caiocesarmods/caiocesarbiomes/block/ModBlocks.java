@@ -136,6 +136,16 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> FIR_LOG = registerBlock("fir_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -503,12 +513,23 @@ public class ModBlocks {
             () -> new SweetChestnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_LEAVES));
 
-    public static final RegistryObject<Block> FREMONT_POPLAR_LEAVES = registerBlock("fremont_poplar_leaves",
-            ModLeaves::new);
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
             CarobLeaves::new);
+
+    //Badlands and Eroded Badlands
+    public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
+            JuniperLeaves::new);
+    public static final RegistryObject<Block> PINYON_LEAVES = registerBlock("pinyon_leaves",
+            ModLeaves::new);
+    //Wooded Badlands
+    public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> DOUGLAS_FIR_LEAVES = registerBlock("douglas_fir_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PONDEROSA_PINE_LEAVES = registerBlock("ponderosa_pine_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
