@@ -313,6 +313,13 @@ public class ModBlocks {
             () -> new OliveFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.OLIVE_LEAVES));
 
+    public static final RegistryObject<Block> PISTACHIO_LEAVES = registerBlock("pistachio_leaves",
+            () -> new PistachioLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PISTACHIO_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PISTACHIO_FRUITING_LEAVES = registerBlock("pistachio_fruiting_leaves",
+            () -> new PistachioFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PISTACHIO_LEAVES));
+
     public static final RegistryObject<Block> INDIAN_CORAL_LEAVES = registerBlock("indian_coral_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_red_leaves",

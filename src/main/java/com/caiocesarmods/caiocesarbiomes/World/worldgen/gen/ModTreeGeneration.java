@@ -32,7 +32,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.TROPICAL_DESERT_TREES
+            base.add(() -> TreeFeatures.SUBTROPICAL_DESERT_TREES
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));

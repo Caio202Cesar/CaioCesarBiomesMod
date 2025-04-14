@@ -893,6 +893,14 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Pistachio Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PISTACHIO_TREE = register("pistachio_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PISTACHIO_LOG),
+                    new SimpleBlockStateProvider(States.PISTACHIO_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -909,6 +917,9 @@ public class TreeFeatures {
 
         protected static final BlockState SABAL_LOG = ModBlocks.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = ModBlocks.SABAL_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PISTACHIO_LOG = ModBlocks.PISTACHIO_LOG.get().getDefaultState();
+        protected static final BlockState PISTACHIO_LEAVES = ModBlocks.PISTACHIO_LEAVES.get().getDefaultState();
 
         protected static final BlockState COCONUT_LOG = ModBlocks.COCONUT_LOG.get().getDefaultState();
         protected static final BlockState COCONUT_LEAVES = ModBlocks.COCONUT_LEAVES.get().getDefaultState();
@@ -1337,12 +1348,12 @@ public class TreeFeatures {
     private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
-                            MESQUITE_TREE.withChance(0.1F), DATE_PALM_TREE.withChance(0.1F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            MESQUITE_TREE.withChance(0.1F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
-    public static final ConfiguredFeature<?, ?> TROPICAL_DESERT_TREES = register("tropical_desert_trees",
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
-                            MESQUITE_TREE.withChance(0.1F), DATE_PALM_TREE.withChance(0.5F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            PISTACHIO_TREE.withChance(0.078F), DATE_PALM_TREE.withChance(0.5F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",

@@ -69,6 +69,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> COCONUT_WATER = ITEMS.register("coconut_water",
             () -> new CoconutWaterItem(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT_WATER)));
+    public static final RegistryObject<Item> PISTACHIO = ITEMS.register("pistachio",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

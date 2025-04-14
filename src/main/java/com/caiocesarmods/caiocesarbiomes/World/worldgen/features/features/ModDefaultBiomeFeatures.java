@@ -102,8 +102,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_MAPLE);
     }
-    public static void withTropicalDesertTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_DESERT_TREES);
+    public static void withSubtropicalDesertTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_DESERT_TREES);
     }
     public static void withTropicalSteepeTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_STEEPE_TREES);
