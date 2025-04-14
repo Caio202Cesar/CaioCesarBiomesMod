@@ -1034,6 +1034,8 @@ public class ModBlocks {
             CreepingFigRipeFruitingVine::new);
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
+    public static final RegistryObject<Block> IVY = registerBlock("ivy",
+            IvyVine::new);
 
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
             () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().

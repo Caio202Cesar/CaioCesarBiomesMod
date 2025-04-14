@@ -35,6 +35,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("creeping_fig_trunk_decorator",
                     () -> new TreeDecoratorType<>(CreepingFigTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<IvyTrunkDecorator>> TRUNK_IVY_DECORATOR =
+            TREE_DECORATORS.register("ivy_trunk_decorator",
+                    () -> new TreeDecoratorType<>(IvyTrunkDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
