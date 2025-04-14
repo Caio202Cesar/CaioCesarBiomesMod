@@ -53,7 +53,6 @@ public class HemiborealSteppeBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PRAIRIE_BLACK_POPLAR_TREES);
 

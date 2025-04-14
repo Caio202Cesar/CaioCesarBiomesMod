@@ -1212,7 +1212,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> TREES_TEMPERATE_RAINFOREST = register("trees_temperate_rainforest",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(COOPER_BEECH_TREE.withChance(0.3F),
                             COOPER_BEECH_BIG_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            ELDERBERRY_TREE.withChance(0.3F), RED_OAK_FANCY_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F)), RED_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            RED_OAK_FANCY_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F)), RED_OAK_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SOCOTRA_TREES = register("socotra_trees",
