@@ -67,6 +67,7 @@ public class CaioCesarBiomesMod
         BambooSubtropicalLaurelJungleBiome.register(eventBus);
         TropicalDesertBiome.register(eventBus);
         CoastalSubtropicalDesertBiome.register(eventBus);
+        CoastalSubtropicalDesertLomas.register(eventBus);
         MontaneLaurelGroveBiome.register(eventBus);
         GravelTundraBiome.register(eventBus);
         SahelBiome.register(eventBus);

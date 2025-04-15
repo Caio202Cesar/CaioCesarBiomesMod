@@ -18,16 +18,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class CoastalSubtropicalDesertBiome {
+public class CoastalSubtropicalDesertLomas {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> COAST_SUBTROPICAL_DESERT = BIOMES.register("coastal_subtropical_desert",
-            () -> makeCoastalSubtropicalDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.16f));
+    public static final RegistryObject<Biome> COAST_SUBTROPICAL_DESERT_LOMAS = BIOMES.register("coastal_subtropical_desert_lomas",
+            () -> makeCoastalSubtropicalLomasBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.3f));
 
 
-    private static Biome makeCoastalSubtropicalDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeCoastalSubtropicalLomasBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -52,11 +52,8 @@ public class CoastalSubtropicalDesertBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
-
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

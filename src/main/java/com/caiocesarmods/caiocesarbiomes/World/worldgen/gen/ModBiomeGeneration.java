@@ -43,6 +43,8 @@ public class ModBiomeGeneration {
 
         addBiome(CoastalSubtropicalDesertBiome.COAST_SUBTROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 20, OVERWORLD, SANDY, DRY, SPOOKY);
 
+        addBiome(CoastalSubtropicalDesertLomas.COAST_SUBTROPICAL_DESERT_LOMAS.get(), BiomeManager.BiomeType.DESERT, 17, OVERWORLD, DRY, LUSH);
+
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 24, OVERWORLD, SANDY, HOT, DRY, SANDY);
 
         addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 10, OVERWORLD, LUSH,
