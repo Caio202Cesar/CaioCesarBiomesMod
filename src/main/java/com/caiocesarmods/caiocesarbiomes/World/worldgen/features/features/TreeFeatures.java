@@ -1144,7 +1144,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            SABAL_PALM_TREE.withChance(0.5F), SABAL_PALM_FANCY_TREE.withChance(0.67F),
+                            SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), PLANE_TREE.withChance(0.3F),
                             PLANE_FANCY_TREE.withChance(0.35F)), SOUTHERN_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
