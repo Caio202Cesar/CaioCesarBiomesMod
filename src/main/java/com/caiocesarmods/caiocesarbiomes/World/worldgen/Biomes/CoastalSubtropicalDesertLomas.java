@@ -24,7 +24,7 @@ public class CoastalSubtropicalDesertLomas {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> COAST_SUBTROPICAL_DESERT_LOMAS = BIOMES.register("coastal_subtropical_desert_lomas",
-            () -> makeCoastalSubtropicalLomasBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.3f));
+            () -> makeCoastalSubtropicalLomasBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.3f, 0.5f));
 
 
     private static Biome makeCoastalSubtropicalLomasBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
