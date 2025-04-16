@@ -102,10 +102,12 @@
     "caiocesarbiomes:date_bunch",
     "caiocesarbiomes:plane_leaves",
     "caiocesarbiomes:sweet_chestnut_leaves",
+    "caiocesarbiomes:sweet_chestnut_fruiting_leaves",
     "caiocesarbiomes:carob_leaves",
     "caiocesarbiomes:sycamore_fig_leaves",
     "caiocesarbiomes:pistachio_leaves",
-    "caiocesarbiomes:pistachio_fruiting_leaves"
-
+    "caiocesarbiomes:pistachio_fruiting_leaves",
+    "caiocesarbiomes:pecan_leaves",
+    "caiocesarbiomes:pecan_fruiting_leaves"
   ]
 }

@@ -528,11 +528,11 @@ public class ModBlocks {
             CarobLeaves::new);
 
     public static final RegistryObject<Block> PECAN_LEAVES = registerBlock("pecan_leaves",
-            () -> new SweetChestnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_FRUITING_LEAVES));
+            () -> new PecanLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PECAN_FRUITING_LEAVES));
     public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
-            () -> new SweetChestnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_LEAVES));
+            () -> new PecanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PECAN_LEAVES));
 
     //Badlands and Eroded Badlands
     public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",

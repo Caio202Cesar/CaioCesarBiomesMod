@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class PecanFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public SweetChestnutFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PecanFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,11 +45,11 @@ public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeSh
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(50) == 0) {
 
-            int dropCount = 5;
+            int dropCount = 6;
 
-            ItemStack itemStack = new ItemStack(ModItems.SWEET_CHESTNUT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.PECAN_NUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -67,21 +67,20 @@ public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeSh
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 5;
+            int dropCount = 3;
 
-            ItemStack itemStack = new ItemStack(ModItems.SWEET_CHESTNUT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.PECAN_NUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.SWEET_CHESTNUT_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, ModBlocks.PECAN_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;
     }
-
 
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
