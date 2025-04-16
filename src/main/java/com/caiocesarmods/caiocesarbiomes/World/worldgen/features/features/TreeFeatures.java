@@ -1118,7 +1118,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_BEACH_VEGETATION = register("humid_subtropical_beach_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SABAL_PALM_FANCY_TREE.withChance(0.6F),
-                            SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F)), SABAL_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F), SOUTHERN_MAGNOLIA_TREE.withChance(0.09F), SABAL_PALM_TREE.withChance(0.7F)),
+                            SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> RAINFOREST_CHESTNUT_TREES = register("rainforest_chestnut",

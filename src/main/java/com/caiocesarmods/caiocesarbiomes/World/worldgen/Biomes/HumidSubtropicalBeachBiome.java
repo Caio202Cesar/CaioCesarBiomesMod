@@ -54,7 +54,6 @@ public class HumidSubtropicalBeachBiome {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withDeciduousSubtropicalForestTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);

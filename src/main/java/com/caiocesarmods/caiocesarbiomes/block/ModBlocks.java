@@ -146,6 +146,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -524,6 +526,13 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
             CarobLeaves::new);
+
+    public static final RegistryObject<Block> PECAN_LEAVES = registerBlock("pecan_leaves",
+            () -> new SweetChestnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
+            () -> new SweetChestnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_LEAVES));
 
     //Badlands and Eroded Badlands
     public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
