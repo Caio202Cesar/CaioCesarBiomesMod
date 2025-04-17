@@ -1386,6 +1386,12 @@ public class TreeFeatures {
                             OCOTEA_FOREST_FANCY_TREE_WITH_CREEPING_FIG.withChance(0.5F)), OCOTEA_FOREST_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_FOREST_EXTRA_VEGETATION = register("mediterranean_oak_forest_extra_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.1F),
+                             CAROB_TREE.withChance(0.1F), ELDERBERRY_TREE.withChance(0.3F),
+                            CORK_OAK_TREE.withChance(0.3F)), LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
+
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
                             LOMBARDY_POPLAR_TREE.withChance(0.1F), CAROB_TREE.withChance(0.1F), ELDERBERRY_TREE.withChance(0.3F),
