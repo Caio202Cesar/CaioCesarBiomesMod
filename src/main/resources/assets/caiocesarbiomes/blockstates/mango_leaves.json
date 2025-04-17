@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/mango_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/mango_leaves2",
+        "weight": 2}
+    ]
+  }
+}
