@@ -108,6 +108,9 @@
     "caiocesarbiomes:pistachio_leaves",
     "caiocesarbiomes:pistachio_fruiting_leaves",
     "caiocesarbiomes:pecan_leaves",
-    "caiocesarbiomes:pecan_fruiting_leaves"
+    "caiocesarbiomes:pecan_fruiting_leaves",
+    "caiocesarbiomes:mango_leaves",
+    "caiocesarbiomes:mango_flowering_leaves",
+    "caiocesarbiomes:mango_fruiting_leaves"
   ]
 }
