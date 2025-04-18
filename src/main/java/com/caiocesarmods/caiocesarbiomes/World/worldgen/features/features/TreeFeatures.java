@@ -945,12 +945,13 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Juniper
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUNIPER_TREE = register("juniper_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MANGO_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.MANGO_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUNIPER_TREE = register("juniper_tree", Feature.TREE.withConfiguration((
+            new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNIPER_LOG),
+                    new SimpleBlockStateProvider(States.JUNIPER_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+            .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUNIPER_SHRUB = register("juniper_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
