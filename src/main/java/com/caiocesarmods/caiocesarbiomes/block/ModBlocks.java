@@ -152,6 +152,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CHINESE_RED_PINE_LOG = registerBlock("chinese_red_pine_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -288,6 +290,8 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> OLEANDER_WHITE_LEAVES = registerBlock("oleander_white_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CHINESE_RED_PINE_LEAVES = registerBlock("chinese_red_pine_leaves",
+            ModLogs::new);
 
     public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
             () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

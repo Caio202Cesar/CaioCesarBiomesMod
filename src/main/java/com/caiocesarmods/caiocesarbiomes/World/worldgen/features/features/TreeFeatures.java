@@ -818,8 +818,8 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("china_pine_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINA_PINE_LOG),
-                    new SimpleBlockStateProvider(States.CHINA_PINE_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
+                    new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
@@ -1184,6 +1184,9 @@ public class TreeFeatures {
 
         protected static final BlockState STONE_PINE_LOG = ModBlocks.STONE_PINE_LOG.get().getDefaultState();
         protected static final BlockState STONE_PINE_LEAVES = ModBlocks.STONE_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CHINESE_RED_PINE_LOG = ModBlocks.CHINESE_RED_PINE_LOG.get().getDefaultState();
+        protected static final BlockState CHINESE_RED_PINE_LEAVES = ModBlocks.CHINESE_RED_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState CRABAPPLE_LOG = ModBlocks.CRABAPPLE_LOG.get().getDefaultState();
         protected static final BlockState PINK_CRABAPPLE_LEAVES = ModBlocks.PINK_CRABAPPLE_LEAVES.get().getDefaultState();
