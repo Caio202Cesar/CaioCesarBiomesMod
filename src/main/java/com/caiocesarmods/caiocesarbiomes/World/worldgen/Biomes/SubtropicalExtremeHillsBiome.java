@@ -65,7 +65,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
             .temperature(0.8F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12570083).withFoliageColor(8293460)
-                    .withGrassColor(6526557).setFogColor(14807295)
+                    .withGrassColor(3504685).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())

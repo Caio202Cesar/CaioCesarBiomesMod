@@ -144,6 +144,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withBunyaPines(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BUNYA_PINES);
     }
+    public static void withSubtropicalForestPines(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_PINES);
+    }
     public static void withTropicalTallPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TROPICAL_TALL_PLANTS_VEGETATION);
     }

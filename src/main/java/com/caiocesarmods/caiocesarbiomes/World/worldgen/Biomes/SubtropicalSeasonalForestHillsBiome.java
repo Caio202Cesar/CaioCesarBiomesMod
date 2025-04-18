@@ -60,6 +60,7 @@ public class SubtropicalSeasonalForestHillsBiome {
       ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestPines(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
