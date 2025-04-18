@@ -142,13 +142,15 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
             ModLogs::new);
-    public static final RegistryObject<Block> FIR_LOG = registerBlock("fir_log",
+    public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
             ModLogs::new);
     public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
             ModLogs::new);
     public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
             ModLogs::new);
     public static final RegistryObject<Block> MANGO_LOG = registerBlock("mango_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
             ModLogs::new);
 
     //Planks
@@ -556,6 +558,10 @@ public class ModBlocks {
             () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.COMMON_HAWTHORN_LEAVES));
 
+    //Subtropical Forests
+    public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
+            ModLeaves::new);
+
     //Badlands and Eroded Badlands
     public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
             JuniperLeaves::new);
@@ -579,6 +585,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MANGO_FRUITING_LEAVES = registerBlock("mango_fruiting_leaves",
             () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_LEAVES));
+
 
 
     //Saplings

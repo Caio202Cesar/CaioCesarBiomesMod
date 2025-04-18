@@ -1009,6 +1009,24 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Douglas Wilson Fir
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DOUGLAS_FIR_LOG),
+                    new SimpleBlockStateProvider(States.DOUGLAS_FIR_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
+    //Blue Spruce
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_SPRUCE = register("blue_spruce",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
+                    new SimpleBlockStateProvider(States.BLUE_SPRUCE_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+
     //Ponderosa Pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PONDEROSA_PINE_TREE = register("ponderosa_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PONDEROSA_PINE_LOG),
@@ -1025,6 +1043,22 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+    //Canary Pine
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_PINE_TREE = register("canary_pine_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_PINE_LOG),
+                    new SimpleBlockStateProvider(States.CANARY_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(17, 2, 10),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_PINE_TREE_TALL = register("canary_pine_tall_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_PINE_LOG),
+                    new SimpleBlockStateProvider(States.CANARY_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(14, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -1035,6 +1069,9 @@ public class TreeFeatures {
 
         protected static final BlockState PONDEROSA_PINE_LOG = ModBlocks.PONDEROSA_PINE_LOG.get().getDefaultState();
         protected static final BlockState PONDEROSA_PINE_LEAVES = ModBlocks.PONDEROSA_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState DOUGLAS_FIR_LOG = ModBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LEAVES = ModBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINYON_LOG = ModBlocks.PINYON_LOG.get().getDefaultState();
         protected static final BlockState PINYON_LEAVES = ModBlocks.PINYON_LEAVES.get().getDefaultState();
@@ -1232,6 +1269,12 @@ public class TreeFeatures {
         protected static final BlockState MANGO_LOG = ModBlocks.MANGO_LOG.get().getDefaultState();
         protected static final BlockState MANGO_LEAVES = ModBlocks.MANGO_LEAVES.get().getDefaultState();
 
+        protected static final BlockState CANARY_PINE_LOG = ModBlocks.CANARY_PINE_LOG.get().getDefaultState();
+        protected static final BlockState CANARY_PINE_LEAVES = ModBlocks.CANARY_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SPRUCE_LOG = Blocks.SPRUCE_LOG.getDefaultState();
+        protected static final BlockState BLUE_SPRUCE_LEAVES = ModBlocks.BLUE_SPRUCE_LEAVES.get().getDefaultState();
+
         protected static final BlockState PODZOL = Blocks.PODZOL.getDefaultState();
 
     }
@@ -1322,6 +1365,18 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> OLEANDER_SHRUBS = register("oleander_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_OLEANDER_SHRUB.withChance(0.3F),
                             DARK_PINK_OLEANDER_SHRUB.withChance(0.3F), RED_OLEANDER_SHRUB.withChance(0.3F)), PINK_OLEANDER_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> LOWLAND_BADLANDS_VEGETATION = register("lowland_badlands_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUNIPER_TREE.withChance(0.3F)),
+                            PINYON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> WOODED_BADLANDS_VEGETATION = register("wooded_badlands_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SPRUCE.withChance(0.3F),
+                            MEGA_SPRUCE.withChance(0.1F), PINE.withChance(0.09F), MEGA_PINE.withChance(0.098F),
+                            PONDEROSA_PINE_TREE_TALL.withChance(0.12F), BLUE_SPRUCE.withChance(0.1F), DOUGLAS_FIR_TREE.withChance(0.3F)),
+                            PONDEROSA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SCRUBLAND_OLEANDER_SHRUBS = register("scrubland_oleander_shrubs",
