@@ -23,7 +23,7 @@ public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> MONTANE_LAUREL_GROVE = BIOMES.register("montane_laurel_grove",
+public static final RegistryObject<Biome> SUBTROPICAL_EXTREME_HILLS = BIOMES.register("subtropical_extreme_hills",
         () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 3.0F, 1.8F));
 
 
