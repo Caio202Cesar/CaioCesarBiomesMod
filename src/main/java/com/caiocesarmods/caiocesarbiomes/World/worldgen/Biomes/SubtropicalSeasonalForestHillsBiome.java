@@ -57,7 +57,6 @@ public class SubtropicalSeasonalForestHillsBiome {
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestPines(biomegenerationsettings$builder);

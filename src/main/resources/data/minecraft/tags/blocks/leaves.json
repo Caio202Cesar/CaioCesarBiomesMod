@@ -116,6 +116,9 @@
     "caiocesarbiomes:walnut_leaves",
     "caiocesarbiomes:walnut_fruiting_leaves",
     "caiocesarbiomes:chinese_red_pine_leaves",
-    "caiocesarbiomes:canary_pine_leaves"
+    "caiocesarbiomes:canary_pine_leaves",
+    "caiocesarbiomes:pinyon_leaves",
+    "caiocesarbiomes:ponderosa_pine_leaves",
+    "caiocesarbiomes:douglas_fir_leaves"
   ]
 }

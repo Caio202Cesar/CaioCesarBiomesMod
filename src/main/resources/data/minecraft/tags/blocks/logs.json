@@ -58,6 +58,10 @@
     "caiocesarbiomes:juniper_log",
     "caiocesarbiomes:walnut_log",
     "caiocesarbiomes:chinese_red_pine_log",
-    "caiocesarbiomes:canary_pine_log"
+    "caiocesarbiomes:canary_pine_log",
+    "caiocesarbiomes:pinyon_log",
+    "caiocesarbiomes:ponderosa_pine_log",
+    "caiocesarbiomes:douglas_fir_log"
+
   ]
 }
