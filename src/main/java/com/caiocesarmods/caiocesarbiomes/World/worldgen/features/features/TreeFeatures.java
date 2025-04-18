@@ -960,6 +960,15 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
+    //Pinyon
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINYON_TREE = register("pinyon_tree", Feature.TREE.withConfiguration((
+            new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PINYON_LOG),
+                    new SimpleBlockStateProvider(States.PINYON_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+            .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
     //Hydrangea
     //Pink hydrangea grows in neutral-alkali soils.
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_HYDRANGEA = register("pink_hydrangea",
@@ -986,13 +995,29 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
-    //Southern Magnolia Tree
+    //Red Maple Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE = register("red_maple_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
                     new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(5, 3, 0),
+                    new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Ponderosa Pine
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PONDEROSA_PINE_TREE = register("ponderosa_pine_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PONDEROSA_PINE_LOG),
+                    new SimpleBlockStateProvider(States.PONDEROSA_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(17, 2, 10),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PONDEROSA_PINE_TREE_TALL = register("ponderosa_pine_tall_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PONDEROSA_PINE_LOG),
+                    new SimpleBlockStateProvider(States.PONDEROSA_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(14, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     public static final class States {
 
@@ -1001,6 +1026,12 @@ public class TreeFeatures {
 
         protected static final BlockState JUNIPER_LOG = ModBlocks.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = ModBlocks.JUNIPER_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PONDEROSA_PINE_LOG = ModBlocks.PONDEROSA_PINE_LOG.get().getDefaultState();
+        protected static final BlockState PONDEROSA_PINE_LEAVES = ModBlocks.PONDEROSA_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PINYON_LOG = ModBlocks.PINYON_LOG.get().getDefaultState();
+        protected static final BlockState PINYON_LEAVES = ModBlocks.PINYON_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAROB_LOG = ModBlocks.CAROB_LOG.get().getDefaultState();
         protected static final BlockState CAROB_LEAVES = ModBlocks.CAROB_LEAVES.get().getDefaultState();
