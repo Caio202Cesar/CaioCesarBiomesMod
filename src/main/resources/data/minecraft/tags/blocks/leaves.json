@@ -111,6 +111,10 @@
     "caiocesarbiomes:pecan_fruiting_leaves",
     "caiocesarbiomes:mango_leaves",
     "caiocesarbiomes:mango_flowering_leaves",
-    "caiocesarbiomes:mango_fruiting_leaves"
+    "caiocesarbiomes:mango_fruiting_leaves",
+    "caiocesarbiomes:juniper_leaves",
+    "caiocesarbiomes:juniper_fruiting_leaves",
+    "caiocesarbiomes:walnut_leaves",
+    "caiocesarbiomes:walnut_fruiting_leaves"
   ]
 }
