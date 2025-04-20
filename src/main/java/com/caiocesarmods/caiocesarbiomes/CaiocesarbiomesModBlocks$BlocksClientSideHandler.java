@@ -108,5 +108,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CanaryDateSapling.registerRenderLayer();
         SabalSapling.registerRenderLayer();
         CoconutSapling.registerRenderLayer();
+        MangoSapling.registerRenderLayer();
     }
 }

@@ -584,13 +584,13 @@ public class ModBlocks {
     //Jungle
     public static final RegistryObject<Block> MANGO_LEAVES = registerBlock("mango_leaves",
             () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_FLOWERING_LEAVES));
     public static final RegistryObject<Block> MANGO_FLOWERING_LEAVES = registerBlock("mango_flowering_leaves",
             () -> new CherryPlumFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_FRUITING_LEAVES));
     public static final RegistryObject<Block> MANGO_FRUITING_LEAVES = registerBlock("mango_fruiting_leaves",
             () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_LEAVES));
 
 
 
@@ -1073,6 +1073,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_PLANE_SAPLING = BLOCKS.register("potted_plane_sapling",
             () -> new FlowerPotBlock(ModBlocks.PLANE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> MANGO_SAPLING = registerBlock("mango_sapling",
+            MangoSapling::new);
 
     //Tall Plants
     public static final RegistryObject<Block> DESERT_ROSE_PLANT = registerBlock("desert_rose_plant",
