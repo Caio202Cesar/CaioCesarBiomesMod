@@ -1,19 +1,24 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.properties.DoubleBlockHalf;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -22,8 +27,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class BlueberryBush extends DoublePlantBlock {
-    public BlueberryBush() {
+public class BlueberryFruitingBush extends DoublePlantBlock {
+    public BlueberryFruitingBush() {
         super(Properties.from(Blocks.ROSE_BUSH).hardnessAndResistance(0.2f).tickRandomly()
                 .sound(SoundType.PLANT).harvestTool(ToolType.HOE).notSolid());
     }
@@ -33,24 +38,28 @@ public class BlueberryBush extends DoublePlantBlock {
     }
 
     @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(5) != 0) return; // 20% chance
+    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
+        if (!world.isRemote()) {
+            // Determine which half is clicked
+            boolean isUpper = state.get(HALF) == DoubleBlockHalf.UPPER;
+            BlockPos lowerPos = isUpper ? pos.down() : pos;
+            BlockPos upperPos = isUpper ? pos : pos.up();
 
-        DoubleBlockHalf half = state.get(HALF);
-        BlockPos lowerPos = (half == DoubleBlockHalf.LOWER) ? pos : pos.down();
-        BlockPos upperPos = lowerPos.up();
+            // Drop the fruit
+            ItemStack fruit = new ItemStack(ModItems.BLUEBERRIES.get());
+            InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), fruit);
 
-        BlockState lowerState = world.getBlockState(lowerPos);
-        BlockState upperState = world.getBlockState(upperPos);
+            // Replace both parts with the non-fruiting variant (normal bush)
+            BlockState normalLower = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER);
+            BlockState normalUpper = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER);
 
-        // Make sure it's the correct bush before replacing
-        if (lowerState.getBlock() == this && upperState.getBlock() == this &&
-                lowerState.get(HALF) == DoubleBlockHalf.LOWER && upperState.get(HALF) == DoubleBlockHalf.UPPER) {
+            world.setBlockState(lowerPos, normalLower, 18);
+            world.setBlockState(upperPos, normalUpper, 18);
 
-            // Set both flowering states together, avoiding neighbor updates
-            world.setBlockState(lowerPos, ModBlocks.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER), 18);
-            world.setBlockState(upperPos, ModBlocks.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 18);
+            return ActionResultType.SUCCESS;
         }
+
+        return ActionResultType.CONSUME;
     }
 
     @Override
@@ -66,7 +75,7 @@ public class BlueberryBush extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLUEBERRY_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.BLUEBERRY_FRUITING_BUSH.get(), RenderType.getCutout());
 
     }
 

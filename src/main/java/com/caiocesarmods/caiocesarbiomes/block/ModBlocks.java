@@ -1093,9 +1093,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUEBERRY_BUSH = registerBlock("blueberry_bush",
             BlueberryBush::new);
     public static final RegistryObject<Block> BLUEBERRY_FLOWERING_BUSH = registerBlock("blueberry_flowering_bush",
-            ModTallPlant::new);
+            BlueberryFloweringBush::new);
     public static final RegistryObject<Block> BLUEBERRY_FRUITING_BUSH = registerBlock("blueberry_fruiting_bush",
-            ModTallPlant::new);
+            BlueberryFruitingBush::new);
 
     //Vines
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",
