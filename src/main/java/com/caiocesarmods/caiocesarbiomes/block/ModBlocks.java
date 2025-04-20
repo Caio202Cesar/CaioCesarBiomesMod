@@ -635,6 +635,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
             ModLeaves::new);
 
+    //Taiga - includes also bush juniper
+    public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
+            ModLeaves::new); //the same tree structure as southern magnolia
+    public static final RegistryObject<Block> LARIX_LEAVES = registerBlock("larix_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
