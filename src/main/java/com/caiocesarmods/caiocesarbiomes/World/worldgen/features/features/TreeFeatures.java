@@ -1308,11 +1308,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> JUNGLE_EXTRA_VEGETATION = register("jungle_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
-                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.1F), MANGO_TREE.withChance(0.08F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.1F), CREEPING_FIG_AVOCADO_TREE.withChance(0.078F),
+                            MANGO_TREE.withChance(0.18F), LEMON_TREE.withChance(0.3F), BUDDHA_HAND_TREE.withChance(0.078F), CITRON_TREE.withChance(0.3F),
+                            TAHITI_LIME_TREE.withChance(0.2F),
                             INDIAN_LAUREL_TREE.withChance(0.5F), AVOCADO_TREE.withChance(0.4F),
                             WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.24F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.28F),
-                    STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.09F), RED_CRAPE_MYRTLE_TREE.withChance(0.2F), PINK_CRAPE_MYRTLE_TREE.withChance(0.2F),
-                            WHITE_CRAPE_MYRTLE_TREE.withChance(0.2F), PURPLE_CRAPE_MYRTLE_TREE.withChance(0.2F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.09F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",
@@ -1355,9 +1356,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F),
-                            INDIAN_CORAL_TREE.withChance(0.2F), INDIAN_CORAL_FANCY_TREE.withChance(0.4F)),
+                            INDIAN_CORAL_TREE.withChance(0.2F), INDIAN_CORAL_FANCY_TREE.withChance(0.4F),RED_CRAPE_MYRTLE_TREE.withChance(0.089F),
+                            PINK_CRAPE_MYRTLE_TREE.withChance(0.089F),
+                            WHITE_CRAPE_MYRTLE_TREE.withChance(0.089F), PURPLE_CRAPE_MYRTLE_TREE.withChance(0.089F), TAMARIND_TREE.withChance(0.23F),
+                            POMEGRANATE_TREE.withChance(0.089F)),
                             SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
@@ -1587,7 +1591,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            STARFRUIT_TREE.withChance(0.4F), CREEPING_FIG_AVOCADO_TREE.withChance(0.4F)), AVOCADO_TREE))
+                            STARFRUIT_TREE.withChance(0.4F), CREEPING_FIG_AVOCADO_TREE.withChance(0.4F), MANGO_TREE.withChance(0.3F),
+                            AVOCADO_TREE.withChance(0.3F)), MANGO_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 0))));
 

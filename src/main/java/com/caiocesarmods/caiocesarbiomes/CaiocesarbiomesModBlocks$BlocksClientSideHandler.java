@@ -36,6 +36,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CoconutBunchBlock.registerRenderLayer();
         IvyVine.registerRenderLayer();
 
+        BlueberryBush.registerRenderLayer();
+
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();
         FennelCropBlock.registerRenderLayer();

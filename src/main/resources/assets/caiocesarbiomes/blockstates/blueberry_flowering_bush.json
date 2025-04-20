@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/blueberry_bush_flowering_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/blueberry_bush_flowering_bottom"
+    }
+  }
+}

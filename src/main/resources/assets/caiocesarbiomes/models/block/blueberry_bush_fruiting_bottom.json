@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/blueberry_bush_fruiting_bottom",
+    "particle": "caiocesarbiomes:block/blueberry_bush_fruiting_bottom"
+  }
+}
