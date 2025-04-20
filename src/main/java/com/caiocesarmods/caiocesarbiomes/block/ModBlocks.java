@@ -156,6 +156,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROWAN_LOG = registerBlock("rowan_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -563,6 +565,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> COMMON_HAWTHORN_FRUITING_LEAVES = registerBlock("common_hawthorn_fruiting_leaves",
             () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.COMMON_HAWTHORN_LEAVES));
+
+    public static final RegistryObject<Block> ROWAN_LEAVES = registerBlock("rowan_leaves",
+            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> ROWAN_FLOWERING_LEAVES = registerBlock("rowan_flowering_leaves",
+            () -> new CherryPlumFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_FRUITING_LEAVES));
+    public static final RegistryObject<Block> ROWAN_FRUITING_LEAVES = registerBlock("rowan_fruiting_leaves",
+            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_LEAVES));
 
     //Subtropical Forests
     public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",

@@ -1082,10 +1082,35 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+    //Rowan Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROWAN_TREE1 = register("rowan_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
+                    new SimpleBlockStateProvider(States.ROWAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROWAN_TREE2 = register("rowan_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ROWAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
+    //Hazelnut Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAZELNUT_TREE = register("hazelnut_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ROWAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ROWAN_LOG = ModBlocks.ROWAN_LOG.get().getDefaultState();
+        protected static final BlockState ROWAN_LEAVES = ModBlocks.ROWAN_LEAVES.get().getDefaultState();
 
         protected static final BlockState JUNIPER_LOG = ModBlocks.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = ModBlocks.JUNIPER_LEAVES.get().getDefaultState();
@@ -1351,6 +1376,14 @@ public class TreeFeatures {
                             SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), PLANE_TREE.withChance(0.3F),
                             PLANE_FANCY_TREE.withChance(0.35F)), SOUTHERN_LIVE_OAK_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
+
+    public static final ConfiguredFeature<?, ?> BIRCH_FOREST_EXTRA_VEGETATION = register("birch_forest_extra_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            ROWAN_TREE2.withChance(0.2F), ROWAN_TREE1.withChance(0.5F),
+                            JUNIPER_SHRUB.withChance(0.07F), PLANE_TREE.withChance(0.3F),
+                            PLANE_FANCY_TREE.withChance(0.35F), HAZELNUT_TREE.withChance(0.1F)), ELDERBERRY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 

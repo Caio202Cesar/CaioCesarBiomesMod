@@ -38,6 +38,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.GARDENIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> TROPICAL_TALL_PLANTS_LIST = ImmutableList.of(() -> {
@@ -209,6 +211,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState RED_CURRANT_BUSH = ModBlocks.RED_CURRANT_SHRUB.get().getDefaultState();
         protected static final BlockState BLACK_CURRANT_BUSH = ModBlocks.BLACK_CURRANT_SHRUB.get().getDefaultState();
         protected static final BlockState SPIDER_LILY = ModBlocks.SPIDER_LILY.get().getDefaultState();
+        protected static final BlockState BLUEBERRY_BUSH = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState();
 
     }
 
