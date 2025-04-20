@@ -158,6 +158,20 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ROWAN_LOG = registerBlock("rowan_log",
             ModLogs::new);
+    public static final RegistryObject<Block> HAWTHORN_LOG = registerBlock("hawthorn_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> GABON_EBONY_LOG = registerBlock("gabon_ebony_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLUE_MAHOE_LOG = registerBlock("blue_mahoe_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -604,6 +618,22 @@ public class ModBlocks {
             () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_LEAVES));
 
+    public static final RegistryObject<Block> GABON_EBONY_LEAVES = registerBlock("gabon_ebony_leaves",
+            ModLeaves::new);
+
+    public static final RegistryObject<Block> PURPLEHEART_LEAVES = registerBlock("purpleheart_leaves",
+            ModLeaves::new);
+
+    //Savanna
+    public static final RegistryObject<Block> MARULA_LEAVES = registerBlock("marula_leaves",
+            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
+            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_LEAVES));
+
+    public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
+            ModLeaves::new);
 
 
     //Saplings
