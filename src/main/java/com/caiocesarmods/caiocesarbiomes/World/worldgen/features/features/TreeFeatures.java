@@ -1098,8 +1098,8 @@ public class TreeFeatures {
 
     //Hazelnut Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAZELNUT_TREE = register("hazelnut_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.ROWAN_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HAZELNUT_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.HAZELNUT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
@@ -1108,6 +1108,9 @@ public class TreeFeatures {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState HAZELNUT_LOG = ModBlocks.HAZELNUT_LOG.get().getDefaultState();
+        protected static final BlockState HAZELNUT_LEAVES = ModBlocks.HAZELNUT_LEAVES.get().getDefaultState();
 
         protected static final BlockState ROWAN_LOG = ModBlocks.ROWAN_LOG.get().getDefaultState();
         protected static final BlockState ROWAN_LEAVES = ModBlocks.ROWAN_LEAVES.get().getDefaultState();
