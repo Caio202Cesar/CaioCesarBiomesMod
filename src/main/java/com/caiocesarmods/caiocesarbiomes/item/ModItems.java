@@ -83,6 +83,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> WALNUT = ITEMS.register("walnut",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> BREADFRUIT = ITEMS.register("breadfruit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> MARULA = ITEMS.register("marula",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> ROWAN_BERRIES = ITEMS.register("rowan_berries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> HAWTHORN_BERRIES = ITEMS.register("hawthorn_berries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

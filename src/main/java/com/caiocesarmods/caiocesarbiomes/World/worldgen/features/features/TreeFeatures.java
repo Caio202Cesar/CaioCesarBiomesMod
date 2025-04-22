@@ -1117,7 +1117,15 @@ public class TreeFeatures {
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new MegaJungleTrunkPlacer(10, 2, 19),
                     new TwoLayerFeature(1, 1, 2))).build()));
-,
+
+    //Marula
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARULA_TREE = register("marula_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     //Soursop
 
     //Sugar apple
@@ -1126,6 +1134,9 @@ public class TreeFeatures {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState MARULA_LOG = ModBlocks.MARULA_LOG.get().getDefaultState();
+        protected static final BlockState MARULA_LEAVES = ModBlocks.MARULA_LEAVES.get().getDefaultState();
 
         protected static final BlockState HAZELNUT_LOG = ModBlocks.HAZELNUT_LOG.get().getDefaultState();
         protected static final BlockState HAZELNUT_LEAVES = ModBlocks.HAZELNUT_LEAVES.get().getDefaultState();
