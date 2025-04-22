@@ -573,13 +573,13 @@ public class ModBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.WALNUT_LEAVES));
 
     public static final RegistryObject<Block> HAWTHORN_LEAVES = registerBlock("hawthorn_leaves",
-            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new HawthornLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.HAWTHORN_FLOWERING_LEAVES));
     public static final RegistryObject<Block> HAWTHORN_FLOWERING_LEAVES = registerBlock("hawthorn_flowering_leaves",
-            () -> new CherryPlumFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new HawthornFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.HAWTHORN_FRUITING_LEAVES));
     public static final RegistryObject<Block> HAWTHORN_FRUITING_LEAVES = registerBlock("hawthorn_fruiting_leaves",
-            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new HawthornFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.HAWTHORN_LEAVES));
 
     public static final RegistryObject<Block> ROWAN_LEAVES = registerBlock("rowan_leaves",
@@ -621,13 +621,13 @@ public class ModBlocks {
 
     //Jungle
     public static final RegistryObject<Block> MANGO_LEAVES = registerBlock("mango_leaves",
-            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MangoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_FLOWERING_LEAVES));
     public static final RegistryObject<Block> MANGO_FLOWERING_LEAVES = registerBlock("mango_flowering_leaves",
-            () -> new CherryPlumFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MangoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_FRUITING_LEAVES));
     public static final RegistryObject<Block> MANGO_FRUITING_LEAVES = registerBlock("mango_fruiting_leaves",
-            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MangoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MANGO_LEAVES));
 
     public static final RegistryObject<Block> BREADFRUIT_LEAVES = registerBlock("breadfruit_leaves",
@@ -645,10 +645,10 @@ public class ModBlocks {
 
     //Savanna
     public static final RegistryObject<Block> MARULA_LEAVES = registerBlock("marula_leaves",
-            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MarulaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_FRUITING_LEAVES));
     public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
-            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_LEAVES));
 
     public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
