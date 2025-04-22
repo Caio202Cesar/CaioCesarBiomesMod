@@ -18,6 +18,8 @@ import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
+import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
+import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunkplacer.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -1000,29 +1002,8 @@ public class TreeFeatures {
 
     //Hydrangea
     //Pink hydrangea grows in neutral-alkali soils.
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_HYDRANGEA = register("pink_hydrangea",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
-                    new StraightTrunkPlacer(1, 0, 0),
-                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
     //Grows in acidic soils - the same soils in which tea trees grow.
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_HYDRANGEA = register("blue_hydrangea",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
-                    new StraightTrunkPlacer(1, 0, 0),
-                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
     //Grows in slightly acidic soil
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_HYDRANGEA = register("purple_hydrangea",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CORK_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.CORK_OAK_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
-                    new StraightTrunkPlacer(1, 0, 0),
-                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
     //Red Maple Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE = register("red_maple_tree",
@@ -1104,6 +1085,43 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Sausage Tree (savanna)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAUSAGE_TREE = register("sausage_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAUSAGE_TREE_LOG),
+                    new SimpleBlockStateProvider(States.SAUSAGE_TREE_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+
+    //Hawthorn
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAWTHORN_TREE = register("hawthorn_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HAWTHORN_LOG),
+                    new SimpleBlockStateProvider(States.HAWTHORN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 4),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Breadfruit (jungle)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BREADFRUIT_TREE = register("breadfruit_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(States.BREADFRUIT_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(12, 6, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Purpleheart
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLEHEART_TREE = register("purpleheart_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PURPLEHEART_LOG),
+                    new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
+                    new MegaJungleTrunkPlacer(10, 2, 19),
+                    new TwoLayerFeature(1, 1, 2))).build()));
+,
+    //Soursop
+
+    //Sugar apple
+
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
@@ -1112,8 +1130,19 @@ public class TreeFeatures {
         protected static final BlockState HAZELNUT_LOG = ModBlocks.HAZELNUT_LOG.get().getDefaultState();
         protected static final BlockState HAZELNUT_LEAVES = ModBlocks.HAZELNUT_LEAVES.get().getDefaultState();
 
+        protected static final BlockState SAUSAGE_TREE_LOG = ModBlocks.SAUSAGE_TREE_LOG.get().getDefaultState();
+        protected static final BlockState SAUSAGE_TREE_LEAVES = ModBlocks.SAUSAGE_TREE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PURPLEHEART_LOG = ModBlocks.PURPLEHEART_LOG.get().getDefaultState();
+        protected static final BlockState PURPLEHEART_LEAVES = ModBlocks.PURPLEHEART_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BREADFRUIT_LEAVES = ModBlocks.BREADFRUIT_LEAVES.get().getDefaultState();
+
         protected static final BlockState ROWAN_LOG = ModBlocks.ROWAN_LOG.get().getDefaultState();
         protected static final BlockState ROWAN_LEAVES = ModBlocks.ROWAN_LEAVES.get().getDefaultState();
+
+        protected static final BlockState HAWTHORN_LOG = ModBlocks.HAWTHORN_LOG.get().getDefaultState();
+        protected static final BlockState HAWTHORN_LEAVES = ModBlocks.HAWTHORN_LEAVES.get().getDefaultState();
 
         protected static final BlockState JUNIPER_LOG = ModBlocks.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = ModBlocks.JUNIPER_LEAVES.get().getDefaultState();
