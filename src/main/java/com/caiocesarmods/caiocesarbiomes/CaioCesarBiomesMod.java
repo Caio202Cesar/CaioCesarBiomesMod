@@ -6,6 +6,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.potion.PotionBrewing;
@@ -44,6 +45,8 @@ public class CaioCesarBiomesMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
+
+        ModFluids.register(eventBus);
 
         ModPotions.register(eventBus);
 
