@@ -1428,7 +1428,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), PLANE_TREE.withChance(0.3F),
-                            PLANE_FANCY_TREE.withChance(0.35F)), SOUTHERN_LIVE_OAK_TREE))
+                            PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F)), SOUTHERN_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/durian_flowering_leaves",
+    "particle": "caiocesarbiomes:block/durian_flowering_leaves"
+  }
+}
