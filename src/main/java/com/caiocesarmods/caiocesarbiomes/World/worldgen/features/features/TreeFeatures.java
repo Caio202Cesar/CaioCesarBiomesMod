@@ -1110,7 +1110,15 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(12, 6, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Purpleheart
+    //Durian (jungle)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DURIAN_TREE = register("durian_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.DURIAN_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Purpleheart (jungle)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLEHEART_TREE = register("purpleheart_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PURPLEHEART_LOG),
                     new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
@@ -1118,7 +1126,7 @@ public class TreeFeatures {
                     new MegaJungleTrunkPlacer(10, 2, 19),
                     new TwoLayerFeature(1, 1, 2))).build()));
 
-    //Marula
+    //Marula (savanna)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARULA_TREE = register("marula_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LEAVES),
@@ -1148,6 +1156,7 @@ public class TreeFeatures {
         protected static final BlockState PURPLEHEART_LEAVES = ModBlocks.PURPLEHEART_LEAVES.get().getDefaultState();
 
         protected static final BlockState BREADFRUIT_LEAVES = ModBlocks.BREADFRUIT_LEAVES.get().getDefaultState();
+        protected static final BlockState DURIAN_LEAVES = ModBlocks.DURIAN_LEAVES.get().getDefaultState();
 
         protected static final BlockState ROWAN_LOG = ModBlocks.ROWAN_LOG.get().getDefaultState();
         protected static final BlockState ROWAN_LEAVES = ModBlocks.ROWAN_LEAVES.get().getDefaultState();
@@ -1406,9 +1415,10 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> JUNGLE_EXTRA_VEGETATION = register("jungle_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
-                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.1F), CREEPING_FIG_AVOCADO_TREE.withChance(0.078F),
-                            MANGO_TREE.withChance(0.18F), LEMON_TREE.withChance(0.3F), BUDDHA_HAND_TREE.withChance(0.078F), CITRON_TREE.withChance(0.3F),
-                            TAHITI_LIME_TREE.withChance(0.2F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.078F),
+                            MANGO_TREE.withChance(0.09F), LEMON_TREE.withChance(0.3F), BUDDHA_HAND_TREE.withChance(0.078F), CITRON_TREE.withChance(0.3F),
+                            TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.1F), BREADFRUIT_TREE.withChance(0.15F),
+                            PURPLEHEART_TREE.withChance(0.098F),
                             INDIAN_LAUREL_TREE.withChance(0.5F), AVOCADO_TREE.withChance(0.4F),
                             WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.24F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.28F),
                     STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.09F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -1426,7 +1436,8 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             ROWAN_TREE2.withChance(0.2F), ROWAN_TREE1.withChance(0.5F),
                             JUNIPER_SHRUB.withChance(0.07F), PLANE_TREE.withChance(0.3F),
-                            PLANE_FANCY_TREE.withChance(0.35F), HAZELNUT_TREE.withChance(0.1F)), ELDERBERRY_TREE))
+                            PLANE_FANCY_TREE.withChance(0.35F), HAZELNUT_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.09F))
+                            , ELDERBERRY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
@@ -1463,10 +1474,10 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F),
-                            INDIAN_CORAL_TREE.withChance(0.2F), INDIAN_CORAL_FANCY_TREE.withChance(0.4F),RED_CRAPE_MYRTLE_TREE.withChance(0.089F),
-                            PINK_CRAPE_MYRTLE_TREE.withChance(0.089F),
-                            WHITE_CRAPE_MYRTLE_TREE.withChance(0.089F), PURPLE_CRAPE_MYRTLE_TREE.withChance(0.089F), TAMARIND_TREE.withChance(0.23F),
-                            POMEGRANATE_TREE.withChance(0.089F)),
+                            INDIAN_CORAL_TREE.withChance(0.12F), INDIAN_CORAL_FANCY_TREE.withChance(0.21F), RED_CRAPE_MYRTLE_TREE.withChance(0.07F),
+                            PINK_CRAPE_MYRTLE_TREE.withChance(0.07F), WHITE_CRAPE_MYRTLE_TREE.withChance(0.07F),
+                            PURPLE_CRAPE_MYRTLE_TREE.withChance(0.07F), TAMARIND_TREE.withChance(0.23F),
+                            MARULA_TREE.withChance(0.3F), SAUSAGE_TREE.withChance(0.4F)),
                             SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
