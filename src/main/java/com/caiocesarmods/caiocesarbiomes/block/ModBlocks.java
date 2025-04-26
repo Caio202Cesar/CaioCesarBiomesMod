@@ -1200,6 +1200,12 @@ public class ModBlocks {
             SpanishMoss::new);
     public static final RegistryObject<Block> IVY = registerBlock("ivy",
             IvyVine::new);
+    public static final RegistryObject<Block> KIWI_VINE = registerBlock("kiwi_vine",
+            CreepingFigVine::new);
+    public static final RegistryObject<Block> KIWI_FLOWERING_VINE = registerBlock("kiwi_flowering_vine",
+            CreepingFigFruitingVine::new);
+    public static final RegistryObject<Block> KIWI_FRUITING_VINE = registerBlock("kiwi_fruiting_vine",
+            CreepingFigRipeFruitingVine::new);
 
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
             () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().

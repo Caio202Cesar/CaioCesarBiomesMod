@@ -39,6 +39,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("ivy_trunk_decorator",
                     () -> new TreeDecoratorType<>(IvyTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<KiwiVineTrunkDecorator>> KIWI_VINE_TRUNK_DECORATOR =
+            TREE_DECORATORS.register("kiwi_vine_trunk_decorator",
+                    () -> new TreeDecoratorType<>(KiwiVineTrunkDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
