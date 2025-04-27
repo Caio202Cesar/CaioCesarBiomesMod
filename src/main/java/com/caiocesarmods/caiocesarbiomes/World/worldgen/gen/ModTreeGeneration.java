@@ -110,7 +110,7 @@ public class ModTreeGeneration {
             base.add(() -> TreeFeatures.SAVANNA_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(1, 0.5f, 3))));
+                            new AtSurfaceWithExtraConfig(1, 0.5f, 2))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.SWAMP.getLocation()))
