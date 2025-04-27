@@ -1240,7 +1240,8 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new MegaJungleTrunkPlacer(10, 2, 19),
-                    new TwoLayerFeature(1, 1, 2))).build()));
+                    new TwoLayerFeature(1, 1, 2))).setDecorators(ImmutableList.of(TrunkVineTreeDecorator.INSTANCE,
+                            LeaveVineTreeDecorator.field_236871_b_)).build()));
 
     //Marula (savanna)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARULA_TREE = register("marula_tree",
@@ -1531,13 +1532,13 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> JUNGLE_EXTRA_VEGETATION = register("jungle_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
-                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.078F),
-                            MANGO_TREE.withChance(0.09F), LEMON_TREE.withChance(0.3F), BUDDHA_HAND_TREE.withChance(0.078F), CITRON_TREE.withChance(0.3F),
-                            TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.1F), BREADFRUIT_TREE.withChance(0.15F),
-                            PURPLEHEART_TREE.withChance(0.098F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.12F),
+                            MANGO_TREE.withChance(0.12F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
+                            TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.2F), BREADFRUIT_TREE.withChance(0.15F),
+                            PURPLEHEART_TREE.withChance(0.2F),
                             INDIAN_LAUREL_TREE.withChance(0.5F), AVOCADO_TREE.withChance(0.4F),
                             WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.24F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.28F),
-                    STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.09F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.12F)), BIG_INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",

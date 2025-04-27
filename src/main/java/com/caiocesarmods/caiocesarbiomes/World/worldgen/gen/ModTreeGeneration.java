@@ -162,5 +162,19 @@ public class ModTreeGeneration {
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(6, 0.1f, 1))));
         }
+
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BIRCH_FOREST.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BIRCH_FOREST_HILLS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.TALL_BIRCH_FOREST.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.TALL_BIRCH_HILLS.getLocation())))))) {
+
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> TreeFeatures.SAVANNA_EXTRA_VEGETATION
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(
+                            new AtSurfaceWithExtraConfig(0, 0.1f, 1))));
+        }
     }
 }
