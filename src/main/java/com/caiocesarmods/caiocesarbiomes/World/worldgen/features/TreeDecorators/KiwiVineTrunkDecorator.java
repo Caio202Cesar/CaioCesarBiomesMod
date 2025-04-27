@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.custom.KiwiVine;
 import com.caiocesarmods.caiocesarbiomes.block.custom.SpanishMoss;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -33,25 +34,25 @@ public class KiwiVineTrunkDecorator extends TreeDecorator {
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos = pos.west();
                 if (Feature.isAirAt(world, blockpos)) {
-                    this.placeVine(world, blockpos, SpanishMoss.EAST, placed, boundingBox);
+                    this.placeVine(world, blockpos, KiwiVine.EAST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos1 = pos.east();
                 if (Feature.isAirAt(world, blockpos1)) {
-                    this.placeVine(world, blockpos1, SpanishMoss.WEST, placed, boundingBox);
+                    this.placeVine(world, blockpos1, KiwiVine.WEST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos2 = pos.north();
                 if (Feature.isAirAt(world, blockpos2)) {
-                    this.placeVine(world, blockpos2, SpanishMoss.SOUTH, placed, boundingBox);
+                    this.placeVine(world, blockpos2, KiwiVine.SOUTH, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos3 = pos.south();
                 if (Feature.isAirAt(world, blockpos3)) {
-                    this.placeVine(world, blockpos3, SpanishMoss.NORTH, placed, boundingBox);
+                    this.placeVine(world, blockpos3, KiwiVine.NORTH, placed, boundingBox);
                 }
             }
         });

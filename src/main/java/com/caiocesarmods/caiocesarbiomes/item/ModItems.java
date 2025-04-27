@@ -91,6 +91,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> HAWTHORN_BERRIES = ITEMS.register("hawthorn_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> DURIAN = ITEMS.register("durian",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> KIWI_FRUITS = ITEMS.register("kiwi_fruits",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

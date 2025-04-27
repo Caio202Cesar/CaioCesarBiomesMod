@@ -242,6 +242,12 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(5, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_MAGNOLIA_WITH_KIWI = register("southern_magnolia_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SOUTHERN_MAGNOLIA_LOG),
+                    new SimpleBlockStateProvider(States.SOUTHERN_MAGNOLIA_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(5, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).build()));
 
     //Pomegranate Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> POMEGRANATE_TREE = register("pomegranate_tree",
@@ -338,7 +344,15 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LOQUAT_LOG),
                     new SimpleBlockStateProvider(States.LOQUAT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOQUAT_TREE_WITH_KIWI = register("loquat_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LOQUAT_LOG),
+                    new SimpleBlockStateProvider(States.LOQUAT_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Elderberry Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ELDERBERRY_TREE = register("elderberry_tree",
@@ -400,13 +414,44 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MULBERRY_TREE_WITH_KIWI = register("mulberry_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MULBERRY_LOG),
+                    new SimpleBlockStateProvider(States.MULBERRY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE))
+                    .setIgnoreVines().build()));
+
+    //Kiwi vined subtropical forest trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_TREE_WITH_KIWI = register("forest_ocotea_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_FOREST_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_KIWI = register("oak_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).build()));
 
     //Starfruit Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE = register("starfruit_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STARFRUIT_LOG),
                     new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE_WITH_KIWI = register("starfruit_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STARFRUIT_LOG),
+                    new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Camellia Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMELLIA_TREE = register("camellia_tree",
@@ -415,6 +460,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMELLIA_TREE_WITH_KIWI = register("camellia_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMELLIA_LOG),
+                    new SimpleBlockStateProvider(States.CAMELLIA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Tea Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEA_TREE = register("tea_tree",
@@ -423,6 +475,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(2, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEA_TREE_WITH_KIWI = register("tea_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMELLIA_LOG),
+                    new SimpleBlockStateProvider(States.TEA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(2, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Citrus Trees - Mandarin
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANDARIN_TREE = register("mandarin_tree",
@@ -431,6 +490,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANDARIN_TREE_WITH_KIWI = register("mandarin_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
+                    new SimpleBlockStateProvider(States.MANDARIN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Citrus Trees - Orange
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_TREE = register("orange_tree",
@@ -439,6 +505,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_TREE_WITH_KIWI = register("orange_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
+                    new SimpleBlockStateProvider(States.ORANGE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Citrus Trees - Lemon
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LEMON_TREE = register("lemon_tree",
@@ -477,6 +550,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRAPEFRUIT_TREE_WITH_KIWI = register("grapefruit_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
+                    new SimpleBlockStateProvider(States.GRAPEFRUIT_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Southern Live Oak
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE = register("southern_live_oak_tree",
@@ -757,7 +837,8 @@ public class TreeFeatures {
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE,
+                            new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Cooper Beech Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOPER_BEECH_TREE = register("cooper_beech_tree",
@@ -802,6 +883,14 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE_WITH_KIWI = register("plane_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE))
+                    .setIgnoreVines().build()));
 
     //Desert Rose Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_DESERT_ROSE_TREE = register("socotra_desert_rose_tree",
@@ -1012,6 +1101,12 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE_WITH_KIWI = register("red_maple_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
+                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(8, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of((KiwiVineTrunkDecorator.INSTANCE))).build()));
 
     //Douglas Wilson Fir
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
@@ -1062,7 +1157,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(14, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_PINE_WITH_KIWI = register("canary_pine_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_PINE_LOG),
+                            new SimpleBlockStateProvider(States.CANARY_PINE_LEAVES),
+                            new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                            new StraightTrunkPlacer(10, 2, 10),
+                            new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of((KiwiVineTrunkDecorator.INSTANCE), new AlterGroundTreeDecorator(
+                            new SimpleBlockStateProvider(States.PODZOL)))).build()));
     //Rowan Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROWAN_TREE1 = register("rowan_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
