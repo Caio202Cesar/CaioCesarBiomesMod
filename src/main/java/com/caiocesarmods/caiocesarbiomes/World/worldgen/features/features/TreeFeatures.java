@@ -1035,6 +1035,13 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PECAN_TREE_WITH_KIWI = register("pecan_tree_with_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PECAN_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PECAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Mango
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANGO_FANCY_TREE = register("mango_fancy_tree",
@@ -1529,8 +1536,10 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
-                            SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), PLANE_TREE.withChance(0.3F),
-                            PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F)), SOUTHERN_LIVE_OAK_TREE))
+                            SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), SOUTHERN_MAGNOLIA_WITH_KIWI.withChance(0.07F), PLANE_TREE.withChance(0.3F),
+                            PLANE_TREE_WITH_KIWI.withChance(0.09F),
+                            PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.049F)),
+                            SOUTHERN_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
