@@ -1114,8 +1114,15 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of((KiwiVineTrunkDecorator.INSTANCE))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE_WITH_CREEPING_FIG = register("red_maple_tree_with_creeping_fig",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
+                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(8, 3, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE)).build()));
 
-    //Douglas Wilson Fir
+    //Douglas Fir
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DOUGLAS_FIR_LOG),
                     new SimpleBlockStateProvider(States.DOUGLAS_FIR_LEAVES),
@@ -1538,7 +1545,9 @@ public class TreeFeatures {
                             SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), SOUTHERN_MAGNOLIA_WITH_KIWI.withChance(0.07F), PLANE_TREE.withChance(0.3F),
                             PLANE_TREE_WITH_KIWI.withChance(0.09F),
-                            PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.049F)),
+                            PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.049F),
+                            RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.077F),
+                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F)),
                             SOUTHERN_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
