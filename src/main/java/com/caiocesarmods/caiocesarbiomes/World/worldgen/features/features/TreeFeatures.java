@@ -1533,7 +1533,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> JUNGLE_EXTRA_VEGETATION = register("jungle_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
                             BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.12F),
-                            MANGO_TREE.withChance(0.12F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
+                            MANGO_TREE.withChance(0.15F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
                             TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.2F), BREADFRUIT_TREE.withChance(0.15F),
                             PURPLEHEART_TREE.withChance(0.2F),
                             INDIAN_LAUREL_TREE.withChance(0.5F), AVOCADO_TREE.withChance(0.4F),
@@ -1595,12 +1595,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F),
-                            INDIAN_CORAL_TREE.withChance(0.12F), INDIAN_CORAL_FANCY_TREE.withChance(0.21F), RED_CRAPE_MYRTLE_TREE.withChance(0.07F),
+                            INDIAN_CORAL_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.34F), RED_CRAPE_MYRTLE_TREE.withChance(0.07F),
                             PINK_CRAPE_MYRTLE_TREE.withChance(0.07F), WHITE_CRAPE_MYRTLE_TREE.withChance(0.07F),
-                            PURPLE_CRAPE_MYRTLE_TREE.withChance(0.07F), TAMARIND_TREE.withChance(0.23F),
-                            MARULA_TREE.withChance(0.3F), SAUSAGE_TREE.withChance(0.4F)),
+                            PURPLE_CRAPE_MYRTLE_TREE.withChance(0.07F), TAMARIND_TREE.withChance(0.33F),
+                            MARULA_TREE.withChance(0.56F), SAUSAGE_TREE.withChance(0.6F)),
                             SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.4F, 6))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
