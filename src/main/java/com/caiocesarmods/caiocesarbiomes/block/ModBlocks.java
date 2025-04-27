@@ -1342,6 +1342,11 @@ public class ModBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
+                    setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

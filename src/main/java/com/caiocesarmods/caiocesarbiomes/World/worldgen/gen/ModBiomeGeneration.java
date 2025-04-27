@@ -100,6 +100,8 @@ public class ModBiomeGeneration {
 
         addBiome(TropicalBambooMarsh.TROPICAL_BAMBOO_MARSH.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP);
 
+        addBiome(SaltDesertBiome.SALT_DESERT.get(), BiomeManager.BiomeType.DESERT, 6, OVERWORLD, RARE, HOT, DRY, WASTELAND);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
