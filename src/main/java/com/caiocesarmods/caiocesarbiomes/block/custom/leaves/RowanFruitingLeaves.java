@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public HawthornFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public RowanFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -49,7 +49,7 @@ public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.HAWTHORN_BERRIES.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -69,7 +69,7 @@ public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.HAWTHORN_BERRIES.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
