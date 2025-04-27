@@ -150,6 +150,9 @@ public class ModItems {
     public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_FENNEL_STALK)));
 
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
