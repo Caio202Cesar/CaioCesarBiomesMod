@@ -1059,8 +1059,8 @@ public class TreeFeatures {
 
     //Walnut
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WALNUT_FANCY_TREE = register("walnut_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MANGO_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.MANGO_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.WALNUT_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.WALNUT_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1594,11 +1594,11 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F),
-                            INDIAN_CORAL_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.34F), TAMARIND_TREE.withChance(0.33F),
-                            MARULA_TREE.withChance(0.56F), SAUSAGE_TREE.withChance(0.6F)),
-                            SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.4F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.29F),
+                            INDIAN_CORAL_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.33F),
+                            MARULA_TREE.withChance(0.4F), SYCAMORE_FIG_TREE.withChance(0.3F)),
+                            SAUSAGE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
@@ -1808,7 +1808,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
-                            LOMBARDY_POPLAR_TREE.withChance(0.1F),  CANARY_DATE_PALM_TREE.withChance(0.089F), CAROB_TREE.withChance(0.1F), ELDERBERRY_TREE.withChance(0.3F),
+                            LOMBARDY_POPLAR_TREE.withChance(0.1F),  CANARY_DATE_PALM_TREE.withChance(0.089F),
+                            CAROB_TREE.withChance(0.25F), ELDERBERRY_TREE.withChance(0.2F),
                             CORK_OAK_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
