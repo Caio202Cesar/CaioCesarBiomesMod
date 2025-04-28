@@ -176,6 +176,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BISMARCK_PALM_LOG = registerBlock("bismarck_palm_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -674,6 +676,9 @@ public class ModBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SAUSAGE_TREE_LEAVES));
 
     public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
+            ModLeaves::new);
+
+    public static final RegistryObject<Block> BISMARCK_PALM_LEAVES = registerBlock("bismarck_palm_leaves",
             ModLeaves::new);
 
     //Taiga - includes also bush juniper

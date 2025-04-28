@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block//bismarck_palm_leaves",
+    "particle": "caiocesarbiomes:block//bismarck_palm_leaves"
+  }
+}

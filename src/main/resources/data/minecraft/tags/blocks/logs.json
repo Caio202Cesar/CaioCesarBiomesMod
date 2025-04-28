@@ -61,7 +61,9 @@
     "caiocesarbiomes:canary_pine_log",
     "caiocesarbiomes:pinyon_log",
     "caiocesarbiomes:ponderosa_pine_log",
-    "caiocesarbiomes:douglas_fir_log"
+    "caiocesarbiomes:douglas_fir_log",
+    "caiocesarbiomes:bismarck_palm_log",
+    "caiocesarbiomes:hazelnut_log"
 
   ]
 }
