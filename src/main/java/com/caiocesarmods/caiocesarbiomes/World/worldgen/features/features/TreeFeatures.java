@@ -1292,9 +1292,22 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(15, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Soursop
+    //Oil Palm (tropical deciduous forest)
 
-    //Sugar apple
+    //Baobab
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB = register("baobab",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DARK_OAK_LOG),
+                    new SimpleBlockStateProvider(States.AVOCADO_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(15, 5, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
+    //Doum Palm (savannah, fancy foliage and trunk placer)
+
+    //Jackalberry Tree
+
+
 
     public static final class States {
 
