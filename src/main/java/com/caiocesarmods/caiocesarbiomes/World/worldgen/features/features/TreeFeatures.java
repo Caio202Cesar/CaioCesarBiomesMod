@@ -1120,7 +1120,7 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
 
     //Douglas Fir
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
@@ -1543,7 +1543,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            SABAL_PALM_TREE.withChance(0.45F), SABAL_PALM_FANCY_TREE.withChance(0.3F),
+                            SABAL_PALM_TREE.withChance(0.1F), SABAL_PALM_FANCY_TREE.withChance(0.1F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.17F), SOUTHERN_MAGNOLIA_WITH_KIWI.withChance(0.07F), PLANE_TREE.withChance(0.3F),
                             PLANE_TREE_WITH_KIWI.withChance(0.09F),
                             PLANE_FANCY_TREE.withChance(0.35F), RED_MAPLE_TREE.withChance(0.089F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.049F),
@@ -1595,12 +1595,10 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.3F),
-                            INDIAN_CORAL_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.34F), RED_CRAPE_MYRTLE_TREE.withChance(0.07F),
-                            PINK_CRAPE_MYRTLE_TREE.withChance(0.07F), WHITE_CRAPE_MYRTLE_TREE.withChance(0.07F),
-                            PURPLE_CRAPE_MYRTLE_TREE.withChance(0.07F), TAMARIND_TREE.withChance(0.33F),
+                            INDIAN_CORAL_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.34F), TAMARIND_TREE.withChance(0.33F),
                             MARULA_TREE.withChance(0.56F), SAUSAGE_TREE.withChance(0.6F)),
                             SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.4F, 6))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.4F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
