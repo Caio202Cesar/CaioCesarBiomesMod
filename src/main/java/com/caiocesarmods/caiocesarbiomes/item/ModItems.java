@@ -106,7 +106,10 @@ public class ModItems {
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
+    //Item group - Culinary
     public static final RegistryObject<Item> CAROB_BEANS = ITEMS.register("carob_beans",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> ROSEMARY_STALK = ITEMS.register("rosemary_stalk",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berries",
