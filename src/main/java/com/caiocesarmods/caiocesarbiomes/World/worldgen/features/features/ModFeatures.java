@@ -22,6 +22,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> SAW_PALMETTOS = register("saw_palmettos",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
+
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_PLANTS = register("temperate_rainforest_plants",
             Feature.FLOWER.withConfiguration(Configs.TEMPERATE_RAINFOREST_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -170,6 +174,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.TUSSOCK_GRASS, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig SAW_PALMETTO_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.SAW_PALMETTO, 10),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
 
@@ -212,6 +221,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BLACK_CURRANT_BUSH = ModBlocks.BLACK_CURRANT_SHRUB.get().getDefaultState();
         protected static final BlockState SPIDER_LILY = ModBlocks.SPIDER_LILY.get().getDefaultState();
         protected static final BlockState BLUEBERRY_BUSH = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState();
+        protected static final BlockState SAW_PALMETTO = ModBlocks.SAW_PALMETTO.get().getDefaultState();
 
     }
 
