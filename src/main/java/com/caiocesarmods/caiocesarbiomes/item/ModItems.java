@@ -77,6 +77,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    //Can only be eaten with salt
     public static final RegistryObject<Item> UNRIPE_MANGO = ITEMS.register("unripe_mango",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
@@ -98,6 +99,8 @@ public class ModItems {
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> HAZELNUT_CREAM = ITEMS.register("hazelnut_cream",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
