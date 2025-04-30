@@ -612,6 +612,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
             ModLeaves::new);
 
+    public static final RegistryObject<Block> PERSIMMON_LEAVES = registerBlock("persimmon_leaves",
+            () -> new MangoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PERSIMMON_FLOWERING_LEAVES = registerBlock("persimmon_flowering_leaves",
+            () -> new MangoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PERSIMMON_FRUITING_LEAVES = registerBlock("persimmon_fruiting_leaves",
+            () -> new MangoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_LEAVES));
+
     //Badlands and Eroded Badlands
     public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
             JuniperLeaves::new);
