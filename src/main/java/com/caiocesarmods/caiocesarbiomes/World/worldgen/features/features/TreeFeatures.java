@@ -1672,7 +1672,7 @@ public class TreeFeatures {
                             INDIAN_CORAL_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.33F),
                             MARULA_TREE.withChance(0.4F), BISMARCK_PALM.withChance(0.2F), SYCAMORE_FIG_TREE.withChance(0.3F)),
                             SAUSAGE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
@@ -1923,9 +1923,9 @@ public class TreeFeatures {
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
-    //Replace this for humid climate pines
+    //Replace this for humid climate pines - add podocarpus
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PINES = register("subtropical_forest_pines",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PODOCARPUS_TREE.withChance(0.2F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BAOBAB.withChance(0.2F)),
                             HOOP_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 

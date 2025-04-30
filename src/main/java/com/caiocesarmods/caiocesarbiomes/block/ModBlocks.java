@@ -1375,7 +1375,7 @@ public class ModBlocks {
                     setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
 
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
-            () -> new Block(AbstractBlock.Properties.create(Material.IRON)));
+            () -> new Block(AbstractBlock.Properties.create(Material.IRON).notSolid()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

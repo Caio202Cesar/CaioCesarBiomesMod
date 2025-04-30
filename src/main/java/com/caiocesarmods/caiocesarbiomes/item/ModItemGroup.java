@@ -14,4 +14,13 @@ public class ModItemGroup {
         }
 
     };
+
+    public static final ItemGroup CAIO_CESAR_BIOMES_CULINARY = new ItemGroup("CaioCesarBiomesCulinary")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModItems.ROSEMARY_STALK.get());
+        }
+
+    };
 }

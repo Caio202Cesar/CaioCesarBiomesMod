@@ -99,80 +99,82 @@ public class ModItems {
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> HAZELNUT_CREAM = ITEMS.register("hazelnut_cream",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
+    public static final RegistryObject<Item> AVOCADO_OIL = ITEMS.register("avocado_oil",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
 
     //Item group - Culinary
     public static final RegistryObject<Item> CAROB_BEANS = ITEMS.register("carob_beans",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> ROSEMARY_STALK = ITEMS.register("rosemary_stalks",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> OREGANO_STALK = ITEMS.register("oregano_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
 
     public static final RegistryObject<Item> SPICED_RABBIT = ITEMS.register("spiced_rabbit",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> SAVORY_RABBIT = ITEMS.register("savory_rabbit",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.SAVORY_RABBIT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.SAVORY_RABBIT)));
     public static final RegistryObject<Item> SPICED_PORK = ITEMS.register("spiced_pork",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> SAVORY_PORK = ITEMS.register("savory_pork",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.SAVORY_PORKCHOP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.SAVORY_PORKCHOP)));
 
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> TEA_LEAF_FOR_INFUSION = ITEMS.register("tea_leaf_for_infusion",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> GREEN_TEA = ITEMS.register("green_tea",
-            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)
                     .food(ModFoods.GREEN_TEA)));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> MATCHA_POWDER_FOR_INFUSION = ITEMS.register("matcha_powder_for_infusion",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
-            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)
                     .food(ModFoods.MATCHA_TEA)));
     public static final RegistryObject<Item> MATCHA_LATTE = ITEMS.register("matcha_latte",
-            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ItemGroup.FOOD)
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)
                     .food(ModFoods.MATCHA_LATTE)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> AIYU_JELLY = ITEMS.register("aiyu_jelly",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.AIYU_JELLY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.AIYU_JELLY)));
 
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> RED_CURRANT = ITEMS.register("red_currant",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.RED_CURRANT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.RED_CURRANT)));
     public static final RegistryObject<Item> BLACK_CURRANT = ITEMS.register("black_currant",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BLACK_CURRANT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.BLACK_CURRANT)));
     public static final RegistryObject<Item> RED_CURRANT_SEEDS = ITEMS.register("red_currant_seeds",
             () -> new BlockItem(ModBlocks.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
             () -> new BlockItem(ModBlocks.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
-            () -> new BlockItem(ModBlocks.FENNEL_CROP.get(), new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new BlockItem(ModBlocks.FENNEL_CROP.get(), new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> ROASTED_FENNEL_SEEDS = ITEMS.register("roasted_fennel_seeds",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ROASTED_FENNEL_SEEDS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.ROASTED_FENNEL_SEEDS)));
     public static final RegistryObject<Item> FENNEL_STALK = ITEMS.register("fennel_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.FENNEL_STALK)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.FENNEL_STALK)));
     public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_FENNEL_STALK)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY).food(ModFoods.COOKED_FENNEL_STALK)));
 
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
-            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
 
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));

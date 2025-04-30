@@ -9,6 +9,8 @@ import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.potion.PotionBrewing;
 import net.minecraft.potion.Potions;
 import net.minecraftforge.common.MinecraftForge;
@@ -118,7 +120,10 @@ public class CaioCesarBiomesMod
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
+        event.enqueueWork(()-> {
+            RenderTypeLookup.setRenderLayer(ModBlocks.TOASTER.get(), RenderType.getCutout());
+
+                });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
