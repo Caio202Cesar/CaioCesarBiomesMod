@@ -2,18 +2,18 @@
   "variants": {
     "": [
       {
-        "model": "minecraft:block/salt_block"
+        "model": "caiocesarbiomes:block/salt_block"
       },
       {
-        "model": "minecraft:block/salt_block",
+        "model": "caiocesarbiomes:block/salt_block",
         "y": 90
       },
       {
-        "model": "minecraft:block/salt_block",
+        "model": "caiocesarbiomes:block/salt_block",
         "y": 180
       },
       {
-        "model": "minecraft:block/salt_block",
+        "model": "caiocesarbiomes:block/salt_block",
         "y": 270
       }
     ]
