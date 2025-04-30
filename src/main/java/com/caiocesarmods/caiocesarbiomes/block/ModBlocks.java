@@ -180,6 +180,10 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> BISMARCK_PALM_LOG = registerBlock("bismarck_palm_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MUGO_PINE_LOG = registerBlock("mugo_pine_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_LOG = registerBlock("podocarpus_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
@@ -701,7 +705,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARCH_AUTUMN_LEAVES = registerBlock("larch_autumn_leaves",
             ModLeaves::new);
 
-
+    //Mountain extra-vegetation
+    public static final RegistryObject<Block> MUGO_PINE_LEAVES = registerBlock("mugo_pine_leaves",
+            ModLeaves::new);
 
     //Saplings
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",

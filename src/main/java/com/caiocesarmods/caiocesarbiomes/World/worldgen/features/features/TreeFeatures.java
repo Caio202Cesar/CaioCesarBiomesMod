@@ -1309,10 +1309,16 @@ public class TreeFeatures {
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
-    //Doum Palm (savannah, fancy foliage and trunk placer)
-
     //Jackalberry Tree
 
+    //Mountain Biome
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MUGO_PINE_SHRUB = register("mugo_pine_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MUGO_PINE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.MUGO_PINE_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
 
 
@@ -1320,6 +1326,9 @@ public class TreeFeatures {
 
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState MUGO_PINE_LOG = ModBlocks.MUGO_PINE_LOG.get().getDefaultState();
+        protected static final BlockState MUGO_PINE_LEAVES = ModBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState BISMARCK_PALM_LOG = ModBlocks.BISMARCK_PALM_LOG.get().getDefaultState();
         protected static final BlockState BISMARCK_PALM_LEAVES = ModBlocks.BISMARCK_PALM_LEAVES.get().getDefaultState();
@@ -1896,7 +1905,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
                             PISTACHIO_TREE.withChance(0.088F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.4F),
                             DATE_PALM_TREE.withChance(0.5F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
