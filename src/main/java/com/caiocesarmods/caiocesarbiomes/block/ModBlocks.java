@@ -1350,7 +1350,8 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SAW_PALMETTO = registerBlock("saw_palmetto",
-                    SubtropicalForestPlant::new);
+            () -> new PlantFanBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN)
+                    .setRequiresTool().doesNotBlockMovement().zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
