@@ -109,8 +109,19 @@ public class ModItems {
     //Item group - Culinary
     public static final RegistryObject<Item> CAROB_BEANS = ITEMS.register("carob_beans",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> ROSEMARY_STALK = ITEMS.register("rosemary_stalk",
+    public static final RegistryObject<Item> ROSEMARY_STALK = ITEMS.register("rosemary_stalks",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> OREGANO_STALK = ITEMS.register("oregano_stalk",
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
+    public static final RegistryObject<Item> SPICED_RABBIT = ITEMS.register("spiced_rabbit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> SAVORY_RABBIT = ITEMS.register("savory_rabbit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.SAVORY_RABBIT)));
+    public static final RegistryObject<Item> SPICED_PORK = ITEMS.register("spiced_pork",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> SAVORY_PORK = ITEMS.register("savory_pork",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.SAVORY_PORKCHOP)));
 
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

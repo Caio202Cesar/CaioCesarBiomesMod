@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:oregano"
+    }
+  ],
+  "result": {
+    "item": "minecraft:oregano_stalk",
+    "count": 9
+  }
+}
