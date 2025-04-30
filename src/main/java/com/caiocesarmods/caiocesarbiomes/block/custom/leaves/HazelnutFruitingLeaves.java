@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class HazelnutFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public RowanFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public HazelnutFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,11 +45,11 @@ public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.HAZELNUTS.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -69,12 +69,12 @@ public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.HAZELNUTS.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.ROWAN_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, ModBlocks.HAZELNUT_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
