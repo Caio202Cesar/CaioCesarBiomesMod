@@ -25,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+import static net.minecraft.block.Blocks.DEAD_BRAIN_CORAL_FAN;
+
 public class ModBlocks {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -1345,6 +1347,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_AZALEA_WHITE = BLOCKS.register("potted_azalea_white",
             () -> new FlowerPotBlock(ModBlocks.AZALEA_WHITE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> SAW_PALMETTO = registerBlock("saw_palmetto",
+                    SubtropicalForestPlant::new);
 
 
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
