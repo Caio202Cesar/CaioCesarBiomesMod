@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.tileentity;
 
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -89,7 +90,7 @@ public class ToasterTile extends TileEntity {
         if(hasFocusOnTheFirstSlot) {
             this.itemHandler.getStackInSlot(0).shrink(1);
 
-            this.itemHandler.insertItem(1, new ItemStack(ModItems.TOAST.get()), false);
+            this.itemHandler.insertItem(10, new ItemStack(ModItems.TOAST.get()), false);
         }
     }
 }

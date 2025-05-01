@@ -63,4 +63,8 @@ public class ModFoods extends Foods {
     public static final Food SAVORY_MUTTON = (new Food.Builder()).hunger(8).saturation(0.9F).meat().build();
     public static final Food SAVORY_PORKCHOP = (new Food.Builder()).hunger(9).saturation(0.9F).meat().build();
     public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(8).saturation(0.9F).build();
+    //The toast alone provides less than the bread. However, when crafted with jams, oils or pastes, it provides the same saturation and hunger
+    // as a bread (or more, depending on the complement). It justifies one bread giving 10 toasts.
+    public static final Food TOAST = (new Food.Builder()).hunger(2).saturation(0.2F).build();
+
 }

@@ -105,6 +105,8 @@ public class ModItems {
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT)));
 
+    public static final RegistryObject<Item> TOAST = ITEMS.register("toast",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TOAST)));
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> AVOCADO_OIL = ITEMS.register("avocado_oil",
