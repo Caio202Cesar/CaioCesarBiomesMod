@@ -94,7 +94,7 @@ public class ToasterTile extends TileEntity {
         if(hasFocusOnTheFirstSlot) {
             this.itemHandler.getStackInSlot(0).shrink(1);
 
-            this.itemHandler.insertItem(10, new ItemStack(ModItems.TOAST.get()), false);
+            this.itemHandler.insertItem(1, new ItemStack(ModItems.TOAST.get()), false);
         }
     }
 }

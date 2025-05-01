@@ -5,11 +5,15 @@ import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ToasterTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.particle.ParticleManager;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -19,9 +23,11 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkHooks;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 public class ToasterBlock extends Block {
 
@@ -29,18 +35,31 @@ public class ToasterBlock extends Block {
         super(properties);
     }
 
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos,
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, Random rand,
                                              PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if(!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-            if(tileEntity instanceof ToasterTile) {
-                INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
+            if(!player.isCrouching()) {
+                if(tileEntity instanceof ToasterTile) {
+                    INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
-                NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
+                    NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
+                } else {
+                    throw new IllegalStateException("Our Container provider is missing!");
+                }
             } else {
-                throw new IllegalStateException("Our Container provider is missing!");
+                if(tileEntity instanceof ToasterTile) {
+                    if(worldIn.isBlockPowered(tileEntity.getPos())) {
+                        for (int i = 0; i < 2; ++i) {
+                            double x = pos.getX() + 0.5 + (rand.nextDouble() - 0.5) * 0.5;
+                            double y = pos.getY() + 1.0;
+                            double z = pos.getZ() + 0.5 + (rand.nextDouble() - 0.5) * 0.5;
+                            worldIn.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
+
+                        ((ToasterTile)tileEntity).hasRedstoneSignal();}
+                    }
+                }
             }
         }
         return ActionResultType.SUCCESS;
