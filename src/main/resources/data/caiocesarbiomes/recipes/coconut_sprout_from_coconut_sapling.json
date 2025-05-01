@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:coconut_sapling"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:coconut_sprout",
+    "count": 1
+  }
+}

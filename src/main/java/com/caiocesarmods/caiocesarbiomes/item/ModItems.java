@@ -102,6 +102,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
+    public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT)));
 
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
