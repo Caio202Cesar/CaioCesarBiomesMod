@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
 
+//Obs.: replace the weather condition of the Kaupenjoe's video by a redstone signal condition here.
 public class ToastRecipe implements IToastRecipe {
     private final ResourceLocation id;
     private final ItemStack output;
