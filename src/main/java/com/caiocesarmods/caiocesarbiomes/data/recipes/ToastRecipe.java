@@ -10,9 +10,11 @@ import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.crafting.ShapedRecipe;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
@@ -30,6 +32,7 @@ public class ToastRecipe implements IToastRecipe {
         this.output = output;
         this.recipeItems = recipeItems;
     }
+
     /**
      * Used to check if a recipe matches current crafting inventory
      *
@@ -69,6 +72,7 @@ public class ToastRecipe implements IToastRecipe {
     public ItemStack getRecipeOutput() {
         return output.copy();
     }
+
 
     public ItemStack getIcon() {
         return new ItemStack(ModBlocks.TOASTER.get());

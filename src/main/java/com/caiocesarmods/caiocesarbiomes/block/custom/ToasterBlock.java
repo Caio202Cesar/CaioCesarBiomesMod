@@ -40,26 +40,12 @@ public class ToasterBlock extends Block {
         if(!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-            if(!player.isCrouching()) {
-                if(tileEntity instanceof ToasterTile) {
+             if(tileEntity instanceof ToasterTile) {
                     INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
                     NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
                 } else {
                     throw new IllegalStateException("Our Container provider is missing!");
-                }
-            } else {
-                if(tileEntity instanceof ToasterTile) {
-                    if(worldIn.isBlockPowered(tileEntity.getPos())) {
-                        for (int i = 0; i < 2; ++i) {
-                            double x = pos.getX() + 0.5 + (rand.nextDouble() - 0.5) * 0.5;
-                            double y = pos.getY() + 1.0;
-                            double z = pos.getZ() + 0.5 + (rand.nextDouble() - 0.5) * 0.5;
-                            worldIn.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
-
-                        ((ToasterTile)tileEntity).hasRedstoneSignal();}
-                    }
-                }
             }
         }
         return ActionResultType.SUCCESS;
