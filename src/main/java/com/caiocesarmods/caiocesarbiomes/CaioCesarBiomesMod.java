@@ -7,6 +7,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
+import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
@@ -54,6 +55,7 @@ public class CaioCesarBiomesMod
         ModPotions.register(eventBus);
 
         ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
         ModRecipeTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
