@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
+import com.caiocesarmods.caiocesarbiomes.tileentity.ToasterTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;

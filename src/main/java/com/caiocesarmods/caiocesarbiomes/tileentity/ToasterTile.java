@@ -28,6 +28,10 @@ public class ToasterTile extends TileEntity {
         super(tileEntityTypeIn);
     }
 
+    public ToasterTile() {
+        this(ModTileEntities.TOASTER_TILE.get());
+    }
+
     @Override
     public void read(BlockState state, CompoundNBT nbt) {
         itemHandler.deserializeNBT(nbt.getCompound("inv"));
