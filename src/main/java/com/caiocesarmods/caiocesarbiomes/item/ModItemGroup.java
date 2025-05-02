@@ -19,7 +19,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.ROSEMARY_STALK.get());
+            return new ItemStack(ModItems.SAVORY_RABBIT.get());
         }
 
     };

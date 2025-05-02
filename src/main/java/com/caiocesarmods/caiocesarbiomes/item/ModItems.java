@@ -184,6 +184,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> RAW_TOAST = ITEMS.register("raw_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",

@@ -6,11 +6,10 @@
       "item": "caiocesarbiomes:butter"
     },
     {
-      "item": "minecraft:bread"
+      "item": "caiocesarbiomes:raw_toast"
     }
   ],
   "output": {
-    "item": "caiocesarbiomes:toast",
-    "count": 9
+    "item": "caiocesarbiomes:toast"
   }
 }
