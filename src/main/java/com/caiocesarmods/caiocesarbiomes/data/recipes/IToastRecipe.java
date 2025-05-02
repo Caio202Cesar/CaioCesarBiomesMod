@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 
 public interface IToastRecipe extends IRecipe<IInventory> {
-    ResourceLocation TYPE_ID = new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "toaster_recipe");
+    ResourceLocation TYPE_ID = new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "toaster");
 
     @Override
     default IRecipeType<?> getType(){

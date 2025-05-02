@@ -17,6 +17,8 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.ITextComponent;
@@ -47,6 +49,11 @@ public class ToasterBlock extends Block {
                 NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
+            }
+            if(player.isSneaking()) {
+                // worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE,
+                //          SoundCategory.BLOCKS, 1, 1, true);
+                worldIn.playSound(null, pos, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1, 1);
             }
         }
         return ActionResultType.SUCCESS;

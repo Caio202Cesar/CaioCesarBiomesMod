@@ -14,7 +14,7 @@ public class ModRecipeTypes {
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<ToastRecipe.Serializer> TOASTER_SERIALIZER
-            = RECIPE_SERIALIZER.register("toaster_recipe", ToastRecipe.Serializer::new);
+            = RECIPE_SERIALIZER.register("toaster", ToastRecipe.Serializer::new);
 
     public static IRecipeType<ToastRecipe> TOAST_RECIPE
             = new ToastRecipe.ToastRecipeType();

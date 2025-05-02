@@ -14,39 +14,64 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 
 //Obs.: replace the weather condition of the Kaupenjoe's video by a redstone signal condition here.
-public class ToastRecipe implements IRecipe<IInventory> {
+public class ToastRecipe implements IToastRecipe {
+    public enum Weather {
+        CLEAR,
+        RAIN,
+        THUNDERING;
+
+        public static Weather getWeatherByString(String s) {
+            return Objects.equals(s, "thundering") ? THUNDERING : Objects.equals(s, "rain") ? RAIN : CLEAR;
+        }
+    }
 
     private final ResourceLocation id;
-    private final Ingredient ingredient;
     private final ItemStack output;
+    private final NonNullList<Ingredient> recipeItems;
+    private final Weather weather;
 
-    public ToastRecipe(ResourceLocation id, Ingredient ingredient, ItemStack output) {
+    public ToastRecipe(ResourceLocation id, ItemStack output,
+                                    NonNullList<Ingredient> recipeItems, Weather weather) {
         this.id = id;
-        this.ingredient = ingredient;
         this.output = output;
+        this.recipeItems = recipeItems;
+        this.weather = weather;
     }
 
     @Override
     public boolean matches(IInventory inv, World worldIn) {
-        return ingredient.test(inv.getStackInSlot(0));
+        if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
+            return recipeItems.get(1).test(inv.getStackInSlot(1));
+        }
+
+        return false;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
     }
 
     @Override
     public ItemStack getCraftingResult(IInventory inv) {
-        return output.copy();
-    }
-
-    @Override
-    public boolean canFit(int width, int height) {
-        return true;
+        return output;
     }
 
     @Override
     public ItemStack getRecipeOutput() {
-        return output;
+        return output.copy();
+    }
+
+    public Weather getWeather() {
+        return this.weather;
+    }
+
+    public ItemStack getIcon() {
+        return new ItemStack(ModBlocks.TOASTER.get());
     }
 
     @Override
@@ -59,34 +84,6 @@ public class ToastRecipe implements IRecipe<IInventory> {
         return ModRecipeTypes.TOASTER_SERIALIZER.get();
     }
 
-    @Override
-    public IRecipeType<?> getType() {
-        return ModRecipeTypes.TOAST_RECIPE;
-    }
-
-    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ToastRecipe> {
-
-        @Override
-        public ToastRecipe read(ResourceLocation recipeId, JsonObject json) {
-            Ingredient ingredient = Ingredient.deserialize(JSONUtils.getJsonObject(json, "ingredient"));
-            ItemStack output = ShapedRecipe.deserializeItem(JSONUtils.getJsonObject(json, "result"));
-            return new ToastRecipe(recipeId, ingredient, output);
-        }
-
-        @Override
-        public ToastRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
-            Ingredient ingredient = Ingredient.read(buffer);
-            ItemStack output = buffer.readItemStack();
-            return new ToastRecipe(recipeId, ingredient, output);
-        }
-
-        @Override
-        public void write(PacketBuffer buffer, ToastRecipe recipe) {
-            recipe.ingredient.write(buffer);
-            buffer.writeItemStack(recipe.output);
-        }
-    }
-
     public static class ToastRecipeType implements IRecipeType<ToastRecipe> {
         @Override
         public String toString() {
@@ -94,5 +91,46 @@ public class ToastRecipe implements IRecipe<IInventory> {
         }
     }
 
-    public static final ResourceLocation TYPE_ID = new ResourceLocation("caiocesarbiomes", "toaster_recipe");
+    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
+            implements IRecipeSerializer<ToastRecipe> {
+
+        @Override
+        public ToastRecipe read(ResourceLocation recipeId, JsonObject json) {
+            ItemStack output = ShapedRecipe.deserializeItem(JSONUtils.getJsonObject(json, "output"));
+            String weather = JSONUtils.getString(json, "weather");
+
+            JsonArray ingredients = JSONUtils.getJsonArray(json, "ingredients");
+            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
+
+            for (int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.deserialize(ingredients.get(i)));
+            }
+
+            return new ToastRecipe(recipeId, output,
+                    inputs, Weather.getWeatherByString(weather));
+        }
+
+        @Nullable
+        @Override
+        public ToastRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
+            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
+
+            for (int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.read(buffer));
+            }
+
+            ItemStack output = buffer.readItemStack();
+            return new ToastRecipe(recipeId, output,
+                    inputs, null);
+        }
+
+        @Override
+        public void write(PacketBuffer buffer, ToastRecipe recipe) {
+            buffer.writeInt(recipe.getIngredients().size());
+            for (Ingredient ing : recipe.getIngredients()) {
+                ing.write(buffer);
+            }
+            buffer.writeItemStack(recipe.getRecipeOutput(), false);
+        }
+    }
 }

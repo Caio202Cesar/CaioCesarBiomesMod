@@ -1,12 +1,15 @@
 {
-  "type": "caiocesarbiomes:toaster_recipe",
-  "redstoneActivated": true,
+  "type": "caiocesarbiomes:toaster",
+  "weather": "thundering",
   "ingredients": [
+    {
+      "item": "caiocesarbiomes:butter"
+    },
     {
       "item": "minecraft:bread"
     }
   ],
-  "result": {
+  "output": {
     "item": "caiocesarbiomes:toast",
     "count": 9
   }
