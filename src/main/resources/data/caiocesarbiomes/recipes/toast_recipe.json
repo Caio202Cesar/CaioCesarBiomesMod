@@ -1,0 +1,13 @@
+{
+  "type": "caiocesarbiomes:toaster_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "yourmod:toast",
+    "count": 9
+  },
+  "redstoneActivated": true
+}

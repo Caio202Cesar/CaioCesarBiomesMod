@@ -34,6 +34,8 @@ public class SahelBiome {
         DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
                 new MobSpawnInfo.Spawners(EntityType.HUSK, 100, 7, 10));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+                new MobSpawnInfo.Spawners(EntityType.DONKEY, 40, 4, 7));
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 

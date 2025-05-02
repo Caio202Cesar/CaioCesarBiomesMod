@@ -77,9 +77,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
-    //Can only be eaten with salt
     public static final RegistryObject<Item> UNRIPE_MANGO = ITEMS.register("unripe_mango",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD))); //Can only be eaten with salt
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> WALNUT = ITEMS.register("walnut",
@@ -104,6 +103,16 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+
+    public static final RegistryObject<Item> WALNUT_BREAD = ITEMS.register("walnut_bread",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> PECAN_BREAD = ITEMS.register("pecan_bread",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+
+    public static final RegistryObject<Item> FENNEL_SOUP = ITEMS.register("fennel_soup",
+            () -> new SoupItem((new Item.Properties()).maxStackSize(1).group(ItemGroup.FOOD)
+                    .food(ModFoods.FENNEL_SOUP)));
+
 
     public static final RegistryObject<Item> TOAST = ITEMS.register("toast",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TOAST)));
