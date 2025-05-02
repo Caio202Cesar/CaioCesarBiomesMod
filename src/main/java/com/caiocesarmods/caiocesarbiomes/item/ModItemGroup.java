@@ -32,4 +32,22 @@ public class ModItemGroup {
         }
 
     };
+
+    public static final ItemGroup PLANTS = new ItemGroup("CaioCesarBiomes:Plants")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModBlocks.PURPLE_BASIL.get());
+        }
+
+    };
+
+    public static final ItemGroup SAPLINGS = new ItemGroup("CaioCesarBiomes:Saplings")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModBlocks.PURPLE_CRAPE_MYRTLE_SAPLING.get());
+        }
+
+    };
 }

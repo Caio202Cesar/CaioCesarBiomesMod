@@ -1256,14 +1256,10 @@ public class ModBlocks {
             () -> new FennelCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //Plants
-
-    //These are too large that they need a FLOWER BED and are incompatible with the flower pot.
     public static final RegistryObject<Block> BUSH = registerBlock("bush",
             SubtropicalForestPlant::new);
-
     public static final RegistryObject<Block> ANIS = registerBlock("anis",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             MediterraneanFlower::new);
 
