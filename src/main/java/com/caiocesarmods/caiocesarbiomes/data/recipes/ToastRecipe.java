@@ -5,85 +5,48 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.crafting.ShapedRecipe;
+import net.minecraft.item.crafting.*;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.JSONUtils;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
+import java.util.Optional;
 
 //Obs.: replace the weather condition of the Kaupenjoe's video by a redstone signal condition here.
-public class ToastRecipe implements IToastRecipe {
+public class ToastRecipe implements IRecipe<IInventory> {
+
     private final ResourceLocation id;
+    private final Ingredient ingredient;
     private final ItemStack output;
-    private final NonNullList<Ingredient> inputs;
-    private final boolean redstoneActivated;
 
-    public ToastRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputs, boolean redstoneActivated) {
+    public ToastRecipe(ResourceLocation id, Ingredient ingredient, ItemStack output) {
         this.id = id;
+        this.ingredient = ingredient;
         this.output = output;
-        this.inputs = inputs;
-        this.redstoneActivated = redstoneActivated;
     }
 
-    public boolean isRedstoneActivated() {
-        return redstoneActivated;
-    }
-
-    public boolean isRedstoneActivated(World world, BlockPos pos) {
-        return redstoneActivated && world != null && world.isBlockPowered(pos);
-    }
-
-    /**
-     * Used to check if a recipe matches current crafting inventory
-     *
-     * @param inv
-     * @param worldIn
-     */
     @Override
     public boolean matches(IInventory inv, World worldIn) {
-        // Checks for correct focus (Glass Pane)
-        if(inputs.get(0).test(inv.getStackInSlot(0))) {
-            return inputs.get(1).test(inv.getStackInSlot(1));
-        }
-
-        return false;
+        return ingredient.test(inv.getStackInSlot(0));
     }
 
-    @Override
-    public NonNullList<Ingredient> getIngredients() {
-        return inputs;
-    }
-
-    /**
-     * Returns an Item that is the result of this recipe
-     *
-     * @param inv
-     */
     @Override
     public ItemStack getCraftingResult(IInventory inv) {
-        return output;
-    }
-
-    /**
-     * Get the result of this recipe, usually for display purposes (e.g. recipe book). If your recipe has more than one
-     * possible result (e.g. it's dynamic and depends on its inputs), then return an empty stack.
-     */
-    @Override
-    public ItemStack getRecipeOutput() {
         return output.copy();
     }
 
+    @Override
+    public boolean canFit(int width, int height) {
+        return true;
+    }
 
-    public ItemStack getIcon() {
-        return new ItemStack(ModBlocks.TOASTER.get());
+    @Override
+    public ItemStack getRecipeOutput() {
+        return output;
     }
 
     @Override
@@ -96,6 +59,34 @@ public class ToastRecipe implements IToastRecipe {
         return ModRecipeTypes.TOASTER_SERIALIZER.get();
     }
 
+    @Override
+    public IRecipeType<?> getType() {
+        return ModRecipeTypes.TOAST_RECIPE;
+    }
+
+    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ToastRecipe> {
+
+        @Override
+        public ToastRecipe read(ResourceLocation recipeId, JsonObject json) {
+            Ingredient ingredient = Ingredient.deserialize(JSONUtils.getJsonObject(json, "ingredient"));
+            ItemStack output = ShapedRecipe.deserializeItem(JSONUtils.getJsonObject(json, "result"));
+            return new ToastRecipe(recipeId, ingredient, output);
+        }
+
+        @Override
+        public ToastRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
+            Ingredient ingredient = Ingredient.read(buffer);
+            ItemStack output = buffer.readItemStack();
+            return new ToastRecipe(recipeId, ingredient, output);
+        }
+
+        @Override
+        public void write(PacketBuffer buffer, ToastRecipe recipe) {
+            recipe.ingredient.write(buffer);
+            buffer.writeItemStack(recipe.output);
+        }
+    }
+
     public static class ToastRecipeType implements IRecipeType<ToastRecipe> {
         @Override
         public String toString() {
@@ -103,48 +94,5 @@ public class ToastRecipe implements IToastRecipe {
         }
     }
 
-    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
-            implements IRecipeSerializer<ToastRecipe> {
-
-        @Override
-        public ToastRecipe read(ResourceLocation recipeId, JsonObject json) {
-            ItemStack output = ShapedRecipe.deserializeItem(JSONUtils.getJsonObject(json, "output"));
-
-            boolean redstoneActivated = JSONUtils.getBoolean(json, "redstoneActivated", false);
-
-            JsonArray ingredients = JSONUtils.getJsonArray(json, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.deserialize(ingredients.get(i)));
-            }
-
-            return new ToastRecipe(recipeId, output, inputs, redstoneActivated);
-        }
-
-        @Nullable
-        @Override
-        public ToastRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
-            int size = buffer.readInt();
-            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
-
-            for (int i = 0; i < size; i++) {
-                inputs.set(i, Ingredient.read(buffer));
-            }
-
-            ItemStack output = buffer.readItemStack();
-            boolean redstoneActivated = buffer.readBoolean();
-            return new ToastRecipe(recipeId, output, inputs, redstoneActivated);
-        }
-
-        @Override
-        public void write(PacketBuffer buffer, ToastRecipe recipe) {
-            buffer.writeInt(recipe.getIngredients().size());
-            for (Ingredient ing : recipe.getIngredients()) {
-                ing.write(buffer);
-            }
-            buffer.writeItemStack(recipe.getRecipeOutput(), false);
-            buffer.writeBoolean(recipe.isRedstoneActivated());
-        }
-    }
+    public static final ResourceLocation TYPE_ID = new ResourceLocation("caiocesarbiomes", "toaster_recipe");
 }

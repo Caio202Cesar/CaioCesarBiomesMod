@@ -1,5 +1,6 @@
 {
   "type": "caiocesarbiomes:toaster_recipe",
+  "redstoneActivated": true,
   "ingredients": [
     {
       "item": "minecraft:bread"

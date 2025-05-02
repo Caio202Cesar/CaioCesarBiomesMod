@@ -146,3 +146,4 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
         }
     }
 }
+

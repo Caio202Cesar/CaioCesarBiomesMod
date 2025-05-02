@@ -70,7 +70,7 @@ public class ToasterBlock extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntities.TOASTER_TILE.get().create();
+        return new ToasterTile();
     }
 
     @Override
