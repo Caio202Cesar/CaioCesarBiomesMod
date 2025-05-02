@@ -1,0 +1,12 @@
+{
+  "type": "caiocesarbiomes:toaster_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "output": {
+    "item": "caiocesarbiomes:toast",
+    "count": 9
+  }
+}

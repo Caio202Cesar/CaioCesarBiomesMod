@@ -73,6 +73,9 @@ public class ToastRecipe implements IToastRecipe {
         return output.copy();
     }
 
+    public boolean isRedstoneActivated(World world, BlockPos pos) {
+        return world != null && world.isBlockPowered(pos);
+    }
 
     public ItemStack getIcon() {
         return new ItemStack(ModBlocks.TOASTER.get());

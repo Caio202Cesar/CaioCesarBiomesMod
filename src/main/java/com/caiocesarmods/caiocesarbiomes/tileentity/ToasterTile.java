@@ -60,11 +60,7 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
 
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-                switch (slot) {
-                    case 0: return stack.getItem() == Items.BREAD;
-                    default:
-                        return false;
-                }
+                return true;
             }
 
             @Override
