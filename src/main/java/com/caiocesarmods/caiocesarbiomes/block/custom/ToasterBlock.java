@@ -35,17 +35,18 @@ public class ToasterBlock extends Block {
         super(properties);
     }
 
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, Random rand,
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos,
                                              PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if(!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-             if(tileEntity instanceof ToasterTile) {
-                    INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
+            if(tileEntity instanceof ToasterTile) {
+                INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
-                    NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
-                } else {
-                    throw new IllegalStateException("Our Container provider is missing!");
+                NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
+            } else {
+                throw new IllegalStateException("Our Container provider is missing!");
             }
         }
         return ActionResultType.SUCCESS;

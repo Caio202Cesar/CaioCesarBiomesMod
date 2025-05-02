@@ -3,7 +3,8 @@
   "group": "food",
   "pattern": [
     "abc",
-    "def"
+    "def",
+    "gh  "
   ],
   "key": {
     "a": {
@@ -23,6 +24,12 @@
     },
     "f": {
       "item": "caiocesarbiomes:salt"
+    },
+    "g": {
+      "item": "caiocesarbiomes:black_pepper"
+    },
+    "h": {
+      "item": "caiocesarbiomes:fennel_seeds"
     }
   },
   "result": {

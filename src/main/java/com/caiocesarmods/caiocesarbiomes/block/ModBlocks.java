@@ -1219,16 +1219,26 @@ public class ModBlocks {
             CreepingFigFruitingVine::new);
     public static final RegistryObject<Block> CREEPING_FIG_RIPE_FRUITING_VINE = registerBlock("creeping_fig_ripe_fruiting_vine",
             CreepingFigRipeFruitingVine::new);
+
     public static final RegistryObject<Block> SPANISH_MOSS = registerBlock("spanish_moss",
             SpanishMoss::new);
+
     public static final RegistryObject<Block> IVY = registerBlock("ivy",
             IvyVine::new);
+
     public static final RegistryObject<Block> KIWI_VINE = registerBlock("kiwi_vine",
             KiwiVine::new);
     public static final RegistryObject<Block> KIWI_FLOWERING_VINE = registerBlock("kiwi_flowering_vine",
             KiwiFloweringVine::new);
     public static final RegistryObject<Block> KIWI_FRUITING_VINE = registerBlock("kiwi_fruiting_vine",
             KiwiFruitingVine::new);
+
+    public static final RegistryObject<Block> PEPPERCORN_VINE = registerBlock("peppercorn_vine",
+            PeppercornVine::new);
+    public static final RegistryObject<Block> PEPPERCORN_FRUITING_VINE = registerBlock("peppercorn_fruiting_vine",
+            PeppercornFruitingVine::new);
+    public static final RegistryObject<Block> PEPPERCORN_RIPE_FRUITING_VINE = registerBlock("peppercorn_ripe_fruiting_vine",
+            PeppercornRipeFruitingVine::new);
 
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
             () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().

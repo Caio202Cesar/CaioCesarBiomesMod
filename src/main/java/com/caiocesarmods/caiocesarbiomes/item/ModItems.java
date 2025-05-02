@@ -103,7 +103,7 @@ public class ModItems {
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COCONUT)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> TOAST = ITEMS.register("toast",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TOAST)));
@@ -119,7 +119,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> OREGANO_STALK = ITEMS.register("oregano_stalk",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
-
+    public static final RegistryObject<Item> PEPPERCORN = ITEMS.register("peppercorn",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> RIPE_PEPPERCORN = ITEMS.register("ripe_peppercorn",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> BLACK_PEPPER = ITEMS.register("black_pepper",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> SPICED_RABBIT = ITEMS.register("spiced_rabbit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CAIO_CESAR_BIOMES_CULINARY)));
     public static final RegistryObject<Item> SAVORY_RABBIT = ITEMS.register("savory_rabbit",

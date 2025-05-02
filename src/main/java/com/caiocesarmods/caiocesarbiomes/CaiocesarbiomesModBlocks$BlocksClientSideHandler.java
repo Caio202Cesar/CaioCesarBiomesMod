@@ -37,6 +37,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         IvyVine.registerRenderLayer();
         KiwiVine.registerRenderLayer();
         PlantFanBlock.registerRenderLayer();
+        PeppercornVine.registerRenderLayer();
 
         BlueberryBush.registerRenderLayer();
         BlueberryFloweringBush.registerRenderLayer();
