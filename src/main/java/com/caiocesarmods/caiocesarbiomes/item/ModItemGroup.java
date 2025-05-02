@@ -15,11 +15,20 @@ public class ModItemGroup {
 
     };
 
-    public static final ItemGroup CAIO_CESAR_BIOMES_CULINARY = new ItemGroup("CaioCesarBiomesCulinary")
+    public static final ItemGroup CULINARY = new ItemGroup("CaioCesarBiomes:Culinary")
     {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModItems.ROSEMARY_STALK.get());
+        }
+
+    };
+
+    public static final ItemGroup FRUITS_AND_VEGETABLES = new ItemGroup("CaioCesarBiomes:FruitsAndVegetables")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModItems.LOQUAT.get());
         }
 
     };

@@ -60,7 +60,7 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
 
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-                return true;
+                return slot == 0 && stack.getItem() == Items.BREAD;
             }
 
             @Override
@@ -71,11 +71,10 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
             @Nonnull
             @Override
             public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
-                if(isItemValid(slot, stack)) {
-                    return stack;
+                if (isItemValid(slot, stack)) {
+                    return super.insertItem(slot, stack, simulate); // this allows the item to be inserted
                 }
-
-                return super.insertItem(slot, stack, simulate);
+                return stack; // if invalid, do not insert
             }
         };
     }
@@ -124,8 +123,8 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
         recipe.ifPresent(iRecipe -> {
             ItemStack output = iRecipe.getRecipeOutput();
 
-            if(iRecipe.isRedstoneActivated(world, pos)) {
-                craftTheItem(output);
+            if (world.isBlockPowered(pos)) {
+                craftTheItem(output); // your logic to insert the output and consume input
             }
 
             markDirty();
@@ -140,9 +139,10 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
 
     @Override
     public void tick() {
-        if(world.isRemote)
-            return;
+        if (world == null || world.isRemote) return;
 
-        craft();
+        if (world.isBlockPowered(pos)) {
+            craft(); // Call your crafting logic
+        }
     }
 }

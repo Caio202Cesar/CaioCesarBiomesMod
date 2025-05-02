@@ -10,7 +10,6 @@ import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.crafting.ShapedRecipe;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
@@ -24,13 +23,22 @@ import javax.annotation.Nullable;
 public class ToastRecipe implements IToastRecipe {
     private final ResourceLocation id;
     private final ItemStack output;
-    private final NonNullList<Ingredient> recipeItems;
+    private final NonNullList<Ingredient> inputs;
+    private final boolean redstoneActivated;
 
-    public ToastRecipe(ResourceLocation id, ItemStack output,
-                       NonNullList<Ingredient> recipeItems) {
+    public ToastRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputs, boolean redstoneActivated) {
         this.id = id;
         this.output = output;
-        this.recipeItems = recipeItems;
+        this.inputs = inputs;
+        this.redstoneActivated = redstoneActivated;
+    }
+
+    public boolean isRedstoneActivated() {
+        return redstoneActivated;
+    }
+
+    public boolean isRedstoneActivated(World world, BlockPos pos) {
+        return redstoneActivated && world != null && world.isBlockPowered(pos);
     }
 
     /**
@@ -42,8 +50,8 @@ public class ToastRecipe implements IToastRecipe {
     @Override
     public boolean matches(IInventory inv, World worldIn) {
         // Checks for correct focus (Glass Pane)
-        if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
-            return recipeItems.get(1).test(inv.getStackInSlot(1));
+        if(inputs.get(0).test(inv.getStackInSlot(0))) {
+            return inputs.get(1).test(inv.getStackInSlot(1));
         }
 
         return false;
@@ -51,7 +59,7 @@ public class ToastRecipe implements IToastRecipe {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        return recipeItems;
+        return inputs;
     }
 
     /**
@@ -73,9 +81,6 @@ public class ToastRecipe implements IToastRecipe {
         return output.copy();
     }
 
-    public boolean isRedstoneActivated(World world, BlockPos pos) {
-        return world != null && world.isBlockPowered(pos);
-    }
 
     public ItemStack getIcon() {
         return new ItemStack(ModBlocks.TOASTER.get());
@@ -105,6 +110,8 @@ public class ToastRecipe implements IToastRecipe {
         public ToastRecipe read(ResourceLocation recipeId, JsonObject json) {
             ItemStack output = ShapedRecipe.deserializeItem(JSONUtils.getJsonObject(json, "output"));
 
+            boolean redstoneActivated = JSONUtils.getBoolean(json, "redstoneActivated", false);
+
             JsonArray ingredients = JSONUtils.getJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
 
@@ -112,20 +119,22 @@ public class ToastRecipe implements IToastRecipe {
                 inputs.set(i, Ingredient.deserialize(ingredients.get(i)));
             }
 
-            return new ToastRecipe(recipeId, output, inputs);
+            return new ToastRecipe(recipeId, output, inputs, redstoneActivated);
         }
 
         @Nullable
         @Override
         public ToastRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
+            int size = buffer.readInt();
             NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
 
-            for (int i = 0; i < inputs.size(); i++) {
+            for (int i = 0; i < size; i++) {
                 inputs.set(i, Ingredient.read(buffer));
             }
 
             ItemStack output = buffer.readItemStack();
-            return new ToastRecipe(recipeId, output, inputs);
+            boolean redstoneActivated = buffer.readBoolean();
+            return new ToastRecipe(recipeId, output, inputs, redstoneActivated);
         }
 
         @Override
@@ -135,7 +144,7 @@ public class ToastRecipe implements IToastRecipe {
                 ing.write(buffer);
             }
             buffer.writeItemStack(recipe.getRecipeOutput(), false);
-
+            buffer.writeBoolean(recipe.isRedstoneActivated());
         }
     }
 }
