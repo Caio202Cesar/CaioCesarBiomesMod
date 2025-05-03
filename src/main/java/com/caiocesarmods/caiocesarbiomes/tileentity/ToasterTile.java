@@ -92,10 +92,14 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
         return super.getCapability(cap, side);
     }
 
-    private void strikeLightning() {
-        if(!this.world.isRemote()) {
-            EntityType.LIGHTNING_BOLT.spawn((ServerWorld)world, null, null,
-                    pos, SpawnReason.TRIGGERED, true, true);
+    private void spawnSmokeParticles() {
+        if (!world.isRemote()) return; // Only spawn particles on client side
+
+        for (int i = 0; i < 5; i++) {
+            double x = pos.getX() + 0.5 + (world.rand.nextDouble() - 0.5);
+            double y = pos.getY() + 1.0;
+            double z = pos.getZ() + 0.5 + (world.rand.nextDouble() - 0.5);
+            world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
         }
     }
 
@@ -111,19 +115,8 @@ public class ToasterTile extends TileEntity implements ITickableTileEntity {
         recipe.ifPresent(iRecipe -> {
             ItemStack output = iRecipe.getRecipeOutput();
 
-            if(iRecipe.getWeather().equals(ToastRecipe.Weather.CLEAR) &&
-                    !world.isRaining()) {
-                craftTheItem(output);
-            }
-
-            if(iRecipe.getWeather().equals(ToastRecipe.Weather.RAIN) &&
-                    world.isRaining()) {
-                craftTheItem(output);
-            }
-
-            if(iRecipe.getWeather().equals(ToastRecipe.Weather.THUNDERING) &&
-                    world.isThundering()) {
-                strikeLightning();
+            if(iRecipe.isRedstoneActivated()) {
+                spawnSmokeParticles();
                 craftTheItem(output);
             }
 

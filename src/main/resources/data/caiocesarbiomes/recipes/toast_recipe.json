@@ -1,9 +1,9 @@
 {
   "type": "caiocesarbiomes:toaster",
-  "weather": "thundering",
+  "redstoneActivated": true,
   "ingredients": [
     {
-      "item": "caiocesarbiomes:butter"
+      "item": "caiocesarbiomes:butter_piece"
     },
     {
       "item": "caiocesarbiomes:raw_toast"
