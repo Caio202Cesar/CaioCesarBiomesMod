@@ -58,7 +58,7 @@ public class ToastRecipe implements IToastRecipe {
         return redstoneActivated;
     }
 
-    public boolean isRedstoneActivated(World world, BlockPos pos) {
+    public boolean isRedstonePowered(World world, BlockPos pos) {
         return redstoneActivated && world != null && world.isBlockPowered(pos);
     }
 

@@ -110,8 +110,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.FENNEL_STALK)));
 
     //Culinary
-    public static final RegistryObject<Item> HAZELNUT_CREAM = ITEMS.register("hazelnut_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> STARFRUIT_SLICE = ITEMS.register("starfruit_slice",
@@ -187,6 +185,16 @@ public class ModItems {
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
             () -> new ButterItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9)));
     public static final RegistryObject<Item> BUTTER_PIECE = ITEMS.register("butter_piece",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> JAR = ITEMS.register("jar",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> HAZELNUT_CREAM = ITEMS.register("hazelnut_cream",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> HAZELNUT_TOAST = ITEMS.register("hazelnut_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> PISTACHIO_CREAM = ITEMS.register("pistachio_cream",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> PISTACHIO_TOAST = ITEMS.register("pistachio_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //MISC
