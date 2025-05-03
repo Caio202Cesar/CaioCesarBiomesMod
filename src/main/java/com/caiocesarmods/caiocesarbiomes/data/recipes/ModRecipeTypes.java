@@ -13,16 +13,25 @@ public class ModRecipeTypes {
     public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZER =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, CaioCesarBiomesMod.MOD_ID);
 
+    //Toast
     public static final RegistryObject<ToastRecipe.Serializer> TOASTER_SERIALIZER
             = RECIPE_SERIALIZER.register("toaster", ToastRecipe.Serializer::new);
 
     public static IRecipeType<ToastRecipe> TOAST_RECIPE
             = new ToastRecipe.ToastRecipeType();
 
+    //Butter
+    public static final RegistryObject<ButterRecipe.Serializer> BUTTER_SERIALIZER
+            = RECIPE_SERIALIZER.register("butter_mixer", ButterRecipe.Serializer::new);
+
+    public static IRecipeType<ButterRecipe> BUTTER_RECIPE
+            = new ButterRecipe.ButterRecipeType();
+
 
     public static void register(IEventBus eventBus) {
         RECIPE_SERIALIZER.register(eventBus);
 
         Registry.register(Registry.RECIPE_TYPE, ToastRecipe.TYPE_ID, TOAST_RECIPE);
+        Registry.register(Registry.RECIPE_TYPE, ToastRecipe.TYPE_ID, BUTTER_RECIPE);
     }
 }

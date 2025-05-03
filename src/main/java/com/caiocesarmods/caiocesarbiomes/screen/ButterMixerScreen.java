@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.screen;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.container.ButterMixerContainer;
 import com.caiocesarmods.caiocesarbiomes.container.ToasterContainer;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -9,11 +10,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class ButterMixerScreen extends ContainerScreen<ToasterContainer> {
+public class ButterMixerScreen extends ContainerScreen<ButterMixerContainer> {
     private final ResourceLocation GUI = new ResourceLocation(CaioCesarBiomesMod.MOD_ID,
             "textures/gui/butter_mixer_gui.png");
 
-    public ButterMixerScreen(ToasterContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
+    public ButterMixerScreen(ButterMixerContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
     }
 
