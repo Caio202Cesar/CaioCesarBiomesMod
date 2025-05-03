@@ -1382,7 +1382,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
             () -> new ToasterBlock(AbstractBlock.Properties.create(Material.ANVIL).notSolid()));
-
+    public static final RegistryObject<Block> BUTTER_MIXER = registerBlock("butter_mixer",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).
+                    setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
