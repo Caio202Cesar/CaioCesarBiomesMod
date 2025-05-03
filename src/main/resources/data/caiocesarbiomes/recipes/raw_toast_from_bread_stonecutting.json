@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:bread"
-  },
-  "result": "caiocesarbiomes:raw_toast",
-  "count": 9
-}

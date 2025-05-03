@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "caiocesarbiomes:bread_knife"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:raw_toast",
+    "count": 9
+  }
+}
