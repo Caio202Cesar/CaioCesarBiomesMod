@@ -182,6 +182,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BREAD_KNIFE = ITEMS.register("bread_knife",
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9))); //Hammer like item used both to make 9 raw toast from 1 bread and 9 butter nugget from 1 butter
+    public static final RegistryObject<Item> MILK_SKIN = ITEMS.register("milk_skin",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
             () -> new ButterItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9)));
     public static final RegistryObject<Item> BUTTER_PIECE = ITEMS.register("butter_piece",

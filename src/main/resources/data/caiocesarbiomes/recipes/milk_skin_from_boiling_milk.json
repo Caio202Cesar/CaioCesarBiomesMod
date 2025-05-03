@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result": "caiocesarbiomes:milk_skin",
+  "experience": 0.1,
+  "cookingtime": 200
+}
