@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:butter"
+    },
+    {
+      "item": "caiocesarbiomes:bread_knife"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:butter_piece",
+    "count": 1
+  }
+}

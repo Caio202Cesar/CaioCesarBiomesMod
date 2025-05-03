@@ -2,10 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
-import com.caiocesarmods.caiocesarbiomes.item.custom.BreadKnifeItem;
-import com.caiocesarmods.caiocesarbiomes.item.custom.CoconutWaterItem;
-import com.caiocesarmods.caiocesarbiomes.item.custom.BeverageItem;
-import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
+import com.caiocesarmods.caiocesarbiomes.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -183,12 +180,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COOKED_FENNEL_STALK)));
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> RAW_TOAST = ITEMS.register("raw_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BREAD_KNIFE = ITEMS.register("bread_knife",
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9))); //Hammer like item used both to make 9 raw toast from 1 bread and 9 butter nugget from 1 butter
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
+            () -> new ButterItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9)));
+    public static final RegistryObject<Item> BUTTER_PIECE = ITEMS.register("butter_piece",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",

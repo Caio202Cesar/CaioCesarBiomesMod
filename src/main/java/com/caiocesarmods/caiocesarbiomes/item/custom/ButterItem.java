@@ -3,8 +3,8 @@ package com.caiocesarmods.caiocesarbiomes.item.custom;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class BreadKnifeItem extends Item {
-    public BreadKnifeItem(Properties properties) {
+public class ButterItem extends Item {
+    public ButterItem(Properties properties) {
         super(properties);
     }
 
