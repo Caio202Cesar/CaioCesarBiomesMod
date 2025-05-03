@@ -1,0 +1,15 @@
+{
+  "type": "caiocesarbiomes:butter_mixer",
+  "redstoneActivated": true,
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:salt"
+    },
+    {
+      "item": "caiocesarbiomes:milk_skin"
+    }
+  ],
+  "output": {
+    "item": "caiocesarbiomes:butter"
+  }
+}
