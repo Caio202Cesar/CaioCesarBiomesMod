@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:milk_bucket"
   },
-  "result": "caiocesarbiomes:milk_tea",
+  "result": "caiocesarbiomes:milk_skin",
   "experience": 0.35,
   "cookingtime": 800
 }
