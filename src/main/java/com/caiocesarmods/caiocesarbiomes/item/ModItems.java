@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.custom.BreadKnifeItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.CoconutWaterItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.BeverageItem;
 import com.caiocesarmods.caiocesarbiomes.item.custom.PoisonSwordItem;
@@ -187,7 +188,7 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_TOAST = ITEMS.register("raw_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BREAD_KNIFE = ITEMS.register("bread_knife",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY))); //Hammer like item used both to make 9 raw toast from 1 bread and 9 butter nugget from 1 butter
+            () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(9))); //Hammer like item used both to make 9 raw toast from 1 bread and 9 butter nugget from 1 butter
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
