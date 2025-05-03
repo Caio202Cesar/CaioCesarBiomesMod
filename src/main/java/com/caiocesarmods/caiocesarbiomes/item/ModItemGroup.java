@@ -46,7 +46,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.PURPLE_CRAPE_MYRTLE_SAPLING.get());
+            return new ItemStack(ModBlocks.COCONUT_SAPLING.get());
         }
 
     };
