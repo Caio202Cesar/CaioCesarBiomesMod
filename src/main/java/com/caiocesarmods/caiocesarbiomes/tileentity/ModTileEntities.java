@@ -16,6 +16,10 @@ public class ModTileEntities {
             TILE_ENTITIES.register("toaster_tile", () -> TileEntityType.Builder.create(
                     ToasterTile::new, ModBlocks.TOASTER.get()).build(null));
 
+    public static RegistryObject<TileEntityType<ButterMixerTile>> BUTTER_MIXER_TILE =
+            TILE_ENTITIES.register("butter_mixer_tile", () -> TileEntityType.Builder.create(
+                    ButterMixerTile::new, ModBlocks.BUTTER_MIXER.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         TILE_ENTITIES.register(eventBus);

@@ -10,6 +10,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
@@ -131,9 +132,11 @@ public class CaioCesarBiomesMod
         event.enqueueWork(()-> {
             RenderTypeLookup.setRenderLayer(ModBlocks.TOASTER.get(), RenderType.getCutout());
 
-            ScreenManager.registerFactory(ModContainers.TOASTER_CONTAINER.get(),
-                    ToasterScreen::new);
-                });
+            ScreenManager.registerFactory(ModContainers.TOASTER_CONTAINER.get(), ToasterScreen::new);
+
+            ScreenManager.registerFactory(ModContainers.BUTTER_MIXER_CONTAINER.get(), ButterMixerScreen::new);
+
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

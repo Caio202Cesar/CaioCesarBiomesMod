@@ -23,6 +23,14 @@ public class ModContainers {
                 return new ToasterContainer(windowId, world, pos, inv, inv.player);
             })));
 
+    public static final RegistryObject<ContainerType<ButterMixerContainer>> BUTTER_MIXER_CONTAINER
+            = CONTAINERS.register("butter_mixer_container",
+            () -> IForgeContainerType.create(((windowId, inv, data) -> {
+                BlockPos pos = data.readBlockPos();
+                World world = inv.player.getEntityWorld();
+                return new ButterMixerContainer(windowId, world, pos, inv, inv.player);
+            })));
+
 
     public static void register(IEventBus eventBus) {
         CONTAINERS.register(eventBus);

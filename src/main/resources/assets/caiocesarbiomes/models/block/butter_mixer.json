@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "cobblestone",
-		"1": "dark_oak_planks",
-		"particle": "cobblestone"
+		"0": "caiocesarbiomes:block/cobblestone",
+		"1": "caiocesarbiomes:block/dark_oak_planks",
+		"particle": "caiocesarbiomes:block/dark_oak_planks"
 	},
 	"elements": [
 		{
