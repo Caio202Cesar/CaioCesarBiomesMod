@@ -182,8 +182,6 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> MUGO_PINE_LOG = registerBlock("mugo_pine_log",
             ModLogs::new);
-    public static final RegistryObject<Block> PODOCARPUS_LOG = registerBlock("podocarpus_log",
-            ModLogs::new);
     public static final RegistryObject<Block> OIL_PALM_LOG = registerBlock("oil_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> SLASH_PINE_LOG = registerBlock("slash_pine_log",
@@ -548,6 +546,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> WESTERN_HEMLOCK_LEAVES = registerBlock("western_hemlock_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MOUNTAIN_HEMLOCK_LEAVES = registerBlock("mountain_hemlock_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
             ModLeaves::new);
