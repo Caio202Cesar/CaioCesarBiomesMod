@@ -37,7 +37,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.PURPLE_BASIL.get());
+            return new ItemStack(ModBlocks.ROSEMARY.get());
         }
 
     };
@@ -47,6 +47,15 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModBlocks.COCONUT_SAPLING.get());
+        }
+
+    };
+
+    public static final ItemGroup PLANKS = new ItemGroup("CaioCesarBiomes:Planks")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModBlocks.LIVE_OAK_PLANKS.get());
         }
 
     };

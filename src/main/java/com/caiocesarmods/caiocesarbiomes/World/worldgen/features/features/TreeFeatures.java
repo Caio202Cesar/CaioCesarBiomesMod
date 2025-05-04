@@ -1472,6 +1472,9 @@ public class TreeFeatures {
         protected static final BlockState AVOCADO_LOG = ModBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = ModBlocks.AVOCADO_LEAVES.get().getDefaultState();
 
+        protected static final BlockState EBONY_LOG = ModBlocks.GABON_EBONY_LOG.get().getDefaultState();
+        protected static final BlockState PERSIMMON_LEAVES = ModBlocks.PERSIMMON_LEAVES.get().getDefaultState();
+
         protected static final BlockState MUGO_PINE_LOG = ModBlocks.MUGO_PINE_LOG.get().getDefaultState();
         protected static final BlockState MUGO_PINE_LEAVES = ModBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
 
