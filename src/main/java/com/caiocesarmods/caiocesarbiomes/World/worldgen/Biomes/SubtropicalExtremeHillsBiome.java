@@ -24,7 +24,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> SUBTROPICAL_EXTREME_HILLS = BIOMES.register("subtropical_extreme_hills",
-        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 3.0F, 1.8F));
+        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 2.4F, 1.8F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -57,7 +57,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CHINESE_RED_PINE_TREE);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_EXTREME_HILLS_VEGETATION);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

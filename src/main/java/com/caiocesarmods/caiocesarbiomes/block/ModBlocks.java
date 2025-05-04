@@ -184,6 +184,8 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PODOCARPUS_LOG = registerBlock("podocarpus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> OIL_PALM_LOG = registerBlock("oil_palm_log",
+            ModLogs::new);
 
     //Planks
     public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",

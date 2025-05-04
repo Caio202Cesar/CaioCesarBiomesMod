@@ -56,15 +56,12 @@ public class ButterRecipe implements IButterRecipe {
 
     @Override
     public ItemStack getRecipeOutput() {
+
         return output.copy();
     }
 
     public boolean isRedstoneActivated() {
         return redstoneActivated;
-    }
-
-    public boolean isRedstonePowered(World world, BlockPos pos) {
-        return redstoneActivated && world != null && world.isBlockPowered(pos);
     }
 
     public ItemStack getIcon() {

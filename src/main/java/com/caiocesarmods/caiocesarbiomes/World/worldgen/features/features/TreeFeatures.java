@@ -1054,7 +1054,7 @@ public class TreeFeatures {
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("china_pine_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("chinese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
                     new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
@@ -1437,15 +1437,6 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Oil Palm (tropical deciduous forest)
-
-    //Baobab
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB = register("baobab",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DARK_OAK_LOG),
-                    new SimpleBlockStateProvider(States.AVOCADO_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(15, 5, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Jackalberry Tree
 
@@ -1893,7 +1884,13 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> OAK_SHRUBS = register("oak_shrubs", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HOLM_OAK_SHRUB.withChance(0.3F), CORK_OAK_SHRUB.withChance(0.3F)),
-                    OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                    OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_EXTREME_HILLS_VEGETATION = register("subtropical_extreme_hills_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CHINESE_RED_PINE_TREE.withChance(0.8F)),
+                    OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_PINES = register("tropical_pines", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(NORFOLK_ISLAND_PINE_TREE.withChance(0.8F),
