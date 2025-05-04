@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "caiocesarbiomes:spiced_chicken"
+  },
+  "result": "caiocesarbiomes:savory_chicken",
+  "experience": 0.35,
+  "cookingtime": 200
+}
