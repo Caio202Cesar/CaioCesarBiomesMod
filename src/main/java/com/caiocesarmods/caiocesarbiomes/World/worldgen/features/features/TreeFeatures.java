@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.DateFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.OilPalmFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.google.common.collect.ImmutableList;
@@ -1436,7 +1437,15 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(15, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Aspen Tree
+
     //Oil Palm (tropical deciduous forest)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OIL_PALM_TREE = register("oil_palm_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OIL_PALM_LOG),
+                    new SimpleBlockStateProvider(States.OIL_PALM_LEAVES),
+                    new OilPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(10, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     //Jackalberry Tree
 
@@ -1449,6 +1458,13 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
+    //Slash Pine (Subtropical Forest)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SLASH_PINE = register("slash_pine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
     public static final class States {
@@ -1458,6 +1474,12 @@ public class TreeFeatures {
 
         protected static final BlockState MUGO_PINE_LOG = ModBlocks.MUGO_PINE_LOG.get().getDefaultState();
         protected static final BlockState MUGO_PINE_LEAVES = ModBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SLASH_PINE_LOG = ModBlocks.SLASH_PINE_LOG.get().getDefaultState();
+        protected static final BlockState SLASH_PINE_LEAVES = ModBlocks.SLASH_PINE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState OIL_PALM_LOG = ModBlocks.OIL_PALM_LOG.get().getDefaultState();
+        protected static final BlockState OIL_PALM_LEAVES = ModBlocks.OIL_PALM_LEAVES.get().getDefaultState();
 
         protected static final BlockState BISMARCK_PALM_LOG = ModBlocks.BISMARCK_PALM_LOG.get().getDefaultState();
         protected static final BlockState BISMARCK_PALM_LEAVES = ModBlocks.BISMARCK_PALM_LEAVES.get().getDefaultState();
@@ -2068,7 +2090,7 @@ public class TreeFeatures {
 
     //Replace this for humid climate pines - add podocarpus
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PINES = register("subtropical_forest_pines",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BAOBAB.withChance(0.2F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SLASH_PINE.withChance(0.2F)),
                             HOOP_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 

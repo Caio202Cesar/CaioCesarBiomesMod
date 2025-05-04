@@ -22,6 +22,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("date_foliage_placer",
                     () -> new FoliagePlacerType<>(DateFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<OilPalmFoliagePlacer>> OIL_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("oil_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(OilPalmFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
