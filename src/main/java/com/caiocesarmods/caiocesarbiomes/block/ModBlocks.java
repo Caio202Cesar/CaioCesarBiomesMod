@@ -714,6 +714,7 @@ public class ModBlocks {
     //Mountain extra-vegetation
     public static final RegistryObject<Block> MUGO_PINE_LEAVES = registerBlock("mugo_pine_leaves",
             ModLeaves::new);
+
     public static final RegistryObject<Block> SUBALPINE_FIR_LEAVES = registerBlock("subalpine_fir_leaves",
             ModLeaves::new);
 
