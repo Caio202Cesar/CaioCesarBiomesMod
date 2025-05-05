@@ -1814,9 +1814,9 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MOUNTAIN_EXTRA_VEGETATION = register("mountain_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLUE_SPRUCE.withChance(0.2F),
-                            HAWTHORN_TREE.withChance(0.25F), ROWAN_TREE1.withChance(0.2F), ROWAN_TREE2.withChance(0.25F),
-                            MOUNTAIN_HEMLOCK_TREE.withChance(0.7F), MOUNTAIN_HEMLOCK_TREE_TALL.withChance(0.5F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLUE_SPRUCE.withChance(0.078F),
+                            HAWTHORN_TREE.withChance(0.012F), ROWAN_TREE1.withChance(0.012F), ROWAN_TREE2.withChance(0.001F),
+                            MOUNTAIN_HEMLOCK_TREE.withChance(0.5F), MOUNTAIN_HEMLOCK_TREE_TALL.withChance(0.5F),
                     SUBALPINE_FIR.withChance(0.7F), JUNIPER_SHRUB.withChance(0.25F)), MUGO_PINE_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
