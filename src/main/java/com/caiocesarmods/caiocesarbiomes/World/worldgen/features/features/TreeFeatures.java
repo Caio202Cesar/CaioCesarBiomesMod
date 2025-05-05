@@ -1488,9 +1488,16 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyTrunkPlacer(7, 9, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Loboly Pine (the main feature of decidous subtropical forest hills)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
+                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(16, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_JUNGLE_TREE = register("peppercorn_jungle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
@@ -1807,9 +1814,10 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MOUNTAIN_EXTRA_VEGETATION = register("mountain_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLUE_SPRUCE.withChance(0.5F),
-                            HAWTHORN_TREE.withChance(0.25F), MOUNTAIN_HEMLOCK_TREE.withChance(0.7F), MOUNTAIN_HEMLOCK_TREE_TALL.withChance(0.5F),
-                    SUBALPINE_FIR.withChance(0.7F)), MUGO_PINE_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLUE_SPRUCE.withChance(0.2F),
+                            HAWTHORN_TREE.withChance(0.25F), ROWAN_TREE1.withChance(0.2F), ROWAN_TREE2.withChance(0.25F),
+                            MOUNTAIN_HEMLOCK_TREE.withChance(0.7F), MOUNTAIN_HEMLOCK_TREE_TALL.withChance(0.5F),
+                    SUBALPINE_FIR.withChance(0.7F), JUNIPER_SHRUB.withChance(0.25F)), MUGO_PINE_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_EXTRA_VEGETATION = register("jungle_extra_vegetation",
@@ -1872,10 +1880,10 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.29F),
-                            INDIAN_CORAL_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.33F),
-                            MARULA_TREE.withChance(0.4F), BISMARCK_PALM.withChance(0.3F), SYCAMORE_FIG_TREE.withChance(0.3F)),
-                            SAUSAGE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.19F),
+                            SAUSAGE_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.19F),
+                            MARULA_TREE.withChance(0.2F), BISMARCK_PALM.withChance(0.25F), SYCAMORE_FIG_TREE.withChance(0.19F)),
+                            INDIAN_CORAL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",

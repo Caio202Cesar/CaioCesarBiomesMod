@@ -24,7 +24,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> SUBTROPICAL_EXTREME_HILLS = BIOMES.register("subtropical_extreme_hills",
-        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 2.4F, 1.8F));
+        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 1.4F, 1.8F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
