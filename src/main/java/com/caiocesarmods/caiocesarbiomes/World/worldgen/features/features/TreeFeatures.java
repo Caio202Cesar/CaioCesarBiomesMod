@@ -1811,7 +1811,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> BIRCH_FOREST_EXTRA_VEGETATION = register("birch_forest_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             ROWAN_TREE2.withChance(0.2F), ROWAN_TREE1.withChance(0.13F), HOLLY_TREE2.withChance(0.2F),
-                            HOLLY_TREE1.withChance(0.2F),
+                            HOLLY_TREE1.withChance(0.2F), BLACK_POPLAR_FANCY_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.1F),
                             JUNIPER_SHRUB.withChance(0.17F), PLANE_TREE.withChance(0.3F), PLANE_FANCY_TREE.withChance(0.35F),
                             HAZELNUT_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.3F)), ELDERBERRY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -1852,10 +1852,10 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.1F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.091F), PECAN_FANCY_TREE.withChance(0.3F), PLANE_TREE.withChance(0.098F),
-                            PLANE_TREE.withChance(0.2F), ELDERBERRY_TREE.withChance(0.3F)),
-                            PECAN_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.2F),
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.3F), PLANE_TREE.withChance(0.2F),
+                            PLANE_TREE.withChance(0.2F), PECAN_TREE.withChance(0.15F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.2F)),
+                            ELDERBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
 
     public static final ConfiguredFeature<?, ?> OLEANDER_SHRUBS = register("oleander_shrubs",

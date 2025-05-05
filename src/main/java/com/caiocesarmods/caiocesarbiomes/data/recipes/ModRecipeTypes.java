@@ -32,6 +32,6 @@ public class ModRecipeTypes {
         RECIPE_SERIALIZER.register(eventBus);
 
         Registry.register(Registry.RECIPE_TYPE, ToastRecipe.TYPE_ID, TOAST_RECIPE);
-        Registry.register(Registry.RECIPE_TYPE, ToastRecipe.TYPE_ID, BUTTER_RECIPE);
+        Registry.register(Registry.RECIPE_TYPE, ButterRecipe.TYPE_ID, BUTTER_RECIPE);
     }
 }
