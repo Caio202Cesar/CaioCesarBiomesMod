@@ -42,7 +42,7 @@ public class ModItemGroup {
 
     };
 
-    public static final ItemGroup SAPLINGS = new ItemGroup("CaioCesarBiomes:Saplings")
+    public static final ItemGroup TREES = new ItemGroup("CaioCesarBiomes:Trees")
     {
         @Override
         public ItemStack createIcon() {
@@ -51,7 +51,7 @@ public class ModItemGroup {
 
     };
 
-    public static final ItemGroup PLANKS = new ItemGroup("CaioCesarBiomes:Planks")
+    public static final ItemGroup WOOD = new ItemGroup("CaioCesarBiomes:Wood")
     {
         @Override
         public ItemStack createIcon() {
