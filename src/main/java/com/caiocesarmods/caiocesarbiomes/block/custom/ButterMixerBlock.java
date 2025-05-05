@@ -40,7 +40,7 @@ public class ButterMixerBlock extends HorizontalBlock {
         if(!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-            if(tileEntity instanceof ToasterTile) {
+            if(tileEntity instanceof ButterMixerTile) {
                 INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
                 NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getPos());
@@ -48,8 +48,6 @@ public class ButterMixerBlock extends HorizontalBlock {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
             if(player.isSneaking()) {
-                // worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE,
-                //          SoundCategory.BLOCKS, 1, 1, true);
                 worldIn.playSound(null, pos, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1, 1);
             }
         }

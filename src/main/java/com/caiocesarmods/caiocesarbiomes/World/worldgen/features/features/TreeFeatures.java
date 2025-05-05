@@ -1847,7 +1847,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.29F),
                             INDIAN_CORAL_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.33F),
-                            MARULA_TREE.withChance(0.4F), BISMARCK_PALM.withChance(0.2F), SYCAMORE_FIG_TREE.withChance(0.3F)),
+                            MARULA_TREE.withChance(0.4F), BISMARCK_PALM.withChance(0.3F), SYCAMORE_FIG_TREE.withChance(0.3F)),
                             SAUSAGE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
