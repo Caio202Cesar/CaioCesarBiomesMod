@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
+import com.caiocesarmods.caiocesarbiomes.container.ButterMixerContainer;
 import com.caiocesarmods.caiocesarbiomes.container.ToasterContainer;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ButterMixerTile;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ToasterTile;
@@ -64,7 +65,7 @@ public class ButterMixerBlock extends HorizontalBlock {
             @Nullable
             @Override
             public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-                return new ToasterContainer(i, worldIn, pos, playerInventory, playerEntity);
+                return new ButterMixerContainer(i, worldIn, pos, playerInventory, playerEntity);
             }
         };
     }
