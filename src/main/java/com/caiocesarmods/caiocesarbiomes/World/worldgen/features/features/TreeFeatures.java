@@ -1477,8 +1477,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUBALPINE_FIR = register("subalpine_fir",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SUBALPINE_FIR_LOG),
                     new SimpleBlockStateProvider(States.SUBALPINE_FIR_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 2)),
-                    new StraightTrunkPlacer(16, 2, 1),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
 
@@ -1491,7 +1491,7 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(7, 9, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Loboly Pine (the main feature of decidous subtropical forest hills)
+    //Loboly Pine (the main feature of decidous subtropical forest hills) - também na florest hills
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
                     new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),

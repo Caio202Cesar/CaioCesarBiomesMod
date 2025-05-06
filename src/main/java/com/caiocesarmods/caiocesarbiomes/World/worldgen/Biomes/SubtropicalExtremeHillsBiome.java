@@ -56,6 +56,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_EXTREME_HILLS_VEGETATION);
 
