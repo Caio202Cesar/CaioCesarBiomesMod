@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
@@ -74,7 +75,7 @@ public class CoconutFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, ModBlocks.COCONUT_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, TreeBlocks.COCONUT_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

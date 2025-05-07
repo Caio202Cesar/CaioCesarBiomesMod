@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -47,7 +48,7 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-            int dropCount = 1;
+            int dropCount = 3;
 
             ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -67,14 +68,14 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 1;
+            int dropCount = 3;
 
             ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.LOQUAT_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.LOQUAT_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

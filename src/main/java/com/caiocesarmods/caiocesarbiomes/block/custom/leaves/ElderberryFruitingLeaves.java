@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -74,7 +75,7 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.ELDERBERRY_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
