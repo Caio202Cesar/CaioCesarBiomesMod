@@ -33,155 +33,18 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
-    //Planks
-    public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_PLANKS = registerBlock("italian_cypress_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> LIVE_OAK_PLANKS = registerBlock("live_oak_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> MYRTLE_PLANKS = registerBlock("myrtle_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> OCOTEA_PLANKS = registerBlock("ocotea_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> TROPICAL_ALMOND_PLANKS = registerBlock("tropical_almond_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("stone_pine_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ERYTHRINA_PLANKS = registerBlock("erythrina_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CRABAPPLE_PLANKS = registerBlock("crabapple_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ELDERBERRY_PLANKS = registerBlock("elderberry_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> JAPANESE_MAPLE_PLANKS = registerBlock("japanese_maple_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
-            ModPlanks::new);
-     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> EUCALYPTUS_PLANKS = registerBlock("eucalyptus_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> PLUM_PLANKS = registerBlock("plum_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> POHUTUKAWA_PLANKS = registerBlock("pohutukawa_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CAMELLIA_PLANKS = registerBlock("camellia_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CASUARINA_PLANKS = registerBlock("casuarina_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> BLACK_POPLAR_PLANKS = registerBlock("black_poplar_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> BEECH_PLANKS = registerBlock("beech_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> WESTERN_HEMLOCK_PLANKS = registerBlock("western_hemlock_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
-            ModLogs::new);
+
 
     //Leaves
 
 
 
-    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CANARY_DATE_LEAVES = registerBlock("canary_date_leaves",
-            () -> new DateLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
-    public static final RegistryObject<Block> DATE_LEAVES = registerBlock("date_leaves",
-            () -> new DateLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
-    public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
-            () -> new CoconutLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
 
-    public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
-            FigLeaves::new);
-    public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
-            WhiteFigLeaves::new);
-    public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
-            SycamoreFigLeaves::new);
 
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> LIVE_OAK_LEAVES = registerBlock("live_oak_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OCOTEA_LEAVES = registerBlock("ocotea_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OLEANDER_DARK_PINK_LEAVES = registerBlock("oleander_dark_pink_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OLEANDER_PINK_LEAVES = registerBlock("oleander_pink_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OLEANDER_WHITE_LEAVES = registerBlock("oleander_white_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CHINESE_RED_PINE_LEAVES = registerBlock("chinese_red_pine_leaves",
-            ModLeaves::new);
 
-    public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
-            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES = registerBlock("pomegranate_flowering_leaves",
-            () -> new PomegranateFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_FRUITING_LEAVES));
-    public static final RegistryObject<Block> POMEGRANATE_FRUITING_LEAVES = registerBlock("pomegranate_fruiting_leaves",
-            () -> new PomegranateFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POMEGRANATE_LEAVES));
 
-    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_LEAVES = registerBlock("southern_magnolia_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> TROPICAL_ALMOND_LEAVES = registerBlock("tropical_almond_leaves",
-            ModLeaves::new);
+
+
     public static final RegistryObject<Block> HOLM_OAK_LEAVES = registerBlock("holm_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CORK_OAK_LEAVES = registerBlock("cork_oak_leaves",
@@ -207,16 +70,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> INDIAN_CORAL_LEAVES = registerBlock("indian_coral_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> RED_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_red_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_white_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_purple_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_pink_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> SOUTHERN_WAX_MYRTLE_LEAVES = registerBlock("southern_wax_myrtle_leaves",
-            ModLeaves::new);
+
 
 
     public static final RegistryObject<Block> LOQUAT_LEAVES = registerBlock("loquat_leaves",
@@ -250,12 +104,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_KAPOK_LEAVES = registerBlock("red_kapok_leaves",
             ModLeaves::new);
 
-    public static final RegistryObject<Block> MULBERRY_LEAVES = registerBlock("mulberry_leaves",
-            () -> new MulberryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MULBERRY_FRUITING_LEAVES));
-    public static final RegistryObject<Block> MULBERRY_FRUITING_LEAVES = registerBlock("mulberry_fruiting_leaves",
-            () -> new MulberryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MULBERRY_LEAVES));
+
 
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             () -> new StarfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -511,22 +360,9 @@ public class ModBlocks {
             ModLeaves::new);
 
     //Savanna
-    public static final RegistryObject<Block> MARULA_LEAVES = registerBlock("marula_leaves",
-            () -> new MarulaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_FRUITING_LEAVES));
-    public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
-            () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.MARULA_LEAVES));
 
-    public static final RegistryObject<Block> SAUSAGE_TREE_LEAVES = registerBlock("sausage_tree_leaves",
-            () -> new MangoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SAUSAGE_TREE_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> SAUSAGE_TREE_FLOWERING_LEAVES = registerBlock("sausage_tree_flowering_leaves",
-            () -> new MangoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SAUSAGE_TREE_FRUITING_LEAVES));
-    public static final RegistryObject<Block> SAUSAGE_TREE_FRUITING_LEAVES = registerBlock("sausage_tree_fruiting_leaves",
-            () -> new MangoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SAUSAGE_TREE_LEAVES));
+
+
 
     public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
             ModLeaves::new);
@@ -542,15 +378,13 @@ public class ModBlocks {
             ModLeaves::new);
 
     //Mountain extra-vegetation
-    public static final RegistryObject<Block> MUGO_PINE_LEAVES = registerBlock("mugo_pine_leaves",
-            ModLeaves::new);
+
 
     public static final RegistryObject<Block> SUBALPINE_FIR_LEAVES = registerBlock("subalpine_fir_leaves",
             ModLeaves::new);
 
 
-    public static final RegistryObject<Block> OIL_PALM_LEAVES = registerBlock("oil_palm_leaves",
-            ModLeaves::new);
+
     public static final RegistryObject<Block> SLASH_PINE_LEAVES = registerBlock("slash_pine_leaves",
             ModLeaves::new);
 
@@ -1147,6 +981,90 @@ public class ModBlocks {
     public static final RegistryObject<Block> BUTTER_MIXER = registerBlock("butter_mixer",
             () -> new ButterMixerBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).
                     setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
+
+
+    //Planks
+    public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ITALIAN_CYPRESS_PLANKS = registerBlock("italian_cypress_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> LIVE_OAK_PLANKS = registerBlock("live_oak_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MYRTLE_PLANKS = registerBlock("myrtle_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> OCOTEA_PLANKS = registerBlock("ocotea_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> TROPICAL_ALMOND_PLANKS = registerBlock("tropical_almond_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("stone_pine_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ERYTHRINA_PLANKS = registerBlock("erythrina_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CRABAPPLE_PLANKS = registerBlock("crabapple_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> LOQUAT_PLANKS = registerBlock("loquat_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ELDERBERRY_PLANKS = registerBlock("elderberry_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> JAPANESE_MAPLE_PLANKS = registerBlock("japanese_maple_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> EUCALYPTUS_PLANKS = registerBlock("eucalyptus_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> PLUM_PLANKS = registerBlock("plum_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> POHUTUKAWA_PLANKS = registerBlock("pohutukawa_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CAMELLIA_PLANKS = registerBlock("camellia_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CASUARINA_PLANKS = registerBlock("casuarina_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> BLACK_POPLAR_PLANKS = registerBlock("black_poplar_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> BEECH_PLANKS = registerBlock("beech_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> WESTERN_HEMLOCK_PLANKS = registerBlock("western_hemlock_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
+            ModLogs::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

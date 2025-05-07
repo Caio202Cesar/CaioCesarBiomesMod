@@ -37,7 +37,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.ROSEMARY.get());
+            return new ItemStack(ModBlocks.DESERT_ROSE_PLANT.get());
         }
 
     };
