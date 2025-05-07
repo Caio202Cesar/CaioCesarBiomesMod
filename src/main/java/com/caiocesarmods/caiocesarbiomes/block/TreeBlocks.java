@@ -31,11 +31,19 @@ public class TreeBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
     ///A
-
     //Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> NORFOLK_PINE_LEAVES = registerBlock("norfolk_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MONKEY_PUZZLE_LEAVES = registerBlock("monkey_puzzle_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BUNYA_PINE_LEAVES = registerBlock("bunya_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> HOOP_PINE_LEAVES = registerBlock("hoop_pine_leaves",
+            ModLeaves::new);
     //Avocado
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
             ModLogs::new);
@@ -47,6 +55,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
             () -> new FlowerPotBlock(TreeBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    //Aspen
+    public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
+            ModLeaves::new); //the same tree structure as southern magnolia
+
+
 
     ///B
     // Beech
@@ -89,6 +102,10 @@ public class TreeBlocks {
     //Camellia
     public static final RegistryObject<Block> CAMELLIA_LOG = registerBlock("camellia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
+            ModLeaves::new);
     //Carob
     public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
             ModLogs::new);
@@ -400,6 +417,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> HOLM_OAK_LEAVES = registerBlock("holm_oak_leaves",
             ModLeaves::new);
+    //Holly
+    public static final RegistryObject<Block> HOLLY_LOG = registerBlock("ilex_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
+            ModLeaves::new);
+
 
 
     ///I
@@ -408,9 +431,6 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
             ModLeaves::new);
-    //Ilex (Holly)
-    public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
-            ModLogs::new);
 
 
 
@@ -418,15 +438,27 @@ public class TreeBlocks {
     //Japanese Pine
     public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JAPANESE_PINE_LEAVES = registerBlock("japanese_pine_leaves",
+            ModLeaves::new);
     //Japanese Maple
     public static final RegistryObject<Block> JAPANESE_MAPLE_LOG = registerBlock("japanese_maple_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JAPANESE_MAPLE_LEAVES = registerBlock("japanese_maple_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            ModLeaves::new);
     //Jungle Figs
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             ModLogs::new);
+    public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
+            ModLeaves::new);
     //Juniper
     public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
+            JuniperLeaves::new);
 
 
 
@@ -443,10 +475,22 @@ public class TreeBlocks {
     //Larch
     public static final RegistryObject<Block> LARCH_LOG = registerBlock("larch_log",
             ModLogs::new);
+    public static final RegistryObject<Block> LARCH_LEAVES = registerBlock("larch_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> LARCH_AUTUMN_LEAVES = registerBlock("larch_autumn_leaves",
+            ModLeaves::new);
     //Loquat
     public static final RegistryObject<Block> LOQUAT_LOG = registerBlock("loquat_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> LOQUAT_LEAVES = registerBlock("loquat_leaves",
+            () -> new LoquatLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.LOQUAT_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> LOQUAT_FLOWERING_LEAVES = registerBlock("loquat_flowering_leaves",
+            () -> new LoquatFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.LOQUAT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> LOQUAT_FRUITING_LEAVES = registerBlock("loquat_fruiting_leaves",
+            () -> new LoquatFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.LOQUAT_LEAVES));
 
 
 
@@ -511,6 +555,8 @@ public class TreeBlocks {
     //Nothofagus
     public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves",
+            ModLeaves::new);
 
 
 
@@ -554,9 +600,31 @@ public class TreeBlocks {
     //Pecan
     public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PECAN_LEAVES = registerBlock("pecan_leaves",
+            () -> new PecanLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PECAN_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
+            () -> new PecanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PECAN_LEAVES));
+    //Persimmon
+    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PERSIMMON_LEAVES = registerBlock("persimmon_leaves",
+            () -> new PersimmonLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PERSIMMON_FLOWERING_LEAVES = registerBlock("persimmon_flowering_leaves",
+            () -> new PersimmonFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PERSIMMON_FRUITING_LEAVES = registerBlock("persimmon_fruiting_leaves",
+            () -> new PersimmonFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.PERSIMMON_LEAVES));
+    public static final RegistryObject<Block> JACKALBERRY_LEAVES = registerBlock("jackalberry_leaves",
+            JackalberryLeaves::new);
     //Pinyon
     public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PINYON_LEAVES = registerBlock("pinyon_leaves",
+            ModLeaves::new);
     //Pink Ivory
     public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
             ModLogs::new);
@@ -574,9 +642,13 @@ public class TreeBlocks {
     //Plane
     public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
+            ModLeaves::new);
     //Ponderosa Pine
     public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PONDEROSA_PINE_LEAVES = registerBlock("ponderosa_pine_leaves",
+            ModLeaves::new);
     //Pomegranate
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
@@ -592,9 +664,24 @@ public class TreeBlocks {
     //Pohutukawa
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
             ModLogs::new);
+    public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
+            () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POHUTUKAWA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> POHUTUKAWA_FLOWERING_LEAVES = registerBlock("pohutukawa_flowering_leaves",
+            () -> new PohutukawaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POHUTUKAWA_LEAVES));
     //Plum
     public static final RegistryObject<Block> PLUM_LOG = registerBlock("plum_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CHERRY_PLUM_LEAVES = registerBlock("cherry_plum_leaves",
+            () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> CHERRY_PLUM_FLOWERING_LEAVES = registerBlock("cherry_plum_flowering_leaves",
+            () -> new CherryPlumFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CHERRY_PLUM_FRUITING_LEAVES = registerBlock("cherry_plum_fruiting_leaves",
+            () -> new CherryPlumFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.CHERRY_PLUM_LEAVES));
     //Purpleheart
     public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
             ModLogs::new);
@@ -602,16 +689,36 @@ public class TreeBlocks {
             ModLeaves::new);
 
 
+
     ///Q
 
 
+
     ///R
+    //Red Kapok
+    public static final RegistryObject<Block> RED_KAPOK_LEAVES = registerBlock("red_kapok_leaves",
+            ModLeaves::new);
+    //Red Oak
+    public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
+            ModLeaves::new);
     //Rowan
     public static final RegistryObject<Block> ROWAN_LOG = registerBlock("rowan_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROWAN_LEAVES = registerBlock("rowan_leaves",
+            () -> new RowanLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> ROWAN_FLOWERING_LEAVES = registerBlock("rowan_flowering_leaves",
+            () -> new RowanFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_FRUITING_LEAVES));
+    public static final RegistryObject<Block> ROWAN_FRUITING_LEAVES = registerBlock("rowan_fruiting_leaves",
+            () -> new RowanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.ROWAN_LEAVES));
     //Royal Poinciana
     public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
+            ModLeaves::new);
+
 
 
     ///S
@@ -635,15 +742,25 @@ public class TreeBlocks {
     //Slash Pine
     public static final RegistryObject<Block> SLASH_PINE_LOG = registerBlock("slash_pine_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> SLASH_PINE_LEAVES = registerBlock("slash_pine_leaves",
+            ModLeaves::new);
     //Starfruit
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
+            () -> new StarfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.STARFRUIT_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> STARFRUIT_FLOWERING_LEAVES = registerBlock("starfruit_flowering_leaves",
+            () -> new StarfruitFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.STARFRUIT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> STARFRUIT_FRUITING_LEAVES = registerBlock("starfruit_fruiting_leaves",
+            () -> new StarfruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.STARFRUIT_LEAVES));
     //Strawberry Tree
     public static final RegistryObject<Block> STRAWBERRY_TREE_LOG = registerBlock("strawberry_tree_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> STRAWBERRY_TREE_LEAVES = registerBlock("strawberry_tree_leaves",
+            StrawberryTreeLeaves::new);
     //Stone Pine
     public static final RegistryObject<Block> STONE_PINE_LOG = registerBlock("stone_pine_log",
             ModLogs::new);
@@ -657,20 +774,27 @@ public class TreeBlocks {
     //Socotra Desert Rose
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
+            ModLeaves::new);
     //Socotra Cucumber
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
             ModLeaves::new);
-
     //Subalpine Fir
     public static final RegistryObject<Block> SUBALPINE_FIR_LOG = registerBlock("subalpine_fir_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> SUBALPINE_FIR_LEAVES = registerBlock("subalpine_fir_leaves",
+            ModLeaves::new);
     //Sweet Chestnut
     public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("sweet_chestnut_leaves",
+            () -> new SweetChestnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_FRUITING_LEAVES = registerBlock("sweet_chestnut_fruiting_leaves",
+            () -> new SweetChestnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.SWEET_CHESTNUT_LEAVES));
 
 
 
@@ -678,6 +802,8 @@ public class TreeBlocks {
     //Tamarind
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
+    public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
+            TamarindLeaves::new);
     //Tropical Almond
     public static final RegistryObject<Block> TROPICAL_ALMOND_LOG = registerBlock("tropical_almond_log",
             ModLogs::new);
@@ -685,24 +811,47 @@ public class TreeBlocks {
             ModLeaves::new);
 
 
+
     ///U
 
+
+
     ///V
+
+
 
     ///W
     //Walnut
     public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> WALNUT_LEAVES = registerBlock("walnut_leaves",
+            () -> new WalnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.WALNUT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> WALNUT_FRUITING_LEAVES = registerBlock("walnut_fruiting_leaves",
+            () -> new WalnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.WALNUT_LEAVES));
     //Western Hemlock
     public static final RegistryObject<Block> WESTERN_HEMLOCK_LOG = registerBlock("western_hemlock_log",
             ModLogs::new);
+    public static final RegistryObject<Block> WESTERN_HEMLOCK_LEAVES = registerBlock("western_hemlock_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MOUNTAIN_HEMLOCK_LEAVES = registerBlock("mountain_hemlock_leaves",
+            ModLeaves::new);
+
+
 
     ///X
+
+
 
     ///Y
     //Yew
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
             ModLogs::new);
+    public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
+            YewLeaves::new);
+
+
 
     ///Z
 
