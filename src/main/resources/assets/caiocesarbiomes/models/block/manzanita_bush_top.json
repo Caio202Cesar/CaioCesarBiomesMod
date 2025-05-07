@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/manzanita_bush_top",
+    "particle": "caiocesarbiomes:block/manzanita_bush_top"
+  }
+}

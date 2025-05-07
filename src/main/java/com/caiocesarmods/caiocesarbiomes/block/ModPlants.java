@@ -398,6 +398,8 @@ public class ModPlants {
             BlueberryFloweringBush::new);
     public static final RegistryObject<Block> BLUEBERRY_FRUITING_BUSH = registerBlock("blueberry_fruiting_bush",
             BlueberryFruitingBush::new);
+    public static final RegistryObject<Block> MANZANITA_BUSH = registerBlock("manzanita_bush",
+            ModTallPlant::new); //Lowland badlands
 
     //Vines
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",
