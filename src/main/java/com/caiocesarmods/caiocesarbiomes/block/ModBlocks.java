@@ -34,12 +34,7 @@ public class ModBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
     //Logs
-    public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             ModLogs::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
@@ -74,8 +69,7 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
             ModLogs::new);
-    public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> LOQUAT_LOG = registerBlock("loquat_log",
             ModLogs::new);
     public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
@@ -96,12 +90,10 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
-    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
             ModLogs::new);
-    public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> PLUM_LOG = registerBlock("plum_log",
             ModLogs::new);
     public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
@@ -112,8 +104,7 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
             ModLogs::new);
-    public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> WESTERN_HEMLOCK_LOG = registerBlock("western_hemlock_log",
             ModLogs::new);
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
@@ -144,18 +135,15 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
             ModLogs::new);
-    public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
             ModLogs::new);
     public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
             ModLogs::new);
     public static final RegistryObject<Block> MANGO_LOG = registerBlock("mango_log",
             ModLogs::new);
-    public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CHINESE_RED_PINE_LOG = registerBlock("chinese_red_pine_log",
-            ModLogs::new);
+
+
     public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> ROWAN_LOG = registerBlock("rowan_log",
@@ -272,12 +260,9 @@ public class ModBlocks {
             ModLogs::new);
 
     //Leaves
-    public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
-            AvocadoLeaves::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_LEAVES = registerBlock("coast_cottonwood_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> DRAGON_BLOOD_LEAVES = registerBlock("dragon_blood_leaves",
-            ModLeaves::new);
+
+
+
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CANARY_DATE_LEAVES = registerBlock("canary_date_leaves",
@@ -376,10 +361,7 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SOUTHERN_WAX_MYRTLE_LEAVES = registerBlock("southern_wax_myrtle_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> PINK_CRABAPPLE_LEAVES = registerBlock("crabapple_pink_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> WHITE_CRABAPPLE_LEAVES = registerBlock("crabapple_white_leaves",
-            ModLeaves::new);
+
 
     public static final RegistryObject<Block> LOQUAT_LEAVES = registerBlock("loquat_leaves",
             () -> new LoquatLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -508,8 +490,7 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
             TamarindLeaves::new);
-    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
-            ModLeaves::new);
+
 
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -518,8 +499,7 @@ public class ModBlocks {
             () -> new PohutukawaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.POHUTUKAWA_LEAVES));
 
-    public static final RegistryObject<Block> CASUARINA_LEAVES = registerBlock("casuarina_leaves",
-            ModLeaves::new);
+
 
     public static final RegistryObject<Block> CHERRY_PLUM_LEAVES = registerBlock("cherry_plum_leaves",
             () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -555,8 +535,7 @@ public class ModBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
             YewLeaves::new);
-    public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
-            ModLeaves::new);
+
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LEAVES = registerBlock("socotra_desert_rose_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> JAPANESE_PINE_LEAVES = registerBlock("japanese_pine_leaves",
@@ -619,8 +598,7 @@ public class ModBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), ModBlocks.HAZELNUT_LEAVES));
 
     //Subtropical Forests
-    public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
-            ModLeaves::new);
+
 
     public static final RegistryObject<Block> PERSIMMON_LEAVES = registerBlock("persimmon_leaves",
             () -> new PersimmonLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -638,10 +616,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> PINYON_LEAVES = registerBlock("pinyon_leaves",
             ModLeaves::new);
     //Wooded Badlands
-    public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> DOUGLAS_FIR_LEAVES = registerBlock("douglas_fir_leaves",
-            ModLeaves::new);
+
+
     public static final RegistryObject<Block> PONDEROSA_PINE_LEAVES = registerBlock("ponderosa_pine_leaves",
             ModLeaves::new);
 
@@ -725,12 +701,6 @@ public class ModBlocks {
             ModLeaves::new);
 
     //Saplings
-    public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
-            AvocadoSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
-            () -> new FlowerPotBlock(ModBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> HOLM_OAK_SAPLING = registerBlock("holm_oak_sapling",
             HolmOakSapling::new);
@@ -746,12 +716,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.CORK_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> COAST_COTTONWOOD_SAPLING = registerBlock("coast_cottonwood_sapling",
-            CoastCottonwoodSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_COAST_COTTONWOOD_SAPLING = BLOCKS.register("potted_coast_cottonwood_sapling",
-            () -> new FlowerPotBlock(ModBlocks.COAST_COTTONWOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> OCOTEA_FOREST_SAPLING = registerBlock("ocotea_forest_sapling",
             OcoteaSapling::new);
@@ -879,19 +844,9 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.INDIAN_CORAL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> PINK_CRABAPPLE_SAPLING = registerBlock("crabapple_pink_sapling",
-            PinkCrabappleSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PINK_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_pink_sapling",
-            () -> new FlowerPotBlock(ModBlocks.PINK_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> WHITE_CRABAPPLE_SAPLING = registerBlock("crabapple_white_sapling",
-            WhiteCrabappleSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_WHITE_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_white_sapling",
-            () -> new FlowerPotBlock(ModBlocks.WHITE_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
+
 
     public static final RegistryObject<Block> LOQUAT_SAPLING = registerBlock("loquat_sapling",
             LoquatSapling::new);
@@ -963,12 +918,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.TAMARIND_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
-            EucalyptusSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
-            () -> new FlowerPotBlock(ModBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> POHUTUKAWA_SAPLING = registerBlock("pohutukawa_sapling",
             PohutukawaSapling::new);
@@ -1019,12 +969,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.TEA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> CASUARINA_SAPLING = registerBlock("casuarina_sapling",
-            CasuarinaSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_CASUARINA_SAPLING = BLOCKS.register("potted_casuarina_sapling",
-            () -> new FlowerPotBlock(ModBlocks.CASUARINA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> BLACK_POPLAR_SAPLING = registerBlock("black_poplar_sapling",
             BlackPoplarSapling::new);
@@ -1082,12 +1027,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.INDIAN_LAUREL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> BUDDHA_HAND_SAPLING = registerBlock("buddha_hand_sapling",
-            BuddhaHandSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_BUDDHA_HAND_SAPLING = BLOCKS.register("potted_buddha_hand_sapling",
-            () -> new FlowerPotBlock(ModBlocks.BUDDHA_HAND_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> CITRON_SAPLING = registerBlock("citron_sapling",
             CitronSapling::new);
@@ -1124,12 +1064,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.YEW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> DRAGON_BLOOD_SAPLING = registerBlock("dragon_blood_sapling",
-            DragonBloodSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_DRAGON_BLOOD_SAPLING = BLOCKS.register("potted_dragon_blood_sapling",
-            () -> new FlowerPotBlock(ModBlocks.DRAGON_BLOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> WESTERN_HEMLOCK_SAPLING = registerBlock("western_hemlock_sapling",
             WesternHemlockSapling::new);
@@ -1145,12 +1080,7 @@ public class ModBlocks {
             () -> new FlowerPotBlock(ModBlocks.LIVE_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> COOPER_BEECH_SAPLING = registerBlock("cooper_beech_sapling",
-            CooperBeechSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_COOPER_BEECH_SAPLING = BLOCKS.register("potted_cooper_beech_sapling",
-            () -> new FlowerPotBlock(ModBlocks.COOPER_BEECH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> RED_OAK_SAPLING = registerBlock("red_oak_sapling",
             RedOakSapling::new);
