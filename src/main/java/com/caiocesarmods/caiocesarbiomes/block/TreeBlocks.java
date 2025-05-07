@@ -443,6 +443,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_HOLM_OAK_SAPLING = BLOCKS.register("potted_holm_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.HOLM_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> SCRUB_OAK_LEAVES = registerBlock("scrub_oak_leaves",
+            ModLeaves::new);
     //Holly
     public static final RegistryObject<Block> HOLLY_LOG = registerBlock("ilex_log",
             ModLogs::new);
