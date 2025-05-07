@@ -1481,6 +1481,13 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_FIR = register("white_fir",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SUBALPINE_FIR_LOG),
+                    new SimpleBlockStateProvider(States.WHITE_FIR_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(17, 2)),
+                    new StraightTrunkPlacer(17, 2, 10),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
 
     //Slash Pine (Subtropical Forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SLASH_PINE = register("slash_pine",
@@ -1516,6 +1523,7 @@ public class TreeFeatures {
 
         protected static final BlockState SUBALPINE_FIR_LOG = TreeBlocks.SUBALPINE_FIR_LOG.get().getDefaultState();
         protected static final BlockState SUBALPINE_FIR_LEAVES = TreeBlocks.SUBALPINE_FIR_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_FIR_LEAVES = TreeBlocks.WHITE_FIR_LEAVES.get().getDefaultState();
 
         protected static final BlockState MUGO_PINE_LOG = TreeBlocks.MUGO_PINE_LOG.get().getDefaultState();
         protected static final BlockState MUGO_PINE_LEAVES = TreeBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
@@ -1905,11 +1913,10 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WOODED_BADLANDS_VEGETATION = register("wooded_badlands_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SPRUCE.withChance(0.3F),
-                            MEGA_SPRUCE.withChance(0.1F), PINE.withChance(0.09F), MEGA_PINE.withChance(0.098F),
-                            PONDEROSA_PINE_TREE_TALL.withChance(0.12F), BLUE_SPRUCE.withChance(0.1F), DOUGLAS_FIR_TREE.withChance(0.3F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PONDEROSA_PINE_TREE_TALL.withChance(0.12F),
+                            WHITE_FIR.withChance(0.1F), BLUE_SPRUCE.withChance(0.1F), DOUGLAS_FIR_TREE.withChance(0.3F)),
                             PONDEROSA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SCRUBLAND_OLEANDER_SHRUBS = register("scrubland_oleander_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_OLEANDER_SHRUB.withChance(0.3F),
