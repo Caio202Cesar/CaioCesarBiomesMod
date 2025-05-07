@@ -29,6 +29,8 @@ public class TreeBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
+    ///A
+
     //Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
@@ -44,6 +46,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
             () -> new FlowerPotBlock(TreeBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    ///B
 
     //Black Poplar
     public static final RegistryObject<Block> BLACK_POPLAR_LOG = registerBlock("black_poplar_log",
@@ -74,6 +78,8 @@ public class TreeBlocks {
     //Blue Mahoe
     public static final RegistryObject<Block> BLUE_MAHOE_LOG = registerBlock("blue_mahoe_log",
             ModLogs::new);
+
+    ///C
 
     //Camellia
     public static final RegistryObject<Block> CAMELLIA_LOG = registerBlock("camellia_log",
@@ -201,6 +207,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
             ModLogs::new);
 
+    ///D
+
     //Date
     public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
             ModLogs::new);
@@ -223,6 +231,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> DOUGLAS_FIR_LEAVES = registerBlock("douglas_fir_leaves",
             ModLeaves::new);
 
+    ///E
+
     //Elderberry
     public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
             ModLogs::new);
@@ -243,10 +253,17 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
             ModLogs::new);
 
+    ///F
+
     //Fig
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             ModLogs::new);
 
+    ///G
+
+    ///H
+
+    ///I
 
     //Italian Cypress
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
@@ -256,9 +273,53 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
             ModLogs::new);
 
+    ///J
+
+    //Japanese Pine
+    public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
+            ModLogs::new);
+
+    //Japanese Maple
+    public static final RegistryObject<Block> JAPANESE_MAPLE_LOG = registerBlock("japanese_maple_log",
+            ModLogs::new);
+
     //Jungle Figs
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             ModLogs::new);
+
+    //Juniper
+    public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
+            ModLogs::new);
+
+    ///K
+
+    ///L
+
+    //Live Oak
+    public static final RegistryObject<Block> LIVE_OAK_LOG = registerBlock("live_oak_log",
+            ModLogs::new);
+
+    //Larch
+    public static final RegistryObject<Block> LARCH_LOG = registerBlock("larch_log",
+            ModLogs::new);
+
+    //Loquat
+    public static final RegistryObject<Block> LOQUAT_LOG = registerBlock("loquat_log",
+            ModLogs::new);
+
+    ///M
+
+    //Mesquite
+    public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
+            ModLogs::new);
+
+    //Myrtle
+    public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
+            ModLogs::new);
+
+    ///N
+
+    ///O
 
     //Oleander
     public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
@@ -269,6 +330,60 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> OCOTEA_JUNGLE_LOG = registerBlock("ocotea_jungle_log",
             ModLogs::new);
+
+    ///P
+
+    //Pecan
+    public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
+            ModLogs::new);
+
+    //Pinyon
+    public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
+            ModLogs::new);
+
+    //Pink Ivory
+    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
+            ModLogs::new);
+
+    //Pistachio
+    public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
+            ModLogs::new);
+
+    //Plane
+    public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
+            ModLogs::new);
+
+    //Ponderosa Pine
+    public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
+            ModLogs::new);
+
+    //Pohutukawa
+    public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
+            ModLogs::new);
+
+    //Plum
+    public static final RegistryObject<Block> PLUM_LOG = registerBlock("plum_log",
+            ModLogs::new);
+
+    ///Q
+
+    ///R
+
+    ///S
+
+    ///T
+
+    ///U
+
+    ///V
+
+    ///W
+
+    ///X
+
+    ///Y
+
+    ///Z
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

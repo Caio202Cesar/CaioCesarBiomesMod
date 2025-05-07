@@ -37,12 +37,8 @@ public class ModBlocks {
 
 
 
-    public static final RegistryObject<Block> LIVE_OAK_LOG = registerBlock("live_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
-            ModLogs::new);
+
+
 
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
@@ -60,13 +56,11 @@ public class ModBlocks {
             ModLogs::new);
 
 
-    public static final RegistryObject<Block> LOQUAT_LOG = registerBlock("loquat_log",
-            ModLogs::new);
+
 
     public static final RegistryObject<Block> STRAWBERRY_TREE_LOG = registerBlock("strawberry_tree_log",
             ModLogs::new);
-    public static final RegistryObject<Block> JAPANESE_MAPLE_LOG = registerBlock("japanese_maple_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> MULBERRY_LOG = registerBlock("mulberry_log",
             ModLogs::new);
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
@@ -78,11 +72,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
 
-    public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
-            ModLogs::new);
 
-    public static final RegistryObject<Block> PLUM_LOG = registerBlock("plum_log",
-            ModLogs::new);
     public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             ModLogs::new);
 
@@ -95,8 +85,7 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             ModLogs::new);
-    public static final RegistryObject<Block> JAPANESE_PINE_LOG = registerBlock("japanese_pine_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
             ModLogs::new);
 
@@ -106,20 +95,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
             ModLogs::new);
-    public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
-            ModLogs::new);
 
-    public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
-            ModLogs::new);
 
-    public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
-            ModLogs::new);
     public static final RegistryObject<Block> MANGO_LOG = registerBlock("mango_log",
             ModLogs::new);
 
@@ -134,15 +111,13 @@ public class ModBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
             ModLogs::new);
-    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> GABON_EBONY_LOG = registerBlock("gabon_ebony_log",
             ModLogs::new);
 
     public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
             ModLogs::new);
-    public static final RegistryObject<Block> LARCH_LOG = registerBlock("larch_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
 
