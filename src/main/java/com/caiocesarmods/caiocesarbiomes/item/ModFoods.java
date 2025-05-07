@@ -66,7 +66,10 @@ public class ModFoods extends Foods {
     //The toast alone provides less than the bread. However, when crafted with jams, oils or pastes, it provides the same saturation and hunger
     // as a bread (or more, depending on the complement). It justifies one bread giving 10 toasts.
     public static final Food TOAST = (new Food.Builder()).hunger(2).saturation(0.2F).build();
+
     public static final Food FENNEL_SOUP = buildStew(6);
+    public static final Food WALNUT_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food PECAN_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

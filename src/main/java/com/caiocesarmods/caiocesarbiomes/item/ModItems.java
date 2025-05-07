@@ -119,9 +119,9 @@ public class ModItems {
     public static final RegistryObject<Item> COCONUT_WATER = ITEMS.register("coconut_water",
             () -> new CoconutWaterItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COCONUT_WATER)));
     public static final RegistryObject<Item> WALNUT_BREAD = ITEMS.register("walnut_bread",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.WALNUT_BREAD)));
     public static final RegistryObject<Item> PECAN_BREAD = ITEMS.register("pecan_bread",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PECAN_BREAD)));
     public static final RegistryObject<Item> FENNEL_SOUP = ITEMS.register("fennel_soup",
             () -> new SoupItem((new Item.Properties()).maxStackSize(1)
                     .group(ModItemGroup.CULINARY).food(ModFoods.FENNEL_SOUP)));
