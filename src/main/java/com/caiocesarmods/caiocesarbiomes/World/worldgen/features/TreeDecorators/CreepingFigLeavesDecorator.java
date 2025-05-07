@@ -11,7 +11,7 @@ import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 
 import java.util.List;
 import java.util.Random;
@@ -71,7 +71,7 @@ public class CreepingFigLeavesDecorator extends TreeDecorator {
 
     private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         // Get the passion fruit vine default state and apply the directional property.
-        BlockState vineState = ModBlocks.CREEPING_FIG_VINE.get().getDefaultState().with(property, true);
+        BlockState vineState = ModPlants.CREEPING_FIG_VINE.get().getDefaultState().with(property, true);
         // Use our custom helper instead of the vanilla one.
         this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;

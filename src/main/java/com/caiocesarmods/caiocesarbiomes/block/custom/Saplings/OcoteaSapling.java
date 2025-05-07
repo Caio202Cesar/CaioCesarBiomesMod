@@ -1,10 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
-import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -26,8 +25,8 @@ public class OcoteaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.OCOTEA_FOREST_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_OCOTEA_FOREST_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.OCOTEA_FOREST_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_OCOTEA_FOREST_SAPLING.get(), RenderType.getCutout());
 
     }
 

@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -183,45 +183,45 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
 
     public static final class States {
-        protected static final BlockState ANIS = ModBlocks.ANIS.get().getDefaultState();
-        protected static final BlockState SAGE = ModBlocks.SAGE.get().getDefaultState();
-        protected static final BlockState BASIL = ModBlocks.BASIL.get().getDefaultState();
-        protected static final BlockState PURPLE_BASIL = ModBlocks.PURPLE_BASIL.get().getDefaultState();
-        protected static final BlockState CINERARIA = ModBlocks.CINERARIA.get().getDefaultState();
-        protected static final BlockState FENNEL = ModBlocks.FENNEL.get().getDefaultState();
-        protected static final BlockState LAVENDER = ModBlocks.LAVENDER.get().getDefaultState();
-        protected static final BlockState SANTOLINA = ModBlocks.SANTOLINA.get().getDefaultState();
-        protected static final BlockState MARJORAN = ModBlocks.MARJORAN.get().getDefaultState();
-        protected static final BlockState OREGANO = ModBlocks.OREGANO.get().getDefaultState();
-        protected static final BlockState ROSEMARY = ModBlocks.ROSEMARY.get().getDefaultState();
-        protected static final BlockState THYME = ModBlocks.THYME.get().getDefaultState();
-        protected static final BlockState GARDENIA = ModBlocks.GARDENIA_BUSH.get().getDefaultState();
-        protected static final BlockState BUSH = ModBlocks.BUSH.get().getDefaultState();
-        protected static final BlockState AGAPANTHUS_PURPLE = ModBlocks.AGAPANTHUS_PURPLE.get().getDefaultState();
-        protected static final BlockState AGAPANTHUS_WHITE = ModBlocks.AGAPANTHUS_WHITE.get().getDefaultState();
-        protected static final BlockState DESERT_ROSE = ModBlocks.DESERT_ROSE_PLANT.get().getDefaultState();
+        protected static final BlockState ANIS = ModPlants.ANIS.get().getDefaultState();
+        protected static final BlockState SAGE = ModPlants.SAGE.get().getDefaultState();
+        protected static final BlockState BASIL = ModPlants.BASIL.get().getDefaultState();
+        protected static final BlockState PURPLE_BASIL = ModPlants.PURPLE_BASIL.get().getDefaultState();
+        protected static final BlockState CINERARIA = ModPlants.CINERARIA.get().getDefaultState();
+        protected static final BlockState FENNEL = ModPlants.FENNEL.get().getDefaultState();
+        protected static final BlockState LAVENDER = ModPlants.LAVENDER.get().getDefaultState();
+        protected static final BlockState SANTOLINA = ModPlants.SANTOLINA.get().getDefaultState();
+        protected static final BlockState MARJORAN = ModPlants.MARJORAN.get().getDefaultState();
+        protected static final BlockState OREGANO = ModPlants.OREGANO.get().getDefaultState();
+        protected static final BlockState ROSEMARY = ModPlants.ROSEMARY.get().getDefaultState();
+        protected static final BlockState THYME = ModPlants.THYME.get().getDefaultState();
+        protected static final BlockState GARDENIA = ModPlants.GARDENIA_BUSH.get().getDefaultState();
+        protected static final BlockState BUSH = ModPlants.BUSH.get().getDefaultState();
+        protected static final BlockState AGAPANTHUS_PURPLE = ModPlants.AGAPANTHUS_PURPLE.get().getDefaultState();
+        protected static final BlockState AGAPANTHUS_WHITE = ModPlants.AGAPANTHUS_WHITE.get().getDefaultState();
+        protected static final BlockState DESERT_ROSE = ModPlants.DESERT_ROSE_PLANT.get().getDefaultState();
         protected static final BlockState ROSE_BUSH = Blocks.ROSE_BUSH.getDefaultState();
         protected static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         protected static final BlockState BLUE_ORCHID = Blocks.BLUE_ORCHID.getDefaultState();
         protected static final BlockState OXEYE_DAISY = Blocks.OXEYE_DAISY.getDefaultState();
-        protected static final BlockState TROPICAL_HIBISCUS = ModBlocks.CHINESE_HIBISCUS.get().getDefaultState();
-        protected static final BlockState TUSSOCK_GRASS = ModBlocks.TUSSOCK_GRASS.get().getDefaultState();
-        protected static final BlockState BAY_LAUREL = ModBlocks.BAY_LAUREL.get().getDefaultState();
-        protected static final BlockState BAY_LAUREL_FLOWERING = ModBlocks.BAY_LAUREL_FLOWERING.get().getDefaultState();
-        protected static final BlockState PINK_CISTUS = ModBlocks.PINK_CISTUS.get().getDefaultState();
-        protected static final BlockState WHITE_CISTUS = ModBlocks.WHITE_CISTUS.get().getDefaultState();
-        protected static final BlockState WHITE_AZALEA = ModBlocks.AZALEA_WHITE.get().getDefaultState();
-        protected static final BlockState GREEN_AZALEA = ModBlocks.AZALEA_GREEN.get().getDefaultState();
-        protected static final BlockState PURPLE_AZALEA = ModBlocks.AZALEA_PURPLE.get().getDefaultState();
-        protected static final BlockState RED_AZALEA = ModBlocks.AZALEA_RED.get().getDefaultState();
-        protected static final BlockState MAGENTA_AZALEA = ModBlocks.AZALEA_MAGENTA.get().getDefaultState();
-        protected static final BlockState ORANGE_AZALEA = ModBlocks.AZALEA_ORANGE.get().getDefaultState();
-        protected static final BlockState PINK_AZALEA = ModBlocks.AZALEA_PINK.get().getDefaultState();
-        protected static final BlockState RED_CURRANT_BUSH = ModBlocks.RED_CURRANT_SHRUB.get().getDefaultState();
-        protected static final BlockState BLACK_CURRANT_BUSH = ModBlocks.BLACK_CURRANT_SHRUB.get().getDefaultState();
-        protected static final BlockState SPIDER_LILY = ModBlocks.SPIDER_LILY.get().getDefaultState();
-        protected static final BlockState BLUEBERRY_BUSH = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState();
-        protected static final BlockState SAW_PALMETTO = ModBlocks.SAW_PALMETTO.get().getDefaultState();
+        protected static final BlockState TROPICAL_HIBISCUS = ModPlants.CHINESE_HIBISCUS.get().getDefaultState();
+        protected static final BlockState TUSSOCK_GRASS = ModPlants.TUSSOCK_GRASS.get().getDefaultState();
+        protected static final BlockState BAY_LAUREL = ModPlants.BAY_LAUREL.get().getDefaultState();
+        protected static final BlockState BAY_LAUREL_FLOWERING = ModPlants.BAY_LAUREL_FLOWERING.get().getDefaultState();
+        protected static final BlockState PINK_CISTUS = ModPlants.PINK_CISTUS.get().getDefaultState();
+        protected static final BlockState WHITE_CISTUS = ModPlants.WHITE_CISTUS.get().getDefaultState();
+        protected static final BlockState WHITE_AZALEA = ModPlants.AZALEA_WHITE.get().getDefaultState();
+        protected static final BlockState GREEN_AZALEA = ModPlants.AZALEA_GREEN.get().getDefaultState();
+        protected static final BlockState PURPLE_AZALEA = ModPlants.AZALEA_PURPLE.get().getDefaultState();
+        protected static final BlockState RED_AZALEA = ModPlants.AZALEA_RED.get().getDefaultState();
+        protected static final BlockState MAGENTA_AZALEA = ModPlants.AZALEA_MAGENTA.get().getDefaultState();
+        protected static final BlockState ORANGE_AZALEA = ModPlants.AZALEA_ORANGE.get().getDefaultState();
+        protected static final BlockState PINK_AZALEA = ModPlants.AZALEA_PINK.get().getDefaultState();
+        protected static final BlockState RED_CURRANT_BUSH = ModPlants.RED_CURRANT_SHRUB.get().getDefaultState();
+        protected static final BlockState BLACK_CURRANT_BUSH = ModPlants.BLACK_CURRANT_SHRUB.get().getDefaultState();
+        protected static final BlockState SPIDER_LILY = ModPlants.SPIDER_LILY.get().getDefaultState();
+        protected static final BlockState BLUEBERRY_BUSH = ModPlants.BLUEBERRY_BUSH.get().getDefaultState();
+        protected static final BlockState SAW_PALMETTO = ModPlants.SAW_PALMETTO.get().getDefaultState();
 
     }
 

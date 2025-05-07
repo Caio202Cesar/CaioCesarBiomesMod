@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

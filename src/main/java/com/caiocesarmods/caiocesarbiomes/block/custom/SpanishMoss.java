@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -20,7 +20,7 @@ public class SpanishMoss extends VineBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.SPANISH_MOSS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.SPANISH_MOSS.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

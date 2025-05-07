@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -31,7 +31,7 @@ public class DateLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                worldIn.setBlockState(belowPos, ModBlocks.DATE_BUNCH.get().getDefaultState(), 2);
+                worldIn.setBlockState(belowPos, ModPlants.DATE_BUNCH.get().getDefaultState(), 2);
             }
         }
     }

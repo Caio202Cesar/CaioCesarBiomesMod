@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.data.recipes;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
@@ -13,7 +13,6 @@ import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
@@ -65,7 +64,7 @@ public class ButterRecipe implements IButterRecipe {
     }
 
     public ItemStack getIcon() {
-        return new ItemStack(ModBlocks.BUTTER_MIXER.get());
+        return new ItemStack(ModPlants.BUTTER_MIXER.get());
     }
 
     @Override

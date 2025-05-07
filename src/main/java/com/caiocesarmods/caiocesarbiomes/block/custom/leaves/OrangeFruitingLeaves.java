@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -72,7 +71,7 @@ public class OrangeFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModBlocks.ORANGE_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.ORANGE_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

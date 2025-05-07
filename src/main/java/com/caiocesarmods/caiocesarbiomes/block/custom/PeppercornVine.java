@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
@@ -46,9 +46,9 @@ public class PeppercornVine extends VineBlock implements IForgeShearable {
         if (random.nextDouble() < chance) {
 
             BlockState currentState = state;
-            BlockState newState = ModBlocks.PEPPERCORN_FRUITING_VINE.get().getDefaultState();
+            BlockState newState = ModPlants.PEPPERCORN_FRUITING_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, ModBlocks.PEPPERCORN_FRUITING_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.PEPPERCORN_FRUITING_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -59,9 +59,9 @@ public class PeppercornVine extends VineBlock implements IForgeShearable {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.PEPPERCORN_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.PEPPERCORN_FRUITING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.PEPPERCORN_RIPE_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PEPPERCORN_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PEPPERCORN_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PEPPERCORN_RIPE_FRUITING_VINE.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

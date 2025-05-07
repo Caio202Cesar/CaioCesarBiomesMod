@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -24,10 +24,10 @@ public class MediterraneanBeachFlower extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CISTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CISTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_PINK_CISTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_WHITE_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PINK_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.WHITE_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_PINK_CISTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_WHITE_CISTUS.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

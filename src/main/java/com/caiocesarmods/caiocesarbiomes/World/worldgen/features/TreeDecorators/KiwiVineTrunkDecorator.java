@@ -1,8 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.custom.KiwiVine;
-import com.caiocesarmods.caiocesarbiomes.block.custom.SpanishMoss;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.BooleanProperty;
@@ -67,7 +66,7 @@ public class KiwiVineTrunkDecorator extends TreeDecorator {
 
     private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         // Get the passion fruit vine default state and apply the directional property.
-        BlockState vineState = ModBlocks.KIWI_VINE.get().getDefaultState().with(property, true);
+        BlockState vineState = ModPlants.KIWI_VINE.get().getDefaultState().with(property, true);
         // Use our custom helper instead of the vanilla one.
         this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;

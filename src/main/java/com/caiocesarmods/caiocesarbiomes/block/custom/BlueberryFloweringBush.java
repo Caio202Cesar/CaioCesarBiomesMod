@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
@@ -46,8 +46,8 @@ public class BlueberryFloweringBush extends DoublePlantBlock {
                 lowerState.get(HALF) == DoubleBlockHalf.LOWER && upperState.get(HALF) == DoubleBlockHalf.UPPER) {
 
             // Set both flowering states together, avoiding neighbor updates
-            world.setBlockState(lowerPos, ModBlocks.BLUEBERRY_FRUITING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER), 18);
-            world.setBlockState(upperPos, ModBlocks.BLUEBERRY_FRUITING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 18);
+            world.setBlockState(lowerPos, ModPlants.BLUEBERRY_FRUITING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER), 18);
+            world.setBlockState(upperPos, ModPlants.BLUEBERRY_FRUITING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 18);
         }
     }
 
@@ -64,7 +64,7 @@ public class BlueberryFloweringBush extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLUEBERRY_FLOWERING_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BLUEBERRY_FLOWERING_BUSH.get(), RenderType.getCutout());
 
     }
 

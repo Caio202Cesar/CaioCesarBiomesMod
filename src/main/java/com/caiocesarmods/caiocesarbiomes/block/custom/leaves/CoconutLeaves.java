@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -29,7 +29,7 @@ public class CoconutLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, ModBlocks.COCONUT_BUNCH.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, ModPlants.COCONUT_BUNCH.get().getDefaultState(), 2);
             }
         }
     }

@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -16,16 +16,12 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
-
-import java.util.Random;
 
 public class BlueberryFruitingBush extends DoublePlantBlock {
     public BlueberryFruitingBush() {
@@ -50,8 +46,8 @@ public class BlueberryFruitingBush extends DoublePlantBlock {
             InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), fruit);
 
             // Replace both parts with the non-fruiting variant (normal bush)
-            BlockState normalLower = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER);
-            BlockState normalUpper = ModBlocks.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER);
+            BlockState normalLower = ModPlants.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER);
+            BlockState normalUpper = ModPlants.BLUEBERRY_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER);
 
             world.setBlockState(lowerPos, normalLower, 18);
             world.setBlockState(upperPos, normalUpper, 18);
@@ -75,7 +71,7 @@ public class BlueberryFruitingBush extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLUEBERRY_FRUITING_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BLUEBERRY_FRUITING_BUSH.get(), RenderType.getCutout());
 
     }
 

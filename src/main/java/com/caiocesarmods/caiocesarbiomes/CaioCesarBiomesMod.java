@@ -5,7 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
@@ -18,10 +18,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.potion.PotionBrewing;
-import net.minecraft.potion.Potions;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -52,7 +49,7 @@ public class CaioCesarBiomesMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
+        ModPlants.register(eventBus);
         TreeBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
 
@@ -132,7 +129,7 @@ public class CaioCesarBiomesMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         event.enqueueWork(()-> {
-            RenderTypeLookup.setRenderLayer(ModBlocks.TOASTER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModPlants.TOASTER.get(), RenderType.getCutout());
 
             ScreenManager.registerFactory(ModContainers.TOASTER_CONTAINER.get(), ToasterScreen::new);
 

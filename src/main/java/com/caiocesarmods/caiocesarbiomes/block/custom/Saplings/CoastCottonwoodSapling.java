@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
@@ -25,8 +25,8 @@ public class CoastCottonwoodSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.COAST_COTTONWOOD_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_COAST_COTTONWOOD_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.COAST_COTTONWOOD_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_COAST_COTTONWOOD_SAPLING.get(), RenderType.getCutout());
 
     }
 

@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -21,24 +21,24 @@ public class SubtropicalForestPlant extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BUSH.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AGAPANTHUS_PURPLE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AGAPANTHUS_WHITE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_ORANGE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_RED.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_PURPLE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_PINK.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_MAGENTA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_GREEN.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.AZALEA_WHITE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AGAPANTHUS_PURPLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AGAPANTHUS_WHITE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_ORANGE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_RED.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_PURPLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_PINK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_MAGENTA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_GREEN.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.AZALEA_WHITE.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_ORANGE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_RED.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_PURPLE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_PINK.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_MAGENTA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_GREEN.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_AZALEA_WHITE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_ORANGE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_RED.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_PURPLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_PINK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_MAGENTA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_GREEN.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_AZALEA_WHITE.get(), RenderType.getCutout());
 
     }
 

@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
@@ -28,8 +28,8 @@ public class YewSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.YEW_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.POTTED_YEW_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.YEW_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_YEW_SAPLING.get(), RenderType.getCutout());
 
     }
 

@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -21,18 +21,18 @@ public class MediterraneanFlower extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.ANIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BASIL.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.PURPLE_BASIL.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.CINERARIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.FENNEL.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.LAVENDER.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.MARJORAN.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.OREGANO.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.ROSEMARY.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.SAGE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.SANTOLINA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.THYME.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.ANIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BASIL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PURPLE_BASIL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.CINERARIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.FENNEL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.LAVENDER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.MARJORAN.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.OREGANO.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.ROSEMARY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.SAGE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.SANTOLINA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.THYME.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

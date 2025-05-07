@@ -16,7 +16,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 
 import java.util.Random;
 import java.util.function.Supplier;

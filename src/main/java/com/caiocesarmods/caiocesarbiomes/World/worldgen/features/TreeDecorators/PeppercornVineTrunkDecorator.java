@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.custom.PeppercornVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -66,7 +66,7 @@ public class PeppercornVineTrunkDecorator extends TreeDecorator {
 
     private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         // Get the passion fruit vine default state and apply the directional property.
-        BlockState vineState = ModBlocks.PEPPERCORN_VINE.get().getDefaultState().with(property, true);
+        BlockState vineState = ModPlants.PEPPERCORN_VINE.get().getDefaultState().with(property, true);
         // Use our custom helper instead of the vanilla one.
         this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;

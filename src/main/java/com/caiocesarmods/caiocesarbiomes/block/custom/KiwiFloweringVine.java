@@ -1,19 +1,13 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
-import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.VineBlock;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.PlantType;
@@ -48,9 +42,9 @@ public class KiwiFloweringVine extends VineBlock implements IForgeShearable {
         if (random.nextDouble() < chance) {
 
             BlockState currentState = state;
-            BlockState newState = ModBlocks.KIWI_FRUITING_VINE.get().getDefaultState();
+            BlockState newState = ModPlants.KIWI_FRUITING_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, ModBlocks.KIWI_FRUITING_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.KIWI_FRUITING_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));

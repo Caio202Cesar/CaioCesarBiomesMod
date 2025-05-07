@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.crops;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -33,7 +33,7 @@ public class RedCurrantCropBlock extends CropsBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.RED_CURRANT_CROP.get(), RenderType.getCutout());
     }
 
     @Override

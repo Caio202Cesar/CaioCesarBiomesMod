@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -24,8 +24,8 @@ public class RibesShrub extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
 
     }
 

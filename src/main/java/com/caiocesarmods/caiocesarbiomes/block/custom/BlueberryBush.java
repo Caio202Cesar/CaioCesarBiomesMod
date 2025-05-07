@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
@@ -9,8 +9,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
@@ -48,8 +46,8 @@ public class BlueberryBush extends DoublePlantBlock {
                 lowerState.get(HALF) == DoubleBlockHalf.LOWER && upperState.get(HALF) == DoubleBlockHalf.UPPER) {
 
             // Set both flowering states together, avoiding neighbor updates
-            world.setBlockState(lowerPos, ModBlocks.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER), 18);
-            world.setBlockState(upperPos, ModBlocks.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 18);
+            world.setBlockState(lowerPos, ModPlants.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.LOWER), 18);
+            world.setBlockState(upperPos, ModPlants.BLUEBERRY_FLOWERING_BUSH.get().getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 18);
         }
     }
 
@@ -66,7 +64,7 @@ public class BlueberryBush extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.BLUEBERRY_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BLUEBERRY_BUSH.get(), RenderType.getCutout());
 
     }
 

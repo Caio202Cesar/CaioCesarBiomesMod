@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -41,9 +41,9 @@ public class ModConfiguredSurfaceBuilders {
 
     public static ConfiguredSurfaceBuilder<?> SALT_DESERT_SURFACE = register("salt_desert_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
-                    ModBlocks.SALT_BLOCK.get().getDefaultState(),
+                    ModPlants.SALT_BLOCK.get().getDefaultState(),
                     Blocks.STONE.getDefaultState(),
-                    ModBlocks.SALT_BLOCK.get().getDefaultState()
+                    ModPlants.SALT_BLOCK.get().getDefaultState()
             )));
 
     public static ConfiguredSurfaceBuilder<?> STEEPE_SURFACE = register("steepe_surface",

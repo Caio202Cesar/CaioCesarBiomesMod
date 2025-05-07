@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -175,7 +175,7 @@ public class ModItems {
     public static final RegistryObject<Item> AIYU_JELLY = ITEMS.register("aiyu_jelly",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.AIYU_JELLY)));
     public static final RegistryObject<Item> FENNEL_SEEDS = ITEMS.register("fennel_seeds",
-            () -> new BlockItem(ModBlocks.FENNEL_CROP.get(), new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new BlockItem(ModPlants.FENNEL_CROP.get(), new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> ROASTED_FENNEL_SEEDS = ITEMS.register("roasted_fennel_seeds",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ROASTED_FENNEL_SEEDS)));
     public static final RegistryObject<Item> COOKED_FENNEL_STALK = ITEMS.register("cooked_fennel_stalk",
@@ -209,9 +209,9 @@ public class ModItems {
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> RED_CURRANT_SEEDS = ITEMS.register("red_currant_seeds",
-            () -> new BlockItem(ModBlocks.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+            () -> new BlockItem(ModPlants.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
-            () -> new BlockItem(ModBlocks.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+            () -> new BlockItem(ModPlants.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 

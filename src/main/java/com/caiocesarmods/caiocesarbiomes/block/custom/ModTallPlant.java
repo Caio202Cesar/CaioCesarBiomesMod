@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
@@ -23,11 +23,11 @@ public class ModTallPlant extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.GARDENIA_BUSH.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.CHINESE_HIBISCUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.BAY_LAUREL_FLOWERING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.SPIDER_LILY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.GARDENIA_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.CHINESE_HIBISCUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BAY_LAUREL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BAY_LAUREL_FLOWERING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.SPIDER_LILY.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

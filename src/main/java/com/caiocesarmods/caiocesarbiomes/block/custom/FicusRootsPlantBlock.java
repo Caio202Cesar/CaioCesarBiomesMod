@@ -1,12 +1,11 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -42,7 +41,7 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos down = pos.down();
         if (worldIn.isAirBlock(down)) {
-            worldIn.setBlockState(down, ModBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
+            worldIn.setBlockState(down, ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
         }
     }
 
@@ -56,6 +55,6 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModBlocks.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
     }
 }

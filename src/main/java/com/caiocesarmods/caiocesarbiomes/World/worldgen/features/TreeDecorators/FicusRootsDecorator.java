@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.mojang.serialization.Codec;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -27,7 +27,7 @@ public class FicusRootsDecorator extends TreeDecorator {
         for (BlockPos pos : leafPositions) {
             if (world.getBlockState(pos.down()).isAir()) {
                 if (rand.nextInt(2) == 0) {
-                    world.setBlockState(pos.down(), ModBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 3);
+                    world.setBlockState(pos.down(), ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 3);
                 }
             }
         }

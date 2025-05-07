@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModBlocks;
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -48,9 +48,9 @@ public class PeppercornRipeFruitingVine extends VineBlock implements IForgeShear
         if (random.nextDouble() < chance) {
 
             BlockState currentState = state;
-            BlockState newState = ModBlocks.PEPPERCORN_VINE.get().getDefaultState();
+            BlockState newState = ModPlants.PEPPERCORN_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, ModBlocks.PEPPERCORN_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.PEPPERCORN_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -69,7 +69,7 @@ public class PeppercornRipeFruitingVine extends VineBlock implements IForgeShear
             worldIn.addEntity(itemEntity);
 
             BlockState currentState = state;
-            BlockState newState = ModBlocks.PEPPERCORN_VINE.get().getDefaultState();
+            BlockState newState = ModPlants.PEPPERCORN_VINE.get().getDefaultState();
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
