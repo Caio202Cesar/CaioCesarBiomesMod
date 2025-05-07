@@ -1845,10 +1845,10 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> BIRCH_FOREST_EXTRA_VEGETATION = register("birch_forest_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            ROWAN_TREE2.withChance(0.2F), ROWAN_TREE1.withChance(0.13F), HOLLY_TREE2.withChance(0.2F),
-                            HOLLY_TREE1.withChance(0.2F), BLACK_POPLAR_FANCY_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.1F),
-                            JUNIPER_SHRUB.withChance(0.17F), PLANE_TREE.withChance(0.3F), PLANE_FANCY_TREE.withChance(0.35F),
-                            HAZELNUT_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.3F)), ELDERBERRY_TREE))
+                            ROWAN_TREE2.withChance(0.09F), ROWAN_TREE1.withChance(0.13F), HOLLY_TREE2.withChance(0.057F),
+                            HOLLY_TREE1.withChance(0.067F), BLACK_POPLAR_FANCY_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.1F),
+                            JUNIPER_SHRUB.withChance(0.17F),
+                            ELDERBERRY_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
