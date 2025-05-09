@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -17,16 +20,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class DarkPinkOleanderSapling extends SaplingBlock {
-    public DarkPinkOleanderSapling() {
-        super(new DarkPinkOleanderShrub(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class PlaneSapling extends SaplingBlock {
+    public PlaneSapling() {
+        super(new FigTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.OLEANDER_DARK_PINK_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_OLEANDER_DARK_PINK_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.PLANE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_PLANE_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -38,13 +41,15 @@ public class DarkPinkOleanderSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class DarkPinkOleanderShrub extends Tree {
+    private static class FigTree extends Tree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-            return TreeFeatures.DARK_PINK_OLEANDER_SHRUB;
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.PLANE_FANCY_TREE;
+            } else {
+                return TreeFeatures.PLANE_TREE;
+            }
         }
     }
 }
-
-

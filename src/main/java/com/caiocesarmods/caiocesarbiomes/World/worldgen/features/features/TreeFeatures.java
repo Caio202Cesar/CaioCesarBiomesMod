@@ -1285,13 +1285,21 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
 
     //Douglas Fir
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GIANT_DOUGLAS_FIR_TREE = register("giant_douglas_fir",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DOUGLAS_FIR_LOG),
                     new SimpleBlockStateProvider(States.DOUGLAS_FIR_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DOUGLAS_FIR_TREE = register("douglas_fir",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DOUGLAS_FIR_LOG),
+                    new SimpleBlockStateProvider(States.DOUGLAS_FIR_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+
 
     //Blue Spruce
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_SPRUCE = register("blue_spruce",
@@ -1913,8 +1921,9 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WOODED_BADLANDS_VEGETATION = register("wooded_badlands_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PONDEROSA_PINE_TREE_TALL.withChance(0.12F),
-                            WHITE_FIR.withChance(0.1F), BLUE_SPRUCE.withChance(0.1F), DOUGLAS_FIR_TREE.withChance(0.3F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PONDEROSA_PINE_TREE_TALL.withChance(0.42F),
+                            WHITE_FIR.withChance(0.2F), BLUE_SPRUCE.withChance(0.1F), DOUGLAS_FIR_TREE.withChance(0.4F),
+                            GIANT_DOUGLAS_FIR_TREE.withChance(0.3F)),
                             PONDEROSA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 

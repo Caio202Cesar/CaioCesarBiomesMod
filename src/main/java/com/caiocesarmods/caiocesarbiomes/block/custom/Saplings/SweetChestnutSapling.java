@@ -2,8 +2,11 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
-import net.minecraft.block.trees.Tree;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -17,34 +20,44 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class DarkPinkOleanderSapling extends SaplingBlock {
-    public DarkPinkOleanderSapling() {
-        super(new DarkPinkOleanderShrub(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class SweetChestnutSapling extends SaplingBlock {
+    public SweetChestnutSapling() {
+        super(new SweetChestnutSapling.SweetChestnutTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.OLEANDER_DARK_PINK_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_OLEANDER_DARK_PINK_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.SWEET_CHESTNUT_SAPLING.get(), RenderType.getCutout());
 
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+
         return 80;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+
         return 60;
     }
 
-    private static class DarkPinkOleanderShrub extends Tree {
+    private static class SweetChestnutTree extends BigTree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-            return TreeFeatures.DARK_PINK_OLEANDER_SHRUB;
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+                return TreeFeatures.SWEET_CHESTNUT_TREE;
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.BIG_SWEET_CHESTNUT_TREE;
         }
     }
 }
-
-

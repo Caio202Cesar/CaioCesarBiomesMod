@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
-import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
 import net.minecraft.client.renderer.RenderType;
@@ -25,8 +25,8 @@ public class RoyalPoincianaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.ROYAL_POINCIANA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.POTTED_ROYAL_POINCIANA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.ROYAL_POINCIANA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ROYAL_POINCIANA_SAPLING.get(), RenderType.getCutout());
 
     }
 

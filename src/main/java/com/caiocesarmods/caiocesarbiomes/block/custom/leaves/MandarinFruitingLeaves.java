@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -71,7 +71,7 @@ public class MandarinFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, ModPlants.MANDARIN_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.MANDARIN_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
