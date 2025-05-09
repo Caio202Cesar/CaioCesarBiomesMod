@@ -1,16 +1,16 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.block.custom.CoconutBunchBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.DateBunchBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.tree.DatePalmTree;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -344,6 +344,10 @@ public class TreeBlocks {
                     .tickRandomly() // Enables random ticks
                     .notSolid()
                     .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
+            CoconutBunchBlock::new);
+    public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
+            CoconutSapling::new);
 
 
 
@@ -357,6 +361,10 @@ public class TreeBlocks {
                     .tickRandomly() // Enables random ticks
                     .notSolid()
                     .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> DATE_BUNCH = registerBlock("date_bunch",
+            DateBunchBlock::new);
+    public static final RegistryObject<Block> DATE_SAPLING = registerBlock("date_sapling",
+            () -> new SaplingBlock(new DatePalmTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
     //Dragon Blood
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
@@ -507,6 +515,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> HOLLY_SAPLING = registerBlock("holly_sapling",
+            HollySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_HOLLY_SAPLING = BLOCKS.register("potted_holly_sapling",
+            () -> new FlowerPotBlock(ModPlants.HOLLY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
@@ -883,6 +897,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POMEGRANATE_FRUITING_LEAVES = registerBlock("pomegranate_fruiting_leaves",
             () -> new PomegranateFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_LEAVES));
+    public static final RegistryObject<Block> POMEGRANATE_SAPLING = registerBlock("pomegranate_sapling",
+            PomegranateSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_POMEGRANATE_SAPLING = BLOCKS.register("potted_pomegranate_sapling",
+            () -> new FlowerPotBlock(ModPlants.POMEGRANATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Pohutukawa
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
             ModLogs::new);
@@ -985,6 +1005,8 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SABAL_LEAVES = registerBlock("sabal_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SABAL_SAPLING = registerBlock("sabal_sapling",
+            SabalSapling::new);
     //Sausage Tree
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
