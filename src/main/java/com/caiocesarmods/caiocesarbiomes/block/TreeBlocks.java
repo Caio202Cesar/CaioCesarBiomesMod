@@ -370,6 +370,10 @@ public class TreeBlocks {
             DateBunchBlock::new);
     public static final RegistryObject<Block> DATE_SAPLING = registerBlock("date_sapling",
             () -> new SaplingBlock(new DatePalmTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_DATE_SAPLING = BLOCKS.register("potted_date_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Dragon Blood
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
@@ -386,6 +390,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> DOUGLAS_FIR_LEAVES = registerBlock("douglas_fir_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> DOUGLAS_FIR_SAPLING = registerBlock("douglas_fir_sapling",
+            DouglasFirSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_DOUGLAS_FIR_SAPLING = BLOCKS.register("potted_douglas_fir_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.DOUGLAS_FIR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Durian
     public static final RegistryObject<Block> DURIAN_LEAVES = registerBlock("durian_leaves",
             () -> new DurianLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -396,8 +406,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> DURIAN_FRUITING_LEAVES = registerBlock("durian_fruiting_leaves",
             () -> new DurianFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.DURIAN_LEAVES));
-
-
+    public static final RegistryObject<Block> DURIAN_SAPLING = registerBlock("durian_sapling",
+            DurianSapling::new);
 
 
 
