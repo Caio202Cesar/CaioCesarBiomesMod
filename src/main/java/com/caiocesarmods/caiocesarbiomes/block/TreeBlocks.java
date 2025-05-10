@@ -408,6 +408,10 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.DURIAN_LEAVES));
     public static final RegistryObject<Block> DURIAN_SAPLING = registerBlock("durian_sapling",
             DurianSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_DURIAN_SAPLING = BLOCKS.register("potted_durian_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.DURIAN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
