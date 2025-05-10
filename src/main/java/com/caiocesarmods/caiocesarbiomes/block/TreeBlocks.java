@@ -7,7 +7,6 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.ModLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
-import com.caiocesarmods.caiocesarbiomes.block.custom.tree.DatePalmTree;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
@@ -393,7 +392,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> DATE_BUNCH = registerBlock("date_bunch",
             DateBunchBlock::new);
     public static final RegistryObject<Block> DATE_SAPLING = registerBlock("date_sapling",
-            () -> new SaplingBlock(new DatePalmTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+            DateSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_DATE_SAPLING = BLOCKS.register("potted_date_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
