@@ -1111,6 +1111,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> SAUSAGE_TREE_FRUITING_LEAVES = registerBlock("sausage_tree_fruiting_leaves",
             () -> new MangoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SAUSAGE_TREE_LEAVES));
+    public static final RegistryObject<Block> SAUSAGE_TREE_SAPLING = registerBlock("sausage_tree_sapling",
+            SausageTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SAUSAGE_TREE_SAPLING = BLOCKS.register("potted_sausage_tree_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.SAUSAGE_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Slash Pine
     public static final RegistryObject<Block> SLASH_PINE_LOG = registerBlock("slash_pine_log",
             ModLogs::new);
