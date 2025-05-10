@@ -1015,7 +1015,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PURPLEHEART_LEAVES = registerBlock("purpleheart_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> PURPLEHEART_SAPLING = registerBlock("purpleheart_sapling",
+            PurpleheartSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PURPLEHEART_SAPLING = BLOCKS.register("potted_purpleheart_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PURPLEHEART_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
