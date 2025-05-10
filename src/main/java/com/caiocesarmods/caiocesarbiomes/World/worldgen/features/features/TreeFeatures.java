@@ -828,16 +828,11 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YOUNG_BUNYA_PINE_TREE = register("young_bunya_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.BUNYA_PINE_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 3), FeatureSpread.create(3, 0)),
                     new StraightTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOOP_PINE_TREE = register("hoop_pine_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.ITALIAN_CYPRESS_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(1, 0), FeatureSpread.create(1, 1), FeatureSpread.create(1, 0)),
-                    new StraightTrunkPlacer(16, 2, 1),
-                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+
 
     //Jungle Fig Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_FIG_TREE = register("weeping_fig_tree",
