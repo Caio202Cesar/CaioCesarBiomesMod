@@ -29,6 +29,7 @@ public class SabalSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.SABAL_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_SABAL_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -44,7 +45,7 @@ public class SabalSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 5) {
+            if (random.nextInt(10) == 7) {
                 return TreeFeatures.SABAL_PALM_TREE;
             } else {
                 return TreeFeatures.SABAL_PALM_FANCY_TREE;
