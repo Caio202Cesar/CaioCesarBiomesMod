@@ -156,6 +156,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
             CarobLeaves::new);
+    public static final RegistryObject<Block> CAROB_SAPLING = registerBlock("carob_sapling",
+            CarobSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CAROB_SAPLING = BLOCKS.register("potted_carob_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.CAROB_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Canary Date
     public static final RegistryObject<Block> CANARY_DATE_LOG = registerBlock("canary_date_log",
             ModLogs::new);
@@ -177,7 +183,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CANARY_PINE_SAPLING = registerBlock("canary_pine_sapling",
-            CanaryDateSapling::new);
+            CanaryPineSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CANARY_PINE_SAPLING = BLOCKS.register("potted_canary_pine_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.CANARY_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Casuarina
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
             ModLogs::new);
