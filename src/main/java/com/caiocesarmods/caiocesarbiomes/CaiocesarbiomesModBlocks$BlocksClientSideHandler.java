@@ -123,5 +123,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CanaryPineSapling.registerRenderLayer();
         CarobSapling.registerRenderLayer();
         PonderosaPineSapling.registerRenderLayer();
+        PurpleheartSapling.registerRenderLayer();
     }
 }
