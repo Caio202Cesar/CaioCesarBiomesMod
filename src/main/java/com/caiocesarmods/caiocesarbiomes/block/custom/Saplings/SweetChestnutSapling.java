@@ -29,6 +29,7 @@ public class SweetChestnutSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.SWEET_CHESTNUT_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_SWEET_CHESTNUT_SAPLING.get(), RenderType.getCutout());
 
     }
 
