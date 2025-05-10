@@ -296,6 +296,7 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CHINESE_RED_PINE_LEAVES = registerBlock("chinese_red_pine_leaves",
             ModLeaves::new);
+
     //Crabapple
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
             ModLogs::new);
@@ -350,7 +351,6 @@ public class TreeBlocks {
             CoconutBunchBlock::new);
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
             CoconutSapling::new);
-
 
 
 
