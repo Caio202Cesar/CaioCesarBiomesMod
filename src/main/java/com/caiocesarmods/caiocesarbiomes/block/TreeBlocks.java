@@ -165,12 +165,18 @@ public class TreeBlocks {
                     .tickRandomly() // Enables random ticks
                     .notSolid()
                     .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_date_sapling",
+            CanaryDateSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CANARY_DATE_SAPLING = BLOCKS.register("potted_canary_date_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.CANARY_DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Canary Pine
     public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
             ModLogs::new);
     public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> CANARY_DATE_SAPLING = registerBlock("canary_date_sapling",
+    public static final RegistryObject<Block> CANARY_PINE_SAPLING = registerBlock("canary_pine_sapling",
             CanaryDateSapling::new);
     //Casuarina
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
@@ -296,7 +302,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CHINESE_RED_PINE_LEAVES = registerBlock("chinese_red_pine_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> CHINESE_RED_PINE_SAPLING = registerBlock("chinese_red_pine_sapling",
+            ChineseRedPineSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CHINESE_RED_PINE_SAPLING = BLOCKS.register("potted_chinese_red_pine_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.CHINESE_RED_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Crabapple
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
             ModLogs::new);
@@ -351,7 +362,10 @@ public class TreeBlocks {
             CoconutBunchBlock::new);
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
             CoconutSapling::new);
-
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_COCONUT_SAPLING = BLOCKS.register("potted_coconut_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.COCONUT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 

@@ -20,16 +20,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CoconutSapling extends SaplingBlock {
-    public CoconutSapling() {
-        super(new CoconutTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class ChineseRedPineSapling extends SaplingBlock {
+    public ChineseRedPineSapling() {
+        super(new ChineseRedPineSapling.ChineseRedPineTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.COCONUT_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_COCONUT_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.CHINESE_RED_PINE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_CHINESE_RED_PINE_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -43,17 +43,11 @@ public class CoconutSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CoconutTree extends Tree {
+    private static class ChineseRedPineTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 3) {
-                return TreeFeatures.COCONUT_PALM_TREE;
-            } else {
-                return TreeFeatures.SMALL_COCONUT_PALM_TREE;
-            }
+            return TreeFeatures.CHINESE_RED_PINE_TREE;
         }
     }
 }
-
-
