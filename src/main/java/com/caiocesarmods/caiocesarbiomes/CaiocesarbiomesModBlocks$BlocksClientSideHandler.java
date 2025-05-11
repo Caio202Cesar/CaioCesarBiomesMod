@@ -38,6 +38,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         KiwiVine.registerRenderLayer();
         PlantFanBlock.registerRenderLayer();
         PeppercornVine.registerRenderLayer();
+        BaldCypressAerialRoot.registerRenderLayer();
 
         BlueberryBush.registerRenderLayer();
         BlueberryFloweringBush.registerRenderLayer();
@@ -134,5 +135,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PinyonSapling.registerRenderLayer();
         MarulaSapling.registerRenderLayer();
         MugoPineSapling.registerRenderLayer();
+        PistachioSapling.registerRenderLayer();
     }
 }

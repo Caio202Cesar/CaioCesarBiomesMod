@@ -1543,12 +1543,32 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Bald Cypress
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BALD_CYPRESS = register("bald_cypress",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_BALD_CYPRESS = register("mega_bald_cypress",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(8, 5, 4),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
 
 
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = TreeBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BALD_CYPRESS_LOG = TreeBlocks.BALD_CYPRESS_LOG.get().getDefaultState();
+        protected static final BlockState BALD_CYPRESS_LEAVES = TreeBlocks.BALD_CYPRESS_LEAVES.get().getDefaultState();
 
         protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
         protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
@@ -1879,8 +1899,9 @@ public class TreeFeatures {
                             PLANE_TREE_WITH_KIWI.withChance(0.09F), ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.1F),
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F),
-                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F)),
-                            SOUTHERN_LIVE_OAK_TREE))
+                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.15F),
+                            SOUTHERN_LIVE_OAK_TREE.withChance(0.2F)),
+                            BALD_CYPRESS))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 

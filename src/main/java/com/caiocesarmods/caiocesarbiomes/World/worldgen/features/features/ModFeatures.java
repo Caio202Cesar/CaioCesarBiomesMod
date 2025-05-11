@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -22,8 +23,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> SAW_PALMETTOS = register("saw_palmettos",
-            Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+    public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
+            Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_PLANTS = register("temperate_rainforest_plants",
@@ -175,9 +176,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.TUSSOCK_GRASS, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
-        public static final BlockClusterFeatureConfig SAW_PALMETTO_CONFIG =
+        public static final BlockClusterFeatureConfig SWAMP_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.SAW_PALMETTO, 10),
+                        .addWeightedBlockstate(States.SAW_PALMETTO, 7)
+                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 10)
+                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -222,7 +225,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState SPIDER_LILY = ModPlants.SPIDER_LILY.get().getDefaultState();
         protected static final BlockState BLUEBERRY_BUSH = ModPlants.BLUEBERRY_BUSH.get().getDefaultState();
         protected static final BlockState SAW_PALMETTO = ModPlants.SAW_PALMETTO.get().getDefaultState();
+        protected static final BlockState BALD_CYPRESS_ROOTS_LARGE = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_LARGE.get().getDefaultState();
+        protected static final BlockState BALD_CYPRESS_ROOTS_SMALL = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get().getDefaultState();
 
     }
-
 }

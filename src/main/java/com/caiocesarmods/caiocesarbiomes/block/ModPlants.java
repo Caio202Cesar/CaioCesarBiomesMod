@@ -101,46 +101,32 @@ public class ModPlants {
             MediterraneanFlower::new);
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> CINERARIA = registerBlock("cineraria",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> FENNEL = registerBlock("fennel",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> MARJORAN = registerBlock("marjoran",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> OREGANO = registerBlock("oregano",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> ROSEMARY = registerBlock("rosemary",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> SAGE = registerBlock("sage",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> SANTOLINA = registerBlock("santolina",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> THYME = registerBlock("thyme",
             MediterraneanFlower::new);
-
     public static final RegistryObject<Block> AGAPANTHUS_PURPLE = registerBlock("agapanthus_purple",
             SubtropicalForestPlant::new);
-
     public static final RegistryObject<Block> AGAPANTHUS_WHITE = registerBlock("agapanthus_white",
             SubtropicalForestPlant::new);
-
     public static final RegistryObject<Block> TUSSOCK_GRASS = registerBlock("tussock_grass",
             ModGrasses::new);
-
     public static final RegistryObject<Block> WHITE_CISTUS = registerBlock("white_cistus",
             MediterraneanFlower::new);
     @SuppressWarnings("deprecation")
@@ -213,6 +199,7 @@ public class ModPlants {
     public static final RegistryObject<Block> SAW_PALMETTO = registerBlock("saw_palmetto",
             () -> new PlantFanBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN)
                     .setRequiresTool().doesNotBlockMovement().zeroHardnessAndResistance()));
+
 
     //Culinary
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",

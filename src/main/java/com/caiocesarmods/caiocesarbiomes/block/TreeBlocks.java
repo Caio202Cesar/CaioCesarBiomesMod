@@ -1,10 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.block.custom.CoconutBunchBlock;
-import com.caiocesarmods.caiocesarbiomes.block.custom.DateBunchBlock;
-import com.caiocesarmods.caiocesarbiomes.block.custom.ModLeaves;
-import com.caiocesarmods.caiocesarbiomes.block.custom.ModLogs;
+import com.caiocesarmods.caiocesarbiomes.block.custom.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
@@ -86,7 +83,29 @@ public class TreeBlocks {
 
 
     ///B
-// Beech
+    //Bald Cypress
+    public static final RegistryObject<Block> BALD_CYPRESS_LOG = registerBlock("bald_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BALD_CYPRESS_LEAVES = registerBlock("bald_cypress_leaves",
+            () -> new BaldCypressLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> BALD_CYPRESS_FLOWERING_LEAVES = registerBlock("bald_cypress_autumn_leaves",
+            () -> new BaldCypressAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BALD_CYPRESS_FRUITING_LEAVES = registerBlock("bald_cypress_winter_leaves",
+            () -> new BaldCypressWinterLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_LEAVES));
+    public static final RegistryObject<Block> BALD_CYPRESS_AERIAL_ROOT_LARGE = registerBlock("bald_cypress_aerial_root_large",
+            BaldCypressAerialRoot::new);
+    public static final RegistryObject<Block> BALD_CYPRESS_AERIAL_ROOT_SMALL = registerBlock("bald_cypress_aerial_root_small",
+            BaldCypressAerialRoot::new);
+    public static final RegistryObject<Block> BALD_CYPRESS_SAPLING = registerBlock("bald_cypress_sapling",
+            BaldCypressSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BALD_CYPRESS_SAPLING = BLOCKS.register("potted_bald_cypress_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.BALD_CYPRESS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    // Beech
     public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
             ModLogs::new);
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",

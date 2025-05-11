@@ -1,8 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
-import com.caiocesarmods.caiocesarbiomes.block.custom.tree.DatePalmTree;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -12,12 +10,9 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import java.util.List;
-import java.util.Random;
-import java.util.Set;
 import java.util.function.Supplier;
 
 public class ModTreeGeneration {
