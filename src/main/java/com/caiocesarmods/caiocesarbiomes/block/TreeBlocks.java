@@ -797,7 +797,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> MUGO_PINE_LEAVES = registerBlock("mugo_pine_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
+            MulberrySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MULBERRY_SAPLING = BLOCKS.register("potted_mulberry_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
@@ -962,7 +967,7 @@ public class TreeBlocks {
             () -> new PistachioFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
     public static final RegistryObject<Block> PISTACHIO_SAPLING = registerBlock("pistachio_sapling",
-            OliveSapling::new);
+            PistachioSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PISTACHIO_SAPLING = BLOCKS.register("potted_pistachio_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PISTACHIO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -1319,7 +1324,12 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> MOUNTAIN_HEMLOCK_LEAVES = registerBlock("mountain_hemlock_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> MOUNTAIN_HEMLOCK_SAPLING = registerBlock("mountain_hemlock_sapling",
+            MountainHemlockSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MOUNTAIN_HEMLOCK_SAPLING = BLOCKS.register("potted_mountain_hemlock_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MOUNTAIN_HEMLOCK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));//Sem textura
 
 
 
