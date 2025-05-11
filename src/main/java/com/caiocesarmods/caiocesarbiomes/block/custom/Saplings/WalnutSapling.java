@@ -28,8 +28,8 @@ public class WalnutSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.CAMELLIA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_CAMELLIA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.WALNUT_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_WALNUT_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -47,7 +47,11 @@ public class WalnutSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.WAL;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.WALNUT_FANCY_TREE;
+            } else {
+                return TreeFeatures.WALNUT_TREE;
+            }
         }
     }
 }
