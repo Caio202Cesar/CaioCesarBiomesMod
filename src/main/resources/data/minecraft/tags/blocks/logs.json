@@ -67,7 +67,7 @@
     "caiocesarbiomes:hazelnut_log",
     "caiocesarbiomes:marula_log",
     "caiocesarbiomes:pink_ivory_log",
-    "caiocesarbiomes:gabon_ebony_log",
+    "caiocesarbiomes:ebony_log",
     "caiocesarbiomes:blue_mahoe_log",
     "caiocesarbiomes:purpleheart_log",
     "caiocesarbiomes:larch_log",
@@ -76,7 +76,8 @@
     "caiocesarbiomes:mugo_pine_log",
     "caiocesarbiomes:oil_palm_log",
     "caiocesarbiomes:slash_pine_log",
-    "caiocesarbiomes:subalpine_fir_log"
+    "caiocesarbiomes:subalpine_fir_log",
+    "caiocesarbiomes:persimmon_log"
 
   ]
 }

@@ -130,5 +130,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         WalnutSapling.registerRenderLayer();
         PersimmonSapling.registerRenderLayer();
         PecanSapling.registerRenderLayer();
+        JackalberrySapling.registerRenderLayer();
+        PinyonSapling.registerRenderLayer();
     }
 }

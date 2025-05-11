@@ -930,16 +930,22 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> JACKALBERRY_LEAVES = registerBlock("jackalberry_leaves",
             JackalberryLeaves::new);
+    public static final RegistryObject<Block> JACKALBERRY_SAPLING = registerBlock("jackalberry_sapling",
+            JackalberrySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_JACKALBERRY_SAPLING = BLOCKS.register("potted_jackalberry_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.JACKALBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Pinyon
     public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
             ModLogs::new);
     public static final RegistryObject<Block> PINYON_LEAVES = registerBlock("pinyon_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> OLIVE_SAPLING = registerBlock("olive_sapling",
-            OliveSapling::new);
+    public static final RegistryObject<Block> PINYON_SAPLING = registerBlock("pinyon_sapling",
+            PinyonSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OLIVE_SAPLING = BLOCKS.register("potted_olive_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.OLIVE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_PINYON_SAPLING = BLOCKS.register("potted_pinyon_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PINYON_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     //Pink Ivory
     public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",

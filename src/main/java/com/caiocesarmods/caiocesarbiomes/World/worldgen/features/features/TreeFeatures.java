@@ -1451,6 +1451,18 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Jackalberry Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JACKALBERRY_FANCY_TREE = register("jackalberry_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PERSIMMON_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JACKALBERRY_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JACKALBERRY_TREE = register("jackalberry_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PERSIMMON_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JACKALBERRY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Mountain Biome
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MUGO_PINE_SHRUB = register("mugo_pine_shrub",
@@ -1540,6 +1552,7 @@ public class TreeFeatures {
 
         protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
         protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
+        protected static final BlockState JACKALBERRY_LEAVES = TreeBlocks.JACKALBERRY_LEAVES.get().getDefaultState();
 
         protected static final BlockState SUBALPINE_FIR_LOG = TreeBlocks.SUBALPINE_FIR_LOG.get().getDefaultState();
         protected static final BlockState SUBALPINE_FIR_LEAVES = TreeBlocks.SUBALPINE_FIR_LEAVES.get().getDefaultState();
@@ -1909,8 +1922,9 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.19F),
-                            SAUSAGE_TREE.withChance(0.19F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.19F),
-                            MARULA_TREE.withChance(0.2F), BISMARCK_PALM.withChance(0.25F), SYCAMORE_FIG_TREE.withChance(0.19F)),
+                            SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.2F),
+                            MARULA_TREE.withChance(0.24F), BISMARCK_PALM.withChance(0.25F), JACKALBERRY_TREE.withChance(0.3F),
+                            JACKALBERRY_FANCY_TREE.withChance(0.15F), SYCAMORE_FIG_TREE.withChance(0.19F)),
                             INDIAN_CORAL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
