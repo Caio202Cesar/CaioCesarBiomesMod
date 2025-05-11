@@ -53,6 +53,13 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.SAND.getDefaultState()
             )));
 
+    public static ConfiguredSurfaceBuilder<?> VOLCANIC_SURFACE = register("volcanic_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.BASALT.getDefaultState(),
+                    Blocks.BLACKSTONE.getDefaultState(),
+                    Blocks.BASALT.getDefaultState()
+            )));
+
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name,
                                                                                            ConfiguredSurfaceBuilder<SC> csb) {
         return WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER,
