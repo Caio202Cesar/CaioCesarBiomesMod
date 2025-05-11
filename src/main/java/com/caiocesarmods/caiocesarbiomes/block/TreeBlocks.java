@@ -714,6 +714,10 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MANGO_LEAVES));
     public static final RegistryObject<Block> MANGO_SAPLING = registerBlock("mango_sapling",
             MangoSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MANGO_SAPLING = BLOCKS.register("potted_mango_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MANGO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Marula
     public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
             ModLogs::new);
@@ -723,6 +727,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
             () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
+    public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
+            MulberrySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MULBERRY_SAPLING = BLOCKS.register("potted_mulberry_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Mesquite
     public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
             ModLogs::new);
