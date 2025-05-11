@@ -1566,6 +1566,13 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+    //Fremont Poplar
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FREMONT_POPLAR_TREE = register("fremont_poplar_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.FREMONT_POPLAR_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
     public static final class States {
@@ -1814,6 +1821,7 @@ public class TreeFeatures {
 
         protected static final BlockState BLACK_POPLAR_LOG = TreeBlocks.BLACK_POPLAR_LOG.get().getDefaultState();
         protected static final BlockState BLACK_POPLAR_LEAVES = TreeBlocks.BLACK_POPLAR_LEAVES.get().getDefaultState();
+        protected static final BlockState FREMONT_POPLAR_LEAVES = TreeBlocks.FREMONT_POPLAR_LEAVES.get().getDefaultState();
 
         protected static final BlockState NOTHOFAGUS_LOG = TreeBlocks.NOTHOFAGUS_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_BEECH_LEAVES = TreeBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
@@ -1972,7 +1980,7 @@ public class TreeFeatures {
     //Zion National Park Utah
     public static final ConfiguredFeature<?, ?> LOWLAND_BADLANDS_VEGETATION = register("lowland_badlands_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUNIPER_TREE.withChance(0.3F),
-                            MESQUITE_TREE.withChance(0.15F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F)), PINYON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            MESQUITE_TREE.withChance(0.15F), FREMONT_POPLAR_TREE.withChance(0.2F)), PINYON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WOODED_BADLANDS_VEGETATION = register("wooded_badlands_vegetation",

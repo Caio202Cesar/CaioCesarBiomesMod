@@ -145,6 +145,18 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BLACK_POPLAR_SAPLING = BLOCKS.register("potted_black_poplar_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BLACK_POPLAR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> FREMONT_POPLAR_LEAVES = registerBlock("fremont_poplar_leaves",
+            () -> new FremontPoplarLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_AUTUMN_LEAVES));
+    public static final RegistryObject<Block> FREMONT_POPLAR_AUTUMN_LEAVES = registerBlock("fremont_poplar_autumn_leaves",
+            () -> new FremontPoplarAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_LEAVES));
+    public static final RegistryObject<Block> FREMONT_POPLAR_SAPLING = registerBlock("fremont_poplar_sapling",
+            FremontPoplarSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_FREMONT_POPLAR_SAPLING = BLOCKS.register("potted_fremont_poplar_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.FREMONT_POPLAR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Blue Spruce
     public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
             ModLeaves::new);
@@ -1370,7 +1382,7 @@ public class TreeBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_MOUNTAIN_HEMLOCK_SAPLING = BLOCKS.register("potted_mountain_hemlock_sapling",
             () -> new FlowerPotBlock(TreeBlocks.MOUNTAIN_HEMLOCK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));//Sem textura
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
