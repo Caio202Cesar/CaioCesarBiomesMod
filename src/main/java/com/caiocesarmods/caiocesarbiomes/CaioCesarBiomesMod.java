@@ -5,7 +5,9 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
@@ -51,6 +53,8 @@ public class CaioCesarBiomesMod
         ModItems.register(eventBus);
         ModPlants.register(eventBus);
         TreeBlocks.register(eventBus);
+        ModWood.register(eventBus);
+        MiscBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
 
         ModFluids.register(eventBus);
