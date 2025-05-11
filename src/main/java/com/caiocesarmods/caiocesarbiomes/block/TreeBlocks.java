@@ -961,11 +961,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PISTACHIO_FRUITING_LEAVES = registerBlock("pistachio_fruiting_leaves",
             () -> new PistachioFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
-    public static final RegistryObject<Block> OLIVE_SAPLING = registerBlock("olive_sapling",
+    public static final RegistryObject<Block> PISTACHIO_SAPLING = registerBlock("pistachio_sapling",
             OliveSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OLIVE_SAPLING = BLOCKS.register("potted_olive_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.OLIVE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_PISTACHIO_SAPLING = BLOCKS.register("potted_pistachio_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PISTACHIO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     //Plane
     public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
