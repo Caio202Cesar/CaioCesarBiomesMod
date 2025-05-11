@@ -1433,11 +1433,17 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Bismarck Palm (savanna)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_BISMARCK_PALM = register("bismarck_palm_tall",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BISMARCK_PALM_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BISMARCK_PALM_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(10, 2, 4),
+                    new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BISMARCK_PALM = register("bismarck_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BISMARCK_PALM_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BISMARCK_PALM_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(15, 2, 4),
+                    new StraightTrunkPlacer(6, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Aspen Tree
@@ -1943,10 +1949,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.19F),
-                            SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), TAMARIND_TREE.withChance(0.2F),
-                            MARULA_TREE.withChance(0.24F), BISMARCK_PALM.withChance(0.25F), JACKALBERRY_TREE.withChance(0.3F),
-                            JACKALBERRY_FANCY_TREE.withChance(0.15F), SYCAMORE_FIG_TREE.withChance(0.19F)),
-                            INDIAN_CORAL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
+                            TAMARIND_TREE.withChance(0.2F),
+                            MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.4F), BISMARCK_PALM.withChance(0.3F),
+                            JACKALBERRY_TREE.withChance(0.3F),
+                            JACKALBERRY_FANCY_TREE.withChance(0.15F)),
+                            SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
