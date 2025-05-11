@@ -20,36 +20,36 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class MangoSapling extends SaplingBlock {
-    public MangoSapling() {
-        super(new MangoSapling.BlackPoplarTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class MarulaSapling extends SaplingBlock {
+    public MarulaSapling() {
+        super(new MarulaTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.MANGO_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_MANGO_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.MARULA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_MARULA_SAPLING.get(), RenderType.getCutout());
 
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+
         return 80;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+
         return 60;
     }
 
-    private static class BlackPoplarTree extends Tree {
+    private static class MarulaTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.MANGO_TREE;
-            } else {
-                return TreeFeatures.MANGO_FANCY_TREE;
-            }
+            return TreeFeatures.MARULA_TREE;
         }
     }
 }
+
+

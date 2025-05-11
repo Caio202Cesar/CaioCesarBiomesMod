@@ -727,11 +727,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
             () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
-    public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
-            MulberrySapling::new);
+    public static final RegistryObject<Block> MARULA_SAPLING = registerBlock("marula_sapling",
+            MarulaSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MULBERRY_SAPLING = BLOCKS.register("potted_mulberry_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_MARULA_SAPLING = BLOCKS.register("potted_marula_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MARULA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     //Mesquite
     public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
@@ -807,11 +807,11 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> MUGO_PINE_LEAVES = registerBlock("mugo_pine_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
-            MulberrySapling::new);
+    public static final RegistryObject<Block> MUGO_PINE_SAPLING = registerBlock("mugo_pine_sapling",
+            MugoPineSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MULBERRY_SAPLING = BLOCKS.register("potted_mulberry_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_MUGO_PINE_SAPLING = BLOCKS.register("potted_mugo_pine_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MUGO_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
