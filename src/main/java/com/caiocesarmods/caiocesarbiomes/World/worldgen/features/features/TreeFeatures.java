@@ -1517,12 +1517,29 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(PeppercornVineTrunkDecorator.INSTANCE))
                     .setIgnoreVines().build()));
 
+    //Persimmon
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERSIMMON_FANCY_TREE = register("persimmon_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PERSIMMON_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PERSIMMON_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERSIMMON_TREE = register("persimmon_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PERSIMMON_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PERSIMMON_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
 
 
     public static final class States {
 
         protected static final BlockState AVOCADO_LOG = TreeBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
+        protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
 
         protected static final BlockState SUBALPINE_FIR_LOG = TreeBlocks.SUBALPINE_FIR_LOG.get().getDefaultState();
         protected static final BlockState SUBALPINE_FIR_LEAVES = TreeBlocks.SUBALPINE_FIR_LEAVES.get().getDefaultState();
@@ -2064,7 +2081,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.08F),
-                            ROYAL_POINCIANA_TREE.withChance(0.1F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F), OIL_PALM_TREE.withChance(0.1F),
                             AVOCADO_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.1F), TAMARIND_TREE.withChance(0.4F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.1F)), FOREST_ACACIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -2163,7 +2180,7 @@ public class TreeFeatures {
     //Replace this for humid climate pines - add podocarpus
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PINES = register("subtropical_forest_pines",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SLASH_PINE.withChance(0.2F)),
-                            HOOP_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            PERSIMMON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
