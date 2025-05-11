@@ -855,6 +855,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> OIL_PALM_LEAVES = registerBlock("oil_palm_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> OIL_PALM_SAPLING = registerBlock("mugo_pine_sapling",
+            MugoPineSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_OIL_PALM_SAPLING = BLOCKS.register("potted_mugo_pine_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MUGO_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Oleander
     public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
             ModLogs::new);
