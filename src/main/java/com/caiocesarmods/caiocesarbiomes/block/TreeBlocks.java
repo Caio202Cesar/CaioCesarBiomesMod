@@ -904,11 +904,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
             () -> new PecanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_LEAVES));
-    public static final RegistryObject<Block> OLIVE_SAPLING = registerBlock("olive_sapling",
-            OliveSapling::new);
+    public static final RegistryObject<Block> PECAN_SAPLING = registerBlock("pecan_sapling",
+            PecanSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OLIVE_SAPLING = BLOCKS.register("potted_olive_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.OLIVE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_PECAN_SAPLING = BLOCKS.register("potted_pecan_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PECAN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     //Persimmon
     public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
@@ -922,11 +922,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PERSIMMON_FRUITING_LEAVES = registerBlock("persimmon_fruiting_leaves",
             () -> new PersimmonFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PERSIMMON_LEAVES));
-    public static final RegistryObject<Block> OLIVE_SAPLING = registerBlock("olive_sapling",
-            OliveSapling::new);
+    public static final RegistryObject<Block> PERSIMMON_SAPLING = registerBlock("persimmon_sapling",
+            PersimmonSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OLIVE_SAPLING = BLOCKS.register("potted_olive_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.OLIVE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_PERSIMMON_SAPLING = BLOCKS.register("potted_persimmon_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PERSIMMON_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> JACKALBERRY_LEAVES = registerBlock("jackalberry_leaves",
             JackalberryLeaves::new);
