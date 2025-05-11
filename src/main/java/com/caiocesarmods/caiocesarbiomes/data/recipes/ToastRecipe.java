@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.data.recipes;
 
+import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -63,7 +64,7 @@ public class ToastRecipe implements IToastRecipe {
     }
 
     public ItemStack getIcon() {
-        return new ItemStack(ModPlants.TOASTER.get());
+        return new ItemStack(MiscBlocks.TOASTER.get());
     }
 
     @Override

@@ -133,7 +133,7 @@ public class CaioCesarBiomesMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         event.enqueueWork(()-> {
-            RenderTypeLookup.setRenderLayer(ModPlants.TOASTER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(MiscBlocks.TOASTER.get(), RenderType.getCutout());
 
             ScreenManager.registerFactory(ModContainers.TOASTER_CONTAINER.get(), ToasterScreen::new);
 

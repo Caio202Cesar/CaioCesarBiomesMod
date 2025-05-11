@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.data.recipes;
 
+import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -64,7 +65,7 @@ public class ButterRecipe implements IButterRecipe {
     }
 
     public ItemStack getIcon() {
-        return new ItemStack(ModPlants.BUTTER_MIXER.get());
+        return new ItemStack(MiscBlocks.BUTTER_MIXER.get());
     }
 
     @Override

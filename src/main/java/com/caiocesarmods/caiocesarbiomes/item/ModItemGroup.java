@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.ModWood;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -46,7 +48,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModPlants.COCONUT_SAPLING.get());
+            return new ItemStack(TreeBlocks.DATE_SAPLING.get());
         }
 
     };
@@ -55,7 +57,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModPlants.LIVE_OAK_PLANKS.get());
+            return new ItemStack(ModWood.OLIVE_PLANKS.get());
         }
 
     };

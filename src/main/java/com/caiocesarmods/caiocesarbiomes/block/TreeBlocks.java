@@ -77,7 +77,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
     //Aspen
     public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
-            ModLeaves::new); //the same tree structure as southern magnolia
+            ModLeaves::new);
 
 
 
