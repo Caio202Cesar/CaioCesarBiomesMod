@@ -1,8 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.client.renderer.RenderType;
@@ -25,8 +24,8 @@ public class BaldCypressAerialRoot extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.BALD_CYPRESS_AERIAL_ROOT_LARGE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.BALD_CYPRESS_AERIAL_ROOT_SMALL.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_LARGE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get(), RenderType.getCutout());
 
     }
 
