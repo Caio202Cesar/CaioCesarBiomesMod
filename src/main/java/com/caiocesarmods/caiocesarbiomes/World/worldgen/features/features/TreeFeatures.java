@@ -1234,7 +1234,7 @@ public class TreeFeatures {
             new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNIPER_LOG),
                     new SimpleBlockStateProvider(States.JUNIPER_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(13, 2, 14),
+                    new GiantTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
             .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUNIPER_SHRUB = register("juniper_shrub",
@@ -1452,8 +1452,6 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
-
-    //Aspen Tree
 
     //Oil Palm (tropical deciduous forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OIL_PALM_TREE = register("oil_palm_tree",
