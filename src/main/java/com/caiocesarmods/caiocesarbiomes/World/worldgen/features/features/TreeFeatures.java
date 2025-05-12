@@ -1562,16 +1562,17 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
                             FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(5, 2, 1),
+                    new StraightTrunkPlacer(7, 2, 1),
                     new TwoLayerFeature(2, 0, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setMaxWaterDepth(2).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_BALD_CYPRESS = register("mega_bald_cypress",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(8, 5, 4),
+                    new GiantTrunkPlacer(16, 5, 4),
                     new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setMaxWaterDepth(2).setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Fremont Poplar
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FREMONT_POPLAR_TREE = register("fremont_poplar_tree",
@@ -1931,7 +1932,7 @@ public class TreeFeatures {
                             PLANE_TREE_WITH_KIWI.withChance(0.09F), ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.1F),
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F),
-                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.15F),
+                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.3F),
                             SOUTHERN_LIVE_OAK_TREE.withChance(0.2F)),
                             BALD_CYPRESS))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

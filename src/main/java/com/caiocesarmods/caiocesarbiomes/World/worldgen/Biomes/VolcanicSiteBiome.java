@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> VOLCANIC_SITE = BIOMES.register("volcanic_site",
-        () -> makeMontainBiome(() -> ModConfiguredSurfaceBuilders.VOLCANIC_SURFACE, 2.4F, 1.8F));
+        () -> makeMontainBiome(() -> ModConfiguredSurfaceBuilders.VOLCANIC_SURFACE, 2F, 1.8F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -39,7 +39,6 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
     biomegenerationsettings$builder.withStructure(StructureFeatures.NETHER_FOSSIL);
 
-    DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
