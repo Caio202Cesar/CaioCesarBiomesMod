@@ -23,7 +23,7 @@ public class SubtropicalLaurelJungleBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("subtropical_laurel_jungle",
-           () -> makeSubtropicalLaurelJungleBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.4f));
+           () -> makeSubtropicalLaurelJungleBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.2f));
 
 
    private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
