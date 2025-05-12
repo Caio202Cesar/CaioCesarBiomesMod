@@ -46,7 +46,7 @@ public class DurianSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.DURIAN_TREE_TREE;
+            return TreeFeatures.DURIAN_TREE;
         }
     }
 }

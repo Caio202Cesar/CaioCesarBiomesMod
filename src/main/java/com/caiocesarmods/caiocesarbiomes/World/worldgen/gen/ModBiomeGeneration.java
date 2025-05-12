@@ -47,7 +47,7 @@ public class ModBiomeGeneration {
 
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 24, OVERWORLD, SANDY, HOT, DRY, SANDY);
 
-        addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 10, OVERWORLD, LUSH,
+        addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH,
                 DENSE, JUNGLE, WET, RARE);
 
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
@@ -62,7 +62,7 @@ public class ModBiomeGeneration {
 
         addBiome(EucalyptusSahelBiome.EUCALYPTUS_SAHEL.get(), BiomeManager.BiomeType.DESERT, 4, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
-        addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 7, OVERWORLD, HOT, DRY, SPARSE, RARE);
+        addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
         addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, SANDY);
 
@@ -100,7 +100,9 @@ public class ModBiomeGeneration {
 
         addBiome(TropicalBambooMarsh.TROPICAL_BAMBOO_MARSH.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP);
 
-        addBiome(SaltDesertBiome.SALT_DESERT.get(), BiomeManager.BiomeType.DESERT, 6, OVERWORLD, RARE, HOT, DRY, WASTELAND);
+        addBiome(SaltDesertBiome.SALT_DESERT.get(), BiomeManager.BiomeType.DESERT, 15, OVERWORLD, HOT, DRY, WASTELAND);
+
+        addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, DRY, WASTELAND, SPOOKY, MOUNTAIN);
 
     }
 

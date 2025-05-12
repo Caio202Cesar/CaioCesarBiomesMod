@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom;
 
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -48,7 +49,7 @@ public class CoconutBunchBlock extends Block {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.COCONUT_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.COCONUT_BUNCH.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
