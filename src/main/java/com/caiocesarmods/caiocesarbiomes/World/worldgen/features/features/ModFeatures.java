@@ -83,6 +83,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TUSSOCK_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(100));
 
+    public static final ConfiguredFeature<?, ?> PATCH_DRY_STEPPE = register("patch_dry_steppe",
+            Feature.FLOWER.withConfiguration(Configs.STEPPE_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(100));
+
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_FLOWER_VEGETATION = register("subtropical_forest_flower_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SUBTROPICAL_FOREST_FLOWER_VEGETATION_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
@@ -182,6 +186,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 10)
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig STEPPE_GRASS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.DRY_STEPPE_GRASS, 10),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
 
@@ -227,6 +236,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState SAW_PALMETTO = ModPlants.SAW_PALMETTO.get().getDefaultState();
         protected static final BlockState BALD_CYPRESS_ROOTS_LARGE = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_LARGE.get().getDefaultState();
         protected static final BlockState BALD_CYPRESS_ROOTS_SMALL = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get().getDefaultState();
+        protected static final BlockState DRY_STEPPE_GRASS = ModPlants.DRY_STEPPE_GRASS.get().getDefaultState();
 
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/dry_steppe_grass",
+    "particle": "caiocesarbiomes:block/dry_steppe_grass"
+  }
+}

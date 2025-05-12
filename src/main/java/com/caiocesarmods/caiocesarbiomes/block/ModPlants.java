@@ -193,10 +193,13 @@ public class ModPlants {
             () -> new FlowerPotBlock(ModPlants.AZALEA_WHITE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> DRY_STEPPE_GRASS = registerBlock("dry_steppe_grass",
+            ModGrasses::new);
 
     public static final RegistryObject<Block> SAW_PALMETTO = registerBlock("saw_palmetto",
             () -> new PlantFanBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN)
                     .setRequiresTool().doesNotBlockMovement().zeroHardnessAndResistance()));
+
 
 
 
