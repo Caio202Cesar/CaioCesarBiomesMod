@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
+import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
@@ -12,7 +13,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModPlants.DESERT_ROSE_PLANT.get());
+            return new ItemStack(MiscBlocks.SALT_BLOCK.get());
         }
 
     };

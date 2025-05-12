@@ -157,14 +157,15 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new ThreeLayerFeature(1, 1, 0, 1, 2,
+                            OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE_WITH_CREEPING_VINE = register("highland_ocotea_tree_with_creeping_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE)
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
 
     //Mesquite Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MESQUITE_TREE = register("mesquite_tree",
@@ -1249,9 +1250,15 @@ public class TreeFeatures {
             new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PINYON_LOG),
                     new SimpleBlockStateProvider(States.PINYON_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(13, 2, 14),
+                    new GiantTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
             .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINYON_FANCY_TREE  = register("pinyon_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PINYON_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PINYON_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(7, 9, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Hydrangea
     //Pink hydrangea grows in neutral-alkali soils.
@@ -1515,8 +1522,8 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(7, 9, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Loboly Pine (the main feature of decidous subtropical forest hills) - também na florest hills
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",

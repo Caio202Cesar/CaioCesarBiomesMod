@@ -62,8 +62,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BUNYA_PINE_SAPLING = BLOCKS.register("potted_bunya_pine_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BUNYA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    public static final RegistryObject<Block> HOOP_PINE_LEAVES = registerBlock("hoop_pine_leaves",
-            ModLeaves::new);
     //Avocado
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
             ModLogs::new);

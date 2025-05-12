@@ -29,7 +29,7 @@ public class MiscBlocks {
 
     //Culinary
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
+            () -> new Block(AbstractBlock.Properties.create(Material.SAND, MaterialColor.SNOW).
                     setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
 
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
@@ -48,7 +48,7 @@ public class MiscBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().group(ItemGroup.DECORATIONS)));
+                new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     }
 
     public static void register(IEventBus eventBus) {
