@@ -29,6 +29,7 @@ public class DouglasFirSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.DOUGLAS_FIR_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_DOUGLAS_FIR_SAPLING.get(), RenderType.getCutout());
 
     }
 

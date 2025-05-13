@@ -29,6 +29,7 @@ public class DurianSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.DURIAN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_DURIAN_SAPLING.get(), RenderType.getCutout());
 
     }
 

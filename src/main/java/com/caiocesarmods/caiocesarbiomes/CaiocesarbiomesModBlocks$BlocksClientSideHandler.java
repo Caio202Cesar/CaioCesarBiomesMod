@@ -146,5 +146,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         WhiteFirSapling.registerRenderLayer();
         HawthornSapling.registerRenderLayer();
         HazelnutSapling.registerRenderLayer();
+        DurianSapling.registerRenderLayer();
     }
 }
