@@ -140,5 +140,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BismarckPalmSapling.registerRenderLayer();
         FremontPoplarSapling.registerRenderLayer();
         MountainHemlockSapling.registerRenderLayer();
+        BlueSpruceSapling.registerRenderLayer();
+        SycamoreFigSapling.registerRenderLayer();
     }
 }

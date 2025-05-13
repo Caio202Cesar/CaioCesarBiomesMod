@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> VOLCANIC_SITE = BIOMES.register("volcanic_site",
-        () -> makeMontainBiome(() -> ModConfiguredSurfaceBuilders.VOLCANIC_SURFACE, 2F, 0.090F));
+        () -> makeMontainBiome(() -> ModConfiguredSurfaceBuilders.VOLCANIC_SURFACE, 2F, 0.2F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -37,7 +37,6 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
 
     biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_MOUNTAIN);
     biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.NETHER_FOSSIL);
 
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
@@ -46,8 +45,10 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLavaLakes(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SPRING_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
