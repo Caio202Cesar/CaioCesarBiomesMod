@@ -559,9 +559,20 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SUBALPINE_FIR_LEAVES = registerBlock("subalpine_fir_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SUBALPINE_FIR_SAPLING = registerBlock("subalpine_fir_sapling",
+            SubalpineFirSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SUBALPINE_FIR_SAPLING = BLOCKS.register("potted_subalpine_fir_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.SUBALPINE_FIR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> WHITE_FIR_LEAVES = registerBlock("white_fir_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> WHITE_FIR_SAPLING = registerBlock("white_fir_sapling",
+            WhiteFirSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_WHITE_FIR_SAPLING = BLOCKS.register("potted_white_fir_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.WHITE_FIR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
