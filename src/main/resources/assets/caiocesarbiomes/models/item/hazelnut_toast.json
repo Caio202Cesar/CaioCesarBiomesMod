@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "caiocesarbiomes:item/hazelnut_toast"
+    "layer0": "caiocesarbiomes:item/hazelnut_cream_toast"
   }
 }
