@@ -632,7 +632,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.HOLM_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> SCRUB_OAK_LEAVES = registerBlock("scrub_oak_leaves",
-            ModLeaves::new);
+            ModLeaves::new);//Badlands
     //Holly
     public static final RegistryObject<Block> HOLLY_LOG = registerBlock("ilex_log",
             ModLogs::new);
