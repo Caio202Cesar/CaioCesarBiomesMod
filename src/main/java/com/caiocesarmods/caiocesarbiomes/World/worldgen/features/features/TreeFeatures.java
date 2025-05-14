@@ -1874,9 +1874,10 @@ public class TreeFeatures {
                             HOLM_OAK_FANCY_TREE.withChance(0.3F), CORK_OAK_FANCY_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    //Thermolyphic Forest - Make a dragon blood tree with dark oak shape (Dracaena draco)
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DRY_MOUNTAIN_TREES = register("subtropical_dry_mountain_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CANARY_DATE_PALM_TREE.withChance(0.3F),
-                            CANARY_PINE_TREE_TALL.withChance(0.3F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CANARY_PINE_TREE_TALL.withChance(0.3F), DRAGON_BLOOD_TREE.withChance(0.0076F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",
