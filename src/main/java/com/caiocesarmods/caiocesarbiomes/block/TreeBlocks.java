@@ -715,7 +715,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JUNIPER_LEAVES = registerBlock("juniper_leaves",
             JuniperLeaves::new);
-
+    public static final RegistryObject<Block> JUNIPER_SAPLING = registerBlock("juniper_sapling",
+            JuniperSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_JUNIPER_SAPLING = BLOCKS.register("potted_juniper_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.JUNIPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 

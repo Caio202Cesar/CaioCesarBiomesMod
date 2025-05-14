@@ -43,6 +43,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BlueberryBush.registerRenderLayer();
         BlueberryFloweringBush.registerRenderLayer();
         BlueberryFruitingBush.registerRenderLayer();
+        InkberryBush.registerRenderLayer();
 
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();
@@ -147,5 +148,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         HawthornSapling.registerRenderLayer();
         HazelnutSapling.registerRenderLayer();
         DurianSapling.registerRenderLayer();
+        JuniperSapling.registerRenderLayer();
     }
 }

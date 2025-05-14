@@ -23,6 +23,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> BADLANDS_PLANTS = register("badlands_plants",
+            Feature.FLOWER.withConfiguration(Configs.BADLANDS_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
             Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
@@ -191,6 +195,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.DRY_STEPPE_GRASS, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig BADLANDS_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.MANZANITA_BUSH, 10),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
 
@@ -237,6 +246,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BALD_CYPRESS_ROOTS_LARGE = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_LARGE.get().getDefaultState();
         protected static final BlockState BALD_CYPRESS_ROOTS_SMALL = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get().getDefaultState();
         protected static final BlockState DRY_STEPPE_GRASS = ModPlants.DRY_STEPPE_GRASS.get().getDefaultState();
+        protected static final BlockState MANZANITA_BUSH = ModPlants.MANZANITA_BUSH.get().getDefaultState();
 
     }
 }

@@ -200,7 +200,10 @@ public class ModPlants {
             () -> new PlantFanBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN)
                     .setRequiresTool().doesNotBlockMovement().zeroHardnessAndResistance()));
 
-
+    public static final RegistryObject<Block> INKBERRY_BUSH = registerBlock("inkberry_bush",
+            InkberryBush::new);
+    public static final RegistryObject<Block> INKBERRY_FRUITING_BUSH = registerBlock("inkberry_fruiting_bush",
+            InkberryFruitingBush::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

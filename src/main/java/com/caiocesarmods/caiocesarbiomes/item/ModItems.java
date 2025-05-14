@@ -112,6 +112,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> JACKALBERRY = ITEMS.register("jackalberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+    public static final RegistryObject<Item> INKBERRY = ITEMS.register("inkberry",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.INKBERRIES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",

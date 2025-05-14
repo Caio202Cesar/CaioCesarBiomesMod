@@ -70,6 +70,9 @@ public class ModFoods extends Foods {
     public static final Food FENNEL_SOUP = buildStew(6);
     public static final Food WALNUT_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food PECAN_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food INKBERRIES = (new Food.Builder()).hunger(1).saturation(0.1F)
+            .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

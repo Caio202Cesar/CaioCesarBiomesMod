@@ -34,5 +34,21 @@ public class ModPlantGeneration {
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(9, 0.25f, 2))));
         }
+
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BADLANDS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BADLANDS_PLATEAU.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_BADLANDS_PLATEAU.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BADLANDS_PLATEAU.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.WOODED_BADLANDS_PLATEAU.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_WOODED_BADLANDS_PLATEAU.getLocation())))))))) {
+
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModFeatures.BADLANDS_PLANTS
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(
+                            new AtSurfaceWithExtraConfig(6, 0.25f, 2))));
+        }
     }
 }
