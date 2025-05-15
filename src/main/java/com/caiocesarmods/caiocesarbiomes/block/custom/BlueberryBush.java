@@ -32,7 +32,7 @@ public class BlueberryBush extends DoublePlantBlock {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(5) != 0) return; // 20% chance
+        if (random.nextInt(50) != 0) return; // 20% chance
 
         DoubleBlockHalf half = state.get(HALF);
         BlockPos lowerPos = (half == DoubleBlockHalf.LOWER) ? pos : pos.down();
@@ -69,8 +69,7 @@ public class BlueberryBush extends DoublePlantBlock {
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.matchesBlock(Blocks.GRASS_BLOCK)
-                || state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.FARMLAND);
+        return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.FARMLAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

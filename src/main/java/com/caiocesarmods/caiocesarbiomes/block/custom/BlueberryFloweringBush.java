@@ -32,7 +32,7 @@ public class BlueberryFloweringBush extends DoublePlantBlock {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(5) != 0) return; // 20% chance
+        if (random.nextInt(50) != 0) return; // 20% chance
 
         DoubleBlockHalf half = state.get(HALF);
         BlockPos lowerPos = (half == DoubleBlockHalf.LOWER) ? pos : pos.down();
