@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:coconut_bunch"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:green_coconut",
+    "count": 4
+  }
+}

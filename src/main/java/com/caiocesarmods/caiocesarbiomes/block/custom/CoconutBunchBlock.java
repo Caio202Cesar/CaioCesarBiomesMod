@@ -16,14 +16,15 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class CoconutBunchBlock extends Block {
+public class CoconutBunchBlock extends Block implements IForgeShearable {
     public CoconutBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).hardnessAndResistance(0.2F).tickRandomly()
-                .sound(SoundType.BAMBOO).notSolid().harvestTool(ToolType.HOE));
+                .sound(SoundType.WET_GRASS).harvestTool(ToolType.AXE).notSolid().setRequiresTool());
     }
 
     public boolean ticksRandomly(BlockState state) {

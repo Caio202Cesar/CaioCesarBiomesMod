@@ -6,17 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:green_coconut",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 4.0,
-                "max": 5.0,
-                "type": "minecraft:uniform"
-              }
-            }
-          ]
+          "name": "caiocesarbiomes:coconut_bunch"
         }
       ]
     }

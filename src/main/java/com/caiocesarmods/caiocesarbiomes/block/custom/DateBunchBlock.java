@@ -10,12 +10,13 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class DateBunchBlock extends Block {
+public class DateBunchBlock extends Block implements IForgeShearable {
     public DateBunchBlock() {
         super(Properties.create(Material.PLANTS).hardnessAndResistance(0.2F).tickRandomly()
                 .sound(SoundType.WET_GRASS).harvestTool(ToolType.HOE));
