@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -17,16 +20,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class EucalyptusSapling extends SaplingBlock {
-    public EucalyptusSapling() {
-        super(new EucalyptusSapling.EucalyptusTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class LarchSapling extends SaplingBlock {
+    public LarchSapling() {
+        super(new LarchSapling.LarchTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.EUCALYPTUS_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_EUCALYPTUS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.LARCH_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_LARCH_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -38,14 +41,14 @@ public class EucalyptusSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class EucalyptusTree extends Tree {
+    private static class LarchTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.EUCALYPTUS_FANCY_TREE;
+                return TreeFeatures.TALL_LARCH_TREE;
             } else {
-                return TreeFeatures.EUCALYPTUS_TALL_TREE;
+                return TreeFeatures.LARCH_TREE;
             }
         }
     }

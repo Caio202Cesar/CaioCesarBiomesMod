@@ -750,8 +750,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> LARCH_LEAVES = registerBlock("larch_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> LARCH_AUTUMN_LEAVES = registerBlock("larch_autumn_leaves",
-            ModLeaves::new);
+    public static final RegistryObject<Block> LARCH_SAPLING = registerBlock("larch_sapling",
+            LarchSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_LARCH_SAPLING = BLOCKS.register("potted_larch_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.LARCH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Loquat
     public static final RegistryObject<Block> LOQUAT_LOG = registerBlock("loquat_log",
             ModLogs::new);
