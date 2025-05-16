@@ -1956,7 +1956,7 @@ public class TreeFeatures {
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.089F), SOUTHERN_MAGNOLIA_WITH_KIWI.withChance(0.07F), PLANE_TREE.withChance(0.3F),
                             PLANE_TREE_WITH_KIWI.withChance(0.09F), ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.1F),
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
-                            RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F),
+                            RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F), PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.3F),
                             SOUTHERN_LIVE_OAK_TREE.withChance(0.2F)),
                             BALD_CYPRESS))
