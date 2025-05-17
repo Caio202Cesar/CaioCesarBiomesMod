@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "caiocesarbiomes:block/ficus_roots_plant"
+    "cross": "caiocesarbiomes:block/ficus_roots"
   }
 }
