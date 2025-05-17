@@ -112,6 +112,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> JACKALBERRY = ITEMS.register("jackalberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+    public static final RegistryObject<Item> PEPPERCORN = ITEMS.register("peppercorn",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+    public static final RegistryObject<Item> RIPE_PEPPERCORN = ITEMS.register("ripe_peppercorn",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> INKBERRY = ITEMS.register("inkberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.INKBERRIES)));
 
@@ -141,12 +145,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> OREGANO_STALK = ITEMS.register("oregano_stalk",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
-    public static final RegistryObject<Item> PEPPERCORN = ITEMS.register("peppercorn",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
-    public static final RegistryObject<Item> RIPE_PEPPERCORN = ITEMS.register("ripe_peppercorn",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BLACK_PEPPER = ITEMS.register("black_pepper",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> WHITE_PEPPER = ITEMS.register("white_pepper",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> SPICED_RABBIT = ITEMS.register("spiced_rabbit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> SAVORY_RABBIT = ITEMS.register("savory_rabbit",

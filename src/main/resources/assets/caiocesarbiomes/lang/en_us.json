@@ -399,6 +399,37 @@
   "item.caiocesarbiomes.carob_beans": "Carob Beans",
   "item.caiocesarbiomes.juniper_berries": "Juniper Berries",
   "item.caiocesarbiomes.dragon_blood_resin": "Dragon Blood Resin",
+  "item.caiocesarbiomes.salted_green_mango": "Salted Green Mango",
+  "item.caiocesarbiomes.walnut_bread": "Walnut Bread",
+  "item.caiocesarbiomes.pecan_bread": "Pecan Bread",
+  "item.caiocesarbiomes.fennel_soup": "Fennel Soup",
+  "item.caiocesarbiomes.toast": "Toast",
+  "item.caiocesarbiomes.avocado_oil": "Avocado Oil",
+  "item.caiocesarbiomes.rosemary_stalks": "Rosemary Stalks",
+  "item.caiocesarbiomes.rosemary_bunch": "Rosemary Bunch",
+  "item.caiocesarbiomes.oregano_stalk": "Oregano Stalk",
+  "item.caiocesarbiomes.peppercorn": "Unripe Peppercorn",
+  "item.caiocesarbiomes.ripe_peppercorn": "Ripe Peppercorn",
+  "item.caiocesarbiomes.white_pepper": "White Pepper",
+  "item.caiocesarbiomes.black_pepper": "Black Pepper",
+  "item.caiocesarbiomes.spiced_rabbit": "Spiced Rabbit",
+  "item.caiocesarbiomes.savory_rabbit": "Savory Rabbit",
+  "item.caiocesarbiomes.spiced_pork": "Spiced Pork",
+  "item.caiocesarbiomes.savory_pork": "Savory Pork",
+  "item.caiocesarbiomes.spiced_chicken": "Spiced Chicken",
+  "item.caiocesarbiomes.savory_chicken": "Savory Chicken",
+  "item.caiocesarbiomes.salt": "Salt",
+  "item.caiocesarbiomes.raw_toast": "Raw Toast",
+  "item.caiocesarbiomes.bread_knife": "Bread Knife",
+  "item.caiocesarbiomes.milk_skin": "Milk Skin",
+  "item.caiocesarbiomes.butter": "Butter",
+  "item.caiocesarbiomes.butter_piece": "Butter Piece",
+  "item.caiocesarbiomes.jar": "Jar",
+  "item.caiocesarbiomes.hazelnut_toast": "Hazelnut Toast",
+  "item.caiocesarbiomes.pistachio_cream": "Pistachio Cream",
+  "item.caiocesarbiomes.pistachio_toast": "Pistachio Toast",
+  "item.caiocesarbiomes.coconut_oil": "Coconut Oil",
+  "item.caiocesarbiomes.coconut_sprout": "Coconut Sprout",
 
   "item.caiocesarbiomes.wood_poisoned_sword": "Wooden Poisoned Sword",
   "item.caiocesarbiomes.stone_poisoned_sword": "Stone Poisoned Sword",
@@ -448,7 +479,13 @@
   "screen.caiocesarbiomes.butter_mixer": "Butter Mixer",
   "screen.caiocesarbiomes.toaster": "Toaster",
 
-  "itemGroup.CCB_GROUP": "Caio Cesar Biomes"
+  "itemGroup.CaioCesarBiomesTab": "Caio Cesar Biomes: Miscellaneous",
+  "itemGroup.CaioCesarBiomes:Culinary": "Caio Cesar Biomes: Culinary",
+  "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: Fruits And Vegetables",
+  "itemGroup.CaioCesarBiomes:Plants": "Caio Cesar Biomes: Plants",
+  "itemGroup.CaioCesarBiomes:Trees": "Caio Cesar Biomes: Trees",
+  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: Wood"
+
 }
 
 
