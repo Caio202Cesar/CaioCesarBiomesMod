@@ -331,6 +331,8 @@
   "block.caiocesarbiomes.canary_pine_log": "Tronco de pinheiro-das-Canárias",
   "block.caiocesarbiomes.canary_pine_sapling": "Muda de pinheiro-das-Canárias",
 
+  "block.caiocesarbiomes.subalpine_fir_log": "Tronco de abeto",
+
   "block.caiocesarbiomes.red_currant_crop": "Sementes de groselha",
   "block.caiocesarbiomes.black_currant_crop": "Sementes de cassis",
   "block.caiocesarbiomes.fennel_crop": "Sementes de funcho",
@@ -429,6 +431,9 @@
   "item.caiocesarbiomes.pistachio_toast": "Torrada de creme de pistache",
   "item.caiocesarbiomes.coconut_oil": "Óleo de coco",
   "item.caiocesarbiomes.coconut_sprout": "Maçã (broto) de coco",
+  "item.caiocesarbiomes.persimmon": "Caqui",
+  "item.caiocesarbiomes.jackalberry": "Fruta-do-jacal",
+  "item.caiocesarbiomes.inkberry": "Bagas de tinta",
 
   "item.caiocesarbiomes.wood_poisoned_sword": "Espada  de madeira envenenada",
   "item.caiocesarbiomes.stone_poisoned_sword": "Espada de pedra envenenada",
@@ -483,7 +488,7 @@
   "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: frutas e vegetais",
   "itemGroup.CaioCesarBiomes:Plants": "Caio Cesar Biomes: plantas",
   "itemGroup.CaioCesarBiomes:Trees": "Caio Cesar Biomes: àrvores",
-  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: madeira"
+  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: madeira",
 }
 
 
