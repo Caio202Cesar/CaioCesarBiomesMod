@@ -76,7 +76,12 @@ public class TreeBlocks {
     //Aspen
     public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
             ModLeaves::new);
-
+    public static final RegistryObject<Block> ASPEN_SAPLING = registerBlock("aspen_sapling",
+            AspenSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ASPEN_SAPLING = BLOCKS.register("potted_aspen_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ASPEN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 
