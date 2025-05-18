@@ -21,8 +21,7 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
     public static final Food ORANGE = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MANDARIN = (new Food.Builder()).hunger(4).saturation(0.3F).build();
-    public static final Food STARFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F)
-            .effect(new EffectInstance(Effects.HUNGER, 100, 0), 0.6F).build();
+    public static final Food STARFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food STARFRUIT_SLICE = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food ELDERBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food TAMARINDS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
@@ -73,6 +72,10 @@ public class ModFoods extends Foods {
     public static final Food INKBERRIES = (new Food.Builder()).hunger(1).saturation(0.1F)
             .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F).build();
+    public static final Food MANGO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food GREEN_MANGO = (new Food.Builder()).hunger(2).saturation(0.1F)
+            .effect(new EffectInstance(Effects.HUNGER, 200, 2), 1.0F).build();
+
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

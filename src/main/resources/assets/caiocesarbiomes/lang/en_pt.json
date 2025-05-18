@@ -16,7 +16,7 @@
   "block.caiocesarbiomes.black_poplar_leaves": "Black Poplar Leaves",
   "block.caiocesarbiomes.black_poplar_log": "Black Poplar Log",
   "block.caiocesarbiomes.black_poplar_sapling": "Black Poplar Sapling",
-  "block.caiocesarbiomes.black_poplar_planks": "Black Poplar Planks",
+  "block.caiocesarbiomes.black_poplar_planks": "Planks o' black poplar",
   "block.caiocesarbiomes.buddha_hand_leaves": "Buddha's Hand Leaves",
   "block.caiocesarbiomes.buddha_hand_flowering_leaves": "Buddha's Hand Flowering Leaves",
   "block.caiocesarbiomes.buddha_hand_fruiting_leaves": "Buddha's Hand Fruiting Leaves",
@@ -161,7 +161,7 @@
   "block.caiocesarbiomes.ocotea_jungle_wood": "Stinkwood o' jungle timber",
   "block.caiocesarbiomes.ocotea_leaves": "Leaves o' stinkwood",
   "block.caiocesarbiomes.ocotea_planks": "Planks o' stinkwood ",
-  "block.caiocesarbiomes.oleander_dark_pink_leaves": "Dark Pink Oleander Leaves",
+  "block.caiocesarbiomes.oleander_dark_pink_leaves": "Leaves o' dark pink oleander",
   "block.caiocesarbiomes.oleander_dark_pink_sapling": "Dark Pink Oleander Sapling",
   "block.caiocesarbiomes.oleander_log": "Oleander Log",
   "block.caiocesarbiomes.oleander_pink_leaves": "Pink Oleander Leaves",
@@ -605,7 +605,8 @@
   "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: Fruits And Vegetables",
   "itemGroup.CaioCesarBiomes:Plants": "Caio Cesar Biomes: Plants",
   "itemGroup.CaioCesarBiomes:Trees": "Caio Cesar Biomes: Trees",
-  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: Wood"
+  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: Wood",
+  "block.caiocesarbiomes.aspen_sapling": "Aspen Sapling"
 
 
 }
