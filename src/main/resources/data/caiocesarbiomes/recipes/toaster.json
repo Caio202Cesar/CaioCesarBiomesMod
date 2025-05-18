@@ -7,13 +7,13 @@
   ],
   "key": {
     "R": {
-      "item": "minecraft:redstone"
+      "item": "minecraft:dispenser"
     },
     "#": {
       "item": "minecraft:iron_ingot"
     },
     "X": {
-      "item": "minecraft:dispenser"
+      "item": "minecraft:smoker"
     }
   },
   "result": {
