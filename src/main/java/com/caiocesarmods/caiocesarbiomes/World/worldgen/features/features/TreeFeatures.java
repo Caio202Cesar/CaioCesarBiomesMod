@@ -1428,22 +1428,6 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(PeppercornVineTrunkDecorator.INSTANCE))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Purpleheart (jungle)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLEHEART_TREE = register("purpleheart_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PURPLEHEART_LOG),
-                    new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
-                    new MegaJungleTrunkPlacer(10, 2, 19),
-                    new TwoLayerFeature(1, 1, 2))).setDecorators(ImmutableList.of(TrunkVineTreeDecorator.INSTANCE,
-                            LeaveVineTreeDecorator.field_236871_b_)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLEHEART_TREE_WITH_PEPPERCORN = register("purpleheart_tree_with_peppercorn",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PURPLEHEART_LOG),
-                    new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
-                    new MegaJungleTrunkPlacer(10, 2, 19),
-                    new TwoLayerFeature(1, 1, 2))).setDecorators(ImmutableList.of(PeppercornVineTrunkDecorator.INSTANCE,
-                    LeaveVineTreeDecorator.field_236871_b_)).build()));
-
     //Marula (savanna)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARULA_TREE = register("marula_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LOG),
@@ -1661,9 +1645,6 @@ public class TreeFeatures {
 
         protected static final BlockState SAUSAGE_TREE_LOG = TreeBlocks.SAUSAGE_TREE_LOG.get().getDefaultState();
         protected static final BlockState SAUSAGE_TREE_LEAVES = TreeBlocks.SAUSAGE_TREE_LEAVES.get().getDefaultState();
-
-        protected static final BlockState PURPLEHEART_LOG = TreeBlocks.PURPLEHEART_LOG.get().getDefaultState();
-        protected static final BlockState PURPLEHEART_LEAVES = TreeBlocks.PURPLEHEART_LEAVES.get().getDefaultState();
 
         protected static final BlockState BREADFRUIT_LEAVES = TreeBlocks.BREADFRUIT_LEAVES.get().getDefaultState();
         protected static final BlockState DURIAN_LEAVES = TreeBlocks.DURIAN_LEAVES.get().getDefaultState();
@@ -1954,8 +1935,8 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.5F),
                             BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.12F),
                             MANGO_TREE.withChance(0.15F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
-                            TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.2F), DURIAN_TREE_PEPPER_VINE.withChance(0.2F), BREADFRUIT_TREE.withChance(0.15F),
-                            PURPLEHEART_TREE.withChance(0.2F), PURPLEHEART_TREE_WITH_PEPPERCORN.withChance(0.12F), PEPPERCORN_INDIAN_LAUREL_TREE.withChance(0.16F), PEPPERCORN_BIG_INDIAN_LAUREL_TREE.withChance(0.13F),
+                            TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.2F), DURIAN_TREE_PEPPER_VINE.withChance(0.2F),
+                            BREADFRUIT_TREE.withChance(0.15F), PEPPERCORN_INDIAN_LAUREL_TREE.withChance(0.16F), PEPPERCORN_BIG_INDIAN_LAUREL_TREE.withChance(0.13F),
                             INDIAN_LAUREL_TREE.withChance(0.5F), PEPPERCORN_WEEPING_FIG_TREE.withChance(0.12F), PEPPERCORN_BIG_WEEPING_FIG_TREE.withChance(0.16F),
                             AVOCADO_TREE.withChance(0.4F), WEEPING_FIG_WITH_CREEPING_FIG.withChance(0.24F), INDIAN_LAUREL_WITH_CREEPING_FIG.withChance(0.28F),
                     STARFRUIT_TREE.withChance(0.4F), PEPPERCORN_AVOCADO_TREE.withChance(0.2F), RED_KAPOK_TREE.withChance(0.12F),

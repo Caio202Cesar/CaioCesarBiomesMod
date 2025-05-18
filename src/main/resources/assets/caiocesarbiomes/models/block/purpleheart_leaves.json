@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/purpleheart_leaves",
-    "particle": "caiocesarbiomes:block/purpleheart_leaves"
-  }
-}
