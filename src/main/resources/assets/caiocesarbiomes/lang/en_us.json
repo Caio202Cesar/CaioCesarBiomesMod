@@ -608,6 +608,8 @@
   "screen.caiocesarbiomes.butter_mixer": "Butter Mixer",
   "screen.caiocesarbiomes.toaster": "Toaster",
 
+  "tooltip.caiocesarbiomes.marula": "Eat before it ferments and you won't get sick.",
+
   "itemGroup.CaioCesarBiomesTab": "Caio Cesar Biomes: Miscellaneous",
   "itemGroup.CaioCesarBiomes:Culinary": "Caio Cesar Biomes: Culinary",
   "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: Fruits And Vegetables",
