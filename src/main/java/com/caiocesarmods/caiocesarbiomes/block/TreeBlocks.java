@@ -132,6 +132,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BREADFRUIT_FRUITING_LEAVES = registerBlock("breadfruit_fruiting_leaves",
             () -> new BreadfruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BREADFRUIT_LEAVES));
+    public static final RegistryObject<Block> BREADFRUIT_SAPLING = registerBlock("breadfruit_sapling",
+            BreadfruitSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BREADFRUIT_SAPLING = BLOCKS.register("potted_breadfruit_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.BREADFRUIT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     //Black Poplar
     public static final RegistryObject<Block> BLACK_POPLAR_LOG = registerBlock("black_poplar_log",
             ModLogs::new);
