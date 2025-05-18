@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/blueberry_fruiting_bush",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:blueberry_bush",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:blueberry_fruiting_bush",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:blueberries",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+            "conditions": [
+            {
+              "block": "caiocesarbiomes:blueberry_fruiting_bush",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
