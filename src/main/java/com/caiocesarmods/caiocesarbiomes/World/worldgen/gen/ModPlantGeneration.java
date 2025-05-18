@@ -45,7 +45,7 @@ public class ModPlantGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> ModFeatures.BADLANDS_PLANTS
+            base.add(() -> ModFeatures.BADLANDS_TALL_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(6, 0.25f, 2))));
