@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abc",
+    "def",
+    "g  "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "caiocesarbiomes:pistachio"
+    },
+    "c": {
+      "item": "caiocesarbiomes:pistachio"
+    },
+    "d": {
+      "item": "minecraft:sugar"
+    },
+    "e": {
+      "item": "caiocesarbiomes:coconut_oil"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:pistachio_cream",
+    "count": 1
+  }
+}
