@@ -64,18 +64,40 @@ public class ModFoods extends Foods {
     public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(8).saturation(0.9F).build();
     //The toast alone provides less than the bread. However, when crafted with jams, oils or pastes, it provides the same saturation and hunger
     // as a bread (or more, depending on the complement). It justifies one bread giving 10 toasts.
-    public static final Food TOAST = (new Food.Builder()).hunger(2).saturation(0.2F).build();
-
+    public static final Food TOAST = (new Food.Builder()).hunger(3).saturation(0.2F).build();
+    public static final Food RAW_TOAST = (new Food.Builder()).hunger(1).saturation(0.2F).build();
+    public static final Food HAZELNUT_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PISTACHIO_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food HAZELNUT_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
+            .effect(new EffectInstance(Effects.SPEED, 200, 3), 1.0F).build();
+    public static final Food PISTACHIO_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
+            .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F).build();
     public static final Food FENNEL_SOUP = buildStew(6);
     public static final Food WALNUT_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food PECAN_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food INKBERRIES = (new Food.Builder()).hunger(1).saturation(0.1F)
             .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
-            .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F).build();
+            .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F)
+                .effect(new EffectInstance(Effects.HUNGER, 300, 2), 1.0F).build();
     public static final Food MANGO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-    public static final Food GREEN_MANGO = (new Food.Builder()).hunger(2).saturation(0.1F)
+    public static final Food GREEN_MANGO = (new Food.Builder()).hunger(2).saturation(0.2F)
             .effect(new EffectInstance(Effects.HUNGER, 200, 2), 1.0F).build();
-
+    public static final Food BLUEBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food MARULA = (new Food.Builder()).hunger(2).saturation(0.3F).build();
+    public static final Food RIPE_MARULA = (new Food.Builder()).hunger(2).saturation(0.3F)
+            .effect(new EffectInstance(Effects.NAUSEA, 400, 5), 1.0F).build();
+    public static final Food ROWAN_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food HAWTHORN_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food DURIAN = (new Food.Builder()).hunger(5).saturation(0.6F)
+            .effect(new EffectInstance(Effects.NAUSEA, 200, 2), 1.0F).build();
+    public static final Food KIWI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
+    public static final Food COCONUT_SPROUT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food JUNIPER_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food CREEPING_FIG = (new Food.Builder()).hunger(3).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HUNGER, 100, 2), 1.0F).build();
+    public static final Food PERSIMMON = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food JACKALBERRY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food SALTY_MANGO = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

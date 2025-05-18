@@ -49,7 +49,7 @@ public class MarulaFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             int dropCount = 6;
 
-            ItemStack itemStack = new ItemStack(ModItems.MARULA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.RIPE_MARULA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
