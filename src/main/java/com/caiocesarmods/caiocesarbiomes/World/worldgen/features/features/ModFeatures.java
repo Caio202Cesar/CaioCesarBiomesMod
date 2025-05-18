@@ -23,10 +23,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> BADLANDS_PLANTS = register("badlands_plants",
-            Feature.FLOWER.withConfiguration(Configs.BADLANDS_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
-
     public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
             Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
