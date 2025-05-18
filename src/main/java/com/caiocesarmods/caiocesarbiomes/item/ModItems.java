@@ -212,16 +212,18 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PISTACHIO_TOAST)));
     public static final RegistryObject<Item> COCONUT_OIL = ITEMS.register("coconut_oil",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LEMON_PIE = ITEMS.register("lemon_pie",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.LEMON_PIE)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> RED_CURRANT_SEEDS = ITEMS.register("red_currant_seeds",
-            () -> new BlockItem(ModPlants.RED_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+            () -> new BlockItem(ModPlants.RED_CURRANT_CROP.get(), new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
-            () -> new BlockItem(ModPlants.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ItemGroup.MISC)));
+            () -> new BlockItem(ModPlants.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",

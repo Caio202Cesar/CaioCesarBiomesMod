@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "caiocesarbiomes:lemon"
+    },
+    {
+      "item": "caiocesarbiomes:tahiti_lime"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:lemon_pie"
+  }
+}

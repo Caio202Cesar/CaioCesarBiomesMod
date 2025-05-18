@@ -98,6 +98,7 @@ public class ModFoods extends Foods {
     public static final Food PERSIMMON = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food JACKALBERRY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food SALTY_MANGO = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food LEMON_PIE = (new Food.Builder()).hunger(8).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
