@@ -71,23 +71,23 @@ public class ModItems {
     public static final RegistryObject<Item> SWEET_CHESTNUT = ITEMS.register("sweet_chestnut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.MANGO)));
     public static final RegistryObject<Item> UNRIPE_MANGO = ITEMS.register("unripe_mango",
             () -> new UnripeMangoItem(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES))); //Can only be eaten with salt
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BLUEBERRIES)));
     public static final RegistryObject<Item> WALNUT = ITEMS.register("walnut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> BREADFRUIT = ITEMS.register("breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> MARULA = ITEMS.register("marula",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.MARULA)));
     public static final RegistryObject<Item> ROWAN_BERRIES = ITEMS.register("rowan_berries",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROWAN_BERRIES)));
     public static final RegistryObject<Item> HAWTHORN_BERRIES = ITEMS.register("hawthorn_berries",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.HAWTHORN_BERRIES)));
     public static final RegistryObject<Item> DURIAN = ITEMS.register("durian",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.DURIAN)));
     public static final RegistryObject<Item> KIWI_FRUITS = ITEMS.register("kiwi_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
