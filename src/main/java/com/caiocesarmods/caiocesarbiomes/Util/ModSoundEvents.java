@@ -18,6 +18,10 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> MEDITERRANEAN_AMBIENCE =
             registerSoundEvent("mediterranean_ambience");
 
+    public static final RegistryObject<SoundEvent> BEACH_AMBIENCE =
+            registerSoundEvent("beach_ambience");
+
+
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, name)));
     }

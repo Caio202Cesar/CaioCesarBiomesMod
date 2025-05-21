@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -65,7 +66,7 @@ public class DryTropicalBeachBiome {
                 .temperature(1.0F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(12564309).setFogColor(7907327)
-                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+                        .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
