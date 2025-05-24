@@ -46,15 +46,15 @@ public class MangoFruitingLeaves extends LeavesBlock implements IForgeShearable 
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         if ("SUMMER".equals(currentSeason) && nextStage != null) {
-            // 25% chance to drop green mango
-            if (random.nextInt(100) < 25) {
+            // 65% chance to drop a ripe mango
+            if (random.nextInt(100) < 65) {
                 ItemStack greenMango = new ItemStack(ModItems.MANGO.get(), 1);
                 ItemEntity greenEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, greenMango);
                 worldIn.addEntity(greenEntity);
             }
 
-            // 5% chance to drop unripe mango
-            if (random.nextInt(100) < 5) {
+            // 15% chance to drop unripe mango
+            if (random.nextInt(100) < 15) {
                 ItemStack ripeMango = new ItemStack(ModItems.UNRIPE_MANGO.get(), 1);
                 ItemEntity ripeEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, ripeMango);
                 worldIn.addEntity(ripeEntity);
