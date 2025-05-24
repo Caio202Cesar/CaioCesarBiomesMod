@@ -45,21 +45,32 @@ public class MangoFruitingLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(40) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null) {
+            // 25% chance to drop green mango
+            if (random.nextInt(100) < 25) {
+                ItemStack greenMango = new ItemStack(ModItems.MANGO.get(), 1);
+                ItemEntity greenEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, greenMango);
+                worldIn.addEntity(greenEntity);
+            }
 
-            int dropCount = 3;
+            // 5% chance to drop unripe mango
+            if (random.nextInt(100) < 5) {
+                ItemStack ripeMango = new ItemStack(ModItems.UNRIPE_MANGO.get(), 1);
+                ItemEntity ripeEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, ripeMango);
+                worldIn.addEntity(ripeEntity);
+            }
 
-            ItemStack itemStack = new ItemStack(ModItems.MANGO.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+            // 1 in 49 chance to advance leaf stage
+            if (random.nextInt(49) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.addEntity(itemEntity);
+                BlockState newState = nextStage.get().getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent);
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+                worldIn.setBlockState(pos, newState, 2);
+            }
         }
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
