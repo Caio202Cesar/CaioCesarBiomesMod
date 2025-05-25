@@ -205,7 +205,6 @@ public class ModPlants {
     public static final RegistryObject<Block> INKBERRY_FRUITING_BUSH = registerBlock("inkberry_fruiting_bush",
             InkberryFruitingBush::new);
 
-
     public static final RegistryObject<Block> CLOUDBERRY_PLANT = registerBlock("cloudberry_plant",
             CloudberryPlant::new);
     public static final RegistryObject<Block> CLOUDBERRY_FLOWERING_PLANT = registerBlock("cloudberry_flowering_plant",

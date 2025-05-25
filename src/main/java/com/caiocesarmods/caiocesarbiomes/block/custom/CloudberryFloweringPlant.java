@@ -17,8 +17,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class CloudberryPlant extends BushBlock {
-    public CloudberryPlant() {
+public class CloudberryFloweringPlant extends BushBlock {
+    public CloudberryFloweringPlant() {
         super(Properties.from(Blocks.SWEET_BERRY_BUSH).tickRandomly().hardnessAndResistance(0.1f)
                 .sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
@@ -42,17 +42,9 @@ public class CloudberryPlant extends BushBlock {
         double chance = 0.07;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, ModPlants.CLOUDBERRY_FLOWERING_PLANT.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.CLOUDBERRY_FRUITING_PLANT.get().getDefaultState());
 
         }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.CLOUDBERRY_PLANT.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.CLOUDBERRY_FLOWERING_PLANT.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.CLOUDBERRY_FRUITING_PLANT.get(), RenderType.getCutout());
-
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
