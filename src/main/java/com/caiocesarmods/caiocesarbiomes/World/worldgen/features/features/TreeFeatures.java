@@ -1247,19 +1247,13 @@ public class TreeFeatures {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
     //Pinyon
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINYON_TREE = register("pinyon_tree", Feature.TREE.withConfiguration((
-            new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PINYON_LOG),
-                    new SimpleBlockStateProvider(States.PINYON_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(6, 2, 14),
-                    new TwoLayerFeature(1, 1, 2)))
-            .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINYON_FANCY_TREE  = register("pinyon_fancy_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINYON_TREE  = register("pinyon_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PINYON_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PINYON_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(7, 9, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Hydrangea
     //Pink hydrangea grows in neutral-alkali soils.
