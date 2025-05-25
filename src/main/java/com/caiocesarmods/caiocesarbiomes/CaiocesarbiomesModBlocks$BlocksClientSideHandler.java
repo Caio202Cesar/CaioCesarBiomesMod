@@ -44,6 +44,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BlueberryFloweringBush.registerRenderLayer();
         BlueberryFruitingBush.registerRenderLayer();
         InkberryBush.registerRenderLayer();
+        CloudberryPlant.registerRenderLayer();
 
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();

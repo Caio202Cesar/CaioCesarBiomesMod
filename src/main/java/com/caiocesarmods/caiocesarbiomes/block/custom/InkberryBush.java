@@ -56,7 +56,7 @@ public class InkberryBush extends BushBlock {
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         return state.matchesBlock(Blocks.DIRT) || state.matchesBlock(Blocks.FARMLAND) || state.matchesBlock(Blocks.GRASS_BLOCK)
-                || state.matchesBlock(Blocks.SAND) || state.matchesBlock(Blocks.COARSE_DIRT);
+                || state.matchesBlock(Blocks.PODZOL) || state.matchesBlock(Blocks.COARSE_DIRT);
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
