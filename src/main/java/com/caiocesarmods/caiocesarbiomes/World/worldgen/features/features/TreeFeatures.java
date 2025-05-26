@@ -1973,7 +1973,8 @@ public class TreeFeatures {
                             WHITE_CRABAPPLE_TREE.withChance(0.3F), ASPEN_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.05F), PINK_CRABAPPLE_TREE.withChance(0.3F),
                             WALNUT_TREE.withChance(0.25F), WALNUT_FANCY_TREE.withChance(0.3F), RED_OAK_TREE.withChance(0.2F),
                             RED_OAK_FANCY_TREE.withChance(0.14F), HAWTHORN_TREE.withChance(0.12F), ROWAN_TREE2.withChance(0.12F), ROWAN_TREE1.withChance(0.15F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.4F), JUNIPER_SHRUB.withChance(0.07F), HAZELNUT_TREE.withChance(0.1F), PLANE_TREE.withChance(0.25F)),
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.4F), JUNIPER_SHRUB.withChance(0.07F), CHERRY_PLUM_FANCY_TREE.withChance(0.1F),
+                            CHERRY_PLUM_TREE.withChance(0.1F), HAZELNUT_TREE.withChance(0.1F), PLANE_TREE.withChance(0.25F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
