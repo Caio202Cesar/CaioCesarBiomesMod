@@ -212,6 +212,9 @@ public class ModPlants {
     public static final RegistryObject<Block> CLOUDBERRY_FRUITING_PLANT = registerBlock("cloudberry_fruiting_plant",
             CloudberryFruitingPlant::new);
 
+    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
+            ModGrasses::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
