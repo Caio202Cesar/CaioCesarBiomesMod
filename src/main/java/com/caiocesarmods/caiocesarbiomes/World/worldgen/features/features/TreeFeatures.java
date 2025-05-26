@@ -1970,13 +1970,17 @@ public class TreeFeatures {
     //Add eventually the yellow aspen tree, as well as other trees like aspen and larch
     public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_FOREST_TREES = register("mixed_continental_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.3F),
-                            WHITE_CRABAPPLE_TREE.withChance(0.3F), LOMBARDY_POPLAR_TREE.withChance(0.05F), PINK_CRABAPPLE_TREE.withChance(0.3F),
-                            COOPER_BEECH_TREE.withChance(0.5F), WALNUT_TREE.withChance(0.25F), WALNUT_FANCY_TREE.withChance(0.3F), COOPER_BEECH_BIG_TREE.withChance(0.1F), RED_OAK_TREE.withChance(0.2F),
-                            RED_OAK_FANCY_TREE.withChance(0.4F), HAWTHORN_TREE.withChance(0.2F), ROWAN_TREE2.withChance(0.3F), ROWAN_TREE1.withChance(0.25F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.4F), JUNIPER_SHRUB.withChance(0.07F), HAZELNUT_TREE.withChance(0.1F), PLANE_TREE.withChance(0.3F)),
+                            WHITE_CRABAPPLE_TREE.withChance(0.3F), ASPEN_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.05F), PINK_CRABAPPLE_TREE.withChance(0.3F),
+                            WALNUT_TREE.withChance(0.25F), WALNUT_FANCY_TREE.withChance(0.3F), RED_OAK_TREE.withChance(0.2F),
+                            RED_OAK_FANCY_TREE.withChance(0.14F), HAWTHORN_TREE.withChance(0.12F), ROWAN_TREE2.withChance(0.12F), ROWAN_TREE1.withChance(0.15F),
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.4F), JUNIPER_SHRUB.withChance(0.07F), HAZELNUT_TREE.withChance(0.1F), PLANE_TREE.withChance(0.25F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> MIXED_CONTINENTAL_MAPLE_TREES = register("mixed_continental_forest_maples",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_MAPLE_TREE.withChance(0.3F),
+                            BLOB_RED_MAPLE_TREE.withChance(0.25F)), RED_MAPLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_EXTRA_VEGETATION = register("forest_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.07F),
