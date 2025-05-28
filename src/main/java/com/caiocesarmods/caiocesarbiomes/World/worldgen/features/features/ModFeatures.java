@@ -57,6 +57,14 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANZANITA_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> TEMPERATE_TALL_PLANTS_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SWAMP_TALL_PLANTS_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MEDITERRANEAN_SHRUB_VEGETATION_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
@@ -106,6 +114,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> BADLANDS_TALL_VEGETATION = register("badlands_tall_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(BADLANDS_TALL_PLANTS)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> TEMPERATE_TALL_PLANTS_VEGETATION = register("temperate_tall_plants_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(TEMPERATE_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> SWAMP_TALL_PLANTS_VEGETATION = register("swamp_tall_plants_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SWAMP_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -252,6 +269,5 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BALD_CYPRESS_ROOTS_SMALL = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get().getDefaultState();
         protected static final BlockState DRY_STEPPE_GRASS = ModPlants.DRY_STEPPE_GRASS.get().getDefaultState();
         protected static final BlockState MANZANITA_BUSH = ModPlants.MANZANITA_BUSH.get().getDefaultState();
-
     }
 }
