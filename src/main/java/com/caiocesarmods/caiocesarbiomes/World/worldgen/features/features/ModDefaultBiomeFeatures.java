@@ -18,6 +18,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withOleanderShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.OLEANDER_SHRUBS);
     }
+    public static void withSabalPalms(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SABAL_PALMS);
+    }
     public static void withSocotraTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOCOTRA_TREES);
     }
