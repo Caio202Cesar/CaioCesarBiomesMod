@@ -17,15 +17,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class BambooSubtropicalLaurelJungleBiome {
+public class BunyaPineSubtropicalLaurelForestBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> BAMBOO_SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("bamboo_subtropical_laurel_jungle",
-           () -> makeSubtropicalLaurelJungleBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.2f));
+   public static final RegistryObject<Biome> BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST = BIOMES.register("bunya_subtropical_laurel_forest",
+           () -> makeSubtropicalLaurelForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.27f));
 
-   private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+
+   private static Biome makeSubtropicalLaurelForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -47,29 +48,26 @@ public class BambooSubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withMushroomBiomeVegetation(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalBambooVegetation(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withRainforestChestnuts(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-              .temperature(0.85F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+              .temperature(0.85F).downfall(0.85F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                       .withGrassColor(2791997).setFogColor(14807295)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
@@ -82,4 +80,4 @@ public class BambooSubtropicalLaurelJungleBiome {
       BIOMES.register(eventBus);
    }
 
-}
+   }

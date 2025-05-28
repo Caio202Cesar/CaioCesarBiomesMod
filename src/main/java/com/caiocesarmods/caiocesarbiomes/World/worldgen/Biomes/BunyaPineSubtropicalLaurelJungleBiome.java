@@ -17,12 +17,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class BambooSubtropicalLaurelJungleBiome {
+public class BunyaPineSubtropicalLaurelJungleBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> BAMBOO_SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("bamboo_subtropical_laurel_jungle",
+   public static final RegistryObject<Biome> BUNYA_PINE_SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("bunya_subtropical_laurel_jungle",
            () -> makeSubtropicalLaurelJungleBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.2f));
 
    private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -60,11 +60,11 @@ public class BambooSubtropicalLaurelJungleBiome {
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalBambooVegetation(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withRainforestChestnuts(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
