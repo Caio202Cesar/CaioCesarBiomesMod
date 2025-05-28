@@ -78,6 +78,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withIndianCoralTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.INDIAN_CORAL_TREES);
     }
+    public static void withTemperateTallPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TEMPERATE_TALL_PLANTS_VEGETATION);
+    }
     public static void withTropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FOREST_DECIDUOUS_TREES);
     }
@@ -135,8 +138,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTropicalJungleFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_JUNGLE_FRUIT_TREES);
     }
-    public static void withSubtropicalForestFlowers(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_FOREST_FLOWER_VEGETATION);
+    public static void withSubtropicalTallPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SUBTROPICAL_TALL_PLANT_VEGETATION);
     }
     public static void withTropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TROPICAL_PLANTS);
@@ -203,6 +206,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withPlainsEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PLAINS_EUCALYPTUS_TREES);
+    }
+    public static void withPlainsSubtropicalTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PLAINS_SUBTROPICAL_TREES);
     }
     public static void withPohutukawaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.POHUTUKAWA_TREES);

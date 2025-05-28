@@ -59,6 +59,7 @@ public class SubtropicalEucalyptusDryForestBiome {
         ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalEucalyptusForestTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

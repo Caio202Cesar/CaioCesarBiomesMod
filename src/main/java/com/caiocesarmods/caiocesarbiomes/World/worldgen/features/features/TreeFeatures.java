@@ -2174,10 +2174,16 @@ public class TreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EUCALYPTUS_TREES = register("plains_eucalyptus_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F),
-                    ELDERBERRY_TREE.withChance(0.1F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F)),
                     EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.2F, 2))));
+
+    public static final ConfiguredFeature<?, ?> PLAINS_SUBTROPICAL_TREES = register("subtropical_plains_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.2F),
+                    PLANE_TREE.withChance(0.23F), PLANE_FANCY_TREE.withChance(0.3F), SOUTHERN_LIVE_OAK_TREE.withChance(0.1F), POHUTUKAWA_TREE.withChance(0.1F),
+                    ACACIA.withChance(0.2F), OAK_BEES_0002.withChance(0.2F), FANCY_OAK_BEES_0002.withChance(0.09F),
+                    PECAN_TREE.withChance(0.25F)), PECAN_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.08F),

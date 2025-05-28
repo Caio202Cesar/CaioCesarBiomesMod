@@ -49,7 +49,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withSubtropicalForestFlowers(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
