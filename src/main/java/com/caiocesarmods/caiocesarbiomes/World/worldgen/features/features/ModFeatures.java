@@ -171,7 +171,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
                         .addWeightedBlockstate(States.PINK_AZALEA, 3)
                         .addWeightedBlockstate(States.GREEN_AZALEA, 1)
-                        .addWeightedBlockstate(States.WHITE_AZALEA, 2),
+                        .addWeightedBlockstate(States.WHITE_AZALEA, 2)
+                        .addWeightedBlockstate(States.SAW_PALMETTO, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TROPICAL_PLANTS_CONFIG =
