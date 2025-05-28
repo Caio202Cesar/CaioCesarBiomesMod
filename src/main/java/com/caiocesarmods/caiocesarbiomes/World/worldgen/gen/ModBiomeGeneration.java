@@ -32,8 +32,8 @@ public class ModBiomeGeneration {
 
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE);
 
-        addBiome(SubtropicalSeasonalForestHillsBiome.SUBTROPICAL_SEASONAL_FOREST_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST,
-                LUSH, DENSE, HILLS);
+        addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 22, OVERWORLD, FOREST,
+                LUSH, DENSE);
 
         addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, LUSH, DENSE);
 
