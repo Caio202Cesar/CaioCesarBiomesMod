@@ -2246,7 +2246,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
                             MULBERRY_TREE.withChance(0.4F), PECAN_FANCY_TREE.withChance(0.15F), PECAN_TREE.withChance(0.195F),
                             SWEET_CHESTNUT_TREE.withChance(0.3F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F),
-                            CANARY_DATE_PALM_TREE.withChance(0.112F)), AVOCADO_TREE))
+                            CANARY_DATE_PALM_TREE.withChance(0.2F)), AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
