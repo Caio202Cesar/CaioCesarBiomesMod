@@ -22,22 +22,20 @@ public class MarulaItem extends Item {
         super(properties);
     }
 
-    @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        PlayerEntity player = event.player;
+    @Override
+    public void tick() {
+        if (!this.world.isRemote) {
+            for (int i = 0; i < this.getSizeInventory(); i++) {
+                ItemStack stack = this.getStackInSlot(i);
 
-        if (!player.world.isRemote && event.phase == TickEvent.Phase.END) {
-            for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-                ItemStack stack = player.inventory.getStackInSlot(i);
-
-                if (!stack.isEmpty() && stack.getItem() == ModItems.MARULA.get()) {
-                    if (player.getRNG().nextInt(100) == 70) { // ~30 in 100 chance per tick
-                        ItemStack ripeStack = new ItemStack(ModItems.RIPE_MARULA.get(), stack.getCount());
+                if (!stack.isEmpty() && stack.getItem() == ModItems.GREEN_MANGO.get()) {
+                    if (this.world.rand.nextInt(200) == 0) {
+                        ItemStack ripeStack = new ItemStack(ModItems.RIPE_MANGO.get(), stack.getCount());
                         if (stack.hasTag()) {
                             ripeStack.setTag(stack.getTag().copy());
                         }
 
-                        player.inventory.setInventorySlotContents(i, ripeStack);
+                        this.setInventorySlotContents(i, ripeStack);
                     }
                 }
             }
