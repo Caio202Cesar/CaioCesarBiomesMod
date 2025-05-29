@@ -948,7 +948,16 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE_WITH_IVY = register("yew_tree_with_ivy",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
+                    new SimpleBlockStateProvider(States.YEW_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
+                    new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Dragon Blood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRAGON_BLOOD_TREE = register("dragon_blood_tree",
@@ -980,6 +989,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE,
+                            new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_WITH_IVY = register("western_hemlock_with_ivy",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+                    new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(17, 2, 10),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
                             new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Cooper Beech Tree
@@ -1939,7 +1956,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BIG_SWEET_CHESTNUT_TREE.withChance(0.095F),
                             SWEET_CHESTNUT_TREE.withChance(0.3F), RED_OAK_SHRUB.withChance(0.2F), ELDERBERRY_TREE.withChance(0.3F),
                             OAK_SHRUB.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            YEW_TREE.withChance(0.4F), HOLLY_TREE1.withChance(0.19F), HOLLY_TREE2.withChance(0.1F),
+                            YEW_TREE.withChance(0.4F), YEW_TREE_WITH_IVY.withChance(0.2F), HOLLY_TREE1.withChance(0.19F), HOLLY_TREE2.withChance(0.1F),
                             HAWTHORN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
                             COOPER_BEECH_BIG_TREE.withChance(0.5F), HAZELNUT_TREE.withChance(0.2F), RED_OAK_TREE.withChance(0.089F)),
                             DARK_OAK_WITH_IVY)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -2039,7 +2056,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> WESTERN_HEMLOCK_TREES = register("western_hemlock_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WESTERN_HEMLOCK_TREE_TALL.withChance(0.3F),
-                            WESTERN_HEMLOCK_WITH_CREEPING_FIG.withChance(0.003F)),
+                            WESTERN_HEMLOCK_WITH_CREEPING_FIG.withChance(0.003F), WESTERN_HEMLOCK_WITH_IVY.withChance(0.1F)),
                            WESTERN_HEMLOCK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(45, 0.1F, 1))));
 
