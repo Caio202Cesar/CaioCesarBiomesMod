@@ -2260,12 +2260,12 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("subtropical_eucalyptus_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.4F),
-                            MULBERRY_TREE.withChance(0.4F), PECAN_FANCY_TREE.withChance(0.2F), PECAN_TREE.withChance(0.25F),
-                            SWEET_CHESTNUT_TREE.withChance(0.3F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F),
-                            CANARY_DATE_PALM_TREE.withChance(0.5F)), AVOCADO_TREE))
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FOREST_ACACIA_TREE.withChance(0.2F),
+                            MULBERRY_TREE.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.2F), PECAN_TREE.withChance(0.25F),
+                            SWEET_CHESTNUT_TREE.withChance(0.2F), ELDERBERRY_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.3F),
+                            CANARY_DATE_PALM_TREE.withChance(0.25F)), AVOCADO_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+                            .configure(new AtSurfaceWithExtraConfig(3, 0.2F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PLANE_TREES = register("subtropical_forest_plane_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PLANE_TREE.withChance(0.6F)),

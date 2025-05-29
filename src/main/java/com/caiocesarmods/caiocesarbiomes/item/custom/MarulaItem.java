@@ -23,26 +23,6 @@ public class MarulaItem extends Item {
     }
 
     @Override
-    public void tick() {
-        if (!this.world.isRemote) {
-            for (int i = 0; i < this.getSizeInventory(); i++) {
-                ItemStack stack = this.getStackInSlot(i);
-
-                if (!stack.isEmpty() && stack.getItem() == ModItems.GREEN_MANGO.get()) {
-                    if (this.world.rand.nextInt(200) == 0) {
-                        ItemStack ripeStack = new ItemStack(ModItems.RIPE_MANGO.get(), stack.getCount());
-                        if (stack.hasTag()) {
-                            ripeStack.setTag(stack.getTag().copy());
-                        }
-
-                        this.setInventorySlotContents(i, ripeStack);
-                    }
-                }
-            }
-        }
-    }
-
-    @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
         tooltip.add(new StringTextComponent("Eat before it ferments and you won't get sick.").mergeStyle(TextFormatting.GRAY));
