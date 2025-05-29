@@ -34,23 +34,19 @@ public class ModBiomeGeneration {
 
         addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 22, OVERWORLD, FOREST,
                 LUSH, DENSE, CONIFEROUS);
-
-        addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE, CONIFEROUS);
-
-        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, LUSH, DENSE);
-
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE);
-
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
+        addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, LUSH, DENSE, CONIFEROUS);
+        addBiome(BunyaPineSubtropicalLaurelJungleBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET, CONIFEROUS);
+        addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH,
+                DENSE, JUNGLE, WET, RARE);
+        addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, LUSH, DENSE);
 
         addBiome(CoastalSubtropicalDesertBiome.COAST_SUBTROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 20, OVERWORLD, SANDY, DRY, SPOOKY);
 
         addBiome(CoastalSubtropicalDesertLomas.COAST_SUBTROPICAL_DESERT_LOMAS.get(), BiomeManager.BiomeType.DESERT, 17, OVERWORLD, DRY, LUSH);
 
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 24, OVERWORLD, SANDY, HOT, DRY, SANDY);
-
-        addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH,
-                DENSE, JUNGLE, WET, RARE);
 
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
 
