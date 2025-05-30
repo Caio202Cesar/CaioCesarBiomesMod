@@ -13,6 +13,4 @@ public class UnripeCreepingFigItem extends Item {
     public UnripeCreepingFigItem(Properties properties) {
         super(properties);
     }
-
-
 }
