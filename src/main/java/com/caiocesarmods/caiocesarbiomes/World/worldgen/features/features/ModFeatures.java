@@ -212,12 +212,28 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 5)
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 5)
                         .addWeightedBlockstate(States.INKBERRY_BUSH, 2)
-                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 2),
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 2)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 5)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig STEPPE_GRASS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.DRY_STEPPE_GRASS, 10),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig TEMPERATE_FOREST_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.INKBERRY_BUSH, 7)
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.CLOUDBERRY, 7)
+                        .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 5)
+                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 5)
+                        .addWeightedBlockstate(States.LABRADOR_TEA, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
