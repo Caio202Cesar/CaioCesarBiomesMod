@@ -1,25 +1,29 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.material.PushReaction;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class DateBunchBlock extends Block implements IForgeShearable {
     public DateBunchBlock() {
-        super(Properties.create(Material.PLANTS).hardnessAndResistance(0.2F).tickRandomly()
-                .sound(SoundType.WET_GRASS).harvestTool(ToolType.HOE));
+        super(Properties.from(Blocks.BEEHIVE).hardnessAndResistance(0.2F).tickRandomly()
+                .sound(SoundType.WET_GRASS).harvestTool(ToolType.AXE).notSolid().setRequiresTool());
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -36,13 +40,16 @@ public class DateBunchBlock extends Block implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
+        if (random.nextFloat() < 0.0025F) {
 
-        if ("FALL".equals(currentSeason) && random.nextFloat() < 0.0925F) {
-
-            worldIn.destroyBlock(pos, true);
+            worldIn.destroyBlock(pos, false);
 
         }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(TreeBlocks.DATE_BUNCH.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -53,4 +60,7 @@ public class DateBunchBlock extends Block implements IForgeShearable {
         return 1;
     }
 
+    public PushReaction getPushReaction(BlockState state) {
+        return PushReaction.DESTROY;
+    }
 }

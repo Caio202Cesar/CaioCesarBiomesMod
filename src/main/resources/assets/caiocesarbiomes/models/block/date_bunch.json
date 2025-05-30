@@ -1,7 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cross",
   "textures": {
-    "all": "caiocesarbiomes:block/date_bunch",
+    "cross": "caiocesarbiomes:block/date_bunch",
     "particle": "caiocesarbiomes:block/date_bunch"
   }
 }
