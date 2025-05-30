@@ -209,18 +209,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig SWAMP_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.SAW_PALMETTO, 7)
-                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 10)
-                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 10),
+                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 5)
+                        .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 5)
+                        .addWeightedBlockstate(States.INKBERRY_BUSH, 2)
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig STEPPE_GRASS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.DRY_STEPPE_GRASS, 10),
-                        SimpleBlockPlacer.PLACER)).tries(64).build();
-
-        public static final BlockClusterFeatureConfig BADLANDS_PLANTS_CONFIG =
-                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.MANZANITA_BUSH, 10),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -269,5 +266,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BALD_CYPRESS_ROOTS_SMALL = TreeBlocks.BALD_CYPRESS_AERIAL_ROOT_SMALL.get().getDefaultState();
         protected static final BlockState DRY_STEPPE_GRASS = ModPlants.DRY_STEPPE_GRASS.get().getDefaultState();
         protected static final BlockState MANZANITA_BUSH = ModPlants.MANZANITA_BUSH.get().getDefaultState();
+        protected static final BlockState INKBERRY_BUSH = ModPlants.INKBERRY_BUSH.get().getDefaultState();
+        protected static final BlockState INKBERRY_FRUITING_BUSH = ModPlants.INKBERRY_FRUITING_BUSH.get().getDefaultState();
+
     }
 }
