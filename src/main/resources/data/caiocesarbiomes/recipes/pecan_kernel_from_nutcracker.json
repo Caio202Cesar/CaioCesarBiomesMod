@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:pecan_nut"
+    },
+    {
+      "item": "caiocesarbiomes:nutcracker"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:pecan_kernel",
+    "count": 1
+  }
+}
