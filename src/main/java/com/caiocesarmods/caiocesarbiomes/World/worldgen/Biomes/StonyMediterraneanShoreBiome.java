@@ -29,7 +29,7 @@ public class StonyMediterraneanShoreBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> STONY_MEDITERRANEAN_SHORE = BIOMES.register("stony_mediterranean_shore",
-            () -> makeGenericBeachBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_STONY_SHORE_SURFACE, 0.0F, 0.25F));
+            () -> makeGenericBeachBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_STONY_SHORE_SURFACE, 0.1F, 0.8F));
 
 
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
