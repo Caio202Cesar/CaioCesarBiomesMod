@@ -1926,6 +1926,11 @@ public class TreeFeatures {
                             CANARY_PINE_TREE_TALL.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> TEMPERATE_SAVANNA_TREES = register("temperate_savanna_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of( EUCALYPTUS_TALL_TREE.withChance(0.2F),
+                            LOMBARDY_POPLAR_TREE.withChance(0.12F)), EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.2F),
                             JUNIPER_SHRUB.withChance(0.089F)), LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
