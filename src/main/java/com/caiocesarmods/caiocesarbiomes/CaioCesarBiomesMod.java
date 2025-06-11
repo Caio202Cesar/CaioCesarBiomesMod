@@ -13,6 +13,7 @@ import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ModFluids;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
+import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
@@ -65,6 +66,8 @@ public class CaioCesarBiomesMod
         ModContainers.register(eventBus);
         ModRecipeTypes.register(eventBus);
         ModSoundEvents.register(eventBus);
+
+        ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
