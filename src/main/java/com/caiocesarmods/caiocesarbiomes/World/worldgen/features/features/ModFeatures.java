@@ -232,8 +232,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CLOUDBERRY, 7)
                         .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 5)
-                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 5)
-                        .addWeightedBlockstate(States.LABRADOR_TEA, 2),
+                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -284,6 +283,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState MANZANITA_BUSH = ModPlants.MANZANITA_BUSH.get().getDefaultState();
         protected static final BlockState INKBERRY_BUSH = ModPlants.INKBERRY_BUSH.get().getDefaultState();
         protected static final BlockState INKBERRY_FRUITING_BUSH = ModPlants.INKBERRY_FRUITING_BUSH.get().getDefaultState();
+        protected static final BlockState CLOUDBERRY = ModPlants.CLOUDBERRY_PLANT.get().getDefaultState();
+        protected static final BlockState FRUITING_CLOUDBERRY = ModPlants.CLOUDBERRY_FRUITING_PLANT.get().getDefaultState();
+        protected static final BlockState FLOWERING_CLOUDBERRY = ModPlants.CLOUDBERRY_FLOWERING_PLANT.get().getDefaultState();
 
     }
 }

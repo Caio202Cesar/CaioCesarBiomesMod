@@ -12,11 +12,11 @@ public class ModEntityTypes {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES
             = DeferredRegister.create(ForgeRegistries.ENTITIES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<EntityType<EarthlyHoglinEntity>> EARTHLY_HOGLIN =
+   /* public static final RegistryObject<EntityType<EarthlyHoglinEntity>> EARTHLY_HOGLIN =
             ENTITY_TYPES.register("earthly_hoglin",
                     () -> EntityType.Builder.create(EarthlyHoglinEntity::new,
                                     EntityClassification.CREATURE).size(1.2964844F, 1.3F).trackingRange(10)
-                            .build(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "earthly_hoglin").toString()));
+                            .build(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "earthly_hoglin").toString()));*/
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

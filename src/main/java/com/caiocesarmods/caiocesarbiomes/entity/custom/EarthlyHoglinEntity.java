@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 import java.util.function.Predicate;
 
-public class EarthlyHoglinEntity extends HoglinEntity {
+/*public class EarthlyHoglinEntity extends HoglinEntity {
     public EarthlyHoglinEntity(EntityType<? extends HoglinEntity> p_i231569_1_, World p_i231569_2_) {
         super(p_i231569_1_, p_i231569_2_);
     }
@@ -43,4 +43,4 @@ public class EarthlyHoglinEntity extends HoglinEntity {
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, FoxEntity.class, 10, true, true, (Predicate<LivingEntity>)null));
         this.targetSelector.addGoal(5, new ResetAngerGoal<>(this, false));
     }
-}
+}*/

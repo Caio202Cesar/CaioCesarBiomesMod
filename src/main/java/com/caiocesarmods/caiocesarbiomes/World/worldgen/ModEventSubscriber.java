@@ -18,6 +18,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Mod.EventBusSubscriber(modid = CaioCesarBiomesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventSubscriber {
 
@@ -99,43 +102,40 @@ public class ModEventSubscriber {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
 
         for (ServerWorld world : server.getWorlds()) {
-            for (TileEntity tile : world.loadedTileEntityList) {
+            // Cópia da lista para evitar ConcurrentModificationException
+            List<TileEntity> tiles = new ArrayList<>(world.loadedTileEntityList);
+
+            for (TileEntity tile : tiles) {
                 if (tile instanceof IInventory) {
                     IInventory inventory = (IInventory) tile;
+
                     for (int i = 0; i < inventory.getSizeInventory(); i++) {
                         ItemStack stack = inventory.getStackInSlot(i);
 
-                        if (stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
-                            CompoundNBT tag = stack.getOrCreateTag();
-                            int age = tag.getInt("RipenAge");
-                            age++;
+                        if (stack.isEmpty()) continue;
 
-                            if (age >= 120000) { // 10 minutes in ticks
+                        CompoundNBT tag = stack.getOrCreateTag();
+                        int age = tag.getInt("RipenAge");
+                        age++;
+
+                        // Verifica qual item está amadurecendo e substitui quando atingir a idade certa
+                        if (stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
+                            if (age >= 120000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.MANGO.get(), stack.getCount()));
                             } else {
                                 tag.putInt("RipenAge", age);
                                 stack.setTag(tag);
                             }
-                        }
 
-                        if (stack.getItem() == ModItems.UNRIPE_CREEPING_FIG.get()) {
-                            CompoundNBT tag = stack.getOrCreateTag();
-                            int age = tag.getInt("RipenAge");
-                            age++;
-
-                            if (age >= 120000) { // 10 minutes in ticks
+                        } else if (stack.getItem() == ModItems.UNRIPE_CREEPING_FIG.get()) {
+                            if (age >= 120000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.RIPE_CREEPING_FIG.get(), stack.getCount()));
                             } else {
                                 tag.putInt("RipenAge", age);
                                 stack.setTag(tag);
                             }
-                        }
 
-                        if (stack.getItem() == ModItems.MARULA.get()) {
-                            CompoundNBT tag = stack.getOrCreateTag();
-                            int age = tag.getInt("RipenAge");
-                            age++;
-
+                        } else if (stack.getItem() == ModItems.MARULA.get()) {
                             if (age >= 16000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.RIPE_MARULA.get(), stack.getCount()));
                             } else {
