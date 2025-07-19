@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:carob_leaves"
+              "name": "caiocesarbiomes:sweet_chestnut_fruiting_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:carob_sapling"
+              "name": "caiocesarbiomes:sweet_chestnut_sapling"
             }
           ]
         }
@@ -145,7 +145,7 @@
               ]
             }
           ],
-          "name": "caiocesarbiomes:carob_beans"
+          "name": "caiocesarbiomes:sweet_chestnut"
         }
       ],
       "conditions": [
