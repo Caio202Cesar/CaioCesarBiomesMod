@@ -68,8 +68,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> PECAN_NUT = ITEMS.register("pecan_nut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
-    public static final RegistryObject<Item> PECAN_KERNEL = ITEMS.register("pecan_kernel",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PECAN)));
     public static final RegistryObject<Item> SWEET_CHESTNUT = ITEMS.register("sweet_chestnut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
@@ -80,8 +78,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BLUEBERRIES)));
     public static final RegistryObject<Item> WALNUT = ITEMS.register("walnut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
-    public static final RegistryObject<Item> WALNUT_KERNEL = ITEMS.register("walnut_kernel",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.WALNUT)));
     public static final RegistryObject<Item> BREADFRUIT = ITEMS.register("breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> MARULA = ITEMS.register("marula",
@@ -223,6 +219,12 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> LEMON_PIE = ITEMS.register("lemon_pie",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.LEMON_PIE)));
+    public static final RegistryObject<Item> PECAN_KERNEL = ITEMS.register("pecan_kernel",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PECAN)));
+    public static final RegistryObject<Item> WALNUT_KERNEL = ITEMS.register("walnut_kernel",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.WALNUT)));
+    public static final RegistryObject<Item> COOKED_CHESTNUT = ITEMS.register("cooked_chestnut",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CHESTNUT)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
