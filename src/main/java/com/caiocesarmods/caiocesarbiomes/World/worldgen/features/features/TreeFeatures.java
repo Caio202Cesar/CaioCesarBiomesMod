@@ -2324,10 +2324,10 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
-                            PISTACHIO_TREE.withChance(0.088F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.4F),
-                            DATE_PALM_TREE.withChance(0.5F)), ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 5))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
+                            PISTACHIO_TREE.withChance(0.3F), SYCAMORE_FIG_TREE.withChance(0.12F), ACACIA.withChance(0.3F),
+                            DATE_PALM_TREE.withChance(0.5F)), SYCAMORE_FIG_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
