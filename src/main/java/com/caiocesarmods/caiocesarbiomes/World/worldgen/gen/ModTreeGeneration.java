@@ -30,7 +30,7 @@ public class ModTreeGeneration {
             base.add(() -> TreeFeatures.SUBTROPICAL_DESERT_TREES
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                            new AtSurfaceWithExtraConfig(2, 0.1F, 5))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.FOREST.getLocation()))
