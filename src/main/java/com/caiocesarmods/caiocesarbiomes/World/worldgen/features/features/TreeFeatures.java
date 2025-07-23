@@ -267,31 +267,31 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_CRAPE_MYRTLE_TREE = register("red_crape_myrtle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.RED_CRAPE_MYRTLE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    .build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_CRAPE_MYRTLE_TREE = register("purple_crape_myrtle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_CRAPE_MYRTLE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    .build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_CRAPE_MYRTLE_TREE = register("white_crape_myrtle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.WHITE_CRAPE_MYRTLE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    .build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_CRAPE_MYRTLE_TREE = register("pink_crape_myrtle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.PINK_CRAPE_MYRTLE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    .build()));
 
     //Southern Wax Myrtle Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_WAX_MYRTLE_SHRUB = register("southern_wax_myrtle_shrub",
