@@ -95,5 +95,24 @@ public class ModPlantGeneration {
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(3, 0.25f, 2))));
         }
+
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.TAIGA.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.TAIGA_HILLS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.TAIGA_MOUNTAINS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GIANT_SPRUCE_TAIGA.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GIANT_TREE_TAIGA.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.SNOWY_TAIGA.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GIANT_SPRUCE_TAIGA_HILLS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GIANT_TREE_TAIGA_HILLS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.SNOWY_TAIGA_MOUNTAINS.getLocation()))))))))))) {
+
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModFeatures.TAIGA_PLANTS
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(
+                            new AtSurfaceWithExtraConfig(3, 0.25f, 2))));
+        }
     }
 }

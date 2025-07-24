@@ -23,6 +23,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> TAIGA_PLANTS = register("taiga_plants",
+            Feature.FLOWER.withConfiguration(Configs.TAIGA_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> PATCH_MOUNTAIN = register("patch_mountain",
             Feature.FLOWER.withConfiguration(Configs.MOUNTAIN_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));

@@ -45,7 +45,7 @@ public class BreadfruitFruitingLeaves extends LeavesBlock implements IForgeShear
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         if (nextStage != null && random.nextInt(50) == 0) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.BREADFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -65,7 +65,7 @@ public class BreadfruitFruitingLeaves extends LeavesBlock implements IForgeShear
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 2;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.BREADFRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
