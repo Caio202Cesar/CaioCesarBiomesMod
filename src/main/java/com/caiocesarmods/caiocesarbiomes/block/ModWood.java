@@ -124,8 +124,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
             ModLogs::new);
-    public static final RegistryObject<Block> BISMARCK_PALM_PLANKS = registerBlock("bismarck_palm_planks",
-            ModLogs::new);
     public static final RegistryObject<Block> MARULA_PLANKS = registerBlock("marula_planks",
             ModLogs::new);
     public static final RegistryObject<Block> JUNIPER_PLANKS = registerBlock("juniper_planks",
