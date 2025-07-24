@@ -110,6 +110,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> HAZELNUT_PLANKS = registerBlock("hazelnut_planks",
             ModLogs::new);
+    public static final RegistryObject<Block> ROWAN_PLANKS = registerBlock("rowan_planks",
+            ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_PLANKS = registerBlock("sausage_tree_planks",
             ModLogs::new);
     public static final RegistryObject<Block> SABAL_PLANKS = registerBlock("sabal_planks",
@@ -117,6 +119,10 @@ public class ModWood {
     public static final RegistryObject<Block> LARCH_PLANKS = registerBlock("larch_planks",
             ModLogs::new);
     public static final RegistryObject<Block> COCONUT_PLANKS = registerBlock("coconut_planks",
+            ModLogs::new);
+    public static final RegistryObject<Block> MANGO_PLANKS = registerBlock("mango_planks",
+            ModLogs::new);
+    public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
             ModLogs::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
