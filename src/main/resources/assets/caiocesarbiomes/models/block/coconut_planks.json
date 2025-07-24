@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/coconut_planks"
+  }
+}
