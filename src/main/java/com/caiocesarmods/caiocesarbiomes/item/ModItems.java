@@ -220,11 +220,13 @@ public class ModItems {
     public static final RegistryObject<Item> LEMON_PIE = ITEMS.register("lemon_pie",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.LEMON_PIE)));
     public static final RegistryObject<Item> PECAN_KERNEL = ITEMS.register("pecan_kernel",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PECAN)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PECAN)));
     public static final RegistryObject<Item> WALNUT_KERNEL = ITEMS.register("walnut_kernel",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.WALNUT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.WALNUT)));
     public static final RegistryObject<Item> COOKED_CHESTNUT = ITEMS.register("cooked_chestnut",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CHESTNUT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHESTNUT)));
+    public static final RegistryObject<Item> AVOCADO_ICE_CREAM = ITEMS.register("avocado_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHESTNUT)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
