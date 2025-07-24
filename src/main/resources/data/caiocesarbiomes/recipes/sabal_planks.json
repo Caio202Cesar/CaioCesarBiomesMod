@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:sabal_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:sabal_planks",
+    "count": 4
+  }
+}
