@@ -79,5 +79,21 @@ public class ModPlantGeneration {
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
         }
+
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MOUNTAINS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MOUNTAIN_EDGE.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_GRAVELLY_MOUNTAINS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GRAVELLY_MOUNTAINS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.SNOWY_MOUNTAINS.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.WOODED_MOUNTAINS.getLocation())))))))) {
+
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModFeatures.PATCH_MOUNTAIN
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(
+                            new AtSurfaceWithExtraConfig(3, 0.25f, 2))));
+        }
     }
 }

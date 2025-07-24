@@ -23,6 +23,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> PATCH_MOUNTAIN = register("patch_mountain",
+            Feature.FLOWER.withConfiguration(Configs.MOUNTAIN_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
+
     public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
             Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
@@ -234,6 +238,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 5)
                         .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig MOUNTAIN_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.EDELWEISS, 2)
+                        .addWeightedBlockstate(States.LUPINUS, 7),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
 
@@ -286,6 +296,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState CLOUDBERRY = ModPlants.CLOUDBERRY_PLANT.get().getDefaultState();
         protected static final BlockState FRUITING_CLOUDBERRY = ModPlants.CLOUDBERRY_FRUITING_PLANT.get().getDefaultState();
         protected static final BlockState FLOWERING_CLOUDBERRY = ModPlants.CLOUDBERRY_FLOWERING_PLANT.get().getDefaultState();
+        protected static final BlockState EDELWEISS = ModPlants.EDELWEISS.get().getDefaultState();
+        protected static final BlockState LUPINUS = ModPlants.LUPINUS.get().getDefaultState();
 
     }
 }
