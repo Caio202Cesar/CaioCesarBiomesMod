@@ -233,15 +233,18 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig TEMPERATE_FOREST_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.INKBERRY_BUSH, 7)
-                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7),
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7)
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.CLOUDBERRY, 3)
-                        .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 3)
-                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 3)
-                        .addWeightedBlockstate(States.CLUBMOSS, 7),
+                        .addWeightedBlockstate(States.CLOUDBERRY, 1)
+                        .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 1)
+                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 1)
+                        .addWeightedBlockstate(States.CLUBMOSS, 4)
+                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 3)
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig MOUNTAIN_PLANT_CONFIG =
@@ -304,6 +307,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState EDELWEISS = ModPlants.EDELWEISS.get().getDefaultState();
         protected static final BlockState LUPINUS = ModPlants.LUPINUS.get().getDefaultState();
         protected static final BlockState CLUBMOSS = ModPlants.CLUBMOSS.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY = ModPlants.BUNCHBERRY.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY_FLOWERING = ModPlants.BUNCHBERRY_FLOWERING.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY_FRUITING = ModPlants.BUNCHBERRY_FRUITING.get().getDefaultState();
+
 
     }
 }
