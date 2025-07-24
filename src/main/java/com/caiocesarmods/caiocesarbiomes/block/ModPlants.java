@@ -216,6 +216,8 @@ public class ModPlants {
             ModGrasses::new);
     public static final RegistryObject<Block> LUPINUS = registerBlock("lupinus",
             ModGrasses::new);
+    public static final RegistryObject<Block> CLUBMOSS = registerBlock("clubmoss",
+            ModGrasses::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

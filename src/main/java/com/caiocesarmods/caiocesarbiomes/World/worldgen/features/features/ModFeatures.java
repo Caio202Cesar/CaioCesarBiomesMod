@@ -238,9 +238,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.CLOUDBERRY, 7)
-                        .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 5)
-                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 5),
+                        .addWeightedBlockstate(States.CLOUDBERRY, 3)
+                        .addWeightedBlockstate(States.FRUITING_CLOUDBERRY, 3)
+                        .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 3)
+                        .addWeightedBlockstate(States.CLUBMOSS, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig MOUNTAIN_PLANT_CONFIG =
@@ -302,6 +303,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState FLOWERING_CLOUDBERRY = ModPlants.CLOUDBERRY_FLOWERING_PLANT.get().getDefaultState();
         protected static final BlockState EDELWEISS = ModPlants.EDELWEISS.get().getDefaultState();
         protected static final BlockState LUPINUS = ModPlants.LUPINUS.get().getDefaultState();
+        protected static final BlockState CLUBMOSS = ModPlants.CLUBMOSS.get().getDefaultState();
 
     }
 }
