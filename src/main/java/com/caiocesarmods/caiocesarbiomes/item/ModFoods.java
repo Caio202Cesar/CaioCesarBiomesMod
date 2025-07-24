@@ -103,7 +103,7 @@ public class ModFoods extends Foods {
     public static final Food WALNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food PECAN = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CHESTNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-
+    public static final Food BREADFRUIT = (new Food.Builder()).hunger(5).saturation(0.6F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
