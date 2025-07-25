@@ -29,6 +29,7 @@ public class ModTallPlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(ModPlants.BAY_LAUREL_FLOWERING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.SPIDER_LILY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.MANZANITA_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.ALOE_VERA.get(), RenderType.getCutout());
 
     }
 

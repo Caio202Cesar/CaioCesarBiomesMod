@@ -219,6 +219,14 @@ public class ModPlants {
     public static final RegistryObject<Block> CLUBMOSS = registerBlock("clubmoss",
             ModGrasses::new);
 
+    //Savannah Plants
+    public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",
+            ModTallPlant::new);
+
+    //Jungle
+    public static final RegistryObject<Block> CANNA_LILY_RED = registerBlock("canna_lily_red",
+            ModTallPlant::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
