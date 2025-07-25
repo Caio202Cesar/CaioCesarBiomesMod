@@ -46,8 +46,6 @@ public class ModBiomeGeneration {
 
         addBiome(CoastalSubtropicalDesertLomas.COAST_SUBTROPICAL_DESERT_LOMAS.get(), BiomeManager.BiomeType.DESERT, 17, OVERWORLD, DRY, LUSH);
 
-        addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 24, OVERWORLD, SANDY, HOT, DRY, SANDY);
-
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
 
         addBiome(SubtropicalExtremeHillsBiome.SUBTROPICAL_EXTREME_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);

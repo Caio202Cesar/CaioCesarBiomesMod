@@ -21,8 +21,7 @@ public class ModTreeGeneration {
         RegistryKey<Biome> key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
 
         // Check if the biome is the Vanilla Desert or a specific modded biome
-        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.DESERT.getLocation()))
-                || event.getName().toString().equals("caiocesarbiomes:tropical_desert")) {
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.DESERT.getLocation()))) {
 
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
