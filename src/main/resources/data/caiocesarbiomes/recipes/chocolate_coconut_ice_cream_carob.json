@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "EB ",
-    "DCD",
+    "ECE",
+    "DBD",
     " A "
   ],
   "key": {
@@ -13,16 +13,16 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "caiocesarbiomes:avocado"
+      "item": "caiocesarbiomes:coconut"
     },
     "D": {
       "item": "minecraft:snowball"
     },
     "E": {
-      "item": "minecraft:sugar"
+      "item": "caiocesarbiomes:carob_beans"
+    }
   },
   "result": {
-    "item": "caiocesarbiomes:avocado_ice_cream"
+    "item": "caiocesarbiomes:chocolate_hazelnut_ice_cream"
   }
-}
 }
