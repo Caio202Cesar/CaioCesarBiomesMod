@@ -30,7 +30,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         ModTallPlant.registerRenderLayer();
         ModGrasses.registerRenderLayer();
         MediterraneanBeachFlower.registerRenderLayer();
-        RibesShrub.registerRenderLayer();
+        CropPlants.registerRenderLayer();
         FicusRootsPlantBlock.registerRenderLayer();
         SocotraCucumberLeavesVineBlock.registerRenderLayer();
         CoconutBunchBlock.registerRenderLayer();
@@ -40,6 +40,9 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PeppercornVine.registerRenderLayer();
         BaldCypressAerialRoot.registerRenderLayer();
         DateBunchBlock.registerRenderLayer();
+        BananaFlowerBlock.registerRenderLayer();
+        BananaBunchBlock.registerRenderLayer();
+        BananaStalkBlock.registerRenderLayer();
 
         BlueberryBush.registerRenderLayer();
         BlueberryFloweringBush.registerRenderLayer();
@@ -53,6 +56,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
 
         AvocadoSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
+        BananaSapling.registerRenderLayer();
         CamelliaSapling.registerRenderLayer();
         CasuarinaSapling.registerRenderLayer();
         CherryPlumSapling.registerRenderLayer();

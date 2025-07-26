@@ -15,9 +15,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class RibesShrub extends BushBlock {
+public class CropPlants extends BushBlock {
 
-    public RibesShrub() {
+    public CropPlants() {
         super(Properties.from(Blocks.DANDELION).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
@@ -26,6 +26,7 @@ public class RibesShrub extends BushBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModPlants.RED_CURRANT_SHRUB.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.BLACK_CURRANT_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.CALABASH_VINE.get(), RenderType.getCutout());
 
     }
 

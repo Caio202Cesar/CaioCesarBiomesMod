@@ -108,6 +108,23 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BALD_CYPRESS_SAPLING = BLOCKS.register("potted_bald_cypress_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BALD_CYPRESS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    //Banana
+    public static final RegistryObject<Block> BANANA_LOG = registerBlock("banana_log",
+            BananaLog::new);
+    public static final RegistryObject<Block> BANANA_LEAVES = registerBlock("banana_leaves",
+            () -> new BananaLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> BANANA_SAPLING = registerBlock("banana_sapling",
+            BananaSapling::new);
+    public static final RegistryObject<Block> BANANA_FLOWER = registerBlock("banana_flower",
+            BananaFlowerBlock::new); //Can be harvested and cooked
+    public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
+            BananaBunchBlock::new);
+    public static final RegistryObject<Block> BANANA_STALK = registerBlock("banana_stalk",
+            BananaStalkBlock::new);
     // Beech
     public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
             ModLogs::new);

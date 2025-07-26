@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/calabash_stage7",
+    "particle": "caiocesarbiomes:block/calabash_stage7"
+  }
+}

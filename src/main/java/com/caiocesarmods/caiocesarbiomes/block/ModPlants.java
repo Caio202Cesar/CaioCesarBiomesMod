@@ -140,9 +140,9 @@ public class ModPlants {
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> RED_CURRANT_SHRUB = registerBlock("red_currant_shrub",
-            RibesShrub::new);
+            CropPlants::new);
     public static final RegistryObject<Block> BLACK_CURRANT_SHRUB = registerBlock("black_currant_shrub",
-            RibesShrub::new);
+            CropPlants::new);
 
     public static final RegistryObject<Block> AZALEA_PURPLE = registerBlock("azalea_purple",
             AzaleaPlant::new);
@@ -222,6 +222,8 @@ public class ModPlants {
     //Savannah Plants
     public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",
             ModTallPlant::new);
+    public static final RegistryObject<Block> CALABASH_VINE = registerBlock("calabash_vine",
+            CropPlants::new);
 
     //Jungle
     public static final RegistryObject<Block> CANNA_LILY_RED = registerBlock("canna_lily_red",

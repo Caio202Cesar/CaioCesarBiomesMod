@@ -123,6 +123,7 @@ public class ModItems {
     public static final RegistryObject<Item> CLOUDBERRY = ITEMS.register("cloudberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CLOUDBERRY)));
 
+
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SALTY_MANGO)));
