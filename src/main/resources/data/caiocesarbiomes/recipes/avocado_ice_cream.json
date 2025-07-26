@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " B ",
+    "EB ",
     "DCD",
     " A "
   ],
@@ -17,9 +17,11 @@
     },
     "D": {
       "item": "minecraft:snowball"
-    }
+    },
+    "E": {
+      "item": "minecraft:sugar"
   },
   "result": {
     "item": "caiocesarbiomes:avocado_ice_cream"
   }
-}
+}}
