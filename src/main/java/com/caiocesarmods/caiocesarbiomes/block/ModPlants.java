@@ -219,6 +219,10 @@ public class ModPlants {
     public static final RegistryObject<Block> CLUBMOSS = registerBlock("clubmoss",
             ModGrasses::new);
 
+    public static final RegistryObject<Block> RASPBERRY_BUSH = registerBlock("raspberry_bush",
+            () -> new RaspberryBushBlock(AbstractBlock.Properties.create(Material.PLANTS).
+                    tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));
+
     //Savannah Plants
     public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",
             ModTallPlant::new);
