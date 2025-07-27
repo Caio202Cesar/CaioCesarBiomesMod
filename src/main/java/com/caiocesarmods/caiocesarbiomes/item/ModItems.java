@@ -2,12 +2,19 @@ package com.caiocesarmods.caiocesarbiomes.item;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.custom.crops.CalabashCropBlock;
 import com.caiocesarmods.caiocesarbiomes.item.custom.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import static com.caiocesarmods.caiocesarbiomes.block.MiscBlocks.BLOCKS;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -122,7 +129,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.INKBERRIES)));
     public static final RegistryObject<Item> CLOUDBERRY = ITEMS.register("cloudberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CLOUDBERRY)));
-
+    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BANANA)));
+    public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
@@ -244,6 +254,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> CLOUDBERRY_HAZELNUT_ICE_CREAM = ITEMS.register("cloudberry_hazelnut_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COOKED_BANANA_FLOWER)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
@@ -252,6 +264,10 @@ public class ModItems {
             () -> new BlockItem(ModPlants.RED_CURRANT_CROP.get(), new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> BLACK_CURRANT_SEEDS = ITEMS.register("black_currant_seeds",
             () -> new BlockItem(ModPlants.BLACK_CURRANT_CROP.get(), new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
+            () -> new BlockItem(ModItems.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
+            () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 

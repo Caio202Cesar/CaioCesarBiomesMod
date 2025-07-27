@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
-import com.brbiomesmod.block.TreesGroup;
-import com.brbiomesmod.features.TreeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

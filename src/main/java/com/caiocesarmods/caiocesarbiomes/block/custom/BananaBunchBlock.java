@@ -1,7 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom;
 
-
-import com.brbiomesmod.block.TreesGroup;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
