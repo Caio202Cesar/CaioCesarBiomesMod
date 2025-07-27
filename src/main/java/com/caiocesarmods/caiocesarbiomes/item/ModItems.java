@@ -278,6 +278,8 @@ public class ModItems {
             () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final RegistryObject<Item> SULPHUR = ITEMS.register("sulphur",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
