@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "caiocesarbiomes:banana_flower"
+  },
+  "result": "caiocesarbiomes:cooked_banana_flower",
+  "experience": 0.35,
+  "cookingtime": 200
+}
