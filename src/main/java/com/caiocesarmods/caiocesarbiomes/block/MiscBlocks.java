@@ -5,8 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.ButterMixerBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.ToasterBlock;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -30,8 +29,8 @@ public class MiscBlocks {
 
     //Culinary
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.SAND, MaterialColor.SNOW).
-                    setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
+                    setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.NETHERRACK)));
 
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
             () -> new ToasterBlock(AbstractBlock.Properties.create(Material.ANVIL).notSolid()));
@@ -41,8 +40,9 @@ public class MiscBlocks {
                     setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
 
     public static final RegistryObject<Block> SULPHUR_ORE = registerBlock("sulphur_ore",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
