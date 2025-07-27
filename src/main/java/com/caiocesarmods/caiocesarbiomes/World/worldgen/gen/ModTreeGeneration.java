@@ -205,7 +205,7 @@ public class ModTreeGeneration {
             base.add(() -> TreeFeatures.TAIGA_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(7, 0.1f, 3))));
+                            new AtSurfaceWithExtraConfig(3, 0.1f, 3))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.GIANT_TREE_TAIGA.getLocation()))

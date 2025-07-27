@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.BlackCurrantCropBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.crops.CalabashCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.FennelCropBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.RedCurrantCropBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -53,6 +54,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();
         FennelCropBlock.registerRenderLayer();
+        CalabashCropBlock.registerRenderLayer();
 
         AvocadoSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
