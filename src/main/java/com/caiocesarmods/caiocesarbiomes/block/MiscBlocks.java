@@ -12,6 +12,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +40,9 @@ public class MiscBlocks {
             () -> new ButterMixerBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).
                     setRequiresTool().hardnessAndResistance(1.0F, 3.0F)));
 
+    public static final RegistryObject<Block> SULPHUR_ORE = registerBlock("sulphur_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "caiocesarbiomes:blueberries"
+      "item": "caiocesarbiomes:arbutus"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,6 +23,6 @@
     }
   },
   "result": {
-    "item": "caiocesarbiomes:blueberry_ice_cream"
+    "item": "caiocesarbiomes:arbutus_ice_cream"
   }
 }
