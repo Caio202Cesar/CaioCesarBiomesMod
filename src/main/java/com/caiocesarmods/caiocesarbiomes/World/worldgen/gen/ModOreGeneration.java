@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         spawnOreInSpecificModBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), OreType.SULPHUR, event, Dimension.OVERWORLD.toString());
-        spawnOreInAllBiomes(OreType.SULPHUR, event, Dimension.THE_NETHER.toString());
+        spawnOreInAllBiomes(OreType.NETHER_SULPHUR, event, Dimension.THE_NETHER.toString());
 
     }
 

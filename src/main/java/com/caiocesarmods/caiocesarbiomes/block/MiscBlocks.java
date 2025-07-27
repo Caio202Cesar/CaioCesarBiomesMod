@@ -43,6 +43,10 @@ public class MiscBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
 
+    public static final RegistryObject<Block> SULPHUR_NETHER_ORE = registerBlock("sulphur_nether_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

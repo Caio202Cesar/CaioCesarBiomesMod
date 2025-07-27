@@ -4,7 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
-    SULPHUR(Lazy.of(com.caiocesarmods.caiocesarbiomes.block.MiscBlocks.SULPHUR_ORE), 6, 30, 90, 3);
+    SULPHUR(Lazy.of(com.caiocesarmods.caiocesarbiomes.block.MiscBlocks.SULPHUR_ORE), 3, 0, 70, 3),
+    NETHER_SULPHUR(Lazy.of(com.caiocesarmods.caiocesarbiomes.block.MiscBlocks.SULPHUR_NETHER_ORE), 6, 0, 70, 5);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;
