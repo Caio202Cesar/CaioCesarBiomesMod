@@ -1025,6 +1025,12 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_ANCIENT_TREE = register("ancient_sycamore_fig_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
+                    new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Plane tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE = register("plane_tree",
@@ -2076,7 +2082,7 @@ public class TreeFeatures {
                             SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
                             TAMARIND_TREE.withChance(0.2F),
                             MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.4F), BISMARCK_PALM.withChance(0.3F),
-                            JACKALBERRY_TREE.withChance(0.3F),
+                            JACKALBERRY_TREE.withChance(0.3F), SYCAMORE_FIG_ANCIENT_TREE.withChance(0.13F),
                             JACKALBERRY_FANCY_TREE.withChance(0.15F)),
                             SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
@@ -2328,7 +2334,8 @@ public class TreeFeatures {
     private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
-                            MESQUITE_TREE.withChance(0.1F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F)),
+                            MESQUITE_TREE.withChance(0.1F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F),
+                            SYCAMORE_FIG_ANCIENT_TREE.withChance(0.09F)),
                             ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
