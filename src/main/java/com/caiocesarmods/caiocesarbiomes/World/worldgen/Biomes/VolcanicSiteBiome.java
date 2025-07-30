@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> VOLCANIC_SITE = BIOMES.register("volcanic_site",
-        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.BASALT_DELTAS, 2F, 0.2F));
+        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.BASALT_DELTAS, 3.0F, 0.2F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -47,8 +47,13 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withLavaLakes(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SPRING_LAVA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, Features.DELTA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, Features.LARGE_BASALT_COLUMNS);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, Features.SMALL_BASALT_COLUMNS);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, Features.SPRING_DELTA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Features.ORE_MAGMA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Features.SPRING_CLOSED_DOUBLE);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SPRING_LAVA_DOUBLE);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
