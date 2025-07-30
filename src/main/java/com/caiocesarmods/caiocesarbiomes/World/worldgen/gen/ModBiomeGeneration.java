@@ -100,6 +100,8 @@ public class ModBiomeGeneration {
 
         addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, DRY, WASTELAND, SPOOKY, MOUNTAIN);
 
+        addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, DRY, WASTELAND, SPOOKY, MOUNTAIN);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
