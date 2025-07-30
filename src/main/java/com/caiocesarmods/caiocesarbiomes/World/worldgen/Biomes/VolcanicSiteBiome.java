@@ -5,6 +5,8 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfigure
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
@@ -31,6 +33,8 @@ public static final RegistryObject<Biome> VOLCANIC_SITE = BIOMES.register("volca
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
+    mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.MAGMA_CUBE, 10, 5, 7));
+    mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.BLAZE, 10, 5, 7));
 
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
