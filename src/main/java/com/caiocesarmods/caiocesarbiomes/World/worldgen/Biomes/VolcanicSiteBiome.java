@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> VOLCANIC_SITE = BIOMES.register("volcanic_site",
-        () -> makeMontainBiome(() -> ModConfiguredSurfaceBuilders.VOLCANIC_SURFACE, 2F, 0.2F));
+        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.BASALT_DELTAS, 2F, 0.2F));
 
 
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -51,7 +51,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SPRING_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
             .temperature(2.0F).downfall(0.1F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(13882323).withFoliageColor(6905399)
                     .withGrassColor(3617053).setFogColor(10526880)
