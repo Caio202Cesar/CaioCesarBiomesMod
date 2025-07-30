@@ -119,6 +119,7 @@ public class CaioCesarBiomesMod
         SaltDesertBiome.register(eventBus);
         VolcanicSiteBiome.register(eventBus);
         InactiveVolcanicSiteBiome.register(eventBus);
+        SubtropicalPineDryForestBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
