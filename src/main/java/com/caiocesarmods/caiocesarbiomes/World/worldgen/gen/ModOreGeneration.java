@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.InactiveVolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.VolcanicSiteBiome;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
@@ -23,6 +24,7 @@ import java.util.Arrays;
 public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         spawnOreInSpecificModBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), OreType.SULPHUR, event, Dimension.OVERWORLD.toString());
+        spawnOreInSpecificModBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), OreType.SULPHUR, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(OreType.NETHER_SULPHUR, event, Dimension.THE_NETHER.toString());
 
     }
