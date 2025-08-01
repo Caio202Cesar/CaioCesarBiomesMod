@@ -238,6 +238,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHESTNUT)));
     public static final RegistryObject<Item> COOKED_BREADFRUIT = ITEMS.register("cooked_breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BREADFRUIT)));
+    public static final RegistryObject<Item> LAVENDER_BUNCH = ITEMS.register("lavender_bunch",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> ICE_CREAM_CONE = ITEMS.register("ice_cream_cone",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
@@ -275,6 +277,24 @@ public class ModItems {
     public static final RegistryObject<Item> KIWI_ICE_CREAM = ITEMS.register("kiwi_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> LAVENDER_ICE_CREAM = ITEMS.register("lavender_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LEMON_ICE_CREAM = ITEMS.register("lemon_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LIME_ICE_CREAM = ITEMS.register("lime_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LOQUAT_ICE_CREAM = ITEMS.register("loquat_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MANDARIN_ICE_CREAM = ITEMS.register("mandarin_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MANGO_ICE_CREAM = ITEMS.register("mango_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MARULA_ICE_CREAM = ITEMS.register("marula_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MATCHA_ICE_CREAM = ITEMS.register("matcha_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MILK_ICE_CREAM = ITEMS.register("milk_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> MULBERRY_ICE_CREAM = ITEMS.register("mulberry_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //MISC

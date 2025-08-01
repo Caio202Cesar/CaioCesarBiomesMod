@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
+    " C ",
     "DBE",
     "AAA"
   ],
@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "caiocesarbiomes:kiwi_fruits"
+      "item": "caiocesarbiomes:matcha_powder"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "caiocesarbiomes:kiwi_ice_cream",
+    "item": "caiocesarbiomes:matcha_ice_cream",
     "count": 3
   }
 }
