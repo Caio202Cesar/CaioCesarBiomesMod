@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:calabash"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:calabash_seeds",
+    "count": 4
+  }
+}
