@@ -31,6 +31,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(Configs.MOUNTAIN_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
 
+    public static final ConfiguredFeature<?, ?> PATCH_SAVANNA = register("patch_savanna",
+            Feature.FLOWER.withConfiguration(Configs.SAVANNA_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
     public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
             Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
@@ -251,6 +255,13 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.EDELWEISS, 2)
                         .addWeightedBlockstate(States.LUPINUS, 7),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig SAVANNA_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.CALABASH_VINE, 2)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 7)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
