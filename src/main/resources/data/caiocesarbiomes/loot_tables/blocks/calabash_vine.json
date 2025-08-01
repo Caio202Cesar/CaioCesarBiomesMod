@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:calabash_vine",
+          "name": "caiocesarbiomes:calabash",
           "functions": [
             {
               "function": "minecraft:set_count",
