@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
+    "CCE",
     "DBE",
     "AAA"
   ],
@@ -13,17 +13,17 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "caiocesarbiomes:tahiti_lime"
+      "item": "caiocesarbiomes:mango"
     },
     "D": {
       "item": "minecraft:snowball"
     },
     "E": {
-      "item": "minecraft:sugar"
+      "item": "caiocesarbiomes:cooked_bacon"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:lime_ice_cream",
+    "item": "caiocesarbiomes:mango_ice_cream",
     "count": 3
   }
 }
