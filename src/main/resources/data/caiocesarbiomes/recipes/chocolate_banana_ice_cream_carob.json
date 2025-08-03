@@ -3,7 +3,7 @@
   "pattern": [
     "ECE",
     "DBD",
-    " A "
+    "AAA"
   ],
   "key": {
     "A": {
@@ -23,6 +23,7 @@
     }
   },
   "result": {
-    "item": "caiocesarbiomes:chocolate_banana_ice_cream"
+    "item": "caiocesarbiomes:chocolate_banana_ice_cream",
+    "count": 3
   }
 }

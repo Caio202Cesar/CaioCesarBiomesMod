@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CC ",
+    "CCC",
     "DB ",
-    " A "
+    "AAA"
   ],
   "key": {
     "A": {
@@ -20,6 +20,7 @@
     }
   },
   "result": {
-    "item": "caiocesarbiomes:fig_ice_cream"
+    "item": "caiocesarbiomes:fig_ice_cream",
+    "count": 3
   }
 }

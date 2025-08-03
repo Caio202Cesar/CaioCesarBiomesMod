@@ -110,6 +110,37 @@ public class ModFoods extends Foods {
     public static final Food COOKED_BACON = (new Food.Builder()).hunger(8).saturation(0.8F).meat()
             .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
+    public static final Food ICE_CREAM_CONE = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food ARBUTUS_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food AVOCADO_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food BACON_ICE_CREAM = (new Food.Builder()).hunger(6).saturation(0.7F).build();
+    public static final Food BANANA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food BLACK_CURRANT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food BLUEBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHOCOLATE_COCONUT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHOCOLATE_BANANA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHOCOLATE_HAZELNUT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHOCOLATE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CLOUDBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food COCONUT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food ELDERBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food FIG_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GRAPEFRUIT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food HONEY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food KIWI_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food LAVENDER_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food LEMON_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food LIME_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food LOQUAT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MANDARIN_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MANGO_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MARULA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MATCHA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MILK_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MULBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food ORANGE_CHOCOLATE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food ORANGE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food PERSIMMON_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
