@@ -231,6 +231,12 @@ public class ModPlants {
             ModTallPlant::new);
     public static final RegistryObject<Block> CALABASH_VINE = registerBlock("calabash_vine",
             CropPlants::new);
+    public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
+            ModGrasses::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SNAKE_PLANT = BLOCKS.register("potted_snake_plant",
+            () -> new FlowerPotBlock(ModPlants.SNAKE_PLANT.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Jungle
     public static final RegistryObject<Block> CANNA_LILY_RED = registerBlock("canna_lily_red",

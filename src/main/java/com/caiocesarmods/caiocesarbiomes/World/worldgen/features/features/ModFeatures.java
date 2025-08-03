@@ -261,7 +261,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CALABASH_VINE, 2)
                         .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 7)
-                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7),
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7)
+                        .addWeightedBlockstate(States.SNAKE_PLANT, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -319,6 +320,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState LUPINUS = ModPlants.LUPINUS.get().getDefaultState();
         protected static final BlockState CLUBMOSS = ModPlants.CLUBMOSS.get().getDefaultState();
         protected static final BlockState CALABASH_VINE = ModPlants.CALABASH_VINE.get().getDefaultState();
+        protected static final BlockState SNAKE_PLANT = ModPlants.SNAKE_PLANT.get().getDefaultState();
         /*protected static final BlockState BUNCHBERRY = ModPlants.BUNCHBERRY.get().getDefaultState();
         protected static final BlockState BUNCHBERRY_FLOWERING = ModPlants.BUNCHBERRY_FLOWERING.get().getDefaultState();
         protected static final BlockState BUNCHBERRY_FRUITING = ModPlants.BUNCHBERRY_FRUITING.get().getDefaultState();*/
