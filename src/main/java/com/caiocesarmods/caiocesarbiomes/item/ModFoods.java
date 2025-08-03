@@ -106,6 +106,10 @@ public class ModFoods extends Foods {
     public static final Food BREADFRUIT = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food BANANA = (new Food.Builder()).hunger(5).saturation(0.4F).build();
     public static final Food COOKED_BANANA_FLOWER = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food RAW_BACON = (new Food.Builder()).hunger(6).saturation(0.6F).meat().build();
+    public static final Food COOKED_BACON = (new Food.Builder()).hunger(8).saturation(0.8F).meat()
+            .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

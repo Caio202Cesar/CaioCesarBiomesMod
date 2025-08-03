@@ -238,8 +238,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHESTNUT)));
     public static final RegistryObject<Item> COOKED_BREADFRUIT = ITEMS.register("cooked_breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BREADFRUIT)));
-    public static final RegistryObject<Item> LAVENDER_BUNCH = ITEMS.register("lavender_bunch",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.RAW_BACON)));
+    public static final RegistryObject<Item> COOKED_BACON = ITEMS.register("cooked_bacon",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COOKED_BACON)));
     public static final RegistryObject<Item> ICE_CREAM_CONE = ITEMS.register("ice_cream_cone",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
@@ -312,6 +314,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> SULPHUR = ITEMS.register("sulphur",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LAVENDER_BUNCH = ITEMS.register("lavender_bunch",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
