@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:lavender"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:lavender_bunch"
+  }
+}
