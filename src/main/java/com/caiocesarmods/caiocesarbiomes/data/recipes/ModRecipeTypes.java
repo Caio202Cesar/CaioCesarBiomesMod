@@ -1,8 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.data.recipes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -35,3 +37,4 @@ public class ModRecipeTypes {
         Registry.register(Registry.RECIPE_TYPE, ButterRecipe.TYPE_ID, BUTTER_RECIPE);
     }
 }
+

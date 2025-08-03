@@ -262,7 +262,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.CALABASH_VINE, 2)
                         .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 7)
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7)
-                        .addWeightedBlockstate(States.SNAKE_PLANT, 7),
+                        .addWeightedBlockstate(States.SNAKE_PLANT, 3),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
