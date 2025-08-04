@@ -2270,7 +2270,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F), SWEET_CHESTNUT_TREE.withChance(0.3F),
-                            STARFRUIT_TREE.withChance(0.2F),
+                            STARFRUIT_TREE.withChance(0.2F), STRAWBERRY_TREE1.withChance(0.1F), STRAWBERRY_TREE2.withChance(0.2F),
                             MULBERRY_TREE.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.2F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), STARFRUIT_TREE_WITH_KIWI.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.2F), PERSIMMON_TREE.withChance(0.25F), PERSIMMON_FANCY_TREE.withChance(0.3F),
