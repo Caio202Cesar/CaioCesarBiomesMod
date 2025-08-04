@@ -141,6 +141,13 @@ public class ModFoods extends Foods {
     public static final Food ORANGE_CHOCOLATE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food ORANGE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food PERSIMMON_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food PISTACHIO_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food POMEGRANATE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food RED_CURRANT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food WATERMELON_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHORUS_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food SWEET_BERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food COOKIE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
