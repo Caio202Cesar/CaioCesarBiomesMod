@@ -292,6 +292,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MANDARIN_ICE_CREAM)));
     public static final RegistryObject<Item> MANGO_ICE_CREAM = ITEMS.register("mango_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MANGO_ICE_CREAM)));
+    public static final RegistryObject<Item> MANGO_BACON_ICE_CREAM = ITEMS.register("mango_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MANGO_BACON_ICE_CREAM)));
     public static final RegistryObject<Item> MARULA_ICE_CREAM = ITEMS.register("marula_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MARULA_ICE_CREAM)));
     public static final RegistryObject<Item> MATCHA_ICE_CREAM = ITEMS.register("matcha_ice_cream",

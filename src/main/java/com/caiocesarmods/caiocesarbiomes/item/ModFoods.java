@@ -136,6 +136,7 @@ public class ModFoods extends Foods {
     public static final Food LOQUAT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MANDARIN_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MANGO_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MANGO_BACON_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MARULA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MATCHA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MILK_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();

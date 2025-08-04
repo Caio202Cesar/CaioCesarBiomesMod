@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "caiocesarbiomes:sulphur"
+    "item": "caiocesarbiomes:sulphur"
   },
   "result": "minecraft:blaze_powder",
   "experience": 0.1,

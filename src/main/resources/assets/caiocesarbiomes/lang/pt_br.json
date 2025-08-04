@@ -642,8 +642,31 @@
   "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: frutas e vegetais",
   "itemGroup.CaioCesarBiomes:Plants": "Caio Cesar Biomes: plantas",
   "itemGroup.CaioCesarBiomes:Trees": "Caio Cesar Biomes: àrvores",
-  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: madeira"
+  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: madeira",
 
+  "item.caiocesarbiomes.nutcracker": "Quebra-nozes",
+  "item.caiocesarbiomes.walnut_kernel": "Miolo da noz",
+  "item.caiocesarbiomes.pecan_kernel": "Miolo da noz-pecã",
+  "item.caiocesarbiomes.cooked_chestnut": "Castanha-portuguesa cozida",
+  "item.caiocesarbiomes.cooked_breadfruit": "Fruta-pão cozida",
+  "item.caiocesarbiomes.ice_cream_cone": "Casquinha de sorvete",
+  "item.caiocesarbiomes.arbutus_ice_cream": "Sorvete de medronho",
+  "item.caiocesarbiomes.avocado_ice_cream": "Sorvete de abacate",
+  "item.caiocesarbiomes.banana_ice_cream": "Sorvete de banana",
+  "item.caiocesarbiomes.black_currant_ice_cream": "Sorvete de cassis",
+  "item.caiocesarbiomes.blueberry_ice_cream": "Sorvete de mirtilo",
+  "item.caiocesarbiomes.chocolate_coconut_ice_cream": "Sorvete de chocolate com coco",
+  "item.caiocesarbiomes.chocolate_banana_ice_cream": "Sorvete de chocolate e banana",
+  "item.caiocesarbiomes.chocolate_hazelnut_ice_cream": "Sorvete de chocolate com banana",
+  "item.caiocesarbiomes.chocolate_ice_cream": "Sorvete de chocolate",
+  "item.caiocesarbiomes.cloudberry_ice_cream": "Sorvete de framboesa-ártica",
+  "item.caiocesarbiomes.coconut_ice_cream": "Sorvete de coco",
+  "item.caiocesarbiomes.elderberry_ice_cream": "Sorvete de sabugueiro",
+  "item.caiocesarbiomes.fig_ice_cream": "Sorvete de figo",
+  "item.caiocesarbiomes.grapefruit_ice_cream": "Sorvete de toranja",
+  "item.caiocesarbiomes.honey_ice_cream": "Sorvete de mel",
+  "item.caiocesarbiomes.kiwi_ice_cream": "Sorvete de kiwi",
+  "item.caiocesarbiomes.lavender_ice_cream": "Sorvete de lavanda"
 }
 
 
