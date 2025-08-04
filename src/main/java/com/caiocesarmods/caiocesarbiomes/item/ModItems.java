@@ -320,6 +320,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SWEET_BERRY_ICE_CREAM)));
     public static final RegistryObject<Item> COOKIE_ICE_CREAM = ITEMS.register("cookie_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COOKIE_ICE_CREAM)));
+    public static final RegistryObject<Item> BANANA_BREAD = ITEMS.register("banana_bread",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BANANA_BREAD)));
+    public static final RegistryObject<Item> ARBUTUS_CAKE = ITEMS.register("arbutus_cake",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ARBUTUS_CAKE)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",

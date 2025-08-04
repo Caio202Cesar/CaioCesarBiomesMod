@@ -2,25 +2,25 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "AAA",
-    "BEB",
+    " E ",
     "CCC"
   ],
   "key": {
     "A": {
-      "item": "caiocesarbiomes:pecan_kernel"
+      "item": "caiocesarbiomes:banana"
     },
     "B": {
-      "item": "minecraft:egg"
+      "item": "minecraft:sugar"
     },
     "C": {
       "item": "minecraft:wheat"
     },
     "E": {
-      "item": "minecraft:sugar"
+      "item": "minecraft:egg"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:pecan_bread",
+    "item": "caiocesarbiomes:banana_bread",
     "count": 1
   }
 }

@@ -10,13 +10,13 @@
       "item": "caiocesarbiomes:walnut_kernel"
     },
     "B": {
-      "item": "minecraft:sugar"
+      "item": "minecraft:egg"
     },
     "C": {
       "item": "minecraft:wheat"
     },
     "E": {
-      "item": "minecraft:egg"
+      "item": "minecraft:sugar"
     }
   },
   "result": {
