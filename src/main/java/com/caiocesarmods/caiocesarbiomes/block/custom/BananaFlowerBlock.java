@@ -41,7 +41,7 @@ public class BananaFlowerBlock extends Block {
         double chance = 0.00015f;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, TreeBlocks.BANANA_BUNCH.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.BANANA_GREEN_BUNCH.get().getDefaultState());
 
         }
     }

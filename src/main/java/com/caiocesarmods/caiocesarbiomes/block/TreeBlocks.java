@@ -123,6 +123,8 @@ public class TreeBlocks {
             BananaFlowerBlock::new); //Can be harvested and cooked
     public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
             BananaBunchBlock::new);
+    public static final RegistryObject<Block> BANANA_GREEN_BUNCH = registerBlock("banana_green_bunch",
+            BananaGreenBunchBlock::new);
     public static final RegistryObject<Block> BANANA_STALK = registerBlock("banana_stalk",
             BananaStalkBlock::new);
     // Beech
