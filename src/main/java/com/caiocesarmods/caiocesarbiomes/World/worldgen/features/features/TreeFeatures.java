@@ -135,20 +135,32 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE = register("jungle_ocotea_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE_CREEPING_FIG = register("fig_jungle_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE = register("jungle_ocotea_fancy_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE_CREEPING_FIG = register("fig_jungle_ocotea_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE = register("jungle_ocotea_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE = register("jungle_ocotea_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE = register("highland_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
@@ -2303,7 +2315,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.3F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE_CREEPING_FIG.withChance(0.3F),
+                            OCOTEA_JUNGLE_TREE_CREEPING_FIG.withChance(0.3F), OCOTEA_JUNGLE_TREE.withChance(0.5F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
