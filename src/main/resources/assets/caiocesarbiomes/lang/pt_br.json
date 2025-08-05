@@ -695,7 +695,17 @@
   "item.caiocesarbiomes.banana_bread": "Bolo de banana",
   "item.caiocesarbiomes.arbutus_cake": "Bolo de medronho",
   "item.caiocesarbiomes.lavender_bunch": "Maço de lavanda",
-  "item.caiocesarbiomes.sulphur": "Enxofre"
+  "item.caiocesarbiomes.sulphur": "Enxofre",
+  "item.caiocesarbiomes.orange_chocolate_ice_cream": "Sorvete de chocolate com laranja",
+  "item.caiocesarbiomes.orange_ice_cream": "Sorvete de laranja",
+  "item.caiocesarbiomes.persimmon_ice_cream": "Sorvete de caqui",
+  "item.caiocesarbiomes.pistachio_ice_cream": "Sorvete de pistache",
+  "item.caiocesarbiomes.pomegranate_ice_cream": "Sorvete de romã",
+  "item.caiocesarbiomes.red_currant_ice_cream": "Sorvete de groselha-vermelha",
+  "item.caiocesarbiomes.watermelon_ice_cream": "Sorvete de melancia",
+  "item.caiocesarbiomes.chorus_ice_cream": "Sorvete de fruta-do-coro",
+  "item.caiocesarbiomes.sweet_berry_ice_cream": "Sorvete de bagas doces",
+  "item.caiocesarbiomes.cookie_ice_cream": "Sorvete de biscoito"
 }
 
 
