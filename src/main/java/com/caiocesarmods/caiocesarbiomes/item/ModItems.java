@@ -352,7 +352,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> LAVENDER_BUNCH = ITEMS.register("lavender_bunch",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
-    public static final RegistryObject<Item> EUCALYPTUS_LEAVES = ITEMS.register("eucalyptus_leaves",
+    public static final RegistryObject<Item> EUCALYPTUS_LEAF = ITEMS.register("eucalyptus_leaf",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
