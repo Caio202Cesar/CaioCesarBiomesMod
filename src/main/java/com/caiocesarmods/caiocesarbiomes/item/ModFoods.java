@@ -151,6 +151,9 @@ public class ModFoods extends Foods {
     public static final Food CHORUS_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food SWEET_BERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food COOKIE_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GUACAMOLE = (new Food.Builder()).hunger(6).saturation(0.6F).build();
+    public static final Food GUACAMOLE_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food GUACAMOLE_BREADFRUIT = (new Food.Builder()).hunger(5).saturation(0.8F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
