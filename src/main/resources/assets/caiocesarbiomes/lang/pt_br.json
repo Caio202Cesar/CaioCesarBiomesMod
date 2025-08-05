@@ -472,6 +472,17 @@
   "block.caiocesarbiomes.walnut_planks": "Tábuas de nogueira",
   "block.caiocesarbiomes.pecan_planks": "Tábuas de nogueira-pecã",
   "block.caiocesarbiomes.bald_cypress_planks": "Tábuas de cipreste-caduca",
+  "block.caiocesarbiomes.sulphur_ore": "Minério de enxofre",
+  "block.caiocesarbiomes.sulphur_nether_ore": "Minério de enxofre do Nether",
+  "block.caiocesarbiomes.cloudberry_plant": "Amoreira-ártica",
+  "block.caiocesarbiomes.cloudberry_flowering_plant": "Amoreira-ártica em flor",
+  "block.caiocesarbiomes.cloudberry_fruiting_plant": "Amoreira-ártica com frutos",
+  "block.caiocesarbiomes.edelweiss": "Edelweiss",
+  "block.caiocesarbiomes.lupinus": "Tremoço",
+  "block.caiocesarbiomes.clubmoss": "Licopódio",
+  "block.caiocesarbiomes.calabash_vine": "Cabaceira",
+  "block.caiocesarbiomes.snake_plant": "Espada-de-são-jorge",
+  "block.caiocesarbiomes.banana_green_bunch": "Cacho de banana verde",
 
   "block.caiocesarbiomes.calabash_crop": "Sementes de cabaça",
   "block.caiocesarbiomes.red_currant_crop": "Sementes de groselha",
@@ -680,10 +691,11 @@
   "item.caiocesarbiomes.mango_bacon_ice_cream": "Sorvete de bacon e manga",
   "item.caiocesarbiomes.raw_bacon": "Bacon cru",
   "item.caiocesarbiomes.cooked_bacon": "Bacon assado",
-  "item.caiocesarbiomes.cloudberry": "Cloudberry",
-  "item.caiocesarbiomes.banana_bread": "Banana Bread",
-  "item.caiocesarbiomes.arbutus_cake": "Arbutus Fruit Cake",
-  "item.caiocesarbiomes.lavender_bunch": "Maço de lavanda"
+  "item.caiocesarbiomes.cloudberry": "Amora ártica",
+  "item.caiocesarbiomes.banana_bread": "Bolo de banana",
+  "item.caiocesarbiomes.arbutus_cake": "Bolo de medronho",
+  "item.caiocesarbiomes.lavender_bunch": "Maço de lavanda",
+  "item.caiocesarbiomes.sulphur": "Enxofre"
 }
 
 

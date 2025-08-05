@@ -472,6 +472,17 @@
   "block.caiocesarbiomes.walnut_planks": "Walnut Planks",
   "block.caiocesarbiomes.pecan_planks": "Pecan Planks",
   "block.caiocesarbiomes.bald_cypress_planks": "Bald Cypress Planks",
+  "block.caiocesarbiomes.sulphur_ore": "Sulphur Ore",
+  "block.caiocesarbiomes.sulphur_nether_ore": "Sulphur Nether Ore",
+  "block.caiocesarbiomes.cloudberry_plant": "Cloudberry Plant",
+  "block.caiocesarbiomes.cloudberry_flowering_plant": "Cloudberry Flowering Plant",
+  "block.caiocesarbiomes.cloudberry_fruiting_plant": "Cloudberry Fruiting Plant",
+  "block.caiocesarbiomes.edelweiss": "Edelweiss",
+  "block.caiocesarbiomes.lupinus": "Lupinus",
+  "block.caiocesarbiomes.clubmoss": "Clubmoss",
+  "block.caiocesarbiomes.calabash_vine": "Calabash Vine",
+  "block.caiocesarbiomes.snake_plant": "Snake Plant",
+  "block.caiocesarbiomes.banana_green_bunch": "Banana Green Bunch",
 
   "block.caiocesarbiomes.calabash_crop": "Calabash Seeds",
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
@@ -620,7 +631,7 @@
   "item.caiocesarbiomes.banana_bread": "Banana Bread",
   "item.caiocesarbiomes.arbutus_cake": "Arbutus Fruit Cake",
   "item.caiocesarbiomes.lavender_bunch": "Lavender Bunch",
-
+  "item.caiocesarbiomes.sulphur": "Sulphur",
 
   "item.caiocesarbiomes.wood_poisoned_sword": "Wooden Poisoned Sword",
   "item.caiocesarbiomes.stone_poisoned_sword": "Stone Poisoned Sword",
