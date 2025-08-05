@@ -332,6 +332,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GUACAMOLE_TOAST)));
     public static final RegistryObject<Item> GUACAMOLE_BREADFRUIT = ITEMS.register("guacamole_breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GUACAMOLE_BREADFRUIT)));
+    public static final RegistryObject<Item> EUCALYPTUS_CANDY = ITEMS.register("eucalyptus_candy",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.EUCALYPTUS_CANDY)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
@@ -347,8 +349,10 @@ public class ModItems {
     public static final RegistryObject<Item> POISON_SAP = ITEMS.register("poison_sap",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> SULPHUR = ITEMS.register("sulphur",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> LAVENDER_BUNCH = ITEMS.register("lavender_bunch",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final RegistryObject<Item> EUCALYPTUS_LEAVES = ITEMS.register("eucalyptus_leaves",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
