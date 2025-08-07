@@ -85,6 +85,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SAVANNA_TALL_PLANTS_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ALOE_VERA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.PENCIL_TREE), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MEDITERRANEAN_SHRUB_VEGETATION_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
@@ -143,6 +149,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SWAMP_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
+    public static final ConfiguredFeature<?, ?> SAVANNA_TALL_PLANTS_VEGETATION = register("savanna_tall_plants_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAVANNA_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
