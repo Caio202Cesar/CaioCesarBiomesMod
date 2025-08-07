@@ -258,6 +258,10 @@ public class ModPlants {
     //Jungle
     public static final RegistryObject<Block> CANNA_LILY_RED = registerBlock("canna_lily_red",
             ModTallPlant::new);
+    public static final RegistryObject<Block> CANNA_LILY_PURPLE_RED = registerBlock("canna_lily_purple_red",
+            ModTallPlant::new);
+    public static final RegistryObject<Block> CANNA_LILY_YELLOW = registerBlock("canna_lily_yellow",
+            ModTallPlant::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
