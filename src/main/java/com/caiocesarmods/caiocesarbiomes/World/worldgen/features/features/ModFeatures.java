@@ -63,6 +63,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_HIBISCUS), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_PURPLE_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_YELLOW), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> BADLANDS_TALL_PLANTS = ImmutableList.of(() -> {
@@ -75,6 +81,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SWAMP_TALL_PLANTS_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MEDITERRANEAN_SHRUB_VEGETATION_LIST = ImmutableList.of(() -> {
