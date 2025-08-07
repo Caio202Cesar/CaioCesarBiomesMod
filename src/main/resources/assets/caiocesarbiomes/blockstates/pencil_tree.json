@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/pencil_tree_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/pencil_tree_bottom"
+    }
+  }
+}

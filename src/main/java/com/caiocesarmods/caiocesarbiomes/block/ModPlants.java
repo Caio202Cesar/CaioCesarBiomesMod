@@ -236,6 +236,9 @@ public class ModPlants {
     public static final RegistryObject<Block> STUART_DESERT_PEA = registerBlock("stuart_desert_pea",
             ModGrasses::new);
 
+    public static final RegistryObject<Block> BARREL_CACTUS = registerBlock("barrel_cactus",
+            ModCactuses::new);
+
     /*public static final RegistryObject<Block> RASPBERRY_BUSH = registerBlock("raspberry_bush",
             () -> new RaspberryBushBlock(AbstractBlock.Properties.create(Material.PLANTS).
                     tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));
@@ -252,6 +255,9 @@ public class ModPlants {
 
     public static final RegistryObject<Block> PALM_LILY = registerBlock("palm_lily",
             ModTallPlant::new);
+
+    public static final RegistryObject<Block> PENCIL_TREE = registerBlock("pencil_tree",
+            DesertRosePlant::new);
 
     //Savannah Plants
     public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",

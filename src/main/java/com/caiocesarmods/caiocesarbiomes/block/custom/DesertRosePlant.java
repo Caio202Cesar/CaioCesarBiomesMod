@@ -20,6 +20,8 @@ public class DesertRosePlant extends DoublePlantBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(ModPlants.DESERT_ROSE_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.PENCIL_TREE.get(), RenderType.getCutout());
+
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
