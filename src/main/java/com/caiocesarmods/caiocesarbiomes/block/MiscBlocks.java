@@ -47,6 +47,11 @@ public class MiscBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
 
+    //Bog biome
+    public static final RegistryObject<Block> PEAT_BLOCK = registerBlock("peat_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.CLAY).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

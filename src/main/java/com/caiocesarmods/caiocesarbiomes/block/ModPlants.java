@@ -219,12 +219,29 @@ public class ModPlants {
     public static final RegistryObject<Block> CLUBMOSS = registerBlock("clubmoss",
             ModGrasses::new);
 
+    public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
+            ModGrasses::new);
+    public static final RegistryObject<Block> DAFFODIL_YELLOW = registerBlock("daffodil_yellow",
+            ModGrasses::new);
+    public static final RegistryObject<Block> DAFFODIL_WHITE = registerBlock("daffodil_white",
+            ModGrasses::new);
+
+    public static final RegistryObject<Block> STUART_DESERT_PEA = registerBlock("stuart_desert_pea",
+            ModGrasses::new);
+
     /*public static final RegistryObject<Block> RASPBERRY_BUSH = registerBlock("raspberry_bush",
             () -> new RaspberryBushBlock(AbstractBlock.Properties.create(Material.PLANTS).
                     tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));
     public static final RegistryObject<Block> RASPBERRY_FRUITING_BUSH = registerBlock("raspberry_fruiting_bush",
             () -> new RaspberryFruitingBushBlock(AbstractBlock.Properties.create(Material.PLANTS).
-                    tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));*/
+                    tickRandomly().doesNotBlockMovement().sound(SoundType.SWEET_BERRY_BUSH)));
+
+                    */
+
+    public static final RegistryObject<Block> CREOSOTE_BUSH = registerBlock("creosote_bush",
+            ModTallPlant::new);
+    public static final RegistryObject<Block> CREOSOTE_FLOWERING_BUSH = registerBlock("creosote_flowering_bush",
+            ModTallPlant::new);
 
     //Savannah Plants
     public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",

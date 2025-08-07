@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/creosote_bush_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/creosote_bush_bottom"
+    }
+  }
+}

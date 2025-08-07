@@ -28,6 +28,8 @@ public class ModGrasses extends BushBlock {
         RenderTypeLookup.setRenderLayer(ModPlants.CLUBMOSS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.SNAKE_PLANT.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.POTTED_SNAKE_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.STUART_DESERT_PEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.HYACINTH.get(), RenderType.getCutout());
 
     }
 
