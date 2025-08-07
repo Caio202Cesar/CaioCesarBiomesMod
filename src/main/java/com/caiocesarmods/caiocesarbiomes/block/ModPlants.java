@@ -250,6 +250,9 @@ public class ModPlants {
     public static final RegistryObject<Block> CREOSOTE_FLOWERING_BUSH = registerBlock("creosote_flowering_bush",
             ModTallPlant::new);
 
+    public static final RegistryObject<Block> PALM_LILY = registerBlock("palm_lily",
+            ModTallPlant::new);
+
     //Savannah Plants
     public static final RegistryObject<Block> ALOE_VERA = registerBlock("aloe_vera",
             ModTallPlant::new);

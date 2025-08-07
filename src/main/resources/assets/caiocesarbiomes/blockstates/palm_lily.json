@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/palm_lily_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/palm_lily_bottom"
+    }
+  }
+}
