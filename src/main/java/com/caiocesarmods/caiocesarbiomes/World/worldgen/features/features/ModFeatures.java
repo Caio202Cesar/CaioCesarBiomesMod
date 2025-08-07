@@ -40,7 +40,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_PLANTS = register("temperate_rainforest_plants",
-            Feature.FLOWER.withConfiguration(Configs.TEMPERATE_RAINFOREST_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+            Feature.FLOWER.withConfiguration(Configs.TEMPERATE_FOREST_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
     public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_FLOWERS = register("japanese_grove_plants",
@@ -170,19 +170,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.PINK_CISTUS, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
-        public static final BlockClusterFeatureConfig TEMPERATE_RAINFOREST_PLANTS_CONFIG =
-                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 3)
-                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 3)
-                        .addWeightedBlockstate(States.RED_AZALEA, 2)
-                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
-                        .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
-                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
-                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
-                        .addWeightedBlockstate(States.GREEN_AZALEA, 1)
-                        .addWeightedBlockstate(States.WHITE_AZALEA, 2),
-                        SimpleBlockPlacer.PLACER)).tries(64).build();
-
         public static final BlockClusterFeatureConfig JAPANESE_GROVE_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.RED_AZALEA, 2)
@@ -246,7 +233,18 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.INKBERRY_BUSH, 7)
                         .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7)
-                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 7),
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 4)
+                        .addWeightedBlockstate(States.RED_CURRANT_BUSH, 4)
+                        .addWeightedBlockstate(States.DAFFODIL_WHITE, 7)
+                        .addWeightedBlockstate(States.DAFFODIL_YELLOW, 7)
+                        .addWeightedBlockstate(States.RED_AZALEA, 2)
+                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
+                        .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
+                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
+                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
+                        .addWeightedBlockstate(States.GREEN_AZALEA, 1)
+                        .addWeightedBlockstate(States.WHITE_AZALEA, 2)
+                        .addWeightedBlockstate(States.HYACINTH, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
