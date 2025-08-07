@@ -212,6 +212,13 @@ public class ModPlants {
     public static final RegistryObject<Block> CLOUDBERRY_FRUITING_PLANT = registerBlock("cloudberry_fruiting_plant",
             CloudberryFruitingPlant::new);
 
+    public static final RegistryObject<Block> BUNCHBERRY_PLANT = registerBlock("bunchberry_plant",
+            BunchberryPlant::new);
+    public static final RegistryObject<Block> BUNCHBERRY_FLOWERING_PLANT = registerBlock("bunchberry_flowering_plant",
+            BunchberryFloweringPlant::new);
+    public static final RegistryObject<Block> BUNCHBERRY_FRUITING_PLANT = registerBlock("bunchberry_fruiting_plant",
+            BunchberryFruitingPlant::new);
+
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             ModGrasses::new);
     public static final RegistryObject<Block> LUPINUS = registerBlock("lupinus",

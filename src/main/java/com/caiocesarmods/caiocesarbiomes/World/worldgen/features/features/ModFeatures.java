@@ -248,7 +248,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.FLOWERING_CLOUDBERRY, 1)
                         .addWeightedBlockstate(States.CLUBMOSS, 4)
                         .addWeightedBlockstate(States.RED_CURRANT_BUSH, 3)
-                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 2),
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 2)
+                        .addWeightedBlockstate(States.BUNCHBERRY, 5)
+                        .addWeightedBlockstate(States.BUNCHBERRY_FRUITING, 5)
+                        .addWeightedBlockstate(States.BUNCHBERRY_FLOWERING, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig MOUNTAIN_PLANT_CONFIG =
@@ -321,9 +324,16 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState CLUBMOSS = ModPlants.CLUBMOSS.get().getDefaultState();
         protected static final BlockState CALABASH_VINE = ModPlants.CALABASH_VINE.get().getDefaultState();
         protected static final BlockState SNAKE_PLANT = ModPlants.SNAKE_PLANT.get().getDefaultState();
-        /*protected static final BlockState BUNCHBERRY = ModPlants.BUNCHBERRY.get().getDefaultState();
-        protected static final BlockState BUNCHBERRY_FLOWERING = ModPlants.BUNCHBERRY_FLOWERING.get().getDefaultState();
-        protected static final BlockState BUNCHBERRY_FRUITING = ModPlants.BUNCHBERRY_FRUITING.get().getDefaultState();*/
+        protected static final BlockState HYACINTH = ModPlants.HYACINTH.get().getDefaultState();
+        protected static final BlockState DAFFODIL_WHITE = ModPlants.DAFFODIL_WHITE.get().getDefaultState();
+        protected static final BlockState DAFFODIL_YELLOW = ModPlants.DAFFODIL_YELLOW.get().getDefaultState();
+        protected static final BlockState STUART_DESERT_PEA = ModPlants.STUART_DESERT_PEA.get().getDefaultState();
+        protected static final BlockState CANNA_LILY_YELLOW = ModPlants.CANNA_LILY_YELLOW.get().getDefaultState();
+        protected static final BlockState CANNA_LILY_RED = ModPlants.CANNA_LILY_RED.get().getDefaultState();
+        protected static final BlockState CANNA_LILY_PURPLE_RED = ModPlants.CANNA_LILY_PURPLE_RED.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY = ModPlants.BUNCHBERRY_PLANT.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY_FLOWERING = ModPlants.BUNCHBERRY_FLOWERING_PLANT.get().getDefaultState();
+        protected static final BlockState BUNCHBERRY_FRUITING = ModPlants.BUNCHBERRY_FRUITING_PLANT.get().getDefaultState();
 
 
     }
