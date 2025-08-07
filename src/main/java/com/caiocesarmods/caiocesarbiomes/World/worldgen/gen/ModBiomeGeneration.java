@@ -68,6 +68,8 @@ public class ModBiomeGeneration {
 
         addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 23, OVERWORLD, FOREST, HOT, DRY, DENSE);
 
+        addBiome(EucalyptusSavanna.EUCALYPTUS_SAVANNA.get(), BiomeManager.BiomeType.DESERT, 3, OVERWORLD, SAVANNA, HOT, DRY, SPARSE, RARE);
+
         addBiome(SubtropicalEucalyptusDryForestBiome.SUBTROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, FOREST, DRY, DENSE);
 
         addBiome(SubtropicalPineDryForestBiome.SUBTROPICAL_PINE_DRY_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, DRY, DENSE);

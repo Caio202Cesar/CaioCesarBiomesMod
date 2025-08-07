@@ -44,23 +44,28 @@ public class EucalyptusSavanna {
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNormalGrassPatch(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPlainsSubtropicalTrees(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSavannaPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(0.15F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(9218863)
-                        .withGrassColor(10075481).setFogColor(14807295)
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
+                .temperature(1.5F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(329011).withSkyColor(7907327).withFoliageColor(9218863)
+                        .withGrassColor(12564309).setFogColor(12638463)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
