@@ -538,7 +538,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
             ModLogs::new);
     public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
-            ModLeaves::new);
+            EucalyptusLeaves::new);
     public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
             EucalyptusSapling::new);
     @SuppressWarnings("deprecation")

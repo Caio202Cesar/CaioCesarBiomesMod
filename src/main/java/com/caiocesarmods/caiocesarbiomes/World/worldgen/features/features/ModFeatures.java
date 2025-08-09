@@ -91,6 +91,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> DESERT_TALL_PLANTS_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CREOSOTE), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CREOSOTE_FLOWERING), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SAVANNA_TALL_PLANTS_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ALOE_VERA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
@@ -141,7 +147,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_TALL_PLANTS_VEGETATION = register("tropical_tall_plants_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(TROPICAL_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(10));
 
     public static final ConfiguredFeature<?, ?> BADLANDS_TALL_VEGETATION = register("badlands_tall_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(BADLANDS_TALL_PLANTS)).countSpread(FeatureSpread.create(-3, 4))
@@ -157,6 +163,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TALL_PLANTS_VEGETATION = register("savanna_tall_plants_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAVANNA_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> TALL_DESERT_VEGETATION = register("tall_desert_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(DESERT_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
@@ -365,6 +375,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ALOE_VERA = ModPlants.ALOE_VERA.get().getDefaultState();
         protected static final BlockState PENCIL_TREE = ModPlants.PENCIL_TREE.get().getDefaultState();
         protected static final BlockState PALM_LILY = ModPlants.PALM_LILY.get().getDefaultState();
+        protected static final BlockState CREOSOTE = ModPlants.CREOSOTE_BUSH.get().getDefaultState();
+        protected static final BlockState CREOSOTE_FLOWERING = ModPlants.CREOSOTE_FLOWERING_BUSH.get().getDefaultState();
 
 
     }
