@@ -239,8 +239,8 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.TROPICAL_ALMOND_LOG),
                     new SimpleBlockStateProvider(States.TROPICAL_ALMOND_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(10, 13, 4), new TwoLayerFeature(2, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new MegaJungleTrunkPlacer(10, 18, 4),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TROPICAL_ALMOND_TREE = register("tropical_almond_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_ALMOND_LOG),
                     new SimpleBlockStateProvider(States.TROPICAL_ALMOND_LEAVES),

@@ -26,7 +26,7 @@ public class DesertRosePlant extends DoublePlantBlock {
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         return  state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
-                || state.matchesBlock(Blocks.RED_SAND);
+                || state.matchesBlock(Blocks.RED_SAND) || state.matchesBlock(Blocks.DIRT);
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
