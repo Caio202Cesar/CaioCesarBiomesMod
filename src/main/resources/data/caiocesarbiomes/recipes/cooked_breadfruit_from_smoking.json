@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "caiocesarbiomes:breadfruit"
+    "item": "caiocesarbiomes:breadfruit_slice"
   },
   "result": "caiocesarbiomes:cooked_breadfruit",
   "experience": 0.35,

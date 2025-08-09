@@ -236,6 +236,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.WALNUT)));
     public static final RegistryObject<Item> COOKED_CHESTNUT = ITEMS.register("cooked_chestnut",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHESTNUT)));
+    public static final RegistryObject<Item> BREADFRUIT_SLICE = ITEMS.register("breadfruit_slice",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.RAW_BREADFRUIT)));
     public static final RegistryObject<Item> COOKED_BREADFRUIT = ITEMS.register("cooked_breadfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BREADFRUIT)));
     public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon",

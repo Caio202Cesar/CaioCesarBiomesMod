@@ -105,6 +105,7 @@ public class ModFoods extends Foods {
     public static final Food WALNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food PECAN = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CHESTNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food RAW_BREADFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food BREADFRUIT = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food BANANA = (new Food.Builder()).hunger(5).saturation(0.4F).build();
     public static final Food COOKED_BANANA_FLOWER = (new Food.Builder()).hunger(5).saturation(0.6F).build();
