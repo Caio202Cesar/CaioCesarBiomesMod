@@ -247,6 +247,12 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 3),
                     new StraightTrunkPlacer(8, 6, 0),
                     new TwoLayerFeature(2, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TROPICAL_ALMOND_WITH_PEPPERCORN = register("tropical_almond_with_peppercorn",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TROPICAL_ALMOND_LOG),
+                    new SimpleBlockStateProvider(States.TROPICAL_ALMOND_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 3),
+                    new StraightTrunkPlacer(8, 6, 0),
+                    new TwoLayerFeature(2, 0, 1))).setDecorators(ImmutableList.of(PeppercornVineTrunkDecorator.INSTANCE)).build()));
 
     //Southern Magnolia Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_MAGNOLIA_TREE = register("southern_magnolia_tree",
@@ -1157,12 +1163,6 @@ public class TreeFeatures {
                     new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCONUT_PALM_WITH_PEPPERCORN = register("coconut_tree_with_peppercorn",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCONUT_LOG),
-                    new SimpleBlockStateProvider(States.COCONUT_LEAVES),
-                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(10, 20, 4),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(PeppercornVineTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SMALL_COCONUT_PALM_WITH_PEPPERCORN = register("small_coconut_tree_with_peppercorn",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCONUT_LOG),
                     new SimpleBlockStateProvider(States.COCONUT_LEAVES),
@@ -2208,8 +2208,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> TROPICAL_BEACH_TREES = register("tropical_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TROPICAL_ALMOND_TREE.withChance(0.1F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), COAST_COTTONWOOD_FANCY_TREE.withChance(0.3F),
-                            COAST_COTTONWOOD_TREE.withChance(0.2F), COCONUT_PALM_TREE.withChance(0.1F), COCONUT_PALM_WITH_PEPPERCORN.withChance(0.049F),
-                            SMALL_COCONUT_PALM_WITH_PEPPERCORN.withChance(0.069F)), SMALL_COCONUT_PALM_TREE))
+                            COAST_COTTONWOOD_TREE.withChance(0.2F), COCONUT_PALM_TREE.withChance(0.1F), TROPICAL_ALMOND_WITH_PEPPERCORN.withChance(0.0049F),
+                            SMALL_COCONUT_PALM_WITH_PEPPERCORN.withChance(0.0069F)), SMALL_COCONUT_PALM_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
