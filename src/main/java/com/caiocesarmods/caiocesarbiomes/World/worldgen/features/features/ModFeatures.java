@@ -27,6 +27,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(Configs.TAIGA_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> DESERT_VEGETATION = register("desert_vegetation",
+            Feature.FLOWER.withConfiguration(Configs.DESERT_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> PATCH_MOUNTAIN = register("patch_mountain",
             Feature.FLOWER.withConfiguration(Configs.MOUNTAIN_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
@@ -283,6 +287,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 7)
                         .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7)
                         .addWeightedBlockstate(States.SNAKE_PLANT, 3),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig DESERT_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.STUART_DESERT_PEA, 2)
+                        .addWeightedBlockstate(States.BARREL_CACTUS, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
