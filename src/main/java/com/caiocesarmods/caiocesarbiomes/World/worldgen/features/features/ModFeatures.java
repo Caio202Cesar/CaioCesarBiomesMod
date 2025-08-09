@@ -69,7 +69,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_YELLOW), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
-    });
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALM_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+});
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> BADLANDS_TALL_PLANTS = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANZANITA_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
@@ -352,6 +354,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BUNCHBERRY_FRUITING = ModPlants.BUNCHBERRY_FRUITING_PLANT.get().getDefaultState();
         protected static final BlockState ALOE_VERA = ModPlants.ALOE_VERA.get().getDefaultState();
         protected static final BlockState PENCIL_TREE = ModPlants.PENCIL_TREE.get().getDefaultState();
+        protected static final BlockState PALM_LILY = ModPlants.PALM_LILY.get().getDefaultState();
 
 
     }
