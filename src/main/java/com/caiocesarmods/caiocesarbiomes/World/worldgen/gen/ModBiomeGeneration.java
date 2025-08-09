@@ -86,6 +86,8 @@ public class ModBiomeGeneration {
 
         addBiome(DryTropicalBeachBiome.DRY_TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, DRY, SANDY);
 
+        addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 15, OVERWORLD, HOT, DRY, SANDY);
+
         addBiome(StonyMediterraneanShoreBiome.STONY_MEDITERRANEAN_SHORE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, BEACH);
 
         addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, SAVANNA);

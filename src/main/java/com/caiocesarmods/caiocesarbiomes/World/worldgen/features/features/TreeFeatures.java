@@ -2343,7 +2343,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
                             MESQUITE_TREE.withChance(0.1F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F),
-                            SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F)),
+                            SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F), DATE_PALM_TREE.withChance(0.15F)),
                             ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
