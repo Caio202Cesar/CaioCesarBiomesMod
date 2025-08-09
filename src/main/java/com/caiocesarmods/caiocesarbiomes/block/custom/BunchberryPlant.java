@@ -5,9 +5,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
@@ -41,6 +45,14 @@ public class BunchberryPlant extends BushBlock {
             worldIn.setBlockState(pos, ModPlants.BUNCHBERRY_PLANT.get().getDefaultState());
 
         }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(ModPlants.BUNCHBERRY_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BUNCHBERRY_FLOWERING_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.BUNCHBERRY_FRUITING_PLANT.get(), RenderType.getCutout());
+
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

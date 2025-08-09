@@ -483,6 +483,9 @@
   "block.caiocesarbiomes.calabash_vine": "Calabash Vine",
   "block.caiocesarbiomes.snake_plant": "Snake Plant",
   "block.caiocesarbiomes.banana_green_bunch": "Banana Green Bunch",
+  "block.caiocesarbiomes.bunchberry_plant": "Bunchberry Plant",
+  "block.caiocesarbiomes.bunchberry_flowering_plant": "Bunchberry Flowering Plant",
+  "block.caiocesarbiomes.bunchberry_fruiting_plant": "Bunchberry Fruiting Plant",
 
   "block.caiocesarbiomes.calabash_crop": "Calabash Seeds",
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
@@ -645,7 +648,8 @@
   "item.caiocesarbiomes.guacamole": "Guacamole",
   "item.caiocesarbiomes.guacamole_toast": "Guacamole Toast",
   "item.caiocesarbiomes.guacamole_breadfruit": "Guacamole Breadfruit",
-  "item.caiocesarbiomes.eucalyptus_leaves": "Eucalyptus Leaves",
+  "item.caiocesarbiomes.eucalyptus_leaf": "Eucalyptus Leaf",
+  "item.caiocesarbiomes.eucalyptus_candy": "Eucalyptus Candy",
 
   "item.caiocesarbiomes.wood_poisoned_sword": "Wooden Poisoned Sword",
   "item.caiocesarbiomes.stone_poisoned_sword": "Stone Poisoned Sword",
