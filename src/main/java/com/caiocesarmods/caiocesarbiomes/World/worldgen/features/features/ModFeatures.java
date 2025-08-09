@@ -103,6 +103,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.PENCIL_TREE), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SAHEL_TALL_PLANTS_LIST = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.PENCIL_TREE), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MEDITERRANEAN_SHRUB_VEGETATION_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
@@ -123,11 +129,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> TROPICAL_PLANTS = register("tropical_plants",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TROPICAL_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(6));
-
-    public static final ConfiguredFeature<?, ?> PATCH_DESERT_ROSE = register("patch_desert_rose",
-            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE),
-                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
 
     public static final ConfiguredFeature<?, ?> PATCH_TUSSOCK = register("patch_tussock",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TUSSOCK_GRASS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -168,6 +169,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> TALL_DESERT_VEGETATION = register("tall_desert_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(DESERT_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> PATCH_DESERT_ROSE = register("sahel_tall_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAHEL_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -294,8 +300,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig SAVANNA_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CALABASH_VINE, 2)
-                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 7)
-                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 7)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 3)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 3)
                         .addWeightedBlockstate(States.SNAKE_PLANT, 3),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
