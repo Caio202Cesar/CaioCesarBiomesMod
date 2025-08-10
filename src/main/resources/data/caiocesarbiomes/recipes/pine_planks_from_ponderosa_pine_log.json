@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:ponderosa_pine_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:stone_pine_planks",
+    "count": 4
+  }
+}
