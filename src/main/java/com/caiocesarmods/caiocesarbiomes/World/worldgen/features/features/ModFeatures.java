@@ -61,6 +61,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.GARDENIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     }, () -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_YELLOW), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    }, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_PURPLE_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> TROPICAL_TALL_PLANTS_LIST = ImmutableList.of(() -> {
@@ -215,19 +221,19 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig HUMID_SUBTROPICAL_PLANTS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.BUSH, 5)
-                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1)
-                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
-                        .addWeightedBlockstate(States.ALLIUM, 1)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 2)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 2)
+                        .addWeightedBlockstate(States.ALLIUM, 2)
                         .addWeightedBlockstate(States.BLUE_ORCHID, 1)
                         .addWeightedBlockstate(States.OXEYE_DAISY, 1)
                         .addWeightedBlockstate(States.RED_AZALEA, 2)
-                        .addWeightedBlockstate(States.ORANGE_AZALEA, 3)
+                        .addWeightedBlockstate(States.ORANGE_AZALEA, 1)
                         .addWeightedBlockstate(States.PURPLE_AZALEA, 1)
-                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 3)
-                        .addWeightedBlockstate(States.PINK_AZALEA, 3)
+                        .addWeightedBlockstate(States.MAGENTA_AZALEA, 1)
+                        .addWeightedBlockstate(States.PINK_AZALEA, 1)
                         .addWeightedBlockstate(States.GREEN_AZALEA, 1)
                         .addWeightedBlockstate(States.WHITE_AZALEA, 2)
-                        .addWeightedBlockstate(States.SAW_PALMETTO, 2),
+                        .addWeightedBlockstate(States.SAW_PALMETTO, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TROPICAL_PLANTS_CONFIG =
