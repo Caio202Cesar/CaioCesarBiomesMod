@@ -234,7 +234,7 @@ public class ModPlants {
             ModGrasses::new);
 
     public static final RegistryObject<Block> STUART_DESERT_PEA = registerBlock("stuart_desert_pea",
-            ModGrasses::new);
+            ModDesertPlant::new);
 
     public static final RegistryObject<Block> BARREL_CACTUS = registerBlock("barrel_cactus",
             ModCactuses::new);
