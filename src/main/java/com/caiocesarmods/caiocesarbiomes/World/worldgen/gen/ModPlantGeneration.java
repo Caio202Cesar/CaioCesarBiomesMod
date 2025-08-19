@@ -204,7 +204,7 @@ public class ModPlantGeneration {
             base.add(() -> ModFeatures.DESERT_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(5, 0.0f, 0))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.DESERT.getLocation()))
@@ -217,7 +217,7 @@ public class ModPlantGeneration {
             base.add(() -> ModFeatures.TALL_DESERT_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(5, 0.0f, 5))));
         }
     }
 }

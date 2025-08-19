@@ -319,7 +319,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig DESERT_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.STUART_DESERT_PEA, 2)
+                        .addWeightedBlockstate(States.STUART_DESERT_PEA, 1)
                         .addWeightedBlockstate(States.BARREL_CACTUS, 5),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
