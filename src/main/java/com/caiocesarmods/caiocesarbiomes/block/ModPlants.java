@@ -249,9 +249,9 @@ public class ModPlants {
                     */
 
     public static final RegistryObject<Block> CREOSOTE_BUSH = registerBlock("creosote_bush",
-            ModTallPlant::new);
+            DesertTallPlant::new);
     public static final RegistryObject<Block> CREOSOTE_FLOWERING_BUSH = registerBlock("creosote_flowering_bush",
-            ModTallPlant::new);
+            DesertTallPlant::new);
 
     public static final RegistryObject<Block> PALM_LILY = registerBlock("palm_lily",
             ModTallPlant::new);
