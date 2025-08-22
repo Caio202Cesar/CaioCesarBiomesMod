@@ -12,5 +12,12 @@
     "sounds": [
       "caiocesarbiomes:beach_ambience"
     ]
+  },
+  "laurissilva_ambience": {
+    "category": "biomes",
+    "subtitle": "caiocesarbiomes.laurissilva_ambience",
+    "sounds": [
+      "caiocesarbiomes:laurissilva_ambience"
+    ]
   }
 }
