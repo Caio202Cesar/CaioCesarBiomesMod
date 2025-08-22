@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -69,7 +70,7 @@ public class BunyaPineSubtropicalLaurelForestBiome {
               .temperature(0.85F).downfall(0.85F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                       .withGrassColor(2791997).setFogColor(14807295)
-                      .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+                      .setAmbientSound(ModSoundEvents.LAURISSILVA_AMBIENCE.get())
                       .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                       .build())
               .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();

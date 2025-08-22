@@ -21,6 +21,8 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> BEACH_AMBIENCE =
             registerSoundEvent("beach_ambience");
 
+    public static final RegistryObject<SoundEvent> LAURISSILVA_AMBIENCE =
+            registerSoundEvent("laurissilva_ambience");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, name)));
