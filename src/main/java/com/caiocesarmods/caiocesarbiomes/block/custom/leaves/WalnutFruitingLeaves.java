@@ -48,7 +48,7 @@ public class WalnutFruitingLeaves extends LeavesBlock implements IForgeShearable
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(50) == 0) {
 
-            int dropCount = 6;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.WALNUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -68,7 +68,7 @@ public class WalnutFruitingLeaves extends LeavesBlock implements IForgeShearable
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 3;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.WALNUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

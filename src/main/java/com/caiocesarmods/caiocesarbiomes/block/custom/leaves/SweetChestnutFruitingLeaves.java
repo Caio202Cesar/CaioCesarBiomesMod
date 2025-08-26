@@ -47,7 +47,7 @@ public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeSh
 
         if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.SWEET_CHESTNUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -67,7 +67,7 @@ public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeSh
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.SWEET_CHESTNUT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

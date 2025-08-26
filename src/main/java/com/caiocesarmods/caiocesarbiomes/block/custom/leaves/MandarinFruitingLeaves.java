@@ -44,7 +44,7 @@ public class MandarinFruitingLeaves extends LeavesBlock implements IForgeShearab
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         if (nextStage != null && random.nextInt(100) == 0) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.MANDARIN.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -64,7 +64,7 @@ public class MandarinFruitingLeaves extends LeavesBlock implements IForgeShearab
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.MANDARIN.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

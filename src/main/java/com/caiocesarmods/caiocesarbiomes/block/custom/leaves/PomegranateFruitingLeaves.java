@@ -47,7 +47,7 @@ public class PomegranateFruitingLeaves extends LeavesBlock implements IForgeShea
 
         if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
 
-            int dropCount = 3;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.POMEGRANATE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -67,7 +67,7 @@ public class PomegranateFruitingLeaves extends LeavesBlock implements IForgeShea
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 3;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.POMEGRANATE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
