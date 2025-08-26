@@ -194,15 +194,10 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BLUE_SPRUCE_SAPLING = BLOCKS.register("potted_blue_spruce_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BLUE_SPRUCE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    //Blue Mahoe
-    public static final RegistryObject<Block> BLUE_MAHOE_LOG = registerBlock("blue_mahoe_log",
-            ModLogs::new);
-
-
 
 
     ///C
-//Camellia
+   //Camellia
     public static final RegistryObject<Block> CAMELLIA_LOG = registerBlock("camellia_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
@@ -511,11 +506,6 @@ public class TreeBlocks {
 
 
     ///E
-//Ebony
-    public static final RegistryObject<Block> EBONY_LOG = registerBlock("ebony_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> EBONY_LEAVES = registerBlock("ebony_leaves",
-            ModLeaves::new);
     //Elderberry
     public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
             ModLogs::new);
@@ -661,8 +651,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_HOLM_OAK_SAPLING = BLOCKS.register("potted_holm_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.HOLM_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    public static final RegistryObject<Block> SCRUB_OAK_LEAVES = registerBlock("scrub_oak_leaves",
-            ModLeaves::new);//Badlands
+
     //Holly
     public static final RegistryObject<Block> HOLLY_LOG = registerBlock("ilex_log",
             ModLogs::new);
@@ -1083,11 +1072,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PINYON_SAPLING = BLOCKS.register("potted_pinyon_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PINYON_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    //Pink Ivory
-    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
-            ModLeaves::new);
     //Pistachio
     public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
             ModLogs::new);
