@@ -148,7 +148,12 @@
     "caiocesarbiomes:bald_cypress_autumn_leaves",
     "caiocesarbiomes:bald_cypress_winter_leaves",
     "caiocesarbiomes:fremont_poplar_leaves",
-    "caiocesarbiomes:fremont_poplar_autumn_leaves"
-
+    "caiocesarbiomes:fremont_poplar_autumn_leaves",
+    "caiocesarbiomes:durian_leaves",
+    "caiocesarbiomes:durian_flowering_leaves",
+    "caiocesarbiomes:durian_fruiting_leaves",
+    "caiocesarbiomes:breadfruit_leaves",
+    "caiocesarbiomes:breadfruit_fruiting_leaves",
+    "caiocesarbiomes:aspen_leaves"
   ]
 }
