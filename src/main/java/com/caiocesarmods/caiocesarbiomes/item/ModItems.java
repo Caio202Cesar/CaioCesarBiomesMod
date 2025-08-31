@@ -324,6 +324,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SWEET_BERRY_ICE_CREAM)));
     public static final RegistryObject<Item> COOKIE_ICE_CREAM = ITEMS.register("cookie_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COOKIE_ICE_CREAM)));
+    public static final RegistryObject<Item> STARFRUIT_ICE_CREAM = ITEMS.register("starfruit_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.STARFRUIT_ICE_CREAM)));
     public static final RegistryObject<Item> BANANA_BREAD = ITEMS.register("banana_bread",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BANANA_BREAD)));
     public static final RegistryObject<Item> ARBUTUS_CAKE = ITEMS.register("arbutus_cake",
