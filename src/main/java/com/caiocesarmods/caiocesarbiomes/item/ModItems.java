@@ -165,15 +165,15 @@ public class ModItems {
     public static final RegistryObject<Item> WHITE_PEPPER = ITEMS.register("white_pepper",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> SPICED_RABBIT = ITEMS.register("spiced_rabbit",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SPICED_RABBIT)));
     public static final RegistryObject<Item> SAVORY_RABBIT = ITEMS.register("savory_rabbit",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SAVORY_RABBIT)));
     public static final RegistryObject<Item> SPICED_PORK = ITEMS.register("spiced_pork",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SPICED_PORKCHOP)));
     public static final RegistryObject<Item> SAVORY_PORK = ITEMS.register("savory_pork",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SAVORY_PORKCHOP)));
     public static final RegistryObject<Item> SPICED_CHICKEN = ITEMS.register("spiced_chicken",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SPICED_CHICKEN)));
     public static final RegistryObject<Item> SAVORY_CHICKEN = ITEMS.register("savory_chicken",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SAVORY_CHICKEN)));
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",

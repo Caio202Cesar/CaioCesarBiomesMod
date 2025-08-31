@@ -159,6 +159,7 @@ public class ModFoods extends Foods {
     public static final Food SPICED_CHICKEN = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_PORKCHOP = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_RABBIT = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
+    public static final Food STARFRUIT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
