@@ -36,8 +36,8 @@ public class MiscBlocks {
             () -> new ToasterBlock(AbstractBlock.Properties.create(Material.ANVIL).notSolid()));
 
     public static final RegistryObject<Block> BUTTER_MIXER = registerBlock("butter_mixer",
-            () -> new ButterMixerBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
-                    .hardnessAndResistance(1.0F, 3.0F)));
+            () -> new ButterMixerBlock(AbstractBlock.Properties.create(Material.WOOD)
+                    .hardnessAndResistance(1.0F, 3.0F).notSolid()));
 
     public static final RegistryObject<Block> SULPHUR_ORE = registerBlock("sulphur_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
