@@ -557,7 +557,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             ModLogs::new);
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
-            FigLeaves::new);
+            () -> new FigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_FRUITING_LEAVES));
+    public static final RegistryObject<Block> FIG_FRUITING_LEAVES = registerBlock("fig_fruiting_leaves",
+            () -> new FigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
     public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
             WhiteFigLeaves::new);
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
