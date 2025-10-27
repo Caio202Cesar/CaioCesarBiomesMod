@@ -563,7 +563,11 @@ public class TreeBlocks {
             () -> new FigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
     public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
-            WhiteFigLeaves::new);
+            () -> new WhiteFigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_FRUITING_LEAVES));
+    public static final RegistryObject<Block> WHITE_FIG_FRUITING_LEAVES = registerBlock("white_fig_fruiting_leaves",
+            () -> new WhiteFigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
             FigSapling::new);
     @SuppressWarnings("deprecation")

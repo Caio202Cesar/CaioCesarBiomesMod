@@ -1,8 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/fig_leaves"},
-      {"model": "caiocesarbiomes:block/white_fig_fruiting_leaves"}
-    ]
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/fig_leaves"
+    }
   }
 }
