@@ -1371,7 +1371,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
-            TamarindLeaves::new);
+            () -> new TamarindLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TAMARIND_FRUITING_LEAVES));
+    public static final RegistryObject<Block> TAMARIND_FRUITING_LEAVES = registerBlock("tamarind_fruiting_leaves",
+            () -> new TamarindFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TAMARIND_LEAVES));
     public static final RegistryObject<Block> TAMARIND_SAPLING = registerBlock("tamarind_sapling",
             TamarindSapling::new);
     @SuppressWarnings("deprecation")
