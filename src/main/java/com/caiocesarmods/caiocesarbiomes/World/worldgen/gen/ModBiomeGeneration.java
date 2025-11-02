@@ -64,7 +64,7 @@ public class ModBiomeGeneration {
 
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, FOREST, LUSH);
 
-        addBiome(HemiborealForestBiome.HEMIBOREAL_FOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, FOREST, LUSH, COLD);
+        addBiome(HemiborealForestBiome.HEMIBOREAL_FOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, COLD);
 
         addBiome(TropicalEucalyptusDryForestBiome.TROPICAL_EUCALYPTUS_DRY_FOREST.get(), BiomeManager.BiomeType.DESERT, 23, OVERWORLD, FOREST, HOT, DRY, DENSE);
 
@@ -80,9 +80,9 @@ public class ModBiomeGeneration {
 
         addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY, WET, LUSH);
 
-        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD, FOREST, WET, DENSE, LUSH);
+        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
 
-        addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD, WET, LUSH);
+        addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
 
         addBiome(DryTropicalBeachBiome.DRY_TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, DRY, SANDY);
 
@@ -92,21 +92,21 @@ public class ModBiomeGeneration {
 
         addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, SAVANNA);
 
-        addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 25, COLD, OVERWORLD, MOUNTAIN, CONIFEROUS);
+        addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, MOUNTAIN, CONIFEROUS);
 
-        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 20, COLD, OVERWORLD, PLAINS, SPARSE);
+        addBiome(HemiborealSteppeBiome.HEMIBOREAL_STEPPE.get(), BiomeManager.BiomeType.COOL, 20, COLD, OVERWORLD);
 
         addBiome(MonsoonFicusTropicalForest.MONSOON_FICUS_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, JUNGLE, WET, LUSH, DENSE);
 
-        addBiome(TemperateRainforest.TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, COLD, CONIFEROUS, WET, LUSH, DENSE, FOREST);
+        addBiome(TemperateRainforest.TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, FOREST, LUSH);
 
         addBiome(TropicalBambooMarsh.TROPICAL_BAMBOO_MARSH.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP);
 
         addBiome(SaltDesertBiome.SALT_DESERT.get(), BiomeManager.BiomeType.DESERT, 15, OVERWORLD, HOT, DRY, WASTELAND);
 
-        addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, DRY, WASTELAND, SPOOKY, MOUNTAIN);
+        addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
 
-        addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, DRY, WASTELAND, SPOOKY, MOUNTAIN);
+        addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
 
     }
 
