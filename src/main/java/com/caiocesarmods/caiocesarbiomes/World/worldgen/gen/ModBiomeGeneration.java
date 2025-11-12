@@ -13,19 +13,17 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
-                SAVANNA, CONIFEROUS);
+        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, CONIFEROUS);
 
-        addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, SPARSE, DRY, SAVANNA);
+        addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, SPARSE);
 
-        addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DRY, DENSE,
+        addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
                 OVERWORLD);
 
-        addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
-                SAVANNA);
+        addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
 
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD,
-                SPARSE, DRY, SAVANNA, RARE);
+                SPARSE);
 
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
@@ -35,11 +33,16 @@ public class ModBiomeGeneration {
         addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST,
                 LUSH, DENSE, CONIFEROUS);
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE);
+
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
+
         addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, LUSH, DENSE, CONIFEROUS);
+
         addBiome(BunyaPineSubtropicalLaurelJungleBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, LUSH, DENSE, JUNGLE, WET, CONIFEROUS);
+
         addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH,
                 DENSE, JUNGLE, WET, RARE);
+
         addBiome(TropicalSeasonalForestBiome.TROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, LUSH, DENSE);
 
         addBiome(CoastalSubtropicalDesertBiome.COAST_SUBTROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 20, OVERWORLD, SANDY, DRY, SPOOKY);
