@@ -654,7 +654,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    OptionalInt.of(4)))).setMaxWaterDepth(1).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE, SpanishMossTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG = register("southern_live_oak_with_creeping_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
