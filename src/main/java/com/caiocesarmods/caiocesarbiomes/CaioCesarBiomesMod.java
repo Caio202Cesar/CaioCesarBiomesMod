@@ -22,6 +22,8 @@ import net.minecraft.block.Block;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -135,11 +137,24 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
 
-            //BrewingRecipeRegistry.addRecipe(new PotionBrewing(Potions.WATER, ModItems.TEA_LEAF.get(), Potions.STRONG_POISON));
-            //BrewingRecipeRegistry.addRecipe(new GreenTeaRecipe(Potions.WATER, ModItems.MATCHA_POWDER.get(), ModPotions.MATCHA_TEA.get()));
-            //BrewingRecipeRegistry.addRecipe(new ModBrewingRecipes(Potions.AWKWARD, ModItems.POISON_SAP.get(), Potions.STRONG_POISON));
+            try {
+                Registry.register(Registry.CHUNK_GENERATOR_CODEC, LATITUDE_CHUNK_RL, com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.LatitudeChunkGenerator.CODEC);
+            } catch (Throwable t) {
+                // Some 1.16.5 builds don't expose the registry constant; ignore and rely on datapack discovery.
+            }
+
+            try {
+                // If you created a codec field for your provider class, register it similarly.
+                // Replace com.caio.world.LatitudeBiomeProvider.CODEC if package differs.
+                Registry.register(Registry.BIOME_PROVIDER_CODEC, LATITUDE_BIOME_RL, com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.LatitudeBiomeProvider.CODEC);
+            } catch (Throwable t) {
+                // ignore; datapack discovery should pick it up
+            }
         });
     }
+
+    public static final ResourceLocation LATITUDE_CHUNK_RL = new ResourceLocation("caiocesarbiomes", "latitude_generator");
+    public static final ResourceLocation LATITUDE_BIOME_RL = new ResourceLocation("caiocesarbiomes", "latitude_biome_provider");
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client

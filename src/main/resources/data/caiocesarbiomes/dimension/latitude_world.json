@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "type": "caiocesarbiomes:latitude_generator",
+    "seed": 0,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "caiocesarbiomes:latitude_biome_provider",
+      "seed": 0
+    }
+  }
+}
