@@ -2,7 +2,9 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.LatitudeBiomeProvider;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryLookupCodec;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.Biome;
@@ -16,63 +18,68 @@ import java.util.function.Supplier;
 
 public class LatitudeChunkGenerator extends ChunkGenerator {
 
+    public static final Codec<LatitudeChunkGenerator> CODEC =
+            RecordCodecBuilder.create(builder -> builder.group(
+                    RegistryLookupCodec.getLookUpCodec(Registry.BIOME_KEY).forGetter(g -> g.biomeRegistry),
+                    RegistryLookupCodec.getLookUpCodec(Registry.NOISE_SETTINGS_KEY).forGetter(g -> g.dimensionRegistry),
+                    Codec.LONG.fieldOf("seed").forGetter(g -> g.seed)
+            ).apply(builder, LatitudeChunkGenerator::new));
 
-    private final NoiseChunkGenerator delegate;
     private final Registry<Biome> biomeRegistry;
+    private final Registry<DimensionSettings> dimensionRegistry;
     private final long seed;
 
-    public LatitudeChunkGenerator(Registry<Biome> biomeRegistry,
-                                  Registry<DimensionSettings> dimensionSettingsRegistry,
-                                  long seed) {
-        // 1.16.5 requires DimensionStructuresSettings, not Supplier<DimensionSettings>
-        super(new LatitudeBiomeProvider(biomeRegistry), new DimensionStructuresSettings(true));
+    private final NoiseChunkGenerator delegate;
+
+    public LatitudeChunkGenerator(
+            Registry<Biome> biomeRegistry,
+            Registry<DimensionSettings> dimensionRegistry,
+            long seed
+    ) {
+        super(new LatitudeBiomeProvider(biomeRegistry),
+                new DimensionStructuresSettings(true));
 
         this.biomeRegistry = biomeRegistry;
+        this.dimensionRegistry = dimensionRegistry;
         this.seed = seed;
 
-        // Create the default overworld settings supplier
-        Supplier<DimensionSettings> dimensionSettings =
-                () -> dimensionSettingsRegistry.getOrThrow(DimensionSettings.OVERWORLD);
+        // Use overworld noise settings
+        Supplier<DimensionSettings> dimSettings =
+                () -> dimensionRegistry.getOrThrow(DimensionSettings.OVERWORLD);
 
-        // Create the delegate NoiseChunkGenerator (does the actual terrain generation)
+        // Create Vanilla terrain generator inside
         this.delegate = new NoiseChunkGenerator(
-                new LatitudeBiomeProvider(biomeRegistry),
+                getBiomeProvider(),
                 seed,
-                dimensionSettings
+                dimSettings
         );
     }
 
-    // == Codec getter ==
     @Override
     protected Codec<? extends ChunkGenerator> func_230347_a_() {
-        return Codec.unit(() -> this);
+        return CODEC;
     }
 
-    // == Return new instance for different seed ==
     @Override
     public ChunkGenerator func_230349_a_(long newSeed) {
-        return new LatitudeChunkGenerator(biomeRegistry, null, newSeed);
+        return new LatitudeChunkGenerator(biomeRegistry, dimensionRegistry, newSeed);
     }
 
-    // == Surface generation ==
     @Override
     public void generateSurface(WorldGenRegion region, IChunk chunk) {
         delegate.generateSurface(region, chunk);
     }
 
-    // == Base terrain generation ==
     @Override
-    public void func_230352_b_(IWorld world, StructureManager structureManager, IChunk chunk) {
-        delegate.func_230352_b_(world, structureManager, chunk);
+    public void func_230352_b_(IWorld world, StructureManager structures, IChunk chunk) {
+        delegate.func_230352_b_(world, structures, chunk);
     }
 
-    // == Height queries ==
     @Override
     public int getHeight(int x, int z, Heightmap.Type heightmapType) {
         return delegate.getHeight(x, z, heightmapType);
     }
 
-    // == Block reader access ==
     @Override
     public IBlockReader func_230348_a_(int x, int z) {
         return delegate.func_230348_a_(x, z);
