@@ -1,17 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.LatitudeBiomeProvider;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.chunk.IChunk;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.DimensionSettings;
-import net.minecraft.world.gen.NoiseChunkGenerator;
-import net.minecraft.world.gen.WorldGenRegion;
-import net.minecraft.world.gen.feature.structure.Structure;
-import net.minecraft.world.gen.feature.structure.StructureManager;
 import net.minecraftforge.common.world.ForgeWorldType;
 
 public class LatitudeWorldType extends ForgeWorldType {

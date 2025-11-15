@@ -261,10 +261,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.SAW_PALMETTO, 7)
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_LARGE, 5)
                         .addWeightedBlockstate(States.BALD_CYPRESS_ROOTS_SMALL, 5)
-                        .addWeightedBlockstate(States.INKBERRY_BUSH, 2)
-                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 2)
-                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 5)
-                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 5),
+                        .addWeightedBlockstate(States.INKBERRY_BUSH, 3)
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 3)
+                        .addWeightedBlockstate(States.AGAPANTHUS_WHITE, 1)
+                        .addWeightedBlockstate(States.AGAPANTHUS_PURPLE, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig STEPPE_GRASS_CONFIG =
