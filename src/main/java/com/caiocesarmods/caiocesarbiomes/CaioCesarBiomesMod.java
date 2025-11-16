@@ -137,24 +137,8 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
 
-            try {
-                Registry.register(Registry.CHUNK_GENERATOR_CODEC, LATITUDE_CHUNK_RL, com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.LatitudeChunkGenerator.CODEC);
-            } catch (Throwable t) {
-                // Some 1.16.5 builds don't expose the registry constant; ignore and rely on datapack discovery.
-            }
-
-            try {
-                // If you created a codec field for your provider class, register it similarly.
-                // Replace com.caio.world.LatitudeBiomeProvider.CODEC if package differs.
-                Registry.register(Registry.BIOME_PROVIDER_CODEC, LATITUDE_BIOME_RL, com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.LatitudeBiomeProvider.CODEC);
-            } catch (Throwable t) {
-                // ignore; datapack discovery should pick it up
-            }
         });
     }
-
-    public static final ResourceLocation LATITUDE_CHUNK_RL = new ResourceLocation("caiocesarbiomes", "latitude_generator");
-    public static final ResourceLocation LATITUDE_BIOME_RL = new ResourceLocation("caiocesarbiomes", "latitude_biome_provider");
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
