@@ -1098,7 +1098,7 @@ public class TreeFeatures {
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Japanese Pine Tree
+    //Acacia-like conifers
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_PINE_LOG),
                     new SimpleBlockStateProvider(States.JAPANESE_PINE_LEAVES),
@@ -1108,6 +1108,13 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("chinese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
                     new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
