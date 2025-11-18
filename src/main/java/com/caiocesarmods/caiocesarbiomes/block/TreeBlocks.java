@@ -1036,6 +1036,12 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_FRUITING_LEAVES));
     public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
             () -> new PecanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_FALL_LEAVES));
+    public static final RegistryObject<Block> PECAN_FALL_LEAVES = registerBlock("pecan_fall_leaves",
+            () -> new PecanFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_WINTER_BRANCHES));
+    public static final RegistryObject<Block> PECAN_WINTER_BRANCHES = registerBlock("pecan_winter_branches",
+            () -> new PecanWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_LEAVES));
     public static final RegistryObject<Block> PECAN_SAPLING = registerBlock("pecan_sapling",
             PecanSapling::new);

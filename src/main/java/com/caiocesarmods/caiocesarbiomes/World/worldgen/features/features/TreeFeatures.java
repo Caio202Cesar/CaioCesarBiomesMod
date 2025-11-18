@@ -1112,12 +1112,12 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));*/
 
     //Socotra Cucumber Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_CUCUMBER_TREE = register("socotra_cucumber_tree",
