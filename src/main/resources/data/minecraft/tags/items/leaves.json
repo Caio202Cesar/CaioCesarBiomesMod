@@ -157,6 +157,10 @@
     "caiocesarbiomes:durian_fruiting_leaves",
     "caiocesarbiomes:breadfruit_leaves",
     "caiocesarbiomes:breadfruit_fruiting_leaves",
-    "caiocesarbiomes:aspen_leaves"
+    "caiocesarbiomes:aspen_leaves",
+    "caiocesarbiomes:plane_fall_leaves",
+    "caiocesarbiomes:plane_winter_branches",
+    "caiocesarbiomes:pecan_fall_leaves",
+    "caiocesarbiomes:pecan_winter_branches"
   ]
 }
