@@ -1133,6 +1133,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.PONDEROSA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
     //Pomegranate
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
@@ -1158,17 +1159,19 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_FRUITING_BRANCHES));
 
     public static final RegistryObject<Block> POMEGRANATE_WINTER_BRANCHES = registerBlock("pomegranate_winter_branches",
-            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new PomegranateWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_LEAVES));
     public static final RegistryObject<Block> POMEGRANATE_WINTER_FRUITING_BRANCHES = registerBlock("pomegranate_winter_fruiting_branches",
-            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_LEAVES)); //Pomegranate actually drop most of their fruit in fall.
+            () -> new PomegranateWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_BRANCHES)); //Pomegranate actually drop most of their fruit in fall.
+
     public static final RegistryObject<Block> POMEGRANATE_SAPLING = registerBlock("pomegranate_sapling",
             PomegranateSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_POMEGRANATE_SAPLING = BLOCKS.register("potted_pomegranate_sapling",
             () -> new FlowerPotBlock(TreeBlocks.POMEGRANATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
 
     //Pohutukawa
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
