@@ -1136,15 +1136,45 @@ public class TreeBlocks {
     //Pomegranate
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
-    public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
-            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> POMEGRANATE_FALL_LEAVES = registerBlock("pomegranate_fall_leaves",
-            () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES = registerBlock("pomegranate_flowering_leaves",
-            () -> new PomegranateFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_FRUITING_LEAVES));
+
+    public static final RegistryObject<Block> POMEGRANATE_LEAVES =
+            registerBlock("pomegranate_leaves",
+                    () -> new PomegranateLeaves(
+                            AbstractBlock.Properties.create(Material.LEAVES)
+                                    .tickRandomly().hardnessAndResistance(0.2F)
+                                    .notSolid().sound(SoundType.PLANT),
+                            () -> POMEGRANATE_FALL_LEAVES.get(),   // fall leaves
+                            () -> POMEGRANATE_FLOWERING_LEAVES.get() // flowering leaves
+                    )
+            );
+
+
+    public static final RegistryObject<Block> POMEGRANATE_FALL_LEAVES =
+            registerBlock("pomegranate_fall_leaves",
+                    () -> new PomegranateFallLeaves(
+                            AbstractBlock.Properties.create(Material.LEAVES)
+                                    .hardnessAndResistance(0.2F)
+                                    .tickRandomly()
+                                    .notSolid()
+                                    .sound(SoundType.PLANT),
+
+                            () -> POMEGRANATE_FLOWERING_LEAVES.get(), // flowering leaves
+                            () -> POMEGRANATE_FALL_LEAVES.get()       // itself (for temp < 0.9)
+                    )
+            );
+
+    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES =
+            registerBlock("pomegranate_flowering_leaves",
+                    () -> new PomegranateFloweringLeaves(AbstractBlock.Properties
+                            .create(Material.LEAVES)
+                            .tickRandomly()
+                            .hardnessAndResistance(0.2F)
+                            .notSolid()
+                            .sound(SoundType.PLANT)
+                    )
+            );
+
+
     public static final RegistryObject<Block> POMEGRANATE_FRUITING_LEAVES = registerBlock("pomegranate_fruiting_leaves",
             () -> new PomegranateFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_LEAVES));

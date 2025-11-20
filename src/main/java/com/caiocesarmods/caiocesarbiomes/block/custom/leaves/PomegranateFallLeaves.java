@@ -14,17 +14,18 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
+public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> floweringLeavesSupplier;
     private final Supplier<Block> fallLeavesSupplier;
 
-    public PomegranateLeaves(Properties properties,
-                               Supplier<Block> floweringLeavesSupplier,
-                               Supplier<Block> fallLeavesSupplier) {
+    public PomegranateFallLeaves(Properties properties,
+                                 Supplier<Block> floweringLeavesSupplier,
+                                 Supplier<Block> fallLeavesSupplier) {
         super(properties);
         this.floweringLeavesSupplier = floweringLeavesSupplier;
         this.fallLeavesSupplier = fallLeavesSupplier;
     }
+
 
     public boolean ticksRandomly(BlockState state) {
         return true;
