@@ -28,7 +28,6 @@ public class PomegranateFallFruitingLeaves extends LeavesBlock implements IForge
         this.nextStage = nextStage;
     }
 
-
     public boolean ticksRandomly(BlockState state) {
         return true;
     }
@@ -45,23 +44,6 @@ public class PomegranateFallFruitingLeaves extends LeavesBlock implements IForge
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(84) == 0) {
-
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.POMEGRANATE.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        } //PomegranateFallLeaves
-
         if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
@@ -71,7 +53,7 @@ public class PomegranateFallFruitingLeaves extends LeavesBlock implements IForge
 
             worldIn.setBlockState(pos, newState, 2);
 
-        } //PomegranateFruitingWinterBranches
+        }
     }
 
     @Override
@@ -92,7 +74,6 @@ public class PomegranateFallFruitingLeaves extends LeavesBlock implements IForge
         }
         return ActionResultType.SUCCESS;
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;

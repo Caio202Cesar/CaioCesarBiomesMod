@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -15,15 +16,9 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> floweringLeavesSupplier;
-    private final Supplier<Block> fallLeavesSupplier;
-
-    public PomegranateLeaves(Properties properties,
-                               Supplier<Block> floweringLeavesSupplier,
-                               Supplier<Block> fallLeavesSupplier) {
+    public PomegranateLeaves(Properties properties) {
         super(properties);
-        this.floweringLeavesSupplier = floweringLeavesSupplier;
-        this.fallLeavesSupplier = fallLeavesSupplier;
+
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -40,45 +35,27 @@ public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
-
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
 
-        // Only change in certain season (you pick when)
-        if ("FALL".equals(currentSeason) && random.nextInt(30) == 0) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            // Determine which block to go to based on temperature
-            Biome biome = worldIn.getBiome(pos);
-            float temp = biome.getTemperature();
-            Block nextBlock;
-
-            if (temp < 0.9F) {
-                // colder → go to fall leaves
-                nextBlock = fallLeavesSupplier.get();
-
-            } else {
-                // warm enough → stays the same
-                nextBlock = state.getBlock();
-            }
-
-            BlockState newState = nextBlock.getDefaultState()
-                    .with(LeavesBlock.DISTANCE, distance)
-                    .with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            return;
         }
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(60) == 0) {
+        // === 4. If biome is coller (< 0.9 MC temp) AND it's FALL, change to fall leaves ===
+        if (temp < 0.9F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = floweringLeavesSupplier.get()
-                    .getDefaultState()
-                    .with(LeavesBlock.DISTANCE, distance)
-                    .with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 

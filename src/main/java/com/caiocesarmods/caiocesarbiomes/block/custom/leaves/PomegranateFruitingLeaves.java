@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -21,11 +22,8 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 public class PomegranateFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public PomegranateFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PomegranateFruitingLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
     }
 
 
@@ -45,7 +43,19 @@ public class PomegranateFruitingLeaves extends LeavesBlock implements IForgeShea
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //If biome is coller (< 0.9 MC temp) AND it's FALL, change to fall leaves ===
+        if (temp < 0.9F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FALL_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp > 0.89F && "WINTER".equals(currentSeason) && random.nextInt(65) == 0) {
 
             int dropCount = 1;
 
@@ -57,9 +67,8 @@ public class PomegranateFruitingLeaves extends LeavesBlock implements IForgeShea
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 

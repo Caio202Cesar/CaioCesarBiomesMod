@@ -1,12 +1,14 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -20,7 +22,6 @@ public class PomegranateFloweringLeaves extends LeavesBlock implements IForgeShe
         super(properties);
         this.nextStage = nextStage;
     }
-
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -38,7 +39,7 @@ public class PomegranateFloweringLeaves extends LeavesBlock implements IForgeShe
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(56) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
