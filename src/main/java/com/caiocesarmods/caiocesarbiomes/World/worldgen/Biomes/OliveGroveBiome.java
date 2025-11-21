@@ -62,7 +62,7 @@ public class OliveGroveBiome {
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.85F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(11382314).setFogColor(13494015)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())

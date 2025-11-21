@@ -50,7 +50,7 @@ public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         // === 4. If biome is coller (< 0.9 MC temp) AND it's FALL, change to fall leaves ===
-        if (temp < 0.9F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp < 0.85F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

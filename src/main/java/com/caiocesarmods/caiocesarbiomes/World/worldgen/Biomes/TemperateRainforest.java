@@ -71,7 +71,7 @@ public class TemperateRainforest {
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.6F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.7F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(12570083).withFoliageColor(7055681)
                         .withGrassColor(8960871).setFogColor(12570083)
                         .setAmbientSound(ModSoundEvents.LAURISSILVA_AMBIENCE.get())

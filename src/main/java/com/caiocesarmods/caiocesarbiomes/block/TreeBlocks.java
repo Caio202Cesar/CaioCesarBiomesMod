@@ -1137,17 +1137,14 @@ public class TreeBlocks {
     //Pomegranate
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
-    public static final RegistryObject<Block> POMEGRANATE_LEAVES =
-            registerBlock("pomegranate_leaves",
+    public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
                     () -> new PomegranateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                             .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> POMEGRANATE_FALL_LEAVES =
-            registerBlock("pomegranate_fall_leaves",
+    public static final RegistryObject<Block> POMEGRANATE_FALL_LEAVES = registerBlock("pomegranate_fall_leaves",
                     () -> new PomegranateFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                             .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_BRANCHES));
 
-    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES =
-            registerBlock("pomegranate_flowering_leaves",
+    public static final RegistryObject<Block> POMEGRANATE_FLOWERING_LEAVES = registerBlock("pomegranate_flowering_leaves",
                     () -> new PomegranateFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                             .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_FRUITING_LEAVES));
 
@@ -1188,6 +1185,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_POHUTUKAWA_SAPLING = BLOCKS.register("potted_pohutukawa_sapling",
             () -> new FlowerPotBlock(TreeBlocks.POHUTUKAWA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Plum
     public static final RegistryObject<Block> PLUM_LOG = registerBlock("plum_log",
             ModLogs::new);

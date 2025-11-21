@@ -63,7 +63,7 @@ public class SubtropicalPineDryForestBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.85F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5877296)
                         .withGrassColor(12564309).setFogColor(7907327)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
