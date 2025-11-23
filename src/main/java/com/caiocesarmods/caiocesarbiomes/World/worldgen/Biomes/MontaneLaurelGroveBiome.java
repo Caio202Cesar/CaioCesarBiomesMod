@@ -62,6 +62,7 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
+    //Hardiness zone 10: 0.85F - 0.89F
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
             .temperature(0.85F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)

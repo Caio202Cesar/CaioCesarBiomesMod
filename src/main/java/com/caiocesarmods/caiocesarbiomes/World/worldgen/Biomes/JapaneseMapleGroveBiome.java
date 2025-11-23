@@ -67,8 +67,9 @@ public class JapaneseMapleGroveBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
+        //Hardiness zone 8: 0.75F - 0.79F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.75F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7972607).withFoliageColor(5877296)
                         .withGrassColor(7979098).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
