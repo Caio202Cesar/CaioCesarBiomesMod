@@ -62,6 +62,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BUNYA_PINE_SAPLING = BLOCKS.register("potted_bunya_pine_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BUNYA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Avocado
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
             ModLogs::new);
@@ -73,8 +74,14 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
             () -> new FlowerPotBlock(TreeBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Aspen
     public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ASPEN_FALL_LEAVES = registerBlock("aspen_fall_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ASPEN_WINTER_BRANCHES = registerBlock("aspen_winter_branches",
             ModLeaves::new);
     public static final RegistryObject<Block> ASPEN_SAPLING = registerBlock("aspen_sapling",
             AspenSapling::new);
@@ -108,6 +115,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BALD_CYPRESS_SAPLING = BLOCKS.register("potted_bald_cypress_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BALD_CYPRESS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Banana
     public static final RegistryObject<Block> BANANA_LOG = registerBlock("banana_log",
             BananaLog::new);
@@ -127,10 +137,17 @@ public class TreeBlocks {
             BananaGreenBunchBlock::new);
     public static final RegistryObject<Block> BANANA_STALK = registerBlock("banana_stalk",
             BananaStalkBlock::new);
+
+
+
     // Beech
     public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
             ModLogs::new);
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COOPER_BEECH_FALL_LEAVES = registerBlock("cooper_beech_fall_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COOPER_BEECH_WINTER_BRANCHES = registerBlock("cooper_beech_winter_branches",
             ModLeaves::new);
     public static final RegistryObject<Block> COOPER_BEECH_SAPLING = registerBlock("cooper_beech_sapling",
             CooperBeechSapling::new);
@@ -138,6 +155,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_COOPER_BEECH_SAPLING = BLOCKS.register("potted_cooper_beech_sapling",
             () -> new FlowerPotBlock(TreeBlocks.COOPER_BEECH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Bismarck Palm
     public static final RegistryObject<Block> BISMARCK_PALM_LOG = registerBlock("bismarck_palm_log",
             ModLogs::new);
@@ -149,6 +169,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BISMARCK_PALM_SAPLING = BLOCKS.register("potted_bismarck_palm_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BISMARCK_PALM_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Breadfruit
     public static final RegistryObject<Block> BREADFRUIT_LEAVES = registerBlock("breadfruit_leaves",
             () -> new BreadfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -162,10 +184,17 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BREADFRUIT_SAPLING = BLOCKS.register("potted_breadfruit_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BREADFRUIT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Black Poplar
     public static final RegistryObject<Block> BLACK_POPLAR_LOG = registerBlock("black_poplar_log",
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_POPLAR_LEAVES = registerBlock("black_poplar_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BLACK_POPLAR_FALL_LEAVES = registerBlock("black_poplar_fall_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BLACK_POPLAR_WINTER_BRANCHES = registerBlock("black_poplar_winter_branches",
             ModLeaves::new);
     public static final RegistryObject<Block> BLACK_POPLAR_SAPLING = registerBlock("black_poplar_sapling",
             BlackPoplarSapling::new);
@@ -173,18 +202,25 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_BLACK_POPLAR_SAPLING = BLOCKS.register("potted_black_poplar_sapling",
             () -> new FlowerPotBlock(TreeBlocks.BLACK_POPLAR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     public static final RegistryObject<Block> FREMONT_POPLAR_LEAVES = registerBlock("fremont_poplar_leaves",
             () -> new FremontPoplarLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_AUTUMN_LEAVES));
     public static final RegistryObject<Block> FREMONT_POPLAR_AUTUMN_LEAVES = registerBlock("fremont_poplar_autumn_leaves",
             () -> new FremontPoplarAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_LEAVES));
+    public static final RegistryObject<Block> FREMONT_POPLAR_WINTER_BRANCHES = registerBlock("fremont_poplar_winter_branches",
+            ModLeaves::new);
     public static final RegistryObject<Block> FREMONT_POPLAR_SAPLING = registerBlock("fremont_poplar_sapling",
             FremontPoplarSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_FREMONT_POPLAR_SAPLING = BLOCKS.register("potted_fremont_poplar_sapling",
             () -> new FlowerPotBlock(TreeBlocks.FREMONT_POPLAR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Blue Spruce
     public static final RegistryObject<Block> BLUE_SPRUCE_LEAVES = registerBlock("blue_spruce_leaves",
             ModLeaves::new);
@@ -208,6 +244,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CAMELLIA_SAPLING = BLOCKS.register("potted_camellia_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CAMELLIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> TEA_SAPLING = registerBlock("tea_sapling",
@@ -216,6 +253,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_TEA_SAPLING = BLOCKS.register("potted_tea_sapling",
             () -> new FlowerPotBlock(TreeBlocks.TEA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Carob
     public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
             ModLogs::new);
@@ -227,6 +266,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CAROB_SAPLING = BLOCKS.register("potted_carob_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CAROB_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Canary Date
     public static final RegistryObject<Block> CANARY_DATE_LOG = registerBlock("canary_date_log",
             ModLogs::new);
@@ -242,6 +283,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CANARY_DATE_SAPLING = BLOCKS.register("potted_canary_date_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CANARY_DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Canary Pine
     public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
             ModLogs::new);
@@ -253,6 +296,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CANARY_PINE_SAPLING = BLOCKS.register("potted_canary_pine_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CANARY_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Casuarina
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
             ModLogs::new);
@@ -264,6 +310,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CASUARINA_SAPLING = BLOCKS.register("potted_casuarina_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CASUARINA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Citrus
     public static final RegistryObject<Block> CITRUS_LOG = registerBlock("citrus_log",
             ModLogs::new);
@@ -372,6 +421,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_MANDARIN_SAPLING = BLOCKS.register("potted_mandarin_sapling",
             () -> new FlowerPotBlock(TreeBlocks.MANDARIN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Chinese Pine
     public static final RegistryObject<Block> CHINESE_RED_PINE_LOG = registerBlock("chinese_red_pine_log",
             ModLogs::new);
@@ -383,10 +434,21 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CHINESE_RED_PINE_SAPLING = BLOCKS.register("potted_chinese_red_pine_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CHINESE_RED_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Crabapple
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
             ModLogs::new);
     public static final RegistryObject<Block> PINK_CRABAPPLE_LEAVES = registerBlock("crabapple_pink_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_CRABAPPLE_BLOSSOM = registerBlock("crabapple_pink_blossom",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_pink_fruiting_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_pink_fall_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_pink_winter_branches",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_CRABAPPLE_SAPLING = registerBlock("crabapple_pink_sapling",
             PinkCrabappleSapling::new);
@@ -396,12 +458,22 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> WHITE_CRABAPPLE_LEAVES = registerBlock("crabapple_white_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_CRABAPPLE_BLOSSOM = registerBlock("crabapple_white_blossom",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_white_fruiting_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_white_fall_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_white_winter_branches",
+            ModLeaves::new);
     public static final RegistryObject<Block> WHITE_CRABAPPLE_SAPLING = registerBlock("crabapple_white_sapling",
             WhiteCrabappleSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_white_sapling",
             () -> new FlowerPotBlock(TreeBlocks.WHITE_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Coast Cottonwood
     public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
             ModLogs::new);
@@ -413,6 +485,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_COAST_COTTONWOOD_SAPLING = BLOCKS.register("potted_coast_cottonwood_sapling",
             () -> new FlowerPotBlock(TreeBlocks.COAST_COTTONWOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Cork Oak
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
             ModLogs::new);
@@ -424,6 +498,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CORK_OAK_SAPLING = BLOCKS.register("potted_cork_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CORK_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Coconut
     public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
             ModLogs::new);
@@ -441,7 +517,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_COCONUT_SAPLING = BLOCKS.register("potted_coconut_sapling",
             () -> new FlowerPotBlock(TreeBlocks.COCONUT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
 
@@ -463,6 +538,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_DATE_SAPLING = BLOCKS.register("potted_date_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Dragon Blood
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
@@ -474,6 +551,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_DRAGON_BLOOD_SAPLING = BLOCKS.register("potted_dragon_blood_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DRAGON_BLOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Douglas Fir
     public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
             ModLogs::new);
@@ -485,6 +565,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_DOUGLAS_FIR_SAPLING = BLOCKS.register("potted_douglas_fir_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DOUGLAS_FIR_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Durian
     public static final RegistryObject<Block> DURIAN_LEAVES = registerBlock("durian_leaves",
             () -> new DurianLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -501,7 +584,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_DURIAN_SAPLING = BLOCKS.register("potted_durian_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DURIAN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
 
@@ -524,6 +606,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_ELDERBERRY_SAPLING = BLOCKS.register("potted_elderberry_sapling",
             () -> new FlowerPotBlock(TreeBlocks.ELDERBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Eucalyptus
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
             ModLogs::new);
@@ -535,6 +620,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
             () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
             ModLogs::new);
