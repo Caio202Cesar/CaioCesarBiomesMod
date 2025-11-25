@@ -503,8 +503,20 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.RED_CRAPE_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_white_spring_leaves",
+            () -> new WhiteCrapeMyrtleSpringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRAPE_MYRTLE_LEAVES));
     public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_white_leaves",
-            ModLeaves::new);
+            () -> new WhiteCrapeMyrtleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_white_fall_leaves",
+            () -> new WhiteCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRAPE_MYRTLE_WINTER_BRANCHES));
+    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_white_winter_branches",
+            () -> new WhiteCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES));
+
     public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_white_sapling",
             WhiteCrapeMyrtleSapling::new);
     @SuppressWarnings("deprecation")
@@ -512,8 +524,20 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.WHITE_CRAPE_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_purple_spring_leaves",
+            () -> new PurpleCrapeMyrtleSpringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_CRAPE_MYRTLE_LEAVES));
     public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_purple_leaves",
-            ModLeaves::new);
+            () -> new PurpleCrapeMyrtleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_purple_fall_leaves",
+            () -> new PurpleCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_CRAPE_MYRTLE_WINTER_BRANCHES));
+    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_purple_winter_branches",
+            () -> new PurpleCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_CRAPE_MYRTLE_SPRING_LEAVES));
+
     public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_purple_sapling",
             PurpleCrapeMyrtleSapling::new);
     @SuppressWarnings("deprecation")
@@ -521,8 +545,20 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.PURPLE_CRAPE_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_pink_spring_leaves",
+            () -> new PinkCrapeMyrtleSpringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRAPE_MYRTLE_LEAVES));
     public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_pink_leaves",
-            ModLeaves::new);
+            () -> new PinkCrapeMyrtleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_pink_fall_leaves",
+            () -> new PinkCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRAPE_MYRTLE_WINTER_BRANCHES));
+    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_pink_winter_branches",
+            () -> new PinkCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES));
+
     public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_pink_sapling",
             PinkCrapeMyrtleSapling::new);
     @SuppressWarnings("deprecation")
