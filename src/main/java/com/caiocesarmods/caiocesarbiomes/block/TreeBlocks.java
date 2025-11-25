@@ -482,15 +482,20 @@ public class TreeBlocks {
     //Crape Myrtle
     public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
             ModLogs::new);
+
+    public static final RegistryObject<Block> RED_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_red_spring_leaves",
+            () -> new RedCrapeMyrtleSpringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRAPE_MYRTLE_LEAVES));
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_LEAVES = registerBlock("crape_myrtle_red_leaves",
             () -> new RedCrapeMyrtleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_red_fall_leaves",
-            ModLeaves::new);
+            () -> new RedCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRAPE_MYRTLE_WINTER_BRANCHES));
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_red_winter_branches",
-            ModLeaves::new);
-    public static final RegistryObject<Block> RED_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_red_spring_leaves",
-            ModLeaves::new);
+            () -> new RedCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRAPE_MYRTLE_SPRING_LEAVES));
+
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_red_sapling",
             RedCrapeMyrtleSapling::new);
     @SuppressWarnings("deprecation")
