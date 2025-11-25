@@ -161,6 +161,14 @@
     "caiocesarbiomes:plane_fall_leaves",
     "caiocesarbiomes:plane_winter_branches",
     "caiocesarbiomes:pecan_fall_leaves",
-    "caiocesarbiomes:pecan_winter_branches"
+    "caiocesarbiomes:pecan_winter_branches",
+    "caiocesarbiomes:crabapple_pink_fall_leaves",
+    "caiocesarbiomes:crabapple_pink_fruiting_leaves",
+    "caiocesarbiomes:crabapple_pink_blossom",
+    "caiocesarbiomes:crabapple_pink_winter_branches",
+    "caiocesarbiomes:crabapple_white_fall_leaves",
+    "caiocesarbiomes:crabapple_white_fruiting_leaves",
+    "caiocesarbiomes:crabapple_white_blossom",
+    "caiocesarbiomes:crabapple_white_winter_branches"
   ]
 }

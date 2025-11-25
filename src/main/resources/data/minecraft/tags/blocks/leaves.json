@@ -32,8 +32,6 @@
     "caiocesarbiomes:crape_myrtle_purple_leaves",
     "caiocesarbiomes:crape_myrtle_pink_leaves",
     "caiocesarbiomes:southern_wax_myrtle_leaves",
-    "caiocesarbiomes:crabapple_pink_leaves",
-    "caiocesarbiomes:crabapple_white_leaves",
     "caiocesarbiomes:loquat_leaves",
     "caiocesarbiomes:loquat_flowering_leaves",
     "caiocesarbiomes:loquat_fruiting_leaves",
@@ -161,7 +159,17 @@
     "caiocesarbiomes:durian_fruiting_leaves",
     "caiocesarbiomes:breadfruit_leaves",
     "caiocesarbiomes:breadfruit_fruiting_leaves",
-    "caiocesarbiomes:aspen_leaves"
+    "caiocesarbiomes:aspen_leaves",
+    "caiocesarbiomes:crabapple_pink_leaves",
+    "caiocesarbiomes:crabapple_pink_fall_leaves",
+    "caiocesarbiomes:crabapple_pink_fruiting_leaves",
+    "caiocesarbiomes:crabapple_pink_blossom",
+    "caiocesarbiomes:crabapple_pink_winter_branches",
+    "caiocesarbiomes:crabapple_white_leaves",
+    "caiocesarbiomes:crabapple_white_fall_leaves",
+    "caiocesarbiomes:crabapple_white_fruiting_leaves",
+    "caiocesarbiomes:crabapple_white_blossom",
+    "caiocesarbiomes:crabapple_white_winter_branches"
   ]
 }
 

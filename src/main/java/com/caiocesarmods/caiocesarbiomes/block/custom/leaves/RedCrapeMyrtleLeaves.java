@@ -2,7 +2,6 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -13,10 +12,9 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
-public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
-    public PomegranateLeaves(Properties properties) {
+public class RedCrapeMyrtleLeaves extends LeavesBlock implements IForgeShearable {
+    public RedCrapeMyrtleLeaves(Properties properties) {
         super(properties);
 
     }
@@ -40,21 +38,31 @@ public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+        //Pattern for  tropical climates
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FLOWERING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.RED_CRAPE_MYRTLE_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
 
-        // === 4. If biome is coller (< 0.9 MC temp) AND it's FALL, change to fall leaves ===
-        if (temp < 0.9F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        // Pattern for subtropical climates
+        if (temp < 0.89F && temp > 0.79F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.RED_CRAPE_MYRTLE_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        // Pattern for temperate climates
+        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.RED_CRAPE_MYRTLE_FALL_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
