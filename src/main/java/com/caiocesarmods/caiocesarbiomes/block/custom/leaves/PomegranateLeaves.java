@@ -49,8 +49,17 @@ public class PomegranateLeaves extends LeavesBlock implements IForgeShearable {
             return;
         }
 
-        // === 4. If biome is coller (< 0.9 MC temp) AND it's FALL, change to fall leaves ===
-        if (temp < 0.9F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        //Pattern for subtropical biomes
+        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.POMEGRANATE_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for temperate biomes
+        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
