@@ -440,8 +440,10 @@ public class TreeBlocks {
     //Crabapple
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> PINK_CRABAPPLE_LEAVES = registerBlock("crabapple_pink_leaves",
-            ModLeaves::new);
+            () -> new PinkCrabappleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRABAPPLE_FALL_LEAVES));
     public static final RegistryObject<Block> PINK_CRABAPPLE_BLOSSOM = registerBlock("crabapple_pink_blossom",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_pink_fruiting_leaves",
@@ -450,12 +452,15 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_pink_winter_branches",
             ModLeaves::new);
+
     public static final RegistryObject<Block> PINK_CRABAPPLE_SAPLING = registerBlock("crabapple_pink_sapling",
             PinkCrabappleSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PINK_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PINK_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> WHITE_CRABAPPLE_LEAVES = registerBlock("crabapple_white_leaves",
             () -> new WhiteCrabappleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_FALL_LEAVES));
@@ -471,6 +476,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WHITE_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_white_winter_branches",
             () -> new WhiteCrabappleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_BLOSSOM));
+
     public static final RegistryObject<Block> WHITE_CRABAPPLE_SAPLING = registerBlock("crabapple_white_sapling",
             WhiteCrabappleSapling::new);
     @SuppressWarnings("deprecation")
@@ -567,6 +573,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+
     //Coast Cottonwood
     public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
             ModLogs::new);
@@ -580,6 +587,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+
     //Cork Oak
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
             ModLogs::new);
@@ -591,6 +599,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_CORK_OAK_SAPLING = BLOCKS.register("potted_cork_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.CORK_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
 
 
     //Coconut
@@ -612,9 +621,9 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
     ///D
-//Date
+
+    //Date
     public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
             ModLogs::new);
     public static final RegistryObject<Block> DATE_LEAVES = registerBlock("date_leaves",
@@ -631,6 +640,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_DATE_SAPLING = BLOCKS.register("potted_date_sapling",
             () -> new FlowerPotBlock(TreeBlocks.DATE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
 
 
     //Dragon Blood
