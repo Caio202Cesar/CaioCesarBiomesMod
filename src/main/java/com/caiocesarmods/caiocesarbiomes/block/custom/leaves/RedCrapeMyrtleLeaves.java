@@ -49,7 +49,7 @@ public class RedCrapeMyrtleLeaves extends LeavesBlock implements IForgeShearable
         }
 
         // Pattern for subtropical climates
-        if (temp < 0.89F && temp > 0.79F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
