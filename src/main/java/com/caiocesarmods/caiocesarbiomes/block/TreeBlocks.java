@@ -760,15 +760,27 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FIG_FRUITING_LEAVES = registerBlock("fig_fruiting_leaves",
             () -> new FigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
+    public static final RegistryObject<Block> FIG_FALL_LEAVES = registerBlock("fig_fall_leaves",
+            () -> new FigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_WINTER_BRANCHES));
+    public static final RegistryObject<Block> FIG_WINTER_BRANCHES = registerBlock("fig_winter_branches",
+            () -> new FigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
     public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
             () -> new WhiteFigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_FRUITING_LEAVES));
     public static final RegistryObject<Block> WHITE_FIG_FRUITING_LEAVES = registerBlock("white_fig_fruiting_leaves",
             () -> new WhiteFigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
+    public static final RegistryObject<Block> WHITE_FIG_FALL_LEAVES = registerBlock("white_fig_fall_leaves",
+            () -> new WhiteFigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_WINTER_BRANCHES));
+    public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("white_fig_winter_branches",
+            () -> new WhiteFigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
+
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
             FigSapling::new);
-
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_FIG_SAPLING = BLOCKS.register("potted_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
