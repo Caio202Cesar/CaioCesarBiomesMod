@@ -750,9 +750,10 @@ public class TreeBlocks {
 
 
     ///F
-//Fig
+    //Fig
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
             () -> new FigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_FRUITING_LEAVES));
@@ -767,10 +768,13 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
             FigSapling::new);
+
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_FIG_SAPLING = BLOCKS.register("potted_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
             SycamoreFigLeaves::new);
     public static final RegistryObject<Block> SYCAMORE_FIG_SAPLING = registerBlock("sycamore_fig_sapling",
