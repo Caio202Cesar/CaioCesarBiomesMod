@@ -610,11 +610,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
             ModLogs::new);
     public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
-            () -> new CoconutLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new CoconutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
             CoconutBunchBlock::new);
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",
@@ -631,11 +628,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
             ModLogs::new);
     public static final RegistryObject<Block> DATE_LEAVES = registerBlock("date_leaves",
-            () -> new DateLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new DateLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> DATE_BUNCH = registerBlock("date_bunch",
             DateBunchBlock::new);
     public static final RegistryObject<Block> DATE_SAPLING = registerBlock("date_sapling",
@@ -698,6 +692,7 @@ public class TreeBlocks {
     //Elderberry
     public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> ELDERBERRY_LEAVES = registerBlock("elderberry_leaves",
             () -> new ElderberryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_FLOWERING_LEAVES));
@@ -706,7 +701,14 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_FRUITING_LEAVES));
     public static final RegistryObject<Block> ELDERBERRY_FRUITING_LEAVES = registerBlock("elderberry_fruiting_leaves",
             () -> new ElderberryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
+    public static final RegistryObject<Block> ELDERBERRY_FALL_LEAVES = registerBlock("elderberry_fall_leaves",
+            () -> new ElderberryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
+    public static final RegistryObject<Block> ELDERBERRY_WINTER_BRANCHES = registerBlock("elderberry_winter_branches",
+            () -> new ElderberryWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_LEAVES));
+
     public static final RegistryObject<Block> ELDERBERRY_SAPLING = registerBlock("elderberry_sapling",
             ElderberrySapling::new);
     @SuppressWarnings("deprecation")

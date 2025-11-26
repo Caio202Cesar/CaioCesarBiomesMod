@@ -74,7 +74,7 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_FALL_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
