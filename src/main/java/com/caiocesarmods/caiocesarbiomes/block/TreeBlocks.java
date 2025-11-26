@@ -756,7 +756,7 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
             () -> new FigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> FIG_FRUITING_LEAVES = registerBlock("fig_fruiting_leaves",
             () -> new FigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
