@@ -766,6 +766,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FIG_WINTER_BRANCHES = registerBlock("fig_winter_branches",
             () -> new FigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
+
     public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
             () -> new WhiteFigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -774,7 +775,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
     public static final RegistryObject<Block> WHITE_FIG_FALL_LEAVES = registerBlock("white_fig_fall_leaves",
             () -> new WhiteFigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_WINTER_BRANCHES));
     public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("white_fig_winter_branches",
             () -> new WhiteFigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
