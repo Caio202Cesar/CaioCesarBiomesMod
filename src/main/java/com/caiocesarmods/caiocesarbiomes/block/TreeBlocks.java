@@ -796,6 +796,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_SYCAMORE_FIG_SAPLING = BLOCKS.register("potted_sycamore_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.SYCAMORE_FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Fir
     public static final RegistryObject<Block> SUBALPINE_FIR_LOG = registerBlock("subalpine_fir_log",
             ModLogs::new);
