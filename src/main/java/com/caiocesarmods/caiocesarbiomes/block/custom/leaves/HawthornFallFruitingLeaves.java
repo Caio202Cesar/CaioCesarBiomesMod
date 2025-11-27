@@ -19,8 +19,8 @@ import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 
-public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public HawthornFruitingLeaves(Properties properties) {
+public class HawthornFallFruitingLeaves extends LeavesBlock implements IForgeShearable {
+    public HawthornFallFruitingLeaves(Properties properties) {
         super(properties);
     }
 
@@ -45,29 +45,37 @@ public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearab
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp < 0.89F && temp > 0.8F && "WINTER".equals(currentSeason) && random.nextInt(35) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_FRUITING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_WINTER_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp < 0.79F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_FRUITING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_WINTER_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.HAWTHORN_BERRIES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_FRUITING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
@@ -83,7 +91,7 @@ public class HawthornFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
