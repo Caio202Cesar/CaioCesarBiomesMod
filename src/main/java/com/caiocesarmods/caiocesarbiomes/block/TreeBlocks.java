@@ -862,9 +862,13 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_HAWTHORN_SAPLING = BLOCKS.register("potted_hawthorn_sapling",
             () -> new FlowerPotBlock(TreeBlocks.HAWTHORN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+
     //Hazelnut
     public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> HAZELNUT_LEAVES = registerBlock("hazelnut_leaves",
             () -> new HazelnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_FLOWERING_LEAVES));
@@ -874,12 +878,24 @@ public class TreeBlocks {
     public static final RegistryObject<Block> HAZELNUT_FRUITING_LEAVES = registerBlock("hazelnut_fruiting_leaves",
             () -> new HazelnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_LEAVES));
+    public static final RegistryObject<Block> HAZELNUT_FALL_LEAVES = registerBlock("hazelnut_fall_leaves",
+            () -> new HazelnutFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_LEAVES));
+    public static final RegistryObject<Block> HAZELNUT_WINTER_BRANCHES = registerBlock("hazelnut_winter_branches",
+            () -> new HazelnutWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_LEAVES));
+    public static final RegistryObject<Block> HAZELNUT_SPRING_BLOOM = registerBlock("hazelnut_spring_bloom",
+            () -> new HazelnutSpringBloom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_LEAVES));
+
     public static final RegistryObject<Block> HAZELNUT_SAPLING = registerBlock("hazelnut_sapling",
             HazelnutSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_HAZELNUT_SAPLING = BLOCKS.register("potted_hazelnut_sapling",
             () -> new FlowerPotBlock(TreeBlocks.HAZELNUT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Holm Oak
     public static final RegistryObject<Block> HOLM_OAK_LOG = registerBlock("holm_oak_log",
             ModLogs::new);
