@@ -830,21 +830,32 @@ public class TreeBlocks {
 //Hawthorn
     public static final RegistryObject<Block> HAWTHORN_LOG = registerBlock("hawthorn_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> HAWTHORN_LEAVES = registerBlock("hawthorn_leaves",
             () -> new HawthornLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> HAWTHORN_FRUITING_LEAVES = registerBlock("hawthorn_fruiting_leaves",
+            () -> new HawthornFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+
     public static final RegistryObject<Block> HAWTHORN_FLOWERING_LEAVES = registerBlock("hawthorn_flowering_leaves",
             () -> new HawthornFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FRUITING_LEAVES));
-    public static final RegistryObject<Block> HAWTHORN_FRUITING_LEAVES = registerBlock("hawthorn_fruiting_leaves",
-            () -> new HawthornFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+
+    public static final RegistryObject<Block> HAWTHORN_FALL_LEAVES = registerBlock("hawthorn_fall_leaves",
+            () -> new HawthornFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> HAWTHORN_FALL_FRUITING_LEAVES = registerBlock("hawthorn_fall_fruiting_leaves",
             () -> new HawthornFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+
+    public static final RegistryObject<Block> HAWTHORN_WINTER_BRANCHES = registerBlock("hawthorn_winter_branches",
+            () -> new HawthornWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FLOWERING_LEAVES));
     public static final RegistryObject<Block> HAWTHORN_WINTER_FRUITING_BRANCHES = registerBlock("hawthorn_winter_fruiting_branches",
             () -> new HawthornWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FLOWERING_LEAVES));
+
     public static final RegistryObject<Block> HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
             HawthornSapling::new);
     @SuppressWarnings("deprecation")
