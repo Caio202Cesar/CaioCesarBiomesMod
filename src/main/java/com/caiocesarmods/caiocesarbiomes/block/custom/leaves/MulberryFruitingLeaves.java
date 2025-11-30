@@ -45,7 +45,7 @@ public class MulberryFruitingLeaves extends LeavesBlock implements IForgeShearab
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(50) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(75) == 0) {
 
             int dropCount = 1;
 
