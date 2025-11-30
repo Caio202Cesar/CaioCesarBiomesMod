@@ -1176,6 +1176,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_MULBERRY_SAPLING = BLOCKS.register("potted_mulberry_sapling",
             () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Mugo Pine
     public static final RegistryObject<Block> MUGO_PINE_LOG = registerBlock("mugo_pine_log",
             ModLogs::new);
