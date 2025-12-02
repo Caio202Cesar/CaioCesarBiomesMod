@@ -63,7 +63,7 @@ public class OliveGroveBiome {
 
         //Hardiness zone 9: 0.8F - 0.84F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.82F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.8F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(11382314).setFogColor(13494015)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())

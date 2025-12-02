@@ -63,8 +63,10 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
+    //Hardiness zone 10: 0.85F - 0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
+    //Y = your current height in blocks; 64 = sea level height.
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
-            .temperature(0.83F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+            .temperature(0.85F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12570083).withFoliageColor(8293460)
                     .withGrassColor(3504685).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
