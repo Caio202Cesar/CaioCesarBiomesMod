@@ -1658,6 +1658,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(7, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Sausage Tree (savanna)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEACH_TREE = register("peach_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
+                    new SimpleBlockStateProvider(States.PEACH_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+
 
     public static final class States {
 
