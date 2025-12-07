@@ -1487,9 +1487,11 @@ public class TreeBlocks {
             () -> new RedKapokLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_WINTER_BRANCHES));
     public static final RegistryObject<Block> RED_KAPOK_WINTER_BRANCHES = registerBlock("red_kapok_winter_branches",
-            RedKapokFloweringBranches::new);
+            () -> new RedKapokWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_FLOWERING_BRANCHES));
     public static final RegistryObject<Block> RED_KAPOK_FLOWERING_BRANCHES = registerBlock("red_kapok_flowering_branches",
-            RedKapokFloweringBranches::new);
+            () -> new RedKapokFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_LEAVES));
     public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("red_kapok_sapling",
             RedKapokSapling::new);
     @SuppressWarnings("deprecation")
