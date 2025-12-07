@@ -35,14 +35,16 @@ public class HotMediterraneanBeachBiome {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-
+        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
+                new MobSpawnInfo.Spawners(EntityType.HUSK, 100, 7, 10));
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
         biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
         biomegenerationsettings$builder.withStructure(StructureFeatures.SHIPWRECK_BEACHED);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_OCEAN);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
