@@ -970,20 +970,6 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> RED_MAPLE_FALL_LEAVES = registerBlock("red_maple_fall_leaves",
-            RedMapleFallLeaves::new);
-    public static final RegistryObject<Block> RED_MAPLE_WINTER_BRANCHES = registerBlock("red_maple_winter_branches",
-            RedMapleWinterBranches::new);
-
-    public static final RegistryObject<Block> RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
-            RedMapleSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_RED_MAPLE_SAPLING = BLOCKS.register("potted_red_maple_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.RED_MAPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
-
 
 
     //Jungle Figs
@@ -1502,16 +1488,38 @@ public class TreeBlocks {
 
     //Red Oak
     public static final RegistryObject<Block> RED_OAK_LEAVES = registerBlock("red_oak_leaves",
-            RedOakLeaves::new);
+            () -> new RedOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_OAK_FALL_LEAVES));
     public static final RegistryObject<Block> RED_OAK_FALL_LEAVES = registerBlock("red_oak_fall_leaves",
-            RedOakFallLeaves::new);
+            () -> new RedOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_OAK_WINTER_BRANCHES));
     public static final RegistryObject<Block> RED_OAK_WINTER_BRANCHES = registerBlock("red_oak_winter_branches",
-            RedOakWinterBranches::new);//oak_winter_branches
+            () -> new RedOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_OAK_LEAVES));
     public static final RegistryObject<Block> RED_OAK_SAPLING = registerBlock("red_oak_sapling",
             RedOakSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_RED_OAK_SAPLING = BLOCKS.register("potted_red_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.RED_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    //Red Maple
+    public static final RegistryObject<Block> RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            () -> new RedMapleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_MAPLE_FALL_LEAVES));
+    public static final RegistryObject<Block> RED_MAPLE_FALL_LEAVES = registerBlock("red_maple_fall_leaves",
+            () -> new RedMapleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_MAPLE_WINTER_BRANCHES));
+    public static final RegistryObject<Block> RED_MAPLE_WINTER_BRANCHES = registerBlock("red_maple_winter_branches",
+            () -> new RedMapleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_MAPLE_LEAVES));
+
+    public static final RegistryObject<Block> RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
+            RedMapleSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RED_MAPLE_SAPLING = BLOCKS.register("potted_red_maple_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RED_MAPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

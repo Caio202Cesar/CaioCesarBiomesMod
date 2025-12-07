@@ -107,6 +107,8 @@
     "caiocesarbiomes:live_oak_leaves",
     "caiocesarbiomes:dragon_blood_leaves",
     "caiocesarbiomes:red_oak_leaves",
+    "caiocesarbiomes:red_oak_fall_leaves",
+    "caiocesarbiomes:red_oak_winter_branches",
     "caiocesarbiomes:japanese_pine_leaves",
     "caiocesarbiomes:socotra_cucumber_leaves",
     "caiocesarbiomes:socotra_cucumber_leaves_vine",
@@ -189,7 +191,10 @@
     "caiocesarbiomes:crabapple_white_fall_leaves",
     "caiocesarbiomes:crabapple_white_fruiting_leaves",
     "caiocesarbiomes:crabapple_white_blossom",
-    "caiocesarbiomes:crabapple_white_winter_branches"
+    "caiocesarbiomes:crabapple_white_winter_branches",
+    "caiocesarbiomes:red_maple_leaves",
+    "caiocesarbiomes:red_maple_fall_leaves",
+    "caiocesarbiomes:red_maple_winter_branches"
   ]
 }
 
