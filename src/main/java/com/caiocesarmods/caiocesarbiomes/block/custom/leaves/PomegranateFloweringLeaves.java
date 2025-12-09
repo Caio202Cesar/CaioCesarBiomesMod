@@ -39,7 +39,7 @@ public class PomegranateFloweringLeaves extends LeavesBlock implements IForgeShe
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
