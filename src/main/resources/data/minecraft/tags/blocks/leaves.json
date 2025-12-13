@@ -182,6 +182,8 @@
     "caiocesarbiomes:breadfruit_leaves",
     "caiocesarbiomes:breadfruit_fruiting_leaves",
     "caiocesarbiomes:aspen_leaves",
+    "caiocesarbiomes:aspen_fall_leaves",
+    "caiocesarbiomes:aspen_winter_branches",
     "caiocesarbiomes:crabapple_pink_leaves",
     "caiocesarbiomes:crabapple_pink_fall_leaves",
     "caiocesarbiomes:crabapple_pink_fruiting_leaves",
@@ -194,7 +196,8 @@
     "caiocesarbiomes:crabapple_white_winter_branches",
     "caiocesarbiomes:red_maple_leaves",
     "caiocesarbiomes:red_maple_fall_leaves",
-    "caiocesarbiomes:red_maple_winter_branches"
+    "caiocesarbiomes:red_maple_winter_branches",
+
   ]
 }
 

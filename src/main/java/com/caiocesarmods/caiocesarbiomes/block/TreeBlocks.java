@@ -78,11 +78,14 @@ public class TreeBlocks {
 
     //Aspen
     public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
-            ModLeaves::new);
+            () -> new AspenLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_FALL_LEAVES));
     public static final RegistryObject<Block> ASPEN_FALL_LEAVES = registerBlock("aspen_fall_leaves",
-            ModLeaves::new);
+            () -> new AspenFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_WINTER_BRANCHES));
     public static final RegistryObject<Block> ASPEN_WINTER_BRANCHES = registerBlock("aspen_winter_branches",
-            ModLeaves::new);
+            () -> new AspenWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_LEAVES));
     public static final RegistryObject<Block> ASPEN_SAPLING = registerBlock("aspen_sapling",
             AspenSapling::new);
     @SuppressWarnings("deprecation")
