@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "green_dye",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:matcha_powder"
+    }
+  ],
+  "result": {
+    "item": "minecraft:green_dye"
+  }
+}

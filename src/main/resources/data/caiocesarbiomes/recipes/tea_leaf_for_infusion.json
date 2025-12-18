@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "X": {
+      "item": "caiocesarbiomes:tea_leaf"
+    },
+    "#": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:tea_leaf_for_infusion",
+    "count": 1
+  }
+}

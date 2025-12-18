@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "X": {
+      "item": "caiocesarbiomes:matcha_powder"
+    },
+    "#": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:matcha_latte",
+    "count": 3
+  }
+}

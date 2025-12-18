@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/bunchberry_plant",
+    "particle": "caiocesarbiomes:block/bunchberry_plant"
+  }
+}

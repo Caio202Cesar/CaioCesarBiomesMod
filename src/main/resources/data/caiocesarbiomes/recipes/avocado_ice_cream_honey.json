@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ECE",
+    "DBD",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:ice_cream_cone"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "C": {
+      "item": "caiocesarbiomes:avocado"
+    },
+    "D": {
+      "item": "minecraft:snowball"
+    },
+    "E": {
+      "item": "minecraft:honey_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:avocado_ice_cream",
+    "count": 3
+  }
+}

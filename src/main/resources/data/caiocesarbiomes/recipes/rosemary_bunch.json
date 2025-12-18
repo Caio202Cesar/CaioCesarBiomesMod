@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:rosemary_stalks"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:rosemary_bunch",
+    "count": 1
+  }
+}

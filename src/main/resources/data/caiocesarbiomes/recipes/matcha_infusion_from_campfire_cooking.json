@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "caiocesarbiomes:matcha_powder_for_infusion"
+  },
+  "result": "caiocesarbiomes:matcha_tea",
+  "experience": 0.35,
+  "cookingtime": 800
+}

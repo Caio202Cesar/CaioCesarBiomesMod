@@ -1,0 +1,13 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/strawberry_tree_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/strawberry_tree_flowering_leaves",
+        "weight": 1},
+      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves1",
+        "weight": 2},
+      {"model": "caiocesarbiomes:block/strawberry_tree_fruiting_leaves2",
+        "weight": 2}
+    ]
+  }}

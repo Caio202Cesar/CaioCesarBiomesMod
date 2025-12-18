@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:tropical_almond_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:tropical_almond_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "caiocesarbiomes:block/red_currant_stage1"
+  }
+}

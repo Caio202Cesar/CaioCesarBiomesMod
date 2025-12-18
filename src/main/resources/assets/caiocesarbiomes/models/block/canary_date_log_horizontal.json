@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/date_log_middle",
+    "side": "caiocesarbiomes:block/canary_date_bark"
+  }
+}

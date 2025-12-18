@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:royal_poinciana_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:royal_poinciana_planks",
+    "count": 4
+  }
+}

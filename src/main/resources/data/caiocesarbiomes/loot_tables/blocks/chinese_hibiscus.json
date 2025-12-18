@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/chinese_hibiscus",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:chinese_hibiscus",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:chinese_hibiscus",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

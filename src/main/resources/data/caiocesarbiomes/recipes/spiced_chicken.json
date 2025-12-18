@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abc",
+    "def",
+    "gh "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:chicken"
+    },
+    "b": {
+      "item": "caiocesarbiomes:olive_oil"
+    },
+    "c": {
+      "item": "caiocesarbiomes:oregano_stalk"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    },
+    "e": {
+      "item": "caiocesarbiomes:rosemary_stalks"
+    },
+    "f": {
+      "item": "caiocesarbiomes:salt"
+    },
+    "g": {
+      "item": "caiocesarbiomes:black_pepper"
+    },
+    "h": {
+      "item": "caiocesarbiomes:fennel_seeds"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:spiced_chicken",
+    "count": 1
+  }
+}

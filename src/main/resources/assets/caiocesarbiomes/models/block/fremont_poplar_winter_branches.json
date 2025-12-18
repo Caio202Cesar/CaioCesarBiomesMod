@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/fremont_poplar_winter_branches",
+    "particle": "caiocesarbiomes:block/fremont_poplar_winter_branches"
+  }
+}

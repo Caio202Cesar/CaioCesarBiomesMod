@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/holly_leaves"},
+      {"model": "caiocesarbiomes:block/holly_fruiting_leaves"}
+    ]
+  }}

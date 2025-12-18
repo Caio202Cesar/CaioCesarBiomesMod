@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:japanese_maple_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:japanese_maple_planks",
+    "count": 4
+  }
+}

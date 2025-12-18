@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/white_cistus",
+    "particle": "caiocesarbiomes:block/white_cistus"
+  }
+}

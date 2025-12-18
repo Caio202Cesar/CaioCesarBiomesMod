@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:rosemary"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:rosemary_stalks",
+    "count": 9
+  }
+}

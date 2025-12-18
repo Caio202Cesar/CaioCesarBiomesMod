@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/juniper_leaves"},
+      {"model": "caiocesarbiomes:block/juniper_fruiting_leaves"}
+    ]
+  }
+}

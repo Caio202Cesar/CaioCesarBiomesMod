@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/tropical_almond_leaves",
+        "weight": 2},
+      {"model": "caiocesarbiomes:block/tropical_almond_leaves2",
+        "weight": 5}
+    ]
+  }}

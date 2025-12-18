@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/date_bunch",
+    "particle": "caiocesarbiomes:block/date_bunch"
+  }
+}

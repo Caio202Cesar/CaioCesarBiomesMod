@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "X": {
+      "item": "caiocesarbiomes:coconut"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:coconut_oil",
+    "count": 1
+  }
+}

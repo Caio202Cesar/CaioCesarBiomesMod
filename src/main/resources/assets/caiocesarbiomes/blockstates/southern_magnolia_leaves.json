@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/southern_magnolia_leaves",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/southern_magnolia_flowering_leaves",
+        "weight": 3}
+    ]
+  }}

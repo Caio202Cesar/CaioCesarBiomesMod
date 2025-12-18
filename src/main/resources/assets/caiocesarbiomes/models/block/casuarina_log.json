@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/casuarina_log_middle",
+    "side": "caiocesarbiomes:block/casuarina_bark"
+  }
+}

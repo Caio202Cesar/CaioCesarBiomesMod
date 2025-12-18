@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/monkey_puzzle_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/monkey_puzzle_fruiting_leaves",
+        "weight": 1}
+    ]
+  }}

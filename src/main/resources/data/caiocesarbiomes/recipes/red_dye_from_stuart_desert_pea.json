@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "red_dye",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stuart_desert_pea"
+    }
+  ],
+  "result": {
+    "item": "minecraft:red_dye"
+  }
+}

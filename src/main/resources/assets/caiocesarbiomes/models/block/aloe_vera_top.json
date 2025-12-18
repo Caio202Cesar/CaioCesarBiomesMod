@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/aloe_vera_top",
+    "particle": "caiocesarbiomes:block/aloe_vera_top"
+  }
+}

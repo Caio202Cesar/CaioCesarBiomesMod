@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/mountain_hemlock_leaves",
+    "particle": "caiocesarbiomes:block/mountain_hemlock_leaves"
+  }
+}

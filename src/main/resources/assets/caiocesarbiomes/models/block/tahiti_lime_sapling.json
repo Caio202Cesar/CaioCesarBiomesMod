@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/tahiti_lime_sapling",
+    "particle": "caiocesarbiomes:block/tahiti_lime_sapling"
+  }
+}

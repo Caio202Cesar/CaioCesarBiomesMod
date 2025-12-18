@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "DB ",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:ice_cream_cone"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "C": {
+      "item": "caiocesarbiomes:figfruit"
+    },
+    "D": {
+      "item": "minecraft:snowball"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:fig_ice_cream",
+    "count": 3
+  }
+}

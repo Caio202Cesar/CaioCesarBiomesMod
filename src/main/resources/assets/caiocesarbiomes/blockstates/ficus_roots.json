@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/ficus_roots"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/ficus_roots_plant"
+    }
+  }
+}

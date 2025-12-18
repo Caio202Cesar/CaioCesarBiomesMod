@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/western_hemlock_sapling",
+    "particle": "caiocesarbiomes:block/western_hemlock_sapling"
+  }
+}

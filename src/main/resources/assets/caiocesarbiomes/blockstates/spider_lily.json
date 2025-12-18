@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/spider_lily_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/spider_lily_bottom"
+    }
+  }
+}

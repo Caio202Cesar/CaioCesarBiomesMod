@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:strawberry_tree_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:strawberry_tree_planks",
+    "count": 4
+  }
+}

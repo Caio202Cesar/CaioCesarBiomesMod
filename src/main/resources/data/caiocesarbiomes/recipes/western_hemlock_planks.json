@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:western_hemlock_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:western_hemlock_planks",
+    "count": 4
+  }
+}

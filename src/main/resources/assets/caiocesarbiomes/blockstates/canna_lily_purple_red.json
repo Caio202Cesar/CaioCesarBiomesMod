@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/canna_lily_purple_red_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/canna_lily_purple_red_bottom"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:mesquite_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:mesquite_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "caiocesarbiomes:block/toaster",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "caiocesarbiomes:block/toaster"
+    },
+    "facing=south": {
+      "model": "caiocesarbiomes:block/toaster",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "caiocesarbiomes:block/toaster",
+      "y": 270
+    }
+  }
+}

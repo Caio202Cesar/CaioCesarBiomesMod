@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:starfruit"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:starfruit_slice",
+    "count": 5
+  }
+}

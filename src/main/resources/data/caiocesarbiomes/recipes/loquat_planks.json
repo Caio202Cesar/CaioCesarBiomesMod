@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:loquat_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:loquat_planks",
+    "count": 4
+  }
+}

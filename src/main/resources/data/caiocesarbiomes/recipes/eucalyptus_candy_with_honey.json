@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "caiocesarbiomes:eucalyptus_leaf"
+    },
+    "#": {
+      "item": "minecraft:honey_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:eucalyptus_candy"
+  }
+}

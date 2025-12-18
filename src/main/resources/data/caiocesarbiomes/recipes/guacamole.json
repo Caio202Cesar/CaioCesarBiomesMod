@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BDB",
+    "EAA",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:avocado"
+    },
+    "B": {
+      "item": "caiocesarbiomes:tahiti_lime"
+    },
+    "C": {
+      "item": "minecraft:bowl"
+    },
+    "D": {
+      "item": "caiocesarbiomes:black_pepper"
+    },
+    "E": {
+      "item": "caiocesarbiomes:salt"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:guacamole",
+    "count": 1
+  }
+}

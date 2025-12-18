@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/stuart_desert_pea",
+    "particle": "caiocesarbiomes:block/stuart_desert_pea"
+  }
+}

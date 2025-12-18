@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/bald_cypress_log_middle",
+    "side": "caiocesarbiomes:block/bald_cypress_bark"
+  }
+}

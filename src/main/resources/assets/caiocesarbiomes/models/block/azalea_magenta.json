@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/magenta_azalea",
+    "particle": "caiocesarbiomes:block/magenta_azalea"
+  }
+}

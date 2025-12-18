@@ -1,0 +1,11 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/royal_poinciana_leaves",
+        "weight": 4},
+      {"model": "caiocesarbiomes:block/royal_poinciana_flowering_leaves",
+        "weight": 3},
+      {"model": "caiocesarbiomes:block/royal_poinciana_blossom",
+        "weight": 5}
+    ]
+  }}

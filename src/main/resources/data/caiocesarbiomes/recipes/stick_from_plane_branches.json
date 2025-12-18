@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:plane_winter_branches"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

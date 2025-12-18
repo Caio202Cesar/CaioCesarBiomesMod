@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:ocotea_jungle_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:ocotea_planks",
+    "count": 4
+  }
+}

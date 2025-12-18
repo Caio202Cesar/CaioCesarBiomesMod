@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/eucalyptus_leaves",
+        "weight": 7},
+      {"model": "caiocesarbiomes:block/eucalyptus_flowering_leaves",
+        "weight": 1}
+    ]
+  }
+}

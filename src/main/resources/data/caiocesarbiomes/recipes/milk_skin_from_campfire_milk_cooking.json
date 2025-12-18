@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result": "caiocesarbiomes:milk_skin",
+  "experience": 0.35,
+  "cookingtime": 800
+}

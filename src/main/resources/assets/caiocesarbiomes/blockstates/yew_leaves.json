@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/yew_leaves", "weight": 5},
+      {"model": "caiocesarbiomes:block/yew_fruiting_leaves", "weight": 1}
+    ]
+  }}

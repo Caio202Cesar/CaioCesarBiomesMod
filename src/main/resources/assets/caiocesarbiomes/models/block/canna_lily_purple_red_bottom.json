@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/canna_lily_purple_red_bottom",
+    "particle": "caiocesarbiomes:block/canna_lily_purple_red_bottom"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/fremont_poplar_sapling",
+    "particle": "caiocesarbiomes:block/fremont_poplar_sapling"
+  }
+}

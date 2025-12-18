@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/pencil_tree",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:pencil_tree",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:pencil_tree",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

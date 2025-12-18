@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:pomegranate_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:pomegranate_planks",
+    "count": 4
+  }
+}

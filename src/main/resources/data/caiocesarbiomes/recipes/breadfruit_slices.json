@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:breadfruit"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:breadfruit_slice",
+    "count": 6
+  }
+}

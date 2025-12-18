@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:porkchop"
+    },
+    "X": {
+      "item": "caiocesarbiomes:salt"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:raw_bacon",
+    "count": 8
+  }
+}

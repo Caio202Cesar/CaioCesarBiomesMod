@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:araucaria_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:araucaria_planks",
+    "count": 4
+  }
+}

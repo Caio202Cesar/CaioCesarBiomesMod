@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/mesquite_bark",
+    "side": "caiocesarbiomes:block/mesquite_bark"
+  }
+}

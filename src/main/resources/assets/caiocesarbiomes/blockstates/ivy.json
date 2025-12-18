@@ -1,0 +1,22 @@
+{
+  "multipart": [
+    {   "when": { "south": "true" },
+      "apply": { "model": "caiocesarbiomes:block/ivy" }
+    },
+    {   "when": { "west": "true" },
+      "apply": { "model": "caiocesarbiomes:block/ivy", "y": 90 }
+    },
+    {   "when": { "north": "true" },
+      "apply": { "model": "caiocesarbiomes:block/ivy", "y": 180 }
+    },
+    {   "when": { "east": "true" },
+      "apply": { "model": "caiocesarbiomes:block/ivy", "y": 270 }
+    },
+    {   "when": {"up": "true" },
+      "apply": { "model": "caiocesarbiomes:block/ivy_up" }
+    },
+    {   "when": {"up": "false", "north": "false", "west": "false", "south": "false", "east": "false"  },
+      "apply": { "model": "caiocesarbiomes:block/ivy_up" }
+    }
+  ]
+}

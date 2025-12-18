@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "caiocesarbiomes:fennel_seeds"
+  },
+  "result": "caiocesarbiomes:roasted_fennel_seeds",
+  "experience": 0.35,
+  "cookingtime": 800
+}

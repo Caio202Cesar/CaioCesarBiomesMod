@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:dates"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar",
+    "count": 1
+  }
+}

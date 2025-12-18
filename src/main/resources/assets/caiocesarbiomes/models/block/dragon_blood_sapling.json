@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/dragon_blood_sapling",
+    "particle": "caiocesarbiomes:block/dragon_blood_sapling"
+  }
+}

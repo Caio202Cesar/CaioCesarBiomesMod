@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/tea_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/tea_flowering_leaves",
+        "weight": 3}
+    ]
+  }}

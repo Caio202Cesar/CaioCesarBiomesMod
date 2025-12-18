@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "caiocesarbiomes:block/salt_block"
+      },
+      {
+        "model": "caiocesarbiomes:block/salt_block",
+        "y": 90
+      },
+      {
+        "model": "caiocesarbiomes:block/salt_block",
+        "y": 180
+      },
+      {
+        "model": "caiocesarbiomes:block/salt_block",
+        "y": 270
+      }
+    ]
+  }
+}

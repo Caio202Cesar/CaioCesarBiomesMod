@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/aloe_vera_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/aloe_vera_bottom"
+    }
+  }
+}

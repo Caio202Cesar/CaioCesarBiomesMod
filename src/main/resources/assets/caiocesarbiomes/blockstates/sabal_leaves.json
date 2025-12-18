@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/sabal_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/sabal_gray_leaves",
+        "weight": 1}
+    ]
+  }}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    " E ",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:banana"
+    },
+    "C": {
+      "item": "minecraft:wheat"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:banana_bread",
+    "count": 1
+  }
+}

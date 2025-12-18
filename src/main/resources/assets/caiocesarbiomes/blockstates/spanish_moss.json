@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {   "when": { "south": "true" },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss" }
+    },
+    {   "when": { "west": "true" },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss", "y": 90 }
+    },
+    {   "when": { "north": "true" },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss", "y": 180 }
+    },
+    {   "when": { "east": "true" },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss", "y": 270 }
+    },
+    {   "when": {"up": "true" },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss_up" }
+    },
+    {   "when": {"up": "false", "north": "false", "west": "false", "south": "false", "east": "false"  },
+      "apply": { "model": "caiocesarbiomes:block/spanish_moss_up" }
+    }]}

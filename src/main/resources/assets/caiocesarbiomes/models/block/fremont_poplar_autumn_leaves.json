@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/fremont_poplar_autumn_leaves",
+    "particle": "caiocesarbiomes:block/fremont_poplar_autumn_leaves"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/coast_cottonwood_leaves"},
+      {"model": "caiocesarbiomes:block/coast_cottonwood_flowering_leaves"}
+    ]
+  }
+}

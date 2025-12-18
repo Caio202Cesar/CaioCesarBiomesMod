@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:pistachio_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:pistachio_planks",
+    "count": 4
+  }
+}

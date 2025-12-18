@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/bald_cypress_aerial_root_large",
+    "particle": "caiocesarbiomes:block/bald_cypress_aerial_root_large"
+  }
+}

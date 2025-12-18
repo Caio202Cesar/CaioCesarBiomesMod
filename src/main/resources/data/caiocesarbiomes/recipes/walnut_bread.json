@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BEB",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:walnut_kernel"
+    },
+    "B": {
+      "item": "minecraft:egg"
+    },
+    "C": {
+      "item": "minecraft:wheat"
+    },
+    "E": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:walnut_bread",
+    "count": 1
+  }
+}

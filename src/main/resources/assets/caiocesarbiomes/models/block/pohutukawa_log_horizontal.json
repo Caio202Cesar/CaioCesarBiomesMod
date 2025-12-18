@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/pohutukawa_log_middle",
+    "side": "caiocesarbiomes:block/pohutukawa_bark"
+  }
+}

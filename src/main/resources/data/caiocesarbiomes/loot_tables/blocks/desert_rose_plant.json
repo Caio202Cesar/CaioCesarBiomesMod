@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/desert_rose_plant",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:desert_rose_plant",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:desert_rose_plant",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

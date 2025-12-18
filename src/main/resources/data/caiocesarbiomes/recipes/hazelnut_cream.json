@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abc",
+    "def",
+    "g  "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "caiocesarbiomes:hazelnuts"
+    },
+    "c": {
+      "item": "caiocesarbiomes:hazelnuts"
+    },
+    "d": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "e": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "f": {
+      "item": "minecraft:sugar"
+    },
+    "g": {
+      "item": "caiocesarbiomes:coconut_oil"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:hazelnut_cream",
+    "count": 1
+  }
+}

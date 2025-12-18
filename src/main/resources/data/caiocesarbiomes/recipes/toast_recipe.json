@@ -1,0 +1,15 @@
+{
+  "type": "caiocesarbiomes:toaster",
+  "redstoneActivated": true,
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:butter_piece"
+    },
+    {
+      "item": "caiocesarbiomes:raw_toast"
+    }
+  ],
+  "output": {
+    "item": "caiocesarbiomes:toast"
+  }
+}

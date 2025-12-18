@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/canna_lily_purple_red",
+  "pools": [
+    {
+      "rolls": 2.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:canna_lily_purple_red",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:canna_lily_purple_red",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

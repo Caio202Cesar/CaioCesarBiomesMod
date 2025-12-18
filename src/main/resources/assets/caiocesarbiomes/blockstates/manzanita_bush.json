@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/manzanita_bush_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/manzanita_bush_bottom"
+    }
+  }
+}

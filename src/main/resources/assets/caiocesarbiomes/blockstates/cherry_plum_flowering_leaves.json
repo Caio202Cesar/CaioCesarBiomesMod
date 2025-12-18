@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/cherry_plum_flowering_leaves"},
+      {"model": "caiocesarbiomes:block/cherry_plum_big_flowering_leaves"}
+    ]
+  }
+}

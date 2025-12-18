@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:lavender"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:lavender_bunch",
+    "count": 9
+  }
+}

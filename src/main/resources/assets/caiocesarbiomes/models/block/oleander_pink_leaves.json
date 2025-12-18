@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/oleander_pink_leaves",
+    "particle": "caiocesarbiomes:block/oleander_pink_leaves"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/raspberry_bush",
+    "particle": "caiocesarbiomes:block/raspberry_bush"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/pomegranate_flowering_leaves",
+    "particle": "caiocesarbiomes:block/pomegranate_flowering_leaves"
+  }
+}

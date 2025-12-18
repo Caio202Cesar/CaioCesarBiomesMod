@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/subalpine_fir_leaves",
+    "particle": "caiocesarbiomes:block/subalpine_fir_leaves"
+  }
+}

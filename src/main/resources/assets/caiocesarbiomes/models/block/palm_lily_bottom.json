@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/palm_lily_bottom",
+    "particle": "caiocesarbiomes:block/palm_lily_bottom"
+  }
+}

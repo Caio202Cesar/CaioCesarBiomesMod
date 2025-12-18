@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:unripe_mango"
+    },
+    "X": {
+      "item": "caiocesarbiomes:salt"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:salted_green_mango",
+    "count": 1
+  }
+}
