@@ -1798,21 +1798,9 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
-
 ///U
 
-
-
-
-
-
 ///V
-
-
-
-
-
 
     ///W
 //Walnut
