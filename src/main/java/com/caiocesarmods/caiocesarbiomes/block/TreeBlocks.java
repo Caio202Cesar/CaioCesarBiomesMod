@@ -1681,8 +1681,17 @@ public class TreeBlocks {
     //Strawberry Tree
     public static final RegistryObject<Block> STRAWBERRY_TREE_LOG = registerBlock("strawberry_tree_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> STRAWBERRY_TREE_LEAVES = registerBlock("strawberry_tree_leaves",
-            StrawberryTreeLeaves::new);
+            () -> new StrawberryTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STRAWBERRY_TREE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> STRAWBERRY_TREE_FRUITING_LEAVES = registerBlock("strawberry_tree_fruiting_leaves",
+            () -> new StrawberryTreeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STRAWBERRY_TREE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> STRAWBERRY_TREE_FLOWERING_LEAVES = registerBlock("strawberry_tree_flowering_leaves",
+            () -> new StrawberryTreeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STRAWBERRY_TREE_LEAVES));
+
     public static final RegistryObject<Block> STRAWBERRY_TREE_SAPLING = registerBlock("strawberry_tree_sapling",
             StrawberryTreeSapling::new);
     @SuppressWarnings("deprecation")
@@ -1717,7 +1726,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_SOUTHERN_MAGNOLIA_SAPLING = BLOCKS.register("potted_southern_magnolia_sapling",
             () -> new FlowerPotBlock(TreeBlocks.SOUTHERN_MAGNOLIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
     //Socotra Desert Rose
