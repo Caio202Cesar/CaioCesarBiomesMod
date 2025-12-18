@@ -1793,10 +1793,20 @@ public class TreeBlocks {
     //Tropical Almond
     public static final RegistryObject<Block> TROPICAL_ALMOND_LOG = registerBlock("tropical_almond_log",
             ModLogs::new);
+
+    public static final RegistryObject<Block> TROPICAL_ALMOND_NEW_LEAVES = registerBlock("tropical_almond_new_leaves",
+            () -> new TropicalAlmondNewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_LEAVES));
     public static final RegistryObject<Block> TROPICAL_ALMOND_LEAVES = registerBlock("tropical_almond_leaves",
-            ModLeaves::new);
+            () -> new TropicalAlmondLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_FALL_LEAVES));
     public static final RegistryObject<Block> TROPICAL_ALMOND_FALL_LEAVES = registerBlock("tropical_almond_fall_leaves",
-            ModLeaves::new);
+            () -> new TropicalAlmondFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_DRIED_BRANCHES));
+    public static final RegistryObject<Block> TROPICAL_ALMOND_DRIED_BRANCHES = registerBlock("tropical_almond_dried_branches",
+            () -> new TropicalAlmondDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_NEW_LEAVES));
+
     public static final RegistryObject<Block> TROPICAL_ALMOND_SAPLING = registerBlock("tropical_almond_sapling",
             TropicalAlmondSapling::new);
     @SuppressWarnings("deprecation")

@@ -23,6 +23,9 @@
     "caiocesarbiomes:pomegranate_fruiting_leaves",
     "caiocesarbiomes:southern_magnolia_leaves",
     "caiocesarbiomes:tropical_almond_leaves",
+    "caiocesarbiomes:tropical_almond_fall_leaves",
+    "caiocesarbiomes:tropical_almond_new_leaves",
+    "caiocesarbiomes:tropical_almond_dried_branches",
     "caiocesarbiomes:holm_oak_leaves",
     "caiocesarbiomes:cork_oak_leaves",
     "caiocesarbiomes:stone_pine_leaves",
@@ -208,7 +211,7 @@
     "caiocesarbiomes:peach_blossom",
     "caiocesarbiomes:peach_fruiting_leaves",
     "caiocesarbiomes:peach_fall_leaves",
-    "caiocesarbiomes:epeach_winter_branches"
+    "caiocesarbiomes:peach_winter_branches"
   ]
 }
 
