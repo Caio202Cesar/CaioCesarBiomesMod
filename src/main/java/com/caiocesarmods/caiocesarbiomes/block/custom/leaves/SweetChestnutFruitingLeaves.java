@@ -45,7 +45,7 @@ public class SweetChestnutFruitingLeaves extends LeavesBlock implements IForgeSh
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 

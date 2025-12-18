@@ -1,23 +1,26 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
-public class SweetChestnutLeaves extends LeavesBlock implements IForgeShearable {
-    public SweetChestnutLeaves(Properties properties) {
+public class SweetChestnutWinterBranches extends LeavesBlock implements IForgeShearable {
+    private final Supplier<Block> nextStage;
+
+    public SweetChestnutWinterBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
-
+        this.nextStage = nextStage;
     }
+
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -35,32 +38,24 @@ public class SweetChestnutLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(70) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SWEET_CHESTNUT_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SWEET_CHESTNUT_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.SWEET_CHESTNUT_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 
