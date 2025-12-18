@@ -14,17 +14,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public RowanFruitingLeaves(Properties properties) {
+public class RowanWinterFruitingBranches extends LeavesBlock implements IForgeShearable {
+    private final Supplier<Block> nextStage;
+
+    public RowanWinterFruitingBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
+        this.nextStage = nextStage;
     }
+
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -42,34 +45,21 @@ public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-        //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ROWAN_FALL_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
-        }
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-        //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.ROWAN_FALL_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.ROWAN_FALL_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 
@@ -84,13 +74,14 @@ public class RowanFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.ROWAN_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;
     }
+
 
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

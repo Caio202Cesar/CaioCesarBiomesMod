@@ -1568,19 +1568,28 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> ROWAN_LEAVES = registerBlock("rowan_leaves",
             () -> new RowanLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> ROWAN_FRUITING_LEAVES = registerBlock("rowan_fruiting_leaves",
+            () -> new RowanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+
     public static final RegistryObject<Block> ROWAN_FLOWERING_LEAVES = registerBlock("rowan_flowering_leaves",
             () -> new RowanFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FRUITING_LEAVES));
-    public static final RegistryObject<Block> ROWAN_FRUITING_LEAVES = registerBlock("rowan_fruiting_leaves",
-            () -> new RowanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_LEAVES));
-    /*public static final RegistryObject<Block> ROWAN_FALL_LEAVES = registerBlock("rowan_fall_leaves",
+
+    public static final RegistryObject<Block> ROWAN_FALL_LEAVES = registerBlock("rowan_fall_leaves",
             () -> new RowanFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> ROWAN_FALL_FRUITING_LEAVES = registerBlock("rowan_fall_fruiting_leaves",
+            () -> new RowanFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+
     public static final RegistryObject<Block> ROWAN_WINTER_BRANCHES = registerBlock("rowan_winter_branches",
             () -> new RowanWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_LEAVES));*/
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> ROWAN_WINTER_FRUITING_BRANCHES = registerBlock("rowan_winter_fruiting_branches",
+            () -> new RowanWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FLOWERING_LEAVES));
 
     public static final RegistryObject<Block> ROWAN_SAPLING = registerBlock("rowan_sapling",
             RowanSapling::new);
@@ -1660,6 +1669,7 @@ public class TreeBlocks {
     //Starfruit
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             () -> new StarfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_FLOWERING_LEAVES));

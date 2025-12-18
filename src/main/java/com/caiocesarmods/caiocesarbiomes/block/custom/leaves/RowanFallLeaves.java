@@ -2,25 +2,19 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 
-public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
-    public HawthornLeaves(Properties properties) {
+public class RowanFallLeaves extends LeavesBlock implements IForgeShearable {
+    public RowanFallLeaves(Properties properties) {
         super(properties);
     }
 
@@ -28,7 +22,6 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
     public boolean ticksRandomly(BlockState state) {
         return true;
     }
-
     /**
      * Performs a random tick on a block.
      *
@@ -45,37 +38,29 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp < 0.89F && temp > 0.8F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp < 0.79F && "WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("SPRING".equals(currentSeason) && random.nextInt(10) == 0) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FLOWERING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.HAWTHORN_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
