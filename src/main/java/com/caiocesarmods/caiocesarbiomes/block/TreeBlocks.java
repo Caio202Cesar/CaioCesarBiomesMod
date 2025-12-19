@@ -1379,13 +1379,15 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PLANE_WINTER_BRANCHES = registerBlock("plane_winter_branches",
             () -> new PlaneWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PLANE_LEAVES));
+
     public static final RegistryObject<Block> PLANE_SAPLING = registerBlock("plane_sapling",
             PlaneSapling::new);
-
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PLANE_SAPLING = BLOCKS.register("potted_plane_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PLANE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Ponderosa Pine
     public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
             ModLogs::new);

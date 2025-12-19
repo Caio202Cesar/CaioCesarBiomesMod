@@ -39,13 +39,11 @@ public class PlaneFallLeaves extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
-        Biome biome = worldIn.getBiome(pos);
-        float baseTemp = biome.getTemperature();
-        boolean coldEnough = baseTemp < 0.9F;
 
-        if ("WINTER".equals(currentSeason)
-                && coldEnough
-                && random.nextInt(25) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature();
+
+        if ("WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -53,7 +51,26 @@ public class PlaneFallLeaves extends LeavesBlock implements IForgeShearable {
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+        }
 
+        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+        }
+
+        if ("SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 
