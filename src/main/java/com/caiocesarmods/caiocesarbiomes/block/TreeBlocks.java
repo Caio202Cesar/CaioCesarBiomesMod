@@ -1470,8 +1470,8 @@ public class TreeBlocks {
             () -> new CherryPlumFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CHERRY_PLUM_WINTER_BRANCHES));
     public static final RegistryObject<Block> CHERRY_PLUM_WINTER_BRANCHES = registerBlock("cherry_plum_winter_branches",
-            () -> new CherryPlumFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CHERRY_PLUM_WINTER_BRANCHES));
+            () -> new CherryPlumWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
 
     public static final RegistryObject<Block> CHERRY_PLUM_SAPLING = registerBlock("cherry_plum_sapling",
             CherryPlumSapling::new);
