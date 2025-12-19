@@ -80,6 +80,48 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
             worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_FLOWERING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
+
+        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(75) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for hardiness zone 9
+        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for temperate climates
+        if (temp < 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
