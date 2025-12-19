@@ -56,7 +56,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for hardiness zone 9
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(35) == 0) {
+        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -64,7 +64,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(50) == 0) {
+        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(60) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
