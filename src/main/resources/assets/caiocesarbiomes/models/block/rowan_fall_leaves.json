@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "caiocesarbiomes:block/rowan_leaves",
-    "particle": "caiocesarbiomes:block/rowan_leaves"
+    "all": "caiocesarbiomes:block/rowan_fall_leaves",
+    "particle": "caiocesarbiomes:block/rowan_fall_leaves"
   }
 }
