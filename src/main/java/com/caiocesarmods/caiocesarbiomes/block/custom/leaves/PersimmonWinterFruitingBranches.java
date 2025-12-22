@@ -1,8 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.item.ItemEntity;
@@ -13,17 +13,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
-public class PersimmonFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public PersimmonFruitingLeaves(Properties properties) {
+public class PersimmonWinterFruitingBranches extends LeavesBlock implements IForgeShearable {
+    private final Supplier<Block> nextStage;
+
+    public PersimmonWinterFruitingBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
+        this.nextStage = nextStage;
     }
-
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -39,31 +41,8 @@ public class PersimmonFruitingLeaves extends LeavesBlock implements IForgeSheara
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_FALL_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_FALL_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        //Pattern for tropical biomes
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(65) == 0) {
+        if (nextStage != null && random.nextInt(35) == 0) {
 
             int dropCount = 1;
 
@@ -75,8 +54,10 @@ public class PersimmonFruitingLeaves extends LeavesBlock implements IForgeSheara
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
         }
     }
 
@@ -91,14 +72,13 @@ public class PersimmonFruitingLeaves extends LeavesBlock implements IForgeSheara
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_WINTER_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
