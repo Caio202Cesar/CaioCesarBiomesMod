@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:rowan_fall_leaves"
+              "name": "caiocesarbiomes:pomegranate_fall_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:rowan_sapling"
+              "name": "caiocesarbiomes:pomegranate_sapling"
             }
           ]
         }
