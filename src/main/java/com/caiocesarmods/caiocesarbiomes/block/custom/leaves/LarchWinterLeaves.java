@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -14,9 +13,12 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class MarulaLeaves extends LeavesBlock implements IForgeShearable {
-    public MarulaLeaves(Properties properties) {
+public class LarchWinterLeaves extends LeavesBlock implements IForgeShearable {
+    private final Supplier<Block> nextStage;
+
+    public LarchWinterLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
+        this.nextStage = nextStage;
     }
 
 
@@ -36,25 +38,25 @@ public class MarulaLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        //Real life marula fruits on SUMMER, which corresponds to the wet season in most savanna climates (Koopen's Aw) in real life.
-        //However, since Minecraft's season mods usually takes the SUMMER as these climates' dry season and the WINTER as the wet one, the mod's marula tree will fruit in the WINTER.
-        if ("WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.MARULA_FRUITING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
 
         }
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(10) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.MARULA_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
 
         }
     }

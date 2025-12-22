@@ -2,7 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
-import com.caiocesarmods.caiocesarbiomes.block.custom.ModPlanks;
+import com.caiocesarmods.caiocesarbiomes.block.custom.plants.ModPlanks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;

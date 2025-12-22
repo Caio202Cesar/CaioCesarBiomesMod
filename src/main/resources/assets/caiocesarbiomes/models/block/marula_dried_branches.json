@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/marula_dried_branches",
+    "particle": "caiocesarbiomes:block/marula_dried_branches"
+  }
+}

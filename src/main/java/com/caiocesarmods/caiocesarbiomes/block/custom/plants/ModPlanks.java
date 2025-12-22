@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.block.custom;
+package com.caiocesarmods.caiocesarbiomes.block.custom.plants;
 
 import net.minecraft.block.*;
 import net.minecraft.util.Direction;

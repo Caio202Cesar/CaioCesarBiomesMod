@@ -45,7 +45,7 @@ public class MarulaFruitingLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(23) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 

@@ -1067,11 +1067,14 @@ public class TreeBlocks {
             ModLogs::new);
 
     public static final RegistryObject<Block> LARCH_LEAVES = registerBlock("larch_leaves",
-            ModLeaves::new);
+            () -> new LarchLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_FALL_LEAVES));
     public static final RegistryObject<Block> LARCH_FALL_LEAVES = registerBlock("larch_fall_leaves",
-            LarchFallLeaves::new);
+            () -> new LarchFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_WINTER_LEAVES));
     public static final RegistryObject<Block> LARCH_WINTER_LEAVES = registerBlock("larch_winter_leaves",
-            LarchWinterLeaves::new);
+            () -> new LarchWinterLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_LEAVES));
 
     public static final RegistryObject<Block> LARCH_SAPLING = registerBlock("larch_sapling",
             LarchSapling::new);
@@ -1128,15 +1131,16 @@ public class TreeBlocks {
     //Marula
     public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> MARULA_LEAVES = registerBlock("marula_leaves",
             () -> new MarulaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
             () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
     public static final RegistryObject<Block> MARULA_DRIED_BRANCHES = registerBlock("marula_dried_branches",
-            () -> new MarulaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_FRUITING_LEAVES));
+            () -> new MarulaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
 
     public static final RegistryObject<Block> MARULA_SAPLING = registerBlock("marula_sapling",
             MarulaSapling::new);
