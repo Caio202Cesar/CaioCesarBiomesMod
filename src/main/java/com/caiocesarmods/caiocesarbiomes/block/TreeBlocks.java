@@ -837,13 +837,23 @@ public class TreeBlocks {
 
 
 
-///G
+    ///G
+    public static final RegistryObject<Block> GINKGO_LOG = registerBlock("ginkgo_log",
+        ModLogs::new);
 
-
+    public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("ginkgo_leaves",
+            () -> new SouthernBeechLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_FALL_LEAVES));
+    public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("ginkgo_fall_leaves",
+            () -> new SouthernBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> SOUTHERN_BEECH_WINTER_BRANCHES = registerBlock("ginkgo_winter_branches",
+            () -> new SouthernBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_LEAVES));
 
 
     ///H
-//Hawthorn
+    //Hawthorn
     public static final RegistryObject<Block> HAWTHORN_LOG = registerBlock("hawthorn_log",
             ModLogs::new);
 
@@ -976,8 +986,8 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JAPANESE_MAPLE_LEAVES = registerBlock("japanese_maple_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> JAPANESE_MAPLE_WINTER_BRANCHES = registerBlock("japanese_maple_winter_branches",
-            JapaneseMapleWinterBranches::new);*/
+    public static final RegistryObject<Block> JAPANESE_MAPLE_WINTER_BRANCHES = registerBlock("japanese_maple_winter_branches",
+            JapaneseMapleWinterBranches::new);
     public static final RegistryObject<Block> JAPANESE_MAPLE_SAPLING = registerBlock("japanese_maple_sapling",
             JapaneseMapleSapling::new);
     @SuppressWarnings("deprecation")
@@ -1052,10 +1062,10 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> LARCH_LEAVES = registerBlock("larch_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> LARCH_FALL_LEAVES = registerBlock("larch_fall_leaves",
+    public static final RegistryObject<Block> LARCH_FALL_LEAVES = registerBlock("larch_fall_leaves",
             LarchFallLeaves::new);
     public static final RegistryObject<Block> LARCH_WINTER_LEAVES = registerBlock("larch_winter_leaves",
-            LarchWinterLeaves::new);*/
+            LarchWinterLeaves::new);
 
     public static final RegistryObject<Block> LARCH_SAPLING = registerBlock("larch_sapling",
             LarchSapling::new);
@@ -1199,8 +1209,17 @@ public class TreeBlocks {
 //Nothofagus
     public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves",
-            ModLeaves::new);
+            () -> new SouthernBeechLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_FALL_LEAVES));
+    public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("southern_beech_fall_leaves",
+            () -> new SouthernBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> SOUTHERN_BEECH_WINTER_BRANCHES = registerBlock("southern_beech_winter_branches",
+            () -> new SouthernBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_LEAVES));
+
     public static final RegistryObject<Block> SOUTHERN_BEECH_SAPLING = registerBlock("southern_beech_sapling",
             SouthernBeechSapling::new);
     @SuppressWarnings("deprecation")
