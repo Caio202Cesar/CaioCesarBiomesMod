@@ -751,8 +751,14 @@ public class TreeBlocks {
     //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> INDIAN_CORAL_LEAVES = registerBlock("indian_coral_leaves",
-            ModLeaves::new);
+            () -> new IndianCoralLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.INDIAN_CORAL_DRIED_BRANCHES));
+    public static final RegistryObject<Block> INDIAN_CORAL_DRIED_BRANCHES = registerBlock("indian_coral_dried_branches",
+            () -> new IndianCoralDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.INDIAN_CORAL_LEAVES));
+
     public static final RegistryObject<Block> INDIAN_CORAL_SAPLING = registerBlock("indian_coral_sapling",
             IndianCoralSapling::new);
     @SuppressWarnings("deprecation")
