@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/mulberry_winter_branches",
+    "particle": "caiocesarbiomes:block/mulberry_winter_branches"
+  }
+}

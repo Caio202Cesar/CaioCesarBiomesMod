@@ -2,9 +2,9 @@
   "variants":{
     "":[
       {"model": "caiocesarbiomes:block/southern_beech_red_fall_leaves",
-        "weight": 1},
+        "weight": 2},
       {"model": "caiocesarbiomes:block/southern_beech_yellow_fall_leaves",
-        "weight": 1},
+        "weight": 2},
       {"model": "caiocesarbiomes:block/southern_beech_orange_fall_leaves",
         "weight": 3},
       {"model": "caiocesarbiomes:block/southern_beech_orange_red_fall_leaves",

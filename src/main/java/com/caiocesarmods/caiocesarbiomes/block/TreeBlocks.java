@@ -1195,6 +1195,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.MULBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
     //Mugo Pine
     public static final RegistryObject<Block> MUGO_PINE_LOG = registerBlock("mugo_pine_log",
             ModLogs::new);
@@ -1206,8 +1207,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_MUGO_PINE_SAPLING = BLOCKS.register("potted_mugo_pine_sapling",
             () -> new FlowerPotBlock(TreeBlocks.MUGO_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
-
 
 
 
@@ -1232,10 +1231,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_SOUTHERN_BEECH_SAPLING = BLOCKS.register("potted_southern_beech_sapling",
             () -> new FlowerPotBlock(TreeBlocks.SOUTHERN_BEECH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
-
-
-
 
 
     ///O
