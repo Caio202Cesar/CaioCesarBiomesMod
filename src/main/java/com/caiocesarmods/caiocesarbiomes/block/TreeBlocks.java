@@ -1150,9 +1150,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
             ModLogs::new);
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
-            ModLeaves::new);
+            () -> new MesquiteLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_WINTER_BRANCHES));
     public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_winter_branches",
-            ModLeaves::new); //Only to Temperate Biomes (excluding subtropical and tropical)*/
+            () -> new MesquiteWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_LEAVES));
+            //Only to Temperate Biomes (excluding subtropical and tropical)*/
     public static final RegistryObject<Block> MESQUITE_SAPLING = registerBlock("mesquite_sapling",
             MesquiteSapling::new);
     @SuppressWarnings("deprecation")
