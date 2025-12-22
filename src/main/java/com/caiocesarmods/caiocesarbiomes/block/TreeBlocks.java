@@ -1314,6 +1314,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PECAN_SAPLING = BLOCKS.register("potted_pecan_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PECAN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Persimmon
     public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
             ModLogs::new);
@@ -1332,6 +1333,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PERSIMMON_SAPLING = BLOCKS.register("potted_persimmon_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PERSIMMON_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> JACKALBERRY_LEAVES = registerBlock("jackalberry_leaves",
             JackalberryLeaves::new);
     public static final RegistryObject<Block> JACKALBERRY_SAPLING = registerBlock("jackalberry_sapling",
@@ -1340,6 +1342,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_JACKALBERRY_SAPLING = BLOCKS.register("potted_jackalberry_sapling",
             () -> new FlowerPotBlock(TreeBlocks.JACKALBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Pinyon
     public static final RegistryObject<Block> PINYON_LOG = registerBlock("pinyon_log",
             ModLogs::new);
@@ -1351,6 +1354,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PINYON_SAPLING = BLOCKS.register("potted_pinyon_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PINYON_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Pistachio
     public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
             ModLogs::new);
@@ -1370,6 +1374,7 @@ public class TreeBlocks {
     //Plane
     public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             () -> new PlaneLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PLANE_FALL_LEAVES));
