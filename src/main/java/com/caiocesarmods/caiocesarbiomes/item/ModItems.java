@@ -323,7 +323,7 @@ public class ModItems {
     public static final RegistryObject<Item> WATERMELON_ICE_CREAM = ITEMS.register("watermelon_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.WATERMELON_ICE_CREAM)));
     public static final RegistryObject<Item> CHORUS_ICE_CREAM = ITEMS.register("chorus_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHORUS_ICE_CREAM)));
+            () -> new ChorusIceCream(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHORUS_ICE_CREAM)));
     public static final RegistryObject<Item> SWEET_BERRY_ICE_CREAM = ITEMS.register("sweet_berry_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SWEET_BERRY_ICE_CREAM)));
     public static final RegistryObject<Item> COOKIE_ICE_CREAM = ITEMS.register("cookie_ice_cream",
