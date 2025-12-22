@@ -1060,7 +1060,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_LIVE_OAK_SAPLING = BLOCKS.register("potted_live_oak_sapling",
             () -> new FlowerPotBlock(TreeBlocks.LIVE_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    public static final RegistryObject<Block> MOSSED_LIVE_OAK_SAPLING = registerBlock("mossed_live_oak_sapling",
+            MossedLiveOakSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MOSSED_LIVE_OAK_SAPLING = BLOCKS.register("potted_mossed_live_oak_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.MOSSED_LIVE_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Larch
     public static final RegistryObject<Block> LARCH_LOG = registerBlock("larch_log",

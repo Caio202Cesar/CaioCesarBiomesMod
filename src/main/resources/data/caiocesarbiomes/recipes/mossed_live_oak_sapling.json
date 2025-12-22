@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:live_oak_sapling"
+    },
+    "X": {
+      "item": "caiocesarbiomes:spanish_moss"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:mossed_live_oak_sapling",
+    "count": 1
+  }
+}
