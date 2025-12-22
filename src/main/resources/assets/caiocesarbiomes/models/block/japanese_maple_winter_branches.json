@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/japanese_maple_winter_branches",
+    "particle": "caiocesarbiomes:block/japanese_maple_winter_branches"
+  }
+}
