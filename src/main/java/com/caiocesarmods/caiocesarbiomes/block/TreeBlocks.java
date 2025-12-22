@@ -1151,7 +1151,7 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_winter_branches",
+    public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_winter_branches",
             ModLeaves::new); //Only to Temperate Biomes (excluding subtropical and tropical)*/
     public static final RegistryObject<Block> MESQUITE_SAPLING = registerBlock("mesquite_sapling",
             MesquiteSapling::new);
