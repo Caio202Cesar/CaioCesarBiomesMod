@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/hazelnut_spring_bloom",
+    "particle": "caiocesarbiomes:block/hazelnut_spring_bloom"
+  }
+}
