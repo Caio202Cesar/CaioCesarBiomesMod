@@ -2,7 +2,6 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -12,18 +11,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
-import javax.xml.ws.Holder;
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class PecanLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public PecanLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PecanLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
-    }
 
+    }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -37,43 +31,54 @@ public class PecanLeaves extends LeavesBlock implements IForgeShearable {
      * @param pos
      * @param random
      */
-
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
-        float baseTemp = biome.getTemperature();
-        boolean coldEnough = baseTemp < 0.9F;
+        float temp = biome.getTemperature(pos);
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-        // SUMMER → fruit leaves
-        if ("SUMMER".equals(currentSeason)
-                && coldEnough
-                && random.nextInt(35) == 0) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreeBlocks.PECAN_FRUITING_LEAVES.get()
-                    .getDefaultState()
-                    .with(LeavesBlock.DISTANCE, distance)
-                    .with(LeavesBlock.PERSISTENT, persistent), 2);
-
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
 
-        // FALL → fall leaves
-        if ("FALL".equals(currentSeason)
-                && coldEnough
-                && random.nextInt(15) == 0) {
+        //Pattern for subtropical biomes
+        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreeBlocks.PECAN_FALL_LEAVES.get()
-                    .getDefaultState()
-                    .with(LeavesBlock.DISTANCE, distance)
-                    .with(LeavesBlock.PERSISTENT, persistent), 2);
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+        if (temp < 0.89F && temp > 0.8F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.PECAN_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for temperate biomes
+        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.PECAN_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+        if (temp < 0.79F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.PECAN_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;

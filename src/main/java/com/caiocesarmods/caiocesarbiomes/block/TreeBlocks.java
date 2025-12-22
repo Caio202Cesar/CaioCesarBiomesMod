@@ -1227,6 +1227,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OCOTEA_FOREST_SAPLING = BLOCKS.register("potted_ocotea_forest_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OCOTEA_FOREST_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Oil Palm
     public static final RegistryObject<Block> OIL_PALM_LOG = registerBlock("oil_palm_log",
             ModLogs::new);
@@ -1238,6 +1240,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OIL_PALM_SAPLING = BLOCKS.register("potted_oil_palm_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OIL_PALM_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Oleander
     public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
             ModLogs::new);
@@ -1273,6 +1277,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OLEANDER_WHITE_SAPLING = BLOCKS.register("potted_oleander_white_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_WHITE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
     //Olive
     public static final RegistryObject<Block> OLIVE_LOG = registerBlock("olive_log",
             ModLogs::new);
@@ -1298,10 +1304,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PECAN_LEAVES = registerBlock("pecan_leaves",
             () -> new PecanLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PECAN_FRUITING_LEAVES = registerBlock("pecan_fruiting_leaves",
             () -> new PecanFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_LEAVES));
     public static final RegistryObject<Block> PECAN_FALL_LEAVES = registerBlock("pecan_fall_leaves",
             () -> new PecanFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_WINTER_BRANCHES));
