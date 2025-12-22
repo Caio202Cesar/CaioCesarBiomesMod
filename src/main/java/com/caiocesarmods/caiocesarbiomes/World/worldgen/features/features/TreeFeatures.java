@@ -1315,10 +1315,26 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
-    //Hydrangea
-    //Pink hydrangea grows in neutral-alkali soils.
-    //Grows in acidic soils - the same soils in which tea trees grow.
-    //Grows in slightly acidic soil
+    //Ginkgo
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CONIC_GINKGO_TREE = register("conic_ginkgo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
+                    new SimpleBlockStateProvider(States.GINKGO_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(8, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLOB_GINKGO_TREE = register("ginkgo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GINKGO_FANCY_TREE = register("ginkgo_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     //Red Maple Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE = register("tall_red_maple_tree",
@@ -1734,8 +1750,11 @@ public class TreeFeatures {
         protected static final BlockState PONDEROSA_PINE_LOG = TreeBlocks.PONDEROSA_PINE_LOG.get().getDefaultState();
         protected static final BlockState PONDEROSA_PINE_LEAVES = TreeBlocks.PONDEROSA_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
-        protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState GINKGO_LOG = TreeBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
+        protected static final BlockState GINKGO_LEAVES = TreeBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINYON_LOG = TreeBlocks.PINYON_LOG.get().getDefaultState();
         protected static final BlockState PINYON_LEAVES = TreeBlocks.PINYON_LEAVES.get().getDefaultState();
@@ -1981,6 +2000,11 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.2F),
                             JUNIPER_SHRUB.withChance(0.089F)), LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> GINKGO_TRESS = register("ginkgo_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(GINKGO_FANCY_TREE.withChance(0.25F),
+                            BLOB_GINKGO_TREE.withChance(0.09F)), CONIC_GINKGO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEGA_TAIGA_EXTRA_VEGETATION = register("mega_taiga_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.15F),

@@ -13,10 +13,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class AspenFallLeaves extends LeavesBlock implements IForgeShearable {
+public class GinkgoFallLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public AspenFallLeaves(Properties properties, Supplier<Block> nextStage) {
+    public GinkgoFallLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }

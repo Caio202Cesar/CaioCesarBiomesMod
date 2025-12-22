@@ -111,6 +111,8 @@ public class ModBiomeGeneration {
 
         addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
 
+        addBiome(GinkgoForestBiome.GINKGO_FOREST.get(), BiomeManager.BiomeType.COOL, 18, OVERWORLD, FOREST, LUSH);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
