@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/southern_beech_yellow_fall_leaves",
+    "particle": "caiocesarbiomes:block/southern_beech_yellow_fall_leaves"
+  }
+}
