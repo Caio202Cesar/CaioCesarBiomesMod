@@ -838,19 +838,26 @@ public class TreeBlocks {
 
 
     ///G
+    //Ginkgo Forest
     public static final RegistryObject<Block> GINKGO_LOG = registerBlock("ginkgo_log",
         ModLogs::new);
 
-    public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("ginkgo_leaves",
-            () -> new SouthernBeechLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_FALL_LEAVES));
-    public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("ginkgo_fall_leaves",
-            () -> new SouthernBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
-    public static final RegistryObject<Block> SOUTHERN_BEECH_WINTER_BRANCHES = registerBlock("ginkgo_winter_branches",
-            () -> new SouthernBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_LEAVES));
+    public static final RegistryObject<Block> GINKGO_LEAVES = registerBlock("ginkgo_leaves",
+            () -> new GinkgoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GINKGO_FALL_LEAVES));
+    public static final RegistryObject<Block> GINKGO_FALL_LEAVES = registerBlock("ginkgo_fall_leaves",
+            () -> new GinkgoFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GINKGO_WINTER_BRANCHES));
+    public static final RegistryObject<Block> GINKGO_WINTER_BRANCHES = registerBlock("ginkgo_winter_branches",
+            () -> new GinkgoWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GINKGO_LEAVES));
 
+    public static final RegistryObject<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling",
+            GinkgoSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_GINKGO_SAPLING = BLOCKS.register("potted_ginkgo_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.GINKGO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     ///H
     //Hawthorn
@@ -888,7 +895,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_HAWTHORN_SAPLING = BLOCKS.register("potted_hawthorn_sapling",
             () -> new FlowerPotBlock(TreeBlocks.HAWTHORN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
     //Hazelnut
