@@ -628,6 +628,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COCONUT_LEAVES = registerBlock("coconut_leaves",
             () -> new CoconutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
                     .notSolid().sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> COCONUT_INFLORESCENCE = registerBlock("coconut_inflorescence",
+            CoconutInflorescenceBlock::new);
     public static final RegistryObject<Block> COCONUT_BUNCH = registerBlock("coconut_bunch",
             CoconutBunchBlock::new);
     public static final RegistryObject<Block> COCONUT_SAPLING = registerBlock("coconut_sapling",

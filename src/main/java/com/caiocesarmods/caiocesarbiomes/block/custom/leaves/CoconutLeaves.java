@@ -29,7 +29,7 @@ public class CoconutLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, TreeBlocks.COCONUT_BUNCH.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreeBlocks.COCONUT_INFLORESCENCE.get().getDefaultState(), 2);
             }
         }
     }

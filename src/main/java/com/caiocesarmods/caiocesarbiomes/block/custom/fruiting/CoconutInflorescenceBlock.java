@@ -20,8 +20,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class CoconutBunchBlock extends Block implements IForgeShearable {
-    public CoconutBunchBlock() {
+public class CoconutInflorescenceBlock extends Block implements IForgeShearable {
+    public CoconutInflorescenceBlock() {
         super(Properties.from(Blocks.BEEHIVE).hardnessAndResistance(0.2F).tickRandomly()
                 .sound(SoundType.WET_GRASS).harvestTool(ToolType.AXE).notSolid().setRequiresTool());
     }
@@ -40,16 +40,14 @@ public class CoconutBunchBlock extends Block implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (random.nextFloat() < 0.0025F) {
+        super.randomTick(state, worldIn, pos, random);
 
-            worldIn.destroyBlock(pos, true);
+        double chance = 0.00035f;
+
+        if (random.nextDouble() < chance) {
+            worldIn.setBlockState(pos, TreeBlocks.COCONUT_BUNCH.get().getDefaultState());
 
         }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.COCONUT_BUNCH.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
