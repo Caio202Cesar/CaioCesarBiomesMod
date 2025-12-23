@@ -808,9 +808,16 @@
   "block.caiocesarbiomes.pomegranate_fall_leaves": "Folhas de romãzeira",
   "block.caiocesarbiomes.pomegranate_fall_fruiting_leaves": "Folhas de romãzeira com frutos",
   "block.caiocesarbiomes.pomegranate_winter_branches": "Galhos de romãzeira",
-  "block.caiocesarbiomes.pomegranate_winter_fruiting_branches": "Galhos de romãzeira com frutos"
-
-
+  "block.caiocesarbiomes.pomegranate_winter_fruiting_branches": "Galhos de romãzeira com frutos",
+  "block.caiocesarbiomes.cherry_plum_fall_leaves": "Folhas de abrunheiro-de-jardim",
+  "block.caiocesarbiomes.cherry_plum_winter_branches": "Galhos de abrunheiro-de-jardim",
+  "block.caiocesarbiomes.peach_leaves": "Folhas de pessegueiro",
+  "block.caiocesarbiomes.peach_fall_leaves": "Folhas de pessegueiro",
+  "block.caiocesarbiomes.peach_winter_branches": "Galhos de pessegueiro",
+  "block.caiocesarbiomes.peach_sapling": "Muda de pessegueiro",
+  "block.caiocesarbiomes.peach_fruiting_leaves": "Folhas de pessegueiro com frutos",
+  "block.caiocesarbiomes.peach_blossom": "Florada de pessegueiro",
+  "block.caiocesarbiomes.red_kapok_flowering_branches": "Galhos de paineira-vermelha em flor"
 }
 
 

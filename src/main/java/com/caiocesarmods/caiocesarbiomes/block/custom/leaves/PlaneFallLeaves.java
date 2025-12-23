@@ -63,7 +63,7 @@ public class PlaneFallLeaves extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
