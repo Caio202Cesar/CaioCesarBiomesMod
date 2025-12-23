@@ -504,6 +504,13 @@
   "block.caiocesarbiomes.canna_lily_red": "Red Flower Canna Lily",
   "block.caiocesarbiomes.canna_lily_yellow": "Yellow Flower Canna Lily",
   "block.caiocesarbiomes.canna_lily_purple_red": "Purple Canna Lily",
+  "block.caiocesarbiomes.aspen_fall_leaves": "Aspen Fall Leaves",
+  "block.caiocesarbiomes.aspen_winter_branches": "Aspen Winter Branches",
+  "block.caiocesarbiomes.cooper_beech_fall_leaves": "Cooper Beech Leaves",
+  "block.caiocesarbiomes.cooper_beech_winter_branches": "Cooper Beech Winter Branches",
+  "block.caiocesarbiomes.black_poplar_fall_leaves": "Black Poplar Fall Leaves",
+  "block.caiocesarbiomes.black_poplar_winter_branches": "Black Poplar Winter Branches",
+  "block.caiocesarbiomes.fremont_poplar_winter_branches": "Frémont's Cottonwood Winter Branches",
 
   "block.caiocesarbiomes.calabash_crop": "Calabash Seeds",
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
