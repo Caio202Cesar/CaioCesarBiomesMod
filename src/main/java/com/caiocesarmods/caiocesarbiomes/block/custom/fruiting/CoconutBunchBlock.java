@@ -50,6 +50,8 @@ public class CoconutBunchBlock extends Block implements IForgeShearable {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.COCONUT_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.COCONUT_INFLORESCENCE.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
