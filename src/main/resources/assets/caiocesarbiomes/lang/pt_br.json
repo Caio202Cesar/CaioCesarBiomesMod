@@ -783,7 +783,20 @@
   "block.caiocesarbiomes.hawthorn_fall_leaves": "Folhas de espinheiro-alvar",
   "block.caiocesarbiomes.hawthorn_fall_fruiting_leaves": "Folhas de espinheiro-alvar com frutos",
   "block.caiocesarbiomes.hawthorn_winter_branches": "Galhos de espinheiro-alvar",
-  "block.caiocesarbiomes.hawthorn_winter_fruiting_branches": "Galhos de espinheiro-alvar com frutos"
+  "block.caiocesarbiomes.hawthorn_winter_fruiting_branches": "Galhos de espinheiro-alvar com frutos",
+  "block.caiocesarbiomes.hazelnut_fall_leaves": "Folhas de aveleira",
+  "block.caiocesarbiomes.hazelnut_winter_branches": "Galhos de aveleira",
+  "block.caiocesarbiomes.hazelnut_spring_bloom": "Galhos floridos de aveleira",
+  "block.caiocesarbiomes.japanese_maple_winter_branches": "Galhos de bordo-japonês",
+  "block.caiocesarbiomes.mossed_live_oak_sapling": "Muda de carvalho-vivo-do-sul com musgo-espanhol",
+  "block.caiocesarbiomes.larch_fall_leaves": "Folhas de lariço",
+  "block.caiocesarbiomes.larch_winter_leaves": "Folhas de lariço",
+  "block.caiocesarbiomes.marula_dried_branches": "Galhos de marula",
+  "block.caiocesarbiomes.mesquite_winter_branches": "Galhos de algaroba",
+  "block.caiocesarbiomes.mulberry_fall_leaves": "Folhas de amoreira",
+  "block.caiocesarbiomes.mulberry_winter_branches": "Galhos de amoreira",
+  "block.caiocesarbiomes.southern_beech_fall_leaves": "Folhas de faia-antártica",
+  "block.caiocesarbiomes.southern_beech_winter_branches": "Galhos de faia-antártica"
 
 
 }
