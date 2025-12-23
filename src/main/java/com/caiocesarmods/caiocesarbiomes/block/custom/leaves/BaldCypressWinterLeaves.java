@@ -57,7 +57,6 @@ public class BaldCypressWinterLeaves extends LeavesBlock implements IForgeSheara
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
-
         }
     }
 
