@@ -152,13 +152,13 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             () -> new CooperBeechLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POPLAR_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COOPER_BEECH_FALL_LEAVES));
     public static final RegistryObject<Block> COOPER_BEECH_FALL_LEAVES = registerBlock("cooper_beech_fall_leaves",
             () -> new CooperBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POPLAR_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COOPER_BEECH_WINTER_BRANCHES));
     public static final RegistryObject<Block> COOPER_BEECH_WINTER_BRANCHES = registerBlock("cooper_beech_winter_branches",
             () -> new CooperBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POPLAR_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COOPER_BEECH_LEAVES));
 
     public static final RegistryObject<Block> COOPER_BEECH_SAPLING = registerBlock("cooper_beech_sapling",
             CooperBeechSapling::new);
