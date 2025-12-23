@@ -796,7 +796,19 @@
   "block.caiocesarbiomes.mulberry_fall_leaves": "Folhas de amoreira",
   "block.caiocesarbiomes.mulberry_winter_branches": "Galhos de amoreira",
   "block.caiocesarbiomes.southern_beech_fall_leaves": "Folhas de faia-antártica",
-  "block.caiocesarbiomes.southern_beech_winter_branches": "Galhos de faia-antártica"
+  "block.caiocesarbiomes.southern_beech_winter_branches": "Galhos de faia-antártica",
+  "block.caiocesarbiomes.pecan_fall_leaves": "Folhas de nogueira-pecã",
+  "block.caiocesarbiomes.pecan_winter_branches": "Galhos de nogueira-pecã",
+  "block.caiocesarbiomes.persimmon_fall_leaves": "Folhas de caquizeiro",
+  "block.caiocesarbiomes.persimmon_winter_branches": "Galhos de caquizeiro",
+  "block.caiocesarbiomes.persimmon_fall_fruiting_leaves": "Folhas de caquizeiro com frutos",
+  "block.caiocesarbiomes.persimmon_winter_fruiting_branches": "Galhos de caquizeiro com frutos",
+  "block.caiocesarbiomes.plane_fall_leaves": "Folhas de plátano",
+  "block.caiocesarbiomes.plane_winter_branches": "Galhos de plátano",
+  "block.caiocesarbiomes.pomegranate_fall_leaves": "Folhas de romãzeira",
+  "block.caiocesarbiomes.pomegranate_fall_fruiting_leaves": "Folhas de romãzeira com frutos",
+  "block.caiocesarbiomes.pomegranate_winter_branches": "Galhos de romãzeira",
+  "block.caiocesarbiomes.pomegranate_winter_fruiting_branches": "Galhos de romãzeira com frutos"
 
 
 }
