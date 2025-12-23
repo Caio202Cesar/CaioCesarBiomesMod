@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "caiocesarbiomes:block/crape_myrtle__winter_branches",
-    "particle": "caiocesarbiomes:block/crape_myrtle__winter_branches"
+    "all": "caiocesarbiomes:block/crape_myrtle_winter_branches",
+    "particle": "caiocesarbiomes:block/crape_myrtle_winter_branches"
   }
 }
