@@ -45,7 +45,7 @@ public class WhiteCrabappleFruitingLeaves extends LeavesBlock implements IForgeS
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
 
             int dropCount = 1;
 
