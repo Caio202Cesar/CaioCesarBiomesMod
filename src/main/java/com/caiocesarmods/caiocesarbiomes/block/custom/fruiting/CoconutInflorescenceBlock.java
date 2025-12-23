@@ -51,11 +51,11 @@ public class CoconutInflorescenceBlock extends Block implements IForgeShearable 
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 1;
+        return 45;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 1;
+        return 45;
     }
 
     public PushReaction getPushReaction(BlockState state) {

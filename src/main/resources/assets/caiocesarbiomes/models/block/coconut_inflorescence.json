@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/coconut_inflorescence",
+    "particle": "caiocesarbiomes:block/coconut_inflorescence"
+  }
+}
