@@ -766,7 +766,24 @@
   "block.caiocesarbiomes.cooper_beech_winter_branches": "Galhos de faia_púrpura",
   "block.caiocesarbiomes.black_poplar_fall_leaves": "Folhas de choupo-negro",
   "block.caiocesarbiomes.black_poplar_winter_branches": "Galhos de choupo-negro",
-  "block.caiocesarbiomes.fremont_poplar_winter_branches": "Galhos de choupo-de-frémont"
+  "block.caiocesarbiomes.fremont_poplar_winter_branches": "Galhos de choupo-de-frémont",
+  "block.caiocesarbiomes.coconut_inflorescence": "Inflorescência do côco",
+  "block.caiocesarbiomes.elderberry_fall_leaves": "Folhas de sabugueiro",
+  "block.caiocesarbiomes.elderberry_winter_branches": "Galhos de sabugueiro",
+  "block.caiocesarbiomes.indian_coral_dried_branches": "Galhos de brasileirinho",
+  "block.caiocesarbiomes.fig_fall_leaves": "Folhas de figueira",
+  "block.caiocesarbiomes.fig_winter_branches": "Galhos de figueira",
+  "block.caiocesarbiomes.white_fig_fall_leaves": "Folhas de figueira de frutos brancos",
+  "block.caiocesarbiomes.white_fig_winter_branches": "Galhos de figueira de frutos brancos",
+  "block.caiocesarbiomes.ginkgo_log": "Tronco de ginkgo",
+  "block.caiocesarbiomes.ginkgo_leaves": "Folhas de ginkgo",
+  "block.caiocesarbiomes.ginkgo_fall_leaves": "Folhas de ginkgo",
+  "block.caiocesarbiomes.ginkgo_winter_branches": "Galhos de ginkgo",
+  "block.caiocesarbiomes.ginkgo_sapling": "Muda de ginkgo",
+  "block.caiocesarbiomes.hawthorn_fall_leaves": "Folhas de espinheiro-alvar",
+  "block.caiocesarbiomes.hawthorn_fall_fruiting_leaves": "Folhas de espinheiro-alvar com frutos",
+  "block.caiocesarbiomes.hawthorn_winter_branches": "Galhos de espinheiro-alvar",
+  "block.caiocesarbiomes.hawthorn_winter_fruiting_branches": "Galhos de espinheiro-alvar com frutos"
 
 
 }

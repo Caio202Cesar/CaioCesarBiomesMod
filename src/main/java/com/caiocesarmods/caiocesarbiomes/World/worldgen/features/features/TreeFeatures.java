@@ -1753,8 +1753,8 @@ public class TreeFeatures {
         protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
         protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState GINKGO_LOG = TreeBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
-        protected static final BlockState GINKGO_LEAVES = TreeBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
+        protected static final BlockState GINKGO_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
+        protected static final BlockState GINKGO_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINYON_LOG = TreeBlocks.PINYON_LOG.get().getDefaultState();
         protected static final BlockState PINYON_LEAVES = TreeBlocks.PINYON_LEAVES.get().getDefaultState();
