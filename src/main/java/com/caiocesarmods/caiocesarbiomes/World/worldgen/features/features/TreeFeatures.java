@@ -1680,7 +1680,7 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(7, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Peach Tree (savanna)
+    //Peach Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEACH_TREE = register("peach_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
                     new SimpleBlockStateProvider(States.PEACH_LEAVES),
@@ -2127,7 +2127,8 @@ public class TreeFeatures {
                             ELDERBERRY_TREE.withChance(0.2F), PEACH_TREE.withChance(0.07F), PLANE_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.05F), BLACK_POPLAR_FANCY_TREE.withChance(0.091F),
                             PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            SWEET_CHESTNUT_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F)),
+                            SWEET_CHESTNUT_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F), ROWAN_TREE1.withChance(0.2F),
+                            ROWAN_TREE2.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F)),
                             OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
@@ -2205,7 +2206,8 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(COOPER_BEECH_TREE.withChance(0.3F),
                             COOPER_BEECH_BIG_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
                             RED_OAK_FANCY_TREE.withChance(0.3F), HAZELNUT_TREE.withChance(0.23F),
-                            HAWTHORN_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F)), RED_OAK_TREE))
+                            HAWTHORN_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F),
+                            ROWAN_TREE1.withChance(0.2F), ROWAN_TREE2.withChance(0.15F), HAWTHORN_TREE.withChance(0.3F)), RED_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
@@ -2476,7 +2478,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_TREES = register("japanese_grove_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SUPER_BIRCH_BEES_0002.withChance(0.3F),
                     JAPANESE_PINE_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.1F), FANCY_OAK_TREE_WITH_IVY.withChance(0.198F),
-                    OAK.withChance(0.4F)), SPRUCE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    OAK.withChance(0.4F), PEACH_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F)), SPRUCE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
