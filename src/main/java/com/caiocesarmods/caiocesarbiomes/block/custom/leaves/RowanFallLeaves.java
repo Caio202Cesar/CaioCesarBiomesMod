@@ -63,6 +63,14 @@ public class RowanFallLeaves extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
+
+        if ("SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.ROWAN_WINTER_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
