@@ -1850,7 +1850,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> SWEET_CHESTNUT_FALL_LEAVES = registerBlock("sweet_chestnut_fall_leaves",
             () -> new SweetChestnutFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SWEET_CHESTNUT_WINTER_BRANCHES));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_WINTER_BRANCHES = registerBlock("sweet_chestnut_fall_leaves",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_WINTER_BRANCHES = registerBlock("sweet_chestnut_winter_branches",
             () -> new SweetChestnutWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SWEET_CHESTNUT_LEAVES));
 
