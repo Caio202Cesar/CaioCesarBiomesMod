@@ -64,7 +64,7 @@ public class MulberryFruitingLeaves extends LeavesBlock implements IForgeShearab
         }
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp < 0.89F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 
@@ -80,8 +80,7 @@ public class MulberryFruitingLeaves extends LeavesBlock implements IForgeShearab
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 
@@ -94,6 +93,22 @@ public class MulberryFruitingLeaves extends LeavesBlock implements IForgeShearab
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreeBlocks.MULBERRY_FALL_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp < 0.89F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.MULBERRIES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.MULBERRY_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
