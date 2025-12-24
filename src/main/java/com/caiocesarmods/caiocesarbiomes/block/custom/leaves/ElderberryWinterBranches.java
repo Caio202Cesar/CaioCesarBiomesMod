@@ -38,7 +38,8 @@ public class ElderberryWinterBranches extends LeavesBlock implements IForgeShear
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
-         if ("SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
+
+        if ("SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -46,7 +47,16 @@ public class ElderberryWinterBranches extends LeavesBlock implements IForgeShear
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+        }
 
+        if ("SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 

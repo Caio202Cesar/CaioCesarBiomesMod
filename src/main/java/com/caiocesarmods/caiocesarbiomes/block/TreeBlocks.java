@@ -463,7 +463,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PINK_CRABAPPLE_BLOSSOM = registerBlock("crabapple_pink_blossom",
             () -> new PinkCrabappleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRABAPPLE_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PINK_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_pink_fruiting_leaves",
             () -> new PinkCrabappleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRABAPPLE_FALL_LEAVES));
@@ -487,7 +487,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> RED_CRABAPPLE_BLOSSOM = registerBlock("crabapple_red_blossom",
             () -> new RedCrabappleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> RED_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_red_fruiting_leaves",
             () -> new RedCrabappleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_FALL_LEAVES));
@@ -511,7 +511,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WHITE_CRABAPPLE_BLOSSOM = registerBlock("crabapple_white_blossom",
             () -> new WhiteCrabappleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WHITE_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_white_fruiting_leaves",
             () -> new WhiteCrabappleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_FALL_LEAVES));
@@ -737,7 +737,7 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> ELDERBERRY_LEAVES = registerBlock("elderberry_leaves",
             () -> new ElderberryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> ELDERBERRY_FLOWERING_LEAVES = registerBlock("elderberry_flowering_leaves",
             () -> new ElderberryFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_FRUITING_LEAVES));
