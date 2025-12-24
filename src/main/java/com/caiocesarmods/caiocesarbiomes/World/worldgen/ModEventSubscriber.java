@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.IInventory;
@@ -15,6 +16,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,6 +32,11 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
         Season.onRenderGameOverlay(event);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterCommands(RegisterCommandsEvent event) {
+        SetSeasonCommand.register(event.getDispatcher());
     }
 
     @SubscribeEvent
