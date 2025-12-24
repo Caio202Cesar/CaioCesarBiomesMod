@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "caiocesarbiomes:ripe_marula"
+    },
+    "title": "Drunk Like a Elephant!",
+    "description": "Eat a ripe/fermented marula fruit.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:adventure/adventuring_time",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caiocesarbiomes:ripe_marula"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
