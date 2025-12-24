@@ -121,6 +121,7 @@ public class CaioCesarBiomesMod
         EucalyptusSavanna.register(eventBus);
         TropicalDesertBiome.register(eventBus);
         GinkgoForestBiome.register(eventBus);
+        MediterraneanConiferSavannaBiomeBeach.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

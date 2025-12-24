@@ -800,7 +800,7 @@
   "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Subtropical Eucalyptus Dry Forest",
   "biome.caiocesarbiomes.eucalyptus_plains": "Eucalyptus Plains",
   "biome.caiocesarbiomes.eucalyptus_sahel": "Eucalyptus Stepic Savanna",
-  "biome.caiocesarbiomes.hot_mediterranean_beach": "Hot Mediterranean Beach",
+  "biome.caiocesarbiomes.hot_mediterranean_beach": "Mediterranean Scrubland Beach",
   "biome.caiocesarbiomes.humid_subtropical_beach": "Humid Subtropical Beach",
   "biome.caiocesarbiomes.lush_southern_tundra": "Lush Southern Tundra",
   "biome.caiocesarbiomes.southern_beech_forest": "Southern Beech Tundra Forest",
@@ -823,6 +823,7 @@
   "biome.caiocesarbiomes.eucalyptus_savanna": "Eucalyptus Savanna",
   "biome.caiocesarbiomes.inactive_volcanic_site": "Inactive Volcanic Site",
   "biome.caiocesarbiomes.subtropical_pine_dry_forest": "Subtropical Pine Dry Forest",
+  "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Mediterranean Coniferous Savanna Beach",
 
   "screen.caiocesarbiomes.butter_mixer": "Butter Mixer",
   "screen.caiocesarbiomes.toaster": "Toaster",

@@ -11,6 +11,7 @@ import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -591,7 +592,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PINK_CRAPE_MYRTLE_SAPLING = BLOCKS.register("potted_crape_myrtle_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PINK_CRAPE_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
     //Coast Cottonwood

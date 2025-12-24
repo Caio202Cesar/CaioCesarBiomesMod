@@ -268,8 +268,8 @@
   "block.caiocesarbiomes.yew_sapling": "Muda de teixo",
   "block.caiocesarbiomes.norfolk_pine_leaves": "Folhas de pinheiro-de-norfolk",
   "block.caiocesarbiomes.norfolk_pine_sapling": "Muda de pinheiro-de-norfolk",
-  "block.caiocesarbiomes.red_oak_leaves": "Folhas de carvalho vermelho",
-  "block.caiocesarbiomes.red_oak_sapling": "Muda de carvalho vermelho",
+  "block.caiocesarbiomes.red_oak_leaves": "Folhas de carvalho-vermelho",
+  "block.caiocesarbiomes.red_oak_sapling": "Muda de carvalho-vermelho",
   "block.caiocesarbiomes.red_currant_shrub": "Arbusto de groselha",
   "block.caiocesarbiomes.black_currant_shrub": "Arbusto de cassis",
   "block.caiocesarbiomes.azalea_purple": "Azaleia roxa",
@@ -674,7 +674,7 @@
   "item.caiocesarbiomes.diamond_poisoned_sword": "Espada de diamante envenenada",
   "item.caiocesarbiomes.netherite_poisoned_sword": "Espada de netherita envenenada",
 
-  "biome.caiocesarbiomes.mediterranean_conifer_savanna": "Savana conífera mediterrânica",
+  "biome.caiocesarbiomes.mediterranean_conifer_savanna": "Savana mediterrânica de coníferas",
   "biome.caiocesarbiomes.cork_oak_savanna": "Savana mediterrânica de sobreiros",
   "biome.caiocesarbiomes.mediterranean_scrubland": "Matagal mediterrânico",
   "biome.caiocesarbiomes.mediterranean_oak_woodland": "Mata de carvalhos mediterrânica",
@@ -700,7 +700,7 @@
   "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Floresta subtropical sazonal de eucalipto",
   "biome.caiocesarbiomes.eucalyptus_plains": "Planície de eucalipto",
   "biome.caiocesarbiomes.eucalyptus_sahel": "Savana estépica com eucaliptos",
-  "biome.caiocesarbiomes.hot_mediterranean_beach": "Praia mediterrânica quente",
+  "biome.caiocesarbiomes.hot_mediterranean_beach": "Praia de matagal mediterrânico",
   "biome.caiocesarbiomes.humid_subtropical_beach": "Praia subtropical húmida",
   "biome.caiocesarbiomes.lush_southern_tundra": "Tundra exuberante do sul",
   "biome.caiocesarbiomes.southern_beech_forest": "Floresta-tundra de faias-do-sul",
@@ -817,7 +817,27 @@
   "block.caiocesarbiomes.peach_sapling": "Muda de pessegueiro",
   "block.caiocesarbiomes.peach_fruiting_leaves": "Folhas de pessegueiro com frutos",
   "block.caiocesarbiomes.peach_blossom": "Florada de pessegueiro",
-  "block.caiocesarbiomes.red_kapok_flowering_branches": "Galhos de paineira-vermelha em flor"
+  "block.caiocesarbiomes.red_kapok_flowering_branches": "Galhos de paineira-vermelha em flor",
+  "block.caiocesarbiomes.red_kapok_winter_branches": "Galhos de paineira-vermelha",
+  "block.caiocesarbiomes.red_oak_fall_leaves": "Folhas de carvalho-vermelho",
+  "block.caiocesarbiomes.red_oak_winter_branches": "Galhos de carvalho-vermelho",
+  "block.caiocesarbiomes.red_maple_fall_leaves": "Folhas de bordo-vermelho",
+  "block.caiocesarbiomes.red_maple_winter_branches": "Galhos de bordo-vermelho",
+  "block.caiocesarbiomes.rowan_fall_leaves": "Folhas de tramazeira",
+  "block.caiocesarbiomes.rowan_fall_fruiting_leaves": "Folhas de tramazeira com frutos",
+  "block.caiocesarbiomes.rowan_winter_branches": "Galhos de tramazeira",
+  "block.caiocesarbiomes.rowan_winter_fruiting_branches": "Galhos de tramazeira com frutos",
+  "block.caiocesarbiomes.strawberry_tree_fruiting_leaves": "Folhas de medronheiro com frutos",
+  "block.caiocesarbiomes.strawberry_tree_flowering_leaves": "Folhas de medronheiro em flor",
+  "block.caiocesarbiomes.sweet_chestnut_fall_leaves": "Folhas de castanheira-portuguesa",
+  "block.caiocesarbiomes.sweet_chestnut_winter_branches": "Galhos de castanheira-portuguesa",
+  "block.caiocesarbiomes.tropical_almond_fall_leaves": "Folhas de amendoeira-da-praia",
+  "block.caiocesarbiomes.tropical_almond_new_leaves": "Folhas de amendoeira-da-praia",
+  "block.caiocesarbiomes.tropical_almond_dried_branches": "Galhos de amendoeira-da-praia",
+  "block.caiocesarbiomes.walnut_fall_leaves": "Folhas de nogueira",
+  "block.caiocesarbiomes.walnut_winter_branches": "Galhos de nogueira",
+
+  "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Praia de savana mediterrânica de coníferas"
 }
 
 

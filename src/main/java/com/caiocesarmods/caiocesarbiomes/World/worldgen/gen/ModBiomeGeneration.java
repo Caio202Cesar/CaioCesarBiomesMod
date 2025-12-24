@@ -81,6 +81,8 @@ public class ModBiomeGeneration {
 
         addBiome(HotMediterraneanBeachBiome.HOT_MEDITERRANEAN_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY);
 
+        addBiome(MediterraneanConiferSavannaBiomeBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY);
+
         addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY, WET, LUSH);
 
         addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
