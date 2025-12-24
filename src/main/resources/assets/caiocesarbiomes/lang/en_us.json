@@ -600,6 +600,12 @@
   "block.caiocesarbiomes.tropical_almond_dried_branches": "Tropical Almond Branches",
   "block.caiocesarbiomes.walnut_fall_leaves": "Walnut Leaves",
   "block.caiocesarbiomes.walnut_winter_branches": "Walnut Branches",
+  "block.caiocesarbiomes.crabapple_red_leaves": "Red Crabapple Leaves",
+  "block.caiocesarbiomes.crabapple_red_fruiting_leaves": "Red Crabapple Fruiting Leaves",
+  "block.caiocesarbiomes.crabapple_red_fall_leaves": "Red Crabapple Leaves",
+  "block.caiocesarbiomes.crabapple_red_winter_branches": "Red Crabapple Branches",
+  "block.caiocesarbiomes.crabapple_red_blossom": "Red Crabapple Blossom",
+  "block.caiocesarbiomes.crabapple_red_sapling": "Red Crabapple Sapling",
 
   "block.caiocesarbiomes.calabash_crop": "Calabash Seeds",
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",

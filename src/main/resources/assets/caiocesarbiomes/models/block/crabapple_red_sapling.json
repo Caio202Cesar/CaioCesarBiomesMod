@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/crabapple_red_sapling",
+    "particle": "caiocesarbiomes:block/crabapple_red_sapling"
+  }
+}

@@ -482,6 +482,30 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> RED_CRABAPPLE_LEAVES = registerBlock("crabapple_red_leaves",
+            () -> new RedCrabappleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> RED_CRABAPPLE_BLOSSOM = registerBlock("crabapple_red_blossom",
+            () -> new RedCrabappleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> RED_CRABAPPLE_FRUITING_LEAVES = registerBlock("crabapple_red_fruiting_leaves",
+            () -> new RedCrabappleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_FALL_LEAVES));
+    public static final RegistryObject<Block> RED_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_red_fall_leaves",
+            () -> new RedCrabappleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_WINTER_BRANCHES));
+    public static final RegistryObject<Block> RED_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_red_winter_branches",
+            () -> new RedCrabappleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_BLOSSOM));
+
+    public static final RegistryObject<Block> RED_CRABAPPLE_SAPLING = registerBlock("crabapple_red_sapling",
+            RedCrabappleSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RED_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_red_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RED_CRABAPPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> WHITE_CRABAPPLE_LEAVES = registerBlock("crabapple_white_leaves",
             () -> new WhiteCrabappleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));

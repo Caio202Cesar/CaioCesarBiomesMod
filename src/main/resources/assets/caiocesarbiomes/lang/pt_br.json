@@ -723,6 +723,7 @@
   "biome.caiocesarbiomes.eucalyptus_savanna": "Savana com eucaliptos",
   "biome.caiocesarbiomes.inactive_volcanic_site": "Terreno vulcânico inativo",
   "biome.caiocesarbiomes.subtropical_pine_dry_forest": "Floresta subtropical seca de pinheiros",
+  "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Praia de savana mediterrânica de coníferas",
 
   "screen.caiocesarbiomes.butter_mixer": "Fazedor de manteiga",
   "screen.caiocesarbiomes.toaster": "Torradeira",
@@ -836,8 +837,12 @@
   "block.caiocesarbiomes.tropical_almond_dried_branches": "Galhos de amendoeira-da-praia",
   "block.caiocesarbiomes.walnut_fall_leaves": "Folhas de nogueira",
   "block.caiocesarbiomes.walnut_winter_branches": "Galhos de nogueira",
-
-  "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Praia de savana mediterrânica de coníferas"
+  "block.caiocesarbiomes.crabapple_red_leaves": "Folhas de maçã-silvestre de flores vermelhas",
+  "block.caiocesarbiomes.crabapple_red_fruiting_leaves": "Folhas de maçã-silvestre de flores vermelhas com frutas",
+  "block.caiocesarbiomes.crabapple_red_fall_leaves": "Folhas de maçã-silvestre de flores vermelhas",
+  "block.caiocesarbiomes.crabapple_red_winter_branches": "Galhos de maçã-silvestre de flores vermelhas",
+  "block.caiocesarbiomes.crabapple_red_blossom": "Florada de maçã-silvestre de flores vermelhas",
+  "block.caiocesarbiomes.crabapple_red_sapling": "Muda de maçã-silvestre de flores vermelhas"
 }
 
 
