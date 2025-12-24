@@ -162,6 +162,12 @@ public class ModFoods extends Foods {
     public static final Food STARFRUIT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CRABAPPLES = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food PEACH = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food MARULA_DRINK = (new Food.Builder()).hunger(2).saturation(0.3F)
+            .effect(new EffectInstance(Effects.NAUSEA, 250, 4), 1.0F)
+            .effect(new EffectInstance(Effects.STRENGTH, 400, 3), 1.0F)
+            .effect(new EffectInstance(Effects.HASTE, 350, 5), 1.0F)
+            .effect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 350, 5), 1.0F)
+            .effect(new EffectInstance(Effects.LUCK, 400, 5), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
