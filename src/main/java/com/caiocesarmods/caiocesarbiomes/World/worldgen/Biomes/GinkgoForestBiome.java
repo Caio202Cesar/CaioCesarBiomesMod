@@ -68,7 +68,7 @@ public class GinkgoForestBiome {
 
         //Hardiness zone 6: 0.6F - 0.69F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.69F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.6F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7972607).withFoliageColor(5877296)
                         .withGrassColor(7979098).setFogColor(13494015)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
