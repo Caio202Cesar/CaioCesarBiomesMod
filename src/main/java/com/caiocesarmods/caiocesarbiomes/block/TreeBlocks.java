@@ -1943,7 +1943,7 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> WALNUT_LEAVES = registerBlock("walnut_leaves",
             () -> new WalnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WALNUT_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WALNUT_FRUITING_LEAVES = registerBlock("walnut_fruiting_leaves",
             () -> new WalnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WALNUT_FALL_LEAVES));
