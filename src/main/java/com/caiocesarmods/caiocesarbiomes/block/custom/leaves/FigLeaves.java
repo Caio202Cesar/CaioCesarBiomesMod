@@ -79,7 +79,7 @@ public class FigLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_FIG_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.FIG_FALL_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
