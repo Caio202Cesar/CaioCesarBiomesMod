@@ -42,7 +42,7 @@ public class PersimmonWinterFruitingBranches extends LeavesBlock implements IFor
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
 
-        if (nextStage != null && random.nextInt(35) == 0) {
+        if (nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 

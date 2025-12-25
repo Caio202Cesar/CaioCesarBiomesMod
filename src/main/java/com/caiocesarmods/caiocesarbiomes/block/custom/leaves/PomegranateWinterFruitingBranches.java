@@ -43,7 +43,7 @@ public class PomegranateWinterFruitingBranches extends LeavesBlock implements IF
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
 
-        if (nextStage != null && random.nextInt(35) == 0) {
+        if (nextStage != null && random.nextInt(10) == 0) {
 
             int dropCount = 1;
 

@@ -62,20 +62,11 @@ public class PersimmonFruitingLeaves extends LeavesBlock implements IForgeSheara
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        //Pattern for tropical biomes
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(65) == 0) {
-
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.PERSIMMON.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
+        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_FALL_FRUITING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }

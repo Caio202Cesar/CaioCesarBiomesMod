@@ -44,7 +44,7 @@ public class PersimmonFallFruitingLeaves extends LeavesBlock implements IForgeSh
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -55,7 +55,18 @@ public class PersimmonFallFruitingLeaves extends LeavesBlock implements IForgeSh
 
         }
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
