@@ -134,6 +134,84 @@ public class ModEventSubscriber {
                     old.downfall
             ));
         }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.BADLANDS.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.ERODED_BADLANDS.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.BADLANDS_PLATEAU.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.MODIFIED_BADLANDS_PLATEAU.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.WOODED_BADLANDS_PLATEAU.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
+
+        if (event.getName() != null &&
+                event.getName().equals(Biomes.MODIFIED_WOODED_BADLANDS_PLATEAU.getRegistryName())) {
+
+            Biome.Climate old = event.getClimate();
+
+            event.setClimate(new Biome.Climate(
+                    old.precipitation,
+                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                    old.temperatureModifier,
+                    old.downfall
+            ));
+        }
     }
 
     @SubscribeEvent
