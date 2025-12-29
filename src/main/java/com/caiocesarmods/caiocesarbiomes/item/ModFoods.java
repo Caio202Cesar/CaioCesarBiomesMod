@@ -168,6 +168,7 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.HASTE, 350, 5), 1.0F)
             .effect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 350, 5), 1.0F)
             .effect(new EffectInstance(Effects.LUCK, 400, 5), 1.0F).build();
+    public static final Food PEACH_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
