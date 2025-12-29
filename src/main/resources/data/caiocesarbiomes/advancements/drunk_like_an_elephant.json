@@ -3,7 +3,7 @@
     "icon": {
       "item": "caiocesarbiomes:ripe_marula"
     },
-    "title": "Drunk Like a Elephant!",
+    "title": "Drunk Like an Elephant!",
     "description": "Eat a ripe/fermented marula fruit.",
     "frame": "challenge",
     "show_toast": true,
@@ -14,13 +14,9 @@
     "requirement": {
       "trigger": "minecraft:consume_item",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "caiocesarbiomes:ripe_marula"
-            ]
-          }
-        ]
+        "item": {
+          "item": "caiocesarbiomes:ripe_marula"
+        }
       }
     }
   }
