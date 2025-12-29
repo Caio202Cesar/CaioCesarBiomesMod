@@ -169,6 +169,7 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.LUCK, 400, 5), 1.0F).build();
     public static final Food PEACH_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food PEACH_PIE = (new Food.Builder()).hunger(8).saturation(0.3F).build();
+    public static final Food CANDIED_CITRON = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

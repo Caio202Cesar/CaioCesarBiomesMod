@@ -348,6 +348,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PEACH_ICE_CREAM)));
     public static final RegistryObject<Item> PEACH_PIE = ITEMS.register("peach_pie",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PEACH_PIE)));
+    public static final RegistryObject<Item> CANDIED_CITRON = ITEMS.register("candied_citron",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CANDIED_CITRON)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
