@@ -23,6 +23,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,177 +41,44 @@ public class ModEventSubscriber {
     }
 
     @SubscribeEvent
-    public static void onBiomeLoading(BiomeLoadingEvent event) {
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.SWAMP.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.84f,                  // NEW base temperature = Hardiness zone 9: 0.8F - 0.84F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.SWAMP_HILLS.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.84f,                  // NEW base temperature = Hardiness zone 9: 0.8F - 0.84F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
+    public static void onBiomeLoad(BiomeLoadingEvent event) {
 
         if (event.getName() != null &&
                 event.getName().equals(Biomes.PLAINS.getRegistryName())) {
 
-            Biome.Climate old = event.getClimate();
+            try {
+                Field temp = Biome.Climate.class.getDeclaredField("temperature");
+                temp.setAccessible(true);
 
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.75f,                  // NEW temperature = Hardiness zone 7: 0.7F - 0.75F
+                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
+                downfall.setAccessible(true);
 
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
+                // Modify values
+                temp.setFloat(event.getClimate(), 0.74f); // NEW temperature = Hardiness zone 7: 0.7F - 0.74F
+                downfall.setFloat(event.getClimate(), 0.4f);
 
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.SUNFLOWER_PLAINS.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.75f,                  // NEW temperature = Hardiness zone 7: 0.7F - 0.75F
-
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.FOREST.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.75f,                  // NEW temperature = Hardiness zone 7: 0.7F - 0.75F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.FLOWER_FOREST.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.75f,                  // NEW temperature = Hardiness zone 7: 0.7F - 0.75F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.WOODED_HILLS.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.75f,                  // NEW temperature = Hardiness zone 7: 0.7F - 0.75F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.BADLANDS.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.ERODED_BADLANDS.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.BADLANDS_PLATEAU.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.MODIFIED_BADLANDS_PLATEAU.getRegistryName())) {
-
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         if (event.getName() != null &&
                 event.getName().equals(Biomes.WOODED_BADLANDS_PLATEAU.getRegistryName())) {
 
-            Biome.Climate old = event.getClimate();
+            try {
+                Field temp = Biome.Climate.class.getDeclaredField("temperature");
+                temp.setAccessible(true);
 
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
-        }
+                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
+                downfall.setAccessible(true);
 
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.MODIFIED_WOODED_BADLANDS_PLATEAU.getRegistryName())) {
+                // Modify values
+                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
+                downfall.setFloat(event.getClimate(), 0.0f);
 
-            Biome.Climate old = event.getClimate();
-
-            event.setClimate(new Biome.Climate(
-                    old.precipitation,
-                    0.69f,                  // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                    old.temperatureModifier,
-                    old.downfall
-            ));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

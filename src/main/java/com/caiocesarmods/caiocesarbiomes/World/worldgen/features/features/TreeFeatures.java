@@ -1757,8 +1757,8 @@ public class TreeFeatures {
         protected static final BlockState PONDEROSA_PINE_LOG = TreeBlocks.PONDEROSA_PINE_LOG.get().getDefaultState();
         protected static final BlockState PONDEROSA_PINE_LEAVES = TreeBlocks.PONDEROSA_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
-        protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
 
         protected static final BlockState GINKGO_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
         protected static final BlockState GINKGO_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();

@@ -1,10 +1,8 @@
 {
   "variants":{
     "":[
-      {"model": "caiocesarbiomes:block/indian_coral_dried_branches",
-        "weight": 2},
-      {"model": "caiocesarbiomes:block/indian_coral_dried_flowering_branches",
-        "weight": 5}
+      {"model": "caiocesarbiomes:block/indian_coral_dried_branches"},
+      {"model": "caiocesarbiomes:block/indian_coral_dried_flowering_branches"}
     ]
   }
 }
