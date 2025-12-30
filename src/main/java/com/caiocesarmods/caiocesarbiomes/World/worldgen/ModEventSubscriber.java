@@ -4,6 +4,9 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -13,6 +16,9 @@ import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.server.ServerWorld;
@@ -20,6 +26,8 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.world.SaplingGrowTreeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
@@ -96,6 +104,43 @@ public class ModEventSubscriber {
                     Biome.TemperatureModifier.NONE,
                     0.0f                     // downfall
             ));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onSaplingGrow(SaplingGrowTreeEvent event) {
+
+        IWorld iworld = event.getWorld();
+        if (!(iworld instanceof World)) return;
+
+        World world = (World) iworld;
+        BlockPos pos = event.getPos();
+        BlockState state = event.getWorld().getBlockState(pos);
+        Biome biome = world.getBiome(pos);
+
+        float temp = biome.getTemperature();
+        Block block = state.getBlock();
+
+        // Spruce & Birch = cold / temperate trees (< Zone 8)
+        if (block == Blocks.SPRUCE_SAPLING || block == Blocks.BIRCH_SAPLING) {
+            if (temp >= 0.8F) {
+                event.setResult(Event.Result.DENY);
+
+            }
+        }
+
+        // Jungle trees = tropical (> zone 11)
+        if (block == Blocks.JUNGLE_SAPLING) {
+            if (temp < 0.9F) {
+                event.setResult(Event.Result.DENY);
+            }
+        }
+
+        // Acacia = subtropical (> zone 9)
+        if (block == Blocks.ACACIA_SAPLING) {
+            if (temp < 0.8F) {
+                event.setResult(Event.Result.DENY);
+            }
         }
     }
 
