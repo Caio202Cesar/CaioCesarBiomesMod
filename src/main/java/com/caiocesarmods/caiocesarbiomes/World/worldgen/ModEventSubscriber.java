@@ -142,6 +142,13 @@ public class ModEventSubscriber {
                 event.setResult(Event.Result.DENY);
             }
         }
+
+        // Dark Oak = temperate (< zone 10)
+        if (block == Blocks.DARK_OAK_SAPLING) {
+            if (temp > 0.89F) {
+                event.setResult(Event.Result.DENY);
+            }
+        }
     }
 
     @SubscribeEvent
