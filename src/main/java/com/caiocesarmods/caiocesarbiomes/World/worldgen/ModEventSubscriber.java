@@ -12,6 +12,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.server.ServerWorld;
@@ -25,7 +26,9 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = CaioCesarBiomesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventSubscriber {
@@ -81,118 +84,18 @@ public class ModEventSubscriber {
             }
         }
 
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.WOODED_BADLANDS_PLATEAU.getRegistryName())) {
+        System.out.println("[DEBUG] Biome Loaded: " + event.getName());
 
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
+        if (event.getCategory() == Biome.Category.MESA) {
 
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
+            System.out.println("[DEBUG] Overriding Badlands temperature!");
 
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.MODIFIED_WOODED_BADLANDS_PLATEAU.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.BADLANDS.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.BADLANDS_PLATEAU.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.ERODED_BADLANDS.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.MODIFIED_BADLANDS_PLATEAU.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.69f); // NEW temperature = Hardiness zone 6: 0.6F - 0.69F
-                downfall.setFloat(event.getClimate(), 0.0f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.NONE,     // rain type
+                    0.6f,                    // temperature
+                    Biome.TemperatureModifier.NONE,
+                    0.0f                     // downfall
+            ));
         }
     }
 
