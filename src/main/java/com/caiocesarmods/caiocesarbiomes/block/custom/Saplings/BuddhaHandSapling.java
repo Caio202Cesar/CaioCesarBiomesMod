@@ -38,12 +38,12 @@ public class BuddhaHandSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10
+    //Hardy to zone 10 to 12
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.85f;
-        float maxTemp = 1.6f;
+        float maxTemp = 1.0f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -64,7 +64,7 @@ public class BuddhaHandSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
+        boolean tooHot = temp > 1.0F;
         boolean tooCold = temp < 0.85F;
 
         if (tooHot || tooCold) {
@@ -84,7 +84,7 @@ public class BuddhaHandSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 1.6f;
+            float minTemp = 0.85f, maxTemp = 1.0f;
 
             if (temp < minTemp) {
                 player.sendMessage(

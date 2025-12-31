@@ -41,7 +41,9 @@ public class ChineseRedPineSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 7 to 10 (or 9, considering it is a Pinus massoniana, not tabuliformis)
+    //Hardy to zone 5 to 10
+    // //(in real life, chinese red pines belongs to Pinus massoniana, generally between zone 7 and 10, or a P. tabuliformis, hardiness between zone 5 and 8)
+    // // // However, since the biome which adds it is a Subtropical Highland, we assume it is P. massoniana, rater than P. tabuliformis, native from a more drier and colder biome.
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
