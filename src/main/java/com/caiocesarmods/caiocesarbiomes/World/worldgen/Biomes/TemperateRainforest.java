@@ -70,9 +70,9 @@ public class TemperateRainforest {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        //Hardiness zone 8: 0.75F - 0.79F
+        //Hardiness zone 7: 0.7F - 0.75F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.79F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.75F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(12570083).withFoliageColor(7055681)
                         .withGrassColor(8960871).setFogColor(12570083)
                         .setAmbientSound(ModSoundEvents.LAURISSILVA_AMBIENCE.get())

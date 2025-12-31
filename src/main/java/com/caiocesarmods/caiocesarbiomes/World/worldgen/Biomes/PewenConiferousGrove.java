@@ -65,7 +65,7 @@ public class PewenConiferousGrove {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        //Hardiness zone 7: 0.7F - 0.75F
+        //Hardiness zone 7: 0.7F - 0.74F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.75F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                         .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)

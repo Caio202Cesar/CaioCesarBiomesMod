@@ -47,7 +47,7 @@ public class BunyaPineSapling extends SaplingBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.8f;
-        float maxTemp = 1.6f;
+        float maxTemp = 1.0f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -68,7 +68,7 @@ public class BunyaPineSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
+        boolean tooHot = temp > 1.0F;
         boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
@@ -88,7 +88,7 @@ public class BunyaPineSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f, maxTemp = 1.6f;
+            float minTemp = 0.8f, maxTemp = 1.0f;
 
             if (temp < minTemp) {
                 player.sendMessage(
