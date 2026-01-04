@@ -1866,10 +1866,10 @@ public class TreeFeatures {
         protected static final BlockState POMEGRANATE_LEAVES = TreeBlocks.POMEGRANATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState MYRTLE_LOG = TreeBlocks.MYRTLE_LOG.get().getDefaultState();
-        protected static final BlockState RED_CRAPE_MYRTLE_LEAVES = TreeBlocks.RED_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
-        protected static final BlockState PURPLE_CRAPE_MYRTLE_LEAVES = TreeBlocks.PURPLE_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
-        protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = TreeBlocks.WHITE_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
-        protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = TreeBlocks.PINK_CRAPE_MYRTLE_LEAVES.get().getDefaultState();
+        protected static final BlockState RED_CRAPE_MYRTLE_LEAVES = TreeBlocks.RED_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
+        protected static final BlockState PURPLE_CRAPE_MYRTLE_LEAVES = TreeBlocks.PURPLE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOUTHERN_WAX_MYRTLE_LEAVES = TreeBlocks.SOUTHERN_WAX_MYRTLE_LEAVES.get().getDefaultState();
 
