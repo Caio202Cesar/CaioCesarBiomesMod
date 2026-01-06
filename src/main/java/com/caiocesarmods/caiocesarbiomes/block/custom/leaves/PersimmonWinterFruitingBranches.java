@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
@@ -41,8 +42,9 @@ public class PersimmonWinterFruitingBranches extends LeavesBlock implements IFor
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if (nextStage != null && random.nextInt(2) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 
