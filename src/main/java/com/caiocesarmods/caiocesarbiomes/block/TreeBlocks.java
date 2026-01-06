@@ -76,7 +76,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> AVOCADO_FLOWERING_LEAVES = registerBlock("avocado_flowering_leaves",
             () -> new AvocadoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FRUITING_LEAVES));
-    public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_fruiting_leaves",
+    public static final RegistryObject<Block> AVOCADO_FRUITING_LEAVES = registerBlock("avocado_fruiting_leaves",
             () -> new AvocadoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_LEAVES));
 
