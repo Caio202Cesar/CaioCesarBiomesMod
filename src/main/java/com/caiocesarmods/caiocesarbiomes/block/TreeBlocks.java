@@ -1444,9 +1444,12 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> PISTACHIO_LEAVES = registerBlock("pistachio_leaves",
             () -> new PistachioLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PISTACHIO_FRUITING_LEAVES = registerBlock("pistachio_fruiting_leaves",
             () -> new PistachioFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
+    public static final RegistryObject<Block> PISTACHIO_WINTER_BRANCHES = registerBlock("pistachio_winter_branches",
+            () -> new PistachioWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
     public static final RegistryObject<Block> PISTACHIO_SAPLING = registerBlock("pistachio_sapling",
             PistachioSapling::new);
