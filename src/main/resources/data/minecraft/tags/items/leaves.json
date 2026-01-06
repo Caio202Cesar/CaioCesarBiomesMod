@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "caiocesarbiomes:avocado_leaves",
+    "caiocesarbiomes:avocado_flowering_leaves",
+    "caiocesarbiomes:avocado_fruiting_leaves",
     "caiocesarbiomes:coast_cottonwood_leaves",
     "caiocesarbiomes:elderberry_leaves",
     "caiocesarbiomes:elderberry_flowering_leaves",

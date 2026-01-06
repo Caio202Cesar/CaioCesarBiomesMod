@@ -1,6 +1,5 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen;
+package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -15,7 +14,6 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -34,9 +32,7 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = CaioCesarBiomesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventSubscriber {
@@ -170,7 +166,7 @@ public class ModEventSubscriber {
                 ItemStack stack = player.inventory.getStackInSlot(i);
 
                 if (!stack.isEmpty() && stack.getItem() == ModItems.MARULA.get()) {
-                    if (player.getRNG().nextInt(150) == 30) { // ~30 in 150 chance per tick
+                    if (player.getRNG().nextInt(450) == 10) { // ~10 in 450 chance per tick
                         ItemStack ripeStack = new ItemStack(ModItems.RIPE_MARULA.get(), stack.getCount());
                         if (stack.hasTag()) {
                             ripeStack.setTag(stack.getTag().copy());
@@ -187,7 +183,7 @@ public class ModEventSubscriber {
                 ItemStack stack = player.inventory.getStackInSlot(i);
 
                 if (!stack.isEmpty() && stack.getItem() == ModItems.UNRIPE_CREEPING_FIG.get()) {
-                    if (player.getRNG().nextInt(200) == 10) { // ~10 in 200 chance per tick
+                    if (player.getRNG().nextInt(500) == 10) { // ~10 in 500 chance per tick
                         ItemStack ripeStack = new ItemStack(ModItems.RIPE_CREEPING_FIG.get(), stack.getCount());
                         if (stack.hasTag()) {
                             ripeStack.setTag(stack.getTag().copy());
@@ -204,7 +200,7 @@ public class ModEventSubscriber {
                 ItemStack stack = player.inventory.getStackInSlot(i);
 
                 if (!stack.isEmpty() && stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
-                    if (player.getRNG().nextInt(270) == 5) { // ~5 in 270 chance per tick
+                    if (player.getRNG().nextInt(1000) == 10) { // ~10 in 1000 chance per tick
                         ItemStack ripeStack = new ItemStack(ModItems.MANGO.get(), stack.getCount());
                         if (stack.hasTag()) {
                             ripeStack.setTag(stack.getTag().copy());
@@ -242,7 +238,7 @@ public class ModEventSubscriber {
 
                         // Verifica qual item está amadurecendo e substitui quando atingir a idade certa
                         if (stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
-                            if (age >= 120000) {
+                            if (age >= 820000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.MANGO.get(), stack.getCount()));
                             } else {
                                 tag.putInt("RipenAge", age);
@@ -258,7 +254,7 @@ public class ModEventSubscriber {
                             }
 
                         } else if (stack.getItem() == ModItems.MARULA.get()) {
-                            if (age >= 16000) {
+                            if (age >= 120000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.RIPE_MARULA.get(), stack.getCount()));
                             } else {
                                 tag.putInt("RipenAge", age);

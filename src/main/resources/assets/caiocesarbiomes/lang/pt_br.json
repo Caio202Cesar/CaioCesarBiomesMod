@@ -849,7 +849,9 @@
   "block.caiocesarbiomes.crabapple_red_winter_branches": "Galhos de maçã-silvestre de flores vermelhas",
   "block.caiocesarbiomes.crabapple_red_blossom": "Florada de maçã-silvestre de flores vermelhas",
   "block.caiocesarbiomes.crabapple_red_sapling": "Muda de maçã-silvestre de flores vermelhas",
-  "block.caiocesarbiomes.pistachio_winter_branches": "Galhos de pistacheiro"
+  "block.caiocesarbiomes.pistachio_winter_branches": "Galhos de pistacheiro",
+  "block.caiocesarbiomes.avocado_flowering_leaves": "Folhas de abacateiro em flor",
+  "block.caiocesarbiomes.avocado_fruiting_leaves": "Folhas de abacateiro com frutos"
 }
 
 
