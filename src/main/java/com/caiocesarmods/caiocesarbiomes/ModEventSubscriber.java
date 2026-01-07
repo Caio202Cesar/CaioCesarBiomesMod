@@ -51,25 +51,6 @@ public class ModEventSubscriber {
     public static void onBiomeLoad(BiomeLoadingEvent event) {
 
         if (event.getName() != null &&
-                event.getName().equals(Biomes.PLAINS.getRegistryName())) {
-
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
-
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
-
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.74f); // NEW temperature = Hardiness zone 7: 0.7F - 0.74F
-                downfall.setFloat(event.getClimate(), 0.4f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (event.getName() != null &&
                 event.getName().equals(Biomes.SUNFLOWER_PLAINS.getRegistryName())) {
 
             try {
@@ -90,6 +71,7 @@ public class ModEventSubscriber {
 
         System.out.println("[DEBUG] Biome Loaded: " + event.getName());
 
+
         if (event.getCategory() == Biome.Category.MESA) {
 
             System.out.println("[DEBUG] Overriding Badlands temperature!");
@@ -99,6 +81,18 @@ public class ModEventSubscriber {
                     0.6f,                    // temperature
                     Biome.TemperatureModifier.NONE,
                     0.0f                     // downfall
+            ));
+        }
+
+        if (event.getName() == Biomes.PLAINS.getRegistryName()) {
+
+            System.out.println("[DEBUG] Overriding Plains temperature!");
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.RAIN,     // rain type
+                    0.79f,                    // temperature
+                    Biome.TemperatureModifier.NONE,
+                    0.4f                     // downfall
             ));
         }
     }

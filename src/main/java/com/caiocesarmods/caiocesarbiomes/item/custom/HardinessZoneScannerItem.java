@@ -25,15 +25,12 @@ public class HardinessZoneScannerItem extends Item {
 
             int zone = HardinessZones.getZone(world, pos);
             float baseTemp = biome.getTemperature(pos);
-            float adjustedTemp = HardinessZones.getAdjustedTemperature(world, pos);
 
             player.sendMessage(
                     new StringTextComponent(
                             "§aHardiness Zone: §e" + zone +
                                     "\n§aBiome: §e" + biome.getRegistryName() +
-                                    "\n§aBase temperature: §e" + String.format("%.2f", baseTemp) +
-                                    "\n§aAdjusted temperature: §e" + String.format("%.2f", adjustedTemp) +
-                                    "\n§7(Temperature modified by altitude)"
+                                    "\n§aBase temperature: §e" + String.format("%.2f", baseTemp)
                     ),
                     player.getUniqueID()
             );
