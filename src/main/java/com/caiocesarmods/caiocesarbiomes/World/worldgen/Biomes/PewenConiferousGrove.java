@@ -25,7 +25,7 @@ public class PewenConiferousGrove {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> PEWEN_CONIFEROUS_GROVE = BIOMES.register("pewen_coniferous_grove",
-            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.3f, 0.5f));
+            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.4f, 0.7f));
 
 
     private static Biome makePewenConiferousGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
