@@ -52,46 +52,37 @@ public class ModEventSubscriber {
     }
 
     @SubscribeEvent
-    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
-        IForgeRegistry<Biome> registry = event.getRegistry();
-
-        // Get the registry key of the vanilla biome
-        ResourceLocation desertID = Biomes.DESERT.getRegistryName();
-
-        // Create your modified biome
-        Biome newBiome = TropicalDesertBiome.TROPICAL_DESERT.get();
-
-        newBiome.setRegistryName(desertID);
-
-        // Replace the vanilla biome
-        registry.register(newBiome);
-
-        System.out.println(">>> Successfully replaced vanilla Desert with Tropical Desert!");
-    }
-
-    @SubscribeEvent
     public static void onBiomeLoad(BiomeLoadingEvent event) {
 
-        if (event.getName() != null &&
-                event.getName().equals(Biomes.SUNFLOWER_PLAINS.getRegistryName())) {
+        if (event.getCategory() == Biome.Category.PLAINS) {
 
-            try {
-                Field temp = Biome.Climate.class.getDeclaredField("temperature");
-                temp.setAccessible(true);
+            ResourceLocation id = event.getName();
+            if (id == null) return;
 
-                Field downfall = Biome.Climate.class.getDeclaredField("downfall");
-                downfall.setAccessible(true);
+            String namespace = id.getNamespace();
 
-                // Modify values
-                temp.setFloat(event.getClimate(), 0.74f); // NEW temperature = Hardiness zone 7: 0.7F - 0.74F
-                downfall.setFloat(event.getClimate(), 0.4f);
-
-            } catch (Exception e) {
-                e.printStackTrace();
+            // ⛔ Skip all biomes from your mod
+            if (id.getNamespace().equals(CaioCesarBiomesMod.MOD_ID)) {
+                System.out.println("[DEBUG] Skipping biomes from the mod: " + id);
+                return;
             }
-        }
 
-        System.out.println("[DEBUG] Biome Loaded: " + event.getName());
+            // 🛑 Skip all biomes from brbiomesmod
+            if (namespace.equals("brbiomesmod")) {
+                System.out.println("[DEBUG] Skipping biomes from brbiomesmod: " + id);
+                return;
+            }
+
+            // ✔ Only vanilla (or other-mod) mesa biomes reach this point
+            System.out.println("[DEBUG] Overriding temperature for: " + id);
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.RAIN,          // rain
+                    0.79f,                         // new temperature - hardiness zone 8
+                    Biome.TemperatureModifier.NONE,
+                    0.4f                          // downfall
+            ));
+        }
 
 
         if (event.getCategory() == Biome.Category.MESA) {
@@ -100,7 +91,7 @@ public class ModEventSubscriber {
 
             event.setClimate(new Biome.Climate(
                     Biome.RainType.NONE,     // rain type
-                    0.6f,                    // temperature
+                    0.69f,                    // new temperature - hardiness zone 6
                     Biome.TemperatureModifier.NONE,
                     0.0f                     // downfall
             ));
