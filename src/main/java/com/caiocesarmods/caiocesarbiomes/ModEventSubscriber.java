@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,6 +15,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -22,6 +24,7 @@ import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.SaplingGrowTreeEvent;
@@ -29,6 +32,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -45,6 +49,20 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         SetSeasonCommand.register(event.getDispatcher());
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+        IForgeRegistry<Biome> registry = event.getRegistry();
+
+        // Get the registry key of the vanilla biome
+        ResourceLocation key = Biomes.DESERT.getRegistryName();
+
+        // Create your modified biome
+        Biome newBiome = TropicalDesertBiome.;
+
+        // **Unregister vanilla biome and replace it**
+        registry.register(newBiome.setRegistryName(key));
     }
 
     @SubscribeEvent
@@ -81,18 +99,6 @@ public class ModEventSubscriber {
                     0.6f,                    // temperature
                     Biome.TemperatureModifier.NONE,
                     0.0f                     // downfall
-            ));
-        }
-
-        if (event.getName() == Biomes.PLAINS.getRegistryName()) {
-
-            System.out.println("[DEBUG] Overriding Plains temperature!");
-
-            event.setClimate(new Biome.Climate(
-                    Biome.RainType.RAIN,     // rain type
-                    0.79f,                    // temperature
-                    Biome.TemperatureModifier.NONE,
-                    0.4f                     // downfall
             ));
         }
     }
