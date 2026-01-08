@@ -25,7 +25,7 @@ public class PewenConiferousGrove {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> PEWEN_CONIFEROUS_GROVE = BIOMES.register("pewen_coniferous_grove",
-            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.7f, 0.9f));
+            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.3f, 0.5f));
 
 
     private static Biome makePewenConiferousGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -65,9 +65,9 @@ public class PewenConiferousGrove {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        //Hardiness zone 7: 0.7F - 0.74F
+        //Hardiness zone 9: 0.8F - 0.84F (Altitude should put in in a colder zone).
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.75F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                .temperature(0.84F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                         .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                         .withGrassColor(11437360).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
