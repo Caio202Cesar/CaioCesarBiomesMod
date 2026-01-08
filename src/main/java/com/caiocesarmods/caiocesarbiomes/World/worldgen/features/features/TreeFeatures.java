@@ -2006,7 +2006,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_DESERT_TREES = register("temperate_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.4F),
-                            LOMBARDY_POPLAR_TREE.withChance(0.12F)), MESQUITE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            LOMBARDY_POPLAR_TREE.withChance(0.12F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F), ALMOND_TREE.withChance(0.3F)), MESQUITE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.5F, 6))));
 
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",

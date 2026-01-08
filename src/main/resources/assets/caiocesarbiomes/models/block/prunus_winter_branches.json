@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/prunus_winter_branches",
+    "particle": "caiocesarbiomes:block/prunus_winter_branches"
+  }
+}
