@@ -2,19 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "X X",
-    "X#X",
+    "X X",
     " X "
   ],
   "key": {
     "X": {
       "item": "minecraft:wheat"
-    },
-    "#": {
-      "item": "minecraft:egg"
     }
   },
   "result": {
     "item": "caiocesarbiomes:ice_cream_cone",
-    "count": 8
+    "count": 9
   }
 }

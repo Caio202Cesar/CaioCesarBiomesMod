@@ -56,13 +56,17 @@ public class ModEventSubscriber {
         IForgeRegistry<Biome> registry = event.getRegistry();
 
         // Get the registry key of the vanilla biome
-        ResourceLocation key = Biomes.DESERT.getRegistryName();
+        ResourceLocation desertID = Biomes.DESERT.getRegistryName();
 
         // Create your modified biome
-        Biome newBiome = TropicalDesertBiome.;
+        Biome newBiome = TropicalDesertBiome.TROPICAL_DESERT.get();
 
-        // **Unregister vanilla biome and replace it**
-        registry.register(newBiome.setRegistryName(key));
+        newBiome.setRegistryName(desertID);
+
+        // Replace the vanilla biome
+        registry.register(newBiome);
+
+        System.out.println(">>> Successfully replaced vanilla Desert with Tropical Desert!");
     }
 
     @SubscribeEvent

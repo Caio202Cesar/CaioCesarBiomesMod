@@ -28,7 +28,7 @@ public class TropicalDesertBiome {
            () -> makeTropicalDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.125f, 0.4f));
 
 
-   private static Biome makeTropicalDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+   public static Biome makeTropicalDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -76,4 +76,4 @@ public class TropicalDesertBiome {
    public static void register(IEventBus eventBus) {
       BIOMES.register(eventBus);
    }
-   }
+}
