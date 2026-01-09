@@ -36,17 +36,6 @@ public class WhiteCrabappleLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRABAPPLE_BLOSSOM.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
-
-        }
-
         if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);

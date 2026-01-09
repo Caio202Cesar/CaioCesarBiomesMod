@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -25,16 +28,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CherryPlumSapling extends SaplingBlock {
-    public CherryPlumSapling() {
-        super(new CherryPlumSapling.CherryPlumTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class AlmondSapling extends SaplingBlock {
+    public AlmondSapling() {
+        super(new AlmondSapling.CherryPlumTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.CHERRY_PLUM_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_CHERRY_PLUM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.ALMOND_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ALMOND_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -125,9 +128,9 @@ public class CherryPlumSapling extends SaplingBlock {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 5) {
-                return TreeFeatures.SAPLING_CHERRY_PLUM_TREE;
+                return TreeFeatures.SAPLING_ALMOND_TREE1;
             } else {
-                return TreeFeatures.SAPLING_CHERRY_PLUM_FANCY_TREE;
+                return TreeFeatures.SAPLING_ALMOND_TREE2;
             }
         }
     }

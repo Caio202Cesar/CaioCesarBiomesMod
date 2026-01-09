@@ -45,7 +45,7 @@ public class RedCrabappleSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.RED_CRABAPPLE_TREE;
+            return TreeFeatures.SAPLING_RED_CRABAPPLE_TREE;
         }
     }
 }

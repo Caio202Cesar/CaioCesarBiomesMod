@@ -65,6 +65,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CalabashCropBlock.registerRenderLayer();
 
         AvocadoSapling.registerRenderLayer();
+        AlmondSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
         BananaSapling.registerRenderLayer();
         CamelliaSapling.registerRenderLayer();
