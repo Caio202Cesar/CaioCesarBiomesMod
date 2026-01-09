@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PeachFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class AlmondFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public PeachFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public AlmondFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,11 +45,11 @@ public class PeachFruitingLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PEACH.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -66,7 +66,7 @@ public class PeachFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PEACH.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -83,7 +83,7 @@ public class PeachFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PEACH.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -103,12 +103,12 @@ public class PeachFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PEACH.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.UNRIPE_ALMOND.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.PEACH_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ALMOND_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

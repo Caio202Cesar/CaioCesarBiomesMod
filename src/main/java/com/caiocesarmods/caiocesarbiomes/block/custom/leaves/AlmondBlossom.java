@@ -12,11 +12,11 @@ import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 
-public class AlmondLeaves extends LeavesBlock implements IForgeShearable {
-    public AlmondLeaves(Properties properties) {
+public class AlmondBlossom extends LeavesBlock implements IForgeShearable {
+    public AlmondBlossom(Properties properties) {
         super(properties);
-    }
 
+    }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -34,28 +34,30 @@ public class AlmondLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
-
+        if ("SUMMER".equals(currentSeason) && random.nextInt(10) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ALMOND_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.ALMOND_FRUITING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+        }
 
+        if ("FALL".equals(currentSeason) && random.nextInt(5) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.ALMOND_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
         if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
-
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ALMOND_FALL_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.ALMOND_WINTER_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-
         }
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
