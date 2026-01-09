@@ -72,7 +72,7 @@ public class ModItems {
     public static final RegistryObject<Item> GREEN_COCONUT = ITEMS.register("green_coconut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> PISTACHIO = ITEMS.register("pistachio",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PISTACHIO)));
     public static final RegistryObject<Item> PECAN_NUT = ITEMS.register("pecan_nut",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> SWEET_CHESTNUT = ITEMS.register("sweet_chestnut",
@@ -100,11 +100,11 @@ public class ModItems {
     public static final RegistryObject<Item> KIWI_FRUITS = ITEMS.register("kiwi_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.KIWI)));
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.HAZELNUTS)));
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.COCONUT_SPROUT)));
     public static final RegistryObject<Item> CAROB_BEANS = ITEMS.register("carob_beans",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CAROB_BEANS)));
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.JUNIPER_BERRIES)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
@@ -137,6 +137,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CRABAPPLES)));
     public static final RegistryObject<Item> PEACH = ITEMS.register("peach",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PEACH)));
+    public static final RegistryObject<Item> UNRIPE_ALMOND = ITEMS.register("unripe_almond",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.UNRIPE_ALMOND)));
+    public static final RegistryObject<Item> RAW_ALMOND = ITEMS.register("raw_almond",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.RAW_ALMOND)));
+    public static final RegistryObject<Item> ALMOND_SHELL = ITEMS.register("almond_shell",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+    public static final RegistryObject<Item> ROASTED_ALMOND = ITEMS.register("roasted_almond",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROASTED_ALMOND)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
