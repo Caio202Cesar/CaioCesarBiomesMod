@@ -2407,7 +2407,7 @@ public class TreeFeatures {
                             MULBERRY_TREE.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.2F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), STARFRUIT_TREE_WITH_KIWI.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.2F), PERSIMMON_TREE.withChance(0.25F), PERSIMMON_FANCY_TREE.withChance(0.3F),
-                            CREEPING_FIG_AVOCADO_TREE.withChance(0.3F)),
+                            CREEPING_FIG_AVOCADO_TREE.withChance(0.3F), PEACH_TREE.withChance(0.19F)),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
@@ -2425,11 +2425,11 @@ public class TreeFeatures {
                             .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.2F),
-                            ELDERBERRY_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.6F), MULBERRY_TREE.withChance(0.4F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.4F),
+                            ELDERBERRY_TREE.withChance(0.3F), SOUTHERN_LIVE_OAK_TREE.withChance(0.6F), MULBERRY_TREE.withChance(0.4F),
                             AVOCADO_TREE.withChance(0.3F), PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            OAK_TREE_WITH_IVY.withChance(0.15F), PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.4F),
-                            PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F),
+                            OAK_TREE_WITH_IVY.withChance(0.15F), PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F),
+                            PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F), PEACH_TREE.withChance(0.2F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.27F), LOBLOLLY_PINE.withChance(0.4F), SLASH_PINE.withChance(0.4F),
                             CREEPING_FIG_AVOCADO_TREE.withChance(0.06F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.12F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.073F), RED_MAPLE_FANCY_TREE.withChance(0.4F), BLOB_RED_MAPLE_TREE.withChance(0.3F),
