@@ -36,6 +36,7 @@ public class BananaSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.BANANA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_BANANA_SAPLING.get(), RenderType.getCutout());
 
     }
 

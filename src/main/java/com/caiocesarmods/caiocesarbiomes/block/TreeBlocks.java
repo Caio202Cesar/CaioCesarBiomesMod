@@ -106,6 +106,30 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    //Almond
+    public static final RegistryObject<Block> PEACH_LEAVES = registerBlock("peach_leaves",
+            () -> new PeachLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PEACH_FALL_LEAVES = registerBlock("peach_fall_leaves",
+            () -> new PeachFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> PEACH_WINTER_BRANCHES = registerBlock("peach_winter_branches",
+            () -> new PeachWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_BLOSSOM));
+    public static final RegistryObject<Block> PEACH_BLOSSOM = registerBlock("peach_blossom",
+            () -> new PeachBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PEACH_FRUITING_LEAVES = registerBlock("peach_fruiting_leaves",
+            () -> new PeachFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_LEAVES));
+
+    public static final RegistryObject<Block> PEACH_SAPLING = registerBlock("peach_sapling",
+            PeachSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PEACH_SAPLING = BLOCKS.register("potted_peach_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PEACH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     ///B
     //Bald Cypress
@@ -144,6 +168,10 @@ public class TreeBlocks {
                     .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> BANANA_SAPLING = registerBlock("banana_sapling",
             BananaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BANANA_SAPLING = BLOCKS.register("potted_banana_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.BANANA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> BANANA_FLOWER = registerBlock("banana_flower",
             BananaFlowerBlock::new); //Can be harvested and cooked
     public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
