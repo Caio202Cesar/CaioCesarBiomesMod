@@ -107,27 +107,27 @@ public class TreeBlocks {
 
 
     //Almond
-    public static final RegistryObject<Block> PEACH_LEAVES = registerBlock("peach_leaves",
-            () -> new PeachLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+    public static final RegistryObject<Block> ALMOND_LEAVES = registerBlock("almond_leaves",
+            () -> new AlmondLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> PEACH_FALL_LEAVES = registerBlock("peach_fall_leaves",
-            () -> new PeachFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PEACH_WINTER_BRANCHES = registerBlock("peach_winter_branches",
-            () -> new PeachWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_BLOSSOM));
-    public static final RegistryObject<Block> PEACH_BLOSSOM = registerBlock("peach_blossom",
-            () -> new PeachBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+    public static final RegistryObject<Block> ALMOND_FALL_LEAVES = registerBlock("almond_fall_leaves",
+            () -> new AlmondFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_WINTER_BRANCHES));
+    public static final RegistryObject<Block> ALMOND_WINTER_BRANCHES = registerBlock("almond_winter_branches",
+            () -> new AlmondWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_BLOSSOM));
+    public static final RegistryObject<Block> ALMOND_BLOSSOM = registerBlock("almond_blossom",
+            () -> new AlmondBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> PEACH_FRUITING_LEAVES = registerBlock("peach_fruiting_leaves",
-            () -> new PeachFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_LEAVES));
+    public static final RegistryObject<Block> ALMOND_FRUITING_LEAVES = registerBlock("almond_fruiting_leaves",
+            () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_LEAVES));
 
-    public static final RegistryObject<Block> PEACH_SAPLING = registerBlock("peach_sapling",
-            PeachSapling::new);
+    public static final RegistryObject<Block> ALMOND_SAPLING = registerBlock("almond_sapling",
+            AlmondSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PEACH_SAPLING = BLOCKS.register("potted_peach_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.PEACH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_ALMOND_SAPLING = BLOCKS.register("potted_almond_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ALMOND_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

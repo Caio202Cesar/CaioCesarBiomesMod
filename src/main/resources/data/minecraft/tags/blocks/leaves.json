@@ -258,7 +258,12 @@
     "caiocesarbiomes:peach_winter_branches",
     "caiocesarbiomes:ginkgo_leaves",
     "caiocesarbiomes:ginkgo_fall_leaves",
-    "caiocesarbiomes:ginkgo_winter_branches"
+    "caiocesarbiomes:ginkgo_winter_branches",
+    "caiocesarbiomes:almond_leaves",
+    "caiocesarbiomes:almond_blossom",
+    "caiocesarbiomes:almond_fruiting_leaves",
+    "caiocesarbiomes:almond_fall_leaves",
+    "caiocesarbiomes:almond_winter_branches"
   ]
 }
 

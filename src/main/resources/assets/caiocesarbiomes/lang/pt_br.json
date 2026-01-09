@@ -851,7 +851,13 @@
   "block.caiocesarbiomes.crabapple_red_sapling": "Muda de maçã-silvestre de flores vermelhas",
   "block.caiocesarbiomes.pistachio_winter_branches": "Galhos de pistacheiro",
   "block.caiocesarbiomes.avocado_flowering_leaves": "Folhas de abacateiro em flor",
-  "block.caiocesarbiomes.avocado_fruiting_leaves": "Folhas de abacateiro com frutos"
+  "block.caiocesarbiomes.avocado_fruiting_leaves": "Folhas de abacateiro com frutos",
+  "block.caiocesarbiomes.almond_leaves": "Folhas de amendoeira",
+  "block.caiocesarbiomes.almond_fall_leaves": "Folhas de amendoeira",
+  "block.caiocesarbiomes.almond_winter_branches": "Galhos de amendoeira",
+  "block.caiocesarbiomes.almond_sapling": "Muda de amendoeira",
+  "block.caiocesarbiomes.almond_fruiting_leaves": "Folhas de amendoeira com frutos",
+  "block.caiocesarbiomes.almond_blossom": "Florada de amendoeira"
 }
 
 
