@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:almond_shell"
+    },
+    {
+      "item": "caiocesarbiomes:nutcracker"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:raw_almond",
+    "count": 1
+  }
+}

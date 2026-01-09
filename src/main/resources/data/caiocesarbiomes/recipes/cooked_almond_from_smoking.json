@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "caiocesarbiomes:raw_almond"
+  },
+  "result": "caiocesarbiomes:roasted_almond",
+  "experience": 0.35,
+  "cookingtime": 200
+}
