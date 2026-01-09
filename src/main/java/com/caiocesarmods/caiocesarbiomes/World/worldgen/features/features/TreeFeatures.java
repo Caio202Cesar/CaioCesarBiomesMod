@@ -1772,6 +1772,7 @@ public class TreeFeatures {
 
         protected static final BlockState SLASH_PINE_LOG = TreeBlocks.SLASH_PINE_LOG.get().getDefaultState();
         protected static final BlockState SLASH_PINE_LEAVES = TreeBlocks.SLASH_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState LOBOLLY_PINE_LEAVES = TreeBlocks.LOBOLLY_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState OIL_PALM_LOG = TreeBlocks.OIL_PALM_LOG.get().getDefaultState();
         protected static final BlockState OIL_PALM_LEAVES = TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState();
