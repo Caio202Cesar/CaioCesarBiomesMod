@@ -1802,13 +1802,13 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.SLASH_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> SLASH_PINE_LEAVES = registerBlock("slash_pine_leaves",
+    public static final RegistryObject<Block> LOBLOLLY_PINE_LEAVES = registerBlock("loblolly_pine_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> SLASH_PINE_SAPLING = registerBlock("slash_pine_sapling",
-            SlashPineSapling::new);
+    public static final RegistryObject<Block> LOBLOLLY_PINE_SAPLING = registerBlock("loblolly_pine_sapling",
+            LoblollyPineSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_SLASH_PINE_SAPLING = BLOCKS.register("potted_slash_pine_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.SLASH_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_LOBLOLLY_PINE_SAPLING = BLOCKS.register("potted_loblolly_pine_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.LOBLOLLY_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

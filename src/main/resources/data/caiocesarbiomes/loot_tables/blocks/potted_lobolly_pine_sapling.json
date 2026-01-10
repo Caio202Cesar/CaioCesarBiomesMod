@@ -26,11 +26,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "caiocesarbiomes:lobolly_pine_sapling"
+          "name": "caiocesarbiomes:loblolly_pine_sapling"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "caiocesarbiomes:blocks/lobolly_pine_sapling"
+  "random_sequence": "caiocesarbiomes:blocks/loblolly_pine_sapling"
 }

@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "caiocesarbiomes:block/lobolly_pine_sapling",
-    "particle": "caiocesarbiomes:block/lobolly_pine_sapling"
+    "cross": "caiocesarbiomes:block/loblolly_pine_sapling",
+    "particle": "caiocesarbiomes:block/loblolly_pine_sapling"
   }
 }

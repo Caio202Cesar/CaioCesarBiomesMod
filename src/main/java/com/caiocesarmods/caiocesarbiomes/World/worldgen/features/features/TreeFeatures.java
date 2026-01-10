@@ -1622,21 +1622,22 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
 
-    //Slash Pine (Subtropical Forest)
+    //Southern yellow pines
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SLASH_PINE = register("slash_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SLASH_PINE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-
-    //Loboly Pine (the main feature of decidous subtropical)
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
-                    new SimpleBlockStateProvider(States.LOBLOLLY_LEAVES),
+                    new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(16, 10, 2),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_JUNGLE_TREE = register("peppercorn_jungle_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
@@ -1772,7 +1773,7 @@ public class TreeFeatures {
 
         protected static final BlockState SLASH_PINE_LOG = TreeBlocks.SLASH_PINE_LOG.get().getDefaultState();
         protected static final BlockState SLASH_PINE_LEAVES = TreeBlocks.SLASH_PINE_LEAVES.get().getDefaultState();
-        protected static final BlockState LOBOLLY_PINE_LEAVES = TreeBlocks.LOBOLLY_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState LOBLOLLY_PINE_LEAVES = TreeBlocks.LOBLOLLY_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState OIL_PALM_LOG = TreeBlocks.OIL_PALM_LOG.get().getDefaultState();
         protected static final BlockState OIL_PALM_LEAVES = TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState();
@@ -2055,7 +2056,12 @@ public class TreeFeatures {
                             CANARY_PINE_TREE_TALL.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
-    public static final ConfiguredFeature<?, ?> TEMPERATE_SAVANNA_TREES = register("temperate_savanna_trees",
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_PINE_TREES = register("subtropical_pine_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            LOBLOLLY_PINE.withChance(0.5F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
+
+    public static final ConfiguredFeature<?, ?> TEMPERATE_EUCALYPTUS_SAVANNA_TREES = register("temperate_eucalyptus_savanna_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of( EUCALYPTUS_TALL_TREE.withChance(0.2F),
                             LOMBARDY_POPLAR_TREE.withChance(0.12F)), EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
@@ -2064,7 +2070,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.4F),
                             LOMBARDY_POPLAR_TREE.withChance(0.12F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F), ALMOND_TREE1.withChance(0.3F),
                             ALMOND_TREE2.withChance(0.3F)), MESQUITE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.5F, 6))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.5F, 6))));
 
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.2F),
@@ -2431,8 +2437,7 @@ public class TreeFeatures {
                             AVOCADO_TREE.withChance(0.3F), PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
                             OAK_TREE_WITH_IVY.withChance(0.15F), PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F),
                             PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F), PEACH_TREE.withChance(0.2F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.27F), LOBLOLLY_PINE.withChance(0.4F), SLASH_PINE.withChance(0.4F),
-                            CREEPING_FIG_AVOCADO_TREE.withChance(0.06F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.12F),
+                            FANCY_OAK_TREE_WITH_IVY.withChance(0.27F), CREEPING_FIG_AVOCADO_TREE.withChance(0.06F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.12F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.073F), RED_MAPLE_FANCY_TREE.withChance(0.4F), BLOB_RED_MAPLE_TREE.withChance(0.3F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.08F)), SOUTHERN_MAGNOLIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
@@ -2476,12 +2481,6 @@ public class TreeFeatures {
                             DATE_PALM_TREE.withChance(0.5F)), SYCAMORE_FIG_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
 
-    public static final ConfiguredFeature<?, ?> TROPICAL_DESERT_TREES = register("tropical_desert_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
-                            PISTACHIO_TREE.withChance(0.3F), SYCAMORE_FIG_TREE.withChance(0.12F), ACACIA.withChance(0.3F),
-                            DATE_PALM_TREE.withChance(0.5F)), SYCAMORE_FIG_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
-
     public static final ConfiguredFeature<?, ?> TROPICAL_JUNGLE_FRUIT_TREES = register("tropical_jungle_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             STARFRUIT_TREE.withChance(0.4F), BANANA_TREE.withChance(0.4F), CREEPING_FIG_AVOCADO_TREE.withChance(0.4F), MANGO_TREE.withChance(0.3F),
@@ -2497,12 +2496,6 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_BUNYA_PINE_TREE.withChance(0.2F)),
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
-
-    //Replace this for humid climate pines - add podocarpus
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PINES = register("subtropical_forest_pines",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SLASH_PINE.withChance(0.2F)),
-                            PERSIMMON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
     public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE_WITH_CREEPING_FIG.withChance(0.2F)),
