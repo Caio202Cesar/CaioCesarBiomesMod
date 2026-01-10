@@ -1458,7 +1458,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALMOND_TREE1 = register("almond_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
                     new SimpleBlockStateProvider(States.ALMOND_BLOSSOM),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(2), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
@@ -1472,7 +1472,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPLING_ALMOND_TREE1 = register("sapling_almond_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
                     new SimpleBlockStateProvider(States.ALMOND_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(2), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
@@ -1633,8 +1633,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(16, 10, 2),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(2), 2),
+                    new StraightTrunkPlacer(16, 5, 2),
                     new TwoLayerFeature(2, 0, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
@@ -2070,7 +2070,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.4F),
                             LOMBARDY_POPLAR_TREE.withChance(0.12F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F), ALMOND_TREE1.withChance(0.3F),
                             ALMOND_TREE2.withChance(0.3F)), MESQUITE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.5F, 6))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.5F, 6))));
 
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.2F),

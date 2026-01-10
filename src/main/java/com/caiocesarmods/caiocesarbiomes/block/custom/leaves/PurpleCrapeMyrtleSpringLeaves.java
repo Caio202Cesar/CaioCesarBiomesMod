@@ -36,9 +36,6 @@ public class PurpleCrapeMyrtleSpringLeaves extends LeavesBlock implements IForge
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
         if ("SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -58,7 +55,7 @@ public class PurpleCrapeMyrtleSpringLeaves extends LeavesBlock implements IForge
 
          }
 
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

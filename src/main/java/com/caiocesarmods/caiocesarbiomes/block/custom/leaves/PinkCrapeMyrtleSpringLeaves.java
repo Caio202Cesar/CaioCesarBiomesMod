@@ -58,7 +58,7 @@ public class PinkCrapeMyrtleSpringLeaves extends LeavesBlock implements IForgeSh
 
          }
 
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

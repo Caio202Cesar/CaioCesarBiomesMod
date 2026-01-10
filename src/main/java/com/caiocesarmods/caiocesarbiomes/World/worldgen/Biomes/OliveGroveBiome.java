@@ -57,6 +57,7 @@ public class OliveGroveBiome {
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
 
+        //Add also almond trees
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BIG_OLIVE_TREE);
 
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
