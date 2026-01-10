@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/lobolly_pine_leaves",
+    "particle": "caiocesarbiomes:block/lobolly_pine_leaves"
+  }
+}
