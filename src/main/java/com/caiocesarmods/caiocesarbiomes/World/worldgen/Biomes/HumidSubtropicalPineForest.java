@@ -25,7 +25,7 @@ public class HumidSubtropicalPineForest {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> HUMID_SUBTROPICAL_PINE_FOREST = BIOMES.register("humid_subtropical_pine_forest",
-            () -> makeHumidSubtropicalPineForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+            () -> makeHumidSubtropicalPineForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.2f));
 
 
     private static Biome makeHumidSubtropicalPineForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -68,7 +68,7 @@ public class HumidSubtropicalPineForest {
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.84F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(9218863)
-                        .withGrassColor(10075481).setFogColor(14807295)
+                        .withGrassColor(7979098).setFogColor(14807295)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
