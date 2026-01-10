@@ -439,7 +439,7 @@
   "block.caiocesarbiomes.sausage_tree_log": "Tronco de árvore-salsicha",
   "block.caiocesarbiomes.sausage_tree_sapling": "Muda de árvore-salsicha",
   "block.caiocesarbiomes.slash_pine_leaves": "Folhas de pinheiro-americano",
-  "block.caiocesarbiomes.slash_pine_log": "Tronco de pinheiro-americano",
+  "block.caiocesarbiomes.slash_pine_log": "Tronco de pinheiro-amarelo americano",
   "block.caiocesarbiomes.slash_pine_sapling": "Muda de pinheiro-americano",
   "block.caiocesarbiomes.sweet_chestnut_leaves": "Folhas de castanheira-portuguesa",
   "block.caiocesarbiomes.sweet_chestnut_fruiting_leaves": "Folhas de castanheira-portuguesa com frutos",
@@ -857,7 +857,10 @@
   "block.caiocesarbiomes.almond_winter_branches": "Galhos de amendoeira",
   "block.caiocesarbiomes.almond_sapling": "Muda de amendoeira",
   "block.caiocesarbiomes.almond_fruiting_leaves": "Folhas de amendoeira com frutos",
-  "block.caiocesarbiomes.almond_blossom": "Florada de amendoeira"
+  "block.caiocesarbiomes.almond_blossom": "Florada de amendoeira",
+  "block.caiocesarbiomes.almond_ripe_fruiting_leaves": "Folhas de amendoeira com frutos maduros",
+  "block.caiocesarbiomes.loblolly_pine_leaves": "Folhas de pinheiro-do-banhado",
+  "block.caiocesarbiomes.loblolly_pine_sapling": "Muda de pinheiro-do-banhado"
 }
 
 

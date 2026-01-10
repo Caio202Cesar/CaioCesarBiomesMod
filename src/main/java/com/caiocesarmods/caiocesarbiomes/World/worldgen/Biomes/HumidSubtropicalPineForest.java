@@ -61,7 +61,7 @@ public class HumidSubtropicalPineForest {
         ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSabalPalms(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_PINE_TREES);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HUMID_SUBTROPICAL_PINE_TREES);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
         //Hardiness zone 9: 0.8F - 0.84F

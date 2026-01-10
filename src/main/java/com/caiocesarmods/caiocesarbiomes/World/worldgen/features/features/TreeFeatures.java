@@ -2056,7 +2056,7 @@ public class TreeFeatures {
                             CANARY_PINE_TREE_TALL.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_PINE_TREES = register("subtropical_pine_trees",
+    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             LOBLOLLY_PINE.withChance(0.5F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
