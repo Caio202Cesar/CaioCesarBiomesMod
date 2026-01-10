@@ -117,6 +117,8 @@ public class ModBiomeGeneration {
 
         addBiome(GinkgoForestBiome.GINKGO_FOREST.get(), BiomeManager.BiomeType.COOL, 18, OVERWORLD, FOREST, LUSH);
 
+        addBiome(HumidSubtropicalPineForest.HUMID_SUBTROPICAL_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, CONIFEROUS, LUSH, DENSE);
+
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

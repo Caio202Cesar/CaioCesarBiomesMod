@@ -9,6 +9,12 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withMediterraneanFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.FLOWER_MEDITERRANEAN);
     }
+
+    public static void withSubtropicalPalms(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SABAL_PALMS);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SAW);
+    }
+
     public static void withSavannaPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_SAVANNA);
     }
