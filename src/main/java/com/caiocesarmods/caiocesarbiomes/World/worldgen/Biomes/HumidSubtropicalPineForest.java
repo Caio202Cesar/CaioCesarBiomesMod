@@ -53,10 +53,13 @@ public class HumidSubtropicalPineForest {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSabalPalms(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_PINE_TREES);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
