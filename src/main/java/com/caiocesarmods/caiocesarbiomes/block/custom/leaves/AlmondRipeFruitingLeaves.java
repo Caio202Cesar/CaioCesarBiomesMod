@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class AlmondFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class AlmondRipeFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public AlmondFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public AlmondRipeFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,17 +45,14 @@ public class AlmondFruitingLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
-
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -66,6 +63,30 @@ public class AlmondFruitingLeaves extends LeavesBlock implements IForgeShearable
         }
 
         if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+        }
+
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -82,7 +103,7 @@ public class AlmondFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.UNRIPE_ALMOND.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ALMOND_SHELL.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);

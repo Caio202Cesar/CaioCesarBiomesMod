@@ -121,7 +121,10 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> ALMOND_FRUITING_LEAVES = registerBlock("almond_fruiting_leaves",
             () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_RIPE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> ALMOND_RIPE_FRUITING_LEAVES = registerBlock("almond_ripe_fruiting_leaves",
+            () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_FALL_LEAVES));
 
     public static final RegistryObject<Block> ALMOND_SAPLING = registerBlock("almond_sapling",
             AlmondSapling::new);
@@ -1790,9 +1793,10 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    //Slash Pine
+    //Yellow pines
     public static final RegistryObject<Block> SLASH_PINE_LOG = registerBlock("slash_pine_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> SLASH_PINE_LEAVES = registerBlock("slash_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SLASH_PINE_SAPLING = registerBlock("slash_pine_sapling",
