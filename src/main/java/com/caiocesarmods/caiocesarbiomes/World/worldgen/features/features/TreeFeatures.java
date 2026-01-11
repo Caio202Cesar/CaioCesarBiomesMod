@@ -1633,17 +1633,18 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(1), 3),
-                    new StraightTrunkPlacer(16, 5, 2),
-                    new TwoLayerFeature(2, 0, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LOBLOLLY_PINE = register("tall_loblolly_pine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
-                    new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(14, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LOBLOLLY_PINE = register("tall_loblolly_pine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
+                    new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(1), 3),
+                    new StraightTrunkPlacer(16, 5, 2),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
 
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_JUNGLE_TREE = register("peppercorn_jungle_tree",
