@@ -1633,9 +1633,16 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(2), 2),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(1), 3),
                     new StraightTrunkPlacer(16, 5, 2),
                     new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LOBLOLLY_PINE = register("tall_loblolly_pine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
+                    new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(14, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
 
@@ -2058,7 +2065,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            LOBLOLLY_PINE.withChance(0.5F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            LOBLOLLY_PINE.withChance(0.5F), TALL_LOBLOLLY_PINE.withChance(0.35F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 6))));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_EUCALYPTUS_SAVANNA_TREES = register("temperate_eucalyptus_savanna_trees",

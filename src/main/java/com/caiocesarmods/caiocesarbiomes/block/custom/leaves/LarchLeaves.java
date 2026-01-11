@@ -7,6 +7,7 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -37,6 +38,20 @@ public class LarchLeaves extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        if (temp > 0.4F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
