@@ -2278,8 +2278,9 @@ public class TreeFeatures {
                             HOLLY_TREE1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> PRAIRIE_BLACK_POPLAR_TREES = register("prairie_black_poplar_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.2F)),
+    public static final ConfiguredFeature<?, ?> HEMIBOREAL_PRAIRIE_TREES = register("hemiboreal_prairie_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.5F),
+                            ALMOND_TREE2.withChance(0.4F), ALMOND_TREE1.withChance(0.5F)),
                             LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 0))));
 

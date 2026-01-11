@@ -55,13 +55,14 @@ public class HemiborealSteppeBiome {
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withColdSteepeGrass(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PRAIRIE_BLACK_POPLAR_TREES);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HEMIBOREAL_PRAIRIE_TREES);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
+        //Hardiness zone 5: 0.5F - 0.59F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.52F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.59F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(8960871)
                         .withGrassColor(11713383).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
