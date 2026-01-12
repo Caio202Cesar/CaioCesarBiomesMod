@@ -785,7 +785,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
     public static final RegistryObject<Block> ELDERBERRY_FALL_LEAVES = registerBlock("elderberry_fall_leaves",
             () -> new ElderberryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> ELDERBERRY_WINTER_BRANCHES = registerBlock("elderberry_winter_branches",
             () -> new ElderberryWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_LEAVES));

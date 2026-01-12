@@ -38,11 +38,11 @@ public class DragonBloodSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 11 or 10
+    //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.75f;
+        float minTemp = 0.9f;
         float maxTemp = 2.00f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -65,7 +65,7 @@ public class DragonBloodSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 2.00F;
-        boolean tooCold = temp < 0.75F;
+        boolean tooCold = temp < 0.9F;
 
         if (tooHot || tooCold) {
             return false;
@@ -84,7 +84,7 @@ public class DragonBloodSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 2.00f;
+            float minTemp = 0.9f, maxTemp = 2.00f;
 
             if (temp < minTemp) {
                 player.sendMessage(

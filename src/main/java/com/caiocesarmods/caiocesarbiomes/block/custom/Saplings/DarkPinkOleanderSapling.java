@@ -38,7 +38,7 @@ public class DarkPinkOleanderSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 8 to 11
+    //Hardy to zone 8
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
