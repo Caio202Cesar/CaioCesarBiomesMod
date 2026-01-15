@@ -38,8 +38,26 @@ public class FigLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Fruiting pattern
-        if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+        //Fruiting pattern for tropical climates
+        if (temp > 0.9F && "SUMMER".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextInt(55) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(
+                    pos,
+                    TreeBlocks.FIG_FRUITING_LEAVES.get()
+                            .getDefaultState()
+                            .with(LeavesBlock.DISTANCE, distance)
+                            .with(LeavesBlock.PERSISTENT, persistent),
+                    3
+            );
+        }
+
+        //Fruiting pattern for temperate climates
+        if (temp < 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
