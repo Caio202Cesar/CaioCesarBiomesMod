@@ -38,8 +38,43 @@ public class FigLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Fruiting pattern for tropical climates
+        //Defoliation pattern for tropical climates with dry season = defoliation at dry season
         if (temp > 0.9F && "SUMMER".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextInt(55) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(
+                    pos,
+                    TreeBlocks.FIG_WINTER_BRANCHES.get()
+                            .getDefaultState()
+                            .with(LeavesBlock.DISTANCE, distance)
+                            .with(LeavesBlock.PERSISTENT, persistent),
+                    3
+            );
+        }
+
+        if (temp > 0.9F && "FALL".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(
+                    pos,
+                    TreeBlocks.FIG_WINTER_BRANCHES.get()
+                            .getDefaultState()
+                            .with(LeavesBlock.DISTANCE, distance)
+                            .with(LeavesBlock.PERSISTENT, persistent),
+                    3
+            );
+        }
+
+        //Fruiting pattern for tropical climates with dry season = fruiting at wet season
+        if (temp > 0.9F && "WINTER".equals(currentSeason)
                 && biome.getPrecipitation() == Biome.RainType.NONE
                 && random.nextInt(55) == 0) {
 

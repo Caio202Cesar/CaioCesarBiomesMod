@@ -39,7 +39,10 @@ public class IndianCoralLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+
+        if ("SUMMER".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
