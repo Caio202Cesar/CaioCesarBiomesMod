@@ -96,6 +96,137 @@ public class ModEventSubscriber {
                     0.0f                     // downfall
             ));
         }
+
+        if (event.getCategory() == Biome.Category.JUNGLE) {
+
+            ResourceLocation id = event.getName();
+            if (id == null) return;
+
+            String namespace = id.getNamespace();
+
+            // ⛔ Skip all biomes from your mod
+            if (id.getNamespace().equals(CaioCesarBiomesMod.MOD_ID)) {
+                System.out.println("[DEBUG] Skipping biomes from the mod: " + id);
+                return;
+            }
+
+            // 🛑 Skip all biomes from brbiomesmod
+            if (namespace.equals("brbiomesmod")) {
+                System.out.println("[DEBUG] Skipping biomes from brbiomesmod: " + id);
+                return;
+            }
+
+            // ✔ Only vanilla (or other-mod) mesa biomes reach this point
+            System.out.println("[DEBUG] Overriding temperature for: " + id);
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.RAIN,          // rain
+                    1.2f,                         // new temperature
+                    Biome.TemperatureModifier.NONE,
+                    0.9f                          // downfall
+            ));
+        }
+
+        if (event.getCategory() == Biome.Category.SWAMP) {
+
+            ResourceLocation id = event.getName();
+            if (id == null) return;
+
+            String namespace = id.getNamespace();
+
+            // ⛔ Skip all biomes from your mod
+            if (id.getNamespace().equals(CaioCesarBiomesMod.MOD_ID)) {
+                System.out.println("[DEBUG] Skipping biomes from the mod: " + id);
+                return;
+            }
+
+            // 🛑 Skip all biomes from brbiomesmod
+            if (namespace.equals("brbiomesmod")) {
+                System.out.println("[DEBUG] Skipping biomes from brbiomesmod: " + id);
+                return;
+            }
+
+            // ✔ Only vanilla (or other-mod) mesa biomes reach this point
+            System.out.println("[DEBUG] Overriding temperature for: " + id);
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.RAIN,          // rain
+                    0.84f,                         // new temperature - hardiness zone 9
+                    Biome.TemperatureModifier.NONE,
+                    0.9f                          // downfall
+            ));
+        }
+
+        if (event.getCategory() == Biome.Category.FOREST) {
+
+            ResourceLocation id = event.getName();
+            if (id == null) return;
+
+            String namespace = id.getNamespace();
+
+            // ⛔ Skip biomes from your mod
+            if (namespace.equals(CaioCesarBiomesMod.MOD_ID)) {
+                System.out.println("[DEBUG] Skipping my mod biome: " + id);
+                return;
+            }
+
+            // ⛔ Skip biomes from brbiomesmod
+            if (namespace.equals("brbiomesmod")) {
+                System.out.println("[DEBUG] Skipping brbiomesmod biome: " + id);
+                return;
+            }
+
+            // ⛔ Skip *all* Birch Forest variants
+            if (id.equals(Biomes.BIRCH_FOREST.getRegistryName()) ||
+                    id.equals(Biomes.BIRCH_FOREST_HILLS.getRegistryName()) ||
+                    id.equals(Biomes.TALL_BIRCH_FOREST.getRegistryName()) ||
+                    id.equals(Biomes.TALL_BIRCH_HILLS.getRegistryName())) {
+
+                System.out.println("[DEBUG] Skipping Birch Forest biome: " + id);
+                return;
+            }
+
+            // ✔ Applies only to forests that are NOT from your mod, NOT from brbiomesmod,
+            //   and NOT birch forest variants.
+            System.out.println("[DEBUG] Overriding temperature for: " + id);
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.RAIN,
+                    0.74f,                          // hardiness zone 7
+                    Biome.TemperatureModifier.NONE,
+                    0.8f
+            ));
+        }
+
+        if (event.getCategory() == Biome.Category.DESERT) {
+
+            ResourceLocation id = event.getName();
+            if (id == null) return;
+
+            String namespace = id.getNamespace();
+
+            // ⛔ Skip all biomes from your mod
+            if (id.getNamespace().equals(CaioCesarBiomesMod.MOD_ID)) {
+                System.out.println("[DEBUG] Skipping biomes from the mod: " + id);
+                return;
+            }
+
+            // 🛑 Skip all biomes from brbiomesmod
+            if (namespace.equals("brbiomesmod")) {
+                System.out.println("[DEBUG] Skipping biomes from brbiomesmod: " + id);
+                return;
+            }
+
+            // ✔ Only vanilla (or other-mod) mesa biomes reach this point
+            System.out.println("[DEBUG] Overriding temperature for: " + id);
+
+            event.setClimate(new Biome.Climate(
+                    Biome.RainType.NONE,          // rain
+                    0.89f,                         // new temperature - hardiness zone 10
+                    Biome.TemperatureModifier.NONE,
+                    0.0f                          // downfall
+            ));
+        }
     }
 
     @SubscribeEvent
