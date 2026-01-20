@@ -38,7 +38,7 @@ public class CamelliaSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 7 to 11 (in real life, there are some varients hardy to zone 6).
+    //Hardy to zone 7 to 11, considering it is mainly Cammelia japonica (in real life, Cammelia oleifera varieties are hardy to zone 6).
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);

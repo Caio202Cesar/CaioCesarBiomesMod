@@ -38,7 +38,7 @@ public class CookPineSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10 to 12
+    //Hardy to zone 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
