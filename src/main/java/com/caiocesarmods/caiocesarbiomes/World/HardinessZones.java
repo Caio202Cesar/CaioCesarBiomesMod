@@ -39,6 +39,23 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "min 4, max 10");
 
         // YOUR MOD
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "min 5, max 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "min 7, max 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "min 4, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bismarck_palm_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "black_poplar_sapling"), "min 3, max 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "blue_spruce_sapling"), "min 2, max 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "breadfruit_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "buddha_hand_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bunya_pine_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "camellia_sapling"), "min 7, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "buddha_hand_sapling_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "buddha_hand_sapling_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "buddha_hand_sapling_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "buddha_hand_sapling_sapling"), "min 10");
+
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "10");
 
         // OTHER MODS
