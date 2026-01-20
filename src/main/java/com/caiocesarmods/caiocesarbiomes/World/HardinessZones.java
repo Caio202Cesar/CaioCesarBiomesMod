@@ -1,8 +1,12 @@
 package com.caiocesarmods.caiocesarbiomes.World;
 
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HardinessZones {
     public static int getZone(World world, BlockPos pos) {
@@ -22,6 +26,28 @@ public class HardinessZones {
         if (baseTemp < 0.9f) return 10; //Subtropical
         if (baseTemp < 0.95f) return 11; //Border tropical
         return 12; //Tropical
+    }
+
+    private static final Map<ResourceLocation, String> SAPLING_ZONES = new HashMap<>();
+
+    static {
+        // VANILLA
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "3-8");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "2-8");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "11");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "9");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "4-10");
+
+        // YOUR MOD
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "10");
+
+        // OTHER MODS
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "10");
+    }
+
+    public static String getZoneForSapling(ResourceLocation id) {
+        return SAPLING_ZONES.getOrDefault(id, "Unknown Zone");
     }
 
 }

@@ -2,11 +2,13 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
+import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -15,8 +17,10 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -26,6 +30,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.SaplingGrowTreeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -270,7 +275,45 @@ public class ModEventSubscriber {
             if (temp > 0.89F) {
                 event.setResult(Event.Result.DENY);
             }
+            if (temp < 0.39F) {
+                event.setResult(Event.Result.DENY);
+            }
         }
+    }
+
+    @SubscribeEvent
+    public void onUseScannerOnSapling(PlayerInteractEvent.RightClickBlock event) {
+        World world = event.getWorld();
+        PlayerEntity player = event.getPlayer();
+
+        if (world.isRemote) return;
+
+        // Check if player is holding the Hardiness Zone Scanner
+        ItemStack held = event.getItemStack();
+        if (held.getItem() != ModItems.HARDINESS_ZONE_SCANNER.get()) return;
+
+        BlockPos pos = event.getPos();
+        BlockState state = world.getBlockState(pos);
+
+        // Check if the block is a sapling
+        if (!(state.getBlock() instanceof SaplingBlock)) return;
+
+        // Identify which sapling it is
+        ResourceLocation blockID = state.getBlock().getRegistryName();
+        if (blockID == null) return;
+
+        // Get zone
+        String zone = HardinessZones.getZoneForSapling(blockID);
+
+        // Send message (server-side only)
+        player.sendMessage(
+                new StringTextComponent("Hardiness Zone for this sapling: " + zone),
+                player.getUniqueID()
+        );
+
+        // Cancel further actions (optional, avoids opening menus)
+        event.setCanceled(true);
+        event.setCancellationResult(ActionResultType.SUCCESS);
     }
 
     @SubscribeEvent
