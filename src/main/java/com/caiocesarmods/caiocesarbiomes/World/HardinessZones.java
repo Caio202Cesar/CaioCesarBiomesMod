@@ -32,11 +32,11 @@ public class HardinessZones {
 
     static {
         // VANILLA
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "3-8");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "2-8");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "11");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "9");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "4-10");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "min 3, max 8");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "min 2, max 8");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "min 4, max 10");
 
         // YOUR MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "10");

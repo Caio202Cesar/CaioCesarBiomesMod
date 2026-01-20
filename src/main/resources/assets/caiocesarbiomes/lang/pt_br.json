@@ -735,6 +735,7 @@
   "screen.caiocesarbiomes.toaster": "Torradeira",
 
   "tooltip.caiocesarbiomes.marula": "Coma antes que fermente e você não fique bem ao comer.",
+  "tooltip.caiocesarbiomes.hardiness_scanner": "Para ver a zona de rusticidade do bioma, me clique com o botão direito. Para ver a zona de rusticidade de uma muda, segure shift enquanto me aponta para ela.",
 
   "itemGroup.CaioCesarBiomesTab": "Caio Cesar Biomes: variedades",
   "itemGroup.CaioCesarBiomes:Culinary": "Caio Cesar Biomes: culinária",
@@ -861,6 +862,7 @@
   "block.caiocesarbiomes.almond_ripe_fruiting_leaves": "Folhas de amendoeira com frutos maduros",
   "block.caiocesarbiomes.loblolly_pine_leaves": "Folhas de pinheiro-do-banhado",
   "block.caiocesarbiomes.loblolly_pine_sapling": "Muda de pinheiro-do-banhado"
+
 }
 
 

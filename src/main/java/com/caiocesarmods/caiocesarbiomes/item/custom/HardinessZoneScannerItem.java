@@ -1,19 +1,33 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
 import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class HardinessZoneScannerItem extends Item {
     public HardinessZoneScannerItem(Properties props) {
         super(props);
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        super.addInformation(stack, worldIn, tooltip, flagIn);
+        tooltip.add(new TranslationTextComponent("tooltip.caiocesarbiomes.hardiness_scanner").mergeStyle(TextFormatting.GOLD));
+
     }
 
     @Override
