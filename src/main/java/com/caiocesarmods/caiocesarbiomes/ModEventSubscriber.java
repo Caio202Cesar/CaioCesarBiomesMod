@@ -282,41 +282,6 @@ public class ModEventSubscriber {
     }
 
     @SubscribeEvent
-    public void onUseScannerOnSapling(PlayerInteractEvent.RightClickBlock event) {
-        World world = event.getWorld();
-        PlayerEntity player = event.getPlayer();
-
-        if (world.isRemote) return;
-
-        // Check if player is holding the Hardiness Zone Scanner
-        ItemStack held = event.getItemStack();
-        if (held.getItem() != ModItems.HARDINESS_ZONE_SCANNER.get()) return;
-
-        BlockPos pos = event.getPos();
-        BlockState state = world.getBlockState(pos);
-
-        // Check if the block is a sapling
-        if (!(state.getBlock() instanceof SaplingBlock)) return;
-
-        // Identify which sapling it is
-        ResourceLocation blockID = state.getBlock().getRegistryName();
-        if (blockID == null) return;
-
-        // Get zone
-        String zone = HardinessZones.getZoneForSapling(blockID);
-
-        // Send message (server-side only)
-        player.sendMessage(
-                new StringTextComponent("Hardiness Zone for this sapling: " + zone),
-                player.getUniqueID()
-        );
-
-        // Cancel further actions (optional, avoids opening menus)
-        event.setCanceled(true);
-        event.setCancellationResult(ActionResultType.SUCCESS);
-    }
-
-    @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
 
