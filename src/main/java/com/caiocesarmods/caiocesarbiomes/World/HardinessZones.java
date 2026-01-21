@@ -82,6 +82,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_rosewood_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_sassafras_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazilnut_sapling"), "min 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazilwood_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_sassafras_sapling"), "min 9");
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
