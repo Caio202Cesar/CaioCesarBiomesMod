@@ -250,7 +250,7 @@ public class ModEventSubscriber {
 
         // Spruce & Birch = cold / temperate trees
         if (block == Blocks.SPRUCE_SAPLING || block == Blocks.BIRCH_SAPLING) {
-            if (temp >= 0.8F) {
+            if (temp >= 0.75F) {
                 event.setResult(Event.Result.DENY);
             }
             if (temp < 0.2F) {
@@ -277,7 +277,7 @@ public class ModEventSubscriber {
             if (temp > 0.89F) {
                 event.setResult(Event.Result.DENY);
             }
-            if (temp < 0.39F) {
+            if (temp <= 0.39F) {
                 event.setResult(Event.Result.DENY);
             }
         }
