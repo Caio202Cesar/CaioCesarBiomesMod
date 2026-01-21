@@ -248,11 +248,13 @@ public class ModEventSubscriber {
         float temp = biome.getTemperature();
         Block block = state.getBlock();
 
-        // Spruce & Birch = cold / temperate trees (< Zone 8)
+        // Spruce & Birch = cold / temperate trees
         if (block == Blocks.SPRUCE_SAPLING || block == Blocks.BIRCH_SAPLING) {
             if (temp >= 0.8F) {
                 event.setResult(Event.Result.DENY);
-
+            }
+            if (temp < 0.2F) {
+                event.setResult(Event.Result.DENY);
             }
         }
 
