@@ -68,11 +68,24 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "douglas_fir_sapling"), "min 4, max 6");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "dragon_blood_sapling"), "min 11");
 
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10");
 
         // OTHER MODS
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "algarrobillo_sapling"), "min 9, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "apricot_ipe_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "bacuri_sapling"), "min 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "balsa_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_jurema_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_sucupira_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_pepper_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_rosewood_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_sassafras_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazilnut_sapling"), "min 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_sassafras_sapling"), "min 9");
+
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
     }
 
     public static String getZoneForSapling(ResourceLocation id) {
