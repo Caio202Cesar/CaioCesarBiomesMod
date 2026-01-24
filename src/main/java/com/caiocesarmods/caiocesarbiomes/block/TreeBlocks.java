@@ -2071,6 +2071,8 @@ public class TreeBlocks {
 
     //Teak
 
+    //Sugar apple
+
     //Acerola
     public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
             ModLogs::new);
