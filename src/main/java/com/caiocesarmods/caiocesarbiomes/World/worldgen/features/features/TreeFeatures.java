@@ -1750,8 +1750,19 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
+    //Acerola
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACEROLA_TREE = register("acerola_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ACEROLA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ACEROLA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
 
     public static final class States {
+
+        protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
+        protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BANANA_LOG = TreeBlocks.BANANA_LOG.get().getDefaultState();
         protected static final BlockState BANANA_LEAVES = TreeBlocks.BANANA_LEAVES.get().getDefaultState();
@@ -2158,7 +2169,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> JUNGLE_EDGE_EXTRA_VEGETATION = register("jungle_edge_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.2F),
                             BIG_WEEPING_FIG_TREE.withChance(0.35F), MANGO_FANCY_TREE.withChance(0.15F), CREEPING_FIG_AVOCADO_TREE.withChance(0.12F),
-                            MANGO_TREE.withChance(0.15F), OIL_PALM_TREE.withChance(0.4F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
+                            MANGO_TREE.withChance(0.15F), OIL_PALM_TREE.withChance(0.6F), LEMON_TREE.withChance(0.2F), BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
                             TAHITI_LIME_TREE.withChance(0.2F), DURIAN_TREE.withChance(0.2F), DURIAN_TREE_PEPPER_VINE.withChance(0.2F),
                             BREADFRUIT_TREE.withChance(0.25F), PEPPERCORN_INDIAN_LAUREL_TREE.withChance(0.16F), PEPPERCORN_BIG_INDIAN_LAUREL_TREE.withChance(0.13F),
                             BIG_INDIAN_LAUREL_TREE.withChance(0.35F), BANANA_TREE.withChance(0.4F), PEPPERCORN_WEEPING_FIG_TREE.withChance(0.12F), PEPPERCORN_BIG_WEEPING_FIG_TREE.withChance(0.16F),
@@ -2412,8 +2423,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.08F),
-                            ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F),
-                            MANGO_FANCY_TREE.withChance(0.3F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F), ACEROLA_TREE.withChance(0.23F),
+                            MANGO_FANCY_TREE.withChance(0.3F), BISMARCK_PALM.withChance(0.25F), BISMARCK_PALM.withChance(0.3F),
                             AVOCADO_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.1F), TAMARIND_TREE.withChance(0.4F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.1F)), FOREST_ACACIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
