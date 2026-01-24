@@ -2074,6 +2074,12 @@ public class TreeBlocks {
             () -> new RedPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_LEAVES));
 
+    public static final RegistryObject<Block> RED_PLUMERIA_SAPLING = registerBlock("plumeria_red_sapling",
+            RedPlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RED_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_red_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RED_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Ebony
 

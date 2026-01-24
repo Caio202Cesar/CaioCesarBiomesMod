@@ -175,5 +175,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         GinkgoSapling.registerRenderLayer();
         RedCrabappleSapling.registerRenderLayer();
         LoblollyPineSapling.registerRenderLayer();
+        AcerolaSapling.registerRenderLayer();
     }
 }

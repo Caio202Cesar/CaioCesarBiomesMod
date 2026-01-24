@@ -41,6 +41,7 @@ public class HardinessZones {
         // CAIO CESAR BIOMES MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "min 5, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "min 7, max 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "min 4, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "min 9");

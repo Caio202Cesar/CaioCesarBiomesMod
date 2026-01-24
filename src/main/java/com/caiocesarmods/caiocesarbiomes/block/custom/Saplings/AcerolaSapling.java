@@ -28,25 +28,25 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class AlmondSapling extends SaplingBlock {
-    public AlmondSapling() {
-        super(new AlmondSapling.AlmondTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class AcerolaSapling extends SaplingBlock {
+    public AcerolaSapling() {
+        super(new AcerolaTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.ALMOND_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ALMOND_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.ACEROLA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ACEROLA_SAPLING.get(), RenderType.getCutout());
 
     }
 
-    //Hardy to zone 5 to 10
+    //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.5f;
-        float maxTemp = 0.89f;
+        float minTemp = 0.8f;
+        float maxTemp = 1.6f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -67,8 +67,8 @@ public class AlmondSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.89F;
-        boolean tooCold = temp < 0.5F;
+        boolean tooHot = temp > 1.6F;
+        boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
             return false;
@@ -87,7 +87,7 @@ public class AlmondSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.5f, maxTemp = 0.89f;
+            float minTemp = 0.8f, maxTemp = 1.6f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -112,7 +112,6 @@ public class AlmondSapling extends SaplingBlock {
         return ActionResultType.SUCCESS;
     }
 
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
         return 80;
@@ -123,15 +122,13 @@ public class AlmondSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class AlmondTree extends Tree {
+    private static class AcerolaTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 5) {
-                return TreeFeatures.SAPLING_ALMOND_TREE1;
-            } else {
-                return TreeFeatures.SAPLING_ALMOND_TREE2;
-            }
+            return TreeFeatures.ACEROLA_TREE;
         }
     }
 }
+
+
