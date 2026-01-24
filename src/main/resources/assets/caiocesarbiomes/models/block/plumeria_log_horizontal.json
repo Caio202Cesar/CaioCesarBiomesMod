@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/plumeria_log_middle",
+    "side": "caiocesarbiomes:block/plumeria_bark"
+  }
+}
