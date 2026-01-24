@@ -2412,7 +2412,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.08F),
-                            ROYAL_POINCIANA_TREE.withChance(0.1F), OIL_PALM_TREE.withChance(0.1F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F), OIL_PALM_TREE.withChance(0.1F), MANGO_TREE.withChance(0.25F),
+                            MANGO_FANCY_TREE.withChance(0.3F),
                             AVOCADO_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.1F), BANANA_TREE.withChance(0.25F), TAMARIND_TREE.withChance(0.4F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.1F)), FOREST_ACACIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
