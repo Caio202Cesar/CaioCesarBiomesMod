@@ -1758,11 +1758,49 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Plumeria Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_RED_TREE = register("plumeria_red_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+                    new SimpleBlockStateProvider(States.RED_PLUMERIA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_WHITE_TREE = register("plumeria_white_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+                    new SimpleBlockStateProvider(States.WHITE_PLUMERIA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_PINK_TREE = register("plumeria_pink_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+                    new SimpleBlockStateProvider(States.PINK_PLUMERIA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_YELLOW_TREE = register("plumeria_yellow_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+                    new SimpleBlockStateProvider(States.YELLOW_PLUMERIA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_ORANGE_TREE = register("plumeria_orange_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+                    new SimpleBlockStateProvider(States.ORANGE_PLUMERIA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(3, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PLUMERIA_LOG = TreeBlocks.PLUMERIA_LOG.get().getDefaultState();
+        protected static final BlockState RED_PLUMERIA_LEAVES = TreeBlocks.RED_PLUMERIA_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_PLUMERIA_LEAVES = TreeBlocks.WHITE_PLUMERIA_LEAVES.get().getDefaultState();
+        protected static final BlockState YELLOW_PLUMERIA_LEAVES = TreeBlocks.YELLOW_PLUMERIA_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_PLUMERIA_LEAVES = TreeBlocks.PINK_PLUMERIA_LEAVES.get().getDefaultState();
+        protected static final BlockState ORANGE_PLUMERIA_LEAVES = TreeBlocks.ORANGE_PLUMERIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BANANA_LOG = TreeBlocks.BANANA_LOG.get().getDefaultState();
         protected static final BlockState BANANA_LEAVES = TreeBlocks.BANANA_LEAVES.get().getDefaultState();
