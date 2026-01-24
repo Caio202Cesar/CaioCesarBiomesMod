@@ -268,7 +268,17 @@
     "caiocesarbiomes:almond_ripe_fruiting_leaves",
     "caiocesarbiomes:almond_fall_leaves",
     "caiocesarbiomes:almond_winter_branches",
-    "caiocesarbiomes:loblolly_pine_leaves"
+    "caiocesarbiomes:loblolly_pine_leaves",
+    "caiocesarbiomes:plumeria_white_leaves",
+    "caiocesarbiomes:plumeria_white_dried_branches",
+    "caiocesarbiomes:plumeria_red_leaves",
+    "caiocesarbiomes:plumeria_red_dried_branches",
+    "caiocesarbiomes:plumeria_pink_leaves",
+    "caiocesarbiomes:plumeria_pink_dried_branches",
+    "caiocesarbiomes:plumeria_yellow_leaves",
+    "caiocesarbiomes:plumeria_yellow_dried_branches",
+    "caiocesarbiomes:plumeria_orange_leaves",
+    "caiocesarbiomes:plumeria_orange_dried_branches"
   ]
 }
 

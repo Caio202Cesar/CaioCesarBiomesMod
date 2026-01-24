@@ -2129,7 +2129,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ORANGE_PLUMERIA_SAPLING = registerBlock("plumeria_orange_sapling",
             OrangePlumeriaSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_ORANGEPLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_orange_sapling",
+    public static final RegistryObject<Block> POTTED_ORANGE_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_orange_sapling",
             () -> new FlowerPotBlock(TreeBlocks.ORANGE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
