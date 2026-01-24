@@ -7,6 +7,7 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -36,9 +37,14 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(25) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-            String currentSeason = Season.getSeason(worldIn.getDayTime());
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for subtropical climates (dormant season = winter)
+        if (temp < 0.89F && nextStage != null && random.nextInt(25) == 0) {
+
             String excludedSeason = "WINTER";
 
             if (! currentSeason.equals(excludedSeason)) {
@@ -52,6 +58,41 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
 
             }
         }
+
+        //Pattern for tropical climates (dormant season = dry/SUMMER and FALL)
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+                worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
+
     }
 
 

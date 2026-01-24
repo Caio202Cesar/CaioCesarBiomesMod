@@ -12,10 +12,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class AcerolaLeaves extends LeavesBlock implements IForgeShearable {
+public class AcerolaFloweringLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public AcerolaLeaves(Properties properties, Supplier<Block> nextStage) {
+    public AcerolaFloweringLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -35,7 +35,7 @@ public class AcerolaLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(35) == 0) {
+        if (nextStage != null && random.nextInt(30) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -46,7 +46,6 @@ public class AcerolaLeaves extends LeavesBlock implements IForgeShearable {
 
         }
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;

@@ -19,10 +19,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class AcerolaFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public TahitiLimeFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public AcerolaFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -46,7 +46,7 @@ public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.TAHITI_LIME.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ACEROLA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -66,12 +66,12 @@ public class TahitiLimeFruitingLeaves extends LeavesBlock implements IForgeShear
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.TAHITI_LIME.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.ACEROLA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.TAHITI_LIME_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ACEROLA_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

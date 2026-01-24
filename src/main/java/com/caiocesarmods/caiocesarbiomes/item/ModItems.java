@@ -143,8 +143,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.RAW_ALMOND)));
     public static final RegistryObject<Item> ALMOND_SHELL = ITEMS.register("almond_shell",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
-    public static final RegistryObject<Item> ROASTED_ALMOND = ITEMS.register("roasted_almond",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROASTED_ALMOND)));
+    public static final RegistryObject<Item> ACEROLA = ITEMS.register("acerola",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
@@ -358,6 +358,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PEACH_PIE)));
     public static final RegistryObject<Item> CANDIED_CITRON = ITEMS.register("candied_citron",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CANDIED_CITRON)));
+    public static final RegistryObject<Item> ROASTED_ALMOND = ITEMS.register("roasted_almond",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROASTED_ALMOND)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
