@@ -2069,6 +2069,29 @@ public class TreeBlocks {
 
     //Macadamia
 
+    //Teak
+
+    //Acerola
+    public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("acerola_leaves",
+            () -> new StarfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> STARFRUIT_FLOWERING_LEAVES = registerBlock("acerola_flowering_leaves",
+            () -> new StarfruitFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> STARFRUIT_FRUITING_LEAVES = registerBlock("acerola_fruiting_leaves",
+            () -> new StarfruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_LEAVES));
+    public static final RegistryObject<Block> STARFRUIT_SAPLING = registerBlock("acerola_sapling",
+            StarfruitSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_STARFRUIT_SAPLING = BLOCKS.register("potted_acerola_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.STARFRUIT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
