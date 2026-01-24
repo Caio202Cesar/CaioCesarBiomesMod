@@ -2063,6 +2063,18 @@ public class TreeBlocks {
 
 
     /// //Tropical seasonal forest trees
+    //Plumeria
+    public static final RegistryObject<Block> PLUMERIA_LOG = registerBlock("plumeria_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> RED_PLUMERIA_LEAVES = registerBlock("plumeria_red_leaves",
+            () -> new RedPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> RED_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_red_dried_branches",
+            () -> new RedPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_LEAVES));
+
+
     //Ebony
 
     //Java olive
