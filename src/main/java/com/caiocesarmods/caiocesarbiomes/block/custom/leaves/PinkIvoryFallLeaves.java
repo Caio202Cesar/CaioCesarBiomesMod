@@ -7,17 +7,16 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearable {
+public class PinkIvoryFallLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public PomegranateFallLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PinkIvoryFallLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }

@@ -14,10 +14,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearable {
+public class PinkIvoryDriedBranches extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public PomegranateFallLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PinkIvoryDriedBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -38,7 +38,11 @@ public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearabl
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for tropical biomes - wet season
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -46,10 +50,19 @@ public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearabl
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+        }
+        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        //Pattern for subtropical biomes
+        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -57,9 +70,9 @@ public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearabl
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
-
         }
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+
+        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -67,7 +80,16 @@ public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearabl
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+        }
 
+        if (temp > 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 

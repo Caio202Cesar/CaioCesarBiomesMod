@@ -182,6 +182,9 @@ public class ModFoods extends Foods {
     public static final Food UNRIPE_ALMOND = (new Food.Builder()).hunger(2).saturation(0.3F)
             .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
     public static final Food ROASTED_ALMOND = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food PINK_IVORY_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food ACEROLA = (new Food.Builder()).hunger(2).saturation(0.1F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

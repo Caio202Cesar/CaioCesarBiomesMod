@@ -2145,13 +2145,16 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
             () -> new PinkIvoryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PINK_IVORY_FALL_LEAVES = registerBlock("pink_ivory_fall_leaves",
+            () -> new PinkIvoryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_DRIED_BRANCHES));
     public static final RegistryObject<Block> PINK_IVORY_FRUITING_LEAVES = registerBlock("pink_ivory_fruiting_leaves",
             () -> new PinkIvoryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
     public static final RegistryObject<Block> PINK_IVORY_DRIED_BRANCHES = registerBlock("pink_ivory_dried_branches",
             () -> new PinkIvoryDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
 
     public static final RegistryObject<Block> PINK_IVORY_SAPLING = registerBlock("pink_ivory_sapling",
             PinkIvorySapling::new);

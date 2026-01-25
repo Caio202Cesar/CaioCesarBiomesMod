@@ -144,7 +144,9 @@ public class ModItems {
     public static final RegistryObject<Item> ALMOND_SHELL = ITEMS.register("almond_shell",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> ACEROLA = ITEMS.register("acerola",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ACEROLA)));
+    public static final RegistryObject<Item> PINK_IVORY_BERRIES = ITEMS.register("acerola",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PINK_IVORY_BERRIES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
