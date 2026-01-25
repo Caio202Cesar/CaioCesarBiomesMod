@@ -2470,6 +2470,7 @@ public class TreeFeatures {
                             ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F), ACEROLA_TREE.withChance(0.23F),
                             MANGO_FANCY_TREE.withChance(0.3F), BISMARCK_PALM.withChance(0.25F), BISMARCK_PALM.withChance(0.3F),
                             AVOCADO_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.1F), TAMARIND_TREE.withChance(0.4F),
+                            POMEGRANATE_TREE.withChance(0.15F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.1F)), FOREST_ACACIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
