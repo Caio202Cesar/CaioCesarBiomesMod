@@ -273,6 +273,10 @@
     "caiocesarbiomes:plumeria_yellow_leaves",
     "caiocesarbiomes:plumeria_yellow_dried_branches",
     "caiocesarbiomes:plumeria_orange_leaves",
-    "caiocesarbiomes:plumeria_orange_dried_branches"
+    "caiocesarbiomes:plumeria_orange_dried_branches",
+    "caiocesarbiomes:pink_ivory_leaves",
+    "caiocesarbiomes:pink_ivory_fruiting_leaves",
+    "caiocesarbiomes:pink_ivory_fall_leaves",
+    "caiocesarbiomes:pink_ivory_dried_branches"
   ]
 }

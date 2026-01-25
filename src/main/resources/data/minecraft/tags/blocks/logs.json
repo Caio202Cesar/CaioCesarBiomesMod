@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "caiocesarbiomes:acerola_log",
-    "caiocesarbiomes:plumeria_log",
     "caiocesarbiomes:holm_oak_log",
     "caiocesarbiomes:cork_oak_log",
     "caiocesarbiomes:oleander_log",
@@ -77,7 +75,9 @@
     "caiocesarbiomes:subalpine_fir_log",
     "caiocesarbiomes:persimmon_log",
     "caiocesarbiomes:bald_cypress_log",
-    "caiocesarbiomes:ginkgo_log"
-
+    "caiocesarbiomes:ginkgo_log",
+    "caiocesarbiomes:pink_ivory_log",
+    "caiocesarbiomes:acerola_log",
+    "caiocesarbiomes:plumeria_log"
   ]
 }
