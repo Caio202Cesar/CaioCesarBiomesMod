@@ -182,6 +182,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PinkPlumeriaSapling.registerRenderLayer();
         RedPlumeriaSapling.registerRenderLayer();
         WhitePlumeriaSapling.registerRenderLayer();
-
+        PinkIvorySapling.registerRenderLayer();
     }
 }
