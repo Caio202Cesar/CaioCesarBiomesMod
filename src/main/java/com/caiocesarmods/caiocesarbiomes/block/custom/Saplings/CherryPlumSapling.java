@@ -38,12 +38,12 @@ public class CherryPlumSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 5 to 9
+    //Hardy to zone 5 to 9/10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.5f;
-        float maxTemp = 0.84f;
+        float maxTemp = 0.89f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -64,7 +64,7 @@ public class CherryPlumSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.84F;
+        boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.5F;
 
         if (tooHot || tooCold) {
@@ -84,7 +84,7 @@ public class CherryPlumSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.5f, maxTemp = 0.84f;
+            float minTemp = 0.5f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
