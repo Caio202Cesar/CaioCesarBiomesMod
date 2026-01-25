@@ -2133,7 +2133,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.ORANGE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    //Ebony
+    //Ebony = rainforest/jungle fancy tree (not dry forest) - this tree should be rare and low frequent.
 
     //Java olive
 
