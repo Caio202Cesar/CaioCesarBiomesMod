@@ -798,6 +798,8 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    //Ebony = rainforest/jungle fancy tree (not dry forest) - this tree should be rare and low frequent.
+
 
     //Eucalyptus
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
@@ -2133,13 +2135,30 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.ORANGE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    //Ebony = rainforest/jungle fancy tree (not dry forest) - this tree should be rare and low frequent.
-
     //Java olive
 
-    //White Sandallwood
+    //White Sandalwood
 
     //Pink Ivory
+    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
+            () -> new PinkIvoryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PINK_IVORY_FRUITING_LEAVES = registerBlock("pink_ivory_fruiting_leaves",
+            () -> new PinkIvoryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PINK_IVORY_DRIED_BRANCHES = registerBlock("pink_ivory_dried_branches",
+            () -> new PinkIvoryDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+
+    public static final RegistryObject<Block> PINK_IVORY_SAPLING = registerBlock("pink_ivory_sapling",
+            PinkIvorySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_IVORY_SAPLING = BLOCKS.register("potted_pink_ivory_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PINK_IVORY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Macadamia
 
