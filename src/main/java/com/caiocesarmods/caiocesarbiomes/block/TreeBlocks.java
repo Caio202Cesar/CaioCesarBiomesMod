@@ -2166,6 +2166,16 @@ public class TreeBlocks {
     //Macadamia
 
     //Teak
+    public static final RegistryObject<Block> TEAK_LEAVES = registerBlock("teak_leaves",
+            () -> new AcerolaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> TEAK_FLOWERING_LEAVES = registerBlock("teak_flowering_leaves",
+            () -> new AcerolaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dry_branches",
+            () -> new AcerolaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_LEAVES));
+
 
     //Sugar apple
 
