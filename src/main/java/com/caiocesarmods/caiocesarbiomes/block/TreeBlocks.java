@@ -2165,8 +2165,17 @@ public class TreeBlocks {
 
     //Macadamia
 
-    //Cascabella tevetia
+    //Orchid tree
 
+    //Cascabela thevetia
+    public static final RegistryObject<Block> YELLOW_OLEANDER_LEAVES = registerBlock("yellow_oleander_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> YELLOW_OLEANDER_SAPLING = registerBlock("yellow_oleander_sapling",
+            WhiteOleanderSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_YELLOW_OLEANDER_SAPLING = BLOCKS.register("potted_oleander_white_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.YELLOW_OLEANDER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Teak
     public static final RegistryObject<Block> TEAK_LEAVES = registerBlock("teak_leaves",
