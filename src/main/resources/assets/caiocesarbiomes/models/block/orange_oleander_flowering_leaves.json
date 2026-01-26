@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/orange_oleander_flowering_leaves",
+    "particle": "caiocesarbiomes:block/orange_oleander_flowering_leaves"
+  }
+}

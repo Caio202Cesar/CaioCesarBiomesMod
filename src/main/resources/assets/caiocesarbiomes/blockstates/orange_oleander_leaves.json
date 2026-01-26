@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {
+        "model": "caiocesarbiomes:block/orange_oleander_flowering_leaves"},
+      {
+        "model": "caiocesarbiomes:block/yellow_oleander_leaves"}
+    ]
+  }
+}
