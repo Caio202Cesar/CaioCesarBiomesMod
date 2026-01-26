@@ -2167,14 +2167,23 @@ public class TreeBlocks {
 
     //Orchid tree
 
-    //Cascabela thevetia
+    //Yellow oleander
     public static final RegistryObject<Block> YELLOW_OLEANDER_LEAVES = registerBlock("yellow_oleander_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> YELLOW_OLEANDER_SAPLING = registerBlock("yellow_oleander_sapling",
-            WhiteOleanderSapling::new);
+            YellowOleanderSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_YELLOW_OLEANDER_SAPLING = BLOCKS.register("potted_oleander_white_sapling",
+    public static final RegistryObject<Block> POTTED_YELLOW_OLEANDER_SAPLING = BLOCKS.register("potted_yellow_oleander_sapling",
             () -> new FlowerPotBlock(TreeBlocks.YELLOW_OLEANDER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ORANGE_OLEANDER_LEAVES = registerBlock("orange_oleander_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ORANGE_OLEANDER_SAPLING = registerBlock("orange_oleander_sapling",
+            OrangeOleanderSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORANGE_OLEANDER_SAPLING = BLOCKS.register("potted_orange_oleander_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ORANGE_OLEANDER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
     //Teak
