@@ -1758,7 +1758,7 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
-    //Acerola
+    //Yellow Oleander
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_OLEANDER_TREE = register("yellow_oleander_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.YELLOW_OLEANDER_LEAVES),
@@ -1818,10 +1818,27 @@ public class TreeFeatures {
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_TALL_TREE = register("teak_tall_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 6),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_FANCY_TREE = register("teak_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState TEAK_LEAVES = TreeBlocks.TEAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINK_IVORY_LOG = TreeBlocks.PINK_IVORY_LOG.get().getDefaultState();
         protected static final BlockState PINK_IVORY_LEAVES = TreeBlocks.PINK_IVORY_LEAVES.get().getDefaultState();
