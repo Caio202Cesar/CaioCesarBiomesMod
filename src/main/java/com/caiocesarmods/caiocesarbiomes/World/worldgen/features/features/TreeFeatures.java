@@ -1758,6 +1758,20 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Acerola
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_OLEANDER_TREE = register("yellow_oleander_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.YELLOW_OLEANDER_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_OLEANDER_TREE = register("orange_oleander_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ORANGE_OLEANDER_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     //Pink Ivory
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IVORY_TREE = register("pink_ivory_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PINK_IVORY_LOG),
@@ -1960,6 +1974,8 @@ public class TreeFeatures {
         protected static final BlockState WHITE_OLEANDER_LEAVES = TreeBlocks.OLEANDER_WHITE_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_PINK_LEAVES.get().getDefaultState();
         protected static final BlockState DARK_PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_DARK_PINK_LEAVES.get().getDefaultState();
+        protected static final BlockState ORANGE_OLEANDER_LEAVES = TreeBlocks.ORANGE_OLEANDER_LEAVES.get().getDefaultState();
+        protected static final BlockState YELLOW_OLEANDER_LEAVES = TreeBlocks.YELLOW_OLEANDER_LEAVES.get().getDefaultState();
 
         protected static final BlockState OCOTEA_FOREST_LOG = TreeBlocks.OCOTEA_FOREST_LOG.get().getDefaultState();
         protected static final BlockState OCOTEA_JUNGLE_LOG = TreeBlocks.OCOTEA_JUNGLE_LOG.get().getDefaultState();

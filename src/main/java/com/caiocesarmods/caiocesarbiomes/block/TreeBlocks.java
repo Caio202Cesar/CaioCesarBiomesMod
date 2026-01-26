@@ -2188,15 +2188,21 @@ public class TreeBlocks {
 
     //Teak
     public static final RegistryObject<Block> TEAK_LEAVES = registerBlock("teak_leaves",
-            () -> new AcerolaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TeakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> TEAK_FLOWERING_LEAVES = registerBlock("teak_flowering_leaves",
-            () -> new AcerolaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TeakFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
-    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dry_branches",
-            () -> new AcerolaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dried_branches",
+            () -> new TeakDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_LEAVES));
 
+    public static final RegistryObject<Block> TEAK_SAPLING = registerBlock("teak_sapling",
+            TeakSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_TEAK_SAPLING = BLOCKS.register("potted_teak_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.TEAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Sugar apple
 
