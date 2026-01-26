@@ -75,6 +75,10 @@ public class TeakSapling extends SaplingBlock {
             return false;
         }
 
+        if (temp < 0.89f && biome.getPrecipitation() != Biome.RainType.NONE) {
+            return false;
+        }
+
         return super.canGrow(worldIn, pos, state, isClient);
     }
 
@@ -87,6 +91,10 @@ public class TeakSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
+
+            World world = (World) worldIn;
+            Biome biome = world.getBiome(pos);
+
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.85f, maxTemp = 1.6f;
 
@@ -106,12 +114,22 @@ public class TeakSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
+            if (temp < 0.89 && biome.getPrecipitation() != Biome.RainType.NONE) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too dry for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
             // If temp is in range, optionally allow normal processing:
             // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
+
         return ActionResultType.SUCCESS;
     }
+
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
@@ -127,7 +145,11 @@ public class TeakSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.SWEET_CHESTNUT_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.TEAK_FANCY_TREE;
+            } else {
+                return TreeFeatures.TEAK_TALL_TREE;
+            }
         }
 
         /**
