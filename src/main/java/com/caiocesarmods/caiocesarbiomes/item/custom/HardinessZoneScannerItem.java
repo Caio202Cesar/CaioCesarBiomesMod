@@ -38,11 +38,12 @@ public class HardinessZoneScannerItem extends Item {
             Biome biome = world.getBiome(pos);
 
             int zone = HardinessZones.getZone(world, pos);
+            int summerHeat = //need a method to get the biome's summer heat.
             float baseTemp = biome.getTemperature(pos);
 
             player.sendMessage(
                     new StringTextComponent(
-                            "§aHardiness Zone: §e" + zone +
+                            "§aCold Hardiness Zone: §e" + zone +
                                     "\n§aBiome: §e" + biome.getRegistryName() +
                                     "\n§aBase temperature: §e" + String.format("%.2f", baseTemp)
                     ),
