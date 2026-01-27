@@ -30,6 +30,15 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_sahel", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:ginkgo_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:gravel_tundra", SummerHeat.COLD);
+            SummerHeatRegistry.register("caiocesarbiomes:hemiboreal_forest", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:hemiboreal_steppe", SummerHeat.WARM);
+
+
+            SummerHeatRegistry.register("caiocesarbiomes:pewen_coniferous_grove", SummerHeat.WARM);
+
+
+            SummerHeatRegistry.register("caiocesarbiomes:southern_beech_forest", SummerHeat.COOLER);
 
         });
     }
