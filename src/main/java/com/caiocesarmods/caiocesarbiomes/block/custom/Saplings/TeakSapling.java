@@ -53,6 +53,8 @@ public class TeakSapling extends SaplingBlock {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
+
+        super.randomTick(state, world, pos, random);
         // If biome temperature is too low/high, do nothing (block natural growth)
     }
 

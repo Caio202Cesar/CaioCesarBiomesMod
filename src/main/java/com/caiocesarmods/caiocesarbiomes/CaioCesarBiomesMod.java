@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes;
 
+import com.caiocesarmods.caiocesarbiomes.Climate.ClimateSetup;
 import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
