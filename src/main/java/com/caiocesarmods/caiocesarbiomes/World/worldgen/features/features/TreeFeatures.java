@@ -2556,12 +2556,12 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_FOREST_DECIDUOUS_TREES = register("tropical_forest_deciduous_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RED_KAPOK_TREE.withChance(0.3F),
-                            ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F), ACEROLA_TREE.withChance(0.23F),
+                            ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F), ACEROLA_TREE.withChance(0.09F),
                             MANGO_FANCY_TREE.withChance(0.3F), BISMARCK_PALM.withChance(0.1F), BISMARCK_PALM.withChance(0.1F),
-                            AVOCADO_TREE.withChance(0.1F), STARFRUIT_TREE.withChance(0.1F), TAMARIND_TREE.withChance(0.4F),
-                            POMEGRANATE_TREE.withChance(0.15F), PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F),
-                            ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), ORANGE_OLEANDER_TREE.withChance(0.2F),
-                            YELLOW_OLEANDER_TREE.withChance(0.2F)), FOREST_ACACIA_TREE))
+                            AVOCADO_TREE.withChance(0.09F), STARFRUIT_TREE.withChance(0.08F), TAMARIND_TREE.withChance(0.4F),
+                            POMEGRANATE_TREE.withChance(0.09F), PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F),
+                            ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), ORANGE_OLEANDER_TREE.withChance(0.09F),
+                            YELLOW_OLEANDER_TREE.withChance(0.09F)), FOREST_ACACIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 6))));
 
