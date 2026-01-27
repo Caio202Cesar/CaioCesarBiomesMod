@@ -17,6 +17,7 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:forest", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
             SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.COLD);
+            SummerHeatRegistry.register("minecraft:dark_forest", SummerHeat.WARM);
 
             SummerHeatRegistry.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_laurel_forest", SummerHeat.HOT);
