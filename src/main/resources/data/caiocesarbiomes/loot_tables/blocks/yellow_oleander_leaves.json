@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:banana_leaves"
+              "name": "caiocesarbiomes:yellow_oleander_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:banana_sapling"
+              "name": "caiocesarbiomes:yellow_oleander_sapling"
             }
           ]
         }

@@ -28,16 +28,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class YellowOleanderSapling extends SaplingBlock {
-    public YellowOleanderSapling() {
-        super(new YellowOleanderTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class OrangeOleanderSapling extends SaplingBlock {
+    public OrangeOleanderSapling() {
+        super(new OrangeOleanderTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.YELLOW_OLEANDER_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_YELLOW_OLEANDER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.ORANGE_OLEANDER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ORANGE_OLEANDER_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -120,11 +120,11 @@ public class YellowOleanderSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class YellowOleanderTree extends Tree {
+    private static class OrangeOleanderTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-            return TreeFeatures.YELLOW_OLEANDER_TREE;
+            return TreeFeatures.ORANGE_OLEANDER_TREE;
         }
     }
 }
