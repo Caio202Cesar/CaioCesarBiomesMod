@@ -174,8 +174,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSubtropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_CITRUS_TREES);
     }
-    public static void withCrabappleTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRABAPPLE_TREES);
+    public static void withTeakTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEAK_TREES);
     }
     public static void withHollyTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HOLLY_TREES);
