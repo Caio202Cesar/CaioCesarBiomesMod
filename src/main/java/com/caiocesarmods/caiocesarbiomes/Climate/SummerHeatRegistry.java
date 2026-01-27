@@ -1,19 +1,40 @@
 package com.caiocesarmods.caiocesarbiomes.Climate;
 
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SummerHeatRegistry {
-    private static final Map<RegistryKey<Biome>, SummerHeat> MAP = new HashMap<>();
+    private static final Map<ResourceLocation, SummerHeat> MAP = new HashMap<>();
 
-    public static void register(RegistryKey<Biome> biome, SummerHeat heat) {
-        MAP.put(biome, heat);
+    private SummerHeatRegistry() {}
+
+    // ---- REGISTER USING STRING ----
+    public static void register(String biomeId, SummerHeat heat) {
+        MAP.put(new ResourceLocation(biomeId), heat);
     }
 
-    public static SummerHeat get(RegistryKey<Biome> biome) {
-        return MAP.getOrDefault(biome, SummerHeat.HOT);
+    // ---- REGISTER USING RESOURCELOCATION (OPTIONAL) ----
+    public static void register(ResourceLocation biomeId, SummerHeat heat) {
+        MAP.put(biomeId, heat);
+    }
+
+    // ---- QUERY FROM WORLD ----
+    public static SummerHeat get(World world, BlockPos pos) {
+        Biome biome = world.getBiome(pos);
+
+        ResourceLocation id = world.func_241828_r()
+                .getRegistry(Registry.BIOME_KEY)
+                .getKey(biome);
+
+        if (id == null) return SummerHeat.WARM; // safe fallback
+
+        return MAP.getOrDefault(id, SummerHeat.WARM);
     }
 }

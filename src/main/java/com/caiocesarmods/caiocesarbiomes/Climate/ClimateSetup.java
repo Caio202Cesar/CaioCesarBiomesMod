@@ -12,14 +12,15 @@ public class ClimateSetup {
     @SubscribeEvent
     public static void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            SummerHeatRegistry.register(Biomes.DESERT, SummerHeat.HOT);
-            SummerHeatRegistry.register(Biomes.SAVANNA, SummerHeat.HOT);
-            SummerHeatRegistry.register(Biomes.JUNGLE, SummerHeat.HOT);
-            SummerHeatRegistry.register(Biomes.PLAINS, SummerHeat.HOT);
-            SummerHeatRegistry.register(Biomes.FOREST, SummerHeat.HOT);
-            SummerHeatRegistry.register(Biomes.TAIGA, SummerHeat.COOLER);
-            SummerHeatRegistry.register(Biomes.SNOWY_TUNDRA, SummerHeat.COLD);
+            SummerHeatRegistry.register("minecraft:desert", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:savanna", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:jungle", SummerHeat.HOT);
 
+            SummerHeatRegistry.register("minecraft:plains", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:forest", SummerHeat.HOT);
+
+            SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.COLD);
         });
     }
 }
