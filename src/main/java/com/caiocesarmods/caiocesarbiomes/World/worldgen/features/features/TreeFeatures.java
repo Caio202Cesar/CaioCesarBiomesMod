@@ -1717,6 +1717,12 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(10, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAIGA_ASPEN_TREE = register("taiga_aspen_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BIRCH_LOG),
+                    new SimpleBlockStateProvider(States.ASPEN_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(10, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     //Larch
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LARCH_TREE = register("larch_tree",
@@ -1729,6 +1735,21 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LARCH_TREE = register("tall_larch",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARCH_LOG),
                     new SimpleBlockStateProvider(States.LARCH_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new StraightTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAIGA_LARCH_TREE = register("taiga_larch_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARCH_LOG),
+                    new SimpleBlockStateProvider(States.LARCH_TAIGA_SPRING_BRANCHES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAIGA_TALL_LARCH_TREE = register("taiga_tall_larch",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARCH_LOG),
+                    new SimpleBlockStateProvider(States.LARCH_TAIGA_SPRING_BRANCHES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
@@ -1878,6 +1899,7 @@ public class TreeFeatures {
 
         protected static final BlockState LARCH_LOG = TreeBlocks.LARCH_LOG.get().getDefaultState();
         protected static final BlockState LARCH_LEAVES = TreeBlocks.LARCH_LEAVES.get().getDefaultState();
+        protected static final BlockState LARCH_TAIGA_SPRING_BRANCHES = TreeBlocks.LARCH_WINTER_LEAVES.get().getDefaultState();
 
         protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
         protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
@@ -1899,6 +1921,7 @@ public class TreeFeatures {
 
         protected static final BlockState BIRCH_LOG = Blocks.BIRCH_LOG.getDefaultState();
         protected static final BlockState ASPEN_LEAVES = TreeBlocks.ASPEN_LEAVES.get().getDefaultState();
+        protected static final BlockState ASPEN_TAIGA_SPRING_BRANCHES = TreeBlocks.ASPEN_WINTER_BRANCHES.get().getDefaultState();
 
         protected static final BlockState BISMARCK_PALM_LOG = TreeBlocks.BISMARCK_PALM_LOG.get().getDefaultState();
         protected static final BlockState BISMARCK_PALM_LEAVES = TreeBlocks.BISMARCK_PALM_LEAVES.get().getDefaultState();
@@ -2194,8 +2217,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.5F, 6))));
 
     public static final ConfiguredFeature<?, ?> TAIGA_EXTRA_VEGETATION = register("taiga_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.2F),
-                            JUNIPER_SHRUB.withChance(0.089F)), LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAIGA_ASPEN_TREE.withChance(0.2F),
+                            JUNIPER_SHRUB.withChance(0.089F)), TAIGA_LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> GINKGO_TRESS = register("ginkgo_trees",
@@ -2204,8 +2227,8 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEGA_TAIGA_EXTRA_VEGETATION = register("mega_taiga_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ASPEN_TREE.withChance(0.15F),
-                            JUNIPER_SHRUB.withChance(0.089F), LARCH_TREE.withChance(0.2F)), TALL_LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAIGA_ASPEN_TREE.withChance(0.15F),
+                            JUNIPER_SHRUB.withChance(0.089F), TAIGA_LARCH_TREE.withChance(0.2F)), TAIGA_TALL_LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_BEACH_VEGETATION = register("humid_subtropical_beach_vegetation",
