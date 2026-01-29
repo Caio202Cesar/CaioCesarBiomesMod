@@ -2189,19 +2189,19 @@ public class TreeBlocks {
     //Teak
     public static final RegistryObject<Block> TEAK_LEAVES = registerBlock("teak_leaves",
             () -> new TeakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> TEAK_FLOWERING_LEAVES = registerBlock("teak_flowering_leaves",
             () -> new TeakFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_FRUITING_LEAVES));
     public static final RegistryObject<Block> TEAK_FRUITING_LEAVES = registerBlock("teak_fruiting_leaves",
             () -> new TeakFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_FALL_LEAVES));
     public static final RegistryObject<Block> TEAK_FALL_LEAVES = registerBlock("teak_fall_leaves",
             () -> new TeakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_DRIED_BRANCHES));
     public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dried_branches",
             () -> new TeakDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_LEAVES));
 
     public static final RegistryObject<Block> TEAK_SAPLING = registerBlock("teak_sapling",
             TeakSapling::new);

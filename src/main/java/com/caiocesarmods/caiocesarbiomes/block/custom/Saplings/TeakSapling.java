@@ -42,11 +42,11 @@ public class TeakSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10
+    //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.85f;
+        float minTemp = 0.9f;
         float maxTemp = 1.6f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -71,15 +71,15 @@ public class TeakSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.85F;
+        boolean tooCold = temp < 0.9F;
 
         if (tooHot || tooCold) {
             return false;
         }
 
-        if (temp < 0.89f && biome.getPrecipitation() != Biome.RainType.NONE) {
+        /*if (temp < 0.9f && biome.getPrecipitation() != Biome.RainType.NONE) {
             return false;
-        }
+        }*/
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -98,7 +98,7 @@ public class TeakSapling extends SaplingBlock {
             Biome biome = world.getBiome(pos);
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 1.6f;
+            float minTemp = 0.9f, maxTemp = 1.6f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -116,13 +116,13 @@ public class TeakSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
-            if (temp < 0.89 && biome.getPrecipitation() != Biome.RainType.NONE) {
+            /*if (temp < 0.89 && biome.getPrecipitation() != Biome.RainType.NONE) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too dry for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
+            }*/
 
             // If temp is in range, optionally allow normal processing:
             // return super.onBlockActivated(...);
