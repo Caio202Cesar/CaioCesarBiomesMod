@@ -47,8 +47,8 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
 
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
-            .temperature(0.0F).downfall(0.1F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
+            .temperature(0.8F).downfall(0.1F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(6144255).withFoliageColor(9153185)
                     .withGrassColor(11437360).setFogColor(6144255)
                     .setAmbientSound(SoundEvents.AMBIENT_BASALT_DELTAS_LOOP)

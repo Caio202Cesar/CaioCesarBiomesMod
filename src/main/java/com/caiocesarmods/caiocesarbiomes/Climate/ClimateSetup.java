@@ -16,12 +16,13 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:plains", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:forest", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.COLD);
+            SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.ICY);
             SummerHeatRegistry.register("minecraft:dark_forest", SummerHeat.WARM);
 
             SummerHeatRegistry.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_laurel_forest", SummerHeat.HOT);
-
+            SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_laurel_jungle", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_seasonal_forest", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:tropical_pine_island", SummerHeat.HOT);
@@ -31,12 +32,25 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_sahel", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:ginkgo_forest", SummerHeat.HOT);
-            SummerHeatRegistry.register("caiocesarbiomes:gravel_tundra", SummerHeat.COLD);
+            SummerHeatRegistry.register("caiocesarbiomes:gravel_tundra", SummerHeat.TUNDRA_COLD);
             SummerHeatRegistry.register("caiocesarbiomes:hemiboreal_forest", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:hemiboreal_steppe", SummerHeat.WARM);
-
-
+            SummerHeatRegistry.register("caiocesarbiomes:hot_mediterranean_beach", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:humid_subtropical_beach", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:inactive_volcanic_site", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:japanese_maple_grove", SummerHeat.WARM); //Japanese maples wouldn't thrive well in such way (without the forest's protection) in a hot summer climate
+            SummerHeatRegistry.register("caiocesarbiomes:lush_southern_tundra", SummerHeat.TUNDRA_COLD);
+            SummerHeatRegistry.register("caiocesarbiomes:mediterranean_conifer_savanna", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:mediterranean_conifer_savanna_beach", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:mediterranean_oak_woodland", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:mediterranean_scrubland", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:monsoon_ficus_tropical_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:oleander_gardens", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:montane_laurel_grove", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:olive_grove", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:pewen_coniferous_grove", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:sahel", SummerHeat.SCHORCHING);
 
 
             SummerHeatRegistry.register("caiocesarbiomes:southern_beech_forest", SummerHeat.COOLER);
