@@ -59,6 +59,7 @@ public class DryTropicalBeachBiome {
         ModDefaultBiomeFeatures.withCasuarinaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPlumeriaTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ROYAL_POINCIANA_TREE);
 
