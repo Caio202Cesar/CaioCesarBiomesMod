@@ -51,8 +51,8 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:olive_grove", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:pewen_coniferous_grove", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:sahel", SummerHeat.SCHORCHING);
-
-
+            SummerHeatRegistry.register("caiocesarbiomes:salt_desert", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("caiocesarbiomes:socotra_dryland", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:southern_beech_forest", SummerHeat.COOLER);
 
         });
