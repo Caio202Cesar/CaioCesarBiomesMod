@@ -1,9 +1,13 @@
 {
   "variants":{
     "":[
-      {"model": "caiocesarbiomes:block/orange_oleander_flowering_leaves"},
-      {"model": "caiocesarbiomes:block/yellow_oleander_leaves"},
-      {"model": "caiocesarbiomes:block/yellow_oleander_fruiting_leaves"}
+      {"model": "caiocesarbiomes:block/orange_oleander_flowering_leaves",
+        "weight": 6},
+      {"model": "caiocesarbiomes:block/yellow_oleander_leaves",
+        "weight": 1},
+      {"model": "caiocesarbiomes:block/yellow_oleander_fruiting_leaves",
+        "weight": 1
+      }
     ]
   }
 }
