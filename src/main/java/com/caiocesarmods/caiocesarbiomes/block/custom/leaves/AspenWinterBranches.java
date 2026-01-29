@@ -53,7 +53,7 @@ public class AspenWinterBranches extends LeavesBlock implements IForgeShearable 
 
         }
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
