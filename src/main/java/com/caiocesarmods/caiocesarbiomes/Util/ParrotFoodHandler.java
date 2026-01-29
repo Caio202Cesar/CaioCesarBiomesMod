@@ -28,5 +28,60 @@ public class ParrotFoodHandler {
 
             event.setCanceled(true);
         }
+
+        if (stack.getItem() == ModItems.AVOCADO_ICE_CREAM.get()) {
+            ParrotEntity parrot = (ParrotEntity) event.getTarget();
+            parrot.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+
+            if (!event.getPlayer().abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            event.setCanceled(true);
+        }
+
+        if (stack.getItem() == ModItems.GUACAMOLE.get()) {
+            ParrotEntity parrot = (ParrotEntity) event.getTarget();
+            parrot.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+
+            if (!event.getPlayer().abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            event.setCanceled(true);
+        }
+
+        if (stack.getItem() == ModItems.GUACAMOLE_BREADFRUIT.get()) {
+            ParrotEntity parrot = (ParrotEntity) event.getTarget();
+            parrot.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+
+            if (!event.getPlayer().abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            event.setCanceled(true);
+        }
+
+        if (stack.getItem() == ModItems.GUACAMOLE_TOAST.get()) {
+            ParrotEntity parrot = (ParrotEntity) event.getTarget();
+            parrot.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+
+            if (!event.getPlayer().abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            event.setCanceled(true);
+        }
+
+        if (stack.getItem() == ModItems.COOKIE_ICE_CREAM.get()) {
+            ParrotEntity parrot = (ParrotEntity) event.getTarget();
+            parrot.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+
+            if (!event.getPlayer().abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            event.setCanceled(true);
+        }
     }
 }
