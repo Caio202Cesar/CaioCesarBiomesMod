@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/orchid_tree_leaves", "weight": 1},
+      {"model": "caiocesarbiomes:block/orchid_tree_flowering_branches", "weight": 6}
+    ]
+  }
+}

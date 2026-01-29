@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/orchid_tree_winter_branches",
+    "particle": "caiocesarbiomes:block/orchid_tree_winter_branches"
+  }
+}

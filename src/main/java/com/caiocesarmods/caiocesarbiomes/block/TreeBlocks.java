@@ -2166,7 +2166,25 @@ public class TreeBlocks {
     //Macadamia
 
     //Orchid tree
+    public static final RegistryObject<Block> ORCHID_TREE_LOG = registerBlock("orchid_tree_log",
+            ModLogs::new);
 
+    public static final RegistryObject<Block> ORCHID_TREE_LEAVES = registerBlock("orchid_tree_leaves",
+            () -> new OrchidTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> ORCHID_TREE_WINTER_BRANCHES = registerBlock("orchid_tree_winter_branches",
+            () -> new OrchidTreeDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES));
+    public static final RegistryObject<Block> ORCHID_TREE_FLOWERING_BRANCHES = registerBlock("orchid_tree_flowering_branches",
+            () -> new OrchidTreeFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORCHID_TREE_LEAVES));
+
+    public static final RegistryObject<Block> ORCHID_TREE_SAPLING = registerBlock("orchid_tree_sapling",
+            OrchidTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORCHID_TREE_SAPLING = BLOCKS.register("potted_orchid_tree_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ORCHID_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     //Yellow oleander
     public static final RegistryObject<Block> YELLOW_OLEANDER_LEAVES = registerBlock("yellow_oleander_leaves",

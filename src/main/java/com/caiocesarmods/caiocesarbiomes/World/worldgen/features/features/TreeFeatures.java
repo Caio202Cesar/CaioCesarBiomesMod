@@ -1785,6 +1785,20 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
+    //Orchid tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORCHID_TREE = register("orchid_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ORCHID_TREE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ORCHID_TREE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUBTROPICAL_SPRING_ORCHID_TREE = register("subtropical_spring_orchid_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ORCHID_TREE_LOG),
+                    new SimpleBlockStateProvider(States.ORCHID_TREE_FLOWERING_BRANCHES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     //Yellow Oleander
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_OLEANDER_TREE = register("yellow_oleander_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
@@ -1877,6 +1891,10 @@ public class TreeFeatures {
 
         protected static final BlockState PINK_IVORY_LOG = TreeBlocks.PINK_IVORY_LOG.get().getDefaultState();
         protected static final BlockState PINK_IVORY_LEAVES = TreeBlocks.PINK_IVORY_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ORCHID_TREE_LOG = TreeBlocks.ORCHID_TREE_LOG.get().getDefaultState();
+        protected static final BlockState ORCHID_TREE_LEAVES = TreeBlocks.ORCHID_TREE_LEAVES.get().getDefaultState();
+        protected static final BlockState ORCHID_TREE_FLOWERING_BRANCHES = TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get().getDefaultState();
 
         protected static final BlockState PLUMERIA_LOG = TreeBlocks.PLUMERIA_LOG.get().getDefaultState();
         protected static final BlockState RED_PLUMERIA_LEAVES = TreeBlocks.RED_PLUMERIA_LEAVES.get().getDefaultState();
