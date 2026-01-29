@@ -55,6 +55,20 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:socotra_dryland", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:southern_beech_forest", SummerHeat.COOLER);
 
+            SummerHeatRegistry.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:araucaria_plateau", SummerHeat.WARM);
+            SummerHeatRegistry.register("brbiomesmod:atlantic_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:atlantic_forest_hills", SummerHeat.WARM);
+            SummerHeatRegistry.register("brbiomesmod:butia_pampas", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:caatinga_shrubland", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("brbiomesmod:cerrado", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:pampas_hills", SummerHeat.WARM);
+            SummerHeatRegistry.register("brbiomesmod:dunas_restinga", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:pampas", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:pampas_coastal_fields", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:pantanal", SummerHeat.HOT);
+            SummerHeatRegistry.register("brbiomesmod:restinga_beach", SummerHeat.HOT);
         });
     }
 }
