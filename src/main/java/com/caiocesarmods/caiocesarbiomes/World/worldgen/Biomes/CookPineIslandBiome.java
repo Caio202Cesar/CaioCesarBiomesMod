@@ -59,7 +59,6 @@ public class CookPineIslandBiome {
         ModDefaultBiomeFeatures.withTropicalPineIslandFigTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlumeriaTrees(biomegenerationsettings$builder);
 
-
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_PINES);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
