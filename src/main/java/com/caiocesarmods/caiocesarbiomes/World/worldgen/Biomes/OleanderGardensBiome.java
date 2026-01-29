@@ -68,7 +68,7 @@ public class OleanderGardensBiome {
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
       DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-      //Hardiness zone 9: 0.8F - 0.84F
+      //Hardiness zone 10: 0.85F - 0.89F
       return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
               .temperature(0.84F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
