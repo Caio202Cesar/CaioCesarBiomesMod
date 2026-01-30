@@ -167,34 +167,21 @@ public class ModEventSubscriber {
             ResourceLocation id = event.getName();
             if (id == null) return;
 
+            String path = id.getPath();
             String namespace = id.getNamespace();
 
-            // ⛔ Skip biomes from your mod
-            if (namespace.equals(CaioCesarBiomesMod.MOD_ID)) {
-                System.out.println("[DEBUG] Skipping my mod biome: " + id);
+            // skip mod biomes
+            if (namespace.equals(CaioCesarBiomesMod.MOD_ID)) return;
+            if (namespace.equals("brbiomesmod")) return;
+
+            // skip ALL birch forest variants
+            if (path.contains("birch")) {
+                System.out.println("[DEBUG] Skipping Birch Forest: " + id);
                 return;
             }
 
-            // ⛔ Skip biomes from brbiomesmod
-            if (namespace.equals("brbiomesmod")) {
-                System.out.println("[DEBUG] Skipping brbiomesmod biome: " + id);
-                return;
-            }
-
-            // ⛔ Skip *all* Birch Forest variants
-            if (id.equals(Biomes.BIRCH_FOREST.getRegistryName()) ||
-                    id.equals(Biomes.BIRCH_FOREST_HILLS.getRegistryName()) ||
-                    id.equals(Biomes.TALL_BIRCH_FOREST.getRegistryName()) ||
-                    id.equals(Biomes.TALL_BIRCH_HILLS.getRegistryName())) {
-
-                System.out.println("[DEBUG] Skipping Birch Forest biome: " + id);
-                return;
-            }
-
-            // ✔ Applies only to forests that are NOT from your mod, NOT from brbiomesmod,
-            //   and NOT birch forest variants.
+            // If reached, apply override
             System.out.println("[DEBUG] Overriding temperature for: " + id);
-
             event.setClimate(new Biome.Climate(
                     Biome.RainType.RAIN,
                     0.74f,                          // hardiness zone 7
