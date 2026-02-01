@@ -32,7 +32,7 @@ public class BananaGreenBunchBlock extends Block {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.00255f;
+        double chance = 0.05255f;
 
         if (random.nextDouble() < chance) {
             worldIn.setBlockState(pos, TreeBlocks.BANANA_BUNCH.get().getDefaultState());
