@@ -300,40 +300,6 @@ public class ModEventSubscriber {
                 }
             }
         }
-
-        if (!player.world.isRemote) {
-            for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-                ItemStack stack = player.inventory.getStackInSlot(i);
-
-                if (!stack.isEmpty() && stack.getItem() == ModItems.UNRIPE_CREEPING_FIG.get()) {
-                    if (player.getRNG().nextInt(500) == 10) { // ~10 in 500 chance per tick
-                        ItemStack ripeStack = new ItemStack(ModItems.RIPE_CREEPING_FIG.get(), stack.getCount());
-                        if (stack.hasTag()) {
-                            ripeStack.setTag(stack.getTag().copy());
-                        }
-
-                        player.inventory.setInventorySlotContents(i, ripeStack);
-                    }
-                }
-            }
-        }
-
-        if (!player.world.isRemote) {
-            for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-                ItemStack stack = player.inventory.getStackInSlot(i);
-
-                if (!stack.isEmpty() && stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
-                    if (player.getRNG().nextInt(1000) == 10) { // ~10 in 1000 chance per tick
-                        ItemStack ripeStack = new ItemStack(ModItems.MANGO.get(), stack.getCount());
-                        if (stack.hasTag()) {
-                            ripeStack.setTag(stack.getTag().copy());
-                        }
-
-                        player.inventory.setInventorySlotContents(i, ripeStack);
-                    }
-                }
-            }
-        }
     }
 
     @SubscribeEvent
@@ -360,23 +326,7 @@ public class ModEventSubscriber {
                         age++;
 
                         // Verifica qual item está amadurecendo e substitui quando atingir a idade certa
-                        if (stack.getItem() == ModItems.UNRIPE_MANGO.get()) {
-                            if (age >= 820000) {
-                                inventory.setInventorySlotContents(i, new ItemStack(ModItems.MANGO.get(), stack.getCount()));
-                            } else {
-                                tag.putInt("RipenAge", age);
-                                stack.setTag(tag);
-                            }
-
-                        } else if (stack.getItem() == ModItems.UNRIPE_CREEPING_FIG.get()) {
-                            if (age >= 120000) {
-                                inventory.setInventorySlotContents(i, new ItemStack(ModItems.RIPE_CREEPING_FIG.get(), stack.getCount()));
-                            } else {
-                                tag.putInt("RipenAge", age);
-                                stack.setTag(tag);
-                            }
-
-                        } else if (stack.getItem() == ModItems.MARULA.get()) {
+                        if (stack.getItem() == ModItems.MARULA.get()) {
                             if (age >= 120000) {
                                 inventory.setInventorySlotContents(i, new ItemStack(ModItems.RIPE_MARULA.get(), stack.getCount()));
                             } else {
