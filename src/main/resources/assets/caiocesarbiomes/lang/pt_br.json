@@ -861,7 +861,14 @@
   "block.caiocesarbiomes.almond_blossom": "Florada de amendoeira",
   "block.caiocesarbiomes.almond_ripe_fruiting_leaves": "Folhas de amendoeira com frutos maduros",
   "block.caiocesarbiomes.loblolly_pine_leaves": "Folhas de pinheiro-do-banhado",
-  "block.caiocesarbiomes.loblolly_pine_sapling": "Muda de pinheiro-do-banhado"
+  "block.caiocesarbiomes.loblolly_pine_sapling": "Muda de pinheiro-do-banhado",
+
+  "item.caiocesarbiomes.unripe_almond": "Amêndoa verde",
+  "item.caiocesarbiomes.raw_almond": "Amêndoa crua",
+  "item.caiocesarbiomes.almond_shell": "Amêndoa com casca",
+  "item.caiocesarbiomes.acerola": "Acerola",
+  "item.caiocesarbiomes.pink_ivory_berries": "Bagas de marfim-rosa",
+  "item.caiocesarbiomes.hardiness_zone_scanner": "Detector de zona de rusticidade"
 
 }
 
