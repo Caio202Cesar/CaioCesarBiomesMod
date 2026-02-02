@@ -123,7 +123,7 @@ public class TreeBlocks {
             () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_RIPE_FRUITING_LEAVES));
     public static final RegistryObject<Block> ALMOND_RIPE_FRUITING_LEAVES = registerBlock("almond_ripe_fruiting_leaves",
-            () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new AlmondRipeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_FALL_LEAVES));
 
     public static final RegistryObject<Block> ALMOND_SAPLING = registerBlock("almond_sapling",
