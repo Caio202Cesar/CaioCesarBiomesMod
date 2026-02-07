@@ -233,11 +233,11 @@ public class ModItems {
     public static final RegistryObject<Item> JAR = ITEMS.register("jar",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> HAZELNUT_CREAM = ITEMS.register("hazelnut_cream",
-            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.HAZELNUT_CREAM)));
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> HAZELNUT_TOAST = ITEMS.register("hazelnut_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.HAZELNUT_TOAST)));
     public static final RegistryObject<Item> PISTACHIO_CREAM = ITEMS.register("pistachio_cream",
-            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PISTACHIO_CREAM)));
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> PISTACHIO_TOAST = ITEMS.register("pistachio_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PISTACHIO_TOAST)));
     public static final RegistryObject<Item> COCONUT_OIL = ITEMS.register("coconut_oil",
@@ -362,6 +362,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CANDIED_CITRON)));
     public static final RegistryObject<Item> ROASTED_ALMOND = ITEMS.register("roasted_almond",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROASTED_ALMOND)));
+    public static final RegistryObject<Item> MACARONS = ITEMS.register("macarons",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MACARONS)));
+    public static final RegistryObject<Item> ARBUTUS_JAM = ITEMS.register("arbutus_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",

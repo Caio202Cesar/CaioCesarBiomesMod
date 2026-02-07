@@ -67,10 +67,6 @@ public class ModFoods extends Foods {
     public static final Food RAW_TOAST = (new Food.Builder()).hunger(1).saturation(0.2F).build();
     public static final Food HAZELNUT_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PISTACHIO_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
-    public static final Food HAZELNUT_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.SPEED, 200, 3), 1.0F).build();
-    public static final Food PISTACHIO_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F).build();
     public static final Food FENNEL_SOUP = buildStew(6);
     public static final Food WALNUT_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food PECAN_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
@@ -185,6 +181,7 @@ public class ModFoods extends Foods {
     public static final Food PINK_IVORY_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food ACEROLA = (new Food.Builder()).hunger(2).saturation(0.1F)
             .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
+    public static final Food MACARONS = (new Food.Builder()).hunger(4).saturation(0.3F).setAlwaysEdible().build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
