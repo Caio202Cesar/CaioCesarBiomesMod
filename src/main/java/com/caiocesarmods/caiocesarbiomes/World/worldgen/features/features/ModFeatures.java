@@ -306,7 +306,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig MOUNTAIN_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.EDELWEISS, 2)
-                        .addWeightedBlockstate(States.LUPINUS, 7),
+                        .addWeightedBlockstate(States.LUPINUS, 7)
+                        .addWeightedBlockstate(States.BUNCHBERRY_FLOWERING, 4)
+                        .addWeightedBlockstate(States.BUNCHBERRY_FRUITING, 4)
+                        .addWeightedBlockstate(States.BUNCHBERRY, 4),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig SAVANNA_PLANT_CONFIG =
