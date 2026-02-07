@@ -2053,7 +2053,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
             ModLogs::new);
     public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
-            YewLeaves::new);
+            () -> new YewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YEW_FRUITING_LEAVES));
+    public static final RegistryObject<Block> YEW_FRUITING_LEAVES = registerBlock("yew_fruiting_leaves",
+            () -> new YewFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YEW_FRUITING_LEAVES));
     public static final RegistryObject<Block> YEW_SAPLING = registerBlock("yew_sapling",
             YewSapling::new);
     @SuppressWarnings("deprecation")
