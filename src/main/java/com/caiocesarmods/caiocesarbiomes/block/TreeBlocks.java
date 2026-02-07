@@ -1087,6 +1087,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_WEEPING_FIG_SAPLING = BLOCKS.register("potted_weeping_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.WEEPING_FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
@@ -1094,6 +1095,15 @@ public class TreeBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_INDIAN_LAUREL_SAPLING = BLOCKS.register("potted_indian_laurel_sapling",
             () -> new FlowerPotBlock(TreeBlocks.INDIAN_LAUREL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> RUBBER_TREE_LEAVES = registerBlock("rubber_tree_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RUBBER_TREE_SAPLING = registerBlock("rubber_tree_sapling",
+            RubberTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RUBBER_TREE_SAPLING = BLOCKS.register("potted_rubber_tree_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RUBBER_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
