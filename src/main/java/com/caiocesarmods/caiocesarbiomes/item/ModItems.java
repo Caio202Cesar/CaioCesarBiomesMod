@@ -364,6 +364,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ROASTED_ALMOND)));
     public static final RegistryObject<Item> MACARONS = ITEMS.register("macarons",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MACARONS)));
+    public static final RegistryObject<Item> SPICED_SALMON = ITEMS.register("spiced_salmon",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SPICED_SALMON)));
+    public static final RegistryObject<Item> SAVORY_SALMON = ITEMS.register("savory_salmon",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SAVORY_SALMON)));
     public static final RegistryObject<Item> ARBUTUS_JAM = ITEMS.register("arbutus_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
 

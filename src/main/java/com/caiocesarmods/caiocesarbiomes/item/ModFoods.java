@@ -55,12 +55,18 @@ public class ModFoods extends Foods {
     public static final Food MATCHA_LATTE = (new Food.Builder()).hunger(4).saturation(0.3F)
             .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.NIGHT_VISION, 100, 3), 1.0F).build();
-    public static final Food SAVORY_RABBIT = (new Food.Builder()).hunger(7).saturation(0.8F).meat().build();
-    public static final Food SAVORY_CHICKEN = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
-    public static final Food SAVORY_COD = (new Food.Builder()).hunger(7).saturation(0.8F).build();
-    public static final Food SAVORY_MUTTON = (new Food.Builder()).hunger(8).saturation(0.9F).meat().build();
-    public static final Food SAVORY_PORKCHOP = (new Food.Builder()).hunger(9).saturation(0.9F).meat().build();
-    public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(8).saturation(0.9F).build();
+    public static final Food SAVORY_RABBIT = (new Food.Builder()).hunger(7).saturation(0.8F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_CHICKEN = (new Food.Builder()).hunger(8).saturation(0.8F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_PORKCHOP = (new Food.Builder()).hunger(9).saturation(0.9F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(9).saturation(0.9F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .build();
     //The toast alone provides less than the bread. However, when crafted with jams, oils or pastes, it provides the same saturation and hunger
     // as a bread (or more, depending on the complement). It justifies one bread giving 10 toasts.
     public static final Food TOAST = (new Food.Builder()).hunger(3).saturation(0.2F).build();
@@ -154,6 +160,7 @@ public class ModFoods extends Foods {
     public static final Food SPICED_CHICKEN = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_PORKCHOP = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_RABBIT = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
+    public static final Food SPICED_SALMON = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food STARFRUIT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CRABAPPLES = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food PEACH = (new Food.Builder()).hunger(4).saturation(0.3F).build();
