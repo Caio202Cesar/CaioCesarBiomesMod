@@ -387,11 +387,11 @@ public class ModItems {
     public static final RegistryObject<Item> BLUEBERRY_JAM = ITEMS.register("blueberry_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> BLUEBERRY_JAM_TOAST = ITEMS.register("blueberry_jam_toast",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHERRY_PLUM_JAM_TOAST)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.BLUEBERRY_JAM_TOAST)));
     public static final RegistryObject<Item> CHERRY_PLUM_JAM = ITEMS.register("cherry_plum_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> CHERRY_PLUM_JAM_TOAST = ITEMS.register("cherry_plum_jam_toast",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CITRON_JAM_TOAST)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHERRY_PLUM_JAM_TOAST)));
     public static final RegistryObject<Item> CITRON_JAM = ITEMS.register("citron_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> CITRON_JAM_TOAST = ITEMS.register("citron_jam_toast",
@@ -400,6 +400,18 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> CLOUDBERRY_JAM_TOAST = ITEMS.register("cloudberry_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CLOUDBERRY_JAM_TOAST)));
+    public static final RegistryObject<Item> CRABAPPLE_JAM = ITEMS.register("crabapple_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> CRABAPPLE_JAM_TOAST = ITEMS.register("crabapple_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CRABAPPLE_JAM_TOAST)));
+    public static final RegistryObject<Item> ELDERBERRY_JAM = ITEMS.register("elderberry_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> ELDERBERRY_JAM_TOAST = ITEMS.register("elderberry_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ELDERBERRY_JAM_TOAST)));
+    public static final RegistryObject<Item> FIG_JAM = ITEMS.register("fig_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> FIG_JAM_TOAST = ITEMS.register("fig_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.FIG_JAM_TOAST)));
 
     public static final RegistryObject<Item> RED_CURRANT_JAM = ITEMS.register("red_currant_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));

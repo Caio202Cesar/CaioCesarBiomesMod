@@ -189,6 +189,18 @@ public class ModFoods extends Foods {
     public static final Food ACEROLA = (new Food.Builder()).hunger(2).saturation(0.1F)
             .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
     public static final Food MACARONS = (new Food.Builder()).hunger(4).saturation(0.3F).setAlwaysEdible().build();
+    public static final Food ARBUTUS_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ACEROLA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BLACK_CURRANT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ALOE_VERA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CHERRY_PLUM_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CITRON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BLUEBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CLOUDBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CRABAPPLE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ELDERBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food FIG_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food RED_CURRANT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
