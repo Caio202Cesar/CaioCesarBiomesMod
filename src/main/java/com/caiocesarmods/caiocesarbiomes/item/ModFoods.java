@@ -201,6 +201,11 @@ public class ModFoods extends Foods {
     public static final Food ELDERBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food FIG_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food RED_CURRANT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ACEROLA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 400, 2), 1.0F) .build();
+    public static final Food ALMOND_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHERRY_PLUM_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GRAPEFRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

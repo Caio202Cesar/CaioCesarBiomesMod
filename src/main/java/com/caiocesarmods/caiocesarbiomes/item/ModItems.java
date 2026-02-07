@@ -412,6 +412,16 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> FIG_JAM_TOAST = ITEMS.register("fig_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.FIG_JAM_TOAST)));
+    public static final RegistryObject<Item> GRAPEFRUIT_JAM = ITEMS.register("grapefruit_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> GRAPEFRUIT_JAM_TOAST = ITEMS.register("grapefruit_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GRAPEFRUIT_JAM_TOAST)));
+    public static final RegistryObject<Item> ACEROLA_ICE_CREAM = ITEMS.register("acerola_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ACEROLA_ICE_CREAM)));
+    public static final RegistryObject<Item> ALMOND_ICE_CREAM = ITEMS.register("almond_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ALMOND_ICE_CREAM)));
+    public static final RegistryObject<Item> CHERRY_PLUM_ICE_CREAM = ITEMS.register("cherry_plum_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CHERRY_PLUM_ICE_CREAM)));
 
     public static final RegistryObject<Item> RED_CURRANT_JAM = ITEMS.register("red_currant_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
