@@ -473,6 +473,11 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> RED_CURRANT_JAM_TOAST = ITEMS.register("red_currant_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.RED_CURRANT_JAM_TOAST)));
+    public static final RegistryObject<Item> LAVENDER_TEA_FOR_INFUSION = ITEMS.register("lavender_tea_for_infusion",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> LAVENDER_TEA = ITEMS.register("lavender_tea",
+            () -> new BeverageItem(new Item.Properties().maxStackSize(1)
+                    .group(ModItemGroup.CULINARY).food(ModFoods.LAVENDER_TEA)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
