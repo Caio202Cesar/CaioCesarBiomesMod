@@ -206,6 +206,19 @@ public class ModFoods extends Foods {
     public static final Food ALMOND_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CHERRY_PLUM_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food GRAPEFRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food HAWTHORN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food HAWTHORN_TEA = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
+    public static final Food JACKALBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food JACKALBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LEMON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food KIWI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LIME_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LOQUAT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food GREEN_MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANDARIN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MARULA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
