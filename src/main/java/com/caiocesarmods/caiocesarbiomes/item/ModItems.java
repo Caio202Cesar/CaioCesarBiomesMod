@@ -469,7 +469,6 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> MARULA_JAM_TOAST = ITEMS.register("marula_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MARULA_JAM_TOAST)));
-
     public static final RegistryObject<Item> RED_CURRANT_JAM = ITEMS.register("red_currant_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> RED_CURRANT_JAM_TOAST = ITEMS.register("red_currant_jam_toast",
