@@ -11,7 +11,7 @@
       "item": "caiocesarbiomes:jar"
     },
     "b": {
-      "item": "caiocesarbiomes:buddha_hand_citron"
+      "item": "caiocesarbiomes:loquat"
     },
     "c": {
       "item": "minecraft:sugar"
@@ -21,7 +21,7 @@
     }
   },
   "result": {
-    "item": "caiocesarbiomes:citron_jam",
+    "item": "caiocesarbiomes:loquat_jam",
     "count": 1
   }
 }

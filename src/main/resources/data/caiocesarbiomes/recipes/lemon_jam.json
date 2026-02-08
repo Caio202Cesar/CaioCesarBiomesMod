@@ -4,24 +4,21 @@
   "pattern": [
     "abb",
     "cbb",
-    "cbd"
+    "cc "
   ],
   "key": {
     "a": {
       "item": "caiocesarbiomes:jar"
     },
     "b": {
-      "item": "caiocesarbiomes:buddha_hand_citron"
+      "item": "caiocesarbiomes:lemon"
     },
     "c": {
       "item": "minecraft:sugar"
-    },
-    "d": {
-      "item": "caiocesarbiomes:lemon"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:citron_jam",
+    "item": "caiocesarbiomes:lemon_jam",
     "count": 1
   }
 }
