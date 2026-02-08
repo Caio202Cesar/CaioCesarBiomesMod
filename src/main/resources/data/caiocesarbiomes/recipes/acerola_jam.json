@@ -4,7 +4,7 @@
   "pattern": [
     "abb",
     "cbb",
-    "cbb"
+    "cd "
   ],
   "key": {
     "a": {
@@ -15,6 +15,9 @@
     },
     "c": {
       "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
     }
   },
   "result": {
