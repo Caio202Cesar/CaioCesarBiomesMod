@@ -38,7 +38,7 @@ public class RowanFallLeaves extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && temp >= 0.8F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -48,7 +48,7 @@ public class RowanFallLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.79F && "WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
+        if (temp <= 0.79F && "WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

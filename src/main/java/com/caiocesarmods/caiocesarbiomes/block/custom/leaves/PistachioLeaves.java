@@ -38,7 +38,7 @@ public class PistachioLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp < 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+        if (temp <= 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

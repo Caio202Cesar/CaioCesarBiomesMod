@@ -44,7 +44,7 @@ public class PurpleCrapeMyrtleFallLeaves extends LeavesBlock implements IForgeSh
         float temp = biome.getTemperature(pos);
 
         //Pattern for  tropical biomes
-        if (temp > 0.9F  && nextStage != null && random.nextInt(5) == 0) {
+        if (temp >= 0.9F  && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
