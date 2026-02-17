@@ -3,7 +3,7 @@
   "random_sequence": "caiocesarbiomes:blocks/spider_lily",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 2.0,
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
