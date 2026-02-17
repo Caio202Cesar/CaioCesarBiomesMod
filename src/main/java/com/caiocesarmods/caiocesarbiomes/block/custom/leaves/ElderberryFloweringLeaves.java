@@ -44,7 +44,7 @@ public class ElderberryFloweringLeaves extends LeavesBlock implements IForgeShea
         float temp = biome.getTemperature(pos);
 
         //Pattern for tropical biomes
-        if (temp > 0.9F && nextStage != null && random.nextInt(75) == 0) {
+        if (temp >= 0.9F && nextStage != null && random.nextInt(75) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -56,7 +56,7 @@ public class ElderberryFloweringLeaves extends LeavesBlock implements IForgeShea
         }
 
         //Pattern for temperate climates
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -67,7 +67,7 @@ public class ElderberryFloweringLeaves extends LeavesBlock implements IForgeShea
 
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

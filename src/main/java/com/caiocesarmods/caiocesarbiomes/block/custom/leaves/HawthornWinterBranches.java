@@ -49,7 +49,7 @@ public class HawthornWinterBranches extends LeavesBlock implements IForgeShearab
 
         }
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

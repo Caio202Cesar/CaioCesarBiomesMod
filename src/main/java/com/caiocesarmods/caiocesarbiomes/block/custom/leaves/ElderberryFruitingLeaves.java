@@ -45,7 +45,7 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
         float temp = biome.getTemperature(pos);
 
         //Pattern for tropical biomes
-        if (temp > 0.9F && random.nextInt(45) == 0) {
+        if (temp >= 0.9F && random.nextInt(45) == 0) {
 
             int dropCount = 1;
 
@@ -63,7 +63,7 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.89F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -72,7 +72,7 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
             return;
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

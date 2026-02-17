@@ -45,7 +45,7 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //Pattern for hardiness zone 9 subtropical biomes
-        if (temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(30) == 0) {
+        if (temp >= 0.8F && "SPRING".equals(currentSeason) && random.nextInt(30) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -53,7 +53,7 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(60) == 0) {
+        if (temp >= 0.8F && "SPRING".equals(currentSeason) && random.nextInt(60) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -61,7 +61,7 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(50) == 0) {
+        if (temp >= 0.8F && "FALL".equals(currentSeason) && random.nextInt(50) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -70,7 +70,7 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.79F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.79F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -78,7 +78,7 @@ public class HawthornLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

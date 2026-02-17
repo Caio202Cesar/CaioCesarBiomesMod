@@ -43,7 +43,7 @@ public class FigWinterBranches extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //Pattern for tropical climates with dry season = leaf comes with wet season
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -54,7 +54,7 @@ public class FigWinterBranches extends LeavesBlock implements IForgeShearable {
 
         }
 
-        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if (temp >= 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -67,7 +67,7 @@ public class FigWinterBranches extends LeavesBlock implements IForgeShearable {
 
 
         //Pattern for temperate climates
-        if (temp < 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -78,7 +78,7 @@ public class FigWinterBranches extends LeavesBlock implements IForgeShearable {
 
         }
 
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
