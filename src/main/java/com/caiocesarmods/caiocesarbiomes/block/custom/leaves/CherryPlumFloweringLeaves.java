@@ -39,7 +39,7 @@ public class CherryPlumFloweringLeaves extends LeavesBlock implements IForgeShea
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && temp >= 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -47,8 +47,16 @@ public class CherryPlumFloweringLeaves extends LeavesBlock implements IForgeShea
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
+        if (temp <= 0.89F && temp >= 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(95) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.CHERRY_PLUM_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
         //Pattern for temperate biomes
-        if (temp < 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

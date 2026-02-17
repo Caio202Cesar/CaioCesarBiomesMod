@@ -38,8 +38,9 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
+        //SPRING
         //Pattern for hardiness zone 10
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(75) == 0) {
+        if (temp <= 0.89F && temp >= 0.85F && "SPRING".equals(currentSeason) && random.nextInt(75) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -47,7 +48,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && temp >= 0.85F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -56,7 +57,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for hardiness zone 9
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.84F && temp >= 0.8F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -64,7 +65,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SPRING".equals(currentSeason) && random.nextInt(60) == 0) {
+        if (temp <= 0.84F && temp >= 0.8F && "SPRING".equals(currentSeason) && random.nextInt(60) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -73,7 +74,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for temperate climates
-        if (temp < 0.79F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.79F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -81,7 +82,9 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(75) == 0) {
+        //SUMMER
+        // Pattern for hardiness zone 10
+        if (temp <= 0.89F && temp >= 0.85F && "SUMMER".equals(currentSeason) && random.nextInt(75) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -89,7 +92,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if (temp <= 0.89F && temp >= 0.85F && "SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -98,7 +101,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for hardiness zone 9
-        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
+        if (temp <= 0.84F && temp >= 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -106,7 +109,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && temp > 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.84F && temp >= 0.8F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -115,7 +118,7 @@ public class CherryPlumWinterBranches extends LeavesBlock implements IForgeShear
         }
 
         //Pattern for temperate climates
-        if (temp < 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
