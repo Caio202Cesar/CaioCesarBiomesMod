@@ -30,7 +30,7 @@ public class JackalberrySapling extends SaplingBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreeBlocks.JACKALBERRY_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_JACKALBERRY_SAPLING.get(), RenderType.getCutout());
-}
+    }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
