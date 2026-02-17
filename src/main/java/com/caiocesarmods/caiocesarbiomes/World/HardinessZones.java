@@ -93,6 +93,9 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sabal_sapling"), "min 8");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sausage_tree_sapling"), "min 10");
 
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sycamore_fig_sapling"), "min 10");
+
+
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_pink_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_red_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "min 10");
