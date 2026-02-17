@@ -50,7 +50,7 @@ public class AvocadoFruitingLeaves extends LeavesBlock implements IForgeShearabl
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 
@@ -67,7 +67,7 @@ public class AvocadoFruitingLeaves extends LeavesBlock implements IForgeShearabl
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 
@@ -85,7 +85,7 @@ public class AvocadoFruitingLeaves extends LeavesBlock implements IForgeShearabl
         }
 
         //Pattern for tropical biomes
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 
@@ -102,7 +102,7 @@ public class AvocadoFruitingLeaves extends LeavesBlock implements IForgeShearabl
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if (temp >= 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 
@@ -119,7 +119,7 @@ public class AvocadoFruitingLeaves extends LeavesBlock implements IForgeShearabl
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 

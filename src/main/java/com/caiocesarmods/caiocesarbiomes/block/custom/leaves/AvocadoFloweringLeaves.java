@@ -43,7 +43,7 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(60) == 0) {
+        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(60) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -54,7 +54,7 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
 
         }
 
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -66,7 +66,7 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
         }
 
         //Pattern for tropical biomes = mid of wet season to early dry.
-        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -77,7 +77,7 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
 
         }
 
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
