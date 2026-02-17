@@ -48,7 +48,7 @@ public class MulberryLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Pattern for subtropical biomes
-        if (temp < 0.89F && temp > 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+        if (temp <= 0.89F && temp >= 0.8F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -57,7 +57,7 @@ public class MulberryLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Pattern for temperate biomes
-        if (temp < 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -65,7 +65,7 @@ public class MulberryLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

@@ -37,7 +37,7 @@ public class PersimmonFallLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -48,7 +48,7 @@ public class PersimmonFallLeaves extends LeavesBlock implements IForgeShearable 
 
         }
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

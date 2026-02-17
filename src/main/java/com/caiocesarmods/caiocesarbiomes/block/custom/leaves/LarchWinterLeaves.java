@@ -42,7 +42,7 @@ public class LarchWinterLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp > 0.4F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
+        if (temp >= 0.4F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

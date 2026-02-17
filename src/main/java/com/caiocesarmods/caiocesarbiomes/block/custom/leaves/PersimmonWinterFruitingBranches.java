@@ -44,7 +44,7 @@ public class PersimmonWinterFruitingBranches extends LeavesBlock implements IFor
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 

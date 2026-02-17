@@ -50,7 +50,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
         float temp = biome.getTemperature(pos);
 
         //Pattern for tropical climates
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 
@@ -67,7 +67,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp >= 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 
@@ -84,7 +84,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 
@@ -102,7 +102,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
         }
 
         //Pattern for subtropical climates
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 
@@ -119,7 +119,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 
@@ -136,7 +136,7 @@ public class PinkIvoryFruitingLeaves extends LeavesBlock implements IForgeSheara
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp < 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1;
 
