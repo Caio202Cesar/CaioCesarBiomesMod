@@ -43,7 +43,7 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical climates (dormant season = winter)
-        if (temp < 0.89F && nextStage != null && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && nextStage != null && random.nextInt(25) == 0) {
 
             String excludedSeason = "WINTER";
 
@@ -60,7 +60,7 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Pattern for tropical climates (dormant season = dry/SUMMER and FALL)
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
                 int distance = state.get(LeavesBlock.DISTANCE);
                 boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -71,7 +71,7 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
 
         }
 
-        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -82,7 +82,7 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
 
         }
 
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
