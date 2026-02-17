@@ -43,11 +43,11 @@ public class WeepingWillowSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 2 to 10
+    //Hardy from zone 4 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.16f;
+        float minTemp = 0.4f;
         float maxTemp = 0.89f;
 
         // Temperature constraint
@@ -77,7 +77,7 @@ public class WeepingWillowSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         boolean tooHot = temp > 0.89F;
-        boolean tooCold = temp < 0.16F;
+        boolean tooCold = temp < 0.4F;
 
         if (tooHot || tooCold) {
             return false;
@@ -103,7 +103,7 @@ public class WeepingWillowSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.16f, maxTemp = 0.89f;
+            float minTemp = 0.4f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
