@@ -32,7 +32,7 @@ public class GinkgoForestBiome {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PANDA, 10, 5, 7));
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
@@ -58,6 +58,7 @@ public class GinkgoForestBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);

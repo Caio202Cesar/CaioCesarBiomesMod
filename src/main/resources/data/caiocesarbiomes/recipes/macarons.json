@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abc",
+    "aef",
+    "gh "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:roasted_almond"
+    },
+    "b": {
+      "item": "minecraft:sugar"
+    },
+    "c": {
+      "item": "minecraft:egg"
+    },
+    "e": {
+      "item": "minecraft:brown_dye"
+    },
+    "f": {
+      "item": "minecraft:cyan_dye"
+    },
+    "g": {
+      "item": "minecraft:magenta_dye"
+    },
+    "h": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:macarons",
+    "count": 1
+  }
+}

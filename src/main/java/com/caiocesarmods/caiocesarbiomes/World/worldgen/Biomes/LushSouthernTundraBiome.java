@@ -53,8 +53,9 @@ public class LushSouthernTundraBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
+        //Hardiness zone 7: 0.7F - 0.74F (summer temperature, however, must prevent tree grow)
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.ICY).depth(depth).scale(scale)
-                .temperature(0.19F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4020182)
+                .temperature(0.74F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4020182)
                         .setWaterFogColor(329011).withSkyColor(8103167).withFoliageColor(9153185)
                         .withGrassColor(11437360).setFogColor(13028309)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

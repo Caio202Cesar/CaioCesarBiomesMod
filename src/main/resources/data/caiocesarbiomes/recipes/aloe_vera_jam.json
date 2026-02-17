@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cc ",
+    "d  "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "caiocesarbiomes:aloe_vera"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:aloe_vera_jam",
+    "count": 1
+  }
+}

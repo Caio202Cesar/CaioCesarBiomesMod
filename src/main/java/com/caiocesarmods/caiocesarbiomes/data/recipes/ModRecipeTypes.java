@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.data.recipes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.minecraft.item.crafting.CookingRecipeSerializer;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeType;

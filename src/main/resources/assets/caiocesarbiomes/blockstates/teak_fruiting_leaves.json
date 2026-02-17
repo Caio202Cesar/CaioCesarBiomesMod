@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/teak_fruiting_leaves",
+        "weight": 2},
+      {"model": "caiocesarbiomes:block/teak_leaves",
+        "weight": 5}
+    ]
+  }
+}

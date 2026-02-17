@@ -5,6 +5,8 @@ import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -29,6 +31,7 @@ public class BambooSubtropicalLaurelJungleBiome {
    private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
+      mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PANDA, 10, 5, 7));
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
       BiomeGenerationSettings.Builder biomegenerationsettings$builder =
               (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);

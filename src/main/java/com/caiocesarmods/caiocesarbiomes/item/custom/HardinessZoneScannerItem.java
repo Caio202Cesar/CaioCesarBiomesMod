@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
+import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -38,11 +40,13 @@ public class HardinessZoneScannerItem extends Item {
             Biome biome = world.getBiome(pos);
 
             int zone = HardinessZones.getZone(world, pos);
+            SummerHeat summerHeat = SummerHeatRegistry.get(world, pos);
             float baseTemp = biome.getTemperature(pos);
 
             player.sendMessage(
                     new StringTextComponent(
-                            "§aHardiness Zone: §e" + zone +
+                            "§aCold Hardiness Zone: §e" + zone +
+                                    "\n§aSummer heat: §e" + summerHeat.name() +
                                     "\n§aBiome: §e" + biome.getRegistryName() +
                                     "\n§aBase temperature: §e" + String.format("%.2f", baseTemp)
                     ),

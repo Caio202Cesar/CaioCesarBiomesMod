@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/plumeria_pink_leaves",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/plumeria_leaves",
+        "weight": 3}
+    ]
+  }}

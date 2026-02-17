@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "###",
+    "#W#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:black_currant"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:black_currant_juice",
+    "count": 1
+  }
+}

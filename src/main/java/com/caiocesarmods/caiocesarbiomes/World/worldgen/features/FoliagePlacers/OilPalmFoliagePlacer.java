@@ -33,7 +33,8 @@ public class OilPalmFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
+    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage,
+                                  int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
         BlockPos center = foliage.func_236763_a_();
 
         // First two layers (original canopy structure)

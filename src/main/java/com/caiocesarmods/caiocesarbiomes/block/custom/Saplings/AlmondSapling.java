@@ -30,7 +30,7 @@ import java.util.Random;
 
 public class AlmondSapling extends SaplingBlock {
     public AlmondSapling() {
-        super(new AlmondSapling.CherryPlumTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+        super(new AlmondSapling.AlmondTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -123,7 +123,7 @@ public class AlmondSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CherryPlumTree extends Tree {
+    private static class AlmondTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {

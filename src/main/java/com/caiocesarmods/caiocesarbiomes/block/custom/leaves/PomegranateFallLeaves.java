@@ -49,7 +49,7 @@ public class PomegranateFallLeaves extends LeavesBlock implements IForgeShearabl
 
         }
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

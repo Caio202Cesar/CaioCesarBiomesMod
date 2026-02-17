@@ -3,7 +3,6 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.item.ItemEntity;
@@ -14,20 +13,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public ElderberryFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public ElderberryFruitingLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
-    }
 
+    }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -45,7 +41,11 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for tropical biomes
+        if (temp > 0.9F && random.nextInt(45) == 0) {
 
             int dropCount = 1;
 
@@ -57,26 +57,27 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            return;
         }
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
-
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.ELDERBERRIES.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
+        //Pattern for temperate biomes
+        if (temp < 0.89F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_FALL_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            return;
+        }
 
-            worldIn.setBlockState(pos, newState, 2);
+        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_FALL_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 
@@ -91,14 +92,13 @@ public class ElderberryFruitingLeaves extends LeavesBlock implements IForgeShear
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_FALL_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;

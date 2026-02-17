@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:aloe_vera"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:aloe_vera_juice",
+    "count": 1
+  }
+}

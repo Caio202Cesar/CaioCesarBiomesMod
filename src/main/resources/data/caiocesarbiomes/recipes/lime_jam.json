@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cbb",
+    "cc "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "caiocesarbiomes:tahiti_lime"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:lime_jam",
+    "count": 1
+  }
+}

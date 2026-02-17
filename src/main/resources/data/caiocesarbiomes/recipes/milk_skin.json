@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:boiled_milk_bucket"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:milk_skin"
+  }
+}

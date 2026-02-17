@@ -16,7 +16,6 @@ public class JarItem extends Item {
 
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
-        // Dynamically resolve CASHEW_APPLE at runtime
         Item containerItem = ModItems.JAR.get();
         return new ItemStack(containerItem);
     }

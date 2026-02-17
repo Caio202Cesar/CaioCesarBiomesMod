@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X# "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "X": {
+      "item": "caiocesarbiomes:cooked_chestnut"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:marron_glace",
+    "count": 1
+  }
+}

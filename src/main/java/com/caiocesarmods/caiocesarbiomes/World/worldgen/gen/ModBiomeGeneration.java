@@ -113,7 +113,7 @@ public class ModBiomeGeneration {
 
         addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
 
-        addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
+        addBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 1, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN, RARE);
 
         addBiome(GinkgoForestBiome.GINKGO_FOREST.get(), BiomeManager.BiomeType.COOL, 18, OVERWORLD, FOREST, LUSH);
 

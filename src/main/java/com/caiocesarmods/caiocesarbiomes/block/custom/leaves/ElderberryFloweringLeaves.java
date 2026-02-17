@@ -1,12 +1,14 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -38,7 +40,11 @@ public class ElderberryFloweringLeaves extends LeavesBlock implements IForgeShea
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for tropical biomes
+        if (temp > 0.9F && nextStage != null && random.nextInt(75) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -49,7 +55,19 @@ public class ElderberryFloweringLeaves extends LeavesBlock implements IForgeShea
 
         }
 
-        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+        //Pattern for temperate climates
+        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

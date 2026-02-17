@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -43,7 +44,9 @@ public class BuddhaHandFruitingLeaves extends LeavesBlock implements IForgeShear
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(100) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 

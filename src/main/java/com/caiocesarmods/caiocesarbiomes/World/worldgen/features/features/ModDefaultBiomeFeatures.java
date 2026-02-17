@@ -15,6 +15,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSavannaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SAVANNA_EXTRA_VEGETATION);
     }
+    public static void withPlumeriaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PLUMERIA_TREES);
+    }
     public static void withMediterraneanBeachFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BEACH_FLOWER_MEDITERRANEAN);
     }
@@ -47,6 +50,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withTemperateRainforestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TREES_TEMPERATE_RAINFOREST);
+        //builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.willowTrees());
     }
     public static void withTemperateRainforestShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEMPERATE_RAINFOREST_SHRUBS);
@@ -92,6 +96,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withSubtropicalLaurelForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_LAUREL_FOREST_TREES);
+        //builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.willowTrees());
     }
     public static void withSubtropicalEucalyptusForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
@@ -113,6 +118,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withDeciduousSubtropicalForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.DECIDUOUS_SUBTROPICAL_FOREST_TREES);
+        //builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.willowTrees());
+
     }
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JAPANESE_MAPLE);
@@ -171,8 +178,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withSubtropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_FOREST_CITRUS_TREES);
     }
-    public static void withCrabappleTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CRABAPPLE_TREES);
+    public static void withTeakTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TEAK_TREES);
     }
     public static void withHollyTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.HOLLY_TREES);

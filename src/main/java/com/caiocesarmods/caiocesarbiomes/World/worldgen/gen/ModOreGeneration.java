@@ -26,6 +26,7 @@ public class ModOreGeneration {
         spawnOreInSpecificModBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), OreType.SULPHUR, event, Dimension.OVERWORLD.toString());
         spawnOreInSpecificModBiome(InactiveVolcanicSiteBiome.INACTIVE_VOLCANIC_SITE.get(), OreType.SULPHUR, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(OreType.NETHER_SULPHUR, event, Dimension.THE_NETHER.toString());
+        spawnOreInAllBiomes(OreType.SALTPETER, event, Dimension.OVERWORLD.toString());
 
     }
 

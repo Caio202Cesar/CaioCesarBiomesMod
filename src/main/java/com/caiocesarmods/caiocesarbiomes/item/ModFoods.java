@@ -55,22 +55,24 @@ public class ModFoods extends Foods {
     public static final Food MATCHA_LATTE = (new Food.Builder()).hunger(4).saturation(0.3F)
             .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.NIGHT_VISION, 100, 3), 1.0F).build();
-    public static final Food SAVORY_RABBIT = (new Food.Builder()).hunger(7).saturation(0.8F).meat().build();
-    public static final Food SAVORY_CHICKEN = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
-    public static final Food SAVORY_COD = (new Food.Builder()).hunger(7).saturation(0.8F).build();
-    public static final Food SAVORY_MUTTON = (new Food.Builder()).hunger(8).saturation(0.9F).meat().build();
-    public static final Food SAVORY_PORKCHOP = (new Food.Builder()).hunger(9).saturation(0.9F).meat().build();
-    public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(8).saturation(0.9F).build();
+    public static final Food SAVORY_RABBIT = (new Food.Builder()).hunger(7).saturation(0.8F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_CHICKEN = (new Food.Builder()).hunger(8).saturation(0.8F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_PORKCHOP = (new Food.Builder()).hunger(9).saturation(0.9F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .meat().build();
+    public static final Food SAVORY_SALMON = (new Food.Builder()).hunger(9).saturation(0.9F)
+            .effect(new EffectInstance(Effects.STRENGTH, 100, 3), 1.0F)
+            .build();
     //The toast alone provides less than the bread. However, when crafted with jams, oils or pastes, it provides the same saturation and hunger
     // as a bread (or more, depending on the complement). It justifies one bread giving 10 toasts.
     public static final Food TOAST = (new Food.Builder()).hunger(3).saturation(0.2F).build();
     public static final Food RAW_TOAST = (new Food.Builder()).hunger(1).saturation(0.2F).build();
     public static final Food HAZELNUT_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PISTACHIO_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
-    public static final Food HAZELNUT_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.SPEED, 200, 3), 1.0F).build();
-    public static final Food PISTACHIO_CREAM = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F).build();
     public static final Food FENNEL_SOUP = buildStew(6);
     public static final Food WALNUT_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food PECAN_BREAD = (new Food.Builder()).hunger(5).saturation(0.6F).build();
@@ -158,6 +160,7 @@ public class ModFoods extends Foods {
     public static final Food SPICED_CHICKEN = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_PORKCHOP = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food SPICED_RABBIT = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
+    public static final Food SPICED_SALMON = (new Food.Builder()).hunger(4).saturation(0.5F).meat().build();
     public static final Food STARFRUIT_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CRABAPPLES = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food PEACH = (new Food.Builder()).hunger(4).saturation(0.3F).build();
@@ -182,6 +185,74 @@ public class ModFoods extends Foods {
     public static final Food UNRIPE_ALMOND = (new Food.Builder()).hunger(2).saturation(0.3F)
             .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
     public static final Food ROASTED_ALMOND = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food PINK_IVORY_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food ACEROLA = (new Food.Builder()).hunger(2).saturation(0.1F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 450, 3), 1.0F).build();
+    public static final Food MACARONS = (new Food.Builder()).hunger(4).saturation(0.3F).setAlwaysEdible().build();
+    public static final Food ARBUTUS_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ARBUTUS_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food ACEROLA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ACEROLA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food BLACK_CURRANT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BLACK_CURRANT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food ALOE_VERA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ALOE_VERA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CHERRY_PLUM_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CHERRY_PLUM_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CITRON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BLUEBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BLUEBERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CLOUDBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CLOUDBERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CRABAPPLE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CRABAPPLE_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food ELDERBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ELDERBERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food FIG_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food RED_CURRANT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ACEROLA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 400, 2), 1.0F) .build();
+    public static final Food ALMOND_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CHERRY_PLUM_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GRAPEFRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food GRAPEFRUIT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food HAWTHORN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food HAWTHORN_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food HAWTHORN_TEA = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
+    public static final Food JACKALBERRY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food JACKALBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food JACKALBERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food LEMON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LEMON_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food KIWI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food KIWI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food LIME_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LIME_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food LOQUAT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LOQUAT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANGO_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food GREEN_MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANDARIN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANDARIN_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food MARULA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food LAVENDER_TEA = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
+    public static final Food MULBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ORANGE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PEACH_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PERSIMMON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PINK_IVORY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food POMEGRANATE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CREEPING_FIG_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ROWAN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food STARFRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food TAMARIND_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food GREEN_ALMOND_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food YEW_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MARRON_GLACE = (new Food.Builder()).hunger(2).saturation(0.3F).setAlwaysEdible().build();
+    public static final Food BOILED_MILK = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

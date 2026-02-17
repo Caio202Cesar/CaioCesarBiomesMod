@@ -67,8 +67,8 @@ public class SubtropicalEucalyptusDryForestBiome {
         //Hardiness zone 9: 0.8F - 0.84F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.84F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(5877296)
-                        .withGrassColor(12564309).setFogColor(15658734)
+                        .setWaterFogColor(4159204).withSkyColor(12570083).withFoliageColor(5877296)
+                        .withGrassColor(12564309).setFogColor(12570083)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())

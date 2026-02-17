@@ -46,7 +46,11 @@ public class MugoPineSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.MUGO_PINE_SHRUB;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.MUGO_PINE_TREE;
+            } else {
+                return TreeFeatures.MUGO_PINE_SHRUB;
+            }
         }
     }
 }

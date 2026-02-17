@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    " BC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:coal"
+    },
+    "B": {
+      "item": "caiocesarbiomes:sulphur"
+    },
+    "C": {
+      "item": "caiocesarbiomes:saltpeter"
+    }
+  },
+  "result": {
+    "item": "minecraft:gunpowder",
+    "count": 1
+  }
+}

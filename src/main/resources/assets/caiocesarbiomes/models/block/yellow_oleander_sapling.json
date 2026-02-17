@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/yellow_oleander_sapling",
+    "particle": "caiocesarbiomes:block/yellow_oleander_sapling"
+  }
+}

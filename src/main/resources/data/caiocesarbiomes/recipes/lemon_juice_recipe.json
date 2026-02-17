@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    " #X",
+    "#W#",
+    "X# "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:lemon"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    },
+    "X": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:lemon_juice",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cbb",
+    "cbd"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "caiocesarbiomes:pomegranate"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:pomegranate_jam",
+    "count": 1
+  }
+}

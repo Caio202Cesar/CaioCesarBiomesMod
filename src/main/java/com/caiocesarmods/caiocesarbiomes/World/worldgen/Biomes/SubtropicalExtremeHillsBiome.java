@@ -4,6 +4,8 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -31,6 +33,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PANDA, 10, 5, 7));
 
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);

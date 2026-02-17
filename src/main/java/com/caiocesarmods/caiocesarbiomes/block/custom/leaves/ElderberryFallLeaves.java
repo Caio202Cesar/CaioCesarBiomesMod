@@ -2,13 +2,18 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.util.Direction;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -16,9 +21,11 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 public class ElderberryFallLeaves extends LeavesBlock implements IForgeShearable {
-    public ElderberryFallLeaves(Properties properties) {
-        super(properties);
+    private final Supplier<Block> nextStage;
 
+    public ElderberryFallLeaves(Properties properties, Supplier<Block> nextStage) {
+        super(properties);
+        this.nextStage = nextStage;
     }
 
 
@@ -39,62 +46,36 @@ public class ElderberryFallLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        //Pattern for tropical climates
-        if (temp < 0.94F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
 
         }
 
-        if (temp < 0.94F && "SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
 
         }
 
-        //Pattern for temperate climates
-        if (temp < 0.79F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_WINTER_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-        }
-
-        if (temp < 0.79F && "SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_WINTER_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
-
-        }
-
-        if (temp < 0.79F && "SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.ELDERBERRY_WINTER_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            worldIn.setBlockState(pos, newState, 2);
 
         }
     }

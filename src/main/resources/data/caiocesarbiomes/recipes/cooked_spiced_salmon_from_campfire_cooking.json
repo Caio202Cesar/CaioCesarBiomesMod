@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "caiocesarbiomes:spiced_salmon"
+  },
+  "result": "caiocesarbiomes:savory_salmon",
+  "experience": 0.35,
+  "cookingtime": 800
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "caiocesarbiomes:acerola_sapling",
     "caiocesarbiomes:avocado_sapling",
     "caiocesarbiomes:coast_cottonwood_sapling",
     "caiocesarbiomes:elderberry_sapling",
@@ -97,6 +98,8 @@
     "caiocesarbiomes:white_fir_sapling",
     "caiocesarbiomes:persimmon_sapling",
     "caiocesarbiomes:bald_cypress_sapling",
-    "caiocesarbiomes:fremont_poplar_sapling"
+    "caiocesarbiomes:fremont_poplar_sapling",
+    "caiocesarbiomes:rubber_tree_sapling"
+
   ]
 }

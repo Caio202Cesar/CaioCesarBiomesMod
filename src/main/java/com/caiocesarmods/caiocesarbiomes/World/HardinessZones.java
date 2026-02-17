@@ -41,6 +41,7 @@ public class HardinessZones {
         // CAIO CESAR BIOMES MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "min 5, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "min 7, max 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "min 4, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "min 9");
@@ -55,7 +56,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "canary_pine_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "carob_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "casuarina_sapling"), "min 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cherry_plum_sapling"), "min 5, max 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cherry_plum_sapling"), "min 5, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chinese_red_pine_sapling"), "min 7, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "citron_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coast_cottonwood_sapling"), "min 10");
@@ -75,10 +76,24 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ginkgo_sapling"), "min 3, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "grapefruit_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hawthorn_sapling"), "min 4, max 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hazelnut_sapling"), "min 4, max 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holly_sapling"), "min 6, max 10(*)");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hazelnut_sapling"),
+                "min 4, max 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holly_sapling"),
+                "min 6, max 10; requires warm to cooler summers");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10");
+
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "royal_poinciana_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rubber_tree_sapling"), "min 10");
+
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_pink_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_red_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_white_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_orange_sapling"), "min 10");
+
+
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "min 4, max 10");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "min 11");

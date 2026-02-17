@@ -118,12 +118,12 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_BLOSSOM));
     public static final RegistryObject<Block> ALMOND_BLOSSOM = registerBlock("almond_blossom",
             () -> new AlmondBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_FRUITING_LEAVES));
     public static final RegistryObject<Block> ALMOND_FRUITING_LEAVES = registerBlock("almond_fruiting_leaves",
             () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_RIPE_FRUITING_LEAVES));
     public static final RegistryObject<Block> ALMOND_RIPE_FRUITING_LEAVES = registerBlock("almond_ripe_fruiting_leaves",
-            () -> new AlmondFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new AlmondRipeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_FALL_LEAVES));
 
     public static final RegistryObject<Block> ALMOND_SAPLING = registerBlock("almond_sapling",
@@ -782,10 +782,13 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_FRUITING_LEAVES));
     public static final RegistryObject<Block> ELDERBERRY_FRUITING_LEAVES = registerBlock("elderberry_fruiting_leaves",
             () -> new ElderberryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> ELDERBERRY_FALL_LEAVES = registerBlock("elderberry_fall_leaves",
             () -> new ElderberryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
+    public static final RegistryObject<Block> ELDERBERRY_FALL_FRUITING_LEAVES = registerBlock("elderberry_fall_fruiting_leaves",
+            () -> new ElderberryFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
     public static final RegistryObject<Block> ELDERBERRY_WINTER_BRANCHES = registerBlock("elderberry_winter_branches",
             () -> new ElderberryWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_LEAVES));
@@ -797,6 +800,8 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.ELDERBERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    //Ebony = rainforest/jungle fancy tree (not dry forest) - this tree should be rare and low frequent.
 
 
     //Eucalyptus
@@ -1085,6 +1090,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_WEEPING_FIG_SAPLING = BLOCKS.register("potted_weeping_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.WEEPING_FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
@@ -1092,6 +1098,15 @@ public class TreeBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_INDIAN_LAUREL_SAPLING = BLOCKS.register("potted_indian_laurel_sapling",
             () -> new FlowerPotBlock(TreeBlocks.INDIAN_LAUREL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> RUBBER_TREE_LEAVES = registerBlock("rubber_tree_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RUBBER_TREE_SAPLING = registerBlock("rubber_tree_sapling",
+            RubberTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RUBBER_TREE_SAPLING = BLOCKS.register("potted_rubber_tree_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RUBBER_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
@@ -2036,7 +2051,26 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    //Weeping Willow
+    public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
+            ModLogs::new);
 
+    public static final RegistryObject<Block> WEEPING_WILLOW_LEAVES = registerBlock("weeping_willow_leaves",
+            () -> new WeepingWillowLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WEEPING_WILLOW_FALL_LEAVES));
+    public static final RegistryObject<Block> WEEPING_WILLOW_FALL_LEAVES = registerBlock("weeping_willow_fall_leaves",
+            () -> new WeepingWillowFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WEEPING_WILLOW_BRANCHES));
+    public static final RegistryObject<Block> WEEPING_WILLOW_BRANCHES = registerBlock("weeping_willow_branches",
+            () -> new WeepingWillowBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WEEPING_WILLOW_LEAVES));
+
+    public static final RegistryObject<Block> WEEPING_WILLOW_SAPLING = registerBlock("weeping_willow_sapling",
+            WeepingWillowSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_WEEPING_WILLOW_SAPLING = BLOCKS.register("potted_weeping_willow_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.WEEPING_WILLOW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 ///X
@@ -2051,7 +2085,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
             ModLogs::new);
     public static final RegistryObject<Block> YEW_LEAVES = registerBlock("yew_leaves",
-            YewLeaves::new);
+            () -> new YewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YEW_FRUITING_LEAVES));
+    public static final RegistryObject<Block> YEW_FRUITING_LEAVES = registerBlock("yew_fruiting_leaves",
+            () -> new YewFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YEW_LEAVES));
     public static final RegistryObject<Block> YEW_SAPLING = registerBlock("yew_sapling",
             YewSapling::new);
     @SuppressWarnings("deprecation")
@@ -2060,6 +2098,196 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+
+
+    /// //Tropical seasonal forest trees
+    //Plumeria
+    public static final RegistryObject<Block> PLUMERIA_LOG = registerBlock("plumeria_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> RED_PLUMERIA_LEAVES = registerBlock("plumeria_red_leaves",
+            () -> new RedPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> RED_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_red_dried_branches",
+            () -> new RedPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_LEAVES));
+    public static final RegistryObject<Block> RED_PLUMERIA_SAPLING = registerBlock("plumeria_red_sapling",
+            RedPlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RED_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_red_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.RED_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> WHITE_PLUMERIA_LEAVES = registerBlock("plumeria_white_leaves",
+            () -> new WhitePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> WHITE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_white_dried_branches",
+            () -> new WhitePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_LEAVES));
+    public static final RegistryObject<Block> WHITE_PLUMERIA_SAPLING = registerBlock("plumeria_white_sapling",
+            WhitePlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_WHITE_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_white_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.WHITE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> YELLOW_PLUMERIA_LEAVES = registerBlock("plumeria_yellow_leaves",
+            () -> new YellowPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> YELLOW_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_yellow_dried_branches",
+            () -> new YellowPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_LEAVES));
+    public static final RegistryObject<Block> YELLOW_PLUMERIA_SAPLING = registerBlock("plumeria_yellow_sapling",
+            YellowPlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_YELLOW_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_yellow_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.YELLOW_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> PINK_PLUMERIA_LEAVES = registerBlock("plumeria_pink_leaves",
+            () -> new PinkPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> PINK_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_pink_dried_branches",
+            () -> new PinkPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_LEAVES));
+    public static final RegistryObject<Block> PINK_PLUMERIA_SAPLING = registerBlock("plumeria_pink_sapling",
+            PinkPlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_pink_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PINK_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ORANGE_PLUMERIA_LEAVES = registerBlock("plumeria_orange_leaves",
+            () -> new OrangePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> ORANGE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_orange_dried_branches",
+            () -> new OrangePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_LEAVES));
+
+    public static final RegistryObject<Block> ORANGE_PLUMERIA_SAPLING = registerBlock("plumeria_orange_sapling",
+            OrangePlumeriaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORANGE_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_orange_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ORANGE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    //Java olive
+
+    //White Sandalwood
+
+    //Pink Ivory
+    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> PINK_IVORY_LEAVES = registerBlock("pink_ivory_leaves",
+            () -> new PinkIvoryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> PINK_IVORY_FALL_LEAVES = registerBlock("pink_ivory_fall_leaves",
+            () -> new PinkIvoryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_DRIED_BRANCHES));
+    public static final RegistryObject<Block> PINK_IVORY_FRUITING_LEAVES = registerBlock("pink_ivory_fruiting_leaves",
+            () -> new PinkIvoryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
+    public static final RegistryObject<Block> PINK_IVORY_DRIED_BRANCHES = registerBlock("pink_ivory_dried_branches",
+            () -> new PinkIvoryDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
+
+    public static final RegistryObject<Block> PINK_IVORY_SAPLING = registerBlock("pink_ivory_sapling",
+            PinkIvorySapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_IVORY_SAPLING = BLOCKS.register("potted_pink_ivory_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.PINK_IVORY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    //Macadamia
+
+    //Orchid tree
+    public static final RegistryObject<Block> ORCHID_TREE_LOG = registerBlock("orchid_tree_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> ORCHID_TREE_LEAVES = registerBlock("orchid_tree_leaves",
+            () -> new OrchidTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> ORCHID_TREE_WINTER_BRANCHES = registerBlock("orchid_tree_winter_branches",
+            () -> new OrchidTreeDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES));
+    public static final RegistryObject<Block> ORCHID_TREE_FLOWERING_BRANCHES = registerBlock("orchid_tree_flowering_branches",
+            () -> new OrchidTreeFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORCHID_TREE_LEAVES));
+
+    public static final RegistryObject<Block> ORCHID_TREE_SAPLING = registerBlock("orchid_tree_sapling",
+            OrchidTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORCHID_TREE_SAPLING = BLOCKS.register("potted_orchid_tree_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ORCHID_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    //Yellow oleander
+    public static final RegistryObject<Block> YELLOW_OLEANDER_LEAVES = registerBlock("yellow_oleander_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> YELLOW_OLEANDER_SAPLING = registerBlock("yellow_oleander_sapling",
+            YellowOleanderSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_YELLOW_OLEANDER_SAPLING = BLOCKS.register("potted_yellow_oleander_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.YELLOW_OLEANDER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ORANGE_OLEANDER_LEAVES = registerBlock("orange_oleander_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ORANGE_OLEANDER_SAPLING = registerBlock("orange_oleander_sapling",
+            OrangeOleanderSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORANGE_OLEANDER_SAPLING = BLOCKS.register("potted_orange_oleander_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ORANGE_OLEANDER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    //Teak
+    public static final RegistryObject<Block> TEAK_LEAVES = registerBlock("teak_leaves",
+            () -> new TeakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> TEAK_FLOWERING_LEAVES = registerBlock("teak_flowering_leaves",
+            () -> new TeakFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_FRUITING_LEAVES));
+    public static final RegistryObject<Block> TEAK_FRUITING_LEAVES = registerBlock("teak_fruiting_leaves",
+            () -> new TeakFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_FALL_LEAVES));
+    public static final RegistryObject<Block> TEAK_FALL_LEAVES = registerBlock("teak_fall_leaves",
+            () -> new TeakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_DRIED_BRANCHES));
+    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dried_branches",
+            () -> new TeakDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_LEAVES));
+
+    public static final RegistryObject<Block> TEAK_SAPLING = registerBlock("teak_sapling",
+            TeakSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_TEAK_SAPLING = BLOCKS.register("potted_teak_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.TEAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    //Sugar apple
+
+    //Coast coral
+
+    //Acerola
+    public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> ACEROLA_LEAVES = registerBlock("acerola_leaves",
+            () -> new AcerolaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> ACEROLA_FLOWERING_LEAVES = registerBlock("acerola_flowering_leaves",
+            () -> new AcerolaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> ACEROLA_FRUITING_LEAVES = registerBlock("acerola_fruiting_leaves",
+            () -> new AcerolaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ACEROLA_LEAVES));
+    public static final RegistryObject<Block> ACEROLA_SAPLING = registerBlock("acerola_sapling",
+            AcerolaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ACEROLA_SAPLING = BLOCKS.register("potted_acerola_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.ACEROLA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 ///Z

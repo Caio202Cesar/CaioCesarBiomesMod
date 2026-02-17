@@ -30,6 +30,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("banana_foliage_placer",
                     () -> new FoliagePlacerType<>(BananaFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<WeepingFoliagePlacer>> WEEPING_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("weeping_foliage_placer",
+                    () -> new FoliagePlacerType<>(WeepingFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
