@@ -3,7 +3,7 @@
   "random_sequence": "caiocesarbiomes:blocks/aloe_vera",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 3.0,
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
