@@ -78,7 +78,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hawthorn_sapling"), "min 4, max 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hazelnut_sapling"), "min 4, max 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holly_sapling"),
-                "min 6, max 10; requires warm to cooler summers");
+                "min 6, max 10; ⚠ requires warm to cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holm_oak_sapling"), "min 4, max 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_coral_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_laurel_sapling"), "min 9");
@@ -136,10 +136,11 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"), "min 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "feijoa_sapling"),
-                "min 8, max 11; requires warm summers");
+                "min 8, max 11; ⚠ requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "humboldt_willow_sapling"), "min 9");
-
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "imbuia_sapling"),
+                "min 9, max 10; ⚠ dies in zone 9 winter if not under a canopy; ⚠ Cannot grow in dry biomes");
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
