@@ -115,7 +115,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "min 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "algarrobillo_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "apricot_ipe_sapling"), "min 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "bacuri_sapling"), "min 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "bacuri_sapling"), "min 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "balsa_sapling"), "min 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_jurema_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_sucupira_sapling"), "min 10");
@@ -134,13 +134,17 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caven_thorn_sapling"), "min 8, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "min 9, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "feijoa_sapling"),
+                "min 8, max 11; requires warm summers");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
+
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "min 9, max 11");
 
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
 
     }
 
