@@ -134,7 +134,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caven_thorn_sapling"), "min 8, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "min 9, max 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"),
+                "min 11; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "feijoa_sapling"),
                 "min 8, max 11; ⚠ requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
