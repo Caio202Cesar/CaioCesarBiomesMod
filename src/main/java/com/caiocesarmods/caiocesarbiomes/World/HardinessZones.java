@@ -138,6 +138,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "feijoa_sapling"),
                 "min 8, max 11; requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "humboldt_willow_sapling"), "min 9");
 
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
