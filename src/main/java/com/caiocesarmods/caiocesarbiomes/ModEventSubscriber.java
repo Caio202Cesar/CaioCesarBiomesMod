@@ -242,6 +242,15 @@ public class ModEventSubscriber {
             if (temp >= 0.75F) {
                 event.setResult(Event.Result.DENY);
             }
+            if (temp < -0.0F) {
+                event.setResult(Event.Result.DENY);
+            }
+        }
+
+        if (block == Blocks.BIRCH_SAPLING) {
+            if (temp >= 0.75F) {
+                event.setResult(Event.Result.DENY);
+            }
             if (temp < 0.2F) {
                 event.setResult(Event.Result.DENY);
             }
