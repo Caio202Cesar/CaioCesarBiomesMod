@@ -33,7 +33,7 @@ public class LarchSapling extends SaplingBlock {
 
     }
 
-    //Considering it as a Larix sibirica, it is hardy from
+    //Considering it as a Larix sibirica, it is hardy from hardiness zone 1 to 5.
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
