@@ -33,6 +33,8 @@ public class LarchSapling extends SaplingBlock {
 
     }
 
+    //Considering it as a Larix sibirica, it is hardy from
+
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }

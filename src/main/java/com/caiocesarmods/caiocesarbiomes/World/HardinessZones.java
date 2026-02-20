@@ -79,13 +79,15 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hazelnut_sapling"), "min 4, max 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holly_sapling"),
                 "min 6, max 10; ⚠ requires warm to cooler summers");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holm_oak_sapling"), "min 4, max 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holm_oak_sapling"), "min 7, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_coral_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_laurel_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "italian_cypress_sapling"), "min 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "jackalberry_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_maple_sapling"),
                 "min 5, max 10; ⚠ saplings die when not under a canopy in hot summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_pine_sapling"), "min 5, max 10");
+
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "min 10; ⚠ requires hot summers");
