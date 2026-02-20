@@ -85,7 +85,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "italian_cypress_sapling"), "min 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "jackalberry_sapling"), "min 9");
 
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling, ⚠ requires hot summers"), "min 10, ");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "royal_poinciana_sapling"), "min 10");
@@ -135,7 +135,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"),
-                "min 11; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
+                "min 11; ⚠ can be grown in colder biomes if under a 5x5 glass roof"); //Only small trees and bushes can be grown in greenhouses
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "feijoa_sapling"),
                 "min 8, max 11; ⚠ requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "guapuruvu_sapling"), "min 9");
