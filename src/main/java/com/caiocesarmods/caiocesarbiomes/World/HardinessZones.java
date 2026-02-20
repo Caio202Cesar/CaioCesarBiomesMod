@@ -154,6 +154,11 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jelly_palm_sapling"), "min 8");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jenipapo_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jequitiba_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jua_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jussara_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "kapok_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "lophantera_sapling"),
+                "min 11; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
 
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "min 9, max 11");
