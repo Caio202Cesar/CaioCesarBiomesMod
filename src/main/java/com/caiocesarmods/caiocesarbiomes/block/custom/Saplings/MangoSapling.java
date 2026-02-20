@@ -43,12 +43,12 @@ public class MangoSapling extends SaplingBlock {
 
     }
 
+    //Hardy to zone 10 (requires hot summers)
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeatRegistry.get(world, pos);
         return heat == SummerHeat.HOT;
     }
 
-    //Hardy to zone 10 (requires hot summers in subtropical climates)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
