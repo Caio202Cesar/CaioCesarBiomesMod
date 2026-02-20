@@ -242,7 +242,7 @@ public class ModEventSubscriber {
             if (temp >= 0.75F) {
                 event.setResult(Event.Result.DENY);
             }
-            if (temp < -0.0F) {
+            if (temp < -0.7F) {
                 event.setResult(Event.Result.DENY);
             }
         }

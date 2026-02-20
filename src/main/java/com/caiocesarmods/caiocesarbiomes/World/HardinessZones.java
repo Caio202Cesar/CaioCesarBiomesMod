@@ -33,7 +33,7 @@ public class HardinessZones {
     static {
         // VANILLA
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "min 2, max 7");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "min 0, max 7");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "min 0 (-0.7f), max 7");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "min 11");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "min 4, max 10");
@@ -87,7 +87,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_maple_sapling"),
                 "min 5, max 10; ⚠ saplings die when not under a canopy in hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_pine_sapling"), "min 5, max 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "larch_sapling"), "min 0, max 5");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "larch_sapling"), "min 0 (-0.7f), max 5");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"), "min 9");
