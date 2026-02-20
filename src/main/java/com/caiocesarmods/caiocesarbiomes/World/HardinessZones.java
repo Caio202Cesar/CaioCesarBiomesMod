@@ -145,10 +145,14 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "imbuia_sapling"),
                 "min 9*, max 10; ⚠ dies in zone 9 winter if not under a canopy; ⚠ Cannot grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jelly_palm_sapling"), "min 8");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jenipapo_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jequitiba_sapling"), "min 10");
+
 
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "min 9, max 11");
 
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
 
     }
 
