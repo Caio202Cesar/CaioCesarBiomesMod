@@ -53,7 +53,7 @@ public class JapaneseMapleSapling extends SaplingBlock {
      * @param pos
      * @param random
      */
-    //Hardy from zone 9 to 10
+    //Hardy from zone 5 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 
@@ -61,7 +61,7 @@ public class JapaneseMapleSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        float minTemp = 0.8f;
+        float minTemp = 0.5f;
         float maxTemp = 0.89f;
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
@@ -118,7 +118,7 @@ public class JapaneseMapleSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         boolean tooHot = temp > 0.89F;
-        boolean tooCold = temp < 0.8F;
+        boolean tooCold = temp < 0.5F;
 
         if (tooHot || tooCold) {
             return false;
@@ -139,7 +139,7 @@ public class JapaneseMapleSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
 
-            float minTemp = 0.8f, maxTemp = 0.89f;
+            float minTemp = 0.5f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
