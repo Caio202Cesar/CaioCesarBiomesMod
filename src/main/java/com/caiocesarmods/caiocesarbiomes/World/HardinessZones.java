@@ -177,12 +177,20 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "queen_palm_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "rio_grande_cherry_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sandbox_tree_sapling"), "min 10");
-
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 10");
-
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "min 9");
-
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sharinga_sapling"), "min 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_silver_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silver_pepper_sapling"), "min 9, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sombreiro_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "umbu_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "white_ipe_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_white_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "xaxim_sapling"), "min 9, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "min 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"),
+                "min 9, max 11; ⚠ saplings die when not under a canopy in hot summers");
 
     }
 
