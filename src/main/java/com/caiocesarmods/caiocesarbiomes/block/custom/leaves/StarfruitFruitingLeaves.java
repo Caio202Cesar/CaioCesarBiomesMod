@@ -45,7 +45,7 @@ public class StarfruitFruitingLeaves extends LeavesBlock implements IForgeSheara
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if (nextStage != null && random.nextInt(145) == 0) {
 
             int dropCount = 1;
 
