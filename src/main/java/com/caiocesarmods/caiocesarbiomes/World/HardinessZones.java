@@ -74,7 +74,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "elderberry_sapling"), "min 3, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "eucalyptus_sapling"), "min 8");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fig_sapling"), "min 8, max 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fremont_poplar_sapling"), "min 2, max 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fremont_poplar_sapling"), "min 4, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ginkgo_sapling"), "min 3, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "grapefruit_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hawthorn_sapling"), "min 4, max 9");
@@ -103,9 +103,11 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mesquite_sapling"), "min 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "monkey_puzzle_sapling"), "min 7, max 10;" +
-                " ⚠ requires warm to cool summers");
+                "⚠ requires warm to cool summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mossed_live_oak_sapling"), "min 8, max 11" +
                 "⚠ Can't be grow in dry biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mountain_hemlock_sapling"), "min 2, max 8" +
+                "⚠ requires cooler summers");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 

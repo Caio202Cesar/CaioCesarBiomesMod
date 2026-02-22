@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -41,18 +43,24 @@ public class MountainHemlockSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 2 to 8
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        return heat == SummerHeat.COOLER;
+    }
+
+    //Hardy from zone 2 to 8
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.2f;
-        float maxTemp = 0.84f;
+        float maxTemp = 0.79f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
-            super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
+
+        // Summer heat check (NEW)
+        if (!isSummerAllowed(world, pos)) return;
+
+        super.randomTick(state, world, pos, random);
     }
 
     @Override
@@ -67,12 +75,14 @@ public class MountainHemlockSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.84F;
-        boolean tooCold = temp < 0.6F;
+        boolean tooHot = temp > 0.79F;
+        boolean tooCold = temp < 0.2F;
 
         if (tooHot || tooCold) {
             return false;
         }
+
+        if (!isSummerAllowed(world, pos)) return false;
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -87,7 +97,7 @@ public class MountainHemlockSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.6f, maxTemp = 0.84f;
+            float minTemp = 0.2f, maxTemp = 0.79f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -103,6 +113,14 @@ public class MountainHemlockSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (!isSummerAllowed(worldIn, pos)) {
+                player.sendMessage(
+                        new StringTextComponent("Summers are too hot for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:
