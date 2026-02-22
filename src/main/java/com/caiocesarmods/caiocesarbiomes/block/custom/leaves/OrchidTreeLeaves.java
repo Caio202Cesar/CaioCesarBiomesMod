@@ -84,8 +84,7 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
                     setWinterFlowering(worldIn, pos, distance, persistent);
                 }
             }
-
-            setNormal(worldIn, pos, distance, persistent);
+            setWinterFlowering(worldIn, pos, distance, persistent);
             return;
         }
 
