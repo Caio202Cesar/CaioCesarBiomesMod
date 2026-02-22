@@ -57,11 +57,10 @@ public class MugoPineSapling extends SaplingBlock {
         float maxTemp = 0.74f;
 
         float downfall = biome.getDownfall();
-        float minDownfall = 0.0f;
-        float maxDownfall = 0.5f;
+        float maxDownfall = 0.49f;
 
         boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
-        boolean suitableHumidity = downfall >= minDownfall && downfall <= maxDownfall;
+        boolean suitableHumidity = downfall < maxDownfall;
 
         // 🌱 Growth logic
         if (validTemp && suitableHumidity) {
@@ -84,12 +83,14 @@ public class MugoPineSapling extends SaplingBlock {
 
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
+        float downfall = biome.getDownfall();
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.74F;
         boolean tooCold = temp < 0.2F;
+        boolean tooHumid = downfall >= 0.5F;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || tooHumid) {
             return false;
         }
 
@@ -107,8 +108,11 @@ public class MugoPineSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.2f, maxTemp = 0.74f;
+            Biome biome = worldIn.getBiome(pos);
+
+            float temp = biome.getTemperature(pos);
+            float downfall = biome.getDownfall();
+            float minTemp = 0.2f, maxTemp = 0.74f, maxDownfall = 0.49F;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -132,6 +136,14 @@ public class MugoPineSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
+            }
+
+            if (downfall > maxDownfall) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too humid for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
             // If temp is in range, optionally allow normal processing:
