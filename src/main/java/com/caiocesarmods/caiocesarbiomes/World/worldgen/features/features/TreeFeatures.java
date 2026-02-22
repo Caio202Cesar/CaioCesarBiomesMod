@@ -1731,6 +1731,16 @@ public class TreeFeatures {
                     new GiantTrunkPlacer(16, 5, 4),
                     new TwoLayerFeature(1, 1, 2)))
                     .setMaxWaterDepth(2).setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPANISH_MOSS_BALD_CYPRESS = register("spanish_moss_bald_cypress",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
+                            FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(7, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            SpanishMossLeavesDecorator.INSTANCE))
+                    .setMaxWaterDepth(2).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPANISH_MOSS_MEGA_BALD_CYPRESS = register("spanish_moss_mega_bald_cypress",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
@@ -2379,7 +2389,8 @@ public class TreeFeatures {
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F), PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.3F),
-                            SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
+                            SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F),
+                            SPANISH_MOSS_BALD_CYPRESS.withChance(0.2F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F), WEEPING_WILLOW_FANCY.withChance(0.3F)),
                             BALD_CYPRESS))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

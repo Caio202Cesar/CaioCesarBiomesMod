@@ -1,11 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -37,33 +35,40 @@ public class MossedLiveOakSapling extends SaplingBlock {
     //Hardy to zone 8 to 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
         float minTemp = 0.75f;
         float maxTemp = 0.94f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean validTemp = temp >= minTemp && temp <= maxTemp;
+        boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
+
+        // 🌱 Growth logic
+        if (validTemp && hasRain) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.75F;
+        boolean noRain = biome.getPrecipitation() == Biome.RainType.NONE;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || noRain) {
             return false;
         }
 
@@ -79,7 +84,9 @@ public class MossedLiveOakSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            Biome biome = worldIn.getBiome(pos);
+            float temp = biome.getTemperature(pos);
+
             float minTemp = 0.75f, maxTemp = 0.94f;
 
             if (temp < minTemp) {
@@ -98,11 +105,20 @@ public class MossedLiveOakSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
+            if (biome.getPrecipitation() == Biome.RainType.NONE) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too dry to this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
+            }
+
             // If temp is in range, optionally allow normal processing:
             // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
