@@ -117,7 +117,10 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oil_palm_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "olive_sapling"), "min 8, max 11;" +
                 "⚠ Can't fruit in tropical climates (zone 11), in this case, it is ornamental only");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "orange_oleander_sapling"),
+                "min 9; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_orange_sapling"),
+                "min 10; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
                 "min 7, max 11; ⚠ requires dry biomes to thrive; ⚠ won't fruit in hardiness zone 9 to up;");
@@ -141,8 +144,7 @@ public class HardinessZones {
                 "min 10; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_white_sapling"),
                 "min 10; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_orange_sapling"),
-                "min 10; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
+
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tamarind_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "teak_sapling"), "min 11");
