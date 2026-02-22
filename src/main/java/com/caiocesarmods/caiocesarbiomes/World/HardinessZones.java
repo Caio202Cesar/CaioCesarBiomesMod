@@ -110,6 +110,9 @@ public class HardinessZones {
                 "⚠ requires cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mugo_pine_sapling"), "min 2, max 7" +
                 "⚠ requires warm to cooler summers, ⚠ Can't handle biome downfall equal or higher than 0.5F");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "min 5");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "min 10");
+
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 
