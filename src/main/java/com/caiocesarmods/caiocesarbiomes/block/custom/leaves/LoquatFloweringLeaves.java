@@ -41,7 +41,7 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
             return;
 
         // Vanilla-style low frequency trigger
-        if (random.nextInt(55) != 0)
+        if (random.nextInt(25) != 0)
             return;
 
         float temp = worldIn.getBiome(pos).getTemperature(pos);
@@ -60,15 +60,6 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
         if (temp <= 0.79F) {
             setNormal(worldIn, pos, distance, persistent);
         }
-
-        // --- ZONE 7 or colder (< 0.75F) - only fruit under glass ---
-        /*if (underGlass) {
-            // Protected greenhouse → fruiting
-            setFruiting(worldIn, pos, distance, persistent);
-        } else {
-            // Outdoor winter damage → blossom kill
-            setNormal(worldIn, pos, distance, persistent);
-        }*/
     }
 
     //NOTE: In real life, loquat trees can fruit in hardiness zone 8, but not in every winter.
