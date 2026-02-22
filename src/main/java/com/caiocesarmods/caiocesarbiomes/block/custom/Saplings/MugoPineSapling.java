@@ -140,7 +140,7 @@ public class MugoPineSapling extends SaplingBlock {
 
             if (downfall > maxDownfall) {
                 player.sendMessage(
-                        new StringTextComponent("This biome is too humid for this sapling."),
+                        new StringTextComponent("This biome is too wet for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
