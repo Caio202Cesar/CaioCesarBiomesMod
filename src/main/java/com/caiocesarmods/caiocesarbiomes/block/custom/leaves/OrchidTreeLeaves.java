@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -17,6 +18,29 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
     public OrchidTreeLeaves(Properties properties) {
         super(properties);
 
+    }
+
+    private boolean isUnderGlass(ServerWorld worldIn, BlockPos pos) {
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < worldIn.getHeight()) {
+            BlockState stateAbove = worldIn.getBlockState(checkPos);
+
+            if (stateAbove.isAir()) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // Accept vanilla and modded glass
+            if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
+            }
+
+            // Hit something that is not glass → not protected
+            return false;
+        }
+
+        return false;
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -34,44 +58,78 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
-
         Biome biome = worldIn.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
+        boolean underGlass = isUnderGlass(worldIn, pos);
 
-        //Pattern for zone 9 subtropical climates
-        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.ORCHID_TREE_WINTER_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
+        if ("WINTER".equals(currentSeason)) {
+            //Pattern for zone 9 subtropical climates
+            if (temp <= 0.84F) {
+                if (underGlass) {
+                    // Greenhouse = full fruiting
+                    setNormal(worldIn, pos, distance, persistent);
+                } else {
+                    setDeciduous(worldIn, pos, distance, persistent);
 
-        //Pattern for zone 10 subtropical climates
-        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+                }
+            }
+            if (temp >= 0.85F && temp <=0.89) {
+                setWinterFlowering(worldIn, pos, distance, persistent);
+            }
 
-            worldIn.setBlockState(pos, TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            setNormal(worldIn, pos, distance, persistent);
+            return;
         }
 
         //Pattern for tropical climates
         if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
         if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
+    }
+
+    private void setDeciduous(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
+        world.setBlockState(
+                pos,
+                TreeBlocks.ORCHID_TREE_WINTER_BRANCHES.get()
+                        .getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent),
+                3
+        );
+    }
+
+    private void setNormal(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
+        world.setBlockState(
+                pos,
+                TreeBlocks.ORCHID_TREE_LEAVES.get()
+                        .getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent),
+                3
+        );
+    }
+
+    private void setWinterFlowering(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
+        world.setBlockState(
+                pos,
+                TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get()
+                        .getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent),
+                3
+        );
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
