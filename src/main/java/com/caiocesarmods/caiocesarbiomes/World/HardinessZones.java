@@ -114,6 +114,9 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "min 5");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ocotea_sapling"), "min 9, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oil_palm_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "olive_sapling"), "min 8, max 11;" +
+                "⚠ Can't fruit in tropical climates (zone 11), in this case, it is ornamental only");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
