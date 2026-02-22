@@ -58,20 +58,7 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
 
         // --- ZONE 8 and below → No fruit---
         if (temp <= 0.79F) {
-
-            /*if (underGlass) {
-                // Greenhouse = full fruiting
-                setFruiting(worldIn, pos, distance, persistent);
-            } else {
-                // Outdoors = partial survival
-                if (random.nextInt(4) == 0) {
-                    setFruiting(worldIn, pos, distance, persistent);
-                } else {
-                    setNormal(worldIn, pos, distance, persistent);
-                }
-            }*/
             setNormal(worldIn, pos, distance, persistent);
-            return;
         }
 
         // --- ZONE 7 or colder (< 0.75F) - only fruit under glass ---
