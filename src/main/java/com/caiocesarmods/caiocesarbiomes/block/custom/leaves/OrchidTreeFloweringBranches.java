@@ -63,7 +63,8 @@ public class OrchidTreeFloweringBranches extends LeavesBlock implements IForgeSh
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp <= 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        //Exclusive to zone 10
+        if (temp <= 0.89F && temp >= 0.85 && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

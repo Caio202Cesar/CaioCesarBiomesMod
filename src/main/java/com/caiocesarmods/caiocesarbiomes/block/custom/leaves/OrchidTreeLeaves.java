@@ -31,6 +31,11 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
                 continue;
             }
 
+            if (stateAbove.isTransparent()) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
             // Accept vanilla and modded glass
             if (stateAbove.getMaterial() == Material.GLASS) {
                 return true;
@@ -65,6 +70,17 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+        if ("FALL".equals(currentSeason) && random.nextInt(35) == 0) {
+            //Pattern for zone 9 subtropical climates
+            if (temp <= 0.84F) {
+                if (underGlass) {
+                    setNormal(worldIn, pos, distance, persistent);
+                } else {
+                    setDeciduous(worldIn, pos, distance, persistent);
+                }
+            }
+        }
 
         if ("WINTER".equals(currentSeason)) {
             //Pattern for zone 9 subtropical climates
