@@ -44,33 +44,40 @@ public class AlmondSapling extends SaplingBlock {
     //Hardy to zone 5 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+
+        Biome biome = world.getBiome(pos);
+        float biomeTemp = biome.getTemperature(pos);
+
         float minTemp = 0.5f;
         float maxTemp = 0.89f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
+        boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+
+        // 🌱 Growth logic
+        if (validTemp && isDry) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.5F;
+        boolean noDry = biome.getPrecipitation() == Biome.RainType.RAIN;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || noDry ) {
             return false;
         }
 

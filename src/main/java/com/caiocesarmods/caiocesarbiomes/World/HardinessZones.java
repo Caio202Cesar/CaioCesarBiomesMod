@@ -39,7 +39,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "min 4, max 10");
 
         // CAIO CESAR BIOMES MOD
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "min 5, max 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "min 5, max 10" +
+                "⚠ requires dry biomes to thrive.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "min 7, max 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"),
                 "min 9; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
@@ -112,6 +113,7 @@ public class HardinessZones {
                 "⚠ requires warm to cooler summers, ⚠ Can't handle biome downfall equal or higher than 0.5F");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "min 5");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ocotea_sapling"), "min 9, max 11");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
