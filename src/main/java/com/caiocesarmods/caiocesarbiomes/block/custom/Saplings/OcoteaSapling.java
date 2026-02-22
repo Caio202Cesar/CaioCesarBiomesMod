@@ -136,10 +136,10 @@ public class OcoteaSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            if (rand.nextInt(10) == 0) {
-                return TreeFeatures.HIGHLAND_OCOTEA_TREE;
-            } else {
+            if (rand.nextInt(10) == 4) {
                 return TreeFeatures.OCOTEA_JUNGLE_FANCY_TREE;
+            } else {
+                return TreeFeatures.HIGHLAND_OCOTEA_TREE;
             }
         }
     }
