@@ -1180,7 +1180,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LOQUAT_FLOWERING_LEAVES));
     public static final RegistryObject<Block> LOQUAT_FLOWERING_LEAVES = registerBlock("loquat_flowering_leaves",
             () -> new LoquatFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LOQUAT_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> LOQUAT_FRUITING_LEAVES = registerBlock("loquat_fruiting_leaves",
             () -> new LoquatFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LOQUAT_LEAVES));

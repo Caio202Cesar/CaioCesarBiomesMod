@@ -53,8 +53,8 @@ public class LoquatSapling extends SaplingBlock {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.75f;
-        float maxTemp = 1.6f;
+        float minTemp = 0.7f;
+        float maxTemp = 0.94f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -122,8 +122,8 @@ public class LoquatSapling extends SaplingBlock {
             isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
         }
 
-        float minTemp = 0.75F;
-        float maxTemp = 1.6F;
+        float minTemp = 0.7F;
+        float maxTemp = 0.94F;
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
@@ -154,8 +154,8 @@ public class LoquatSapling extends SaplingBlock {
         if (!worldIn.isRemote) {
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f;
-            float maxTemp = 1.6f;
+            float minTemp = 0.7f;
+            float maxTemp = 0.94f;
 
             boolean isProtectedByGlass = false;
 
