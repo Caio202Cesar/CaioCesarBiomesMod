@@ -108,6 +108,8 @@ public class HardinessZones {
                 "⚠ Can't be grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mountain_hemlock_sapling"), "min 2, max 8" +
                 "⚠ requires cooler summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mugo_pine_sapling"), "min 2, max 7" +
+                "⚠ Can't handle biome downfall equal or higher than 0.5F");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 
