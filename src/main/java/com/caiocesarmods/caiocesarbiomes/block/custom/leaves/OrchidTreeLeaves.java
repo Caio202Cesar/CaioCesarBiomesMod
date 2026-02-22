@@ -70,24 +70,19 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
             //Pattern for zone 9 subtropical climates
             if (temp <= 0.84F) {
                 if (underGlass) {
-                    // Greenhouse = full fruiting
                     setNormal(worldIn, pos, distance, persistent);
                 } else {
                     setDeciduous(worldIn, pos, distance, persistent);
                 }
             }
-            setDeciduous(worldIn, pos, distance, persistent);
 
             if (temp >= 0.85F && temp <=0.89) {
                 if (underGlass) {
-                    // Greenhouse = full fruiting
                     setNormal(worldIn, pos, distance, persistent);
                 } else {
                     setWinterFlowering(worldIn, pos, distance, persistent);
                 }
             }
-            setWinterFlowering(worldIn, pos, distance, persistent);
-            return;
         }
 
         //Pattern for tropical climates
