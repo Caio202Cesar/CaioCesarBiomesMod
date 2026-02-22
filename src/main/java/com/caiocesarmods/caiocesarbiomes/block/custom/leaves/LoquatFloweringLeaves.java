@@ -35,30 +35,41 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         // Only operate in winter
-        if (!"WINTER".equals(Season.getSeason(worldIn.getDayTime())))
-            return;
+        if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
 
-        // Vanilla-style low frequency trigger
-        if (random.nextInt(25) != 0)
-            return;
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        float temp = worldIn.getBiome(pos).getTemperature(pos);
-        boolean underGlass = isUnderGlass(worldIn, pos);
+            // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
+            if (temp >= 0.80F) {
+                setFruiting(worldIn, pos, distance, persistent);
+                return;
+            }
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-        // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
-        if (temp >= 0.80F) {
-            setFruiting(worldIn, pos, distance, persistent);
-            return;
+            // --- ZONE 8 and below → No fruit---
+            if (temp <= 0.79F) {
+                setNormal(worldIn, pos, distance, persistent);
+            }
         }
 
-        // --- ZONE 8 and below → No fruit---
-        if (temp <= 0.79F) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
             setNormal(worldIn, pos, distance, persistent);
+
+        }
+
+        if ("SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            setNormal(worldIn, pos, distance, persistent);
+
         }
     }
 
