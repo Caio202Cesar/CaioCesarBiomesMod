@@ -74,11 +74,15 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
                     setNormal(worldIn, pos, distance, persistent);
                 } else {
                     setDeciduous(worldIn, pos, distance, persistent);
-
                 }
             }
             if (temp >= 0.85F && temp <=0.89) {
-                setWinterFlowering(worldIn, pos, distance, persistent);
+                if (underGlass) {
+                    // Greenhouse = full fruiting
+                    setNormal(worldIn, pos, distance, persistent);
+                } else {
+                    setWinterFlowering(worldIn, pos, distance, persistent);
+                }
             }
 
             setNormal(worldIn, pos, distance, persistent);
