@@ -170,7 +170,9 @@ public class HardinessZones {
                 "min 11; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "humboldt_willow_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "imbuia_sapling"),
-                "min 9*, max 10; ⚠ dies in zone 9 winter if not under a canopy; ⚠ Cannot grow in dry biomes");
+                "min 9*, max 10; ⚠ can only be grown under other tree's canopies;" +
+                        "⚠ literally dies in zone 9 winter if not under a canopy;" +
+                        "⚠ cannot grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "min 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jelly_palm_sapling"), "min 8");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jenipapo_sapling"), "min 10");
