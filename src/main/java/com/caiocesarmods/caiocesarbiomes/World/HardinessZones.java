@@ -13,8 +13,8 @@ public class HardinessZones {
         Biome biome = world.getBiome(pos);
         float baseTemp = biome.getTemperature(pos);
 
-        if (baseTemp <= -0.0f) return 0; //Subzero zone
-        if (baseTemp <= 0.15f) return 1; //Always snow
+        if (baseTemp <= 0.14f) return 0; //Always snow
+        if (baseTemp <= 0.19f) return 1; //Tundra zone
         if (baseTemp <= 0.29f) return 2; //Border taiga
         if (baseTemp <= 0.39f) return 3; //Taiga
         if (baseTemp <= 0.49f) return 4; //Border continental temperate

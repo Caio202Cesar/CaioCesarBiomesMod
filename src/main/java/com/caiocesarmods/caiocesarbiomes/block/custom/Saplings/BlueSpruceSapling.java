@@ -45,7 +45,7 @@ public class BlueSpruceSapling extends SaplingBlock {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.16f;
+        float minTemp = 0.2f;
         float maxTemp = 0.75f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -68,7 +68,7 @@ public class BlueSpruceSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.75F;
-        boolean tooCold = temp < 0.16F;
+        boolean tooCold = temp < 0.2F;
 
         if (tooHot || tooCold) {
             return false;
@@ -87,7 +87,7 @@ public class BlueSpruceSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.16f, maxTemp = 0.75f;
+            float minTemp = 0.2f, maxTemp = 0.75f;
 
             if (temp < minTemp) {
                 player.sendMessage(

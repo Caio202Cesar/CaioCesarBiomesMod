@@ -1002,7 +1002,7 @@
   "screen.caiocesarbiomes.toaster": "Toaster",
 
   "tooltip.caiocesarbiomes.marula": "Eat before it ferments and you won't get sick.",
-  "tooltip.caiocesarbiomes.hardiness_scanner": "To see the biome's hardiness zone, right-click with me. To see a sapling hardiness zone, hold shift while pointing me to it.",
+  "tooltip.caiocesarbiomes.hardiness_scanner": "To see the biome's hardiness zone, right-click with me. To see a sapling hardiness zone, hold shift while pointing me to it. WARNING: Since Minecraft biome's logic are considerably different from real life, don't expect utter realism, just estimated, or, in some cases, adapted.",
 
   "itemGroup.CaioCesarBiomesTab": "Caio Cesar Biomes: Miscellaneous",
   "itemGroup.CaioCesarBiomes:Culinary": "Caio Cesar Biomes: Culinary",
