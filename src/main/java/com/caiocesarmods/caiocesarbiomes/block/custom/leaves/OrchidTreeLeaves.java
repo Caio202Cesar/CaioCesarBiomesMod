@@ -20,28 +20,25 @@ public class OrchidTreeLeaves extends LeavesBlock implements IForgeShearable {
 
     }
 
-    private boolean isUnderGlass(ServerWorld worldIn, BlockPos pos) {
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
         BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
 
-        while (checkPos.getY() < worldIn.getHeight()) {
-            BlockState stateAbove = worldIn.getBlockState(checkPos);
+        while (checkPos.getY() < world.getHeight()) {
 
-            if (stateAbove.isAir()) {
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof LeavesBlock) {
                 checkPos.move(Direction.UP);
                 continue;
             }
 
-            if (stateAbove.isTransparent()) {
-                checkPos.move(Direction.UP);
-                continue;
-            }
-
-            // Accept vanilla and modded glass
+            // If this block is glass → protected
             if (stateAbove.getMaterial() == Material.GLASS) {
                 return true;
             }
 
-            // Hit something that is not glass → not protected
+            // Any other solid block blocks protection
             return false;
         }
 

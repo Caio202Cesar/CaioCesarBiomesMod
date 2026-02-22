@@ -100,29 +100,6 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
         );
     }
 
-    private boolean isUnderGlass(ServerWorld worldIn, BlockPos pos) {
-        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
-
-        while (checkPos.getY() < worldIn.getHeight()) {
-            BlockState stateAbove = worldIn.getBlockState(checkPos);
-
-            if (stateAbove.isAir()) {
-                checkPos.move(Direction.UP);
-                continue;
-            }
-
-            // Accept vanilla and modded glass
-            if (stateAbove.getMaterial() == Material.GLASS) {
-                return true;
-            }
-
-            // Hit something that is not glass → not protected
-            return false;
-        }
-
-        return false;
-    }
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
     }
