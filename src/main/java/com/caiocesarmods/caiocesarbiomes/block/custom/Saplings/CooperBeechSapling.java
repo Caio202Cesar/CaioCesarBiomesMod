@@ -39,12 +39,12 @@ public class CooperBeechSapling extends SaplingBlock {
 
     }
 
-    //Suitable for zone 4 to 7
+    //Suitable from zone 4 to 8
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.4f;
-        float maxTemp = 0.74f;
+        float maxTemp = 0.79f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -65,7 +65,7 @@ public class CooperBeechSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.74F;
+        boolean tooHot = temp > 0.79F;
         boolean tooCold = temp < 0.4F;
 
         if (tooHot || tooCold) {
@@ -85,7 +85,7 @@ public class CooperBeechSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.4f, maxTemp = 0.74f;
+            float minTemp = 0.4f, maxTemp = 0.79f;
 
             if (temp < minTemp) {
                 player.sendMessage(
