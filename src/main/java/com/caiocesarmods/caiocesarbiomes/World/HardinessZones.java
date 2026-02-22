@@ -94,11 +94,14 @@ public class HardinessZones {
                 "min 9; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "live_oak_sapling"), "min 8, max 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loblolly_pine_sapling"), "min 6, max 9");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loquat_sapling"),
+                "min 7*, max 11; " + "⚠ can be grown in colder biomes if under a 5x5 glass roof; " +
+                        "⚠ due to cold winter bloom loss, only fruits from zone 9 to 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"),
                 "min 9, max 10; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "min 10; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10; ⚠ requires hot summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mesquite_sapling"), "min 7");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 

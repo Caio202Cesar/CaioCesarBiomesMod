@@ -56,10 +56,10 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
             return;
         }
 
-        // --- ZONE 8 (0.75F - 0.79F) ---
-        if (temp >= 0.75F && temp <= 0.79F) {
+        // --- ZONE 8 and below → No fruit---
+        if (temp <= 0.79F) {
 
-            if (underGlass) {
+            /*if (underGlass) {
                 // Greenhouse = full fruiting
                 setFruiting(worldIn, pos, distance, persistent);
             } else {
@@ -69,20 +69,25 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
                 } else {
                     setNormal(worldIn, pos, distance, persistent);
                 }
-            }
-
+            }*/
+            setNormal(worldIn, pos, distance, persistent);
             return;
         }
 
-        // --- ZONE 7 or colder (< 0.75F) ---
-        if (underGlass) {
+        // --- ZONE 7 or colder (< 0.75F) - only fruit under glass ---
+        /*if (underGlass) {
             // Protected greenhouse → fruiting
             setFruiting(worldIn, pos, distance, persistent);
         } else {
             // Outdoor winter damage → blossom kill
             setNormal(worldIn, pos, distance, persistent);
-        }
+        }*/
     }
+
+    //NOTE: In real life, loquat trees can fruit in hardiness zone 8, but not in every winter.
+    //In zone 9, however, even if bloom loss is possible, it is rare. Otherwise, it will fruit without major intervention.
+    //Cannot grow fruit if under glass.
+    //Source: https://www.alibaba.com/product-insights/loquat-plant-care-zone-limits-over-winter-wraps-zone-8-10-only.html#:~:text=Technically%20yes%E2%80%94but%20strongly%20discouraged,minimal%20fruiting%20and%20high%20stress.
 
     private void setFruiting(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
         world.setBlockState(
