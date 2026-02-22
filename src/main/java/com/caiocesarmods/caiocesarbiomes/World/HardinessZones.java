@@ -90,10 +90,13 @@ public class HardinessZones {
                 "min 5, max 10; ⚠ saplings die when not under a canopy in hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_pine_sapling"), "min 5, max 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "larch_sapling"), "min 0 (-0.7f), max 5");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lemon_sapling"),
+                "min 9; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "live_oak_sapling"), "min 8, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loblolly_pine_sapling"), "min 6, max 9");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"),
-                "min 9; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
+                "min 9, max 10; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "min 10; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "min 10; ⚠ requires hot summers");
 
