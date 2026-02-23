@@ -127,6 +127,8 @@ public class HardinessZones {
                 "min 9; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peach_sapling"),
                 "min 4, max 10; ⚠ requires hot summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pecan_sapling"),
+                "min 7, max 10; ⚠ requires downfall equal or lower than 0.8F to thrive;");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
                 "min 7, max 11; ⚠ requires dry biomes to thrive; ⚠ won't fruit in hardiness zone 9 to up;");
