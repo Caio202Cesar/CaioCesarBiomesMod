@@ -44,33 +44,40 @@ public class PistachioSapling extends SaplingBlock {
     //Hardy to zone 7 to 11 (however, it only fruits in zones 7 and 8, being purely ornamental from zone 9 to above)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
         float minTemp = 0.7f;
         float maxTemp = 0.94f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean validTemp = temp >= minTemp && temp <= maxTemp;
+
+        boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+
+        // 🌱 Growth logic
+        if (validTemp && isDry) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.7F;
+        boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || isWet) {
             return false;
         }
 
@@ -86,7 +93,10 @@ public class PistachioSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
+
+            Biome biome = worldIn.getBiome(pos);
+            float temp = biome.getTemperature(pos);
+
             float minTemp = 0.7f, maxTemp = 0.94f;
 
             if (temp < minTemp) {
@@ -103,6 +113,14 @@ public class PistachioSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (biome.getPrecipitation() == Biome.RainType.RAIN) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too wet to this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:
