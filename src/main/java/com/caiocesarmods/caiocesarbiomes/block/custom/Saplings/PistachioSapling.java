@@ -51,7 +51,7 @@ public class PistachioSapling extends SaplingBlock {
         float maxTemp = 0.94f;
 
         float downfall = biome.getDownfall();
-        float maxDownfall = 0.45f;
+        float maxDownfall = 0.4f;
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
         boolean suitableHumidity = downfall < maxDownfall;
@@ -79,7 +79,7 @@ public class PistachioSapling extends SaplingBlock {
 
         boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.7F;
-        boolean tooHumid = downfall > 0.45F;
+        boolean tooHumid = downfall > 0.4F;
         boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
 
         if (tooHot || tooCold || isWet || tooHumid) {
@@ -102,7 +102,7 @@ public class PistachioSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
-            float minTemp = 0.7f, maxTemp = 0.94f, maxDownfall = 0.45F;
+            float minTemp = 0.7f, maxTemp = 0.94f, maxDownfall = 0.4F;
 
             if (temp < minTemp) {
                 player.sendMessage(
