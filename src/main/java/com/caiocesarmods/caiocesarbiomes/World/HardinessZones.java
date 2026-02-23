@@ -139,7 +139,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pinyon_sapling"), "min 4, max 9*;" +
                 "⚠ Can't be grow in wet biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
-                "min 7, max 11; ⚠ requires dry biomes and downfall of 0.45F or lower to thrive;" +
+                "min 7, max 11; ⚠ requires dry biomes and downfall of 0.39F or lower to thrive;" +
                         "⚠ requires hot summers and hardiness zone bellow 8 to fruit;");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
