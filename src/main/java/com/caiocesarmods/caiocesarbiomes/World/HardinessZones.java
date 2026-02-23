@@ -130,6 +130,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pecan_sapling"),
                 "min 5, max 10; ⚠ requires downfall 0.8F or lower; ⚠ requires hot summers for fruiting");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "persimmon_sapling"), "min 4, max 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_pink_sapling"), "min 4, max 8");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
                 "min 7, max 11; ⚠ requires dry biomes to thrive; ⚠ won't fruit in hardiness zone 9 to up;");
