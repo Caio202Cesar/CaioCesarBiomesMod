@@ -50,12 +50,16 @@ public class PistachioSapling extends SaplingBlock {
         float minTemp = 0.7f;
         float maxTemp = 0.94f;
 
+        float downfall = biome.getDownfall();
+        float maxDownfall = 0.45f;
+
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
+        boolean suitableHumidity = downfall < maxDownfall;
 
         boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
 
         // 🌱 Growth logic
-        if (validTemp && isDry) {
+        if (validTemp && isDry && suitableHumidity) {
             super.randomTick(state, world, pos, random);
         }
 
@@ -63,7 +67,6 @@ public class PistachioSapling extends SaplingBlock {
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-
         if (!(worldIn instanceof World)) {
             return false;
         }
@@ -72,12 +75,14 @@ public class PistachioSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
 
         float temp = biome.getTemperature(pos);
+        float downfall = biome.getDownfall();
 
         boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.7F;
+        boolean tooHumid = downfall > 0.45F;
         boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
 
-        if (tooHot || tooCold || isWet) {
+        if (tooHot || tooCold || isWet || tooHumid) {
             return false;
         }
 
@@ -96,8 +101,8 @@ public class PistachioSapling extends SaplingBlock {
 
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
-
-            float minTemp = 0.7f, maxTemp = 0.94f;
+            float downfall = biome.getDownfall();
+            float minTemp = 0.7f, maxTemp = 0.94f, maxDownfall = 0.45F;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -121,6 +126,14 @@ public class PistachioSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
+            }
+
+            if (downfall > maxDownfall) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too wet for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
             // If temp is in range, optionally allow normal processing:
