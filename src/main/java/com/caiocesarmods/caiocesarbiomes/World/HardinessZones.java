@@ -110,7 +110,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mountain_hemlock_sapling"), "min 2, max 8" +
                 "⚠ requires cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mugo_pine_sapling"), "min 2, max 7" +
-                "⚠ requires warm to cooler summers, ⚠ Can't handle biome downfall equal or higher than 0.5F");
+                "⚠ requires warm to cooler summers, ⚠ Requires downfall 0.5F or lower");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "min 5");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ocotea_sapling"), "min 9, max 11");
@@ -128,7 +128,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peach_sapling"),
                 "min 4, max 10; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pecan_sapling"),
-                "min 7, max 10; ⚠ requires downfall equal or lower than 0.8F to thrive;");
+                "min 5, max 10; ⚠ requires downfall 0.8F or lower; ⚠ requires hot summers for fruiting");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
                 "min 7, max 11; ⚠ requires dry biomes to thrive; ⚠ won't fruit in hardiness zone 9 to up;");

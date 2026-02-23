@@ -57,7 +57,7 @@ public class MugoPineSapling extends SaplingBlock {
         float maxTemp = 0.74f;
 
         float downfall = biome.getDownfall();
-        float maxDownfall = 0.49f;
+        float maxDownfall = 0.5f;
 
         boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
         boolean suitableHumidity = downfall < maxDownfall;
@@ -88,7 +88,7 @@ public class MugoPineSapling extends SaplingBlock {
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.74F;
         boolean tooCold = temp < 0.2F;
-        boolean tooHumid = downfall >= 0.5F;
+        boolean tooHumid = downfall >= 0.51F;
 
         if (tooHot || tooCold || tooHumid) {
             return false;
@@ -112,7 +112,7 @@ public class MugoPineSapling extends SaplingBlock {
 
             float temp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
-            float minTemp = 0.2f, maxTemp = 0.74f, maxDownfall = 0.49F;
+            float minTemp = 0.2f, maxTemp = 0.74f, maxDownfall = 0.5F;
 
             if (temp < minTemp) {
                 player.sendMessage(
