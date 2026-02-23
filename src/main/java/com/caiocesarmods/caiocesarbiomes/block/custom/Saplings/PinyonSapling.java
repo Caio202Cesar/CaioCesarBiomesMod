@@ -42,7 +42,7 @@ public class PinyonSapling extends SaplingBlock {
     }
 
     //Pinus edulis
-    //Hardy from zone 4 to 8
+    //Hardy from zone 4 to 8(9 if protectedByLeaves)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 
@@ -53,7 +53,9 @@ public class PinyonSapling extends SaplingBlock {
         float maxTemp = 0.79f;
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
+
         boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
 
         // 🌱 Growth logic
         if (validTemp && isDry) {
@@ -98,7 +100,7 @@ public class PinyonSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
 
-            float minTemp = 0.75f, maxTemp = 0.94f;
+            float minTemp = 0.4f, maxTemp = 0.79f;
 
             if (temp < minTemp) {
                 player.sendMessage(

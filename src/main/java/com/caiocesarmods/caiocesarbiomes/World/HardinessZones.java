@@ -136,8 +136,8 @@ public class HardinessZones {
                 "min 8; ⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_pink_sapling"),
                 "min 10; ⚠ can be grown in colder biomes if under a 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pinyon_sapling"), "min 4, max 8;" +
-                "⚠ Can't be grow in wet biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pinyon_sapling"), "min 4, max 9*;" +
+                "⚠ Can't be grow in wet biomes; ⚠ in zone 9, grows only under the shade of other trees");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"),
                 "min 7, max 11; ⚠ requires dry biomes to thrive; ⚠ won't fruit in hardiness zone 9 to up;");
