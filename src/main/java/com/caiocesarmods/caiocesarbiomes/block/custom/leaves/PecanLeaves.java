@@ -72,8 +72,8 @@ public class PecanLeaves extends LeavesBlock implements IForgeShearable {
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
+        //Nutting condition
         if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
-            //Pattern for zone 9 subtropical climates
             if (temp <= 0.84F) {
                 if (hotSummer) {
                     setFruiting(worldIn, pos, distance, persistent);

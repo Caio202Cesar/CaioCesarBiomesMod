@@ -88,7 +88,7 @@ public class MugoPineSapling extends SaplingBlock {
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.74F;
         boolean tooCold = temp < 0.2F;
-        boolean tooHumid = downfall >= 0.51F;
+        boolean tooHumid = downfall > 0.5F;
 
         if (tooHot || tooCold || tooHumid) {
             return false;

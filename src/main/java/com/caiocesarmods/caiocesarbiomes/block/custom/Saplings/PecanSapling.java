@@ -41,17 +41,17 @@ public class PecanSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 2 to 7
+    //Hardy from zone 5 to 20
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         Biome biome = world.getBiome(pos);
 
         float biomeTemp = biome.getTemperature(pos);
-        float minTemp = 0.2f;
-        float maxTemp = 0.74f;
+        float minTemp = 0.5f;
+        float maxTemp = 0.89f;
 
         float downfall = biome.getDownfall();
-        float maxDownfall = 0.49f;
+        float maxDownfall = 0.8f;
 
         boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
         boolean suitableHumidity = downfall < maxDownfall;
@@ -60,9 +60,6 @@ public class PecanSapling extends SaplingBlock {
         if (validTemp && suitableHumidity) {
             super.randomTick(state, world, pos, random);
         }
-
-        // Summer heat check (NEW)
-        if (!isSummerAllowed(world, pos)) return;
 
         super.randomTick(state, world, pos, random);
     }
@@ -80,15 +77,13 @@ public class PecanSapling extends SaplingBlock {
         float downfall = biome.getDownfall();
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.74F;
-        boolean tooCold = temp < 0.2F;
-        boolean tooHumid = downfall >= 0.5F;
+        boolean tooHot = temp > 0.89F;
+        boolean tooCold = temp < 0.5F;
+        boolean tooHumid = downfall > 0.8F;
 
         if (tooHot || tooCold || tooHumid) {
             return false;
         }
-
-        if (!isSummerAllowed(world, pos)) return false;
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -106,7 +101,7 @@ public class PecanSapling extends SaplingBlock {
 
             float temp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
-            float minTemp = 0.2f, maxTemp = 0.74f, maxDownfall = 0.49F;
+            float minTemp = 0.5f, maxTemp = 0.89f, maxDownfall = 0.8F;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -122,14 +117,6 @@ public class PecanSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            if (!isSummerAllowed(worldIn, pos)) {
-                player.sendMessage(
-                        new StringTextComponent("Summers are too hot for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS;
             }
 
             if (downfall > maxDownfall) {
