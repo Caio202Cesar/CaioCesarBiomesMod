@@ -33,6 +33,8 @@ public class RowanSapling extends SaplingBlock {
 
     }
 
+    //Requires mild summers
+
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
         return 80;
