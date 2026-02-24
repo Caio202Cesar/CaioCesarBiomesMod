@@ -2425,8 +2425,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             ROWAN_TREE2.withChance(0.09F), ROWAN_TREE1.withChance(0.13F), HOLLY_TREE2.withChance(0.057F),
                             HOLLY_TREE1.withChance(0.067F), BLACK_POPLAR_FANCY_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.1F),
-                            JUNIPER_SHRUB.withChance(0.17F),
-                            ELDERBERRY_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
+                            JUNIPER_SHRUB.withChance(0.17F), ELDERBERRY_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
@@ -2454,9 +2453,8 @@ public class TreeFeatures {
                             PLANE_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.05F), BLACK_POPLAR_FANCY_TREE.withChance(0.091F),
                             PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            SWEET_CHESTNUT_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F), ROWAN_TREE1.withChance(0.2F),
-                            ROWAN_TREE2.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F),
-                            CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)),
+                            SWEET_CHESTNUT_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F),
+                            PLANE_TREE.withChance(0.6F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)),
                             OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
