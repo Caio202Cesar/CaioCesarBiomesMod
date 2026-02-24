@@ -196,7 +196,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "camu_camu_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "carnauba_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cashew_sapling"), "min 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caven_thorn_sapling"), "min 8, max 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caven_thorn_sapling"), "min 8, max 11;" +
+                "⚠ requires downfall of 0.6F or lower to grow");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_sapling"), "min 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "min 9, max 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"),
