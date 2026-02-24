@@ -1017,6 +1017,30 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    //Only in zone 8/temperate swamp
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PIN_RED_OAK_TREE = register("pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KIWI_PIN_RED_OAK_TREE = register("kiwi_pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CREEPING_FIG_PIN_RED_OAK_TREE = register("creeping_fig_pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Yew Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
