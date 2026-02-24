@@ -149,9 +149,10 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ponderosa_pine_sapling"), "HZ(min) 3, HZ(max) 8; " +
                 "⚠ max downfall: 0.55F");
-
-
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_purple_sapling"), "HZ(min) 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_red_sapling"), "HZ(min) 4, HZ(max) 8");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_red_sapling"), "HZ(min) 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "HZ(min) 10");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "royal_poinciana_sapling"), "HZ(min) 10");
