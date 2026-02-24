@@ -595,6 +595,8 @@ public class ModItems {
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CCB_GROUP).maxDamage(238)));
     public static final RegistryObject<Item> NUTCRACKER = ITEMS.register("nutcracker",
             () -> new NutcrackerItem(new Item.Properties().group(ModItemGroup.CCB_GROUP).maxDamage(238)));
+    public static final RegistryObject<Item> MALABAR_SILK_FLOSS = ITEMS.register("malabar_silk_cotton",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
