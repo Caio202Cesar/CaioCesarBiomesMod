@@ -146,6 +146,8 @@ public class HardinessZones {
                 "⚠ Don't flower plenty in tropical climates.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pomegranate_sapling"), "min 7; " +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ponderosa_pine_sapling"), "min 3, max 8; " +
+                "⚠ max downfall: 0.6F");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 
