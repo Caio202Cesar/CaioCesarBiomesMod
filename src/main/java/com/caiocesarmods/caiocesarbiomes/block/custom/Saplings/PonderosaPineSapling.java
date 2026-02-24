@@ -47,8 +47,8 @@ public class PonderosaPineSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        float minTemp = 0.7f;
-        float maxTemp = 0.94f;
+        float minTemp = 0.3f;
+        float maxTemp = 0.79f;
 
         float downfall = biome.getDownfall();
         float maxDownfall = 0.55f;
@@ -75,12 +75,11 @@ public class PonderosaPineSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
         float downfall = biome.getDownfall();
 
-        boolean tooHot = temp > 0.94F;
-        boolean tooCold = temp < 0.7F;
-        boolean tooHumid = downfall > 0.39F;
-        boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
+        boolean tooHot = temp > 0.79F;
+        boolean tooCold = temp < 0.3F;
+        boolean tooHumid = downfall > 0.55F;
 
-        if (tooHot || tooCold || isWet || tooHumid) {
+        if (tooHot || tooCold || tooHumid) {
             return false;
         }
 
@@ -100,7 +99,7 @@ public class PonderosaPineSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
-            float minTemp = 0.7f, maxTemp = 0.94f, maxDownfall = 0.39F;
+            float minTemp = 0.3f, maxTemp = 0.79f, maxDownfall = 0.55F;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -116,14 +115,6 @@ public class PonderosaPineSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            if (biome.getPrecipitation() == Biome.RainType.RAIN) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too wet to this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS;
             }
 
             if (downfall > maxDownfall) {
