@@ -154,6 +154,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_red_sapling"), "HZ(min) 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_maple_sapling"), "HZ(min) 3, HZ(max) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_oak_sapling"), "HZ(min) 3, HZ(max) 10");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "royal_poinciana_sapling"), "HZ(min) 10");
