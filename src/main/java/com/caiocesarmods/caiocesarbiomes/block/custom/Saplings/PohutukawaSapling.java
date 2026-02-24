@@ -37,7 +37,7 @@ public class PohutukawaSapling extends SaplingBlock {
         RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_POHUTUKAWA_SAPLING.get(), RenderType.getCutout());
     }
 
-    //Hardy from zone 9 to 11
+    //Hardy from zone 9 to 11 (while in a sheltered location, such as against a warm or sunny wall, it can be hardy to zone 8, it may be implemented later)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);

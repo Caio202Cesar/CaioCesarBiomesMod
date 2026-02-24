@@ -142,6 +142,10 @@ public class HardinessZones {
                         "⚠ requires dry biomes and downfall of 0.39F or lower to thrive;" +
                         "⚠ requires hot summers and hardiness zone bellow 8 to fruit;");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plane_sapling"), "min 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pohutukawa_sapling"), "min 9, max 11;" +
+                "⚠ Don't flower plenty in tropical climates.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pomegranate_sapling"), "min 7; " +
+                "⚠ can be grown in colder biomes if under a 5x5 glass roof");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_kapok_sapling"), "min 9");
 

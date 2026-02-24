@@ -2,11 +2,11 @@
   "variants":{
     "":[
       {"model": "caiocesarbiomes:block/pohutukawa_flowering_leaves",
-        "weight": 5},
+        "weight": 1},
       {"model": "caiocesarbiomes:block/pohutukawa_buds",
-        "weight": 7},
+        "weight": 3},
       {"model": "caiocesarbiomes:block/pohutukawa_flowering_leaves",
-        "weight": 20}
+        "weight": 10}
     ]
   }
 }
