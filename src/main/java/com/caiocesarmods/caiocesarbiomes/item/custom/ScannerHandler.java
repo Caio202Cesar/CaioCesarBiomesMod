@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
-import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.HardinessZones;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SaplingBlock;

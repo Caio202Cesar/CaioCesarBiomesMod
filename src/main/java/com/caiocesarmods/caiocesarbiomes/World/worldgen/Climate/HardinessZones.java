@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;

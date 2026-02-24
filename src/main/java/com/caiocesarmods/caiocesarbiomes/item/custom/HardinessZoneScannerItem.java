@@ -2,7 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.item.custom;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
-import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.HardinessZones;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
