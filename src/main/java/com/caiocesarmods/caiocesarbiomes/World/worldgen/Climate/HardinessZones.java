@@ -157,7 +157,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "red_oak_sapling"), "HZ(min) 3, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_red_sapling"), "HZ(min) 10;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rowan_sapling"), "HZ(min) 3, HZ(max) 7;" +
+                "⚠ requires warm to cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "royal_poinciana_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rubber_tree_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sabal_sapling"), "HZ(min) 8;" +

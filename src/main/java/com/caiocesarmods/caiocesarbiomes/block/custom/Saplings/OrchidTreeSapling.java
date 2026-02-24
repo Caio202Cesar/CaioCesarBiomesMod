@@ -129,6 +129,51 @@ public class OrchidTreeSapling extends SaplingBlock {
         return super.canGrow(worldIn, pos, state, isClient);
     }
 
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
+        // Always allow for the check, we'll block in grow()
+        return true;
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn,
+                                             BlockPos pos, PlayerEntity player,
+                                             Hand handIn, BlockRayTraceResult hit) {
+
+        if (!worldIn.isRemote) {
+
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            float minTemp = 0.8f;
+            float maxTemp = 1.6f;
+
+            boolean isProtectedByGlass = false;
+
+            if (worldIn instanceof ServerWorld) {
+                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
+            }
+
+            if (temp < minTemp && !isProtectedByGlass) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too cold for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
+            }
+
+            if (temp > maxTemp) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too hot for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
+            }
+
+            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        }
+
+        return ActionResultType.SUCCESS;
+    }
+
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
         return 80;
