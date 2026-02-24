@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.Climate;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
