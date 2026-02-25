@@ -185,7 +185,10 @@ public class HardinessZones {
                 "⚠ requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sycamore_fig_sapling"), "HZ(min) 10;" +
         "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tahiti_lime_sapling"), "HZ(min) 9;" +
+                "⚠ can be grown in colder biomes if under a 7x7 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tamarind_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "teak_sapling"), "HZ(min) 11");
 
 
 
@@ -200,8 +203,6 @@ public class HardinessZones {
 
 
 
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tamarind_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "teak_sapling"), "HZ(min) 11");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_fig_sapling"), "HZ(min) 10");
