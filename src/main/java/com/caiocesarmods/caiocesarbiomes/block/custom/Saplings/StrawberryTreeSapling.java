@@ -43,7 +43,7 @@ public class StrawberryTreeSapling extends SaplingBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.7f;
-        float maxTemp = 0.89f;
+        float maxTemp = 0.94f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -64,7 +64,7 @@ public class StrawberryTreeSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.89F;
+        boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.7F;
 
         if (tooHot || tooCold) {
@@ -84,7 +84,7 @@ public class StrawberryTreeSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.7f, maxTemp = 0.89f;
+            float minTemp = 0.7f, maxTemp = 0.94f;
 
             if (temp < minTemp) {
                 player.sendMessage(
