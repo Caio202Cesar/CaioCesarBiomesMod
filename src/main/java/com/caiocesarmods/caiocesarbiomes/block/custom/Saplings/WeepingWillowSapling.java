@@ -43,7 +43,7 @@ public class WeepingWillowSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 4 to 10
+    //Hardy from zone 2 to 10 (includes both S. babylonica and S. alba
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);

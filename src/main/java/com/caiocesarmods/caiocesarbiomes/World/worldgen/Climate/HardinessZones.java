@@ -194,7 +194,9 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 3x3 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tropical_almond_sapling"), "HZ(min) 10;" +
                 "⚠ requires hot summers");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "walnut_sapling"), "HZ(min) 5, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_fig_sapling"), "HZ(min) 10;" +
+                "⚠ 1x1 sapling can be grown in colder biomes if under a 5x5 glass roof");
 
 
 
@@ -209,7 +211,6 @@ public class HardinessZones {
 
 
 
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_fig_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_willow_sapling"), "HZ(min) 4, HZ(max) 10");
 
 
