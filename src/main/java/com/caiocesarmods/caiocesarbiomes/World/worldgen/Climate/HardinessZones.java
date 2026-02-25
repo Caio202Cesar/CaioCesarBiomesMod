@@ -192,6 +192,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "teak_sapling"), "HZ(min) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tea_sapling"), "HZ(min) 7, HZ(max) 10;" +
                 "⚠ can be grown in colder biomes if under a 3x3 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "tropical_almond_sapling"), "HZ(min) 10;" +
+                "⚠ requires hot summers");
 
 
 
@@ -215,6 +217,7 @@ public class HardinessZones {
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 4, HZ(max) 10");
 
+        //Apricot tree = 3, 0, 3 blob
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11; " +
