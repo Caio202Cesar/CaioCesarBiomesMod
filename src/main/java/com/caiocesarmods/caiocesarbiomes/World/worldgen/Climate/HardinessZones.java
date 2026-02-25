@@ -203,7 +203,8 @@ public class HardinessZones {
                 "⚠ requires warm to cooler summers, rainy biome, downfall from 6 to above");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_white_sapling"), "HZ(min) 4, HZ(max) 8");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_white_sapling"), "HZ(min) 7");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "white_fir_sapling"), "HZ(min) 3, HZ(max) 8; " +
+                "⚠ requires warm to cooler summers along with max downfall of 0.55F");
 
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "HZ(min) 10;" +
