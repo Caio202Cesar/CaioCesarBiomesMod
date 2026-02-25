@@ -197,8 +197,12 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "walnut_sapling"), "HZ(min) 5, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_fig_sapling"), "HZ(min) 10;" +
                 "⚠ 1x1 sapling can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_willow_sapling"), "HZ(min) 2, HZ(max) 10");
-
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "weeping_willow_sapling"), "HZ(min) 2, HZ(max) 10;" +
+                "⚠ needs to be planted near the water");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "western_hemlock_sapling"), "HZ(min) 6, HZ(max) 9;" +
+                "⚠ requires warm to cooler summers, rainy biome, downfall from 6 to above");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_white_sapling"), "HZ(min) 4, HZ(max) 8");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_white_sapling"), "HZ(min) 7");
 
 
 
@@ -206,12 +210,6 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_white_sapling"), "HZ(min) 10;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
-
-
-
-
-
-
 
 
 
