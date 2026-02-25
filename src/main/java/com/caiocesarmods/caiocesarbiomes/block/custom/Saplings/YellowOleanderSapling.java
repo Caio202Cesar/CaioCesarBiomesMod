@@ -39,15 +39,6 @@ public class YellowOleanderSapling extends SaplingBlock {
     }
 
     //Hardy to zone 9 (to be grown freely, since in real life, it can be grow in zone 8 in shattered or protected sites)
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param world
-     * @param pos
-     * @param random
-     */
-    //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
