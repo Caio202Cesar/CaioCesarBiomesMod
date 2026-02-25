@@ -64,7 +64,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chinese_red_pine_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "citron_sapling"), "HZ(min) 10;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coast_cottonwood_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coast_cottonwood_sapling"), "HZ(min) 10;" +
+                        "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coconut_sapling"), "HZ(min) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cook_pine_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cooper_beech_sapling"), "HZ(min) 4, HZ(max) 8");
