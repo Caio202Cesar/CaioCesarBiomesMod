@@ -41,7 +41,7 @@ public class PistachioSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 7 to 11 (however, it only fruits in zones 7 and 8, being purely ornamental from zone 9 to above)
+    //Hardy from zone 7 to 11 (however, it only fruits in zones 7 and 8, being purely ornamental from zone 9 to above)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         Biome biome = world.getBiome(pos);

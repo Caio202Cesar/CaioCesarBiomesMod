@@ -70,7 +70,6 @@ public class HollySapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
