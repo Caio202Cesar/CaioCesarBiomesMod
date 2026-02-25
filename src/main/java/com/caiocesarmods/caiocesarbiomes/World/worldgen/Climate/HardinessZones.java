@@ -168,7 +168,8 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sausage_tree_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "slash_pine_sapling"), "HZ(min) 7, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "socotra_cucumber_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "socotra_cucumber_sapling"), "HZ(min) 9;" +
+                "⚠ requires dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "socotra_desert_rose_sapling"), "HZ(min) 10;" +
         "⚠ can be grown in colder biomes if under a 9x9 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "southern_beech_sapling"), "HZ(min) 7, HZ(max) 9;" +

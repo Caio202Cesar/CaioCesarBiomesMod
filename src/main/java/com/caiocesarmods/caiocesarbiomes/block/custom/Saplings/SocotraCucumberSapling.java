@@ -44,15 +44,20 @@ public class SocotraCucumberSapling extends SaplingBlock {
     //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
         float minTemp = 0.8f;
         float maxTemp = 2f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+
+        boolean validTemp = temp >= minTemp && temp <= maxTemp;
+        boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+
+        // 🌱 Growth logic
+        if (validTemp && isDry) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
     }
 
     @Override
@@ -62,15 +67,15 @@ public class SocotraCucumberSapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 2F;
         boolean tooCold = temp < 0.8F;
+        boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || isWet) {
             return false;
         }
 
@@ -86,6 +91,9 @@ public class SocotraCucumberSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
+
+            Biome biome = worldIn.getBiome(pos);
+
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.8f, maxTemp = 2f;
 
@@ -103,6 +111,14 @@ public class SocotraCucumberSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (biome.getPrecipitation() == Biome.RainType.RAIN) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too wet to this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:
