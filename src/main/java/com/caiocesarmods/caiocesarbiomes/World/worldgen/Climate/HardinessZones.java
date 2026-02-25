@@ -179,6 +179,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "starfruit_sapling"), "HZ(min) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "stone_pine_sapling"), "HZ(min) 8, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "strawberry_tree_sapling"), "HZ(min) 7, HZ(max) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "subalpine_fir_sapling"), "HZ(min) 2, HZ(max) 8" +
+                "⚠ requires cooler summers");
 
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sycamore_fig_sapling"), "HZ(min) 10");
 
