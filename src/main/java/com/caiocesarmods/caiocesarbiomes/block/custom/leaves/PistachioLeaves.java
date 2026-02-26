@@ -56,7 +56,15 @@ public class PistachioLeaves extends LeavesBlock implements IForgeShearable {
             return;
         }
 
-        if ("WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.PISTACHIO_WINTER_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
