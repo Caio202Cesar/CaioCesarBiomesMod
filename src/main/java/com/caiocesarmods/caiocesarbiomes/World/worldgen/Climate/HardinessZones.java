@@ -216,8 +216,6 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9;" +
                 "⚠ requires warm summers");
 
-        //Apricot tree = 3, 0, 3 blob
-
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11; " +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
@@ -225,7 +223,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "apricot_ipe_sapling"), "HZ(min) 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "bacuri_sapling"), "HZ(min) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "balsa_sapling"), "HZ(min) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_jurema_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_jurema_sapling"), "HZ(min) 9;" +
+                "⚠ requires downfall of 0.55F or lower to grow");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_sucupira_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_pepper_sapling"), "HZ(min) 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_rosewood_sapling"), "HZ(min) 10");
@@ -240,7 +239,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "carnauba_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cashew_sapling"), "HZ(min) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caven_thorn_sapling"), "HZ(min) 8, HZ(max) 11;" +
-                "⚠ requires downfall of 0.6F or lower to grow");
+                "⚠ requires downfall of 0.55F or lower to grow");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cockspur_coral_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cupuacu_sapling"),
@@ -292,8 +291,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "xaxim_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "HZ(min) 9");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"),
-                "HZ(min) 9, HZ(max) 11; ⚠ saplings die when not under a canopy in hot summers");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"), "HZ(min) 9, HZ(max) 11;" +
+                "⚠ saplings die when not under a canopy in hot summers");
 
     }
 
