@@ -291,7 +291,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silver_pepper_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sombreiro_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "umbu_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "umbu_sapling"), "HZ(min) 10;" +
+        "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "white_ipe_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_white_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "HZ(min) 9");
