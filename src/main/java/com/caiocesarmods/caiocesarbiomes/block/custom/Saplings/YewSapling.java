@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -42,17 +44,23 @@ public class YewSapling extends SaplingBlock {
     }
 
     //Hardy from zone 5 to 9
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        return heat == SummerHeat.WARM;
+    }
+
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.5f;
         float maxTemp = 0.84f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
-            super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
+
+        // Summer heat check (NEW)
+        if (!isSummerAllowed(world, pos)) return;
+
+        super.randomTick(state, world, pos, random);
     }
 
     @Override
@@ -62,7 +70,6 @@ public class YewSapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
@@ -73,6 +80,8 @@ public class YewSapling extends SaplingBlock {
         if (tooHot || tooCold) {
             return false;
         }
+
+        if (!isSummerAllowed(world, pos)) return false;
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -103,6 +112,14 @@ public class YewSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (!isSummerAllowed(worldIn, pos)) {
+                player.sendMessage(
+                        new StringTextComponent("Summers are too hot or too cold for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:

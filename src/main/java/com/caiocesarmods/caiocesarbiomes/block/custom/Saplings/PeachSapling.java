@@ -43,12 +43,12 @@ public class PeachSapling extends SaplingBlock {
 
     }
 
+    //Hardy from zone 5 to 10 - this mimics the variation of chiling hours of peachs, going from high to low: https://www.gardenia.net/genus/prunus-persica
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeatRegistry.get(world, pos);
         return heat == SummerHeat.HOT;
     }
 
-    //Hardy from zone 5 to 10 - this mimics the variation of chiling hours of peachs, going from high to low: https://www.gardenia.net/genus/prunus-persica
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);

@@ -213,7 +213,8 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "HZ(min) 10;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9;" +
+                "⚠ requires warm summers");
 
         //Apricot tree = 3, 0, 3 blob
 

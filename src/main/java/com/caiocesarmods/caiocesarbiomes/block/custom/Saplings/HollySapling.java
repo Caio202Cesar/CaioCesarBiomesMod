@@ -43,12 +43,12 @@ public class HollySapling extends SaplingBlock {
 
     }
 
+    //Hardy to zone 4 to 10
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeatRegistry.get(world, pos);
         return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
     }
 
-    //Hardy to zone 4 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
@@ -116,7 +116,7 @@ public class HollySapling extends SaplingBlock {
 
             if (!isSummerAllowed(worldIn, pos)) {
                 player.sendMessage(
-                        new StringTextComponent("Summers are too hot for this sapling."),
+                        new StringTextComponent("Summers are too hot or too cold for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
