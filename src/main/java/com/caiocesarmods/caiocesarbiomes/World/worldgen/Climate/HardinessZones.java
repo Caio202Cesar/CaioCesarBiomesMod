@@ -295,10 +295,10 @@ public class HardinessZones {
         "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "white_ipe_sapling"), "HZ(min) 10");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_white_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "HZ(min) 9, HZ(max) 13(1.6F)");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "xaxim_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "HZ(min) 9, HZ(max) 13(1.6F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "HZ(min) 10, HZ(max) 13(1.6F);");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ saplings die when not under a canopy in hot summers");
 
