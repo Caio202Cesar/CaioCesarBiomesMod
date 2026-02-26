@@ -249,6 +249,9 @@ public class ModEventSubscriber {
             if (temp < 0.9F) {
                 event.setResult(Event.Result.DENY);
             }
+            if (temp > 1.2F) {
+                event.setResult(Event.Result.DENY);
+            }
         }
 
         // Acacia = subtropical (> zone 9)
