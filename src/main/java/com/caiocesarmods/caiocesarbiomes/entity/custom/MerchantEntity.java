@@ -37,6 +37,7 @@ public class MerchantEntity extends AbstractVillagerEntity {
 
     }
 
+    //Recipes, like jams, are expensive = diamond, netherite. Raw products, like fruits, are cheap = iron
     @Override
     protected void populateTradeData() {
         MerchantOffers offers = this.getOffers();
