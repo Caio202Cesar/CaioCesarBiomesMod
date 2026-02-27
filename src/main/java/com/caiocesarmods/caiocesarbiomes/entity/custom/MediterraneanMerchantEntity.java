@@ -94,6 +94,13 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 1, 20, 0.4F
         ));
 
+        // 14 Wheat -> 1 Fig Jam
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 14),
+                new ItemStack(ModItems.FIG_JAM.get(), 1),
+                3, 20, 0.4F
+        ));
+
         ///Arbutus
         // 64 Arbutus -> 5 Iron Ingot
         offers.add(new MerchantOffer(
@@ -123,7 +130,14 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 1, 20, 0.4F
         ));
 
-        //Oregano plant
+        // 14 Wheat -> 1 Arbutus Jam
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 14),
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 1),
+                3, 20, 0.4F
+        ));
+
+        ///Oregano plant
         offers.add(new MerchantOffer(
                 new ItemStack(ModPlants.OREGANO.get(), 20),
                 new ItemStack(Items.EMERALD, 1),
