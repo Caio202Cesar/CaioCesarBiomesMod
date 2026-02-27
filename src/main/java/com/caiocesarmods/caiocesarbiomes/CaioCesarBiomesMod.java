@@ -10,6 +10,7 @@ import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.client.renderer.entity.MerchantVillagerRenderer;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
@@ -18,14 +19,18 @@ import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.entity.VillagerRenderer;
+import net.minecraft.resources.IReloadableResourceManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -64,8 +69,6 @@ public class CaioCesarBiomesMod
         ModContainers.register(eventBus);
         ModRecipeTypes.register(eventBus);
         ModSoundEvents.register(eventBus);
-
-        ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -129,6 +132,7 @@ public class CaioCesarBiomesMod
         MinecraftForge.EVENT_BUS.register(this);
 
         ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModEntityTypes.ENTITY_TYPES.register(eventBus);
 
     }
 
@@ -150,6 +154,11 @@ public class CaioCesarBiomesMod
             ScreenManager.registerFactory(ModContainers.BUTTER_MIXER_CONTAINER.get(), ButterMixerScreen::new);
 
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(
+                ModEntityTypes.MERCHANT.get(),
+                MerchantVillagerRenderer::new
+        );
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
