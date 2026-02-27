@@ -23,10 +23,10 @@ import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 
-public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
+public class DesertMerchantEntity extends AbstractVillagerEntity {
     private int despawnDelay = 24000; // 1 Minecraft day
 
-    public MediterraneanMerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
+    public DesertMerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
         super(type, worldIn);
         this.forceSpawn = true;
     }
@@ -66,37 +66,49 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
     protected void populateTradeData() {
         MerchantOffers offers = this.getOffers();
 
-        ///Fig
-        // 64 Fig -> 5 Iron Ingot
+        //Date
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIGFRUIT.get(), 64),
-                new ItemStack(Items.IRON_INGOT, 5),
+                new ItemStack(ModItems.DATES.get(), 64),
+                new ItemStack(Items.EMERALD, 1),
                 10, 5, 0.2F
         ));
 
+        //Pistachio
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.WHITE_FIG.get(), 64),
-                new ItemStack(Items.DIAMOND, 5),
-                2, 5, 0.5F
+                new ItemStack(ModItems.PISTACHIO.get(), 64),
+                new ItemStack(Items.NETHERITE_SCRAP, 5),
+                1, 40, 1F
         ));
 
-        // 15 Fig Jams -> 3 Emerald
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 15),
+                new ItemStack(Items.DIAMOND, 3),
+                new ItemStack(ModItems.PISTACHIO.get(), 32),
+                3, 2, 0.4F
+        ));
+
+        //Pistachio cream
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.EMERALD, 5),
+                new ItemStack(ModItems.PISTACHIO_CREAM.get(), 1),
+                3, 40, 1F
+        ));
+
+        /// Almond
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.UNRIPE_ALMOND.get(), 64),
                 new ItemStack(Items.EMERALD, 3),
                 2, 10, 0.2F
         ));
 
-        // 30 Fig Jams -> 1 Diamond
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 30),
+                new ItemStack(ModItems.GREEN_ALMOND_JAM.get(), 30),
                 new ItemStack(Items.DIAMOND, 1),
                 1, 20, 0.5F
         ));
 
         // 50 Fig Jams -> 1 Nether Scrap
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 50),
+                new ItemStack(ModItems.GREEN_ALMOND_JAM.get(), 50),
                 new ItemStack(Items.NETHERITE_SCRAP, 1),
                 1, 40, 0.7F
         ));
@@ -262,19 +274,6 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 new ItemStack(Items.EMERALD, 5),
                 new ItemStack(ModPlants.BAY_LAUREL_FLOWERING.get(), 2),
                 2, 20, 0.5F
-        ));
-
-        //Carob
-        offers.add(new MerchantOffer(
-                new ItemStack(Items.PUMPKIN_SEEDS, 15),
-                new ItemStack(ModItems.CAROB_BEANS.get(), 15),
-                10, 20, 0.5F
-        ));
-
-        offers.add(new MerchantOffer(
-                new ItemStack(ModItems.CAROB_BEANS.get(), 64),
-                new ItemStack(Items.EMERALD, 1),
-                1, 20, 0.4F
         ));
     }
 
