@@ -16,6 +16,6 @@ public class ModWorldEvents {
         ModPlantGeneration.generatePlants(event);
         ModTreeGeneration.generateTrees(event);
         ModOreGeneration.generateOres(event);
-        ModEntityGeneration.onEntitySpawn(event);
+        //ModEntityGeneration.onEntitySpawn(event);
     }
 }

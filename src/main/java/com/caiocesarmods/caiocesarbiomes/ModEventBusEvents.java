@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
+import com.caiocesarmods.caiocesarbiomes.entity.custom.MerchantEntity;
 import com.caiocesarmods.caiocesarbiomes.item.custom.ModSpawnEgg;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.event.RegistryEvent;
@@ -12,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.MERCHANT.get(), MerchantEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.MERCHANT.get(), MerchantEntity.registerAttributes().create());
     }
 
     @SubscribeEvent
