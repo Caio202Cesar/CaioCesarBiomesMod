@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.entity.custom;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
@@ -70,35 +71,35 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
         offers.add(new MerchantOffer(
                 new ItemStack(ModItems.FIGFRUIT.get(), 64),
                 new ItemStack(Items.IRON_INGOT, 5),
-                10, 5, 0.05F
+                10, 5, 0.2F
         ));
 
-        // 10 Fig Jams -> 3 Emerald
+        // 15 Fig Jams -> 3 Emerald
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 10),
+                new ItemStack(ModItems.FIG_JAM.get(), 15),
                 new ItemStack(Items.EMERALD, 3),
-                3, 10, 0.2F
+                2, 10, 0.2F
         ));
 
-        // 20 Fig Jams -> 1 Diamond
+        // 30 Fig Jams -> 1 Diamond
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 64),
+                new ItemStack(ModItems.FIG_JAM.get(), 30),
                 new ItemStack(Items.DIAMOND, 1),
-                1, 20, 0.4F
+                1, 20, 0.5F
         ));
 
-        // 30 Fig Jams -> 1 Nether Scrap
+        // 50 Fig Jams -> 1 Nether Scrap
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIG_JAM.get(), 64),
+                new ItemStack(ModItems.FIG_JAM.get(), 50),
                 new ItemStack(Items.NETHERITE_SCRAP, 1),
-                1, 20, 0.4F
+                1, 40, 0.7F
         ));
 
         // 14 Wheat -> 1 Fig Jam
         offers.add(new MerchantOffer(
                 new ItemStack(Items.WHEAT, 14),
                 new ItemStack(ModItems.FIG_JAM.get(), 1),
-                3, 20, 0.4F
+                3, 2, 0.4F
         ));
 
         ///Arbutus
@@ -106,35 +107,28 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
         offers.add(new MerchantOffer(
                 new ItemStack(ModItems.ARBUTUS.get(), 64),
                 new ItemStack(Items.IRON_INGOT, 5),
-                10, 5, 0.05F
+                10, 5, 0.2F
         ));
 
-        // 10 Arbutus Jams -> 3 Emerald
+        // 30 Arbutus Jams -> 1 Diamond
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.ARBUTUS_JAM.get(), 10),
-                new ItemStack(Items.EMERALD, 3),
-                3, 10, 0.2F
-        ));
-
-        // 20 Arbutus Jams -> 1 Diamond
-        offers.add(new MerchantOffer(
-                new ItemStack(ModItems.ARBUTUS_JAM.get(), 64),
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 30),
                 new ItemStack(Items.DIAMOND, 1),
-                1, 20, 0.4F
+                1, 20, 0.5F
         ));
 
-        // 30 Arbutus Jams -> 1 Nether Scrap
+        // 50 Arbutus Jams -> 1 Nether Scrap
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.ARBUTUS_JAM.get(), 64),
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 50),
                 new ItemStack(Items.NETHERITE_SCRAP, 1),
-                1, 20, 0.4F
+                1, 40, 0.7F
         ));
 
         // 14 Wheat -> 1 Arbutus Jam
         offers.add(new MerchantOffer(
                 new ItemStack(Items.WHEAT, 14),
                 new ItemStack(ModItems.ARBUTUS_JAM.get(), 1),
-                3, 20, 0.4F
+                3, 2, 0.4F
         ));
 
         ///Oregano plant
@@ -161,6 +155,20 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 new ItemStack(Items.WHEAT_SEEDS, 20),
                 new ItemStack(ModItems.OREGANO_STALK.get(), 15),
                 10, 20, 0.2F
+        ));
+
+        //Canary Date Sapling
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.EMERALD, 3),
+                new ItemStack(TreeBlocks.CANARY_DATE_SAPLING.get(), 1),
+                4, 20, 0.7F
+        ));
+
+        //Fig Sapling
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 10),
+                new ItemStack(TreeBlocks.FIG_SAPLING.get(), 1),
+                5, 20, 0.3F
         ));
     }
 
