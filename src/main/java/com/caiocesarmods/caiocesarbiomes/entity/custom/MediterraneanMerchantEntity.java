@@ -144,11 +144,23 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 1, 20, 0.2F
         ));
 
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT_SEEDS, 10),
+                new ItemStack(ModPlants.OREGANO.get(), 3),
+                10, 20, 0.2F
+        ));
+
         //Oregano stalk
         offers.add(new MerchantOffer(
                 new ItemStack(ModItems.OREGANO_STALK.get(), 64),
                 new ItemStack(Items.EMERALD, 1),
-                2, 20, 0.4F
+                1, 20, 0.4F
+        ));
+
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT_SEEDS, 20),
+                new ItemStack(ModItems.OREGANO_STALK.get(), 15),
+                10, 20, 0.2F
         ));
     }
 
