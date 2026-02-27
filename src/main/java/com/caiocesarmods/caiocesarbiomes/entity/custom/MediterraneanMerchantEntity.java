@@ -74,6 +74,12 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 10, 5, 0.2F
         ));
 
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.WHITE_FIG.get(), 64),
+                new ItemStack(Items.DIAMOND, 5),
+                2, 5, 0.5F
+        ));
+
         // 15 Fig Jams -> 3 Emerald
         offers.add(new MerchantOffer(
                 new ItemStack(ModItems.FIG_JAM.get(), 15),
