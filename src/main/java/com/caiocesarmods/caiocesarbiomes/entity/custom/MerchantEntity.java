@@ -5,31 +5,47 @@ import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.MerchantOffer;
 import net.minecraft.item.MerchantOffers;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 
 public class MerchantEntity extends AbstractVillagerEntity {
-
+    @Nullable
+    private BlockPos wanderTarget;
     private int despawnDelay = 24000; // 1 Minecraft day
+
+    public MerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
+        super(type, worldIn);
+        this.forceSpawn = true;
+    }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new SwimGoal(this));
+        this.goalSelector.addGoal(1, new TradeWithPlayerGoal(this));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, ZombieEntity.class, 8.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, EvokerEntity.class, 12.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, VindicatorEntity.class, 8.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, VexEntity.class, 8.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, PillagerEntity.class, 15.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, IllusionerEntity.class, 12.0F, 0.5D, 0.5D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, ZoglinEntity.class, 10.0F, 0.5D, 0.5D));
         this.goalSelector.addGoal(1, new PanicGoal(this, 0.8D));
+        this.goalSelector.addGoal(1, new LookAtCustomerGoal(this));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 0.6D));
         this.goalSelector.addGoal(3, new LookAtGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-    }
-
-    public MerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
-        super(type, worldIn);
     }
 
     @Override
@@ -37,7 +53,7 @@ public class MerchantEntity extends AbstractVillagerEntity {
 
     }
 
-    //Recipes, like jams, are expensive = diamond, netherite. Raw products, like fruits, are cheap = iron
+    //Recipes, like jams, are expensive = diamond, netherite (never). Raw products, like fruits, are cheap = iron
     @Override
     protected void populateTradeData() {
         MerchantOffers offers = this.getOffers();
@@ -64,6 +80,28 @@ public class MerchantEntity extends AbstractVillagerEntity {
         ));
     }
 
+    public ActionResultType getEntityInteractionResult(PlayerEntity playerIn, Hand hand) {
+        ItemStack itemstack = playerIn.getHeldItem(hand);
+        if (itemstack.getItem() != ModItems.MERCHANT_SPAWN_EGG.get() && this.isAlive() && !this.hasCustomer() && !this.isChild()) {
+            if (hand == Hand.MAIN_HAND) {
+                playerIn.addStat(Stats.TALKED_TO_VILLAGER);
+            }
+
+            if (this.getOffers().isEmpty()) {
+                return ActionResultType.func_233537_a_(this.world.isRemote);
+            } else {
+                if (!this.world.isRemote) {
+                    this.setCustomer(playerIn);
+                    this.openMerchantContainer(playerIn, this.getDisplayName(), 1);
+                }
+
+                return ActionResultType.func_233537_a_(this.world.isRemote);
+            }
+        } else {
+            return super.getEntityInteractionResult(playerIn, hand);
+        }
+    }
+
     @Override
     public void tick() {
         super.tick();
@@ -87,4 +125,9 @@ public class MerchantEntity extends AbstractVillagerEntity {
     public AgeableEntity createChild(ServerWorld world, AgeableEntity mate) {
         return null;
     }
+
+    public boolean hasXPBar() {
+        return false;
+    }
+
 }

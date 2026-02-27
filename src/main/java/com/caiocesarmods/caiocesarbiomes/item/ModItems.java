@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.item;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.CalabashCropBlock;
+import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
 import com.caiocesarmods.caiocesarbiomes.item.custom.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -619,6 +620,11 @@ public class ModItems {
     public static final RegistryObject<Item> POISONED_SWORD_NETHERITE = ITEMS.register("netherite_poisoned_sword",
             () -> new PoisonSwordItem(ItemTier.NETHERITE, 3, -2.4F,
                     new Item.Properties().group(ItemGroup.COMBAT)));
+
+    //Mobs
+    public static final RegistryObject<ModSpawnEgg> MERCHANT_SPAWN_EGG = ITEMS.register("merchant_spawn_egg",
+            () -> new ModSpawnEgg(ModEntityTypes.MERCHANT, 0xC49F53, 0x256606,
+                    new Item.Properties().group(ItemGroup.MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

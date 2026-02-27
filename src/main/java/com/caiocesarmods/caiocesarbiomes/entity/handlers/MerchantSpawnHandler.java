@@ -62,6 +62,7 @@ public class MerchantSpawnHandler {
         // Spawn llama caravan
         for (int i = 0; i < 2; i++) {
             LlamaEntity llama = EntityType.LLAMA.create(world);
+            assert llama != null;
             llama.setPosition(pos.getX() + i + 1, pos.getY(), pos.getZ());
             llama.setLeashHolder(merchant, true);
             world.addEntity(llama);
