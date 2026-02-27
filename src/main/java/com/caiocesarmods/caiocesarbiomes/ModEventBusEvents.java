@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.MERCHANT.get(), MerchantEntity.registerAttributes().create());
+        event.put(ModEntityTypes.MERCHANT.get(), MerchantEntity.setCustomAttributes().create());
     }
 
     @SubscribeEvent
