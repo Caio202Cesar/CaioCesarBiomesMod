@@ -102,6 +102,55 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 3, 2, 0.4F
         ));
 
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.CACTUS, 15),
+                new ItemStack(ModItems.FIGFRUIT.get(), 35),
+                5, 2, 0.4F
+        ));
+
+        ///Pomegranate
+        // 64 Fig -> 5 Iron Ingot
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.POMEGRANATE.get(), 64),
+                new ItemStack(Items.IRON_INGOT, 5),
+                10, 5, 0.2F
+        ));
+
+        // 15 Fig Jams -> 3 Emerald
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.POMEGRANATE_JAM.get(), 15),
+                new ItemStack(Items.EMERALD, 3),
+                2, 10, 0.2F
+        ));
+
+        // 30 Fig Jams -> 1 Diamond
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.POMEGRANATE_JAM.get(), 30),
+                new ItemStack(Items.DIAMOND, 1),
+                1, 20, 0.5F
+        ));
+
+        // 50 Fig Jams -> 1 Nether Scrap
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.POMEGRANATE_JAM.get(), 50),
+                new ItemStack(Items.NETHERITE_SCRAP, 1),
+                1, 40, 0.7F
+        ));
+
+        // 14 Wheat -> 1 Fig Jam
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 14),
+                new ItemStack(ModItems.POMEGRANATE_JAM.get(), 1),
+                3, 2, 0.4F
+        ));
+
+        // 15 Carrots -> 15 Pomegranate
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.BEETROOT, 15),
+                new ItemStack(ModItems.POMEGRANATE.get(), 35),
+                5, 2, 0.4F
+        ));
+
         ///Arbutus
         // 64 Arbutus -> 5 Iron Ingot
         offers.add(new MerchantOffer(
@@ -131,6 +180,20 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 3, 2, 0.4F
         ));
 
+        ///Dates
+        // 64 Dates -> 1 Emerald
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.DATES.get(), 64),
+                new ItemStack(Items.EMERALD, 1),
+                10, 5, 0.2F
+        ));
+
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 35),
+                new ItemStack(ModItems.DATES.get(), 64),
+                10, 5, 0.2F
+        ));
+
         ///Oregano plant
         offers.add(new MerchantOffer(
                 new ItemStack(ModPlants.OREGANO.get(), 20),
@@ -157,18 +220,42 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
                 10, 20, 0.2F
         ));
 
-        //Canary Date Sapling
+        //Saplings
         offers.add(new MerchantOffer(
                 new ItemStack(Items.EMERALD, 3),
                 new ItemStack(TreeBlocks.CANARY_DATE_SAPLING.get(), 1),
                 4, 20, 0.7F
         ));
 
-        //Fig Sapling
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 25),
+                new ItemStack(TreeBlocks.FIG_SAPLING.get(), 1),
+                3, 20, 0.3F
+        ));
+
         offers.add(new MerchantOffer(
                 new ItemStack(Items.WHEAT, 10),
-                new ItemStack(TreeBlocks.FIG_SAPLING.get(), 1),
-                5, 20, 0.3F
+                new ItemStack(TreeBlocks.HOLM_OAK_SAPLING.get(), 1),
+                5, 20, 0.01F
+        ));
+
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 10),
+                new ItemStack(TreeBlocks.CORK_OAK_SAPLING.get(), 1),
+                5, 20, 0.01F
+        ));
+
+        /// Other plants
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.EMERALD, 5),
+                new ItemStack(ModPlants.BAY_LAUREL.get(), 2),
+                2, 20, 0.5F
+        ));
+
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.EMERALD, 5),
+                new ItemStack(ModPlants.BAY_LAUREL_FLOWERING.get(), 2),
+                2, 20, 0.5F
         ));
     }
 
