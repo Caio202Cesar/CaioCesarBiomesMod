@@ -17,7 +17,7 @@ public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event) {
 
         addEntityToSpecificBiomes(event, ModEntityTypes.MEDITERRANEAN_MERCHANT.get(), 50, 4, 10,
-                OliveGroveBiome.OLIVE_GROVE,
+                "olive_grove",
                 Biomes.BEACH,
                 Biomes.BIRCH_FOREST);
     }
