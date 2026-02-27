@@ -212,9 +212,9 @@ public class DesertMerchantEntity extends AbstractVillagerEntity {
                 10, 5, 0.2F
         ));
 
-        ///Oregano plant
+        ///Plant
         offers.add(new MerchantOffer(
-                new ItemStack(ModPlants.OREGANO.get(), 20),
+                new ItemStack(ModPlants.BARREL_CACTUS.get(), 5),
                 new ItemStack(Items.EMERALD, 1),
                 1, 20, 0.2F
         ));
@@ -225,54 +225,48 @@ public class DesertMerchantEntity extends AbstractVillagerEntity {
                 10, 20, 0.2F
         ));
 
-        //Oregano stalk
+        //Cactus
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.OREGANO_STALK.get(), 64),
-                new ItemStack(Items.EMERALD, 1),
+                new ItemStack(Items.WHEAT, 25),
+                new ItemStack(Items.CACTUS, 32),
                 1, 20, 0.4F
-        ));
-
-        offers.add(new MerchantOffer(
-                new ItemStack(Items.WHEAT_SEEDS, 20),
-                new ItemStack(ModItems.OREGANO_STALK.get(), 15),
-                10, 20, 0.2F
         ));
 
         //Saplings
         offers.add(new MerchantOffer(
                 new ItemStack(Items.EMERALD, 3),
-                new ItemStack(TreeBlocks.CANARY_DATE_SAPLING.get(), 1),
-                4, 20, 0.7F
+                new ItemStack(TreeBlocks.DATE_SAPLING.get(), 1),
+                5, 20, 0.7F
         ));
 
         offers.add(new MerchantOffer(
-                new ItemStack(Items.WHEAT, 25),
-                new ItemStack(TreeBlocks.FIG_SAPLING.get(), 1),
-                3, 20, 0.3F
-        ));
-
-        offers.add(new MerchantOffer(
-                new ItemStack(Items.WHEAT, 10),
-                new ItemStack(TreeBlocks.HOLM_OAK_SAPLING.get(), 1),
-                5, 20, 0.01F
+                new ItemStack(Items.DIAMOND, 3),
+                new ItemStack(TreeBlocks.PISTACHIO_SAPLING.get(), 1),
+                5, 50, 1.5F
         ));
 
         offers.add(new MerchantOffer(
                 new ItemStack(Items.WHEAT, 10),
-                new ItemStack(TreeBlocks.CORK_OAK_SAPLING.get(), 1),
+                new ItemStack(TreeBlocks.MESQUITE_SAPLING.get(), 1),
                 5, 20, 0.01F
+        ));
+
+        offers.add(new MerchantOffer(
+                new ItemStack(Items.WHEAT, 35),
+                new ItemStack(TreeBlocks.ALMOND_SAPLING.get(), 1),
+                5, 20, 0.7F
         ));
 
         /// Other plants
         offers.add(new MerchantOffer(
-                new ItemStack(Items.EMERALD, 5),
-                new ItemStack(ModPlants.BAY_LAUREL.get(), 2),
+                new ItemStack(Items.IRON_INGOT, 10),
+                new ItemStack(ModPlants.CREOSOTE_BUSH.get(), 2),
                 2, 20, 0.5F
         ));
 
         offers.add(new MerchantOffer(
-                new ItemStack(Items.EMERALD, 5),
-                new ItemStack(ModPlants.BAY_LAUREL_FLOWERING.get(), 2),
+                new ItemStack(Items.IRON_INGOT, 10),
+                new ItemStack(ModPlants.CREOSOTE_FLOWERING_BUSH.get(), 2),
                 2, 20, 0.5F
         ));
     }
