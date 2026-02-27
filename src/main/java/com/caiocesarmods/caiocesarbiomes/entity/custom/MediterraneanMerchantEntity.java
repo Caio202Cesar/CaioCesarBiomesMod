@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.entity.custom;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
@@ -16,16 +17,15 @@ import net.minecraft.item.MerchantOffer;
 import net.minecraft.item.MerchantOffers;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.*;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 
-public class MerchantEntity extends AbstractVillagerEntity {
+public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
     private int despawnDelay = 24000; // 1 Minecraft day
 
-    public MerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
+    public MediterraneanMerchantEntity(EntityType<? extends AbstractVillagerEntity> type, World worldIn) {
         super(type, worldIn);
         this.forceSpawn = true;
     }
@@ -65,31 +65,82 @@ public class MerchantEntity extends AbstractVillagerEntity {
     protected void populateTradeData() {
         MerchantOffers offers = this.getOffers();
 
-        // 32 Mango -> 2 Emeralds
+        ///Fig
+        // 64 Fig -> 5 Iron Ingot
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.MANGO.get(), 32),
-                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(ModItems.FIGFRUIT.get(), 64),
+                new ItemStack(Items.IRON_INGOT, 5),
                 10, 5, 0.05F
         ));
 
-        // 64 Cloudberry -> 1 Diamond
+        // 10 Fig Jams -> 3 Emerald
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.CLOUDBERRY.get(), 64),
-                new ItemStack(Items.DIAMOND, 1),
-                5, 10, 0.2F
+                new ItemStack(ModItems.FIG_JAM.get(), 10),
+                new ItemStack(Items.EMERALD, 3),
+                3, 10, 0.2F
         ));
 
-        // 64 Pequi -> 1 Netherite Scrap
+        // 20 Fig Jams -> 1 Diamond
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.CLOUDBERRY.get(), 64),
+                new ItemStack(ModItems.FIG_JAM.get(), 64),
+                new ItemStack(Items.DIAMOND, 1),
+                1, 20, 0.4F
+        ));
+
+        // 30 Fig Jams -> 1 Nether Scrap
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.FIG_JAM.get(), 64),
                 new ItemStack(Items.NETHERITE_SCRAP, 1),
-                3, 20, 0.4F
+                1, 20, 0.4F
+        ));
+
+        ///Arbutus
+        // 64 Arbutus -> 5 Iron Ingot
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.ARBUTUS.get(), 64),
+                new ItemStack(Items.IRON_INGOT, 5),
+                10, 5, 0.05F
+        ));
+
+        // 10 Arbutus Jams -> 3 Emerald
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 10),
+                new ItemStack(Items.EMERALD, 3),
+                3, 10, 0.2F
+        ));
+
+        // 20 Arbutus Jams -> 1 Diamond
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 64),
+                new ItemStack(Items.DIAMOND, 1),
+                1, 20, 0.4F
+        ));
+
+        // 30 Arbutus Jams -> 1 Nether Scrap
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.ARBUTUS_JAM.get(), 64),
+                new ItemStack(Items.NETHERITE_SCRAP, 1),
+                1, 20, 0.4F
+        ));
+
+        //Oregano plant
+        offers.add(new MerchantOffer(
+                new ItemStack(ModPlants.OREGANO.get(), 20),
+                new ItemStack(Items.EMERALD, 1),
+                1, 20, 0.2F
+        ));
+
+        //Oregano stalk
+        offers.add(new MerchantOffer(
+                new ItemStack(ModItems.OREGANO_STALK.get(), 64),
+                new ItemStack(Items.EMERALD, 1),
+                2, 20, 0.4F
         ));
     }
 
     public ActionResultType getEntityInteractionResult(PlayerEntity playerIn, Hand hand) {
         ItemStack itemstack = playerIn.getHeldItem(hand);
-        if (itemstack.getItem() != ModItems.MERCHANT_SPAWN_EGG.get() && this.isAlive() && !this.hasCustomer() && !this.isChild()) {
+        if (itemstack.getItem() != ModItems.MEDITERRANEAN_MERCHANT_SPAWN_EGG.get() && this.isAlive() && !this.hasCustomer() && !this.isChild()) {
             if (hand == Hand.MAIN_HAND) {
                 playerIn.addStat(Stats.TALKED_TO_VILLAGER);
             }

@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.entity.handlers;
 
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
-import com.caiocesarmods.caiocesarbiomes.entity.custom.MerchantEntity;
+import com.caiocesarmods.caiocesarbiomes.entity.custom.MediterraneanMerchantEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.horse.LlamaEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import static com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod.MOD_ID;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
-public class MerchantSpawnHandler {
+public class MediterraneanMerchantSpawnHandler {
     private static int spawnTimer = 0;
 
     @SubscribeEvent
@@ -50,8 +50,8 @@ public class MerchantSpawnHandler {
 
     private static void spawnMerchant(ServerWorld world, BlockPos pos) {
 
-        MerchantEntity merchant =
-                ModEntityTypes.MERCHANT.get().create(world);
+        MediterraneanMerchantEntity merchant =
+                ModEntityTypes.MEDITERRANEAN_MERCHANT.get().create(world);
 
         if (merchant == null) return;
 

@@ -622,8 +622,8 @@ public class ModItems {
                     new Item.Properties().group(ItemGroup.COMBAT)));
 
     //Mobs
-    public static final RegistryObject<ModSpawnEgg> MERCHANT_SPAWN_EGG = ITEMS.register("merchant_spawn_egg",
-            () -> new ModSpawnEgg(ModEntityTypes.MERCHANT, 0xC49F53, 0x256606,
+    public static final RegistryObject<ModSpawnEgg> MEDITERRANEAN_MERCHANT_SPAWN_EGG = ITEMS.register("mediterranean_merchant_spawn_egg",
+            () -> new ModSpawnEgg(ModEntityTypes.MEDITERRANEAN_MERCHANT, 0xC49F53, 0x256606,
                     new Item.Properties().group(ItemGroup.MISC)));
 
     public static void register(IEventBus eventBus) {
