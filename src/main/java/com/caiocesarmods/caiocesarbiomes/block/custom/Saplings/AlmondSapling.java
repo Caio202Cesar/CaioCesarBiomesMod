@@ -44,33 +44,40 @@ public class AlmondSapling extends SaplingBlock {
     //Hardy to zone 5 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+
+        Biome biome = world.getBiome(pos);
+        float biomeTemp = biome.getTemperature(pos);
+
         float minTemp = 0.5f;
         float maxTemp = 0.89f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
+        boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+
+        // 🌱 Growth logic
+        if (validTemp && isDry) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.5F;
+        boolean noDry = biome.getPrecipitation() == Biome.RainType.RAIN;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || noDry ) {
             return false;
         }
 
@@ -86,7 +93,10 @@ public class AlmondSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
+
+            Biome biome = worldIn.getBiome(pos);
+            float temp = biome.getTemperature(pos);
+
             float minTemp = 0.5f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
@@ -103,6 +113,14 @@ public class AlmondSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (biome.getPrecipitation() == Biome.RainType.RAIN) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too wet to this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:

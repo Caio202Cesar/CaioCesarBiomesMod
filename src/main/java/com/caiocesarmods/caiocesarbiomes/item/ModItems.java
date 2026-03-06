@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.item;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.custom.crops.CalabashCropBlock;
+import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
 import com.caiocesarmods.caiocesarbiomes.item.custom.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -147,6 +148,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.ACEROLA)));
     public static final RegistryObject<Item> PINK_IVORY_BERRIES = ITEMS.register("pink_ivory_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PINK_IVORY_BERRIES)));
+    public static final RegistryObject<Item> TROPICAL_ALMOND = ITEMS.register("tropical_almond",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.TROPICAL_ALMOND)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
@@ -595,6 +598,8 @@ public class ModItems {
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CCB_GROUP).maxDamage(238)));
     public static final RegistryObject<Item> NUTCRACKER = ITEMS.register("nutcracker",
             () -> new NutcrackerItem(new Item.Properties().group(ModItemGroup.CCB_GROUP).maxDamage(238)));
+    public static final RegistryObject<Item> MALABAR_SILK_FLOSS = ITEMS.register("malabar_silk_cotton",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",
@@ -615,6 +620,14 @@ public class ModItems {
     public static final RegistryObject<Item> POISONED_SWORD_NETHERITE = ITEMS.register("netherite_poisoned_sword",
             () -> new PoisonSwordItem(ItemTier.NETHERITE, 3, -2.4F,
                     new Item.Properties().group(ItemGroup.COMBAT)));
+
+    //Mobs
+    public static final RegistryObject<ModSpawnEgg> MEDITERRANEAN_MERCHANT_SPAWN_EGG = ITEMS.register("mediterranean_merchant_spawn_egg",
+            () -> new ModSpawnEgg(ModEntityTypes.MEDITERRANEAN_MERCHANT, 0xC49F53, 0x256606,
+                    new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<ModSpawnEgg> DESERT_MERCHANT_SPAWN_EGG = ITEMS.register("desert_merchant_spawn_egg",
+            () -> new ModSpawnEgg(ModEntityTypes.DESERT_MERCHANT, 0x555555, 0xb38e65,
+                    new Item.Properties().group(ItemGroup.MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

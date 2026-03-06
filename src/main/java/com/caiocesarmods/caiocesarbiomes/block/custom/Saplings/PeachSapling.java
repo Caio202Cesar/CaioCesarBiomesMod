@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
-import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeat;
-import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeatRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -43,16 +43,16 @@ public class PeachSapling extends SaplingBlock {
 
     }
 
+    //Hardy from zone 5 to 10 - this mimics the variation of chiling hours of peachs, going from high to low: https://www.gardenia.net/genus/prunus-persica
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeatRegistry.get(world, pos);
         return heat == SummerHeat.HOT;
     }
 
-    //Hardy to zone 4 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.4f;
+        float minTemp = 0.5f;
         float maxTemp = 0.89f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
@@ -76,7 +76,7 @@ public class PeachSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.89F;
-        boolean tooCold = temp < 0.4F;
+        boolean tooCold = temp < 0.5F;
 
         if (tooHot || tooCold) {
             return false;
@@ -97,7 +97,7 @@ public class PeachSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.4f, maxTemp = 0.89f;
+            float minTemp = 0.5f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(

@@ -1017,6 +1017,30 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    //Only in zone 8/temperate swamp
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PIN_RED_OAK_TREE = register("pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KIWI_PIN_RED_OAK_TREE = register("kiwi_pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CREEPING_FIG_PIN_RED_OAK_TREE = register("creeping_fig_pin_red_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_OAK_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Yew Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
@@ -1546,6 +1570,13 @@ public class TreeFeatures {
 
     //Hawthorn
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAWTHORN_TREE = register("hawthorn_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HAWTHORN_LOG),
+                    new SimpleBlockStateProvider(States.HAWTHORN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPRING_HAWTHORN_TREE = register("spring_hawthorn_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HAWTHORN_LOG),
                     new SimpleBlockStateProvider(States.HAWTHORN_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
@@ -2323,16 +2354,17 @@ public class TreeFeatures {
                             SWEET_CHESTNUT_TREE.withChance(0.3F), RED_OAK_SHRUB.withChance(0.2F), ELDERBERRY_TREE.withChance(0.3F),
                             OAK_SHRUB.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
                             YEW_TREE.withChance(0.4F), YEW_TREE_WITH_IVY.withChance(0.2F), HOLLY_TREE1.withChance(0.19F), HOLLY_TREE2.withChance(0.1F),
-                            HAWTHORN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
+                            SPRING_HAWTHORN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
                             COOPER_BEECH_BIG_TREE.withChance(0.5F), HAZELNUT_TREE.withChance(0.2F), RED_OAK_TREE.withChance(0.089F),
-                            RED_MAPLE_TREE.withChance(0.059F), RED_MAPLE_FANCY_TREE.withChance(0.05F),
-                            BLOB_RED_MAPLE_TREE.withChance(0.09F)),
+                            RED_MAPLE_TREE.withChance(0.059F), RED_MAPLE_FANCY_TREE.withChance(0.05F), ROWAN_TREE1.withChance(0.3F),
+                            ROWAN_TREE2.withChance(0.26F),
+                            BLOB_RED_MAPLE_TREE.withChance(0.09F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)),
                             DARK_OAK_WITH_IVY)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MOUNTAIN_EXTRA_VEGETATION = register("mountain_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLUE_SPRUCE.withChance(0.078F),
-                            HAWTHORN_TREE.withChance(0.012F), ROWAN_TREE1.withChance(0.012F), ROWAN_TREE2.withChance(0.001F),
+                            SPRING_HAWTHORN_TREE.withChance(0.012F), ROWAN_TREE1.withChance(0.012F), ROWAN_TREE2.withChance(0.001F),
                             MOUNTAIN_HEMLOCK_TREE.withChance(0.5F), MOUNTAIN_HEMLOCK_TREE_TALL.withChance(0.5F),
                     SUBALPINE_FIR.withChance(0.7F), JUNIPER_SHRUB.withChance(0.25F), MUGO_PINE_TREE.withChance(0.13F)), MUGO_PINE_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
@@ -2388,11 +2420,11 @@ public class TreeFeatures {
                             PLANE_TREE_WITH_KIWI.withChance(0.09F), ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.1F),
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F), PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
-                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), MEGA_BALD_CYPRESS.withChance(0.3F),
-                            SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F),
-                            SPANISH_MOSS_BALD_CYPRESS.withChance(0.2F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
+                            SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), SOUTHERN_LIVE_OAK_TREE.withChance(0.4F),
+                            SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F),
+                            BALD_CYPRESS.withChance(0.12F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F), WEEPING_WILLOW_FANCY.withChance(0.3F)),
-                            BALD_CYPRESS))
+                            SPANISH_MOSS_BALD_CYPRESS))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
@@ -2400,8 +2432,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             ROWAN_TREE2.withChance(0.09F), ROWAN_TREE1.withChance(0.13F), HOLLY_TREE2.withChance(0.057F),
                             HOLLY_TREE1.withChance(0.067F), BLACK_POPLAR_FANCY_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.1F),
-                            JUNIPER_SHRUB.withChance(0.17F),
-                            ELDERBERRY_TREE.withChance(0.1F), HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
+                            JUNIPER_SHRUB.withChance(0.17F), ELDERBERRY_TREE.withChance(0.1F), SPRING_HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
@@ -2410,7 +2441,7 @@ public class TreeFeatures {
                             WHITE_CRABAPPLE_TREE.withChance(0.3F), ASPEN_TREE.withChance(0.1F), LOMBARDY_POPLAR_TREE.withChance(0.05F),
                             PINK_CRABAPPLE_TREE.withChance(0.3F), RED_CRABAPPLE_TREE.withChance(0.077F),
                             WALNUT_TREE.withChance(0.25F), WALNUT_FANCY_TREE.withChance(0.3F), RED_OAK_TREE.withChance(0.2F),
-                            RED_OAK_FANCY_TREE.withChance(0.14F), HAWTHORN_TREE.withChance(0.12F), ROWAN_TREE2.withChance(0.12F), ROWAN_TREE1.withChance(0.15F),
+                            RED_OAK_FANCY_TREE.withChance(0.14F), SPRING_HAWTHORN_TREE.withChance(0.12F), ROWAN_TREE2.withChance(0.12F), ROWAN_TREE1.withChance(0.15F),
                             BLACK_POPLAR_FANCY_TREE.withChance(0.4F), JUNIPER_SHRUB.withChance(0.07F), CHERRY_PLUM_FANCY_TREE.withChance(0.1F),
                             CHERRY_PLUM_TREE.withChance(0.1F), HAZELNUT_TREE.withChance(0.1F), PLANE_TREE.withChance(0.25F)),
                             PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -2429,8 +2460,8 @@ public class TreeFeatures {
                             PLANE_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.05F), BLACK_POPLAR_FANCY_TREE.withChance(0.091F),
                             PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            SWEET_CHESTNUT_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F), ROWAN_TREE1.withChance(0.2F),
-                            ROWAN_TREE2.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F)),
+                            SWEET_CHESTNUT_TREE.withChance(0.2F), SPRING_HAWTHORN_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F),
+                            PLANE_TREE.withChance(0.6F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)),
                             OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
@@ -2519,8 +2550,8 @@ public class TreeFeatures {
                             RED_OAK_FANCY_TREE.withChance(0.3F), HAZELNUT_TREE.withChance(0.23F), RED_MAPLE_TREE.withChance(0.2F),
                             RED_MAPLE_TREE_WITH_KIWI.withChance(0.072F), OAK_TREE_WITH_KIWI.withChance(0.031F),
                             RED_MAPLE_FANCY_TREE.withChance(0.2F), BLOB_RED_MAPLE_TREE.withChance(0.3F),
-                            HAWTHORN_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F),
-                            ROWAN_TREE1.withChance(0.2F), ROWAN_TREE2.withChance(0.15F), HAWTHORN_TREE.withChance(0.3F)), RED_OAK_TREE))
+                            SPRING_HAWTHORN_TREE.withChance(0.3F), YEW_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.053F),
+                            ROWAN_TREE1.withChance(0.2F), ROWAN_TREE2.withChance(0.15F)), RED_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 

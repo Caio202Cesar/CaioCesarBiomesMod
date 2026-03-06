@@ -42,7 +42,7 @@ public class OrchidTreeFloweringBranches extends LeavesBlock implements IForgeSh
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for subtropical climates
+        //Pattern for subtropical climates = warmer seasons
         if (temp <= 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
@@ -63,7 +63,8 @@ public class OrchidTreeFloweringBranches extends LeavesBlock implements IForgeSh
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp <= 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        //Exclusive to zone 10
+        if (temp <= 0.89F && temp >= 0.85 && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -74,7 +75,7 @@ public class OrchidTreeFloweringBranches extends LeavesBlock implements IForgeSh
         }
 
         //Pattern for tropical climates = wet season
-        if (temp <= 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -84,7 +85,7 @@ public class OrchidTreeFloweringBranches extends LeavesBlock implements IForgeSh
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp <= 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if (temp >= 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

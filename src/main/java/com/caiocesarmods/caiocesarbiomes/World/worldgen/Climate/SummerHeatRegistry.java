@@ -1,6 +1,5 @@
-package com.caiocesarmods.caiocesarbiomes.Climate;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
-import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;

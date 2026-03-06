@@ -1,8 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
-import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeat;
-import com.caiocesarmods.caiocesarbiomes.Climate.SummerHeatRegistry;
-import com.caiocesarmods.caiocesarbiomes.World.HardinessZones;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.HardinessZones;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -42,13 +42,16 @@ public class HardinessZoneScannerItem extends Item {
             int zone = HardinessZones.getZone(world, pos);
             SummerHeat summerHeat = SummerHeatRegistry.get(world, pos);
             float baseTemp = biome.getTemperature(pos);
+            float downfall = biome.getDownfall();
 
             player.sendMessage(
                     new StringTextComponent(
                             "§aCold Hardiness Zone: §e" + zone +
                                     "\n§aSummer heat: §e" + summerHeat.name() +
                                     "\n§aBiome: §e" + biome.getRegistryName() +
-                                    "\n§aBase temperature: §e" + String.format("%.2f", baseTemp)
+                                    "\n§aBase temperature: §e" + String.format("%.2f", baseTemp) +
+                                    "\n§aDownfall: §e" + String.format("%.2f", downfall)
+
                     ),
                     player.getUniqueID()
             );

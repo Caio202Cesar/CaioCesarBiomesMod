@@ -35,53 +35,42 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         // Only operate in winter
-        if (!"WINTER".equals(Season.getSeason(worldIn.getDayTime())))
-            return;
+        if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
 
-        // Vanilla-style low frequency trigger
-        if (random.nextInt(55) != 0)
-            return;
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        float temp = worldIn.getBiome(pos).getTemperature(pos);
-        boolean underGlass = isUnderGlass(worldIn, pos);
-
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-        // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
-        if (temp >= 0.80F) {
-            setFruiting(worldIn, pos, distance, persistent);
-            return;
-        }
-
-        // --- ZONE 8 and below → No fruit---
-        if (temp <= 0.79F) {
-
-            /*if (underGlass) {
-                // Greenhouse = full fruiting
+            // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
+            if (temp >= 0.80F) {
                 setFruiting(worldIn, pos, distance, persistent);
-            } else {
-                // Outdoors = partial survival
-                if (random.nextInt(4) == 0) {
-                    setFruiting(worldIn, pos, distance, persistent);
-                } else {
-                    setNormal(worldIn, pos, distance, persistent);
-                }
-            }*/
-            setNormal(worldIn, pos, distance, persistent);
-            return;
+                return;
+            }
+
+            // --- ZONE 8 and below → No fruit---
+            if (temp <= 0.79F) {
+                setNormal(worldIn, pos, distance, persistent);
+            }
         }
 
-        // --- ZONE 7 or colder (< 0.75F) - only fruit under glass ---
-        /*if (underGlass) {
-            // Protected greenhouse → fruiting
-            setFruiting(worldIn, pos, distance, persistent);
-        } else {
-            // Outdoor winter damage → blossom kill
+        if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
             setNormal(worldIn, pos, distance, persistent);
-        }*/
+
+        }
+
+        if ("SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            setNormal(worldIn, pos, distance, persistent);
+
+        }
     }
 
     //NOTE: In real life, loquat trees can fruit in hardiness zone 8, but not in every winter.
@@ -109,29 +98,6 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
                         .with(LeavesBlock.PERSISTENT, persistent),
                 3
         );
-    }
-
-    private boolean isUnderGlass(ServerWorld worldIn, BlockPos pos) {
-        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
-
-        while (checkPos.getY() < worldIn.getHeight()) {
-            BlockState stateAbove = worldIn.getBlockState(checkPos);
-
-            if (stateAbove.isAir()) {
-                checkPos.move(Direction.UP);
-                continue;
-            }
-
-            // Accept vanilla and modded glass
-            if (stateAbove.getMaterial() == Material.GLASS) {
-                return true;
-            }
-
-            // Hit something that is not glass → not protected
-            return false;
-        }
-
-        return false;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

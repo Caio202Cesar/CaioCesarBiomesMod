@@ -1588,8 +1588,11 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POHUTUKAWA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> POHUTUKAWA_FLOWERING_LEAVES = registerBlock("pohutukawa_flowering_leaves",
+            () -> new PohutukawaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POHUTUKAWA_LEAVES));
+    public static final RegistryObject<Block> POHUTUKAWA_SPARSE_FLOWERING_LEAVES = registerBlock("pohutukawa_sparse_flowering_leaves",
             () -> new PohutukawaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POHUTUKAWA_LEAVES));
     public static final RegistryObject<Block> POHUTUKAWA_SAPLING = registerBlock("pohutukawa_sapling",
@@ -1672,6 +1675,9 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_FLOWERING_BRANCHES));
     public static final RegistryObject<Block> RED_KAPOK_FLOWERING_BRANCHES = registerBlock("red_kapok_flowering_branches",
             () -> new RedKapokFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_FRUITING_LEAVES));
+    public static final RegistryObject<Block> RED_KAPOK_FRUITING_LEAVES = registerBlock("red_kapok_fruiting_leaves",
+            () -> new RedKapokFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_LEAVES));
     public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("red_kapok_sapling",
             RedKapokSapling::new);

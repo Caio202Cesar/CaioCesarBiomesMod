@@ -113,6 +113,7 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.POISON_SAP.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.LAVENDER_BUNCH.get(), 0.5F);
             CompostingHelper.registerCompostable(ModItems.EUCALYPTUS_LEAF.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.TROPICAL_ALMOND.get(), 0.3F);
 
         });
     }

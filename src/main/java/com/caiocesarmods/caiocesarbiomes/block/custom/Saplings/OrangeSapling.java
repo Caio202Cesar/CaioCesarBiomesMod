@@ -37,14 +37,6 @@ public class OrangeSapling extends SaplingBlock {
 
     }
 
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param world
-     * @param pos
-     * @param random
-     */
     //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
