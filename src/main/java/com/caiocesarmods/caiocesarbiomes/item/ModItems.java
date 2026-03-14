@@ -628,12 +628,7 @@ public class ModItems {
     public static final RegistryObject<ModSpawnEgg> DESERT_MERCHANT_SPAWN_EGG = ITEMS.register("desert_merchant_spawn_egg",
             () -> new ModSpawnEgg(ModEntityTypes.DESERT_MERCHANT, 0x555555, 0xb38e65,
                     new Item.Properties().group(ItemGroup.MISC))); //arid regions, including sahel
-    public static final RegistryObject<ModSpawnEgg> TAIGA_MERCHANT_SPAWN_EGG = ITEMS.register("taiga_merchant_spawn_egg",
-            () -> new ModSpawnEgg(ModEntityTypes.TAIGA_MERCHANT, 0x555555, 0xb38e65,
-                    new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<ModSpawnEgg> TROPICAL_MERCHANT_SPAWN_EGG = ITEMS.register("tropical_merchant_spawn_egg",
-            () -> new ModSpawnEgg(ModEntityTypes.TROPICAL_MERCHANT, 0x555555, 0xb38e65,
-                    new Item.Properties().group(ItemGroup.MISC))); //savannas, jungles, tropical forest
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
