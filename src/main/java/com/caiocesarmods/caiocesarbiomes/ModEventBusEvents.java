@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
+import com.caiocesarmods.caiocesarbiomes.entity.custom.DesertMerchantEntity;
 import com.caiocesarmods.caiocesarbiomes.entity.custom.MediterraneanMerchantEntity;
 import com.caiocesarmods.caiocesarbiomes.item.custom.ModSpawnEgg;
 import net.minecraft.entity.EntityType;
@@ -14,6 +15,8 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.MEDITERRANEAN_MERCHANT.get(), MediterraneanMerchantEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.DESERT_MERCHANT.get(), DesertMerchantEntity.setCustomAttributes().create());
+
     }
 
     @SubscribeEvent

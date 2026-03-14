@@ -29,20 +29,4 @@ public class ModEntityTypes {
                             .size(0.6F, 1.95F)
                             .trackingRange(8)
                             .build("desert_merchant"));
-
-    public static final RegistryObject<EntityType<TaigaMerchantEntity>> TAIGA_MERCHANT =
-            ENTITY_TYPES.register("taiga_merchant",
-                    () -> EntityType.Builder
-                            .create(TaigaMerchantEntity::new, EntityClassification.CREATURE)
-                            .size(0.6F, 1.95F)
-                            .trackingRange(8)
-                            .build("taiga_merchant"));
-
-    public static final RegistryObject<EntityType<TropicalMerchantEntity>> TROPICAL_MERCHANT =
-            ENTITY_TYPES.register("tropical_merchant",
-                    () -> EntityType.Builder
-                            .create(TropicalMerchantEntity::new, EntityClassification.CREATURE)
-                            .size(0.6F, 1.95F)
-                            .trackingRange(8)
-                            .build("tropical_merchant"));
 }

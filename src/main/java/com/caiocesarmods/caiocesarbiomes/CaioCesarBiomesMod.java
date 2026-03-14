@@ -10,6 +10,7 @@ import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.client.renderer.entity.DesertMerchantRenderer;
 import com.caiocesarmods.caiocesarbiomes.client.renderer.entity.MediterraneanMerchantRenderer;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
@@ -152,10 +153,9 @@ public class CaioCesarBiomesMod
 
         });
 
-        RenderingRegistry.registerEntityRenderingHandler(
-                ModEntityTypes.MEDITERRANEAN_MERCHANT.get(),
-                MediterraneanMerchantRenderer::new
-        );
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MEDITERRANEAN_MERCHANT.get(), MediterraneanMerchantRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DESERT_MERCHANT.get(), DesertMerchantRenderer::new);
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
