@@ -24,7 +24,5 @@ public class MediterraneanMerchantModel extends VillagerModel<MediterraneanMerch
                 10,
                 0.0F
         );
-
-        this.villagerHead.addChild(merchantHat);
     }
 }

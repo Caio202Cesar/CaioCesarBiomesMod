@@ -25,7 +25,5 @@ public class DesertMerchantModel extends VillagerModel<DesertMerchantEntity> {
                 10,
                 0.0F
         );
-
-        this.villagerHead.addChild(merchantHat);
     }
 }
