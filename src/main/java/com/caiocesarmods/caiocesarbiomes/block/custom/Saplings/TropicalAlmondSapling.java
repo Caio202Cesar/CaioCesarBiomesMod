@@ -5,6 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegist
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -135,15 +136,22 @@ public class TropicalAlmondSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class TropicalAlmondTree extends Tree {
+    private static class TropicalAlmondTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.TROPICAL_ALMOND_TREE;
-            } else {
-                return TreeFeatures.TROPICAL_ALMOND_BIG_TREE;
-            }
+            return TreeFeatures.TROPICAL_ALMOND_TREE;
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.TROPICAL_ALMOND_BIG_TREE;
         }
     }
 }
