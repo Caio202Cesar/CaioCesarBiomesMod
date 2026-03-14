@@ -222,12 +222,6 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Fig Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FIG_TREE = register("fig_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
-                    new SimpleBlockStateProvider(States.FIG_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FORKY_FIG_TREE = register("forky_fig_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(States.FIG_LEAVES),
@@ -2522,9 +2516,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TREES_SCRUBLAND = register("trees_scrubland",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                    FORKY_FIG_TREE.withChance(0.3F), STRAWBERRY_TREE2.withChance(0.091F),
-                            STRAWBERRY_TREE1.withChance(0.089F), FIG_TREE.withChance(0.2F)),
-                            POMEGRANATE_TREE))
+                    FORKY_FIG_TREE.withChance(0.3F), STRAWBERRY_TREE2.withChance(0.091F), WHITE_FIG_TREE.withChance(0.000025F),
+                            STRAWBERRY_TREE1.withChance(0.089F)), POMEGRANATE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
@@ -2568,7 +2561,7 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_FRUIT_TREES = register("mediterranean_savanna_fruit_trees", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F), FIG_TREE.withChance(0.5F)),
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F), WHITE_FIG_TREE.withChance(0.000015F)),
                     POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
@@ -2650,7 +2643,7 @@ public class TreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FIG_TREES = register("fig_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FIG_TREE.withChance(0.5F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_FIG_TREE.withChance(0.000035F)),
                     FORKY_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
