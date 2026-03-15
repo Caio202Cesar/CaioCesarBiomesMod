@@ -126,6 +126,18 @@ public class ModEntityGeneration {
             ));
         }
 
+        if (event.getName().equals(MediterraneanOakSparseWoodlandBiome.MEDITERRANEAN_OAK_SPARSE_WOODLAND.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.MEDITERRANEAN_MERCHANT.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.MEDITERRANEAN_MERCHANT.get(),
+                    12, // weight
+                    1,  // min
+                    2   // max
+            ));
+        }
+
         // Desert Merchant
         if (event.getName().equals(TemperateDesert.TEMPERATE_DESERT.get().getRegistryName())) {
 

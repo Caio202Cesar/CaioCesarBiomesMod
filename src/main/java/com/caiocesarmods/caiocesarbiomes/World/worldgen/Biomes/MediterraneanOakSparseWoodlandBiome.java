@@ -61,7 +61,7 @@ public class MediterraneanOakSparseWoodlandBiome {
         ModDefaultBiomeFeatures.withMediterraneanSparseOakTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withScrublandTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
