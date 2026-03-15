@@ -108,7 +108,7 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "HZ(min) 10, HZ(max) 12; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "HZ(min) 10, HZ(max) 12; ⚠ requires hot summers");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mesquite_sapling"), "HZ(min) 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mesquite_sapling"), "HZ(min) 7, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "monkey_puzzle_sapling"), "HZ(min) 7, HZ(max) 10;" +
                 "⚠ requires warm to cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mossed_live_oak_sapling"), "HZ(min) 8, HZ(max) 11" +
