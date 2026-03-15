@@ -78,32 +78,32 @@ public class HardinessZones {
                         "⚠ can only fruit in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "douglas_fir_sapling"), "HZ(min) 4, HZ(max) 6");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "dragon_blood_sapling"), "HZ(min) 11, HZ(max) 13 (2F)");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "durian_sapling"), "HZ(min) 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "durian_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "elderberry_sapling"), "HZ(min) 3, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "eucalyptus_sapling"), "HZ(min) 8");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "eucalyptus_sapling"), "HZ(min) 8, HZ(max) 13 (2F);");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fig_sapling"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fremont_poplar_sapling"), "HZ(min) 4, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ginkgo_sapling"), "HZ(min) 3, HZ(max) 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "grapefruit_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "grapefruit_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hawthorn_sapling"), "HZ(min) 4, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hazelnut_sapling"), "HZ(min) 4, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holly_sapling"), "HZ(min) 6, HZ(max) 10;" +
                 "⚠ requires warm to cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "holm_oak_sapling"), "HZ(min) 7, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_coral_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_laurel_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "italian_cypress_sapling"), "HZ(min) 7");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "jackalberry_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_coral_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "indian_laurel_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "italian_cypress_sapling"), "HZ(min) 7, HZ(max) 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "jackalberry_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_maple_sapling"), "HZ(min) 5, HZ(max) 10;" +
                 "⚠ saplings die when not under a canopy in hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "japanese_pine_sapling"), "HZ(min) 5, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "larch_sapling"), "HZ(min) 0 (-0.7f), HZ(max) 5");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lemon_sapling"), "HZ(min) 9;" +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lemon_sapling"), "HZ(min) 9, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "live_oak_sapling"), "HZ(min) 8, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loblolly_pine_sapling"), "HZ(min) 6, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loquat_sapling"), "HZ(min) 7*, HZ(max) 11; " +
-                "⚠ due to cold winter bloom loss, only fruits from zone 9 to 11");
+                "⚠ due too cold (which can cause bloom loss) or too warm winters, only fruits from zone 9 to 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"), "HZ(min) 9, HZ(max) 10;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "HZ(min) 10; ⚠ requires hot summers");

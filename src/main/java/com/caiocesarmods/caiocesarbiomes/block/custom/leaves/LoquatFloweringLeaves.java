@@ -45,7 +45,7 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
-            if (temp >= 0.80F) {
+            if (temp >= 0.80F && temp <= 0.89F) {
                 setFruiting(worldIn, pos, distance, persistent);
                 return;
             }
