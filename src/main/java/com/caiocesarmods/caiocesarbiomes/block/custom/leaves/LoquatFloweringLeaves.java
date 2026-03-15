@@ -38,7 +38,7 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         // Only operate in winter
-        if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
 
             int distance = state.get(LeavesBlock.DISTANCE);
