@@ -735,6 +735,7 @@
   "biome.caiocesarbiomes.inactive_volcanic_site": "Terreno vulcânico inativo",
   "biome.caiocesarbiomes.subtropical_pine_dry_forest": "Floresta subtropical seca de pinheiros",
   "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Praia de savana mediterrânica de coníferas",
+  "biome.caiocesarbiomes.ginkgo_forest": "Floresta de ginkgo",
 
   "screen.caiocesarbiomes.butter_mixer": "Fazedor de manteiga",
   "screen.caiocesarbiomes.toaster": "Torradeira",
@@ -1019,7 +1020,12 @@
   "block.caiocesarbiomes.weeping_willow_fall_leaves": "Folhas de salgueiro-chorão",
   "block.caiocesarbiomes.weeping_willow_branches": "Galhos de salgueiro-chorão",
   "block.caiocesarbiomes.weeping_willow_sapling": "Muda de salgueiro-chorão",
-  "block.caiocesarbiomes.saltpeter_ore": "Minério de salitre"
+  "block.caiocesarbiomes.saltpeter_ore": "Minério de salitre",
+
+  "entity.caiocesarbiomes.mediterranean_merchant": "Mercador mediterrânico",
+  "entity.caiocesarbiomes.desert_merchant": "Mercador do deserto",
+  "item.caiocesarbiomes.mediterranean_merchant_spawn_egg": "Ovo gerador de mercador mediterrânico",
+  "item.caiocesarbiomes.desert_merchant_spawn_egg": "Ovo gerador de mercador do deserto"
 }
 
 

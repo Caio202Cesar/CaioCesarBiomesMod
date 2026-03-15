@@ -1002,6 +1002,7 @@
   "biome.caiocesarbiomes.mediterranean_conifer_savanna_beach": "Mediterranean Coniferous Savanna Beach",
   "biome.caiocesarbiomes.temperate_desert": "Temperate Desert",
   "biome.caiocesarbiomes.humid_subtropical_pine_forest": "Humid Subtropical Pine Forest",
+  "biome.caiocesarbiomes.ginkgo_forest": "Ginkgo Forest",
 
   "screen.caiocesarbiomes.butter_mixer": "Butter Mixer",
   "screen.caiocesarbiomes.toaster": "Toaster",
@@ -1014,8 +1015,12 @@
   "itemGroup.CaioCesarBiomes:FruitsAndVegetables": "Caio Cesar Biomes: Fruits And Vegetables",
   "itemGroup.CaioCesarBiomes:Plants": "Caio Cesar Biomes: Plants",
   "itemGroup.CaioCesarBiomes:Trees": "Caio Cesar Biomes: Trees",
-  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: Wood"
+  "itemGroup.CaioCesarBiomes:Wood": "Caio Cesar Biomes: Wood",
 
+  "entity.caiocesarbiomes.mediterranean_merchant": "Mediterranean Merchant",
+  "entity.caiocesarbiomes.desert_merchant": "Desert Merchant",
+  "item.caiocesarbiomes.mediterranean_merchant_spawn_egg": "Mediterranean Merchant Spawn Egg",
+  "item.caiocesarbiomes.desert_merchant_spawn_egg": "Desert Merchant Spawn Egg"
 }
 
 

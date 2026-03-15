@@ -25,7 +25,7 @@ public class HardinessZones {
         if (baseTemp <= 0.84f) return 9; //Colder subtropical
         if (baseTemp <= 0.89f) return 10; //Warmer Subtropical
         if (baseTemp <= 0.94f) return 11;//Border tropical
-        if (baseTemp <= 1.2f) return 12;//Tropical
+        if (baseTemp <= 1.6f) return 12;//Tropical
         return 13; //Schorching
     }
 
@@ -35,7 +35,7 @@ public class HardinessZones {
         // VANILLA
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "HZ(min) 2, HZ(max) 7");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "HZ(min) 0 (-0.7f), HZ(max) 7");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "HZ(min) 11, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "HZ(min) 9");
         SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "HZ(min) 4, HZ(max) 10");
 
@@ -44,12 +44,12 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "HZ(min) 5, HZ(max) 10" +
                 "⚠ requires dry biomes to thrive");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "HZ(min) 7, HZ(max) 7");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"), "HZ(min) 9;" +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"), "HZ(min) 9, HZ(max) 12" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "HZ(min) 4, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bismarck_palm_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bismarck_palm_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "black_poplar_sapling"), "HZ(min) 3, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "blue_spruce_sapling"), "HZ(min) 2, HZ(max) 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "breadfruit_sapling"), "HZ(min) 11");
