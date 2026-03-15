@@ -20,6 +20,9 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
                 OVERWORLD);
 
+        addBiome(MediterraneanOakSparseWoodlandBiome.MEDITERRANEAN_OAK_SPARSE_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, SPARSE,
+                OVERWORLD);
+
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
 
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD,
@@ -28,15 +31,15 @@ public class ModBiomeGeneration {
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
 
-        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE);
+        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
-        addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST,
+        addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD,
                 LUSH, DENSE, CONIFEROUS);
-        addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH, DENSE);
+        addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
 
-        addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, FOREST, LUSH, DENSE, CONIFEROUS);
+        addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, LUSH, DENSE, CONIFEROUS);
 
         addBiome(BunyaPineSubtropicalLaurelJungleBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, LUSH, DENSE, JUNGLE, WET, CONIFEROUS);
 

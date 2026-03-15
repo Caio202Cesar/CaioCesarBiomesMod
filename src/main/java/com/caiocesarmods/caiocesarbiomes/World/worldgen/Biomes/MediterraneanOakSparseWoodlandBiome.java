@@ -26,11 +26,11 @@ public class MediterraneanOakSparseWoodlandBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> MEDITERRANEAN_OAK_WOODLAND = BIOMES.register("mediterranean_oak_woodland",
-            () -> makeMediterraneanOakWoodlandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+    public static final RegistryObject<Biome> MEDITERRANEAN_OAK_SPARSE_WOODLAND = BIOMES.register("mediterranean_oak_sparse_woodland",
+            () -> makeMediterraneanOakSparseWoodlandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
 
 
-    private static Biome makeMediterraneanOakWoodlandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeMediterraneanOakSparseWoodlandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -58,10 +58,8 @@ public class MediterraneanOakSparseWoodlandBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanOakTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanSparseOakTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withOakShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
 
@@ -72,7 +70,7 @@ public class MediterraneanOakSparseWoodlandBiome {
 
         //Hardiness zone 10: 0.85F - 0.89F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.89F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(14807295)
                         .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
