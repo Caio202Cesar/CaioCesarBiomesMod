@@ -72,11 +72,12 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cook_pine_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cooper_beech_sapling"), "HZ(min) 4, HZ(max) 8");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cork_oak_sapling"), "HZ(min) 8, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oleander_dark_pink_sapling"), "HZ(min) 8;" +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oleander_dark_pink_sapling"), "HZ(min) 8, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "date_sapling"), "HZ(min) 8");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "date_sapling"), "HZ(min) 8, HZ(max) 13 (2F)" +
+                        "⚠ can only fruit in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "douglas_fir_sapling"), "HZ(min) 4, HZ(max) 6");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "dragon_blood_sapling"), "HZ(min) 11");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "dragon_blood_sapling"), "HZ(min) 11, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "durian_sapling"), "HZ(min) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "elderberry_sapling"), "HZ(min) 3, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "eucalyptus_sapling"), "HZ(min) 8");

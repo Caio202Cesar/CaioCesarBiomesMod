@@ -7,6 +7,7 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
@@ -23,9 +24,13 @@ public class DateLeaves extends LeavesBlock {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
+
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && random.nextFloat() < 0.00225f) {
+        Biome biome = worldIn.getBiome(pos);
+
+        if ("SUMMER".equals(currentSeason) && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextFloat() < 0.00225f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = worldIn.getBlockState(belowPos);
 
