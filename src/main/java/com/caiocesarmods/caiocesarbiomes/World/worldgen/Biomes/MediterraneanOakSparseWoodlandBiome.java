@@ -58,13 +58,13 @@ public class MediterraneanOakSparseWoodlandBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSparseOakTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         //Hardiness zone 10: 0.85F - 0.89F
