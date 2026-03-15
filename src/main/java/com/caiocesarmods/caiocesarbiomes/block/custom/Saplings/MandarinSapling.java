@@ -38,12 +38,12 @@ public class MandarinSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 9 to 11
+    //Hardy from zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.8f;
-        float maxTemp = 0.94f;
+        float maxTemp = 1.6f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -112,7 +112,7 @@ public class MandarinSapling extends SaplingBlock {
         }
 
         float minTemp = 0.8F;
-        float maxTemp = 0.94F;
+        float maxTemp = 1.6F;
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
@@ -144,7 +144,7 @@ public class MandarinSapling extends SaplingBlock {
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.8f;
-            float maxTemp = 0.94f;
+            float maxTemp = 1.6f;
 
             boolean isProtectedByGlass = false;
 
