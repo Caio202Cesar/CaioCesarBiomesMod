@@ -8,6 +8,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -22,8 +23,17 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockPos down = pos.down();
-        if (world.isAirBlock(down) && random.nextFloat() < 0.001F) { //1% chance to grow
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Only in tropical and wet climates
+        if (world.isAirBlock(down) && temp >= 0.9F && biome.getPrecipitation() == Biome.RainType.RAIN
+                && random.nextFloat() < 0.001F) { //1% chance to grow
             world.setBlockState(down, this.getDefaultState(), 2);
+        }
+
+        if (temp <= 0.89F || biome.getPrecipitation() == Biome.RainType.NONE) {
+            world.destroyBlock(pos, false); // no drop
         }
     }
 

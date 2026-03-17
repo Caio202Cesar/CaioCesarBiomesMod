@@ -39,16 +39,14 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
     public static final float MIN_TEMP = 0.75F;
     public static final float MAX_TEMP = 1.2F;
 
-
     //Hardiness Zone 8 to 12
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
-        boolean inDoor = isInDoor(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass && !inDoor|| temp > MAX_TEMP) {
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -85,10 +83,6 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
             BlockState state = world.getBlockState(mutable);
 
             if (state.getBlock() instanceof GlassBlock) {
-                return true; // Found glass → protected
-            }
-
-            if (state.getBlock() instanceof BarrierBlock) {
                 return true; // Found glass → protected
             }
 

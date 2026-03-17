@@ -46,9 +46,8 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
-        boolean inDoor = isInDoor(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass && !inDoor|| temp > MAX_TEMP) {
+        if (temp < MIN_TEMP && !underGlass|| temp > MAX_TEMP) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -85,10 +84,6 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
             BlockState state = world.getBlockState(mutable);
 
             if (state.getBlock() instanceof GlassBlock) {
-                return true; // Found glass → protected
-            }
-
-            if (state.getBlock() instanceof BarrierBlock) {
                 return true; // Found glass → protected
             }
 
