@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -43,26 +44,34 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical biomes
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(60) == 0) {
+        if (temp <= 0.89F && "SUMMER".equals(currentSeason)) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            if (random.nextInt(30) == 0) {
+                setFruiting(worldIn, pos, distance, persistent);
+                return;
+            }
 
-            worldIn.setBlockState(pos, newState, 2);
-
+            if (random.nextInt(60) == 0) {
+                setNormal(worldIn, pos, distance, persistent);
+            }
         }
 
-        if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason)) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            if (random.nextInt(60) == 0) {
+                setFruiting(worldIn, pos, distance, persistent);
+                return;
+            }
 
-            worldIn.setBlockState(pos, newState, 2);
-
+            if (random.nextInt(30) == 0) {
+                setNormal(worldIn, pos, distance, persistent);
+            }
         }
 
         //Pattern for tropical biomes = mid of wet season to early dry.
@@ -89,6 +98,27 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
         }
     }
 
+    private void setFruiting(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
+        world.setBlockState(
+                pos,
+                TreeBlocks.AVOCADO_FRUITING_LEAVES.get()
+                        .getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent),
+                3
+        );
+    }
+
+    private void setNormal(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
+        world.setBlockState(
+                pos,
+                TreeBlocks.AVOCADO_LEAVES.get()
+                        .getDefaultState()
+                        .with(LeavesBlock.DISTANCE, distance)
+                        .with(LeavesBlock.PERSISTENT, persistent),
+                3
+        );
+    }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
