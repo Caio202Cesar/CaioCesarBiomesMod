@@ -74,6 +74,15 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
             }
         }
 
+        if (temp <= 0.89F && "WINTER".equals(currentSeason)) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            setNormal(worldIn, pos, distance, persistent);
+
+        }
+
         //Pattern for tropical biomes = mid of wet season to early dry.
         if (temp >= 0.9F && "SPRING".equals(currentSeason)) {
 
@@ -104,6 +113,15 @@ public class AvocadoFloweringLeaves extends LeavesBlock implements IForgeShearab
             if (random.nextInt(30) == 0) {
                 setNormal(worldIn, pos, distance, persistent);
             }
+        }
+
+        if (temp <= 0.89F && "FALL".equals(currentSeason)) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            setNormal(worldIn, pos, distance, persistent);
+
         }
     }
 
