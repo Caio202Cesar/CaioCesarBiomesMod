@@ -220,6 +220,8 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9;" +
                 "⚠ requires warm summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "creeping_fig_vine"), "HZ(min) 8, HZ(max) 12 (1.2F)" +
+                "⚠ can be grown in colder climates under glass");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11; " +
