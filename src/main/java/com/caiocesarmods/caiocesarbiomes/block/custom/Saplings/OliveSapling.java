@@ -38,12 +38,12 @@ public class OliveSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 8 to 11
+    //Hardy from zone 8 to 13
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.75f;
-        float maxTemp = 0.94f;
+        float maxTemp = 2f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -64,7 +64,7 @@ public class OliveSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.94F;
+        boolean tooHot = temp > 2F;
         boolean tooCold = temp < 0.75F;
 
         if (tooHot || tooCold) {
@@ -84,7 +84,7 @@ public class OliveSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 0.94f;
+            float minTemp = 0.75f, maxTemp = 2f;
 
             if (temp < minTemp) {
                 player.sendMessage(
