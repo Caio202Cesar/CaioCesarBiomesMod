@@ -117,10 +117,10 @@ public class HardinessZones {
                 "⚠ requires cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mugo_pine_sapling"), "HZ(min) 2, HZ(max) 7" +
                 "⚠ requires warm to cooler summers, ⚠ Requires downfall 0.5F or lower");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "HZ(min) 5");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mulberry_sapling"), "HZ(min) 5, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "norfolk_pine_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ocotea_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oil_palm_sapling"), "HZ(min) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oil_palm_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "olive_sapling"), "HZ(min) 8, HZ(max) 11;" +
                 "⚠ Can't fruit in tropical climates (zone 11)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "orange_oleander_sapling"), "HZ(min) 9; " +
