@@ -55,7 +55,7 @@ public class PinkOleanderSapling extends SaplingBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.75f;
-        float maxTemp = 1.6f;
+        float maxTemp = 2f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -124,7 +124,7 @@ public class PinkOleanderSapling extends SaplingBlock {
         }
 
         float minTemp = 0.75F;
-        float maxTemp = 1.6F;
+        float maxTemp = 2F;
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
@@ -156,7 +156,7 @@ public class PinkOleanderSapling extends SaplingBlock {
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.75f;
-            float maxTemp = 1.6f;
+            float maxTemp = 2f;
 
             boolean isProtectedByGlass = false;
 
