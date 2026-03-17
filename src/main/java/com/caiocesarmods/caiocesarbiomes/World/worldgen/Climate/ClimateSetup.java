@@ -129,6 +129,7 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
             SummerHeatRegistry.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
 
             SummerHeatRegistry.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
             SummerHeatRegistry.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
