@@ -45,8 +45,9 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
+        boolean inDoor = isInDoor(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+        if (temp < MIN_TEMP && !underGlass && !inDoor || temp > MAX_TEMP) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -103,18 +104,6 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
             BlockState state = world.getBlockState(mutable);
 
             if (state.getBlock() instanceof Block) {
-                return true; // Found indoor block → protected
-            }
-
-            if (state.getBlock() instanceof AbstractFurnaceBlock) {
-                return true; // Found indoor block → protected
-            }
-
-            if (state.getBlock() instanceof BlastFurnaceBlock) {
-                return true; // Found indoor block → protected
-            }
-
-            if (state.getBlock() instanceof CampfireBlock) {
                 return true; // Found indoor block → protected
             }
 

@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.HardinessZones;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.VineBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -47,6 +48,9 @@ public class ScannerHandler {
 
         // Check if block is a sapling
         if (!(state.getBlock() instanceof SaplingBlock))
+            return;
+
+        if (!(state.getBlock() instanceof VineBlock))
             return;
 
         // Get block ID
