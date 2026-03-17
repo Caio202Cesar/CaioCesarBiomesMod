@@ -207,16 +207,16 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "western_hemlock_sapling"), "HZ(min) 6, HZ(max) 9;" +
                 "⚠ requires warm to cooler summers, rainy biome, downfall from 6 to above");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_white_sapling"), "HZ(min) 4, HZ(max) 8");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_white_sapling"), "HZ(min) 7");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_white_sapling"), "HZ(min) 7, HZ(max) 12;");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "white_fir_sapling"), "HZ(min) 3, HZ(max) 8; " +
                 "⚠ requires warm to cooler summers along with max downfall of 0.55F");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oleander_white_sapling"), "HZ(min) 8; " +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "oleander_white_sapling"), "HZ(min) 8, HZ(max) 13 (2F);" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_white_sapling"), "HZ(min) 10;" +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_white_sapling"), "HZ(min) 10, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yellow_oleander_sapling"), "HZ(min) 9; " +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yellow_oleander_sapling"), "HZ(min) 9, HZ(max) 13 (2F); " +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "HZ(min) 10;" +
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "HZ(min) 10, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9;" +
                 "⚠ requires warm summers");
