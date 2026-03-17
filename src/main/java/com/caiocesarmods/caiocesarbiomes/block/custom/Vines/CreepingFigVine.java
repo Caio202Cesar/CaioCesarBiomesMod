@@ -34,10 +34,31 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
      * @param pos
      * @param random
      */
+
+
+    public static final float MIN_TEMP = 0.75F;
+    public static final float MAX_TEMP = 1.6F;
+
+
+    //Hardiness Zone 8 to 12
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        //Growth Logic
+        float temp = worldIn.getBiome(pos).getTemperature();
+        boolean underGlass = isUnderGlass(worldIn, pos);
+
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+            if (random.nextFloat() < 0.25F) {
+                worldIn.destroyBlock(pos, false); // no drop
+            }
+
+            return;
+        }
+
         super.randomTick(state, worldIn, pos, random);
 
+
+        //Fruiting
         double chance = 0.001;
 
         if (random.nextDouble() < chance) {
@@ -52,6 +73,26 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
 
             worldIn.setBlockState(pos, newState, 3);
         }
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof GlassBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
     }
 
     @OnlyIn(Dist.CLIENT)
