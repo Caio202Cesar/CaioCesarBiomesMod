@@ -46,8 +46,9 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
+        boolean inDoor = isInDoor(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+        if (temp < MIN_TEMP && !underGlass && !inDoor|| temp > MAX_TEMP) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -85,6 +86,42 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
 
             if (state.getBlock() instanceof GlassBlock) {
                 return true; // Found glass → protected
+            }
+
+            if (state.getBlock() instanceof BarrierBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
+    }
+
+    private boolean isInDoor(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof Block) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof AbstractFurnaceBlock) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof BlastFurnaceBlock) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof CampfireBlock) {
+                return true; // Found indoor block → protected
             }
 
             if (world.canSeeSky(mutable)) {

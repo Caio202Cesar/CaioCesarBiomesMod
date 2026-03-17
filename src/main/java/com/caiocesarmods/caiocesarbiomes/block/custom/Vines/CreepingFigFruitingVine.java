@@ -2,10 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.VineBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -39,10 +36,30 @@ public class CreepingFigFruitingVine extends VineBlock implements IForgeShearabl
      * @param pos
      * @param random
      */
+    public static final float MIN_TEMP = 0.75F;
+    public static final float MAX_TEMP = 1.2F;
+
+
+    //Hardiness Zone 8 to 12
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        //Growth Logic
+        float temp = worldIn.getBiome(pos).getTemperature();
+        boolean underGlass = isUnderGlass(worldIn, pos);
+        boolean inDoor = isInDoor(worldIn, pos);
+
+        if (temp < MIN_TEMP && !underGlass && !inDoor|| temp > MAX_TEMP) {
+            if (random.nextFloat() < 0.25F) {
+                worldIn.destroyBlock(pos, false); // no drop
+            }
+
+            return;
+        }
+
         super.randomTick(state, worldIn, pos, random);
 
+
+        //Fruiting
         double chance = 0.007;
 
         if (random.nextDouble() < chance) {
@@ -58,6 +75,63 @@ public class CreepingFigFruitingVine extends VineBlock implements IForgeShearabl
             worldIn.setBlockState(pos, newState, 3);
         }
     }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof GlassBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (state.getBlock() instanceof BarrierBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
+    }
+
+    private boolean isInDoor(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof Block) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof AbstractFurnaceBlock) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof BlastFurnaceBlock) {
+                return true; // Found indoor block → protected
+            }
+
+            if (state.getBlock() instanceof CampfireBlock) {
+                return true; // Found indoor block → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
+    }
+
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
