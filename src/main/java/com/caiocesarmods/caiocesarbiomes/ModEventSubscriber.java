@@ -249,7 +249,7 @@ public class ModEventSubscriber {
             if (temp < 0.9F) {
                 event.setResult(Event.Result.DENY);
             }
-            if (temp > 1.2F) {
+            if (temp > 1.6F) {
                 event.setResult(Event.Result.DENY);
             }
         }
@@ -257,6 +257,9 @@ public class ModEventSubscriber {
         // Acacia = subtropical (> zone 9)
         if (block == Blocks.ACACIA_SAPLING) {
             if (temp < 0.8F) {
+                event.setResult(Event.Result.DENY);
+            }
+            if (temp > 2F) {
                 event.setResult(Event.Result.DENY);
             }
         }
