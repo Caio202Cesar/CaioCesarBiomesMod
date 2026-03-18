@@ -10,9 +10,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
@@ -66,6 +64,10 @@ public class HardinessZoneScannerItem extends Item {
                                 new StringTextComponent("§aScanned Plant Zone: §e" + zone),
                                 player.getUniqueID()
                         );
+
+                        world.playSound(null, player.getPosition(),
+                                SoundEvents.BLOCK_NOTE_BLOCK_PLING,
+                                SoundCategory.PLAYERS, 1.0F, 1.5F);
                     }
 
                     return ActionResult.resultSuccess(stack);
