@@ -48,13 +48,6 @@ public class TropicalAlmondLeaves extends LeavesBlock implements IForgeShearable
         //Pattern for  tropical biomes
         if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
 
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.TROPICAL_ALMOND.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -77,13 +70,6 @@ public class TropicalAlmondLeaves extends LeavesBlock implements IForgeShearable
 
         //Pattern for  subtropical biomes
         if (temp <= 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
-
-            int dropCount = 1;
-
-            ItemStack itemStack = new ItemStack(ModItems.TROPICAL_ALMOND.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

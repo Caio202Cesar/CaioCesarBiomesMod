@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -45,9 +46,9 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
-        boolean inDoor = isInDoor(worldIn, pos);
+        //boolean inDoor = isInDoor(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass && !inDoor || temp > MAX_TEMP) {
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -77,39 +78,24 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
 
     private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
 
-        BlockPos.Mutable mutable = new BlockPos.Mutable();
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
 
-        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
-            mutable.setPos(pos.getX(), y, pos.getZ());
-            BlockState state = world.getBlockState(mutable);
+        while (checkPos.getY() < world.getHeight()) {
 
-            if (state.getBlock() instanceof GlassBlock) {
-                return true; // Found glass → protected
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof LeavesBlock) {
+                checkPos.move(Direction.UP);
+                continue;
             }
 
-            if (world.canSeeSky(mutable)) {
-                return false; // Open sky → not protected
-            }
-        }
-
-        return false;
-    }
-
-    private boolean isInDoor(ServerWorld world, BlockPos pos) {
-
-        BlockPos.Mutable mutable = new BlockPos.Mutable();
-
-        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
-            mutable.setPos(pos.getX(), y, pos.getZ());
-            BlockState state = world.getBlockState(mutable);
-
-            if (state.getBlock() instanceof Block) {
-                return true; // Found indoor block → protected
+            // If this block is glass → protected
+            if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
             }
 
-            if (world.canSeeSky(mutable)) {
-                return false; // Open sky → not protected
-            }
+            // Any other solid block blocks protection
+            return false;
         }
 
         return false;
