@@ -233,6 +233,7 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "algarrobillo_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "apricot_ipe_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "babassu_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "bacuri_sapling"), "HZ(min) 11, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "balsa_sapling"), "HZ(min) 11, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "black_jurema_sapling"), "HZ(min) 9, HZ(max) 13 (2F);" +
@@ -242,6 +243,7 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under a 5x5 to 9x9 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_rosewood_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_sassafras_sapling"), "HZ(min) 9, HZ(max) 12 (1.2F);");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_tigerwood_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazilnut_sapling"), "HZ(min) 12, HZ(max) 12 (1.2F);");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazilwood_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "buriti_sapling"), "HZ(min) 11, HZ(max) 12");
@@ -268,53 +270,51 @@ public class HardinessZones {
                         "⚠ can only be grown under other tree's canopies;" +
                         "⚠ literally dies in zone 9 winter if not under a canopy;" +
                         "⚠ cannot grow in dry biomes");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jelly_palm_sapling"), "HZ(min) 8");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jenipapo_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jequitiba_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jua_sapling"), "HZ(min) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jussara_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "kapok_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "lophantera_sapling"), "HZ(min) 11;" +
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jabuticaba_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jelly_palm_sapling"), "HZ(min) 8, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jenipapo_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jequitiba_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jua_sapling"), "HZ(min) 11, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "jussara_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "kapok_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "lophantera_sapling"), "HZ(min) 11, HZ(max) 12;" +
                         "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "mangaba_sapling"), "HZ(min) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "monkey_cajarana_sapling"), "HZ(min) 11;" +
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "mangaba_sapling"), "HZ(min) 11, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "monkey_cajarana_sapling"), "HZ(min) 11, HZ(max) 13 (2F);" +
                         "⚠ can be grown in colder biomes if under a 5x5 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "oiticica_sapling"), "HZ(min) 11, HZ(max) 13 (2F);");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "parana_pine_sapling"), "HZ(min) 8, HZ(max) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pequi_sapling"), "HZ(min) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "peruvian_pepper_sapling"), "HZ(min) 9;" +
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pequi_sapling"), "HZ(min) 11, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "peruvian_pepper_sapling"), "HZ(min) 9, HZ(max) 13 (2F);" +
                 "⚠ can be grown in colder biomes if under a 5x5 to 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pink_ipe_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pink_peroba_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_pink_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pitanga_sapling"), "HZ(min) 9, HZ(max) 12(1.2F);" +
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pink_ipe_sapling"), "HZ(min) 9, HZ(max) 13 (2F);");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pink_peroba_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_pink_sapling"), "HZ(min) 9, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "pitanga_sapling"), "HZ(min) 9, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "purpleheart_sapling"), "HZ(min) 10");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "purple_ipe_sapling"), "HZ(min) 9");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "queen_palm_sapling"), "HZ(min) 9");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "purpleheart_sapling"), "HZ(min) 10, HZ(max) 12;");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "purple_ipe_sapling"), "HZ(min) 9, HZ(max) 13 (2F);");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "queen_palm_sapling"), "HZ(min) 9, HZ(max) 12;");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "rio_grande_cherry_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sandbox_tree_sapling"), "HZ(min) 10, HZ(max) 13(1.6F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "HZ(min) 10, HZ(max) 13(1.6F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sharinga_sapling"), "HZ(min) 11, HZ(max) 12");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_silver_sapling"), "HZ(min) 10, HZ(max) 13(1.6F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sandbox_tree_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sapucaia_sapling"), "HZ(min) 10, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sharinga_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "cecropia_silver_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silver_pepper_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sombreiro_sapling"), "HZ(min) 9, HZ(max) 13(1.6F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "umbu_sapling"), "HZ(min) 10, HZ(max) 13(2F);" +
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "sombreiro_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "umbu_sapling"), "HZ(min) 10, HZ(max) 13 (2F);" +
         "⚠ can be grown in colder biomes if under a 7x7 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "white_ipe_sapling"), "HZ(min) 10, HZ(max) 13(2F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_white_sapling"), "HZ(min) 10, HZ(max) 13(2F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "HZ(min) 9, HZ(max) 13(1.6F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "white_ipe_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "silk_floss_white_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "wolf_apple_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "xaxim_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "HZ(min) 9, HZ(max) 13(1.6F)");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "HZ(min) 10, HZ(max) 13(1.6F);");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_ipe_sapling"), "HZ(min) 9, HZ(max) 13 (2F)");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yellow_mombin_sapling"), "HZ(min) 10, HZ(max) 12;");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ saplings die when not under a canopy in hot summers;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "babassu_sapling"), "HZ(min) 10, HZ(max) 12");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "oiticica_sapling"), "HZ(min) 11");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "brazillian_tigerwood_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
 
     }
 
