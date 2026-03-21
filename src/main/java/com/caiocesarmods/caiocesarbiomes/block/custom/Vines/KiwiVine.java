@@ -37,7 +37,10 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
      * @param random
      */
 
-    //Hardy from zone 8 to 10 (but only fruit in zone 9 from bellow)
+    public static final float MIN_TEMP = 0.75F;
+    public static final float MAX_TEMP = 0.84F;
+
+    //Hardy from zone 8 to 9
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
@@ -69,6 +72,11 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
 
             worldIn.setBlockState(pos, newState, 3);
+        }
+
+        //Dies outside its hardiness zone
+        if (temp < MIN_TEMP || temp > MAX_TEMP) {
+            worldIn.destroyBlock(pos, false);
         }
     }
 
