@@ -84,7 +84,7 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
 
             BlockState stateAbove = world.getBlockState(checkPos);
 
-            if (stateAbove.isAir() || stateAbove.getBlock() instanceof LeavesBlock) {
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
                 checkPos.move(Direction.UP);
                 continue;
             }
