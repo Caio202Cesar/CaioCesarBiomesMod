@@ -66,7 +66,7 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
             BlockState currentState = state;
             BlockState newState = ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, ModPlants.KIWI_KIWI_WINTER_DRY_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
