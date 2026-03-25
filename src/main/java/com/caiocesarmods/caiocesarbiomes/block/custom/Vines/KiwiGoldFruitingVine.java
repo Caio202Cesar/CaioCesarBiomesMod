@@ -76,7 +76,7 @@ public class KiwiGoldFruitingVine extends VineBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.KIWI_GOLD_FRUITS.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.GOLD_KIWI_FRUITS.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -102,7 +102,7 @@ public class KiwiGoldFruitingVine extends VineBlock implements IForgeShearable {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack itemStack = new ItemStack(ModItems.KIWI_GOLD_FRUITS.get());
+            ItemStack itemStack = new ItemStack(ModItems.GOLD_KIWI_FRUITS.get());
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
