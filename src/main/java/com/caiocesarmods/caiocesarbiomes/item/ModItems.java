@@ -296,6 +296,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.HONEY_ICE_CREAM)));
     public static final RegistryObject<Item> KIWI_ICE_CREAM = ITEMS.register("kiwi_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_ICE_CREAM)));
+    public static final RegistryObject<Item> KIWI_GOLD_ICE_CREAM = ITEMS.register("kiwi_gold_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_ICE_CREAM)));
     public static final RegistryObject<Item> LAVENDER_ICE_CREAM = ITEMS.register("lavender_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.LAVENDER_ICE_CREAM)));
     public static final RegistryObject<Item> LEMON_ICE_CREAM = ITEMS.register("lemon_ice_cream",
@@ -466,6 +468,12 @@ public class ModItems {
     public static final RegistryObject<Item> KIWI_JAM_TOAST = ITEMS.register("kiwi_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_JAM_TOAST)));
     public static final RegistryObject<Item> KIWI_JUICE = ITEMS.register("kiwi_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_JUICE)));
+    public static final RegistryObject<Item> KIWI_GOLD_JAM = ITEMS.register("kiwi_gold_jam",
+            () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> KIWI_GOLD_JAM_TOAST = ITEMS.register("kiwi_gold_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_JAM_TOAST)));
+    public static final RegistryObject<Item> KIWI_GOLD_JUICE = ITEMS.register("kiwi_gold_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.KIWI_JUICE)));
     public static final RegistryObject<Item> LEMON_JAM = ITEMS.register("lemon_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
