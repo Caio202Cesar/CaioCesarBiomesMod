@@ -100,6 +100,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.DURIAN)));
     public static final RegistryObject<Item> KIWI_FRUITS = ITEMS.register("kiwi_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.KIWI)));
+    public static final RegistryObject<Item> GOLD_KIWI_FRUITS = ITEMS.register("kiwi_gold_fruits",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.KIWI)));
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.HAZELNUTS)));
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
