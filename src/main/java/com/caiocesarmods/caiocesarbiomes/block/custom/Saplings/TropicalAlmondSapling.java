@@ -140,7 +140,11 @@ public class TropicalAlmondSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.TROPICAL_ALMOND_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.TROPICAL_ALMOND_FANCY_TREE;
+            } else {
+                return TreeFeatures.TROPICAL_ALMOND_TREE;
+            }
         }
 
         /**
