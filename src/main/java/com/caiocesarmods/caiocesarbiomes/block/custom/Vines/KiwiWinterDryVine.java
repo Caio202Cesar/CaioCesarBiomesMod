@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.VineBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -18,8 +21,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class KiwiVine extends VineBlock implements IForgeShearable {
-    public KiwiVine() {
+public class KiwiWinterDryVine extends VineBlock implements IForgeShearable {
+    public KiwiWinterDryVine() {
         super(Properties.from(Blocks.VINE).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
     }
@@ -48,12 +51,38 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if ("WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
 
             BlockState currentState = state;
-            BlockState newState = ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState();
+            BlockState newState = ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
+
+        if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
+
+            BlockState currentState = state;
+            BlockState newState = ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
+
+        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+
+            BlockState currentState = state;
+            BlockState newState = ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -65,15 +94,6 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
         if (temp < MIN_TEMP || temp > MAX_TEMP) {
             worldIn.destroyBlock(pos, false);
         }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.KIWI_FLOWERING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.KIWI_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.KIWI_FRUITING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.KIWI_WINTER_DRY_VINE.get(), RenderType.getCutout());
-
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
