@@ -48,7 +48,7 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp <= 0.84F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
 
             BlockState currentState = state;
             BlockState newState = ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState();
@@ -61,7 +61,7 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 3);
         }
 
-        if (temp <= 0.84F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
 
             BlockState currentState = state;
             BlockState newState = ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState();
@@ -85,6 +85,8 @@ public class KiwiVine extends VineBlock implements IForgeShearable {
         RenderTypeLookup.setRenderLayer(ModPlants.KIWI_FLOWERING_VINE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.KIWI_VINE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.KIWI_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.KIWI_WINTER_DRY_VINE.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

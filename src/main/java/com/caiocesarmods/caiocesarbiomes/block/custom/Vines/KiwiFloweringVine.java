@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -8,6 +9,7 @@ import net.minecraft.block.VineBlock;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.PlantType;
@@ -33,13 +35,19 @@ public class KiwiFloweringVine extends VineBlock implements IForgeShearable {
      * @param pos
      * @param random
      */
+
+    public static final float MIN_TEMP = 0.75F;
+    public static final float MAX_TEMP = 0.84F;
+
+    //Hardy from zone 8 to 9
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        double chance = 0.01;
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
 
-        if (random.nextDouble() < chance) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
 
             BlockState currentState = state;
             BlockState newState = ModPlants.KIWI_FRUITING_VINE.get().getDefaultState();
@@ -50,6 +58,37 @@ public class KiwiFloweringVine extends VineBlock implements IForgeShearable {
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
 
             worldIn.setBlockState(pos, newState, 3);
+        }
+
+        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+
+            BlockState currentState = state;
+            BlockState newState = ModPlants.KIWI_FRUITING_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, ModPlants.KIWI_FRUITING_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
+
+        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+
+            BlockState currentState = state;
+            BlockState newState = ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, ModPlants.KIWI_WINTER_DRY_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
+
+        //Dies outside its hardiness zone
+        if (temp < MIN_TEMP || temp > MAX_TEMP) {
+            worldIn.destroyBlock(pos, false);
         }
     }
 
