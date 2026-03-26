@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.VineBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -37,11 +38,29 @@ public class PeppercornVine extends VineBlock implements IForgeShearable {
      * @param pos
      * @param random
      */
+    //Hardiness Zone 10 to 12
+    public static final float MIN_TEMP = 0.85F;
+    public static final float MAX_TEMP = 1.6F;
+
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        //Growth Logic
+        float temp = worldIn.getBiome(pos).getTemperature();
+        boolean underGlass = isUnderGlass(worldIn, pos);
+
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+            if (random.nextFloat() < 0.25F) {
+                worldIn.destroyBlock(pos, false); // no drop
+            }
+
+            return;
+        }
+
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.0098;
+
+        //Fruit maturing
+        double chance = 0.001;
 
         if (random.nextDouble() < chance) {
 
@@ -55,6 +74,31 @@ public class PeppercornVine extends VineBlock implements IForgeShearable {
 
             worldIn.setBlockState(pos, newState, 3);
         }
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // If this block is glass → protected
+            if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
+            }
+
+            // Any other solid block blocks protection
+            return false;
+        }
+
+        return false;
     }
 
     @OnlyIn(Dist.CLIENT)
