@@ -227,6 +227,10 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "creeping_fig_ripe_fruiting_vine"), "HZ(min) 8, HZ(max) 12 (1.2F)" +
                 "⚠ can be grown in colder climates under glass");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ivy"), "HZ(min) 4, HZ(max) 12 (1.2F)");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_vine"), "HZ(min) 8, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_flowering_vine"), "HZ(min) 8, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_fruiting_vine"), "HZ(min) 8, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_winter_dry_vine"), "HZ(min) 8, HZ(max) 9");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +
