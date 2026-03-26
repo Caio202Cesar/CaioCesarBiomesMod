@@ -526,7 +526,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(KiwiGoldVineTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_KIWI = register("oak_tree_with_kiwi",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
@@ -534,6 +534,13 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_GOLD_KIWI = register("oak_tree_with_gold_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiGoldVineTrunkDecorator.INSTANCE)).build()));
 
     //Starfruit Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE = register("starfruit_tree",
@@ -550,6 +557,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE_WITH_GOLD_KIWI = register("starfruit_tree_with_gold_kiwi",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STARFRUIT_LOG),
+                    new SimpleBlockStateProvider(States.STARFRUIT_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(KiwiGoldVineTrunkDecorator.INSTANCE))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
 
     //Camellia Tree
@@ -2702,9 +2717,9 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
-                            STARFRUIT_TREE.withChance(0.2F), OAK_TREE_WITH_KIWI.withChance(0.09F),
+                            STARFRUIT_TREE.withChance(0.2F), OAK_TREE_WITH_GOLD_KIWI.withChance(0.09F),
                             MULBERRY_TREE.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.2F), ORCHID_TREE.withChance(0.1F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), STARFRUIT_TREE_WITH_KIWI.withChance(0.2F),
+                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), STARFRUIT_TREE_WITH_GOLD_KIWI.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.2F), PERSIMMON_TREE.withChance(0.25F), PERSIMMON_FANCY_TREE.withChance(0.3F),
                             CREEPING_FIG_AVOCADO_TREE.withChance(0.3F), PEACH_TREE.withChance(0.19F)),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG))
