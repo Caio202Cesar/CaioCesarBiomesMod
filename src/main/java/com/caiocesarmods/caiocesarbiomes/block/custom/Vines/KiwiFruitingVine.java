@@ -41,10 +41,10 @@ public class KiwiFruitingVine extends VineBlock implements IForgeShearable {
      * @param pos
      * @param random
      */
-    public static final float MIN_TEMP = 0.75F;
+    public static final float MIN_TEMP = 0.7F;
     public static final float MAX_TEMP = 0.84F;
 
-    //Hardy from zone 8 to 9
+    //Hardy from zone 7 to 9
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
