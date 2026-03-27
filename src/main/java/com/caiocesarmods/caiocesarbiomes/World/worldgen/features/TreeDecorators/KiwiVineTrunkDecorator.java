@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.KiwiFloweringVine;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.KiwiVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -33,25 +34,25 @@ public class KiwiVineTrunkDecorator extends TreeDecorator {
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos = pos.west();
                 if (Feature.isAirAt(world, blockpos)) {
-                    this.placeVine(world, blockpos, KiwiVine.EAST, placed, boundingBox);
+                    this.placeVine(world, blockpos, KiwiFloweringVine.EAST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos1 = pos.east();
                 if (Feature.isAirAt(world, blockpos1)) {
-                    this.placeVine(world, blockpos1, KiwiVine.WEST, placed, boundingBox);
+                    this.placeVine(world, blockpos1, KiwiFloweringVine.WEST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos2 = pos.north();
                 if (Feature.isAirAt(world, blockpos2)) {
-                    this.placeVine(world, blockpos2, KiwiVine.SOUTH, placed, boundingBox);
+                    this.placeVine(world, blockpos2, KiwiFloweringVine.SOUTH, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos3 = pos.south();
                 if (Feature.isAirAt(world, blockpos3)) {
-                    this.placeVine(world, blockpos3, KiwiVine.NORTH, placed, boundingBox);
+                    this.placeVine(world, blockpos3, KiwiFloweringVine.NORTH, placed, boundingBox);
                 }
             }
         });
@@ -66,7 +67,7 @@ public class KiwiVineTrunkDecorator extends TreeDecorator {
 
     private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         // Get the passion fruit vine default state and apply the directional property.
-        BlockState vineState = ModPlants.KIWI_VINE.get().getDefaultState().with(property, true);
+        BlockState vineState = ModPlants.KIWI_FLOWERING_VINE.get().getDefaultState().with(property, true);
         // Use our custom helper instead of the vanilla one.
         this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;

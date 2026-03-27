@@ -1025,7 +1025,17 @@
   "entity.caiocesarbiomes.mediterranean_merchant": "Mercador mediterrânico",
   "entity.caiocesarbiomes.desert_merchant": "Mercador do deserto",
   "item.caiocesarbiomes.mediterranean_merchant_spawn_egg": "Ovo gerador de mercador mediterrânico",
-  "item.caiocesarbiomes.desert_merchant_spawn_egg": "Ovo gerador de mercador do deserto"
+  "item.caiocesarbiomes.desert_merchant_spawn_egg": "Ovo gerador de mercador do deserto",
+
+  "block.caiocesarbiomes.kiwi_winter_dry_vine": "Galhos de trepadeira de kiwi",
+  "block.caiocesarbiomes.kiwi_gold_vine": "Trepadeira de kiwi-dourado",
+  "block.caiocesarbiomes.kiwi_gold_flowering_vine": "Trepadeira de kiwi-dourado em flor",
+  "block.caiocesarbiomes.kiwi_gold_fruiting_vine": "Trepadeira de kiwi-dourado com frutos",
+  "block.caiocesarbiomes.kiwi_gold_winter_dry_vine": "Galhos de trepadeira de kiwi-dourado",
+  "item.caiocesarbiomes.kiwi_gold_fruits": "Kiwi-dourado",
+  "item.caiocesarbiomes.kiwi_gold_jam": "Geleia de kiwi-dourado",
+  "item.caiocesarbiomes.kiwi_gold_jam_toast": "Torrada com geleia de kiwi-dourado",
+  "item.caiocesarbiomes.kiwi_gold_ice_cream": "Sorvete de kiwi-dourado"
 }
 
 
