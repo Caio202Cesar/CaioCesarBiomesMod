@@ -8,7 +8,9 @@ import net.minecraft.potion.Effects;
 @SuppressWarnings("deprecation")
 public class ModFoods extends Foods {
     public static final Food AVOCADO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-    public static final Food FIGFRUIT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food FIG = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food WHITE_FIG = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food SYCAMORE_FIG = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food MULBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food RED_CURRANT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food BLACK_CURRANT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
@@ -94,6 +96,7 @@ public class ModFoods extends Foods {
     public static final Food DURIAN = (new Food.Builder()).hunger(5).saturation(0.6F)
             .effect(new EffectInstance(Effects.NAUSEA, 200, 2), 1.0F).build();
     public static final Food KIWI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
+    public static final Food GOLD_KIWI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food COCONUT_SPROUT = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food JUNIPER_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CREEPING_FIG = (new Food.Builder()).hunger(3).saturation(0.3F)

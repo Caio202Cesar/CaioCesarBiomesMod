@@ -25,11 +25,11 @@ public class ModItems {
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.AVOCADO)));
     public static final RegistryObject<Item> FIGFRUIT = ITEMS.register("figfruit",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.FIGFRUIT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.FIG)));
     public static final RegistryObject<Item> WHITE_FIG = ITEMS.register("white_fig",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.FIGFRUIT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.WHITE_FIG)));
     public static final RegistryObject<Item> SYCAMORE_FIG = ITEMS.register("sycamore_fig",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.FIGFRUIT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.SYCAMORE_FIG)));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.POMEGRANATE)));
     public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
@@ -101,7 +101,7 @@ public class ModItems {
     public static final RegistryObject<Item> KIWI_FRUITS = ITEMS.register("kiwi_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.KIWI)));
     public static final RegistryObject<Item> GOLD_KIWI_FRUITS = ITEMS.register("kiwi_gold_fruits",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.KIWI)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.GOLD_KIWI)));
     public static final RegistryObject<Item> HAZELNUTS = ITEMS.register("hazelnuts",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.HAZELNUTS)));
     public static final RegistryObject<Item> COCONUT_SPROUT = ITEMS.register("coconut_sprout",
