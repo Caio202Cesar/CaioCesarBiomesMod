@@ -36,11 +36,10 @@ public class CreepingFigVine extends VineBlock implements IForgeShearable {
      * @param random
      */
 
-
+    //Hardiness Zone 8 to 12
     public static final float MIN_TEMP = 0.75F;
     public static final float MAX_TEMP = 1.2F;
 
-    //Hardiness Zone 8 to 12
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         //Growth Logic
