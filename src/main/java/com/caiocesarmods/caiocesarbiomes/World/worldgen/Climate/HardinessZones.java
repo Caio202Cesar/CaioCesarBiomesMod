@@ -340,6 +340,12 @@ public class HardinessZones {
                 "⚠ can be grown in colder biomes if under glass");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_purple_fruiting_vine"), "HZ(min) 9, HZ(max) 10;" +
                 "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caatinga_passion_fruit_vine"), "HZ(min) 9, HZ(max) 13 (2F);" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caatinga_passion_fruit_flowering_vine"), "HZ(min) 9, HZ(max) 13 (2F);" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "caatinga_passion_fruit_fruiting_vine"), "HZ(min) 9, HZ(max) 13 (2F);" +
+                "⚠ can be grown in colder biomes if under glass");
     }
 
     public static String getZoneForSapling(ResourceLocation id) {
