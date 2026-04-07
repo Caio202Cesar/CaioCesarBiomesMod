@@ -328,7 +328,18 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "yerba_mate_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ saplings die when not under a canopy in hot summers;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_vine"), "HZ(min) 10, HZ(max) 12;" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_flowering_vine"), "HZ(min) 10, HZ(max) 12;" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_fruiting_vine"), "HZ(min) 10, HZ(max) 12;" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_purple_vine"), "HZ(min) 9, HZ(max) 10;" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_purple_flowering_vine"), "HZ(min) 9, HZ(max) 10;" +
+                "⚠ can be grown in colder biomes if under glass");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "passion_fruit_purple_fruiting_vine"), "HZ(min) 9, HZ(max) 10;" +
+                "⚠ can be grown in colder biomes if under glass");
     }
 
     public static String getZoneForSapling(ResourceLocation id) {
