@@ -1886,6 +1886,12 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACEROLA_LARGE_TREE = register("acerola_large_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ACEROLA_LOG),
+                    new SimpleBlockStateProvider(States.ACEROLA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new ForkyTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Orchid tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORCHID_TREE = register("orchid_tree",
