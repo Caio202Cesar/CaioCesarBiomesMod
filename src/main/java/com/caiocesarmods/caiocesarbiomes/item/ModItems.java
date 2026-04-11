@@ -542,10 +542,14 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> PEACH_JAM_TOAST = ITEMS.register("peach_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PEACH_JAM_TOAST)));
+    public static final RegistryObject<Item> PEACH_JUICE = ITEMS.register("peach_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.PEACH_JUICE)));
     public static final RegistryObject<Item> PERSIMMON_JAM = ITEMS.register("persimmon_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> PERSIMMON_JAM_TOAST = ITEMS.register("persimmon_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.PERSIMMON_JAM_TOAST)));
+    public static final RegistryObject<Item> PERSIMMON_JUICE = ITEMS.register("persimmon_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.PERSIMMON_JUICE)));
     public static final RegistryObject<Item> PINK_IVORY_JAM = ITEMS.register("pink_ivory_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> PINK_IVORY_JAM_TOAST = ITEMS.register("pink_ivory_jam_toast",
