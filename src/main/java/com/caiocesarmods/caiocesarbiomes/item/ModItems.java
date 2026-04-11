@@ -536,6 +536,8 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> ORANGE_JAM_TOAST = ITEMS.register("orange_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ORANGE_JAM_TOAST)));
+    public static final RegistryObject<Item> ORANGE_JUICE = ITEMS.register("orange_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.ORANGE_JUICE)));
     public static final RegistryObject<Item> PEACH_JAM = ITEMS.register("peach_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> PEACH_JAM_TOAST = ITEMS.register("peach_jam_toast",

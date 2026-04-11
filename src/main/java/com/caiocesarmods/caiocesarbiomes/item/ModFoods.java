@@ -243,6 +243,9 @@ public class ModFoods extends Foods {
     public static final Food LAVENDER_TEA = (new Food.Builder()).hunger(4).saturation(0.3F)
             .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F).build();
     public static final Food MULBERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MULBERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food RED_CURRANT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food ORANGE_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food ORANGE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PEACH_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PERSIMMON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
