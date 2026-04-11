@@ -198,14 +198,14 @@ public class ModItems {
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> TEA_LEAF_FOR_INFUSION = ITEMS.register("tea_leaf_for_infusion",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().maxStackSize(1).group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> GREEN_TEA = ITEMS.register("green_tea",
             () -> new BeverageItem(new Item.Properties().maxStackSize(1)
                     .group(ModItemGroup.CULINARY).food(ModFoods.GREEN_TEA)));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> MATCHA_POWDER_FOR_INFUSION = ITEMS.register("matcha_powder_for_infusion",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().maxStackSize(1).group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new BeverageItem(new Item.Properties().maxStackSize(1)
                     .group(ModItemGroup.CULINARY).food(ModFoods.MATCHA_TEA)));
@@ -449,7 +449,7 @@ public class ModItems {
     public static final RegistryObject<Item> HAWTHORN_JAM_TOAST = ITEMS.register("hawthorn_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.HAWTHORN_JAM_TOAST)));
     public static final RegistryObject<Item> HAWTHORN_TEA_FOR_INFUSION = ITEMS.register("hawthorn_tea_for_infusion",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().maxStackSize(1).group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> HAWTHORN_TEA = ITEMS.register("hawthorn_tea",
             () -> new BeverageItem(new Item.Properties().maxStackSize(1)
                     .group(ModItemGroup.CULINARY).food(ModFoods.HAWTHORN_TEA)));
@@ -522,7 +522,7 @@ public class ModItems {
     public static final RegistryObject<Item> RED_CURRANT_JUICE = ITEMS.register("red_currant_juice",
     () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.RED_CURRANT_JUICE)));
     public static final RegistryObject<Item> LAVENDER_TEA_FOR_INFUSION = ITEMS.register("lavender_tea_for_infusion",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+            () -> new Item(new Item.Properties().maxStackSize(1).group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> LAVENDER_TEA = ITEMS.register("lavender_tea",
             () -> new BeverageItem(new Item.Properties().maxStackSize(1)
                     .group(ModItemGroup.CULINARY).food(ModFoods.LAVENDER_TEA)));
@@ -530,6 +530,8 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> MULBERRY_JAM_TOAST = ITEMS.register("mulberry_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MULBERRY_JAM_TOAST)));
+    public static final RegistryObject<Item> MULBERRY_JUICE = ITEMS.register("mulberry_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.MULBERRY_JUICE)));
     public static final RegistryObject<Item> ORANGE_JAM = ITEMS.register("orange_jam",
             () -> new JarItem(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> ORANGE_JAM_TOAST = ITEMS.register("orange_jam_toast",
