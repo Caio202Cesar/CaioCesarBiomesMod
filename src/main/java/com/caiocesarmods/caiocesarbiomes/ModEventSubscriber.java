@@ -289,6 +289,13 @@ public class ModEventSubscriber {
             }
         }
 
+        if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.DURIAN_JUICE.get()) {
+            // Apply nausea effect if not already present
+            if (!player.isPotionActive(Effects.NAUSEA)) {
+                player.addPotionEffect(new EffectInstance(Effects.NAUSEA, 200, 100, false, false));
+            }
+        }
+
         if (!player.world.isRemote) {
             for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
                 ItemStack stack = player.inventory.getStackInSlot(i);

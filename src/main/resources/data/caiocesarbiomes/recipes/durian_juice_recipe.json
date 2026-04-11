@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:durian"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:durian_juice",
+    "count": 1
+  }
+}
