@@ -248,18 +248,29 @@ public class ModFoods extends Foods {
     public static final Food ORANGE_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food ORANGE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PEACH_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PEACH_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food PERSIMMON_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food PERSIMMON_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food POMEGRANATE_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food PINK_IVORY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food POMEGRANATE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food CREEPING_FIG_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food ROWAN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food STARFRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food STARFRUIT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food TAMARIND_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food TAMARIND_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food GREEN_ALMOND_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food YEW_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food MARRON_GLACE = (new Food.Builder()).hunger(2).saturation(0.3F).setAlwaysEdible().build();
     public static final Food BOILED_MILK = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
     public static final Food TROPICAL_ALMOND = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food SWEET_BERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food WATERMELON_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food DURIAN_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food APPLE_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CARROT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food BEETROOT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
