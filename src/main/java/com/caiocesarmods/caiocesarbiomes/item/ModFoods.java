@@ -235,7 +235,8 @@ public class ModFoods extends Foods {
     public static final Food LOQUAT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food LOQUAT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
-    public static final Food MANGO_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food MANGO_JUICE = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GREEN_MANGO_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food GREEN_MANGO_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food MANDARIN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food MANDARIN_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();

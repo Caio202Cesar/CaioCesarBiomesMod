@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:unripe_mango"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:green_mango_juice",
+    "count": 1
+  }
+}
