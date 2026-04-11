@@ -85,8 +85,7 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.NAUSEA, 300, 2), 1.0F)
                 .effect(new EffectInstance(Effects.HUNGER, 300, 2), 1.0F).build();
     public static final Food MANGO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-    public static final Food GREEN_MANGO = (new Food.Builder()).hunger(2).saturation(0.2F)
-            .effect(new EffectInstance(Effects.HUNGER, 200, 2), 1.0F).build();
+    public static final Food GREEN_MANGO = (new Food.Builder()).hunger(3).saturation(0.3F).build();
     public static final Food BLUEBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food MARULA = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food RIPE_MARULA = (new Food.Builder()).hunger(2).saturation(0.3F)
