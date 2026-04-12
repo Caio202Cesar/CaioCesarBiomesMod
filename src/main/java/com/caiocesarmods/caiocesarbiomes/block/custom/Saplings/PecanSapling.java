@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -41,7 +43,12 @@ public class PecanSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 5 to 20
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        return heat == SummerHeat.HOT;
+    }
+
+    //Hardy from zone 5 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         Biome biome = world.getBiome(pos);
@@ -51,17 +58,15 @@ public class PecanSapling extends SaplingBlock {
         float maxTemp = 0.89f;
 
         float downfall = biome.getDownfall();
-        float maxDownfall = 0.8f;
+        float maxDownfall = 0.89f;
 
         boolean validTemp = biomeTemp >= minTemp && biomeTemp <= maxTemp;
         boolean suitableHumidity = downfall < maxDownfall;
 
         // 🌱 Growth logic
-        if (validTemp && suitableHumidity) {
+        if (validTemp && suitableHumidity && isSummerAllowed(world, pos)) {
             super.randomTick(state, world, pos, random);
         }
-
-        super.randomTick(state, world, pos, random);
     }
 
     @Override
@@ -79,7 +84,7 @@ public class PecanSapling extends SaplingBlock {
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.5F;
-        boolean tooHumid = downfall > 0.8F;
+        boolean tooHumid = downfall > 0.89F;
 
         if (tooHot || tooCold || tooHumid) {
             return false;
@@ -101,7 +106,7 @@ public class PecanSapling extends SaplingBlock {
 
             float temp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
-            float minTemp = 0.5f, maxTemp = 0.89f, maxDownfall = 0.8F;
+            float minTemp = 0.5f, maxTemp = 0.89f, maxDownfall = 0.89F;
 
             if (temp < minTemp) {
                 player.sendMessage(

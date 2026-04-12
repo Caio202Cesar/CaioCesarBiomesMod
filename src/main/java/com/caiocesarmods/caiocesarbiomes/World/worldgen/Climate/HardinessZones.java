@@ -135,7 +135,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peach_sapling"), "HZ(min) 4, HZ(max) 10;" +
                 "⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pecan_sapling"), "HZ(min) 5, HZ(max) 10; " +
-                "⚠ requires downfall 0.8F or lower; ⚠ requires hot summers for fruiting");
+                "⚠ requires downfall 0.89F or lower; ⚠ requires hot summers for thrive");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "persimmon_sapling"), "HZ(min) 4, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crabapple_pink_sapling"), "HZ(min) 4, HZ(max) 8");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "crape_myrtle_pink_sapling"), "HZ(min) 7, HZ(max) 12");
