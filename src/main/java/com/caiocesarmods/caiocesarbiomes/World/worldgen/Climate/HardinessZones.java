@@ -103,7 +103,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "live_oak_sapling"), "HZ(min) 8, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loblolly_pine_sapling"), "HZ(min) 6, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "loquat_sapling"), "HZ(min) 7*, HZ(max) 11; " +
-                "⚠ due too cold (which can cause bloom loss) or too warm winters (insufficient chill hours), only fruits in zones 9 and 10");
+                "⚠ Due too cold (which can cause bloom loss) or too warm winters (insufficient chill hours), only fruits properly in zones 9 and 10. " +
+                "Has a very rare and little chance of fruiting in zone 8.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"), "HZ(min) 9, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "HZ(min) 10, HZ(max) 12; ⚠ requires hot summers");

@@ -44,15 +44,20 @@ public class LoquatFloweringLeaves extends LeavesBlock implements IForgeShearabl
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            // --- ZONE 9+ (≥ 0.80F) → Full fruiting ---
+            // --- ZONE 9 and 10 → Full fruiting ---
             if (temp >= 0.80F && temp <= 0.89F) {
                 setFruiting(worldIn, pos, distance, persistent);
                 return;
             }
 
-            // --- ZONE 8 and below → No fruit---
-            if (temp <= 0.79F) {
-                setNormal(worldIn, pos, distance, persistent);
+            // --- ZONE 8 → rare fruit---
+            if (temp <= 0.79F && temp >= 0.75F) {
+                if (random.nextInt(10) == 0) {
+                    setNormal(worldIn, pos, distance, persistent);
+                }
+                if (random.nextInt(1200) == 0) {
+                    setFruiting(worldIn, pos, distance, persistent);
+                }
             }
         }
 
