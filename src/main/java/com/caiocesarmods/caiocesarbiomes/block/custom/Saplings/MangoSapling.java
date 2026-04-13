@@ -116,7 +116,7 @@ public class MangoSapling extends SaplingBlock {
 
             if (!isSummerAllowed(worldIn, pos)) {
                 player.sendMessage(
-                        new StringTextComponent("Summers are too cool for this sapling."),
+                        new StringTextComponent("Summers are too cold or too schorching for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
