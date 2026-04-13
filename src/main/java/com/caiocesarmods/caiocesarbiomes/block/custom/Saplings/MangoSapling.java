@@ -55,12 +55,11 @@ public class MangoSapling extends SaplingBlock {
         float minTemp = 0.85f;
         float maxTemp = 1.6f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
-
-        // Summer heat check (NEW)
-        if (!isSummerAllowed(world, pos)) return;
-
-        super.randomTick(state, world, pos, random);
+        if (biomeTemp >= minTemp && biomeTemp <= maxTemp && isSummerAllowed(world, pos)) {
+            // Only attempt natural growth in suitable biomes
+            super.randomTick(state, world, pos, random);
+        }
+        // Do nothing (block natural growth)
     }
 
     @Override
