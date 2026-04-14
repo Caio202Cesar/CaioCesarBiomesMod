@@ -108,7 +108,8 @@ public class HardinessZones {
                 "Has a very rare and little chance of fruiting in zone 8.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mandarin_sapling"), "HZ(min) 9, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "HZ(min) 10, HZ(max) 12; ⚠ requires hot summers");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mango_sapling"), "HZ(min) 10, HZ(max) 12;" +
+                "⚠ Requires hot to warm summers, but fruiting is more reliable in hot summer biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "marula_sapling"), "HZ(min) 10, HZ(max) 12; ⚠ requires hot summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mesquite_sapling"), "HZ(min) 7, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "monkey_puzzle_sapling"), "HZ(min) 7, HZ(max) 10;" +
@@ -149,7 +150,7 @@ public class HardinessZones {
                 "⚠ Can't be grow in wet biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pistachio_sapling"), "HZ(min) 7, HZ(max) 11; " +
                 "⚠ requires dry biomes and downfall of 0.39F or lower to thrive;" +
-                "⚠ requires hot summers and hardiness zone bellow 8 to fruit;");
+                "⚠ requires hot summers and hardiness zone equal or bellow 8 to fruit;");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plane_sapling"), "HZ(min) 4, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "pohutukawa_sapling"), "HZ(min) 9, HZ(max) 11;" +
                 "⚠ Don't flower plenty in tropical climates.");

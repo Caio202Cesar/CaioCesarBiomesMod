@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -8,6 +10,7 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -22,6 +25,10 @@ public class MangoFloweringLeaves extends LeavesBlock implements IForgeShearable
         this.nextStage = nextStage;
     }
 
+    private static boolean isSummerHot(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        return heat == SummerHeat.HOT;
+    }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -35,47 +42,65 @@ public class MangoFloweringLeaves extends LeavesBlock implements IForgeShearable
      * @param pos
      * @param random
      */
+
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        boolean hotSummer = isSummerHot(worldIn, pos);
 
-        if ("SUMMER".equals(currentSeason)) {
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        //Warm summer biomes
+        if(!hotSummer) {
+            if ("SUMMER".equals(currentSeason)) {
+                if (random.nextInt(30) == 0) {
+                    setFruiting(worldIn, pos, distance, persistent);
+                    return;
+                }
 
-            if (random.nextInt(30) == 0) {
-                setFruiting(worldIn, pos, distance, persistent);
-                return;
+                if (random.nextInt(60) == 0) {
+                    setNormal(worldIn, pos, distance, persistent);
+                }
             }
 
-            if (random.nextInt(60) == 0) {
-                setNormal(worldIn, pos, distance, persistent);
+            if ("FALL".equals(currentSeason)) {
+
+                if (random.nextInt(75) == 0) {
+                    setFruiting(worldIn, pos, distance, persistent);
+                    return;
+                }
+
+                if (random.nextInt(15) == 0) {
+                    setNormal(worldIn, pos, distance, persistent);
+                }
             }
         }
 
-        if ("FALL".equals(currentSeason)) {
+        //Hot summer biomes
+        if(hotSummer) {
+            if ("SUMMER".equals(currentSeason)) {
+                if (random.nextInt(15) == 0) {
+                    setFruiting(worldIn, pos, distance, persistent);
+                    return;
+                }
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            if (random.nextInt(75) == 0) {
-                setFruiting(worldIn, pos, distance, persistent);
-                return;
+                if (random.nextInt(60) == 0) {
+                    setNormal(worldIn, pos, distance, persistent);
+                }
             }
 
-            if (random.nextInt(15) == 0) {
-                setNormal(worldIn, pos, distance, persistent);
+            if ("FALL".equals(currentSeason)) {
+
+                if (random.nextInt(45) == 0) {
+                    setFruiting(worldIn, pos, distance, persistent);
+                    return;
+                }
+
+                if (random.nextInt(20) == 0) {
+                    setNormal(worldIn, pos, distance, persistent);
+                }
             }
-        }
-
-        if ("FALL".equals(currentSeason)) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            setNormal(worldIn, pos, distance, persistent);
-
         }
     }
 
