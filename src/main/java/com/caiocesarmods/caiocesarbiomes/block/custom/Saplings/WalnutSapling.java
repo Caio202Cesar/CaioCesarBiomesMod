@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -41,18 +42,28 @@ public class WalnutSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 5 to 9
+    //Hardy from zone 5 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(world.getDayTime());
+
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.5f;
-        float maxTemp = 0.84f;
+        float maxTemp = 0.89f;
+        float saplingMaxTemp = 0.94f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+        // If biome temperature is too low/high, do nothing (block natural growth) + kill the sapling
+        if (biomeTemp < minTemp && "WINTER".equals(currentSeason) && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+
+        if (biomeTemp > saplingMaxTemp && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
     }
 
     @Override
@@ -67,7 +78,7 @@ public class WalnutSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.84F;
+        boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.5F;
 
         if (tooHot || tooCold) {
@@ -87,7 +98,7 @@ public class WalnutSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.5f, maxTemp = 0.84f;
+            float minTemp = 0.5f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
