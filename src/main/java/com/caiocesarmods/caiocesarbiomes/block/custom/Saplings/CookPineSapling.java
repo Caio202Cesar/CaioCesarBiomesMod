@@ -38,11 +38,11 @@ public class CookPineSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10
+    //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.85f;
+        float minTemp = 0.8f;
         float maxTemp = 1.6f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -65,7 +65,7 @@ public class CookPineSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.85F;
+        boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
             return false;
@@ -84,7 +84,7 @@ public class CookPineSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 1.6f;
+            float minTemp = 0.8f, maxTemp = 1.6f;
 
             if (temp < minTemp) {
                 player.sendMessage(
