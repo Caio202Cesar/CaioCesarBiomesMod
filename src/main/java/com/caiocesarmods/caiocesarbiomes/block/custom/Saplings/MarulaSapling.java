@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
@@ -51,6 +52,8 @@ public class MarulaSapling extends SaplingBlock {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(world.getDayTime());
+
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.85f;
         float maxTemp = 1.6f;
@@ -59,7 +62,15 @@ public class MarulaSapling extends SaplingBlock {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
-        // Do nothing (block natural growth)
+
+        // Do nothing (block natural growth) + kill the sapling
+        if (biomeTemp < minTemp && "WINTER".equals(currentSeason) && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+
+        if (biomeTemp > maxTemp && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
     }
 
     @Override
