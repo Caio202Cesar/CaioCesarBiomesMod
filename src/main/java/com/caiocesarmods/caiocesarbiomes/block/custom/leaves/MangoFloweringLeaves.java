@@ -102,6 +102,10 @@ public class MangoFloweringLeaves extends LeavesBlock implements IForgeShearable
                 }
             }
         }
+
+        if ("WINTER".equals(currentSeason)) {
+            setNormal(worldIn, pos, distance, persistent);
+        }
     }
 
     private void setFruiting(ServerWorld world, BlockPos pos, int distance, boolean persistent) {
