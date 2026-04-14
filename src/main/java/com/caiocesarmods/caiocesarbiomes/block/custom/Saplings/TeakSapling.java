@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -45,6 +46,8 @@ public class TeakSapling extends SaplingBlock {
     //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(world.getDayTime());
+
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.9f;
         float maxTemp = 1.6f;
@@ -53,7 +56,14 @@ public class TeakSapling extends SaplingBlock {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+        // If biome temperature is too low/high, do nothing (block natural growth) + kill the sapling
+        if (biomeTemp < minTemp && "WINTER".equals(currentSeason) && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+
+        if (biomeTemp > maxTemp && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
     }
 
     @Override
