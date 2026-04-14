@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
@@ -41,13 +42,29 @@ public class CookPineSapling extends SaplingBlock {
     //Hardy to zone 9
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        String currentSeason = Season.getSeason(world.getDayTime());
+
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.8f;
+        float minTempToGrow = 0.8f;
+        float comfortableMinTemp = 0.85f;
         float maxTemp = 1.6f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
+        if (biomeTemp >= minTempToGrow && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
+        }
+
+        //Frost kill chance in zone 9
+        if (biomeTemp < comfortableMinTemp && biomeTemp > minTempToGrow && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+
+        if (biomeTemp < minTempToGrow && "WINTER".equals(currentSeason) && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+
+        if (biomeTemp > maxTemp && random.nextInt(3) == 0) {
+            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
         }
         // If biome temperature is too low/high, do nothing (block natural growth)
     }
