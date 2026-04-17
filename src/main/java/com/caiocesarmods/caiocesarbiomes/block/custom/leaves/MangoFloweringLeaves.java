@@ -59,7 +59,7 @@ public class MangoFloweringLeaves extends LeavesBlock implements IForgeShearable
                     return;
                 }
 
-                if (random.nextInt(60) == 0) {
+                if (random.nextInt(45) == 0) {
                     setNormal(worldIn, pos, distance, persistent);
                 }
             }
