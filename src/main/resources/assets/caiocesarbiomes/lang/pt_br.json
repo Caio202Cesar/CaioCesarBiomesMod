@@ -1071,7 +1071,8 @@
   "item.caiocesarbiomes.carrot_juice": "Suco de cenoura",
   "item.caiocesarbiomes.beetroot_juice": "Suco de beterraba",
 
-  "block.caiocesarbiomes.saltpeter_block": "Bloco de salitre"
+  "block.caiocesarbiomes.saltpeter_block": "Bloco de salitre",
+  "block.caiocesarbiomes.sulphur_block": "Bloco de enxofre"
 }
 
 

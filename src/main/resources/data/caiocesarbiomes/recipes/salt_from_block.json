@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:salt_block"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:salt",
+    "count": 9
+  }
+}

@@ -47,6 +47,10 @@ public class MiscBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
 
+    public static final RegistryObject<Block> SULPHUR_BLOCK = registerBlock("sulphur_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
+                    setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.NETHERRACK)));
+
     public static final RegistryObject<Block> SALTPETER_ORE = registerBlock("saltpeter_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:sulphur_block"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:sulphur",
+    "count": 9
+  }
+}
