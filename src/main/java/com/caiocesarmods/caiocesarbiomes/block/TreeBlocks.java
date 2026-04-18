@@ -302,7 +302,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> TEA_LEAVES = registerBlock("tea_leaves",
-            ModLeaves::new);
+            TeaLeaves::new);
     public static final RegistryObject<Block> TEA_SAPLING = registerBlock("tea_sapling",
             TeaSapling::new);
     @SuppressWarnings("deprecation")
