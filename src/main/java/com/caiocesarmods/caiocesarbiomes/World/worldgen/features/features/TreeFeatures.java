@@ -1133,12 +1133,6 @@ public class TreeFeatures {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Sycamore fig tree (native of dry biomes, it has Fig Log and fancy tree shape and must grow in Savannah, Tropical Desert or mediterranean dry scrub)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_FANCY_TREE = register("sycamore_fig_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
@@ -2510,11 +2504,11 @@ public class TreeFeatures {
                             SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
                             TAMARIND_TREE.withChance(0.2F), SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F),
                             MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.4F), BISMARCK_PALM.withChance(0.3F),
-                            JACKALBERRY_TREE.withChance(0.3F), SYCAMORE_FIG_ANCIENT_TREE.withChance(0.13F), PLUMERIA_ORANGE_TREE.withChance(0.071F),
+                            JACKALBERRY_TREE.withChance(0.3F), PLUMERIA_ORANGE_TREE.withChance(0.071F),
                             PLUMERIA_PINK_TREE.withChance(0.071F), PLUMERIA_YELLOW_TREE.withChance(0.061F), PLUMERIA_WHITE_TREE.withChance(0.08F),
                             PLUMERIA_RED_TREE.withChance(0.061F), ORCHID_TREE.withChance(0.098F),
                             JACKALBERRY_FANCY_TREE.withChance(0.15F), YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
-                            SYCAMORE_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SYCAMORE_FIG_ANCIENT_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
@@ -2713,7 +2707,7 @@ public class TreeFeatures {
                             MANGO_FANCY_TREE.withChance(0.3F), BISMARCK_PALM.withChance(0.08F), BISMARCK_PALM.withChance(0.07F),
                             AVOCADO_TREE.withChance(0.09F), STARFRUIT_TREE.withChance(0.08F), ORCHID_TREE.withChance(0.09F),
                             POMEGRANATE_TREE.withChance(0.09F), PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F),
-                            ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), SYCAMORE_FIG_TREE.withChance(0.12F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
+                            ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             SYCAMORE_FIG_FANCY_TREE.withChance(0.2F), TROPICAL_ALMOND_TREE.withChance(0.12F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORANGE_OLEANDER_TREE.withChance(0.09F),
                             YELLOW_OLEANDER_TREE.withChance(0.09F), FOREST_ACACIA_TREE.withChance(0.34F)), TAMARIND_TREE))
@@ -2790,14 +2784,14 @@ public class TreeFeatures {
     private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
-                            MESQUITE_TREE.withChance(0.1F), SYCAMORE_FIG_TREE.withChance(0.12F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F),
+                            MESQUITE_TREE.withChance(0.1F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F),
                             SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F), DATE_PALM_TREE.withChance(0.15F)),
                             ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
-                            SYCAMORE_FIG_TREE.withChance(0.12F), ACACIA.withChance(0.3F), MESQUITE_TREE.withChance(0.3F),
+                            ACACIA.withChance(0.3F), MESQUITE_TREE.withChance(0.3F),
                             DATE_PALM_TREE.withChance(0.5F)), SYCAMORE_FIG_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
 

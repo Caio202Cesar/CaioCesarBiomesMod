@@ -190,13 +190,8 @@ public class SycamoreFigSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.SYCAMORE_FIG_TREE;
-            } else {
                 return TreeFeatures.SYCAMORE_FIG_FANCY_TREE;
             }
-        }
-
         /**
          * Get a {@link ConfiguredFeature} of the huge variant of this tree
          *
