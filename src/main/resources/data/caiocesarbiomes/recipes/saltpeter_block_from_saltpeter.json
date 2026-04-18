@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "caiocesarbiomes:salt"
+      "item": "caiocesarbiomes:saltpeter"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:salt_block"
+    "item": "caiocesarbiomes:saltpeter_block"
   }
 }

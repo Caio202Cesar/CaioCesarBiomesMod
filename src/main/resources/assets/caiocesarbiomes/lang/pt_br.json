@@ -1069,7 +1069,9 @@
   "item.caiocesarbiomes.watermelon_juice": "Suco de melancia",
   "item.caiocesarbiomes.durian_juice": "Suco de durião",
   "item.caiocesarbiomes.carrot_juice": "Suco de cenoura",
-  "item.caiocesarbiomes.beetroot_juice": "Suco de beterraba"
+  "item.caiocesarbiomes.beetroot_juice": "Suco de beterraba",
+
+  "block.caiocesarbiomes.saltpeter_block": "Bloco de salitre"
 }
 
 

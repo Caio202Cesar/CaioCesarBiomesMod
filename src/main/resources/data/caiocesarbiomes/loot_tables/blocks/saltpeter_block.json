@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "caiocesarbiomes:salt_block"
+              "name": "caiocesarbiomes:saltpeter_block"
             },
             {
               "type": "minecraft:item",
@@ -37,7 +37,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "caiocesarbiomes:salt"
+              "name": "caiocesarbiomes:saltpeter"
             }
           ]
         }

@@ -51,6 +51,10 @@ public class MiscBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
 
+    public static final RegistryObject<Block> SALTPETER_BLOCK = registerBlock("saltpeter_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
+                    setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.NETHERRACK)));
+
     //Bog biome
     /*public static final RegistryObject<Block> PEAT_BLOCK = registerBlock("peat_block",
             () -> new Block(AbstractBlock.Properties.create(Material.CLAY).harvestTool(ToolType.PICKAXE)
