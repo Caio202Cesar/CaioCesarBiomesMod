@@ -881,7 +881,18 @@ public class TreeBlocks {
 
 
     public static final RegistryObject<Block> SYCAMORE_FIG_LEAVES = registerBlock("sycamore_fig_leaves",
-            SycamoreFigLeaves::new);
+            () -> new SycamoreFigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> SYCAMORE_FIG_FRUITING_LEAVES = registerBlock("sycamore_fig_fruiting_leaves",
+            () -> new SycamoreFigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
+    public static final RegistryObject<Block> SYCAMORE_FIG_BRANCHES = registerBlock("sycamore_fig_branches",
+            () -> new SycamoreFigBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> SYCAMORE_FIG_FRUITING_BRANCHES = registerBlock("sycamore_fig_fruiting_branches",
+            () -> new SycamoreFigFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
+
     public static final RegistryObject<Block> SYCAMORE_FIG_SAPLING = registerBlock("sycamore_fig_sapling",
             SycamoreFigSapling::new);
     @SuppressWarnings("deprecation")
