@@ -38,7 +38,7 @@ public class HazelnutFloweringLeaves extends LeavesBlock implements IForgeSheara
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(60) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -49,7 +49,7 @@ public class HazelnutFloweringLeaves extends LeavesBlock implements IForgeSheara
 
         }
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -60,7 +60,7 @@ public class HazelnutFloweringLeaves extends LeavesBlock implements IForgeSheara
 
         }
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
