@@ -51,6 +51,7 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.HAWTHORN_BERRIES.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.DURIAN.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.KIWI_FRUITS.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.GOLD_KIWI_FRUITS.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.HAZELNUTS.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.COCONUT_SPROUT.get(), 0.85F);
             CompostingHelper.registerCompostable(ModItems.CAROB_BEANS.get(), 0.3F);
