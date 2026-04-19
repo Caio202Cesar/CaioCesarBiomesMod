@@ -295,7 +295,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "kapok_sapling"), "HZ(min) 10, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "lophantera_sapling"), "HZ(min) 11, HZ(max) 12;" +
                         "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "HZ(min) 9, HZ(max) 11");
+        SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "manaca_da_serra_sapling"), "HZ(min) 10, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "mangaba_sapling"), "HZ(min) 11, HZ(max) 13 (2F)");
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "monkey_cajarana_sapling"), "HZ(min) 11, HZ(max) 13 (2F);" +
                         "⚠ can be grown in colder biomes if under a 5x5 glass roof");
