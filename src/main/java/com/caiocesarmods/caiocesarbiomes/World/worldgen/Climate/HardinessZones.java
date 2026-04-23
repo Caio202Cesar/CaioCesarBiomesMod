@@ -82,7 +82,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "durian_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "elderberry_sapling"), "HZ(min) 3, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "eucalyptus_sapling"), "HZ(min) 8, HZ(max) 13 (2F);");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fig_sapling"), "HZ(min) 8, HZ(max) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fig_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "fremont_poplar_sapling"), "HZ(min) 4, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ginkgo_sapling"), "HZ(min) 3, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "grapefruit_sapling"), "HZ(min) 9, HZ(max) 12");
