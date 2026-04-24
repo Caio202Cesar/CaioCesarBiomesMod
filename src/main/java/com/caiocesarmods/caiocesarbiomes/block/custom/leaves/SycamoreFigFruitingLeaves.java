@@ -2,19 +2,25 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.util.Direction;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 
-public class SycamoreFigLeaves extends LeavesBlock implements IForgeShearable {
-     public SycamoreFigLeaves(Properties properties) {
+public class SycamoreFigFruitingLeaves extends LeavesBlock implements IForgeShearable {
+     public SycamoreFigFruitingLeaves(Properties properties) {
          super(properties);
 
      }
@@ -43,7 +49,7 @@ public class SycamoreFigLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_BRANCHES.get()
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
@@ -51,16 +57,16 @@ public class SycamoreFigLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_BRANCHES.get()
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        //Pattern for subtropical biomes = cold season
+        //Pattern for subtropical biomes = cool season
         if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_BRANCHES.get()
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
@@ -68,17 +74,44 @@ public class SycamoreFigLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_BRANCHES.get()
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_FRUITING_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (random.nextInt(65) == 0) {
+        if (random.nextInt(45) == 0) {
+
+            int dropCount = 1 + random.nextInt(2);
+
+            ItemStack itemStack = new ItemStack(ModItems.SYCAMORE_FIG.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_FRUITING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.SYCAMORE_FIG.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState());
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+        }
+        return ActionResultType.SUCCESS;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
