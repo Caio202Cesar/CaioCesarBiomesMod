@@ -3,7 +3,7 @@
     "":[
       {"model": "caiocesarbiomes:block/sycamore_fig_leaves",
         "weight": 2},
-      {"model": "caiocesarbiomes:block/sycamore_fig_branches",
+      {"model": "caiocesarbiomes:block/fig_winter_branches",
         "weight": 4}
     ]
   }
