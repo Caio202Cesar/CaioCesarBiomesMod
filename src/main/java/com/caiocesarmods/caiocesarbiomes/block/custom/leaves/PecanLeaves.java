@@ -74,12 +74,10 @@ public class PecanLeaves extends LeavesBlock implements IForgeShearable {
 
         //Nutting condition
         if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
-            if (temp <= 0.84F) {
-                if (hotSummer) {
-                    setFruiting(worldIn, pos, distance, persistent);
-                } else {
-                    setNormal(worldIn, pos, distance, persistent);
-                }
+            if (hotSummer) {
+                setFruiting(worldIn, pos, distance, persistent);
+            } else {
+                setNormal(worldIn, pos, distance, persistent);
             }
         }
 
