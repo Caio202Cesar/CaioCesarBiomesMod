@@ -95,7 +95,7 @@ public class PecanLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
 
             worldIn.setBlockState(pos, TreeBlocks.PECAN_FALL_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);

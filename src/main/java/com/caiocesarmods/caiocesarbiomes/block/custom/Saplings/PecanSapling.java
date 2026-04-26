@@ -45,7 +45,7 @@ public class PecanSapling extends SaplingBlock {
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeatRegistry.get(world, pos);
-        return heat == SummerHeat.HOT;
+        return heat == SummerHeat.HOT || heat == SummerHeat.WARM;
     }
 
     //Hardy from zone 5 to 10
