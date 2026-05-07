@@ -2718,7 +2718,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
                             SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
                             STARFRUIT_TREE.withChance(0.2F), OAK_TREE_WITH_GOLD_KIWI.withChance(0.09F),
-                            MULBERRY_TREE.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.2F), ORCHID_TREE.withChance(0.1F),
+                            MULBERRY_TREE.withChance(0.4F), OAK_TREE_WITH_IVY.withChance(0.2F), ORCHID_TREE.withChance(0.2F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), STARFRUIT_TREE_WITH_GOLD_KIWI.withChance(0.2F),
                             ELDERBERRY_TREE.withChance(0.2F), PERSIMMON_TREE.withChance(0.25F), PERSIMMON_FANCY_TREE.withChance(0.3F),
                             CREEPING_FIG_AVOCADO_TREE.withChance(0.3F), PEACH_TREE.withChance(0.19F)),
