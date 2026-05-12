@@ -1705,8 +1705,7 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
-
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_FIR = register("white_fir",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_FIR = register("white_fir_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SUBALPINE_FIR_LOG),
                     new SimpleBlockStateProvider(States.WHITE_FIR_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(17, 2)),
