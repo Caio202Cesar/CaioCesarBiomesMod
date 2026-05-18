@@ -182,7 +182,8 @@
     "caiocesarbiomes:sycamore_fig_leaves",
     "caiocesarbiomes:sycamore_fig_fruiting_leaves",
     "caiocesarbiomes:sycamore_fig_branches",
-    "caiocesarbiomes:sycamore_fig_fruiting_branches",    "caiocesarbiomes:rowan_leaves",
+    "caiocesarbiomes:sycamore_fig_fruiting_branches",
+    "caiocesarbiomes:rowan_leaves",
     "caiocesarbiomes:rowan_flowering_leaves",
     "caiocesarbiomes:rowan_fruiting_leaves",
     "caiocesarbiomes:rowan_fall_leaves",
@@ -298,6 +299,8 @@
     "caiocesarbiomes:weeping_willow_leaves",
     "caiocesarbiomes:weeping_willow_fall_leaves",
     "caiocesarbiomes:weeping_willow_branches",
-    "caiocesarbiomes:jackalberry_leaves"
+    "caiocesarbiomes:jackalberry_leaves",
+    "caiocesarbiomes:socotra_desert_rose_leaves"
+
   ]
 }
