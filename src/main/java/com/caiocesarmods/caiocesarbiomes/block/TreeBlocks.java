@@ -2307,6 +2307,46 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
+            () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_FLOWERING_LEAVES = registerBlock("lychee_flowering_leaves",
+            () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_FRUITING_LEAVES = registerBlock("lychee_fruiting_leaves",
+            () -> new LycheeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_SAPLING = registerBlock("lychee_sapling",
+            LycheeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_LYCHEE_SAPLING = BLOCKS.register("potted_lychee_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
+            () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_FLOWERING_LEAVES = registerBlock("lychee_flowering_leaves",
+            () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_FRUITING_LEAVES = registerBlock("lychee_fruiting_leaves",
+            () -> new LycheeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_LEAVES));
+    public static final RegistryObject<Block> LYCHEE_SAPLING = registerBlock("lychee_sapling",
+            LycheeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_LYCHEE_SAPLING = BLOCKS.register("potted_lychee_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
