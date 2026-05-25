@@ -2347,6 +2347,9 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
+            ModLogs::new);
+
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
