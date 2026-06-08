@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/ilex_log_middle",
+    "end": "caiocesarbiomes:block/ilex_log_top",
     "side": "caiocesarbiomes:block/ilex_bark"
   }
 }

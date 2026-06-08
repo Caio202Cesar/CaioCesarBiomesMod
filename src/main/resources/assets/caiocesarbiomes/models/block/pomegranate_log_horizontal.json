@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/pomegranate_log_middle",
+    "end": "caiocesarbiomes:block/pomegranate_log_top",
     "side": "caiocesarbiomes:block/pomegranate_bark"
   }
 }

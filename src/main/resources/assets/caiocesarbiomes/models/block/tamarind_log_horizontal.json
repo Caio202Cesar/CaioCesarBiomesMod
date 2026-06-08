@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/tamarind_log_middle",
+    "end": "caiocesarbiomes:block/tamarind_log_top",
     "side": "caiocesarbiomes:block/tamarind_bark"
   }
 }

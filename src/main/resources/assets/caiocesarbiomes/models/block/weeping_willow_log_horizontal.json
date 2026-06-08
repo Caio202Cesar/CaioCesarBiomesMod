@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/weeping_willow_log_middle",
+    "end": "caiocesarbiomes:block/weeping_willow_log_top",
     "side": "caiocesarbiomes:block/weeping_willow_bark"
   }
 }

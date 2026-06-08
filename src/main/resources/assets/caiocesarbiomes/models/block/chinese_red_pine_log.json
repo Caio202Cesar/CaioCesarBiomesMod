@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/chinese_red_pine_log_middle",
+    "end": "caiocesarbiomes:block/chinese_red_pine_log_top",
     "side": "caiocesarbiomes:block/chinese_red_pine_bark"
   }
 }

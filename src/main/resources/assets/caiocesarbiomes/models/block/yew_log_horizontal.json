@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/yew_log_middle",
+    "end": "caiocesarbiomes:block/yew_log_top",
     "side": "caiocesarbiomes:block/yew_bark"
   }
 }

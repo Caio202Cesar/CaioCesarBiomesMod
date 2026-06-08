@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/subalpine_fir_log_middle",
+    "end": "caiocesarbiomes:block/subalpine_fir_log_top",
     "side": "caiocesarbiomes:block/subalpine_fir_bark"
   }
 }

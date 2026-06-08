@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/royal_poinciana_log_middle",
+    "end": "caiocesarbiomes:block/royal_poinciana_log_top",
     "side": "caiocesarbiomes:block/royal_poinciana_bark"
   }
 }

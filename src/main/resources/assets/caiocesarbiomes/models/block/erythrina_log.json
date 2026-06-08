@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/erythrina_log_middle",
+    "end": "caiocesarbiomes:block/erythrina_log_top",
     "side": "caiocesarbiomes:block/erythrina_bark"
   }
 }

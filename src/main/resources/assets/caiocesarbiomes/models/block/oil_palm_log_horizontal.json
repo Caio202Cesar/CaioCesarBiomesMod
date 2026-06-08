@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/oil_palm_log_middle",
+    "end": "caiocesarbiomes:block/oil_palm_log_top",
     "side": "caiocesarbiomes:block/oil_palm_bark"
   }
 }

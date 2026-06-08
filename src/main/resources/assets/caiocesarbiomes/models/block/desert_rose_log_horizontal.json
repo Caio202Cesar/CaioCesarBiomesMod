@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/desert_rose_log_middle",
+    "end": "caiocesarbiomes:block/desert_rose_log_top",
     "side": "caiocesarbiomes:block/desert_rose_bark"
   }
 }
