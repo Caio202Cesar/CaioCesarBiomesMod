@@ -2307,6 +2307,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /*
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
 
@@ -2348,7 +2349,7 @@ public class TreeBlocks {
 
 
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
-            ModLogs::new);
+            ModLogs::new); */
 
 ///Z
 
