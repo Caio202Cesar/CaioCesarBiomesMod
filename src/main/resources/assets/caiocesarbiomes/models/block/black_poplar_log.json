@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/black_poplar_log_top",
-    "side": "caiocesarbiomes:block/black_poplar_bark"
+    "side": "caiocesarbiomes:block/black_poplar_log"
   }
 }

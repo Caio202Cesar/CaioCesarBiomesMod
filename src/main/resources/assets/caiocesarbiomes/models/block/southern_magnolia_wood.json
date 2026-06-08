@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/southern_magnolia_bark",
-    "side": "caiocesarbiomes:block/southern_magnolia_bark"
+    "end": "caiocesarbiomes:block/southern_magnolia_log",
+    "side": "caiocesarbiomes:block/southern_magnolia_log"
   }
 }

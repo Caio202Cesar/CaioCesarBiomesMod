@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/mango_log_top",
-    "side": "caiocesarbiomes:block/mango_bark"
+    "side": "caiocesarbiomes:block/mango_log"
   }
 }

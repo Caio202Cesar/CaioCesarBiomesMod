@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/western_hemlock_log_top",
-    "side": "caiocesarbiomes:block/western_hemlock_bark"
+    "side": "caiocesarbiomes:block/western_hemlock_log"
   }
 }

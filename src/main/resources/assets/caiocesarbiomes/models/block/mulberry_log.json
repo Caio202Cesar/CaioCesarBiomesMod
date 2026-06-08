@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/mulberry_log_top",
-    "side": "caiocesarbiomes:block/mulberry_bark"
+    "side": "caiocesarbiomes:block/mulberry_log"
   }
 }

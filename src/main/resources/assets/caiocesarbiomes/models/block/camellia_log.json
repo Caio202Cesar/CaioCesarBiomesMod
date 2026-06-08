@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/camellia_log_top",
-    "side": "caiocesarbiomes:block/camellia_bark"
+    "side": "caiocesarbiomes:block/camellia_log"
   }
 }

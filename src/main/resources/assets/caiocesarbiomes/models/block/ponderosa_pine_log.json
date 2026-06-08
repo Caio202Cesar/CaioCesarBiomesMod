@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/ponderosa_pine_log_top",
-    "side": "caiocesarbiomes:block/ponderosa_pine_bark"
+    "side": "caiocesarbiomes:block/ponderosa_pine_log"
   }
 }

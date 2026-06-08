@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/italian_cypress_log_top",
-    "side": "caiocesarbiomes:block/italian_cypress_bark"
+    "side": "caiocesarbiomes:block/italian_cypress_log"
   }
 }

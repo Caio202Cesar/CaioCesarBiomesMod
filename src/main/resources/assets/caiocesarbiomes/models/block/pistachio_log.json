@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/pistachio_log_top",
-    "side": "caiocesarbiomes:block/pistachio_bark"
+    "side": "caiocesarbiomes:block/pistachio_log"
   }
 }

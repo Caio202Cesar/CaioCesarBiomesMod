@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/plane_log_top",
-    "side": "caiocesarbiomes:block/plane_bark"
+    "side": "caiocesarbiomes:block/plane_log"
   }
 }

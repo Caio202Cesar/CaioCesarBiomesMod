@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/juniper_log_top",
-    "side": "caiocesarbiomes:block/juniper_bark"
+    "side": "caiocesarbiomes:block/juniper_log"
   }
 }

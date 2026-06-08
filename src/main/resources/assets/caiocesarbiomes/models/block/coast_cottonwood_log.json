@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/coast_cottonwood_log_top",
-    "side": "caiocesarbiomes:block/coast_cottonwood_bark"
+    "side": "caiocesarbiomes:block/coast_cottonwood_log"
   }
 }

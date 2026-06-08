@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/eucalyptus_log_top",
-    "side": "caiocesarbiomes:block/eucalyptus_bark"
+    "side": "caiocesarbiomes:block/eucalyptus_log"
   }
 }

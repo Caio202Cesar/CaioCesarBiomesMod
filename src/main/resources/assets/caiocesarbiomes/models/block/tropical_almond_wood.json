@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/tropical_almond_bark",
-    "side": "caiocesarbiomes:block/tropical_almond_bark"
+    "end": "caiocesarbiomes:block/tropical_almond_log",
+    "side": "caiocesarbiomes:block/tropical_almond_log"
   }
 }

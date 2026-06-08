@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/dragon_blood_log_top",
-    "side": "caiocesarbiomes:block/dragon_blood_bark"
+    "side": "caiocesarbiomes:block/dragon_blood_log"
   }
 }

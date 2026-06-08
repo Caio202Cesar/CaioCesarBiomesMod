@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/oleander_bark",
-    "side": "caiocesarbiomes:block/oleander_bark"
+    "end": "caiocesarbiomes:block/oleander_log",
+    "side": "caiocesarbiomes:block/oleander_log"
   }
 }

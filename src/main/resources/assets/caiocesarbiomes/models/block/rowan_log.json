@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/rowan_log_top",
-    "side": "caiocesarbiomes:block/rowan_bark"
+    "side": "caiocesarbiomes:block/rowan_log"
   }
 }

@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/plumeria_log_top",
-    "side": "caiocesarbiomes:block/plumeria_bark"
+    "side": "caiocesarbiomes:block/plumeria_log"
   }
 }

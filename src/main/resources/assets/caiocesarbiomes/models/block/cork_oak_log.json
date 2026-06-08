@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/cork_oak_log_top",
-    "side": "caiocesarbiomes:block/cork_oak_bark"
+    "side": "caiocesarbiomes:block/cork_oak_log"
   }
 }

@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "caiocesarbiomes:block/socotra_cucumber_log_top",
-    "side": "caiocesarbiomes:block/socotra_cucumber_bark"
+    "side": "caiocesarbiomes:block/socotra_cucumber_log"
   }
 }
