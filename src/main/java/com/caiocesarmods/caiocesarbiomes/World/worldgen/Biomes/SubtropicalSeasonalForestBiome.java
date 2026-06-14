@@ -55,11 +55,11 @@ public class SubtropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestOaks(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withDeciduousSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
