@@ -45,7 +45,7 @@ public class TropicalAlmondLeaves extends LeavesBlock implements IForgeShearable
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for  tropical biomes
+        //Pattern for tropical biomes
         if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
