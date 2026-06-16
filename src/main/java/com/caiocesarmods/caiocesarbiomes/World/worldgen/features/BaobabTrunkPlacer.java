@@ -44,7 +44,37 @@ public class BaobabTrunkPlacer extends AbstractTrunkPlacer {
     }
 
     @Override
-    public List<FoliagePlacer.Foliage> getFoliages(IWorldGenerationReader reader, Random rand, int treeHeight, BlockPos p_230382_4_, Set<BlockPos> p_230382_5_, MutableBoundingBox p_230382_6_, BaseTreeFeatureConfig p_230382_7_) {
-        return Collections.emptyList();
+    public List<FoliagePlacer.Foliage> getFoliages(
+            IWorldGenerationReader reader,
+            Random rand,
+            int treeHeight,
+            BlockPos pos,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config) {
+
+        for (int y = 0; y < treeHeight; y++) {
+            for (int x = -4; x <= 4; x++) {
+                for (int z = -4; z <= 4; z++) {
+
+                    func_236911_a_(
+                            reader,
+                            rand,
+                            pos.add(x, y, z),
+                            logs,
+                            box,
+                            config
+                    );
+                }
+            }
+        }
+
+        return Collections.singletonList(
+                new FoliagePlacer.Foliage(
+                        pos.up(treeHeight),
+                        0,
+                        false
+                )
+        );
     }
 }
