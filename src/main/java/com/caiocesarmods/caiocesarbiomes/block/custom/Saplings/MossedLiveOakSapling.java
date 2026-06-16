@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -132,11 +133,22 @@ public class MossedLiveOakSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class LiveOakTree extends Tree {
+    private static class LiveOakTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.SOUTHERN_LIVE_OAK_TREE;
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.BIG_LIVE_OAK_TREE;
         }
     }
 }
