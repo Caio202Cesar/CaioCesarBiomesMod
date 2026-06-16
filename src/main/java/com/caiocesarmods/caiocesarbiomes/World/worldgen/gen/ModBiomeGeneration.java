@@ -100,7 +100,9 @@ public class ModBiomeGeneration {
 
         addBiome(StonyMediterraneanShoreBiome.STONY_MEDITERRANEAN_SHORE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, BEACH);
 
-        addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, SAVANNA);
+        addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD);
+
+        addBiome(TropicalIslandBiome.TROPICAL_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD);
 
         addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, MOUNTAIN, CONIFEROUS);
 
