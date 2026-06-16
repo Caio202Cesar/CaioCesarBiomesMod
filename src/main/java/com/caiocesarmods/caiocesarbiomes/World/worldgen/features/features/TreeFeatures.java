@@ -2709,9 +2709,9 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> PLAINS_SUBTROPICAL_TREES = register("subtropical_plains_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ELDERBERRY_TREE.withChance(0.2F),
-                    PLANE_TREE.withChance(0.23F), PLANE_FANCY_TREE.withChance(0.3F), SOUTHERN_LIVE_OAK_TREE.withChance(0.3F), POHUTUKAWA_TREE.withChance(0.1F),
-                    ACACIA.withChance(0.2F), OAK_BEES_0002.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.2F), FANCY_OAK_BEES_0002.withChance(0.09F),
-                    PECAN_TREE.withChance(0.25F)), OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    PLANE_TREE.withChance(0.23F), PLANE_FANCY_TREE.withChance(0.3F), SOUTHERN_LIVE_OAK_TREE.withChance(0.25F), POHUTUKAWA_TREE.withChance(0.1F),
+                    OAK_BEES_0002.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.2F), FANCY_OAK_BEES_0002.withChance(0.09F),
+                    PECAN_TREE.withChance(0.25F), BIG_LIVE_OAK_TREE.withChance(0.23F)), OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.2F, 1))));
 
     public static final ConfiguredFeature<?, ?> TEAK_TREES = register("teak_trees",

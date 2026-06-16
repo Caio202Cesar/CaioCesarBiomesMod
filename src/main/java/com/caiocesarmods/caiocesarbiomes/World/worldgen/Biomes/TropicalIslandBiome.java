@@ -25,7 +25,7 @@ public class TropicalIslandBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TROPICAL_ISLAND = BIOMES.register("tropical_island",
-            () -> makeTropicalIslandBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.121f));
+            () -> makeTropicalIslandBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND,  0.0F, 0.025F));
 
 
     private static Biome makeTropicalIslandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
