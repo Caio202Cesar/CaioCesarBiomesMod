@@ -195,7 +195,7 @@ public class TreeFeatures {
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE)
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE,
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(KiwiGoldVineTrunkDecorator.INSTANCE,
                             Features.Placements.BEES_002_PLACEMENT)).build()));
 
     //Mesquite Tree
