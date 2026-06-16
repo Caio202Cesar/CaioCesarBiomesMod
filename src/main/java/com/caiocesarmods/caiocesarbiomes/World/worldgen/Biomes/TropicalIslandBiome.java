@@ -25,7 +25,7 @@ public class TropicalIslandBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TROPICAL_ISLAND = BIOMES.register("tropical_island",
-            () -> makeTropicalIslandBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.14f));
+            () -> makeTropicalIslandBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.121f));
 
 
     private static Biome makeTropicalIslandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -53,6 +53,7 @@ public class TropicalIslandBiome {
         DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);

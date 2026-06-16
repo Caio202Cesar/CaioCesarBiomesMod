@@ -55,6 +55,7 @@ public class CoastalSubtropicalDesertLomas {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

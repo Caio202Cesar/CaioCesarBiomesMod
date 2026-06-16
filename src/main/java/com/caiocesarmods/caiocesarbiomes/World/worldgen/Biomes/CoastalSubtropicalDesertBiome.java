@@ -55,6 +55,7 @@ public class CoastalSubtropicalDesertBiome {
         DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
 
