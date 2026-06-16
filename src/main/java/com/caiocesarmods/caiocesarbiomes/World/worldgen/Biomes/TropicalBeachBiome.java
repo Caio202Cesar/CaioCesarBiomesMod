@@ -34,6 +34,7 @@ public class TropicalBeachBiome {
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 10, 5, 7));
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =

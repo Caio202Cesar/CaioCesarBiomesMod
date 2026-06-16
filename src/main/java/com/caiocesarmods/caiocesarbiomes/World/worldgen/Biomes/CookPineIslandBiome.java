@@ -32,6 +32,8 @@ public class CookPineIslandBiome {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 10, 5, 7));
+
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 

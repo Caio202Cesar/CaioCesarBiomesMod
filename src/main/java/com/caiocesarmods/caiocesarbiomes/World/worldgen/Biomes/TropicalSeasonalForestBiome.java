@@ -4,6 +4,8 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
@@ -31,6 +33,8 @@ public class TropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
       BiomeGenerationSettings.Builder biomegenerationsettings$builder =
               (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
+
+      mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 10, 5, 7));
 
       biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
       biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
