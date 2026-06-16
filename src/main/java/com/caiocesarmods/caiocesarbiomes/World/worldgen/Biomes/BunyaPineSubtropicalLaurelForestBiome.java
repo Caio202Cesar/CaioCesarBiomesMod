@@ -57,7 +57,7 @@ public class BunyaPineSubtropicalLaurelForestBiome {
       ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalVanillaOak(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestOaks(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
