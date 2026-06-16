@@ -1,0 +1,121 @@
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
+
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MutableBoundingBox;
+import net.minecraft.world.gen.IWorldGenerationReader;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
+import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
+
+import java.util.Random;
+import java.util.Set;
+
+public class VirginianaFoliagePlacer extends FoliagePlacer {
+    public static final Codec<VirginianaFoliagePlacer> CODEC =
+            RecordCodecBuilder.create(instance ->
+                    func_242830_b(instance)
+                            .apply(instance, VirginianaFoliagePlacer::new));
+
+    public VirginianaFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
+        super(radius, offset);
+    }
+
+    @Override
+    protected FoliagePlacerType<?> getPlacerType() {
+        return ModFoliagePlacer.VIRGINIANA_FOLIAGE_PLACER.get();
+    }
+
+    @Override
+    protected void func_230372_a_(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            int trunkHeight,
+            Foliage foliage,
+            int foliageHeight,
+            int radius,
+            Set<BlockPos> leaves,
+            int offset,
+            MutableBoundingBox box) {
+
+        BlockPos center = foliage.func_236763_a_();
+
+        generateBlob(world, random, config, foliage, leaves, box,
+                center, 5, 2);
+
+        generateBlob(world, random, config, foliage, leaves, box,
+                center.add(3, -1, 0), 3, 1);
+
+        generateBlob(world, random, config, foliage, leaves, box,
+                center.add(-3, -1, 0), 3, 1);
+
+        generateBlob(world, random, config, foliage, leaves, box,
+                center.add(0, -1, 3), 3, 1);
+
+        generateBlob(world, random, config, foliage, leaves, box,
+                center.add(0, -1, -3), 3, 1);
+    }
+
+    @Override
+    public int func_230374_a_(
+            Random random,
+            int trunkHeight,
+            BaseTreeFeatureConfig config) {
+
+        return 4;
+    }
+
+    @Override
+    protected boolean func_230373_a_(
+            Random random,
+            int x,
+            int y,
+            int z,
+            int radius,
+            boolean giantTrunk) {
+
+        double dist = Math.sqrt(x * x + z * z);
+
+        if (dist > radius - 1) {
+            return random.nextInt(3) == 0;
+        }
+
+        if (dist > radius - 2) {
+            return random.nextInt(8) == 0;
+        }
+
+        return false;
+    }
+
+    private void generateBlob(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            Foliage foliage,
+            Set<BlockPos> leaves,
+            MutableBoundingBox box,
+            BlockPos center,
+            int radius,
+            int height) {
+
+        for (int y = -height; y <= height; y++) {
+
+            int layerRadius = Math.max(1, radius - Math.abs(y));
+
+            this.func_236753_a_(
+                    world,
+                    random,
+                    config,
+                    center,
+                    layerRadius,
+                    leaves,
+                    y,
+                    foliage.func_236765_c_(),
+                    box
+            );
+        }
+    }
+}
