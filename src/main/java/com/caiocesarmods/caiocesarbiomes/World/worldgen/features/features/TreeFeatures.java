@@ -698,9 +698,10 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(8,   4, 2),
-                    new TwoLayerFeature(1, 0, 2))
-                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).setIgnoreVines().build())));
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG = register("southern_live_oak_with_creeping_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),

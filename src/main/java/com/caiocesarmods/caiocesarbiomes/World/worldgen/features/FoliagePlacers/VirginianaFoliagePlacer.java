@@ -9,6 +9,7 @@ import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
@@ -92,6 +93,28 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
         return false;
     }
 
+    private void placeLeaf(
+            IWorldGenerationReader world,
+            BlockPos pos,
+            Set<BlockPos> leaves,
+            MutableBoundingBox box) {
+
+        if (TreeFeature.isReplaceableAt(world, pos)) {
+
+            world.setBlockState(
+                    pos,
+                    TreeBlocks.LIVE_OAK_LEAVES.get()
+                            .getDefaultState()
+                            .with(LeavesBlock.PERSISTENT, true)
+                            .with(LeavesBlock.DISTANCE, 1),
+                    19
+            );
+
+            leaves.add(pos);
+            box.expandTo(new MutableBoundingBox(pos, pos));
+        }
+    }
+
     private void generateBlob(
             IWorldGenerationReader world,
             Random random,
@@ -103,29 +126,28 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
             int radius,
             int height) {
 
-        if (world.hasBlockState(center, s -> s.isAir())) {
-            world.setBlockState(center, TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState()
-                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
-            leaves.add(center);
-            box.expandTo(new MutableBoundingBox(center, center));
-        }
-
         for (int y = -height; y <= height; y++) {
 
-            int layerRadius = Math.max(1, radius - Math.abs(y));
+            int layerRadius = radius - Math.abs(y);
 
-            this.func_236753_a_(
-                    world,
-                    random,
-                    config,
-                    center,
-                    layerRadius,
-                    leaves,
-                    y,
-                    foliage.func_236765_c_(),
-                    box
-            );
+            for (int x = -layerRadius; x <= layerRadius; x++) {
+                for (int z = -layerRadius; z <= layerRadius; z++) {
+
+                    double dist = Math.sqrt(x * x + z * z);
+
+                    if (dist > layerRadius)
+                        continue;
+
+                    boolean edge = dist > layerRadius - 1;
+
+                    if (edge && random.nextFloat() < 0.35F)
+                        continue;
+
+                    BlockPos pos = center.add(x, y, z);
+
+                    placeLeaf(world, pos, leaves, box);
+                }
+            }
         }
-
     }
 }
