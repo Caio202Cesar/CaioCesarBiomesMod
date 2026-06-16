@@ -10,10 +10,7 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.trunkplacer.AbstractTrunkPlacer;
 import net.minecraft.world.gen.trunkplacer.TrunkPlacerType;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class BaobabTrunkPlacer extends AbstractTrunkPlacer {
     private final int radius;
@@ -54,8 +51,38 @@ public class BaobabTrunkPlacer extends AbstractTrunkPlacer {
             BaseTreeFeatureConfig config) {
 
         for (int y = 0; y < treeHeight; y++) {
-            for (int x = -4; x <= 4; x++) {
-                for (int z = -4; z <= 4; z++) {
+
+            int radius;
+
+            // Swollen baobab base
+            if (y < treeHeight * 0.15F) {
+                radius = 5; // 11x11
+            }
+            // Main trunk
+            else if (y < treeHeight * 0.60F) {
+                radius = 4; // 9x9
+            }
+            // Upper trunk
+            else if (y < treeHeight * 0.85F) {
+                radius = 3; // 7x7
+            }
+            // Near canopy
+            else {
+                radius = 2; // 5x5
+            }
+
+            // Slight natural irregularity near the top
+            if (y > treeHeight * 0.70F && rand.nextFloat() < 0.15F) {
+                radius = Math.max(1, radius - 1);
+            }
+
+            for (int x = -radius; x <= radius; x++) {
+                for (int z = -radius; z <= radius; z++) {
+
+                    // Circular cross-section
+                    if (x * x + z * z > radius * radius) {
+                        continue;
+                    }
 
                     func_236911_a_(
                             reader,
@@ -69,12 +96,42 @@ public class BaobabTrunkPlacer extends AbstractTrunkPlacer {
             }
         }
 
-        return Collections.singletonList(
-                new FoliagePlacer.Foliage(
-                        pos.up(treeHeight),
-                        0,
-                        false
-                )
-        );
+        List<FoliagePlacer.Foliage> foliage = new ArrayList<>();
+
+        BlockPos top = pos.up(treeHeight);
+
+        // Central crown
+        foliage.add(new FoliagePlacer.Foliage(
+                top,
+                0,
+                false
+        ));
+
+        // Four side crowns
+        foliage.add(new FoliagePlacer.Foliage(
+                top.east(4),
+                0,
+                false
+        ));
+
+        foliage.add(new FoliagePlacer.Foliage(
+                top.west(4),
+                0,
+                false
+        ));
+
+        foliage.add(new FoliagePlacer.Foliage(
+                top.north(4),
+                0,
+                false
+        ));
+
+        foliage.add(new FoliagePlacer.Foliage(
+                top.south(4),
+                0,
+                false
+        ));
+
+        return foliage;
     }
 }
