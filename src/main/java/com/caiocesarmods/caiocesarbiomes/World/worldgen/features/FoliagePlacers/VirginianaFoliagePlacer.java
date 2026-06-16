@@ -1,7 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
@@ -101,6 +103,13 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
             int radius,
             int height) {
 
+        if (world.hasBlockState(center, s -> s.isAir())) {
+            world.setBlockState(center, TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState()
+                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
+            leaves.add(center);
+            box.expandTo(new MutableBoundingBox(center, center));
+        }
+
         for (int y = -height; y <= height; y++) {
 
             int layerRadius = Math.max(1, radius - Math.abs(y));
@@ -117,5 +126,6 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
                     box
             );
         }
+
     }
 }
