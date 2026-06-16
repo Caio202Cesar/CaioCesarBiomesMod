@@ -66,6 +66,8 @@ public class SubtropicalSeasonalForestBiome {
       ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSabalPalms(biomegenerationsettings$builder);
 
+      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BIG_LIVE_OAK_TREE);
+
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
       //Hardiness zone 9: 0.8F - 0.84F
