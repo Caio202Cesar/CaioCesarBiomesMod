@@ -1070,7 +1070,10 @@
   "item.caiocesarbiomes.beetroot_juice": "Suco de beterraba",
 
   "block.caiocesarbiomes.saltpeter_block": "Bloco de salitre",
-  "block.caiocesarbiomes.sulphur_block": "Bloco de enxofre"
+  "block.caiocesarbiomes.sulphur_block": "Bloco de enxofre",
+  "block.caiocesarbiomes.sycamore_fig_fruiting_leaves": "Folhas de sicômoro com frutos",
+  "block.caiocesarbiomes.sycamore_fig_branches": "Galhos de sicômoro",
+  "block.caiocesarbiomes.sycamore_fig_fruiting_branches": "Galhos de sicômoro com frutos"
 }
 
 
