@@ -19,10 +19,12 @@ import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.item.AxeItem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -138,6 +140,16 @@ public class CaioCesarBiomesMod
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
+            AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+                    .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
+                    .put(TreeBlocks.AVOCADO_LOG.get(), TreeBlocks.STRIPPED_AVOCADO_LOG.get())
+                    .put(TreeBlocks.BALD_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_LOG.get())
+                    .put(TreeBlocks.BEECH_LOG.get(), TreeBlocks.STRIPPED_BEECH_LOG.get())
+                    .put(TreeBlocks.BLACK_POPLAR_LOG.get(), TreeBlocks.STRIPPED_POPLAR_LOG.get())
+                    .put(TreeBlocks.CAMELLIA_LOG.get(), TreeBlocks.STRIPPED_CAMELLIA_LOG.get())
+                    .put(TreeBlocks.CAROB_LOG.get(), TreeBlocks.STRIPPED_CAROB_LOG.get())
+                    .build();
 
             ModBiomeGeneration.generateBiomes();
 

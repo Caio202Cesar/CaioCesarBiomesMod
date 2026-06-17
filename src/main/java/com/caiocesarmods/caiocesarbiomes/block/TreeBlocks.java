@@ -34,6 +34,9 @@ public class TreeBlocks {
 //Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_LOG = registerBlock("stripped_araucaria_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> COOK_PINE_SAPLING = registerBlock("cook_pine_sapling",
@@ -69,6 +72,8 @@ public class TreeBlocks {
 
     //Avocado
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AVOCADO_LOG = registerBlock("stripped_avocado_log",
             ModLogs::new);
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
             () -> new AvocadoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -138,6 +143,9 @@ public class TreeBlocks {
     //Bald Cypress
     public static final RegistryObject<Block> BALD_CYPRESS_LOG = registerBlock("bald_cypress_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BALD_CYPRESS_LOG = registerBlock("stripped_bald_cypress_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BALD_CYPRESS_LEAVES = registerBlock("bald_cypress_leaves",
             () -> new BaldCypressLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_AUTUMN_LEAVES));
@@ -188,6 +196,8 @@ public class TreeBlocks {
 
     // Beech
     public static final RegistryObject<Block> BEECH_LOG = registerBlock("beech_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BEECH_LOG = registerBlock("stripped_beech_log",
             ModLogs::new);
 
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
@@ -241,6 +251,8 @@ public class TreeBlocks {
     //Black Poplar
     public static final RegistryObject<Block> BLACK_POPLAR_LOG = registerBlock("black_poplar_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_POPLAR_LOG = registerBlock("stripped__poplar_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> BLACK_POPLAR_LEAVES = registerBlock("black_poplar_leaves",
             () -> new BlackPoplarLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -292,6 +304,8 @@ public class TreeBlocks {
    //Camellia
     public static final RegistryObject<Block> CAMELLIA_LOG = registerBlock("camellia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMELLIA_LOG = registerBlock("stripped_camellia_log",
+            ModLogs::new);
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAMELLIA_SAPLING = registerBlock("camellia_sapling",
@@ -313,6 +327,8 @@ public class TreeBlocks {
 
     //Carob
     public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAROB_LOG = registerBlock("stripped_carob_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
             CarobLeaves::new);
@@ -2307,19 +2323,21 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    /*
-    public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
+    public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
             ModLogs::new);
 
-    public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
+    public static final RegistryObject<Block> BLACK_POUI_LEAVES = registerBlock("black_poui_leaves",
             () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> LYCHEE_FLOWERING_LEAVES = registerBlock("lychee_flowering_leaves",
-            () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FRUITING_LEAVES));
-    public static final RegistryObject<Block> LYCHEE_FRUITING_LEAVES = registerBlock("lychee_fruiting_leaves",
+    public static final RegistryObject<Block> BLACK_POUI_BRANCHES = registerBlock("black_poui_branches",
             () -> new LycheeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_LEAVES));
+    public static final RegistryObject<Block> BLACK_POUI_BLOSSOM = registerBlock("black_poui_blossom",
+            () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POUI_LEAVES));
+
     public static final RegistryObject<Block> LYCHEE_SAPLING = registerBlock("lychee_sapling",
             LycheeSapling::new);
     @SuppressWarnings("deprecation")
@@ -2327,7 +2345,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-
+/*
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
 
