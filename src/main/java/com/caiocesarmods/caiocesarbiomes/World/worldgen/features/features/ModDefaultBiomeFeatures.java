@@ -5,7 +5,7 @@ import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 
-public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
+public class ModDefaultBiomeFeatures {
     public static void withMediterraneanFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.FLOWER_MEDITERRANEAN);
     }

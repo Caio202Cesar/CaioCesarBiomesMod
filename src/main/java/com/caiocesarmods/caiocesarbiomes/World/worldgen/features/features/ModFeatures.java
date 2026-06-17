@@ -17,7 +17,7 @@ import net.minecraft.world.gen.placement.Placement;
 
 import java.util.function.Supplier;
 
-public class ModFeatures extends Features implements IFeatureConfig {
+public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> FLOWER_MEDITERRANEAN = register("flower_mediterranean",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)

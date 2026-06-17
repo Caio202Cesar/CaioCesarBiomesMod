@@ -6,7 +6,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
 @SuppressWarnings("deprecation")
-public class ModFoods extends Foods {
+public class ModFoods {
     public static final Food AVOCADO = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food FIG = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food WHITE_FIG = (new Food.Builder()).hunger(4).saturation(0.3F).build();
