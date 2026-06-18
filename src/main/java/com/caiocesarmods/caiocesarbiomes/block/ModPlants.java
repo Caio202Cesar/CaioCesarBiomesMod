@@ -231,6 +231,12 @@ public class ModPlants {
             BunchberryFloweringPlant::new);
     public static final RegistryObject<Block> BUNCHBERRY_FRUITING_PLANT = registerBlock("bunchberry_fruiting_plant",
             BunchberryFruitingPlant::new);
+    /*
+    public static final RegistryObject<Block> BUNCHBERRY_FALL_PLANT = registerBlock("bunchberry_fall_plant",
+            BunchberryFallPlant::new);
+    public static final RegistryObject<Block> BUNCHBERRY_FRUITING_FALL_PLANT = registerBlock("bunchberry_fruiting_fall_plant",
+            BunchberryFruitingFallPlant::new);
+     */
 
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             ModGrasses::new);

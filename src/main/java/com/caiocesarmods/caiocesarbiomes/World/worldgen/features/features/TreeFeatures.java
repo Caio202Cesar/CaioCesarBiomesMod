@@ -2761,13 +2761,13 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> DECIDUOUS_SUBTROPICAL_FOREST_TREES = register("deciduous_subtropical_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.4F),
-                            ELDERBERRY_TREE.withChance(0.3F), SOUTHERN_LIVE_OAK_TREE.withChance(0.6F), MULBERRY_TREE.withChance(0.4F),
-                            AVOCADO_TREE.withChance(0.3F), PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            OAK_TREE_WITH_IVY.withChance(0.15F), PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.2F),
-                            PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F), PEACH_TREE.withChance(0.2F),
+                            ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.4F), AVOCADO_TREE.withChance(0.3F),
+                            PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
+                            OAK_TREE_WITH_IVY.withChance(0.15F), PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.26F),
+                            PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F), PEACH_TREE.withChance(0.3F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.27F), CREEPING_FIG_AVOCADO_TREE.withChance(0.06F),
                             PINK_IVORY_TREE.withChance(0.26F), PINK_IVORY_FANCY_TREE.withChance(0.3F),
-                            RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.12F), SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F),
+                            RED_MAPLE_TREE.withChance(0.4F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.3F), SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.073F), RED_MAPLE_FANCY_TREE.withChance(0.4F), BLOB_RED_MAPLE_TREE.withChance(0.3F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.08F)), SOUTHERN_MAGNOLIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));

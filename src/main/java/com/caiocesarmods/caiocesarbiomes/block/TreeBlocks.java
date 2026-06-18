@@ -2323,6 +2323,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /*
     public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
@@ -2345,7 +2346,7 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-/*
+
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
 
