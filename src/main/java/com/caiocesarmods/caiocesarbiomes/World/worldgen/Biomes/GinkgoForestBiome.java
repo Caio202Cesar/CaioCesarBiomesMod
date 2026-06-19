@@ -62,6 +62,7 @@ public class GinkgoForestBiome {
         ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.GINKGO_TRESS);
 
