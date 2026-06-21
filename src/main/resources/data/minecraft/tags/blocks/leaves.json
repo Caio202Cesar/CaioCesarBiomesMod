@@ -305,7 +305,14 @@
     "caiocesarbiomes:weeping_willow_fall_leaves",
     "caiocesarbiomes:weeping_willow_branches",
     "caiocesarbiomes:jackalberry_leaves",
-    "caiocesarbiomes:socotra_desert_rose_leaves"
+    "caiocesarbiomes:socotra_desert_rose_leaves",
+    "caiocesarbiomes:baobab_leaves",
+    "caiocesarbiomes:baobab_branches",
+    "caiocesarbiomes:baobab_flower",
+    "caiocesarbiomes:baobab_stalk",
+    "caiocesarbiomes:baobab_bud",
+    "caiocesarbiomes:baobab_fruit"
+
   ]
 }
 

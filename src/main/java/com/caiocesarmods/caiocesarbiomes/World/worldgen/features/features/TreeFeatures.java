@@ -43,9 +43,9 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB = register("baobab",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.ACACIA_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.ACACIA_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 4),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BAOBAB_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BAOBAB_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new BaobabTrunkPlacer(16, 4, 2, 3),
                     new TwoLayerFeature(1, 0, 2)))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -2056,6 +2056,9 @@ public class TreeFeatures {
 
         protected static final BlockState WEEPING_WILLOW_LOG = TreeBlocks.WEEPING_WILLOW_LOG.get().getDefaultState();
         protected static final BlockState WEEPING_WILLOW_LEAVES = TreeBlocks.WEEPING_WILLOW_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BAOBAB_LOG = TreeBlocks.BAOBAB_LOG.get().getDefaultState();
+        protected static final BlockState BAOBAB_LEAVES = TreeBlocks.BAOBAB_LEAVES.get().getDefaultState();
 
         protected static final BlockState BIRCH_LOG = Blocks.BIRCH_LOG.getDefaultState();
         protected static final BlockState ASPEN_LEAVES = TreeBlocks.ASPEN_LEAVES.get().getDefaultState();

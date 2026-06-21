@@ -2370,6 +2370,28 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
             ModLogs::new); */
 
+    public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
+            () -> new BaobabLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_BRANCHES));
+    public static final RegistryObject<Block> BAOBAB_BRANCHES = registerBlock("baobab_branches",
+            () -> new BaobabBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_LEAVES));
+    public static final RegistryObject<Block> BAOBAB_FLOWER = registerBlock("baobab_flower",
+            BaobabFlowerBlock::new); //Can be harvested and cooked
+    public static final RegistryObject<Block> BAOBAB_STALK = registerBlock("baobab_stalk",
+            BaobabStalkBlock::new);
+    public static final RegistryObject<Block> BAOBAB_BUD = registerBlock("baobab_bud",
+            BaobabBudBlock::new);
+    public static final RegistryObject<Block> BAOBAB_FRUIT = registerBlock("baobab_fruit",
+            BaobabFruitBlock::new);
+
+    public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
+            BaobabSapling::new);
+
+
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
