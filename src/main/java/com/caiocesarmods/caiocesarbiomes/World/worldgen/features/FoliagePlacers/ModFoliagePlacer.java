@@ -38,6 +38,14 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("virginiana_foliage_placer",
                     () -> new FoliagePlacerType<>(VirginianaFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<BaobabFoliagePlacer>> BAOBAB_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("baobab_foliage_placer",
+                    () -> new FoliagePlacerType<>(BaobabFoliagePlacer.CODEC));
+
+    public static final RegistryObject<FoliagePlacerType<AncientFigFoliagePlacer>> ANCIENT_FIG_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("ancient_fig_foliage_placer",
+                    () -> new FoliagePlacerType<>(AncientFigFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
