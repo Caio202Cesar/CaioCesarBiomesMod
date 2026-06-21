@@ -36,8 +36,7 @@ public class BaobabSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.SOCOTRA_CUCUMBER_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_SOCOTRA_CUCUMBER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.BAOBAB_SAPLING.get(), RenderType.getCutout());
 
     }
 
