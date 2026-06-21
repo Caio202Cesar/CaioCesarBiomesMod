@@ -969,7 +969,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUBBER_TREE = register("rubber_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
@@ -977,7 +977,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUBBER_TREE_WITH_CREEPING_FIG = register("creeping_fig_rubber_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
@@ -985,7 +985,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_RUBBER_TREE = register("peppercorn_rubber_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
