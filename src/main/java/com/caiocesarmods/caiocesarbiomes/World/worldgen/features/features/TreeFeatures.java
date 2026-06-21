@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.BaobabTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
@@ -41,6 +42,19 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB = register("baobab",
+            Feature.TREE.withConfiguration(
+                    (new BaseTreeFeatureConfig.Builder(
+                            new SimpleBlockStateProvider(States.ACACIA_LEAVES),
+                            new SimpleBlockStateProvider(States.ACACIA_LOG),
+                            new BlobFoliagePlacer(
+                                    FeatureSpread.create(3),
+                                    FeatureSpread.create(0),
+                                    4),
+                            new BaobabTrunkPlacer(16, 4, 2, 3),
+                            new TwoLayerFeature(1, 0, 2)))
+                            .setIgnoreVines()
+                            .build()));
 
     //Holm Oak Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLM_OAK_TREE = register("holm_oak_tree",
