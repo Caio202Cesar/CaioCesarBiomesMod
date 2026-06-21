@@ -930,7 +930,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_WEEPING_FIG_TREE = register("weeping_fig_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
@@ -938,7 +938,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_FIG_WITH_CREEPING_FIG = register("creeping_fig_weeping_fig_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
@@ -952,7 +952,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_INDIAN_LAUREL_TREE = register("indian_laurel_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
@@ -960,7 +960,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_WITH_CREEPING_FIG = register("creeping_fig_indian_laurel_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
@@ -1001,7 +1001,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_BIG_WEEPING_FIG_TREE = register("peppercorn_big_weeping_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
@@ -1015,7 +1015,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_BIG_INDIAN_LAUREL_TREE = register("peppercorn_indian_laurel_big",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
