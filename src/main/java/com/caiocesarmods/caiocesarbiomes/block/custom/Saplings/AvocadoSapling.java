@@ -133,7 +133,7 @@ public class AvocadoSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BAOBAB;
+            return TreeFeatures.AVOCADO_TREE;
         }
     }
 }
