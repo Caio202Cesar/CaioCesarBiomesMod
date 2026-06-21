@@ -42,7 +42,18 @@ public class BaobabFruitBlock extends Block {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(23) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(23) == 0) {
+            world.destroyBlock(pos, true);
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            world.addEntity(itemEntity);
+        }
+
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(23) == 0) {
             world.destroyBlock(pos, true);
 
             int dropCount = 1;

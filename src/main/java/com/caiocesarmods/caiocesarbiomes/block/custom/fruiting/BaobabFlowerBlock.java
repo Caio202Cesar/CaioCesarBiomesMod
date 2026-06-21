@@ -39,7 +39,11 @@ public class BaobabFlowerBlock extends Block {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp >= 0.9F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
+            world.setBlockState(pos, TreeBlocks.BAOBAB_FRUIT.get().getDefaultState());
+        }
+
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
             world.setBlockState(pos, TreeBlocks.BAOBAB_FRUIT.get().getDefaultState());
         }
     }
