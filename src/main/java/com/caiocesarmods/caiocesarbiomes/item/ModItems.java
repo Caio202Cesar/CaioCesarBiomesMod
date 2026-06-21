@@ -152,7 +152,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PINK_IVORY_BERRIES)));
     public static final RegistryObject<Item> TROPICAL_ALMOND = ITEMS.register("tropical_almond",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.TROPICAL_ALMOND)));
-    public static final RegistryObject<Item> BAOBAB_FRUIT = ITEMS.register("baobab_fruit",
+    public static final RegistryObject<Item> BAOBAB_FRUIT_ITEM = ITEMS.register("baobab_fruit_item",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BAOBAB_FRUIT)));
 
     //Culinary

@@ -686,6 +686,14 @@
   "block.caiocesarbiomes.saltpeter_ore": "Saltpeter Ore",
   "block.caiocesarbiomes.saltpeter_block": "Saltpeter Block",
   "block.caiocesarbiomes.sulphur_block": "Sulphur Block",
+  "block.caiocesarbiomes.baobab_leaves": "Baobab Leaves",
+  "block.caiocesarbiomes.baobab_branches": "Baobab Branches",
+  "block.caiocesarbiomes.baobab_log": "Baobab Log",
+  "block.caiocesarbiomes.baobab_stalk": "Baobab Flower Stalk",
+  "block.caiocesarbiomes.baobab_bud": "Baobab Flower Bud",
+  "block.caiocesarbiomes.baobab_flower": "Baobab Flower",
+  "block.caiocesarbiomes.baobab_fruit": "Baobab Fruit",
+  "block.caiocesarbiomes.baobab_sapling": "Baobab Sapling",
 
   "block.caiocesarbiomes.calabash_crop": "Calabash Seeds",
   "block.caiocesarbiomes.red_currant_crop": "Red Currant Seeds",
@@ -989,6 +997,7 @@
   "item.caiocesarbiomes.durian_juice": "Durian Juice",
   "item.caiocesarbiomes.carrot_juice": "Carrot Juice",
   "item.caiocesarbiomes.beetroot_juice": "Beetroot Juice",
+  "item.caiocesarbiomes.baobab_fruit_item": "Baobab Fruit",
 
   "item.caiocesarbiomes.wood_poisoned_sword": "Wooden Poisoned Sword",
   "item.caiocesarbiomes.stone_poisoned_sword": "Stone Poisoned Sword",

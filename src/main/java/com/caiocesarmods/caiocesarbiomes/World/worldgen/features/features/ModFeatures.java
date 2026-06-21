@@ -37,7 +37,7 @@ public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> PATCH_SAVANNA = register("patch_savanna",
             Feature.FLOWER.withConfiguration(Configs.SAVANNA_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(3));
 
     public static final ConfiguredFeature<?, ?> SWAMP_PLANT_VEGETATION = register("swamp_plants",
             Feature.FLOWER.withConfiguration(Configs.SWAMP_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -171,7 +171,7 @@ public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TALL_PLANTS_VEGETATION = register("savanna_tall_plants_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAVANNA_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(2));
 
     public static final ConfiguredFeature<?, ?> TALL_DESERT_VEGETATION = register("tall_desert_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(DESERT_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))

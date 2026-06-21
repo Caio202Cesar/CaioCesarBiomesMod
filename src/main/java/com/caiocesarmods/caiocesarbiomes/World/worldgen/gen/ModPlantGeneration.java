@@ -126,7 +126,7 @@ public class ModPlantGeneration {
             base.add(() -> ModFeatures.PATCH_SAVANNA
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(2, 0.25f, 0))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.FOREST.getLocation()))
@@ -157,7 +157,7 @@ public class ModPlantGeneration {
             base.add(() -> ModFeatures.SAVANNA_TALL_PLANTS_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(2, 0.25f, 0))));
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE.getLocation()))

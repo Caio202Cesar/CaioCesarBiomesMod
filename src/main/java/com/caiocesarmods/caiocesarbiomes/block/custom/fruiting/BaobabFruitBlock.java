@@ -47,7 +47,7 @@ public class BaobabFruitBlock extends Block {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT_ITEM.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             world.addEntity(itemEntity);
@@ -58,7 +58,7 @@ public class BaobabFruitBlock extends Block {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT_ITEM.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             world.addEntity(itemEntity);
