@@ -42,7 +42,7 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB = register("baobab",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAOBAB_TREE = register("baobab_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BAOBAB_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BAOBAB_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
