@@ -2527,13 +2527,13 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(45, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.19F),
-                            SAUSAGE_TREE.withChance(0.3F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.11F),
+                            SAUSAGE_TREE.withChance(0.13F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
                             TAMARIND_TREE.withChance(0.2F), SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F),
-                            MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.4F), BISMARCK_PALM.withChance(0.3F),
+                            MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.32F), BISMARCK_PALM.withChance(0.3F),
                             JACKALBERRY_TREE.withChance(0.3F), PLUMERIA_ORANGE_TREE.withChance(0.071F),
                             PLUMERIA_PINK_TREE.withChance(0.071F), PLUMERIA_YELLOW_TREE.withChance(0.061F), PLUMERIA_WHITE_TREE.withChance(0.08F),
-                            PLUMERIA_RED_TREE.withChance(0.061F), ORCHID_TREE.withChance(0.098F),
+                            PLUMERIA_RED_TREE.withChance(0.061F), BAOBAB_TREE.withChance(0.12F),
                             JACKALBERRY_FANCY_TREE.withChance(0.15F), YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
                             SYCAMORE_FIG_ANCIENT_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
