@@ -106,7 +106,7 @@ public class AncientFigFoliagePlacer extends FoliagePlacer {
 
             BlockState leafState = config.leavesProvider
                     .getBlockState(random, pos)
-                    .with(LeavesBlock.PERSISTENT, false)
+                    .with(LeavesBlock.PERSISTENT, true)
                     .with(LeavesBlock.DISTANCE, 1);
 
             world.setBlockState(pos, leafState, 19);
