@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.fruiting;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -9,6 +10,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -20,8 +23,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class BaobabFlowerBlock extends Block {
-    public BaobabFlowerBlock() {
+public class BaobabFruitBlock extends Block {
+    public BaobabFruitBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
                 .sound(SoundType.PLANT).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
     }
@@ -39,14 +42,21 @@ public class BaobabFlowerBlock extends Block {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
-            world.setBlockState(pos, TreeBlocks.BAOBAB_FRUIT.get().getDefaultState());
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(23) == 0) {
+            world.destroyBlock(pos, true);
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.BAOBAB_FRUIT.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            world.addEntity(itemEntity);
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.BAOBAB_FLOWER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.BAOBAB_FRUIT.get(), RenderType.getCutout());
 
     }
 
