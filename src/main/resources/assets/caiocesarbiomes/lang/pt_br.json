@@ -1073,7 +1073,17 @@
   "block.caiocesarbiomes.sulphur_block": "Bloco de enxofre",
   "block.caiocesarbiomes.sycamore_fig_fruiting_leaves": "Folhas de sicômoro com frutos",
   "block.caiocesarbiomes.sycamore_fig_branches": "Galhos de sicômoro",
-  "block.caiocesarbiomes.sycamore_fig_fruiting_branches": "Galhos de sicômoro com frutos"
+  "block.caiocesarbiomes.sycamore_fig_fruiting_branches": "Galhos de sicômoro com frutos",
+
+  "block.caiocesarbiomes.baobab_leaves": "Folhas de baobá",
+  "block.caiocesarbiomes.baobab_branches": "Galhos de baobá",
+  "block.caiocesarbiomes.baobab_log": "Tronco de baobá",
+  "block.caiocesarbiomes.baobab_stalk": "Talo de flor de baobá",
+  "block.caiocesarbiomes.baobab_bud": "Botão de flor de baobá",
+  "block.caiocesarbiomes.baobab_flower": "Flor de baobá",
+  "block.caiocesarbiomes.baobab_fruit": "Fruto de baobá",
+  "block.caiocesarbiomes.baobab_sapling": "Muda de baobá",
+  "item.caiocesarbiomes.baobab_fruit_item": "Fruto de baobá"
 }
 
 
