@@ -60,8 +60,7 @@ public class SocotraTropicalDryland {
                         .withGrassColor(12564309).setFogColor(13494015)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
-                        .build())
-                .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
+                        .build()).withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
     }
 
     public static void register(IEventBus eventBus) {
