@@ -1083,7 +1083,9 @@
   "block.caiocesarbiomes.baobab_flower": "Flor de baobá",
   "block.caiocesarbiomes.baobab_fruit": "Fruto de baobá",
   "block.caiocesarbiomes.baobab_sapling": "Muda de baobá",
-  "item.caiocesarbiomes.baobab_fruit_item": "Fruto de baobá"
+  "item.caiocesarbiomes.baobab_fruit_item": "Fruto de baobá",
+
+  "biome.caiocesarbiomes.tropical_island": "Ilha Tropical"
 }
 
 
