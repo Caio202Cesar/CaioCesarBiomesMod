@@ -55,10 +55,9 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
-                    new BaobabTrunkPlacer(7, 4, 2, 1),
-                    new TwoLayerFeature(1, 0, 2)))
-                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Holm Oak Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLM_OAK_TREE = register("holm_oak_tree",
