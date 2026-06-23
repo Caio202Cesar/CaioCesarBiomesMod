@@ -11,8 +11,8 @@ public class ModTrunkPlacers {
     public static final TrunkPlacerType<BaobabTrunkPlacer> BAOBAB =
             new TrunkPlacerType<>(BaobabTrunkPlacer.CODEC);
 
-    public static final TrunkPlacerType<BaobabTrunkPlacer> DESERT_ROSE =
-            new TrunkPlacerType<>(BaobabTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<DesertRoseTrunkPlacer> DESERT_ROSE =
+            new TrunkPlacerType<>(DesertRoseTrunkPlacer.CODEC);
 
     private static <P extends AbstractTrunkPlacer> TrunkPlacerType<P> register(
             String name,

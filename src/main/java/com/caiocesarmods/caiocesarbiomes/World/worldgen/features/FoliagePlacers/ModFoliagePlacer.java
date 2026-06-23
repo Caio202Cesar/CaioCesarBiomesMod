@@ -46,6 +46,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("ancient_fig_foliage_placer",
                     () -> new FoliagePlacerType<>(AncientFigFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<DesertRoseFoliagePlacer>> DESERT_ROSE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("desert_rose_foliage_placer",
+                    () -> new FoliagePlacerType<>(DesertRoseFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
