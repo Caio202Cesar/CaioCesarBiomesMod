@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -34,6 +35,16 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
 
         if (temp <= 0.89F || biome.getPrecipitation() == Biome.RainType.NONE) {
             world.destroyBlock(pos, false); // no drop
+        }
+
+        if (random.nextFloat() < 0.78f) {
+            BlockPos belowPos = pos.down();
+            BlockState belowState = world.getBlockState(belowPos);
+
+            // Check if the space below is air
+            if (belowState.isAir()) {
+                world.setBlockState(belowPos, ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
+            }
         }
     }
 
