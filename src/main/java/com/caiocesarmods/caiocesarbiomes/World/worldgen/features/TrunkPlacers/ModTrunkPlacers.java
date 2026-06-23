@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.features;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.world.gen.trunkplacer.AbstractTrunkPlacer;
