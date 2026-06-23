@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.trunkplacer.AbstractTrunkPlacer;
 import net.minecraft.world.gen.trunkplacer.TrunkPlacerType;
 
@@ -9,10 +10,22 @@ import java.lang.reflect.Method;
 public class ModTrunkPlacers {
 
     public static final TrunkPlacerType<BaobabTrunkPlacer> BAOBAB =
-            new TrunkPlacerType<>(BaobabTrunkPlacer.CODEC);
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:baobab_trunk",
+                    new TrunkPlacerType<>(BaobabTrunkPlacer.CODEC)
+            );
 
     public static final TrunkPlacerType<DesertRoseTrunkPlacer> DESERT_ROSE =
-            new TrunkPlacerType<>(DesertRoseTrunkPlacer.CODEC);
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:desert_rose_trunk",
+                    new TrunkPlacerType<>(DesertRoseTrunkPlacer.CODEC)
+            );
+
+    static {
+        System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
+    }
 
     private static <P extends AbstractTrunkPlacer> TrunkPlacerType<P> register(
             String name,
