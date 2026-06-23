@@ -55,8 +55,6 @@ public class SocotraTropicalDryland {
         ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSocotraTrees(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.DRAGON_BLOOD_TREE);
-
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
                 .temperature(1.9F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)

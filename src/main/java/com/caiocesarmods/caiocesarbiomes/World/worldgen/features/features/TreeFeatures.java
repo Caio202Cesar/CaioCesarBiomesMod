@@ -2617,9 +2617,9 @@ public class TreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SOCOTRA_TREES = register("socotra_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOCOTRA_DESERT_ROSE_TREE.withChance(0.07F),
                             SOCOTRA_CUCUMBER_TREE.withChance(0.07F), DATE_PALM_TREE.withChance(0.06F)),
-                            SOCOTRA_DESERT_ROSE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            DRAGON_BLOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 0))));
 
     public static final ConfiguredFeature<?, ?> HIGHLAND_OCOTEA_TREES = register("highland_ocotea",
