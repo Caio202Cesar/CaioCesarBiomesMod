@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.Collections;
 
 public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
 
@@ -56,15 +57,12 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
 
             int radius;
 
-            if (y < treeHeight * 0.25F) {
-                radius = 3; // 7x7 swollen base
-            }
-            else if (y < treeHeight * 0.60F) {
-                radius = 2; // 5x5 middle trunk
-            }
-            else {
-                radius = 1; // 3x3 upper trunk
-            }
+            if (y < treeHeight * 0.20F)
+                radius = 2;
+            else if (y < treeHeight * 0.55F)
+                radius = 2;
+            else
+                radius = 1;
 
             for (int x = -radius; x <= radius; x++) {
                 for (int z = -radius; z <= radius; z++) {
@@ -91,39 +89,23 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
 
         BlockPos crownBase = pos.up(treeHeight - 2);
 
-        for (int y = treeHeight / 2; y < treeHeight; y++) {
-
-            func_236911_a_(
-                    reader,
-                    rand,
-                    pos.add(1, y, 0),
-                    logs,
-                    box,
-                    config
-            );
-
-            func_236911_a_(
-                    reader,
-                    rand,
-                    pos.add(-1, y, 0),
-                    logs,
-                    box,
-                    config
-            );
-        }
-
         /*
          * PRIMARY BRANCHES
          */
 
-        Direction[] directions = {
-                Direction.NORTH,
-                Direction.SOUTH,
-                Direction.EAST,
-                Direction.WEST
-        };
+        List<Direction> availableDirections = new ArrayList<>();
+        availableDirections.add(Direction.NORTH);
+        availableDirections.add(Direction.SOUTH);
+        availableDirections.add(Direction.EAST);
+        availableDirections.add(Direction.WEST);
 
-        for (Direction dir : directions) {
+        Collections.shuffle(availableDirections, rand);
+
+        int branchCount = 3 + rand.nextInt(2); // 3-4 main branches
+
+        for (int branch = 0; branch < branchCount; branch++) {
+
+            Direction dir = availableDirections.get(branch);
 
             BlockPos current = crownBase;
 
@@ -133,7 +115,8 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
 
                 current = current.offset(dir);
 
-                if (rand.nextBoolean()) {
+                // Most segments rise
+                if (rand.nextFloat() < 0.75F) {
                     current = current.up();
                 }
 
@@ -148,16 +131,14 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
             }
 
             /*
-             * Secondary branch
+             * Optional fork
              */
 
-            if (rand.nextFloat() < 0.7F) {
-
-                BlockPos fork = current;
+            if (rand.nextFloat() < 0.45F) {
 
                 Direction sideDir;
 
-                if (dir == Direction.NORTH || dir == Direction.SOUTH) {
+                if (dir.getAxis() == Direction.Axis.Z) {
                     sideDir = rand.nextBoolean()
                             ? Direction.EAST
                             : Direction.WEST;
@@ -167,11 +148,17 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
                             : Direction.SOUTH;
                 }
 
+                BlockPos fork = current;
+
                 int forkLength = 1 + rand.nextInt(2);
 
                 for (int i = 0; i < forkLength; i++) {
 
-                    fork = fork.offset(sideDir).up();
+                    fork = fork.offset(sideDir);
+
+                    if (rand.nextFloat() < 0.75F) {
+                        fork = fork.up();
+                    }
 
                     func_236911_a_(
                             reader,
@@ -200,18 +187,6 @@ public class DesertRoseTrunkPlacer extends AbstractTrunkPlacer {
                     )
             );
         }
-
-        /*
-         * Central flowering crown
-         */
-
-        foliage.add(
-                new FoliagePlacer.Foliage(
-                        crownBase.up(),
-                        0,
-                        false
-                )
-        );
 
         return foliage;
     }

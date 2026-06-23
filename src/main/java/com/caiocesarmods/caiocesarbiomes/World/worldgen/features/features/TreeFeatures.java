@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.BaobabTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.DesertRoseTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -52,12 +53,16 @@ public class TreeFeatures {
 
     //Desert Rose Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_DESERT_ROSE_TREE = register("socotra_desert_rose_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DESERT_ROSE_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(6, 2, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+                    Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(
+                            new SimpleBlockStateProvider(States.DESERT_ROSE_LOG),
+                            new SimpleBlockStateProvider(TreeFeatures.States.DESERT_ROSE_LEAVES),
+                            new DesertRoseFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                            new DesertRoseTrunkPlacer(5, 2, 1),
+                            new TwoLayerFeature(0, 0, 0)))
+                                    .setMaxWaterDepth(Integer.MAX_VALUE)
+                                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                                    .setIgnoreVines()
+                                    .build()));
 
     //Holm Oak Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOLM_OAK_TREE = register("holm_oak_tree",
