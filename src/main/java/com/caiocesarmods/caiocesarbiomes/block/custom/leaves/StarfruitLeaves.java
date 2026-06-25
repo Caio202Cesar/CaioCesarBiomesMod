@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import net.minecraft.block.Block;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -12,16 +12,12 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public StarfruitLeaves(Properties properties, Supplier<Block> nextStage) {
+    public StarfruitLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
-    }
 
+    }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -42,59 +38,50 @@ public class StarfruitLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for subtropical climates (dormant season = winter)
-        if (temp <= 0.89F && nextStage != null && random.nextInt(25) == 0) {
-
-            String excludedSeason = "WINTER";
-
-            if (! currentSeason.equals(excludedSeason)) {
-
-                int distance = state.get(LeavesBlock.DISTANCE);
-                boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-                worldIn.setBlockState(pos, newState, 2);
-
-            }
-        }
-
-        //Pattern for tropical climates (dormant season = dry/SUMMER and FALL)
-        if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
-
-                int distance = state.get(LeavesBlock.DISTANCE);
-                boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-                worldIn.setBlockState(pos, newState, 2);
-
-        }
-
-        if (temp >= 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
-
+        //Pattern for tropical biomes
+        if (random.nextInt(45) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-
+            worldIn.setBlockState(pos, TreeBlocks.STARFRUIT_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            return;
         }
 
-        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
-
+        // Pattern for subtropical biomes
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(65) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-
+            worldIn.setBlockState(pos, TreeBlocks.STARFRUIT_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
+        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.STARFRUIT_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(115) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.STARFRUIT_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Zone 9 only
+        if (temp <= 0.84F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.STARFRUIT_WINTER_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
     }
-
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;

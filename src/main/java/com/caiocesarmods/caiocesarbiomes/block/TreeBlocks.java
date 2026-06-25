@@ -1871,12 +1871,21 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             () -> new StarfruitLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> STARFRUIT_FLOWERING_LEAVES = registerBlock("starfruit_flowering_leaves",
             () -> new StarfruitFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_FRUITING_LEAVES));
     public static final RegistryObject<Block> STARFRUIT_FRUITING_LEAVES = registerBlock("starfruit_fruiting_leaves",
             () -> new StarfruitFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> STARFRUIT_WINTER_LEAVES = registerBlock("starfruit_winter_leaves",
+            () -> new StarfruitWinterLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_BRANCHES));
+    public static final RegistryObject<Block> STARFRUIT_WINTER_FRUITING_LEAVES = registerBlock("starfruit_winter_fruiting_leaves",
+            () -> new StarfruitWinterFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_BRANCHES));
+    public static final RegistryObject<Block> STARFRUIT_BRANCHES = registerBlock("starfruit_branches",
+            () -> new StarfruitBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.STARFRUIT_LEAVES));
     public static final RegistryObject<Block> STARFRUIT_SAPLING = registerBlock("starfruit_sapling",
             StarfruitSapling::new);
