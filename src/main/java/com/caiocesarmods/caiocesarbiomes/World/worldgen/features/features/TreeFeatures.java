@@ -2777,8 +2777,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_PLANE_TREES = register("subtropical_forest_plane_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PLANE_TREE.withChance(0.4F),
-                    RED_MAPLE_TREE.withChance(0.4F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.3F),
-                    RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.073F), RED_MAPLE_FANCY_TREE.withChance(0.4F),
+                    RED_MAPLE_TREE.withChance(0.4F), RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.073F), RED_MAPLE_FANCY_TREE.withChance(0.4F),
                     BLOB_RED_MAPLE_TREE.withChance(0.3F)), PLANE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
@@ -2786,7 +2785,7 @@ public class TreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.4F),
                             ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.4F), AVOCADO_TREE.withChance(0.3F),
                             PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.26F),
+                            PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.26F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.3F),
                             PERSIMMON_FANCY_TREE.withChance(0.4F), STARFRUIT_TREE_WITH_KIWI.withChance(0.079F),
                             PEACH_TREE.withChance(0.3F), CREEPING_FIG_AVOCADO_TREE.withChance(0.06F),
                             PINK_IVORY_TREE.withChance(0.26F), PINK_IVORY_FANCY_TREE.withChance(0.3F),
