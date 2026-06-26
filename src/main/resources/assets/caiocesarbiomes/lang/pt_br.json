@@ -1084,6 +1084,9 @@
   "block.caiocesarbiomes.baobab_fruit": "Fruto de baobá",
   "block.caiocesarbiomes.baobab_sapling": "Muda de baobá",
   "item.caiocesarbiomes.baobab_fruit_item": "Fruto de baobá",
+  "block.caiocesarbiomes.starfruit_winter_leaves": "Folhas de caramboleira",
+  "block.caiocesarbiomes.starfruit_winter_fruiting_leaves": "Folhas de caramboleira com frutos",
+  "block.caiocesarbiomes.starfruit_branches": "Galhos de caramboleira",
 
   "biome.caiocesarbiomes.tropical_island": "Ilha Tropical"
 }
