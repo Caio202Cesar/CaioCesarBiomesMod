@@ -141,18 +141,33 @@ public class CaioCesarBiomesMod
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
 
-            /*
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
+                    .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(TreeBlocks.AVOCADO_LOG.get(), TreeBlocks.STRIPPED_AVOCADO_LOG.get())
+                    .put(TreeBlocks.AVOCADO_WOOD.get(), TreeBlocks.STRIPPED_AVOCADO_WOOD.get())
                     .put(TreeBlocks.BALD_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_LOG.get())
+                    .put(TreeBlocks.BALD_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_WOOD.get())
                     .put(TreeBlocks.BEECH_LOG.get(), TreeBlocks.STRIPPED_BEECH_LOG.get())
+                    .put(TreeBlocks.BEECH_WOOD.get(), TreeBlocks.STRIPPED_BEECH_WOOD.get())
                     .put(TreeBlocks.BLACK_POPLAR_LOG.get(), TreeBlocks.STRIPPED_POPLAR_LOG.get())
+                    .put(TreeBlocks.BLACK_POPLAR_WOOD.get(), TreeBlocks.STRIPPED_POPLAR_WOOD.get())
                     .put(TreeBlocks.CAMELLIA_LOG.get(), TreeBlocks.STRIPPED_CAMELLIA_LOG.get())
+                    .put(TreeBlocks.CAMELLIA_WOOD.get(), TreeBlocks.STRIPPED_CAMELLIA_WOOD.get())
                     .put(TreeBlocks.CAROB_LOG.get(), TreeBlocks.STRIPPED_CAROB_LOG.get())
+                    .put(TreeBlocks.CAROB_WOOD.get(), TreeBlocks.STRIPPED_CAROB_WOOD.get())
+                    .put(TreeBlocks.CANARY_PINE_LOG.get(), TreeBlocks.STRIPPED_PINE_LOG.get())
+                    .put(TreeBlocks.CANARY_PINE_WOOD.get(), TreeBlocks.STRIPPED_PINE_WOOD.get())
+                    .put(TreeBlocks.CASUARINA_LOG.get(), TreeBlocks.STRIPPED_CASUARINA_LOG.get())
+                    .put(TreeBlocks.CASUARINA_WOOD.get(), TreeBlocks.STRIPPED_CASUARINA_WOOD.get())
+                    .put(TreeBlocks.CITRUS_LOG.get(), TreeBlocks.STRIPPED_CITRUS_LOG.get())
+                    .put(TreeBlocks.CITRUS_WOOD.get(), TreeBlocks.STRIPPED_CITRUS_WOOD.get())
+                    .put(TreeBlocks.CHINESE_RED_PINE_LOG.get(), TreeBlocks.STRIPPED_PINE_LOG.get())
+                    .put(TreeBlocks.CHINESE_RED_PINE_WOOD.get(), TreeBlocks.STRIPPED_PINE_WOOD.get())
+                    .put(TreeBlocks.CRABAPPLE_LOG.get(), TreeBlocks.STRIPPED_CRABAPPLE_LOG.get())
+                    .put(TreeBlocks.CRABAPPLE_WOOD.get(), TreeBlocks.STRIPPED_CRABAPPLE_WOOD.get())
                     .build();
 
-             */
 
             ModBiomeGeneration.generateBiomes();
 

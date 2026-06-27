@@ -36,6 +36,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_ARAUCARIA_LOG = registerBlock("stripped_araucaria_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_WOOD = registerBlock("stripped_araucaria_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
             ModLeaves::new);
@@ -75,6 +79,11 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_AVOCADO_LOG = registerBlock("stripped_avocado_log",
             ModLogs::new);
+    public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AVOCADO_WOOD = registerBlock("stripped_avocado_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
             () -> new AvocadoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FLOWERING_LEAVES));
@@ -145,6 +154,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BALD_CYPRESS_LOG = registerBlock("stripped_bald_cypress_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BALD_CYPRESS_WOOD = registerBlock("bald_cypress_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BALD_CYPRESS_WOOD = registerBlock("stripped_bald_cypress_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> BALD_CYPRESS_LEAVES = registerBlock("bald_cypress_leaves",
             () -> new BaldCypressLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -199,6 +212,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BEECH_LOG = registerBlock("stripped_beech_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BEECH_WOOD = registerBlock("beech_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BEECH_WOOD = registerBlock("stripped_beech_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> COOPER_BEECH_LEAVES = registerBlock("cooper_beech_leaves",
             () -> new CooperBeechLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -251,7 +268,11 @@ public class TreeBlocks {
     //Black Poplar
     public static final RegistryObject<Block> BLACK_POPLAR_LOG = registerBlock("black_poplar_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_POPLAR_LOG = registerBlock("stripped__poplar_log",
+    public static final RegistryObject<Block> STRIPPED_POPLAR_LOG = registerBlock("stripped_poplar_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_POPLAR_WOOD = registerBlock("black_poplar_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_POPLAR_WOOD = registerBlock("stripped_poplar_wood",
             ModLogs::new);
 
     public static final RegistryObject<Block> BLACK_POPLAR_LEAVES = registerBlock("black_poplar_leaves",
@@ -306,6 +327,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAMELLIA_LOG = registerBlock("stripped_camellia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CAMELLIA_WOOD = registerBlock("camellia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMELLIA_WOOD = registerBlock("stripped_camellia_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CAMELLIA_LEAVES = registerBlock("camellia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAMELLIA_SAPLING = registerBlock("camellia_sapling",
@@ -329,6 +354,10 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAROB_LOG = registerBlock("stripped_carob_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAROB_WOOD = registerBlock("carob_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAROB_WOOD = registerBlock("stripped_carob_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
             CarobLeaves::new);
@@ -357,8 +386,15 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
+            ModLogs::new);
+
     //Canary Pine
     public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CANARY_PINE_WOOD = registerBlock("canary_pine_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CANARY_PINE_LEAVES = registerBlock("canary_pine_leaves",
             ModLeaves::new);
@@ -370,10 +406,16 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
     //Casuarina
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CASUARINA_WOOD = registerBlock("casuarina_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASUARINA_LOG = registerBlock("stripped_casuarina_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASUARINA_WOOD = registerBlock("stripped_casuarina_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> CASUARINA_LEAVES = registerBlock("casuarina_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CASUARINA_SAPLING = registerBlock("casuarina_sapling",
@@ -388,6 +430,13 @@ public class TreeBlocks {
     //Citrus
     public static final RegistryObject<Block> CITRUS_LOG = registerBlock("citrus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CITRUS_WOOD = registerBlock("citrus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CITRUS_LOG = registerBlock("stripped_citrus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CITRUS_WOOD = registerBlock("stripped_citrus_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
             () -> new BuddhaHandLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BUDDHA_HAND_FLOWERING_LEAVES));
@@ -498,6 +547,8 @@ public class TreeBlocks {
     //Chinese Pine
     public static final RegistryObject<Block> CHINESE_RED_PINE_LOG = registerBlock("chinese_red_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CHINESE_RED_PINE_WOOD = registerBlock("chinese_red_pine_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CHINESE_RED_PINE_LEAVES = registerBlock("chinese_red_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CHINESE_RED_PINE_SAPLING = registerBlock("chinese_red_pine_sapling",
@@ -511,6 +562,12 @@ public class TreeBlocks {
 
     //Crabapple
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CRABAPPLE_WOOD = registerBlock("crabapple_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CRABAPPLE_LOG = registerBlock("stripped_crabapple_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CRABAPPLE_WOOD = registerBlock("stripped_crabapple_wood",
             ModLogs::new);
 
     public static final RegistryObject<Block> PINK_CRABAPPLE_LEAVES = registerBlock("crabapple_pink_leaves",
