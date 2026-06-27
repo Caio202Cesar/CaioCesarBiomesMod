@@ -645,6 +645,12 @@ public class TreeBlocks {
     //Crape Myrtle
     public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MYRTLE_WOOD = registerBlock("myrtle_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MYRTLE_LOG = registerBlock("stripped_myrtle_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MYRTLE_WOOD = registerBlock("stripped_myrtle_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_SPRING_LEAVES = registerBlock("crape_myrtle_red_spring_leaves",
             () -> new RedCrapeMyrtleSpringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -733,6 +739,13 @@ public class TreeBlocks {
     //Coast Cottonwood
     public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
             ModLogs::new);
+    public static final RegistryObject<Block> COAST_COTTONWOOD_WOOD = registerBlock("coast_cottonwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_COAST_COTTONWOOD_LOG = registerBlock("stripped_coast_cottonwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_COAST_COTTONWOOD_WOOD = registerBlock("stripped_coast_cottonwood_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> COAST_COTTONWOOD_LEAVES = registerBlock("coast_cottonwood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> COAST_COTTONWOOD_SAPLING = registerBlock("coast_cottonwood_sapling",
@@ -746,6 +759,12 @@ public class TreeBlocks {
 
     //Cork Oak
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CORK_OAK_WOOD = registerBlock("cork_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CORK_OAK_LOG = registerBlock("stripped_cork_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CORK_OAK_WOOD = registerBlock("stripped_cork_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CORK_OAK_LEAVES = registerBlock("cork_oak_leaves",
             ModLeaves::new);

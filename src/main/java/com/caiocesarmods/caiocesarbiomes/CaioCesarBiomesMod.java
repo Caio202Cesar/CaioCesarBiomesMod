@@ -166,6 +166,12 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.CHINESE_RED_PINE_WOOD.get(), TreeBlocks.STRIPPED_PINE_WOOD.get())
                     .put(TreeBlocks.CRABAPPLE_LOG.get(), TreeBlocks.STRIPPED_CRABAPPLE_LOG.get())
                     .put(TreeBlocks.CRABAPPLE_WOOD.get(), TreeBlocks.STRIPPED_CRABAPPLE_WOOD.get())
+                    .put(TreeBlocks.MYRTLE_LOG.get(), TreeBlocks.STRIPPED_MYRTLE_LOG.get())
+                    .put(TreeBlocks.MYRTLE_WOOD.get(), TreeBlocks.STRIPPED_MYRTLE_WOOD.get())
+                    .put(TreeBlocks.COAST_COTTONWOOD_LOG.get(), TreeBlocks.STRIPPED_COAST_COTTONWOOD_LOG.get())
+                    .put(TreeBlocks.COAST_COTTONWOOD_WOOD.get(), TreeBlocks.STRIPPED_COAST_COTTONWOOD_WOOD.get())
+                    .put(TreeBlocks.CORK_OAK_LOG.get(), TreeBlocks.STRIPPED_CORK_OAK_LOG.get())
+                    .put(TreeBlocks.CORK_OAK_WOOD.get(), TreeBlocks.STRIPPED_CORK_OAK_WOOD.get())
                     .build();
 
 
