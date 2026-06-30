@@ -8,6 +8,8 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
@@ -46,6 +48,32 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
                 world.setBlockState(belowPos, ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
             }
         }
+    }
+
+    @Override
+    public BlockState updatePostPlacement(BlockState state,
+                                          Direction facing,
+                                          BlockState facingState,
+                                          IWorld world,
+                                          BlockPos currentPos,
+                                          BlockPos facingPos) {
+
+        // Only care when the block above changes
+        if (facing == Direction.UP && !isValidPosition(state, world, currentPos)) {
+            return Blocks.AIR.getDefaultState();
+        }
+
+        return super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == ModPlants.FICUS_ROOTS_PLANT.get()
+                || above.getBlock() == TreeBlocks.WEEPING_FIG_LEAVES.get()
+                || above.getBlock() == TreeBlocks.INDIAN_LAUREL_LEAVES.get()
+                || above.getBlock() == TreeBlocks.RUBBER_TREE_LEAVES.get();
     }
 
     @Override
