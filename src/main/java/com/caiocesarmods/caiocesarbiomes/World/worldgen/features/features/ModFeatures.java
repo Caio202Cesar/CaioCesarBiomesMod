@@ -294,7 +294,10 @@ public class ModFeatures implements IFeatureConfig {
                         .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 4)
                         .addWeightedBlockstate(States.CALAFATE_BUSH, 7)
                         .addWeightedBlockstate(States.CALAFATE_FLOWERING_BUSH, 4)
-                        .addWeightedBlockstate(States.CALAFATE_FRUITING_BUSH, 4),
+                        .addWeightedBlockstate(States.CALAFATE_FRUITING_BUSH, 4)
+                        .addWeightedBlockstate(States.CHILEAN_GUAVA_BUSH, 7)
+                        .addWeightedBlockstate(States.CHILEAN_GUAVA_FLOWERING_BUSH, 4)
+                        .addWeightedBlockstate(States.CHILEAN_GUAVA_FRUITING_BUSH, 4),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
