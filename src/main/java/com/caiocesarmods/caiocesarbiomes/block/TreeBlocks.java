@@ -2465,7 +2465,7 @@ public class TreeBlocks {
             () -> new BaobabBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_LEAVES));
     public static final RegistryObject<Block> BAOBAB_FLOWER = registerBlock("baobab_flower",
-            BaobabFlowerBlock::new); //Can be harvested and cooked
+            BaobabFlowerBlock::new);
     public static final RegistryObject<Block> BAOBAB_STALK = registerBlock("baobab_stalk",
             BaobabStalkBlock::new);
     public static final RegistryObject<Block> BAOBAB_BUD = registerBlock("baobab_bud",
@@ -2477,6 +2477,12 @@ public class TreeBlocks {
             BaobabSapling::new);
 
 
+    public static final RegistryObject<Block> CHUSQUE_BAMBOO_BLOCK = registerBlock("chusque_bamboo_block",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHUSQUE_BAMBOO_LEAVES = registerBlock("chusque_bamboo_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CHUSQUE_BAMBOO_SAPLING = registerBlock("chusque_bamboo_sapling",
+            ChusqueSapling::new);
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
