@@ -2007,15 +2007,15 @@ public class TreeFeatures {
 
     //Pewen coniferous grove
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS1 = register("patagonian_cypress1",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
-                    new SimpleBlockStateProvider(States.SPRUCE_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS2 = register("patagonian_cypress2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
-                    new SimpleBlockStateProvider(States.SPRUCE_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(3, 4)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
@@ -2026,6 +2026,9 @@ public class TreeFeatures {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PATAGONIAN_CYPRESS_LOG = TreeBlocks.PATAGONIAN_CYPRESS_LOG.get().getDefaultState();
+        protected static final BlockState PATAGONIAN_CYPRESS_LEAVES = TreeBlocks.PATAGONIAN_CYPRESS_LEAVES.get().getDefaultState();
 
         protected static final BlockState TEAK_LEAVES = TreeBlocks.TEAK_LEAVES.get().getDefaultState();
 
