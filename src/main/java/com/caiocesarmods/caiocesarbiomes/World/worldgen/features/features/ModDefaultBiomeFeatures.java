@@ -174,6 +174,9 @@ public class ModDefaultBiomeFeatures {
     public static void withTemperateRainforestPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TEMPERATE_RAINFOREST_PLANTS);
     }
+    public static void withTemperateMagellanicPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TEMPERATE_MAGELLANIC_FLORA);
+    }
     public static void withTropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TROPICAL_FOREST_CITRUS_TREES);
     }

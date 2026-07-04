@@ -58,7 +58,7 @@ public class PewenConiferousGrove {
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMonkeyPuzzleTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTemperateMagellanicPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSouthernBeechVegetation(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);

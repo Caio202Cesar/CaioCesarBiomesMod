@@ -47,6 +47,10 @@ public class ModFeatures implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(Configs.TEMPERATE_FOREST_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> TEMPERATE_MAGELLANIC_FLORA = register("temperate_magellanic_plants",
+            Feature.FLOWER.withConfiguration(Configs.TEMPERATE_MAGELLAN_PLANT_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_FLOWERS = register("japanese_grove_plants",
             Feature.FLOWER.withConfiguration(Configs.JAPANESE_GROVE_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -285,6 +289,14 @@ public class ModFeatures implements IFeatureConfig {
                         .addWeightedBlockstate(States.HYACINTH, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
+        public static final BlockClusterFeatureConfig TEMPERATE_MAGELLAN_PLANT_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 4)
+                        .addWeightedBlockstate(States.CALAFATE_BUSH, 7)
+                        .addWeightedBlockstate(States.CALAFATE_FLOWERING_BUSH, 4)
+                        .addWeightedBlockstate(States.CALAFATE_FRUITING_BUSH, 4),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
         public static final BlockClusterFeatureConfig TAIGA_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CLOUDBERRY, 1)
@@ -393,7 +405,9 @@ public class ModFeatures implements IFeatureConfig {
         protected static final BlockState PALM_LILY = ModPlants.PALM_LILY.get().getDefaultState();
         protected static final BlockState CREOSOTE = ModPlants.CREOSOTE_BUSH.get().getDefaultState();
         protected static final BlockState CREOSOTE_FLOWERING = ModPlants.CREOSOTE_FLOWERING_BUSH.get().getDefaultState();
-
+        protected static final BlockState CALAFATE_BUSH = ModPlants.CALAFATE_BUSH.get().getDefaultState();
+        protected static final BlockState CALAFATE_FLOWERING_BUSH = ModPlants.CALAFATE_FLOWERING_BUSH.get().getDefaultState();
+        protected static final BlockState CALAFATE_FRUITING_BUSH = ModPlants.CALAFATE_FRUITING_BUSH.get().getDefaultState();
 
     }
 }
