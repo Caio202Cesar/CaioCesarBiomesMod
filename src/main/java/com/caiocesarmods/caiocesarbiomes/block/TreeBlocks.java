@@ -2493,6 +2493,16 @@ public class TreeBlocks {
             PatagonianCypressSapling::new);
 
 
+    public static final RegistryObject<Block> LENGA_LEAVES = registerBlock("lenga_leaves",
+            () -> new LengaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_FALL_LEAVES));
+    public static final RegistryObject<Block> LENGA_FALL_LEAVES = registerBlock("lenga_fall_leaves",
+            () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> LENGA_SAPLING = registerBlock("lenga_sapling",
+            LengaSapling::new);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
