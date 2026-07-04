@@ -2483,7 +2483,15 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_SAPLING = registerBlock("chusquea_bamboo_sapling",
             ChusqueaSapling::new);
-///Z
+
+
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LOG = registerBlock("patagonian_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LEAVES = registerBlock("patagonian_cypress_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_SAPLING = registerBlock("patagonian_cypress_sapling",
+            PatagonianCypressSapling::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
