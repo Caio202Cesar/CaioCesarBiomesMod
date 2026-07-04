@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/chusquea_bamboo_block_top",
+    "side": "caiocesarbiomes:block/chusquea_bamboo_block"
+  }
+}

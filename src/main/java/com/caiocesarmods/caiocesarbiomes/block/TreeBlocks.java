@@ -2477,12 +2477,12 @@ public class TreeBlocks {
             BaobabSapling::new);
 
 
-    public static final RegistryObject<Block> CHUSQUE_BAMBOO_BLOCK = registerBlock("chusque_bamboo_block",
+    public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
             ModLogs::new);
-    public static final RegistryObject<Block> CHUSQUE_BAMBOO_LEAVES = registerBlock("chusque_bamboo_leaves",
+    public static final RegistryObject<Block> CHUSQUEA_BAMBOO_LEAVES = registerBlock("chusquea_bamboo_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> CHUSQUE_BAMBOO_SAPLING = registerBlock("chusque_bamboo_sapling",
-            ChusqueSapling::new);
+    public static final RegistryObject<Block> CHUSQUEA_BAMBOO_SAPLING = registerBlock("chusquea_bamboo_sapling",
+            ChusqueaSapling::new);
 ///Z
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

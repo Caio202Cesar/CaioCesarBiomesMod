@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "caiocesarbiomes:block/chusquea_bamboo_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "caiocesarbiomes:block/chusquea_bamboo_block"
+    },
+    "axis=z": {
+      "model": "caiocesarbiomes:block/chusquea_bamboo_block_horizontal",
+      "x": 90
+    }
+  }
+}
