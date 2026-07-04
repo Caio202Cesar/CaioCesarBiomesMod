@@ -2005,6 +2005,23 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
 
 
+    //Pewen coniferous grove
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS1 = register("patagonian_cypress1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
+                    new SimpleBlockStateProvider(States.SPRUCE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS2 = register("patagonian_cypress2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
+                    new SimpleBlockStateProvider(States.SPRUCE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(3, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
+
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
