@@ -2503,6 +2503,12 @@ public class TreeBlocks {
             LengaSapling::new);
 
 
+    public static final RegistryObject<Block> COIHUE_LEAVES = registerBlock("coihue_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COIHUE_SAPLING = registerBlock("coihue_sapling",
+            CoihueSapling::new);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
