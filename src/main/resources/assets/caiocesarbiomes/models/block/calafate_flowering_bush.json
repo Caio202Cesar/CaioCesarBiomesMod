@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/calafate_flowering_bush",
+    "particle": "caiocesarbiomes:block/calafate_flowering_bush"
+  }
+}
