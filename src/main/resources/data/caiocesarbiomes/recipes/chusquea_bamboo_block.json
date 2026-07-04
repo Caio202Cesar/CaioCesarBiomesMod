@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:chusquea_bamboo"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:chusquea_bamboo_block"
+  }
+}
