@@ -238,6 +238,13 @@ public class ModPlants {
             BunchberryFruitingFallPlant::new);
      */
 
+    public static final RegistryObject<Block> CALAFATE_BUSH = registerBlock("calafate_bush",
+            CalafateBush::new);
+    public static final RegistryObject<Block> CALAFATE_FLOWERING_BUSH = registerBlock("calafate_flowering_bush",
+            CalafateFloweringBush::new);
+    public static final RegistryObject<Block> CALAFATE_FRUITING_BUSH = registerBlock("calafate_fruiting_bush",
+            CalafateFruitingBush::new);
+
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             ModGrasses::new);
     public static final RegistryObject<Block> LUPINUS = registerBlock("lupinus",
