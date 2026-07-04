@@ -2482,7 +2482,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_LEAVES = registerBlock("chusquea_bamboo_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_SAPLING = registerBlock("chusquea_bamboo_sapling",
-            ChusqueaSapling::new);
+            ChusqueaBambooSapling::new);
 
 
     public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LOG = registerBlock("patagonian_cypress_log",

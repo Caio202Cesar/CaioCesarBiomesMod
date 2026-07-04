@@ -2021,11 +2021,23 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHUSQUEA_BAMBOO = register("chusquea_bamboo",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CHUSQUEA_BAMBOO_LOG),
+                    new SimpleBlockStateProvider(States.CHUSQUEA_BAMBOO_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(3, 1, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setIgnoreVines().build()));
 
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CHUSQUEA_BAMBOO_LOG = TreeBlocks.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
+        protected static final BlockState CHUSQUEA_BAMBOO_LEAVES = TreeBlocks.CHUSQUEA_BAMBOO_LEAVES.get().getDefaultState();
 
         protected static final BlockState PATAGONIAN_CYPRESS_LOG = TreeBlocks.PATAGONIAN_CYPRESS_LOG.get().getDefaultState();
         protected static final BlockState PATAGONIAN_CYPRESS_LEAVES = TreeBlocks.PATAGONIAN_CYPRESS_LEAVES.get().getDefaultState();
@@ -2698,9 +2710,9 @@ public class TreeFeatures {
                     INDIAN_CORAL_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> MONKEY_PUZZLE_TREES = register("monkey_puzzle_trees",
+    public static final ConfiguredFeature<?, ?> MONKEY_PUZZLE_FOREST_TREES = register("monkey_puzzle_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_MONKEY_PUZZLE_TREE.withChance(0.1F),
-                    PATAGONIAN_CYPRESS2.withChance(0.1F), PATAGONIAN_CYPRESS1.withChance(0.15F)),
+                    PATAGONIAN_CYPRESS2.withChance(0.1F), CHUSQUEA_BAMBOO.withChance(0.098F), PATAGONIAN_CYPRESS1.withChance(0.15F)),
                     MONKEY_PUZZLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 3))));
 
