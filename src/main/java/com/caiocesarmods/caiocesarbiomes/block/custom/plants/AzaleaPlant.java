@@ -13,7 +13,7 @@ import net.minecraftforge.common.PlantType;
 public class AzaleaPlant extends FlowerBlock {
 
     public AzaleaPlant() {
-        super(Effects.POISON, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER));
+        super(Effects.POISON, 6, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY));
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

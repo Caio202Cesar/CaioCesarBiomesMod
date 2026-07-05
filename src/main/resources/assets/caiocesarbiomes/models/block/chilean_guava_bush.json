@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/chilean_guava_bush",
+    "particle": "caiocesarbiomes:block/chilean_guava_bush"
+  }
+}

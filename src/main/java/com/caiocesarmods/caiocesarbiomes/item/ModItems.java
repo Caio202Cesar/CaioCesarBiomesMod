@@ -156,6 +156,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BAOBAB_FRUIT)));
     public static final RegistryObject<Item> MAGELLAN_BARBERRY = ITEMS.register("magellan_barberry",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(Foods.SWEET_BERRIES)));
+    public static final RegistryObject<Item> CHILEAN_GUAVA = ITEMS.register("chilean_guava",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(Foods.SWEET_BERRIES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
