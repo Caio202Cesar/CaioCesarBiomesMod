@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -61,7 +62,7 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SUBTROPICAL_EXTREME_HILLS_VEGETATION);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_EXTREME_HILLS_VEGETATION);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

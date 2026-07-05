@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
@@ -26,7 +27,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.SUBTROPICAL_DESERT_TREES
+            base.add(() -> DefaultBiomeTreeFeatures.SUBTROPICAL_DESERT_TREES
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(2, 0.1F, 5))));
@@ -39,7 +40,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.FOREST_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.FOREST_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
@@ -52,7 +53,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.JUNGLE_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
@@ -64,7 +65,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.JUNGLE_EDGE_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_EDGE_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(2, 0.1f, 1))));
@@ -76,7 +77,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.JUNGLE_HILLS_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_HILLS_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
@@ -89,7 +90,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.DARK_FOREST_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.DARK_FOREST_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
@@ -103,7 +104,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.SAVANNA_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.SAVANNA_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
@@ -115,7 +116,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.SWAMP_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.SWAMP_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
@@ -127,7 +128,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.PLAINS_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.PLAINS_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(0, 0.2f, 5))));
@@ -139,7 +140,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.WOODED_BADLANDS_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.WOODED_BADLANDS_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(6, 0.1f, 1))));
@@ -153,7 +154,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.LOWLAND_BADLANDS_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.LOWLAND_BADLANDS_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(6, 0.1f, 1))));
@@ -167,7 +168,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.BIRCH_FOREST_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.BIRCH_FOREST_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(6, 0.1f, 1))));
@@ -184,7 +185,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.MOUNTAIN_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.MOUNTAIN_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(7, 0.1f, 3))));
@@ -202,7 +203,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.TAIGA_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.TAIGA_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(3, 0.1f, 3))));
@@ -218,7 +219,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> TreeFeatures.MEGA_TAIGA_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.MEGA_TAIGA_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(7, 0.1f, 3))));
