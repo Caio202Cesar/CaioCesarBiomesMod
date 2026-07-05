@@ -2089,6 +2089,7 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerMagentaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Laurel forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMPHOR_TREE = register("camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
@@ -2104,6 +2105,26 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CINNAMON_TREE = register("cinnamon_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CINNAMON_LOG),
+                    new SimpleBlockStateProvider(States.CINNAMON_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 6),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CINNAMON_FANCY_TREE = register("cinnamon_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CINNAMON_LOG),
+                    new SimpleBlockStateProvider(States.CINNAMON_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Subtropical oak forest
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASTANOPSIS_TREE = register("castanopsis_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASTANOPSIS_LOG),
+                    new SimpleBlockStateProvider(States.CASTANOPSIS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final class States {
 
@@ -2115,6 +2136,9 @@ public class TreeFeatures {
 
         protected static final BlockState CINNAMON_LOG = TreeBlocks.CINNAMON_LOG.get().getDefaultState();
         protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CASTANOPSIS_LOG = TreeBlocks.CASTANOPSIS_LOG.get().getDefaultState();
+        protected static final BlockState CASTANOPSIS_LEAVES = TreeBlocks.CASTANOPSIS_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHUSQUEA_BAMBOO_LOG = TreeBlocks.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
         protected static final BlockState CHUSQUEA_BAMBOO_LEAVES = TreeBlocks.CHUSQUEA_BAMBOO_LEAVES.get().getDefaultState();

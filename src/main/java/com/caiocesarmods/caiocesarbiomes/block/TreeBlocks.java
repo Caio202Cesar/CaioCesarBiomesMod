@@ -2455,9 +2455,31 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
             ModLogs::new); */
 
+
+    public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
+            CastanopsisSapling::new);
+
+    public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",
+            CamphorSapling::new);
+
+    public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
+            CinnamonSapling::new);
+
+
     public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
             ModLogs::new);
-
     public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
             () -> new BaobabLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_BRANCHES));
