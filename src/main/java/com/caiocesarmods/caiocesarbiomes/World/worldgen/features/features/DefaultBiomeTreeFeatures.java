@@ -369,7 +369,7 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MONKEY_PUZZLE_FOREST_TREES = register("monkey_puzzle_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_MONKEY_PUZZLE_TREE.withChance(0.1F),
-                    PATAGONIAN_CYPRESS2.withChance(0.1F), CHUSQUEA_BAMBOO.withChance(0.098F), PATAGONIAN_CYPRESS1.withChance(0.15F)),
+                    CHUSQUEA_BAMBOO.withChance(0.098F), PATAGONIAN_CYPRESS1.withChance(0.15F)),
                     MONKEY_PUZZLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 3))));
 

@@ -2034,13 +2034,7 @@ public class TreeFeatures {
                     new GiantTrunkPlacer(18, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS2 = register("patagonian_cypress2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.PATAGONIAN_CYPRESS_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(3, 4)),
-                    new GiantTrunkPlacer(17, 2, 14),
-                    new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHUSQUEA_BAMBOO = register("chusquea_bamboo",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CHUSQUEA_BAMBOO_LOG),

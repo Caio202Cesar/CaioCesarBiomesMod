@@ -160,11 +160,9 @@ public class PatagonianCypressSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 6) {
-                return TreeFeatures.PATAGONIAN_CYPRESS2;
-            } else {
+
                 return TreeFeatures.PATAGONIAN_CYPRESS1;
-            }
+
         }
     }
 }
