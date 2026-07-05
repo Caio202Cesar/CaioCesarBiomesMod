@@ -552,6 +552,12 @@ public class DefaultBiomeTreeFeatures {
                             SOUTHERN_BEECH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> COIHUE_TREES_WITH_BELLFLOWER = register("coihue_trees_with_bellflower",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                    COIHUE_TREE_WITH_WHITE_BELLFLOWER.withChance(0.01F), COIHUE_TREE_WITH_PINK_BELLFLOWER.withChance(0.08F),
+                            COIHUE_TREE_WITH_MAGENTA_BELLFLOWER.withChance(0.057F)), COIHUE_TREE_WITH_RED_BELLFLOWER)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> LUSH_SOUTHERN_TUNDRA_VEGETATION = register("lush_southern_tundra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOUTHERN_BEECH_TREE.withChance(0.0003F)),
                             SOUTHERN_BEECH_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

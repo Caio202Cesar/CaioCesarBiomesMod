@@ -2066,6 +2066,35 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_RED_BELLFLOWER = register("coihue_tree_with_red_bellflower",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerRedTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_WHITE_BELLFLOWER = register("coihue_tree_with_white_bellflower",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerWhiteTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_PINK_BELLFLOWER = register("coihue_tree_with_pink_bellflower",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerPinkTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_MAGENTA_BELLFLOWER = register("coihue_tree_with_magenta_bellflower",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerMagentaTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
