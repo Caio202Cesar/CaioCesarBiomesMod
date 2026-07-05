@@ -2498,7 +2498,10 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_FALL_LEAVES));
     public static final RegistryObject<Block> LENGA_FALL_LEAVES = registerBlock("lenga_fall_leaves",
             () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_WINTER_BRANCHES));
+    public static final RegistryObject<Block> LENGA_WINTER_BRANCHES = registerBlock("lenga_winter_branches",
+            () -> new LengaWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_LEAVES));
     public static final RegistryObject<Block> LENGA_SAPLING = registerBlock("lenga_sapling",
             LengaSapling::new);
 

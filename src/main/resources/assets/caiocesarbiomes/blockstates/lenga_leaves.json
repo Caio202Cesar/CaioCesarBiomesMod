@@ -1,7 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/lenga_leaves"}
-    ]
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/lenga_leaves"
+    }
   }
 }

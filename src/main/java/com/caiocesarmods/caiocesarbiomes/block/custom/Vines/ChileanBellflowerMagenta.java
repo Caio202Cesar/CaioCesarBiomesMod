@@ -56,8 +56,9 @@ public class ChileanBellflowerMagenta extends VineBlock implements IForgeShearab
         //Growth Logic
         float temp = worldIn.getBiome(pos).getTemperature();
         boolean underGlass = isUnderGlass(worldIn, pos);
+        boolean underLeaves = isUnderLeaves(worldIn, pos);
 
-        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP || !isSummerAllowed(worldIn, pos)) {
+        if (temp < MIN_TEMP && !underGlass && !underLeaves || temp > MAX_TEMP || !isSummerAllowed(worldIn, pos)) {
             if (random.nextFloat() < 0.25F) {
                 worldIn.destroyBlock(pos, false); // no drop
             }
@@ -83,6 +84,31 @@ public class ChileanBellflowerMagenta extends VineBlock implements IForgeShearab
 
             // If this block is glass → protected
             if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
+            }
+
+            // Any other solid block blocks protection
+            return false;
+        }
+
+        return false;
+    }
+
+    private boolean isUnderLeaves(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // If this block is leaves → protected
+            if (stateAbove.getMaterial() == Material.LEAVES) {
                 return true;
             }
 
