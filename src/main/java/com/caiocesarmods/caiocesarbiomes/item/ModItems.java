@@ -353,7 +353,7 @@ public class ModItems {
     public static final RegistryObject<Item> ARBUTUS_CAKE = ITEMS.register("arbutus_cake",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ARBUTUS_CAKE)));
     public static final RegistryObject<Item> GUACAMOLE = ITEMS.register("guacamole",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GUACAMOLE)));
+            () -> new GuacamoleItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GUACAMOLE)));
     public static final RegistryObject<Item> GUACAMOLE_TOAST = ITEMS.register("guacamole_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.GUACAMOLE_TOAST)));
     public static final RegistryObject<Item> GUACAMOLE_BREADFRUIT = ITEMS.register("guacamole_breadfruit",
