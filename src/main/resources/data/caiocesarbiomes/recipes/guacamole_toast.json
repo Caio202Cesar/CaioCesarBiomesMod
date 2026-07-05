@@ -2,9 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "group": "food",
   "pattern": [
-    "XXX",
-    "X#X",
-    "XXX"
+    " #X",
+    " X "
   ],
   "key": {
     "X": {
@@ -16,6 +15,6 @@
   },
   "result": {
     "item": "caiocesarbiomes:guacamole_toast",
-    "count": 8
+    "count": 2
   }
 }
