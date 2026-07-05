@@ -311,7 +311,9 @@
     "caiocesarbiomes:baobab_bud",
     "caiocesarbiomes:baobab_fruit",
     "caiocesarbiomes:chusquea_bamboo_leaves",
-    "caiocesarbiomes:patagonian_cypress_leaves"
-
+    "caiocesarbiomes:patagonian_cypress_leaves",
+    "caiocesarbiomes:lenga_leaves",
+    "caiocesarbiomes:lenga_fall_leaves",
+    "caiocesarbiomes:coihue_leaves"
   ]
 }
