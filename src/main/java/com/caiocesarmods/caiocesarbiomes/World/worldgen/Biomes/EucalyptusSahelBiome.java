@@ -56,7 +56,6 @@ public class EucalyptusSahelBiome {
         ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withScrublandOleanderShrubs(biomegenerationsettings$builder);
 
         //Hardiness zone 12 - TROPICAL: +0.95F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
