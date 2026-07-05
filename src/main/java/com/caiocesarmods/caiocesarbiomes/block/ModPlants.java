@@ -245,6 +245,13 @@ public class ModPlants {
     public static final RegistryObject<Block> CALAFATE_FRUITING_BUSH = registerBlock("calafate_fruiting_bush",
             CalafateFruitingBush::new);
 
+    public static final RegistryObject<Block> CHILEAN_GUAVA_BUSH = registerBlock("chilean_guava_bush",
+            ChileanGuavaBush::new);
+    public static final RegistryObject<Block> CHILEAN_GUAVA_FLOWERING_BUSH = registerBlock("chilean_guava_flowering_bush",
+            ChileanGuavaFloweringBush::new);
+    public static final RegistryObject<Block> CHILEAN_GUAVA_FRUITING_BUSH = registerBlock("chilean_guava_fruiting_bush",
+            ChileanGuavaFruitingBush::new);
+
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             ModGrasses::new);
     public static final RegistryObject<Block> LUPINUS = registerBlock("lupinus",

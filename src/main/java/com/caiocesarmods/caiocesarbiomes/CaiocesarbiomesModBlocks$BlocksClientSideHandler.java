@@ -60,6 +60,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         InkberryBush.registerRenderLayer();
         CloudberryPlant.registerRenderLayer();
         CalafateBush.registerRenderLayer();
+        ChileanGuavaBush.registerRenderLayer();
 
         RedCurrantCropBlock.registerRenderLayer();
         BlackCurrantCropBlock.registerRenderLayer();

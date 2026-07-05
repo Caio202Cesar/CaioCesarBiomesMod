@@ -411,6 +411,8 @@ public class ModFeatures implements IFeatureConfig {
         protected static final BlockState CALAFATE_BUSH = ModPlants.CALAFATE_BUSH.get().getDefaultState();
         protected static final BlockState CALAFATE_FLOWERING_BUSH = ModPlants.CALAFATE_FLOWERING_BUSH.get().getDefaultState();
         protected static final BlockState CALAFATE_FRUITING_BUSH = ModPlants.CALAFATE_FRUITING_BUSH.get().getDefaultState();
-
+        protected static final BlockState CHILEAN_GUAVA_BUSH = ModPlants.CHILEAN_GUAVA_BUSH.get().getDefaultState();
+        protected static final BlockState CHILEAN_GUAVA_FLOWERING_BUSH = ModPlants.CHILEAN_GUAVA_FLOWERING_BUSH.get().getDefaultState();
+        protected static final BlockState CHILEAN_GUAVA_FRUITING_BUSH = ModPlants.CHILEAN_GUAVA_FRUITING_BUSH.get().getDefaultState();
     }
 }
