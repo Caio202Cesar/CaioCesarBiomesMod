@@ -20,7 +20,7 @@ import java.util.Random;
 public class BananaFlowerBlock extends Block {
     public BananaFlowerBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
-                .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+                .sound(SoundType.WET_GRASS).notSolid().harvestTool(ToolType.HOE).setRequiresTool());
     }
 
     public boolean ticksRandomly(BlockState state) {

@@ -15,7 +15,7 @@ import net.minecraftforge.common.ToolType;
 public class BananaBunchBlock extends Block {
     public BananaBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
-                .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+                .sound(SoundType.WET_GRASS).notSolid().harvestTool(ToolType.AXE).setRequiresTool());
     }
 
     @OnlyIn(Dist.CLIENT)

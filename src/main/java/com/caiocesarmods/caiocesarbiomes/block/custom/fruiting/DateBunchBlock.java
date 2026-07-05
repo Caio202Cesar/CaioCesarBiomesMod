@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -23,7 +24,7 @@ import java.util.Random;
 public class DateBunchBlock extends Block implements IForgeShearable {
     public DateBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).hardnessAndResistance(0.2F).tickRandomly()
-                .sound(SoundType.WET_GRASS).harvestTool(ToolType.AXE).notSolid().setRequiresTool());
+                .sound(SoundType.WET_GRASS).harvestTool(ToolType.HOE).notSolid().doesNotBlockMovement());
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -45,6 +46,13 @@ public class DateBunchBlock extends Block implements IForgeShearable {
             worldIn.destroyBlock(pos, false);
 
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.DATE_LEAVES.get() || above.getBlock() == TreeBlocks.CANARY_DATE_LEAVES.get();
     }
 
     @OnlyIn(Dist.CLIENT)

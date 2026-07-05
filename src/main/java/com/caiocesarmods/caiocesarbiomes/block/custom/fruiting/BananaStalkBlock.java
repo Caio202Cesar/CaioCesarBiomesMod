@@ -22,7 +22,7 @@ import java.util.Random;
 public class BananaStalkBlock extends Block {
     public BananaStalkBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
-                .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+                .sound(SoundType.WET_GRASS).notSolid().harvestTool(ToolType.AXE).setRequiresTool());
     }
 
     public boolean ticksRandomly(BlockState state) {
