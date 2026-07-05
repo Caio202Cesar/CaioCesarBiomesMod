@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -37,6 +38,13 @@ public class BaobabBudBlock extends Block {
         if (random.nextDouble() < chance) {
             world.setBlockState(pos, TreeBlocks.BAOBAB_FLOWER.get().getDefaultState());
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.BAOBAB_STALK.get();
     }
 
     @OnlyIn(Dist.CLIENT)

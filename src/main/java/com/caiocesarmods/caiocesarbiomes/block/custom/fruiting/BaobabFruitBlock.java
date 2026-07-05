@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
@@ -63,6 +64,13 @@ public class BaobabFruitBlock extends Block {
 
             world.addEntity(itemEntity);
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.BAOBAB_STALK.get();
     }
 
     @OnlyIn(Dist.CLIENT)

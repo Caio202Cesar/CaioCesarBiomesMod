@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -44,6 +45,15 @@ public class BananaFlowerBlock extends Block {
             worldIn.setBlockState(pos, TreeBlocks.BANANA_GREEN_BUNCH.get().getDefaultState());
 
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.BANANA_STALK.get()
+                || above.getBlock() == TreeBlocks.BANANA_GREEN_BUNCH.get()
+                || above.getBlock() == TreeBlocks.BANANA_BUNCH.get();
     }
 
     @OnlyIn(Dist.CLIENT)

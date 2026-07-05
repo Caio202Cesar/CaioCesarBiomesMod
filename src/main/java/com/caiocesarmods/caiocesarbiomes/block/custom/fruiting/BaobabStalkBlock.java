@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -41,6 +42,13 @@ public class BaobabStalkBlock extends Block {
                 world.setBlockState(belowPos, TreeBlocks.BAOBAB_BUD.get().getDefaultState(), 2);
             }
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.BAOBAB_LEAVES.get() || above.getBlock() == TreeBlocks.BAOBAB_BRANCHES.get();
     }
 
     @OnlyIn(Dist.CLIENT)

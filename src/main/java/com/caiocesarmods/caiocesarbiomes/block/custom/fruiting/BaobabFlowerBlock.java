@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,6 +47,13 @@ public class BaobabFlowerBlock extends Block {
         if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
             world.setBlockState(pos, TreeBlocks.BAOBAB_FRUIT.get().getDefaultState());
         }
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreeBlocks.BAOBAB_STALK.get();
     }
 
     @OnlyIn(Dist.CLIENT)
