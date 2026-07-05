@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:banana_bunch"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:bananas",
+    "count": 15
+  }
+}
