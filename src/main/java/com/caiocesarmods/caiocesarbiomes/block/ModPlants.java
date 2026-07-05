@@ -67,6 +67,12 @@ public class ModPlants {
 
     public static final RegistryObject<Block> CHILEAN_BELLFLOWER_RED = registerBlock("chilean_bellflower_red",
             ChileanBellflowerRed::new);
+    public static final RegistryObject<Block> CHILEAN_BELLFLOWER_MAGENTA = registerBlock("chilean_bellflower_magenta",
+            ChileanBellflowerMagenta::new);
+    public static final RegistryObject<Block> CHILEAN_BELLFLOWER_PINK = registerBlock("chilean_bellflower_pink",
+            ChileanBellflowerPink::new);
+    public static final RegistryObject<Block> CHILEAN_BELLFLOWER_WHITE = registerBlock("chilean_bellflower_white",
+            ChileanBellflowerWhite::new);
 
     public static final RegistryObject<Block> KIWI_VINE = registerBlock("kiwi_vine",
             KiwiVine::new);

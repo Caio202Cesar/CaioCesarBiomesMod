@@ -23,8 +23,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class ChileanBellflowerRed extends VineBlock implements IForgeShearable {
-    public ChileanBellflowerRed() {
+public class ChileanBellflowerMagenta extends VineBlock implements IForgeShearable {
+    public ChileanBellflowerMagenta() {
         super(Properties.from(Blocks.VINE).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
     }
@@ -95,7 +95,7 @@ public class ChileanBellflowerRed extends VineBlock implements IForgeShearable {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.CHILEAN_BELLFLOWER_RED.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModPlants.CHILEAN_BELLFLOWER_MAGENTA.get(), RenderType.getCutout());
 
     }
 
