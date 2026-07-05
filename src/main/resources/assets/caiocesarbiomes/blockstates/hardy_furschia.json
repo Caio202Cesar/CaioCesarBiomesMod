@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/hardy_furschia_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/hardy_furschia_bottom"
+    }
+  }
+}

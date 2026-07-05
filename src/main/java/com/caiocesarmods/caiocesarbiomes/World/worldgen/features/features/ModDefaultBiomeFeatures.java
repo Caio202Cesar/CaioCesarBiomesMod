@@ -93,6 +93,9 @@ public class ModDefaultBiomeFeatures {
     public static void withTemperateTallPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TEMPERATE_TALL_PLANTS_VEGETATION);
     }
+    public static void withMagellanicTemperateTallPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.MAGELLANIC_TALL_VEGETATION);
+    }
     public static void withTropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_FOREST_DECIDUOUS_TREES);
     }

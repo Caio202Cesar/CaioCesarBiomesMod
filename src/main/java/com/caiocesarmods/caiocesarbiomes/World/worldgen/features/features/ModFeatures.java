@@ -91,6 +91,10 @@ public class ModFeatures implements IFeatureConfig {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANZANITA_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MAGELLANIC_TALL_PLANTS = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.HARDY_FURSCHIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> TEMPERATE_TALL_PLANTS_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
@@ -167,6 +171,10 @@ public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_TALL_PLANTS_VEGETATION = register("temperate_tall_plants_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(TEMPERATE_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> MAGELLANIC_TALL_VEGETATION = register("magellanic_tall_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(MAGELLANIC_TALL_PLANTS)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     public static final ConfiguredFeature<?, ?> SWAMP_TALL_PLANTS_VEGETATION = register("swamp_tall_plants_vegetation",
@@ -414,5 +422,7 @@ public class ModFeatures implements IFeatureConfig {
         protected static final BlockState CHILEAN_GUAVA_BUSH = ModPlants.CHILEAN_GUAVA_BUSH.get().getDefaultState();
         protected static final BlockState CHILEAN_GUAVA_FLOWERING_BUSH = ModPlants.CHILEAN_GUAVA_FLOWERING_BUSH.get().getDefaultState();
         protected static final BlockState CHILEAN_GUAVA_FRUITING_BUSH = ModPlants.CHILEAN_GUAVA_FRUITING_BUSH.get().getDefaultState();
+        protected static final BlockState HARDY_FURSCHIA = ModPlants.HARDY_FURSCHIA.get().getDefaultState();
+
     }
 }

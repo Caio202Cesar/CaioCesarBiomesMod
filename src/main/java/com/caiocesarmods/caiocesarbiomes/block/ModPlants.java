@@ -49,7 +49,7 @@ public class ModPlants {
     public static final RegistryObject<Block> BLUEBERRY_FRUITING_BUSH = registerBlock("blueberry_fruiting_bush",
             BlueberryFruitingBush::new);
     public static final RegistryObject<Block> MANZANITA_BUSH = registerBlock("manzanita_bush",
-            ModTallPlant::new); //Badlands biomes
+            ModTallPlant::new);
     public static final RegistryObject<Block> HARDY_FURSCHIA = registerBlock("hardy_furschia",
             ModTallPlant::new);
 

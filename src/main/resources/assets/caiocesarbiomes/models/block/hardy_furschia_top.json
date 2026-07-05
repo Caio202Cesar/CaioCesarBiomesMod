@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/hardy_furschia_top",
+    "particle": "caiocesarbiomes:block/hardy_furschia_top"
+  }
+}
