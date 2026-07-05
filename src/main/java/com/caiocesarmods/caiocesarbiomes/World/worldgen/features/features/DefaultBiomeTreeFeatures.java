@@ -222,13 +222,16 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SYCAMORE_FIG_FANCY_TREE.withChance(0.11F),
-                            SAUSAGE_TREE.withChance(0.13F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F), INDIAN_CORAL_TREE.withChance(0.089F),
+                            SAUSAGE_TREE.withChance(0.13F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F),
+                            INDIAN_CORAL_TREE.withChance(0.089F), INDIAN_CORAL_TREE_WITH_GLORIOSA.withChance(0.087F),
                             TAMARIND_TREE.withChance(0.19F), SYCAMORE_FIG_ANCIENT_TREE.withChance(0.15F),
-                            MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.32F), BISMARCK_PALM.withChance(0.3F),
+                            MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.32F), ACACIA_TREE_WITH_GLORIOSA.withChance(0.08F),
+                            BISMARCK_PALM.withChance(0.3F), BISMARCK_PALM_WITH_GLORIOSA.withChance(0.46F),
                             JACKALBERRY_TREE.withChance(0.3F), PLUMERIA_ORANGE_TREE.withChance(0.071F),
                             PLUMERIA_PINK_TREE.withChance(0.071F), PLUMERIA_YELLOW_TREE.withChance(0.061F), PLUMERIA_WHITE_TREE.withChance(0.08F),
-                            PLUMERIA_RED_TREE.withChance(0.061F), BAOBAB_TREE.withChance(0.2F),
-                            JACKALBERRY_FANCY_TREE.withChance(0.15F), YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
+                            PLUMERIA_RED_TREE.withChance(0.061F), BAOBAB_TREE.withChance(0.2F), JACKALBERRY_TREE_WITH_GLORIOSA.withChance(0.079F),
+                            BAOBAB_TREE_WITH_GLORIOSA.withChance(0.00023F), JACKALBERRY_FANCY_TREE.withChance(0.15F),
+                            YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
                             SYCAMORE_FIG_ANCIENT_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
 
