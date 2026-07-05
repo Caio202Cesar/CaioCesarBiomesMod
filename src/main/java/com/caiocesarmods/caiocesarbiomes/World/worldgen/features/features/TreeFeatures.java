@@ -2031,6 +2031,21 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
                     .setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE = register("coihue_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LENGA_BEECH_TREE = register("lenga_beech_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.LENGA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
@@ -2338,6 +2353,8 @@ public class TreeFeatures {
 
         protected static final BlockState NOTHOFAGUS_LOG = TreeBlocks.NOTHOFAGUS_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_BEECH_LEAVES = TreeBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
+        protected static final BlockState COIHUE_LEAVES = TreeBlocks.COIHUE_LEAVES.get().getDefaultState();
+        protected static final BlockState LENGA_LEAVES = TreeBlocks.LENGA_LEAVES.get().getDefaultState();
 
         protected static final BlockState ILEX_LOG = TreeBlocks.HOLLY_LOG.get().getDefaultState();
         protected static final BlockState HOLLY_LEAVES = TreeBlocks.HOLLY_LEAVES.get().getDefaultState();
