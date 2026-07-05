@@ -57,12 +57,9 @@ public class TropicalEucalyptusDryForestBiome {
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalForestDeciduousTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withEucalyptusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

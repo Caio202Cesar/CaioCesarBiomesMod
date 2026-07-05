@@ -826,6 +826,14 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_TALL_TREE_WITH_GLORIOSA = register("eucalyptus_tall_tree_with_gloriosa",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 6),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, GloriosaTrunkDecorator.INSTANCE,
+                            GloriosaLeavesDecorator.INSTANCE)).build())); //Tropical eucalyptus forest
 
     //Casuarina Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINE_LIKE_CASUARINA_TREE = register("pine_like_casuarina_tree",
