@@ -57,7 +57,6 @@ public class EucalyptusSavanna {
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSavannaPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
