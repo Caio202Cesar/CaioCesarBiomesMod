@@ -228,6 +228,7 @@ public class DefaultBiomeTreeFeatures {
                             MARULA_TREE.withChance(0.24F), TALL_BISMARCK_PALM.withChance(0.32F), ACACIA_TREE_WITH_GLORIOSA.withChance(0.08F),
                             BISMARCK_PALM.withChance(0.3F), BISMARCK_PALM_WITH_GLORIOSA.withChance(0.46F),
                             JACKALBERRY_TREE.withChance(0.3F), PLUMERIA_ORANGE_TREE.withChance(0.071F),
+                            ROYAL_POINCIANA_TREE.withChance(0.19F), ROYAL_POINCIANA_BIG_TREE.withChance(0.12F),
                             PLUMERIA_PINK_TREE.withChance(0.071F), PLUMERIA_YELLOW_TREE.withChance(0.061F), PLUMERIA_WHITE_TREE.withChance(0.08F),
                             PLUMERIA_RED_TREE.withChance(0.061F), BAOBAB_TREE.withChance(0.2F), JACKALBERRY_TREE_WITH_GLORIOSA.withChance(0.079F),
                             BAOBAB_TREE_WITH_GLORIOSA.withChance(0.00023F), JACKALBERRY_FANCY_TREE.withChance(0.15F),
@@ -441,7 +442,8 @@ public class DefaultBiomeTreeFeatures {
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             SYCAMORE_FIG_FANCY_TREE.withChance(0.2F), TROPICAL_ALMOND_TREE.withChance(0.12F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORANGE_OLEANDER_TREE.withChance(0.09F),
-                            YELLOW_OLEANDER_TREE.withChance(0.09F), FOREST_ACACIA_TREE.withChance(0.34F)), TAMARIND_TREE))
+                            YELLOW_OLEANDER_TREE.withChance(0.09F), FOREST_ACACIA_TREE.withChance(0.34F),
+                            BISMARCK_PALM_WITH_GLORIOSA.withChance(0.087F), INDIAN_CORAL_TREE_WITH_GLORIOSA.withChance(0.089F)), TAMARIND_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.25F, 6))));
 
