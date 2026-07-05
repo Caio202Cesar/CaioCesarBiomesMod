@@ -48,6 +48,7 @@ public class LushSouthernTundraBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withInfestedStone(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTemperateMagellanicPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.LUSH_SOUTHERN_TUNDRA_VEGETATION);
 
