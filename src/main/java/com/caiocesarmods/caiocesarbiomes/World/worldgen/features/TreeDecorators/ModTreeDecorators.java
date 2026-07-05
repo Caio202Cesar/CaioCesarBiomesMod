@@ -51,6 +51,14 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("peppercorn_vine_trunk_decorator",
                     () -> new TreeDecoratorType<>(PeppercornVineTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<ChileanBellflowerRedTrunkDecorator>> CHILEAN_BELLFLOWER_RED_TRUNK_DECORATOR =
+            TREE_DECORATORS.register("chilean_bellflower_red_trunk_decorator",
+                    () -> new TreeDecoratorType<>(ChileanBellflowerRedTrunkDecorator.CODEC));
+
+    public static final RegistryObject<TreeDecoratorType<ChileanBellflowerPinkTrunkDecorator>> CHILEAN_BELLFLOWER_PINK_TRUNK_DECORATOR =
+            TREE_DECORATORS.register("chilean_bellflower_pink_trunk_decorator",
+                    () -> new TreeDecoratorType<>(ChileanBellflowerPinkTrunkDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
