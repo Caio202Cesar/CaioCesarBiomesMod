@@ -155,6 +155,13 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_TREE_WITH_IVY = register("forest_ocotea_tree_with_ivy",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_FOREST_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE = register("forest_ocotea_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
@@ -170,6 +177,14 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE_WITH_IVY = register(
+            "forest_ocotea_fancy_tree_with_ivy",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE_CREEPING_FIG = register("fig_jungle_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
@@ -218,6 +233,14 @@ public class TreeFeatures {
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE)
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(KiwiGoldVineTrunkDecorator.INSTANCE,
+                            Features.Placements.BEES_002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE_WITH_IVY = register("highland_ocotea_tree_with_ivy",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setMaxWaterDepth(Integer.MAX_VALUE)
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
                             Features.Placements.BEES_002_PLACEMENT)).build()));
 
     //Mesquite Tree
@@ -2673,7 +2696,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HIGHLAND_OCOTEA_TREES = register("highland_ocotea",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HIGHLAND_OCOTEA_TREE_WITH_CREEPING_VINE.withChance(0.07F),
-                    CREEPING_FIG_AVOCADO_TREE.withChance(0.09F), ELDERBERRY_TREE.withChance(0.1F), HIGHLAND_OCOTEA_TREE_WITH_KIWI.withChance(0.082F)),
+                    CREEPING_FIG_AVOCADO_TREE.withChance(0.09F), ELDERBERRY_TREE.withChance(0.1F),
+                            HIGHLAND_OCOTEA_TREE_WITH_KIWI.withChance(0.082F), HIGHLAND_OCOTEA_TREE_WITH_IVY.withChance(0.2F)),
                            HIGHLAND_OCOTEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
@@ -2850,7 +2874,8 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<?, ?> FOREST_OCOTEA_TREES = register("forest_ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.3F),
-                            OCOTEA_FOREST_FANCY_TREE_WITH_CREEPING_FIG.withChance(0.5F),
+                            OCOTEA_FOREST_FANCY_TREE_WITH_IVY.withChance(0.5F), OCOTEA_TREE_WITH_IVY.withChance(0.5F),
+                            OCOTEA_FOREST_FANCY_TREE_WITH_CREEPING_FIG.withChance(0.24F),
                             OCOTEA_TREE_WITH_KIWI.withChance(0.3F)), OCOTEA_FOREST_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 

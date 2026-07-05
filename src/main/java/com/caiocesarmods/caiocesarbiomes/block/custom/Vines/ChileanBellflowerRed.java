@@ -16,8 +16,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class IvyVine extends VineBlock {
-    public IvyVine() {
+public class ChileanBellflowerRed extends VineBlock {
+    public ChileanBellflowerRed() {
         super(Properties.from(Blocks.VINE).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.VINE).harvestTool(ToolType.HOE));
     }
