@@ -2407,8 +2407,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_OAKS = register("subtropical_forest_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OAK_BEES_002.withChance(0.065641026F),
                             FANCY_OAK.withChance(0.30769232F), SOUTHERN_LIVE_OAK_TREE.withChance(0.23333334F),
-                            FANCY_OAK_BEES_002.withChance(0.03333334F), FANCY_OAK_TREE_WITH_IVY.withChance(0.27F),
-                            OAK_TREE_WITH_IVY.withChance(0.15F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.08F)),
+                            FANCY_OAK_BEES_002.withChance(0.03333334F), FANCY_OAK_TREE_WITH_IVY.withChance(0.32F),
+                            OAK_TREE_WITH_IVY.withChance(0.3F), SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.08F)),
                             OAK)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
