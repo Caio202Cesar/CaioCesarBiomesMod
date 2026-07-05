@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -95,20 +96,20 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
 
     private void placeLeaf(
             IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
             BlockPos pos,
             Set<BlockPos> leaves,
             MutableBoundingBox box) {
 
         if (TreeFeature.isReplaceableAt(world, pos)) {
 
-            world.setBlockState(
-                    pos,
-                    TreeBlocks.LIVE_OAK_LEAVES.get()
-                            .getDefaultState()
-                            .with(LeavesBlock.PERSISTENT, true)
-                            .with(LeavesBlock.DISTANCE, 1),
-                    19
-            );
+            BlockState leafState = config.leavesProvider
+                    .getBlockState(random, pos)
+                    .with(LeavesBlock.PERSISTENT, true)
+                    .with(LeavesBlock.DISTANCE, 1);
+
+            world.setBlockState(pos, leafState, 19);
 
             leaves.add(pos);
             box.expandTo(new MutableBoundingBox(pos, pos));
@@ -145,7 +146,7 @@ public class VirginianaFoliagePlacer extends FoliagePlacer {
 
                     BlockPos pos = center.add(x, y, z);
 
-                    placeLeaf(world, pos, leaves, box);
+                    placeLeaf(world, random, config, pos, leaves, box);
                 }
             }
         }

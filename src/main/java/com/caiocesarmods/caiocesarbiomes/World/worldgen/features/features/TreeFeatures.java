@@ -2089,11 +2089,32 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerMagentaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMPHOR_TREE = register("camphor_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
+                    new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_CAMPHOR_TREE = register("ancient_camphor_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
+                    new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
 
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAMPHOR_LOG = TreeBlocks.CAMPHOR_LOG.get().getDefaultState();
+        protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CINNAMON_LOG = TreeBlocks.CINNAMON_LOG.get().getDefaultState();
+        protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHUSQUEA_BAMBOO_LOG = TreeBlocks.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
         protected static final BlockState CHUSQUEA_BAMBOO_LEAVES = TreeBlocks.CHUSQUEA_BAMBOO_LEAVES.get().getDefaultState();
