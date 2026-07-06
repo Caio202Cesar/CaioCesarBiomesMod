@@ -835,7 +835,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, GloriosaTrunkDecorator.INSTANCE,
                             GloriosaLeavesDecorator.INSTANCE)).build())); //Tropical eucalyptus forest
 
-    //Casuarina Tree
+    //Casuarina Tree - also part of tropical eucalyptus forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINE_LIKE_CASUARINA_TREE = register("pine_like_casuarina_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASUARINA_LOG),
                     new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
