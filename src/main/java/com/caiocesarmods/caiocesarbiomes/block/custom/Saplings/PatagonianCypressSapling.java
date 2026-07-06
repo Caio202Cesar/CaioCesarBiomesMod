@@ -61,7 +61,7 @@ public class PatagonianCypressSapling extends SaplingBlock {
         boolean isWet = biome.getPrecipitation() != Biome.RainType.NONE;
 
         // 🌱 Growth logic
-        if (validTemp && isWet &&isSummerAllowed(world, pos)) {
+        if (validTemp && isWet && isSummerAllowed(world, pos)) {
 
             super.randomTick(state, world, pos, random);
         }

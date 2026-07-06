@@ -222,13 +222,13 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "plumeria_yellow_sapling"), "HZ(min) 10, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "yew_sapling"), "HZ(min) 5, HZ(max) 9;" +
-                "⚠ requires warm summers");
+                "⚠ Requires warm summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "creeping_fig_vine"), "HZ(min) 8, HZ(max) 12 (1.2F);" +
-                "⚠ can be grown in colder climates under glass");
+                "⚠ Can be grown in colder climates under glass");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "creeping_fig_fruiting_vine"), "HZ(min) 8, HZ(max) 12 (1.2F)" +
-                "⚠ can be grown in colder climates under glass");
+                "⚠ Can be grown in colder climates under glass");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "creeping_fig_ripe_fruiting_vine"), "HZ(min) 8, HZ(max) 12 (1.2F)" +
-                "⚠ can be grown in colder climates under glass");
+                "⚠ Can be grown in colder climates under glass");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ivy"), "HZ(min) 4, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_vine"), "HZ(min) 7, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_flowering_vine"), "HZ(min) 7, HZ(max) 9");
@@ -242,9 +242,11 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_fruiting_vine"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_ripe_fruiting_vine"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "spanish_moss"), "HZ(min) 8, HZ(max) 12 (1.2F);" +
-                "⚠ can't grow in dry biomes");
+                "⚠ Can't grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "baobab_sapling"), "HZ(min) 10, HZ(max) 13 (2F);" +
-                "⚠ can't grow in wet biomes");
+                "⚠ Can't grow in wet biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "patagonian_cypress_sapling"), "HZ(min) 7, HZ(max) 10;" +
+                "⚠ Requires warm to cooler summers and wet biomes.");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +
