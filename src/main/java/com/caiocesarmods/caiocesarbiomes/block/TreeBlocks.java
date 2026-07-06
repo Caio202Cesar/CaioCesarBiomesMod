@@ -2534,7 +2534,12 @@ public class TreeBlocks {
             CoihueSapling::new);
 
 
-
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LEAVES = registerBlock("rainbow_eucalyptus_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_SAPLING = registerBlock("rainbow_eucalyptus_sapling",
+            RainbowEucalyptusSapling::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -207,6 +207,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CoihueSapling.registerRenderLayer();
         LengaSapling.registerRenderLayer();
         CastanopsisSapling.registerRenderLayer();
+        RainbowEucalyptusSapling.registerRenderLayer();
+
         GloriosaLily.registerRenderLayer();
     }
 }

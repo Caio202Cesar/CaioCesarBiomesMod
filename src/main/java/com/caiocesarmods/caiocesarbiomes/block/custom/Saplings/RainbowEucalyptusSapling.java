@@ -28,33 +28,33 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class BaobabSapling extends SaplingBlock {
-    public BaobabSapling() {
-        super(new BaobabTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class RainbowEucalyptusSapling extends SaplingBlock {
+    public RainbowEucalyptusSapling() {
+        super(new RainbowEucalyptusTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.BAOBAB_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.RAINBOW_EUCALYPTUS_SAPLING.get(), RenderType.getCutout());
 
     }
 
-    //Hardy to zone 10
+    //Hardy from zone 10 to 12 (1.2f), requires wet biomes.
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
         float minTemp = 0.85f;
-        float maxTemp = 2f;
+        float maxTemp = 1.2f;
 
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
-        boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
+        boolean isWet = biome.getPrecipitation() != Biome.RainType.NONE;
 
         // 🌱 Growth logic
-        if (validTemp && isDry) {
+        if (validTemp && isWet) {
             super.randomTick(state, world, pos, random);
         }
     }
@@ -70,11 +70,11 @@ public class BaobabSapling extends SaplingBlock {
 
         float temp = biome.getTemperature(pos);
 
-        boolean tooHot = temp > 2F;
+        boolean tooHot = temp > 1.2F;
         boolean tooCold = temp < 0.85F;
-        boolean isWet = biome.getPrecipitation() == Biome.RainType.RAIN;
+        boolean isDry = biome.getPrecipitation() == Biome.RainType.NONE;
 
-        if (tooHot || tooCold || isWet) {
+        if (tooHot || tooCold || isDry) {
             return false;
         }
 
@@ -94,7 +94,7 @@ public class BaobabSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 2f;
+            float minTemp = 0.85f, maxTemp = 1.2f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -112,9 +112,9 @@ public class BaobabSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
-            if (biome.getPrecipitation() == Biome.RainType.RAIN) {
+            if (biome.getPrecipitation() == Biome.RainType.NONE) {
                 player.sendMessage(
-                        new StringTextComponent("This biome is too wet to this sapling."),
+                        new StringTextComponent("This biome is too dry to this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
@@ -137,11 +137,11 @@ public class BaobabSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class BaobabTree extends Tree {
+    private static class RainbowEucalyptusTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BAOBAB_TREE;
+            return TreeFeatures.RAINBOW_EUCALYPTUS_TREE;
         }
     }
 }

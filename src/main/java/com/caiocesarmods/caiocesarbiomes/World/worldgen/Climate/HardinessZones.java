@@ -243,6 +243,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_ripe_fruiting_vine"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "spanish_moss"), "HZ(min) 8, HZ(max) 12 (1.2F);" +
                 "⚠ can't grow in dry biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "baobab_sapling"), "HZ(min) 10, HZ(max) 13 (2F);" +
+                "⚠ can't grow in wet biomes");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +

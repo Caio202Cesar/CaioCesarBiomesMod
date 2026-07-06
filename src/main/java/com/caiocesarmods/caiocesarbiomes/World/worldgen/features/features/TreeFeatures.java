@@ -2247,10 +2247,21 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Jungle only
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LOG),
+                    new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
+        protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAMPHOR_LOG = TreeBlocks.CAMPHOR_LOG.get().getDefaultState();
         protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
