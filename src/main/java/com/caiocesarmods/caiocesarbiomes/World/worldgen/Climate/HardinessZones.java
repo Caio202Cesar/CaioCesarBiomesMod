@@ -247,6 +247,14 @@ public class HardinessZones {
                 "⚠ Can't grow in wet biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "patagonian_cypress_sapling"), "HZ(min) 7, HZ(max) 10;" +
                 "⚠ Requires warm to cooler summers and wet biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chusquea_bamboo_sapling"), "HZ(min) 7, HZ(max) 10;" +
+                "⚠ Requires warm to cooler summers; can be grown under glass in coller biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lenga_sapling"), "HZ(min) 6, HZ(max) 9;" +
+                "⚠ Requires warm to cooler summers.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coihue_sapling"), "HZ(min) 6, HZ(max) 9;" +
+                "⚠ Requires warm to cooler summers.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rainbow_eucalyptus_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F);" +
+                "⚠ Can't grow in dry biomes");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +
