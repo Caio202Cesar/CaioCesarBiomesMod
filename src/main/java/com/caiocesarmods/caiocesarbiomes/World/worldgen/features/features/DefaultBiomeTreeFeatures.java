@@ -323,7 +323,7 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HIGHLAND_OCOTEA_TREES = register("highland_ocotea",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HIGHLAND_OCOTEA_TREE_WITH_CREEPING_VINE.withChance(0.07F),
-                            CREEPING_FIG_AVOCADO_TREE.withChance(0.09F), ELDERBERRY_TREE.withChance(0.1F),
+                            ELDERBERRY_TREE.withChance(0.1F),
                             HIGHLAND_OCOTEA_TREE_WITH_KIWI.withChance(0.082F), HIGHLAND_OCOTEA_TREE_WITH_IVY.withChance(0.2F)),
                             HIGHLAND_OCOTEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
@@ -599,7 +599,8 @@ public class DefaultBiomeTreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> CAMELLIA_TREES = register("camellia_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMELLIA_TREE.withChance(0.3F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMELLIA_TREE.withChance(0.3F),
+                            CREEPING_FIG_AVOCADO_TREE.withChance(0.09F), AVOCADO_TREE.withChance(0.14F)),
                             TEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
