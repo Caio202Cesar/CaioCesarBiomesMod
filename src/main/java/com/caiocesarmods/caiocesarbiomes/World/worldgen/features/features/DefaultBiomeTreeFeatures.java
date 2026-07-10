@@ -46,9 +46,11 @@ public class DefaultBiomeTreeFeatures {
                             CANARY_PINE_TREE_TALL.withChance(0.3F), DRAGON_BLOOD_TREE.withChance(0.0076F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> CANARY_PINE_TREES = register("canary_pine_trees",
+    public static final ConfiguredFeature<?, ?> CANARY_PINE_TREES = register("mediterranean_pine_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            CANARY_PINE_TREE_TALL.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CANARY_PINE_TREE_TALL.withChance(0.5F), STONE_PINE_TREE.withChance(0.19F),
+                            STONE_PINE_TREE2.withChance(0.19F), ITALIAN_CYPRESS_TREE.withChance(0.2F),
+                            ALEPPO_PINE.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",

@@ -23,6 +23,7 @@ public class SubtropicalPineDryForestBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
+    //mediterranean_pine_forest
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> SUBTROPICAL_PINE_DRY_FOREST = BIOMES.register("subtropical_pine_dry_forest",
             () -> makeSubtropicalPineDryForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
@@ -53,8 +54,6 @@ public class SubtropicalPineDryForestBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCanaryPineTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
