@@ -58,11 +58,11 @@ public class YewFoliagePlacer extends FoliagePlacer {
 
             if (t < 0.08F) {
                 // Very bottom
-                layerRadius = 2;
-            } else if (t < 0.18F) {
                 layerRadius = 3;
-            } else if (t < 0.28F) {
+            } else if (t < 0.18F) {
                 layerRadius = 4;
+            } else if (t < 0.28F) {
+                layerRadius = 5;
             } else if (t < 0.78F) {
                 // Broad cylindrical body
                 layerRadius = 5;
