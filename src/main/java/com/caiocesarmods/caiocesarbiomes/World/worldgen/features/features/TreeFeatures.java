@@ -1188,6 +1188,12 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Yew Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YOUNG_YEW_TREE = register("young_yew_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
+                    new SimpleBlockStateProvider(States.YEW_LEAVES),
+                    new YewFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(8, 3, 2),
+                    new TwoLayerFeature(2, 0, 2)).setIgnoreVines().build())));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
