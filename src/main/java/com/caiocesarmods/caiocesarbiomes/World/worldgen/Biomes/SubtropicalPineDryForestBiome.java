@@ -54,8 +54,9 @@ public class SubtropicalPineDryForestBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCanaryPineTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanPineForestTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanSparseOakTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);

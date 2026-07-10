@@ -40,17 +40,12 @@ public class DefaultBiomeTreeFeatures {
                             OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
-    //Thermolyphic Forest - Make a dragon blood tree with dark oak shape (Dracaena draco)
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_DRY_MOUNTAIN_TREES = register("subtropical_dry_mountain_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CANARY_DATE_PALM_TREE.withChance(0.3F),
-                            CANARY_PINE_TREE_TALL.withChance(0.3F), DRAGON_BLOOD_TREE.withChance(0.0076F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
-
-    public static final ConfiguredFeature<?, ?> CANARY_PINE_TREES = register("mediterranean_pine_forest_trees",
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_TREES = register("mediterranean_pine_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            CANARY_PINE_TREE_TALL.withChance(0.5F), STONE_PINE_TREE.withChance(0.19F),
-                            STONE_PINE_TREE2.withChance(0.19F), ITALIAN_CYPRESS_TREE.withChance(0.2F),
-                            ALEPPO_PINE.withChance(0.5F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CANARY_PINE_TREE_TALL.withChance(0.5F), STONE_PINE_TREE.withChance(0.39F),
+                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.4F),
+                            ALEPPO_PINE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
+                            PLANE_FANCY_TREE.withChance(0.19F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",
@@ -330,11 +325,6 @@ public class DefaultBiomeTreeFeatures {
                             HIGHLAND_OCOTEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
-    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_FRUIT_TREES = register("mediterranean_savanna_fruit_trees", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FORKY_FIG_TREE.withChance(0.3F), WHITE_FIG_TREE.withChance(0.000015F)),
-                    POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
-
     public static final ConfiguredFeature<?, ?> OAK_SHRUBS = register("oak_shrubs", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HOLM_OAK_SHRUB.withChance(0.3F), CORK_OAK_SHRUB.withChance(0.3F)),
                     OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -425,17 +415,7 @@ public class DefaultBiomeTreeFeatures {
     /*public static final ConfiguredFeature<?, ?> TROPICAL_EUCALYPTUS_FOREST_TREES = register("tropical_eucalyptus_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(GLORIOSA_CASUARINA_TREE.withChance(0.5F)),
                     EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));*/
-
-    public static final ConfiguredFeature<?, ?> STRAWBERRY_TREES = register("strawberry_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STRAWBERRY_TREE1.withChance(0.5F)),
-                    STRAWBERRY_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
-
-    public static final ConfiguredFeature<?, ?> FIG_TREES = register("fig_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_FIG_TREE.withChance(0.000035F)),
-                    FORKY_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+                   .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));*/
 
     public static final ConfiguredFeature<?, ?> PLAINS_EUCALYPTUS_TREES = register("plains_eucalyptus_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F)),
@@ -505,8 +485,10 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
                             LOMBARDY_POPLAR_TREE.withChance(0.1F),  CANARY_DATE_PALM_TREE.withChance(0.089F),
-                            CAROB_TREE.withChance(0.25F), ELDERBERRY_TREE.withChance(0.2F), ALMOND_TREE1.withChance(0.073F), ALMOND_TREE2.withChance(0.073F),
-                            CORK_OAK_TREE.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CAROB_TREE.withChance(0.25F), ELDERBERRY_TREE.withChance(0.2F), ALMOND_TREE1.withChance(0.073F),
+                            ALMOND_TREE2.withChance(0.073F), FORKY_FIG_TREE.withChance(0.3F), POMEGRANATE_TREE.withChance(0.2F),
+                            CORK_OAK_TREE.withChance(0.3F), STRAWBERRY_TREE1.withChance(0.16F), WHITE_FIG_TREE.withChance(0.000015F),
+                            STRAWBERRY_TREE2.withChance(0.2F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_PINE_ISLAND_TREES = register("tropical_pine_island_trees",

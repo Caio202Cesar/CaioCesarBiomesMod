@@ -66,12 +66,6 @@ public class ModDefaultBiomeFeatures {
     public static void withCasuarinaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.CASUARINA_TREES);
     }
-    public static void withSubtropicalPlaneTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_PLANE_TREES);
-    }
-    public static void withFigTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.FIG_TREES);
-    }
     public static void withSubtropicalForestOaks(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_OAKS);
     }
@@ -126,14 +120,11 @@ public class ModDefaultBiomeFeatures {
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JAPANESE_MAPLE);
     }
-    public static void withCanaryPineTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.CANARY_PINE_TREES);
+    public static void withMediterraneanPineForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_PINE_FOREST_TREES);
     }
     public static void withTropicalSteepeTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_STEEPE_TREES);
-    }
-    public static void withStrawberryTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.STRAWBERRY_TREES);
     }
     public static void withHumidSubtropicalBeachVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_BEACH_VEGETATION);
@@ -203,9 +194,6 @@ public class ModDefaultBiomeFeatures {
     }
     public static void withTemperateFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TEMPERATE_FRUIT_TREES);
-    }
-    public static void withMediterraneanSavannaFruitTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_SAVANNA_FRUIT_TREES);
     }
     public static void withJapaneseGroveTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JAPANESE_GROVE_TREES);
