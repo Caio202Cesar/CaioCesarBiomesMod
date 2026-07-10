@@ -2542,6 +2542,10 @@ public class TreeBlocks {
             RainbowEucalyptusSapling::new);
 
 
+    public static final RegistryObject<Block> ALEPPO_PINE_LEAVES = registerBlock("aleppo_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ALEPPO_PINE_SAPLING = registerBlock("aleppo_pine_sapling",
+            AleppoPineSapling::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

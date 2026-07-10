@@ -2496,6 +2496,7 @@ public class TreeFeatures {
 
         protected static final BlockState STONE_PINE_LOG = TreeBlocks.STONE_PINE_LOG.get().getDefaultState();
         protected static final BlockState STONE_PINE_LEAVES = TreeBlocks.STONE_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState ALEPPO_PINE_LEAVES = TreeBlocks.ALEPPO_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHINESE_RED_PINE_LOG = TreeBlocks.CHINESE_RED_PINE_LOG.get().getDefaultState();
         protected static final BlockState CHINESE_RED_PINE_LEAVES = TreeBlocks.CHINESE_RED_PINE_LEAVES.get().getDefaultState();

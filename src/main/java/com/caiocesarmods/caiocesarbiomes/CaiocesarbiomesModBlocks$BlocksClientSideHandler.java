@@ -55,6 +55,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         ChileanBellflowerWhite.registerRenderLayer();
         ChileanBellflowerPink.registerRenderLayer();
         ChileanBellflowerMagenta.registerRenderLayer();
+        GloriosaLily.registerRenderLayer();
 
         ModCactuses.registerRenderLayer();
 
@@ -208,7 +209,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         LengaSapling.registerRenderLayer();
         CastanopsisSapling.registerRenderLayer();
         RainbowEucalyptusSapling.registerRenderLayer();
+        AleppoPineSapling.registerRenderLayer();
 
-        GloriosaLily.registerRenderLayer();
     }
 }
