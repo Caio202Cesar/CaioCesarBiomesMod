@@ -175,7 +175,7 @@ public class DefaultBiomeTreeFeatures {
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F), RED_MAPLE_TREE_WITH_KIWI.withChance(0.04F),
                             RED_MAPLE_TREE_WITH_CREEPING_FIG.withChance(0.049F), PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
                             SOUTHERN_LIVE_OAK_WITH_CREEPING_FIG.withChance(0.053F), SOUTHERN_LIVE_OAK_TREE.withChance(0.4F),
-                            SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F),
+                            SPANISH_MOSS_MEGA_BALD_CYPRESS.withChance(0.3F), OBTUSA_OAK_TREE.withChance(0.4F),
                             BALD_CYPRESS.withChance(0.12F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F), WEEPING_WILLOW_FANCY.withChance(0.3F)),
                             SPANISH_MOSS_BALD_CYPRESS))

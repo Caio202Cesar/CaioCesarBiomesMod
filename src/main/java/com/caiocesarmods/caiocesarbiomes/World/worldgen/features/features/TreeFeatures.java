@@ -666,7 +666,7 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
 
-    //Citrus Trees - Mandarin
+    //Citrus Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANDARIN_TREE = register("mandarin_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.MANDARIN_LEAVES),
@@ -674,9 +674,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
-
-
-    //Citrus Trees - Orange
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_TREE = register("orange_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.ORANGE_LEAVES),
@@ -684,9 +681,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
-
-
-    //Citrus Trees - Lemon
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LEMON_TREE = register("lemon_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.LEMON_LEAVES),
@@ -695,9 +689,6 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
                     .setIgnoreVines().build()));
-
-
-    //Citrus Trees - Limes
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAHITI_LIME_TREE = register("tahiti_lime_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.TAHITI_LIME_LEAVES),
@@ -705,9 +696,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
-
-
-    //Citrus Trees - Citron
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CITRON_TREE = register("citron_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.CITRON_LEAVES),
@@ -722,21 +710,12 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
-
-    //Citrus Trees - Lemon
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRAPEFRUIT_TREE = register("grapefruit_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
                     new SimpleBlockStateProvider(States.GRAPEFRUIT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRAPEFRUIT_TREE_WITH_KIWI = register("grapefruit_tree_with_kiwi",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CITRUS_LOG),
-                    new SimpleBlockStateProvider(States.GRAPEFRUIT_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(6, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Southern Live Oak
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE = register("southern_live_oak_tree",
@@ -2262,6 +2241,13 @@ public class TreeFeatures {
                             (ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE, Features.Placements.BEES_005_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OBTUSA_OAK_TREE = register("obtusa_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OBTUSA_OAK_LOG),
+                    new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setMaxWaterDepth(2).setIgnoreVines().build()));
+
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LOG),
@@ -2475,6 +2461,9 @@ public class TreeFeatures {
 
         protected static final BlockState CORK_OAK_LOG = TreeBlocks.CORK_OAK_LOG.get().getDefaultState();
         protected static final BlockState CORK_OAK_LEAVES = TreeBlocks.CORK_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState OBTUSA_OAK_LOG = TreeBlocks.OBTUSA_OAK_LOG.get().getDefaultState();
+        protected static final BlockState OBTUSA_OAK_LEAVES = TreeBlocks.OBTUSA_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLEANDER_LOG = TreeBlocks.OLEANDER_LOG.get().getDefaultState();
         protected static final BlockState RED_OLEANDER_LEAVES = TreeBlocks.OLEANDER_RED_LEAVES.get().getDefaultState();

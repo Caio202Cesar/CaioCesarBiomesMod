@@ -2558,7 +2558,7 @@ public class TreeBlocks {
             LithocarpusSapling::new);
 
 
-    //Obtusa oak (decidous only in zone 7)
+    //Obtusa oak (decidous only in zone 7) - Swamp Oak shape
     public static final RegistryObject<Block> OBTUSA_OAK_LOG = registerBlock("obtusa_oak_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_LOG = registerBlock("stripped_obtusa_oak_log",
