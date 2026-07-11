@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -119,11 +120,21 @@ public class CasuarinaSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CasuarinaTree extends Tree {
+    private static class CasuarinaTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.CASUARINA_FANCY_TREE;
+            } else {
                 return TreeFeatures.PINE_LIKE_CASUARINA_TREE;
             }
         }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random random) {
+            return TreeFeatures.LARGE_CASUARINA;
+        }
+    }
 }

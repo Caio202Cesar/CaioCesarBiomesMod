@@ -11,6 +11,7 @@ import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
@@ -103,20 +104,15 @@ public class WeepingFoliagePlacer extends FoliagePlacer {
                              Set<BlockPos> leaves,
                              MutableBoundingBox box) {
 
-        // prevent duplicates
-        if (leaves.contains(pos)) {
-            return;
-        }
+        if (TreeFeature.isReplaceableAt(world, pos)) {
 
-        // check if replaceable
-        if (Feature.isAirAt(world, pos)) {
+            BlockState leafState = config.leavesProvider
+                    .getBlockState(rand, pos)
+                    .with(LeavesBlock.PERSISTENT, true)
+                    .with(LeavesBlock.DISTANCE, 1);
 
-            // place leaf block
-            world.setBlockState(pos, TreeBlocks.WEEPING_WILLOW_LEAVES.get().getDefaultState()
-                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19
-            );
+            world.setBlockState(pos, leafState, 19);
 
-            // register leaf for decay tracking
             leaves.add(pos);
             box.expandTo(new MutableBoundingBox(pos, pos));
         }

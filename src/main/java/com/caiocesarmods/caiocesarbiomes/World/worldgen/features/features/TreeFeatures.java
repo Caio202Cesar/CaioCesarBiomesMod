@@ -800,6 +800,20 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASUARINA_FANCY_TREE = register("casuarina_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CASUARINA_LOG),
+                    new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LARGE_CASUARINA = register("large_casuarina",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASUARINA_LOG),
+                    new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
+                    new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(8,   4, 2),
+                    new TwoLayerFeature(1, 0, 2)).setIgnoreVines().build())));
+
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEPPERCORN_CASUARINA_TREE = register("casuarina_tree_with_peppercorn",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASUARINA_LOG),
                     new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
