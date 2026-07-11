@@ -23,6 +23,13 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(DesertRoseTrunkPlacer.CODEC)
             );
 
+    public static final TrunkPlacerType<UmbrellaTrunkPlacer> UMBRELLA =
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:umbrella_trunk",
+                    new TrunkPlacerType<>(UmbrellaTrunkPlacer.CODEC)
+            );
+
     static {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
     }
