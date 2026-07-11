@@ -2456,14 +2456,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
             ModLogs::new); */
 
-
-    public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
-            CastanopsisSapling::new);
-
+    //Subtropical Laurel Forest
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
@@ -2477,6 +2470,12 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
             CinnamonSapling::new);
+
+    public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
+            ModLeaves::new); //Avocado log
+    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
+            MachillusSapling::new);
+
 
 
     public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
@@ -2557,7 +2556,13 @@ public class TreeBlocks {
     public static final RegistryObject<Block> LITHOCARPUS_SAPLING = registerBlock("lithocarpus_sapling",
             LithocarpusSapling::new);
 
-    //Obtusa oak (decidous only in zone 7) - Swamp Oak shape
+    public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
+            CastanopsisSapling::new);
+
     public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LAUREL_OAK_LOG = registerBlock("stripped_laurel_oak_log",
@@ -2574,9 +2579,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
             ObtusaOakSapling::new); //Hardy from zone 7 to 10
 
-    public static final RegistryObject<Block> SAND_LAUREL_LEAVES = registerBlock("sand_laurel_leaves",
+    public static final RegistryObject<Block> SAND_LAUREL_LEAVES = registerBlock("sand_laurel_oak_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> SAND_LAUREL_SAPLING = registerBlock("sand_laurel_sapling",
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
             SandLaurelOakSapling::new);
 
     //Subtropical Eucalyptus Forest
