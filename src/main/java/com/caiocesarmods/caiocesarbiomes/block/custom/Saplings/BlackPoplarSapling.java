@@ -126,7 +126,6 @@ public class BlackPoplarSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.LOMBARDY_POPLAR_TREE;
             }
-
         }
     }
 }

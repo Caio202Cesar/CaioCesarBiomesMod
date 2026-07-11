@@ -136,7 +136,11 @@ public class AgathisSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.AVOCADO_TREE;
+            if (random.nextInt(10) == 6) {
+                return TreeFeatures.AGATHIS_TREE1;
+            } else {
+                return TreeFeatures.AGATHIS_TREE2;
+            }
         }
     }
 }
