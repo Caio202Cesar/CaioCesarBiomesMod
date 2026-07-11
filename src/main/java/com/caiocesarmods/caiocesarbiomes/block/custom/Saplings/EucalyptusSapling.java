@@ -110,11 +110,11 @@ public class EucalyptusSapling extends SaplingBlock {
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 80;
+        return 400;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 60;
+        return 300;
     }
 
     private static class EucalyptusTree extends Tree {
