@@ -729,7 +729,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 10),
+                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
@@ -751,8 +751,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROYAL_POINCIANA_BIG_TREE = register("royal_poinciana_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.ROYAL_POINCIANA_LOG),
                     new SimpleBlockStateProvider(States.ROYAL_POINCIANA_LEAVES),
-                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 2, 7),
-                    new UmbrellaTrunkPlacer(10, 4, 2, 5, 10),
+                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 2, 5),
+                    new UmbrellaTrunkPlacer(3, 4, 2, 5, 5),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
