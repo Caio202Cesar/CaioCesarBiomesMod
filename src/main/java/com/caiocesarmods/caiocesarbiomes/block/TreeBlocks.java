@@ -2549,6 +2549,7 @@ public class TreeBlocks {
             AleppoPineSapling::new);
 
 
+    //Subtropical Oak Forest
     public static final RegistryObject<Block> LITHOCARPUS_LOG = registerBlock("lithocarpus_log",
             ModLogs::new);
     public static final RegistryObject<Block> LITHOCARPUS_LEAVES = registerBlock("lithocarpus_leaves",
@@ -2557,6 +2558,25 @@ public class TreeBlocks {
             LithocarpusSapling::new);
 
 
+    //Obtusa oak (decidous only in zone 7)
+    public static final RegistryObject<Block> OBTUSA_OAK_LOG = registerBlock("obtusa_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_LOG = registerBlock("stripped_obtusa_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> OBTUSA_OAK_LEAVES = registerBlock("obtusa_oak_leaves",
+            () -> new ObtusaOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_FALL_LEAVES));
+    public static final RegistryObject<Block> OBTUSA_OAK_FALL_LEAVES = registerBlock("obtusa_oak_fall_leaves",
+            () -> new ObtusaOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_WINTER_BRANCHES));
+    public static final RegistryObject<Block> OBTUSA_OAK_WINTER_BRANCHES = registerBlock("obtusa_oak_winter_branches",
+            () -> new ObtusaOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_LEAVES));
+    public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
+            ObtusaOakSapling::new); //Hardy from zone 7 to 10
+
+
+    //Subtropical Eucalyptus Forest
     public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CALLISTEMON_LOG = registerBlock("stripped_callistemon_log",
@@ -2567,12 +2587,12 @@ public class TreeBlocks {
             CallistemonSapling::new);
 
 
+    public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",
+            ModLeaves::new);
     public static final RegistryObject<Block> AGATHIS_LOG = registerBlock("agathis_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_AGATHIS_LOG = registerBlock("stripped_agathis_log",
             ModLogs::new);
-    public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",
-            ModLeaves::new);
     public static final RegistryObject<Block> AGATHIS_SAPLING = registerBlock("agathis_sapling",
             AgathisSapling::new);
 
