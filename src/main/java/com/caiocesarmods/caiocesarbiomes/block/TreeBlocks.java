@@ -5,6 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.fruiting.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.BananaLog;
+import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.BaldCypressAerialRoot;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
@@ -898,7 +899,7 @@ public class TreeBlocks {
 
     //Eucalyptus
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
-            ModLogs::new);
+            EucalyptusLog::new);
     public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
             EucalyptusLeaves::new);
     public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",

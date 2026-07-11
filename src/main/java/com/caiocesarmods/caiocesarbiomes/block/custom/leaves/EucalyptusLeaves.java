@@ -43,10 +43,10 @@ public class EucalyptusLeaves extends LeavesBlock implements IForgeShearable {
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 90;
+        return 450;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 100;
+        return 500;
     }
 }
