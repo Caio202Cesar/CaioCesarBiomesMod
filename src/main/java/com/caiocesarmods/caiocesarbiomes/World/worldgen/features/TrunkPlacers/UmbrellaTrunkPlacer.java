@@ -62,40 +62,58 @@ public class UmbrellaTrunkPlacer extends AbstractTrunkPlacer {
 
         List<FoliagePlacer.Foliage> foliages = Lists.newArrayList();
 
-        // Vanilla dirt placement
+        // Dirt
         func_236909_a_(reader, startPos.down());
 
-        // --------------------------
-        // Main trunk
-        // --------------------------
-
-        BlockPos.Mutable pos = new BlockPos.Mutable();
+        //----------------------------------------
+        // 2x2 Trunk
+        //----------------------------------------
 
         for (int y = 0; y < treeHeight; y++) {
 
-            pos.setPos(startPos).move(Direction.UP, y);
-
-            func_236911_a_(
-                    reader,
-                    rand,
-                    pos,
-                    logs,
-                    box,
-                    config);
+            placeLog(reader, rand, startPos.add(0, y, 0), logs, box, config);
+            placeLog(reader, rand, startPos.add(1, y, 0), logs, box, config);
+            placeLog(reader, rand, startPos.add(0, y, 1), logs, box, config);
+            placeLog(reader, rand, startPos.add(1, y, 1), logs, box, config);
         }
 
-        BlockPos branchStart = startPos.up(treeHeight - 3 - rand.nextInt(2));
-        // --------------------------
-        // Scaffold branches
-        // --------------------------
+        //----------------------------------------
+        // Branch starting positions
+        //----------------------------------------
 
-        double startAngle = rand.nextDouble() * Math.PI * 2.0;
+        BlockPos[] starts = {
+                startPos.add(0, treeHeight - 1, 0),
+                startPos.add(1, treeHeight - 1, 0),
+                startPos.add(0, treeHeight - 1, 1),
+                startPos.add(1, treeHeight - 1, 1),
+
+                startPos.add(0, treeHeight - 2, 0),
+                startPos.add(1, treeHeight - 2, 0),
+                startPos.add(0, treeHeight - 2, 1),
+                startPos.add(1, treeHeight - 2, 1),
+
+                startPos.add(0, treeHeight - 3, 0),
+                startPos.add(1, treeHeight - 3, 0),
+                startPos.add(0, treeHeight - 3, 1),
+                startPos.add(1, treeHeight - 3, 1)
+        };
+
+        double startAngle = rand.nextDouble() * Math.PI * 2D;
+
+        //----------------------------------------
+        // Scaffold branches
+        //----------------------------------------
 
         for (int i = 0; i < branchCount; i++) {
 
+            BlockPos branchStart = starts[i % starts.length];
+
             double angle =
                     startAngle +
-                            (Math.PI * 2.0 * i) / branchCount;
+                            (Math.PI * 2D * i) / branchCount;
+
+            // Add a random deviation of ±10°
+            angle += (rand.nextDouble() - 0.5D) * Math.toRadians(20.0);
 
             double x = branchStart.getX() + 0.5;
             double y = branchStart.getY();
@@ -111,11 +129,11 @@ public class UmbrellaTrunkPlacer extends AbstractTrunkPlacer {
                 x += dx;
                 z += dz;
 
-                // Almost horizontal branches
+                // Nearly horizontal
                 if (rand.nextFloat() < 0.12F)
                     y++;
 
-                // Small curvature
+                // Gentle curvature
                 angle += (rand.nextFloat() - 0.5F) * 0.08F;
 
                 dx = Math.cos(angle);
@@ -126,22 +144,42 @@ public class UmbrellaTrunkPlacer extends AbstractTrunkPlacer {
                         MathHelper.floor(y),
                         MathHelper.floor(z));
 
-                func_236911_a_(
-                        reader,
-                        rand,
-                        lastPos,
-                        logs,
-                        box,
-                        config);
+                placeLog(reader, rand, lastPos, logs, box, config);
+
+                // Thick base of the branch
+                if (step < 3) {
+
+                    if (Math.abs(dx) > Math.abs(dz)) {
+                        placeLog(reader, rand,
+                                lastPos.add(0, 0, 1),
+                                logs, box, config);
+                    } else {
+                        placeLog(reader, rand,
+                                lastPos.add(1, 0, 0),
+                                logs, box, config);
+                    }
+                }
             }
 
-            foliages.add(
-                    new FoliagePlacer.Foliage(
-                            lastPos,
-                            0,
-                            false));
+            foliages.add(new FoliagePlacer.Foliage(lastPos, 0, false));
         }
 
         return foliages;
+    }
+
+    private void placeLog(IWorldGenerationReader reader,
+                          Random rand,
+                          BlockPos pos,
+                          Set<BlockPos> logs,
+                          MutableBoundingBox box,
+                          BaseTreeFeatureConfig config) {
+
+        func_236911_a_(
+                reader,
+                rand,
+                pos,
+                logs,
+                box,
+                config);
     }
 }
