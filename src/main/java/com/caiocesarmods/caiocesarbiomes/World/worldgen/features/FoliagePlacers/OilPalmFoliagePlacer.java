@@ -20,7 +20,8 @@ public class OilPalmFoliagePlacer extends FoliagePlacer {
         super(radius, offset);
     }
 
-    public static final Codec<OilPalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<OilPalmFoliagePlacer> CODEC =
+            RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
                     FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
