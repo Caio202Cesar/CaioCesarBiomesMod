@@ -54,12 +54,9 @@ public class BunyaPineSubtropicalSeasonalForestBiome {
       DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestOaks(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withDeciduousSubtropicalForestTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withPohutukawaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalPlaneTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withBunyaPines(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSabalPalms(biomegenerationsettings$builder);
 

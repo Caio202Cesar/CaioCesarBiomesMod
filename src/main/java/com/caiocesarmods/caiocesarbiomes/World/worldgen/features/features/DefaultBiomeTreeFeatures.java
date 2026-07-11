@@ -90,9 +90,9 @@ public class DefaultBiomeTreeFeatures {
                             ANCIENT_POHUTUKAWA.withChance(0.079F)), POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
-    //Exclusive for oak forest
+    //Exclusive for oak forest = trocar Sand Oak Tree no posição Southern Live Oak (0.6F)
     public static final ConfiguredFeature<?, ?> OAK_SUBTROPICAL_BEACH_VEGETATION = register("oak_subtropical_beach_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SAND_OAK_TREE.withChance(0.6F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             BIG_LIVE_OAK_TREE.withChance(0.2F)), SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 

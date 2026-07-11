@@ -750,9 +750,10 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROYAL_POINCIANA_BIG_TREE = register("royal_poinciana_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.ROYAL_POINCIANA_LOG),
                     new SimpleBlockStateProvider(States.ROYAL_POINCIANA_LEAVES),
-                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(8), FeatureSpread.create(0), 2),
+                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(8), FeatureSpread.create(0), 2, 9),
                     new DarkOakTrunkPlacer(10, 4, 2),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Tamarind Tree (Tropical Deciduous Forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAMARIND_TREE = register("tamarind_tree",

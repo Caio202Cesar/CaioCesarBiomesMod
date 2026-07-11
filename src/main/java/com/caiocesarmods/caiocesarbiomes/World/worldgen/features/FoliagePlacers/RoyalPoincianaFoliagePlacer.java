@@ -21,18 +21,27 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
     public static final Codec<RoyalPoincianaFoliagePlacer> CODEC =
             RecordCodecBuilder.create(instance ->
                     func_242830_b(instance)
-                            .and(Codec.intRange(2, 16)
+                            .and(Codec.intRange(1, 4)
                                     .fieldOf("height")
                                     .forGetter(fp -> fp.height))
+                            .and(Codec.intRange(2, 16)
+                                    .fieldOf("canopy_radius")
+                                    .forGetter(fp -> fp.canopyRadius))
                             .apply(instance, RoyalPoincianaFoliagePlacer::new));
 
     protected final int height;
+    protected final int canopyRadius;
 
-    public RoyalPoincianaFoliagePlacer(FeatureSpread radius,
-                                       FeatureSpread offset,
-                                       int height) {
+    public RoyalPoincianaFoliagePlacer(
+            FeatureSpread radius,
+            FeatureSpread offset,
+            int height,
+            int canopyRadius) {
+
         super(radius, offset);
+
         this.height = height;
+        this.canopyRadius = canopyRadius;
     }
 
     @Override
@@ -42,58 +51,44 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
 
     @Override
     public int func_230374_a_(Random random,
-                             int trunkHeight,
-                             BaseTreeFeatureConfig config) {
+                              int trunkHeight,
+                              BaseTreeFeatureConfig config) {
         return height;
     }
 
     @Override
     protected boolean func_230373_a_(Random random,
-                                         int localX,
-                                         int localY,
-                                         int localZ,
-                                         int radius,
-                                         boolean giantTrunk) {
+                                     int localX,
+                                     int localY,
+                                     int localZ,
+                                     int radius,
+                                     boolean giantTrunk) {
         return false;
     }
 
     @Override
     protected void func_230372_a_(IWorldGenerationReader world,
-                                 Random random,
-                                 BaseTreeFeatureConfig config,
-                                 int trunkHeight,
-                                 Foliage foliage,
-                                 int foliageHeight,
-                                 int radius,
-                                 Set<BlockPos> leaves,
-                                 int offset,
-                                 MutableBoundingBox box) {
+                                  Random random,
+                                  BaseTreeFeatureConfig config,
+                                  int trunkHeight,
+                                  Foliage foliage,
+                                  int foliageHeight,
+                                  int radius,
+                                  Set<BlockPos> leaves,
+                                  int offset,
+                                  MutableBoundingBox box) {
 
         BlockPos center = foliage.func_236763_a_();
 
-        int baseRadius = radius + 2;
+        int baseRadius = this.canopyRadius;
 
-        // Only THREE layers
+        // Two foliage layers
         for (int y = 0; y <= 1; y++) {
 
-            double scale;
-
-            switch (y) {
-                case -1:
-                    scale = 0.94;
-                    break;
-
-                case 0:
-                    scale = 1.00;
-                    break;
-
-                default: // +1
-                    scale = 0.92;
-                    break;
-            }
+            double scale = (y == 0) ? 1.0D : 0.94D;
 
             double rx = baseRadius * scale;
-            double rz = rx * 1.18; // slightly wider in Z
+            double rz = rx * (1.25D + random.nextDouble() * 0.20D);
 
             int maxX = (int)Math.ceil(rx);
             int maxZ = (int)Math.ceil(rz);
@@ -106,37 +101,43 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
 
                     double dist = dx * dx + dz * dz;
 
-                    if (dist > 1.0)
+                    if (dist > 1.0D)
                         continue;
 
-                    // Feather the outer rim
-                    if (dist > 0.93F && random.nextFloat() < 0.20F)
+                    // Thin only the very outer rim
+                    if (dist > 0.96D && random.nextFloat() < 0.35F)
                         continue;
 
-                    BlockPos pos = center.add(x, y, z);
+                    int yOffset = 0;
 
-                    placeLeaf(world, random, config, (BlockPos) leaves, (Set<BlockPos>) pos, box);
+                    // Slight umbrella droop
+                    if (dist > 0.80D)
+                        yOffset = -1;
 
-                    // Very occasional hanging leaves
-                    if (dist > 0.88 && random.nextFloat() < 0.08F) {
+                    if (dist > 0.95D && random.nextFloat() < 0.35F)
+                        yOffset = -2;
 
-                        placeLeaf(world, random, config,
-                                (BlockPos) leaves,
-                                (Set<BlockPos>) pos.down(),
-                                box);
-                    }
+                    BlockPos pos = center.add(x, y + yOffset, z);
 
-                    // Tiny protrusions to avoid a perfect ellipse
-                    if (dist > 0.90 && random.nextFloat() < 0.12F) {
+                    placeLeaf(world, random, config, pos, leaves, box);
+
+                    // Small protrusions around the edge
+                    if (dist > 0.88D && random.nextFloat() < 0.10F) {
 
                         int px = x + random.nextInt(3) - 1;
                         int pz = z + random.nextInt(3) - 1;
 
-                        BlockPos extra = center.add(px, y, pz);
+                        BlockPos extra = center.add(px, y + yOffset, pz);
+
+                        placeLeaf(world, random, config, extra, leaves, box);
+                    }
+
+                    // Very rare hanging leaves
+                    if (dist > 0.95D && random.nextFloat() < 0.03F) {
 
                         placeLeaf(world, random, config,
-                                (BlockPos) leaves,
-                                (Set<BlockPos>) extra,
+                                pos.down(),
+                                leaves,
                                 box);
                     }
                 }
@@ -144,22 +145,21 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
         }
     }
 
-    private void placeLeaf(
-            IWorldGenerationReader world,
-            Random random,
-            BaseTreeFeatureConfig config,
-            BlockPos pos,
-            Set<BlockPos> leaves,
-            MutableBoundingBox box) {
+    private void placeLeaf(IWorldGenerationReader world,
+                           Random random,
+                           BaseTreeFeatureConfig config,
+                           BlockPos pos,
+                           Set<BlockPos> leaves,
+                           MutableBoundingBox box) {
 
         if (TreeFeature.isReplaceableAt(world, pos)) {
 
-            BlockState leafState = config.leavesProvider
+            BlockState state = config.leavesProvider
                     .getBlockState(random, pos)
                     .with(LeavesBlock.PERSISTENT, true)
                     .with(LeavesBlock.DISTANCE, 1);
 
-            world.setBlockState(pos, leafState, 19);
+            world.setBlockState(pos, state, 19);
 
             leaves.add(pos);
             box.expandTo(new MutableBoundingBox(pos, pos));

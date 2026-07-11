@@ -96,9 +96,9 @@ public class ModDefaultBiomeFeatures {
     public static void withSubtropicalLaurelForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_LAUREL_FOREST_TREES);
     }
-    public static void withSubtropicalEucalyptusForestTrees(BiomeGenerationSettings.Builder builder) {
+    /*public static void withSubtropicalEucalyptusForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
-    }
+    }*/
     public static void withJungleOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JUNGLE_OCOTEA_TREES);
     }
