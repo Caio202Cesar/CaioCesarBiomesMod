@@ -1193,7 +1193,9 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
                     new YewFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(8, 3, 2),
-                    new TwoLayerFeature(2, 0, 2)).setIgnoreVines().build())));
+                    new TwoLayerFeature(2, 0, 2))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setIgnoreVines().build())));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
@@ -2262,6 +2264,21 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_TREE = register("lithocarpus_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
+                    new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_FANCY_TREE = register("lithocarpus_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
+                    new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LOG),
@@ -2274,6 +2291,9 @@ public class TreeFeatures {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState LITHOCARPUS_LOG = TreeBlocks.LITHOCARPUS_LOG.get().getDefaultState();
+        protected static final BlockState LITHOCARPUS_LEAVES = TreeBlocks.LITHOCARPUS_LEAVES.get().getDefaultState();
 
         protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();

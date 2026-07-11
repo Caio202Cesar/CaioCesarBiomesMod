@@ -2549,6 +2549,13 @@ public class TreeBlocks {
             AleppoPineSapling::new);
 
 
+    public static final RegistryObject<Block> LITHOCARPUS_LOG = registerBlock("lithocarpus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LITHOCARPUS_LEAVES = registerBlock("lithocarpus_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> LITHOCARPUS_SAPLING = registerBlock("lithocarpus_sapling",
+            LithocarpusSapling::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
