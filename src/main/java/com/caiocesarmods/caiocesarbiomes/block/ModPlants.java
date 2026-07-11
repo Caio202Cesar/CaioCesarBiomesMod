@@ -113,12 +113,6 @@ public class ModPlants {
     public static final RegistryObject<Block> PEPPERCORN_RIPE_FRUITING_VINE = registerBlock("peppercorn_ripe_fruiting_vine",
             PeppercornRipeFruitingVine::new);
 
-    public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
-            () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
-                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
-    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES_VINE = registerBlock("socotra_cucumber_leaves_vine",
-            () -> new SocotraCucumberLeavesVineBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN_TERRACOTTA).tickRandomly().
-                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
 
     //Crops
     public static final  RegistryObject<Block> RED_CURRANT_CROP = BLOCKS.register("red_currant_crop",

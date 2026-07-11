@@ -2,6 +2,8 @@ package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.FicusRootsPlantBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.SocotraCucumberLeavesVineBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.fruiting.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.BananaLog;
@@ -1186,8 +1188,12 @@ public class TreeBlocks {
     //Jungle Figs
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             ModLogs::new);
+    public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
+            () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+
     public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
-            ModLeaves::new);
+            UrostigmaLeaves::new);
     public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
             WeepingFigSapling::new);
     @SuppressWarnings("deprecation")
@@ -1196,7 +1202,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
-            ModLeaves::new);
+            UrostigmaLeaves::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
             IndianLaurelSapling::new);
     @SuppressWarnings("deprecation")
@@ -1205,7 +1211,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
     public static final RegistryObject<Block> RUBBER_TREE_LEAVES = registerBlock("rubber_tree_leaves",
-            ModLeaves::new);
+            UrostigmaLeaves::new);
     public static final RegistryObject<Block> RUBBER_TREE_SAPLING = registerBlock("rubber_tree_sapling",
             RubberTreeSapling::new);
     @SuppressWarnings("deprecation")
@@ -2041,6 +2047,9 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES = registerBlock("socotra_cucumber_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LEAVES_VINE = registerBlock("socotra_cucumber_leaves_vine",
+            () -> new SocotraCucumberLeavesVineBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN_TERRACOTTA).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_SAPLING = registerBlock("socotra_cucumber_sapling",
             SocotraCucumberSapling::new);
     @SuppressWarnings("deprecation")

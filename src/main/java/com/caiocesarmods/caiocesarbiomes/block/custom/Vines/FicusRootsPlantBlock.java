@@ -45,7 +45,7 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreeBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
             }
         }
     }
@@ -70,7 +70,7 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
     public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
         BlockState above = world.getBlockState(pos.up());
 
-        return above.getBlock() == ModPlants.FICUS_ROOTS_PLANT.get()
+        return above.getBlock() == TreeBlocks.FICUS_ROOTS_PLANT.get()
                 || above.getBlock() == TreeBlocks.WEEPING_FIG_LEAVES.get()
                 || above.getBlock() == TreeBlocks.INDIAN_LAUREL_LEAVES.get()
                 || above.getBlock() == TreeBlocks.RUBBER_TREE_LEAVES.get();
@@ -90,7 +90,7 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos down = pos.down();
         if (worldIn.isAirBlock(down)) {
-            worldIn.setBlockState(down, ModPlants.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
+            worldIn.setBlockState(down, TreeBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
         }
     }
 
@@ -104,6 +104,6 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.FICUS_ROOTS_PLANT.get(), RenderType.getCutout());
     }
 }

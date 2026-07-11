@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IGrowable;
@@ -43,7 +44,7 @@ public class SocotraCucumberLeavesVineBlock extends Block implements IGrowable {
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos down = pos.down();
         if (worldIn.isAirBlock(down)) {
-            worldIn.setBlockState(down, ModPlants.SOCOTRA_CUCUMBER_LEAVES_VINE.get().getDefaultState(), 2);
+            worldIn.setBlockState(down, TreeBlocks.SOCOTRA_CUCUMBER_LEAVES_VINE.get().getDefaultState(), 2);
         }
     }
 
@@ -57,6 +58,6 @@ public class SocotraCucumberLeavesVineBlock extends Block implements IGrowable {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.SOCOTRA_CUCUMBER_LEAVES_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.SOCOTRA_CUCUMBER_LEAVES_VINE.get(), RenderType.getCutout());
     }
 }
