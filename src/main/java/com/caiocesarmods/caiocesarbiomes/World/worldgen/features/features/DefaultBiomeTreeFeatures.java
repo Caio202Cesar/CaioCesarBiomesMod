@@ -79,11 +79,21 @@ public class DefaultBiomeTreeFeatures {
                             JUNIPER_SHRUB.withChance(0.089F), TAIGA_LARCH_TREE.withChance(0.2F)), TAIGA_TALL_LARCH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
+    //Common to both laurel and oak forest
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_BEACH_VEGETATION = register("humid_subtropical_beach_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SABAL_PALM_FANCY_TREE.withChance(0.6F),
-                            SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F),SOUTHERN_LIVE_OAK_TREE.withChance(0.6F), SOUTHERN_MAGNOLIA_TREE.withChance(0.3F),
-                            SABAL_PALM_TREE.withChance(0.7F), ORCHID_TREE.withChance(0.2F)),
-                            BANANA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.5F), SOUTHERN_MAGNOLIA_TREE.withChance(0.3F),
+                            SABAL_PALM_TREE.withChance(0.7F), PINE_LIKE_CASUARINA_TREE.withChance(0.1F),
+                            GLORIOSA_CASUARINA_TREE.withChance(0.05F), INDIAN_LAUREL_TREE.withChance(0.1F),
+                            INDIAN_LAUREL_WITH_GLORIOSA.withChance(0.05F),
+                            ORCHID_TREE.withChance(0.2F),ANCIENT_POHUTUKAWA_WITH_MOSS.withChance(0.02F),
+                            ANCIENT_POHUTUKAWA.withChance(0.079F)), POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    //Exclusive for oak forest
+    public static final ConfiguredFeature<?, ?> OAK_SUBTROPICAL_BEACH_VEGETATION = register("oak_subtropical_beach_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SAND_OAK_TREE.withChance(0.6F),
+                            BIG_LIVE_OAK_TREE.withChance(0.2F)), SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SABAL_PALMS = register("sabal_palms",
@@ -533,10 +543,6 @@ public class DefaultBiomeTreeFeatures {
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> POHUTUKAWA_TREES = register("pohutukawa_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE_WITH_CREEPING_FIG.withChance(0.2F)),
-                            POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SOUTHERN_BEECH_FOREST_VEGETATION = register("southern_beech_forest_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOUTHERN_BEECH_SHRUB.withChance(0.1F),

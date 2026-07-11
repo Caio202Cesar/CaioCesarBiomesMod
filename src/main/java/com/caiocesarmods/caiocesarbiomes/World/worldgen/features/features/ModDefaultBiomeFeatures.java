@@ -114,9 +114,7 @@ public class ModDefaultBiomeFeatures {
     public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);
     }
-    public static void withDeciduousSubtropicalForestTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.DECIDUOUS_SUBTROPICAL_FOREST_TREES);
-    }
+
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JAPANESE_MAPLE);
     }
@@ -216,11 +214,8 @@ public class ModDefaultBiomeFeatures {
     public static void withPlainsEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.PLAINS_EUCALYPTUS_TREES);
     }
-    public static void withPlainsSubtropicalTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.PLAINS_SUBTROPICAL_TREES);
-    }
-    public static void withPohutukawaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.POHUTUKAWA_TREES);
+    public static void withOakSubtropicalBeachVegetation(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.OAK_SUBTROPICAL_BEACH_VEGETATION);
     }
 }
 
