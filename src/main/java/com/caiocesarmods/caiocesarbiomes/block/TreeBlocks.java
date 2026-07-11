@@ -2567,6 +2567,16 @@ public class TreeBlocks {
             CallistemonSapling::new);
 
 
+    public static final RegistryObject<Block> AGATHIS_LOG = registerBlock("agathis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AGATHIS_LOG = registerBlock("stripped_agathis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> AGATHIS_SAPLING = registerBlock("agathis_sapling",
+            AgathisSapling::new);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
