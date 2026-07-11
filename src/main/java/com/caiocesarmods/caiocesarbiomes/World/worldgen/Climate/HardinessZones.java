@@ -60,7 +60,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "canary_date_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "canary_pine_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "carob_sapling"), "HZ(min) 9, HZ(max) 11");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "casuarina_sapling"), "HZ(min) 9, HZ(max) 12");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "casuarina_sapling"), "HZ(min) 8, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cherry_plum_sapling"), "HZ(min) 5, HZ(max) 10;" +
         "⚠ only reliable flower and fruit in zone 8 to bellow");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chinese_red_pine_sapling"), "HZ(min) 7, HZ(max) 10");
