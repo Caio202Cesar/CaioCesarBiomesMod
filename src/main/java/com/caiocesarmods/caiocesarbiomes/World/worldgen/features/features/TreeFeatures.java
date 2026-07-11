@@ -5,6 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.Ba
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.DesertRoseTrunkPlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -32,7 +33,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WEEPING_WILLOW_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_WILLOW_LEAVES),
                     new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(8,   4, 2),
+                    new DarkOakTrunkPlacer(7, 3, 1),
                     new TwoLayerFeature(1, 0, 2)).setIgnoreVines().build())));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_WILLOW_FANCY = register("weeping_willow_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.WEEPING_WILLOW_LOG),
@@ -728,7 +729,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
@@ -750,8 +751,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROYAL_POINCIANA_BIG_TREE = register("royal_poinciana_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.ROYAL_POINCIANA_LOG),
                     new SimpleBlockStateProvider(States.ROYAL_POINCIANA_LEAVES),
-                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(8), FeatureSpread.create(0), 2, 9),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 2, 7),
+                    new UmbrellaTrunkPlacer(10, 4, 2, 5, 10),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
@@ -992,7 +993,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1000,7 +1001,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1008,7 +1009,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1023,7 +1024,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1031,7 +1032,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1039,7 +1040,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1047,7 +1048,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1055,7 +1056,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, CreepingFigTrunkDecorator.INSTANCE, CreepingFigLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1063,7 +1064,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1071,7 +1072,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1088,7 +1089,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1103,7 +1104,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, PeppercornVineTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1253,7 +1254,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Plane tree
@@ -2204,7 +2205,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
