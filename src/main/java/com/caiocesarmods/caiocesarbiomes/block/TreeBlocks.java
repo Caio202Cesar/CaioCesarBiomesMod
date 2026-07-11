@@ -2575,6 +2575,10 @@ public class TreeBlocks {
     public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
             ObtusaOakSapling::new); //Hardy from zone 7 to 10
 
+    public static final RegistryObject<Block> SAND_LAUREL_LEAVES = registerBlock("sand_laurel_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SAND_LAUREL_SAPLING = registerBlock("sand_laurel_sapling",
+            SandLaurelOakSapling::new);
 
     //Subtropical Eucalyptus Forest
     public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",
