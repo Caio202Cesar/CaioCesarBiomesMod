@@ -41,7 +41,7 @@ public class ObtusaOakSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 7 to 10
+    //Hardy to zone 7 to 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 
@@ -49,7 +49,7 @@ public class ObtusaOakSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         float minTemp = 0.7f;
-        float maxTemp = 0.89f;
+        float maxTemp = 0.94f;
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
         boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
@@ -73,7 +73,7 @@ public class ObtusaOakSapling extends SaplingBlock {
 
         float temp = biome.getTemperature(pos);
 
-        boolean tooHot = temp > 0.89F;
+        boolean tooHot = temp > 0.94F;
         boolean tooCold = temp < 0.7F;
         boolean noRain = biome.getPrecipitation() == Biome.RainType.NONE;
 
@@ -97,7 +97,7 @@ public class ObtusaOakSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
 
-            float minTemp = 0.7f, maxTemp = 0.89f;
+            float minTemp = 0.7f, maxTemp = 0.94f;
 
             if (temp < minTemp) {
                 player.sendMessage(

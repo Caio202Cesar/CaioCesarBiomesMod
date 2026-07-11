@@ -2242,11 +2242,19 @@ public class TreeFeatures {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OBTUSA_OAK_TREE = register("obtusa_oak_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OBTUSA_OAK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
                     new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setMaxWaterDepth(2).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOSSED_OBTUSA_OAK_TREE = register("mossed_obtusa_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
+                    new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setMaxWaterDepth(2).setIgnoreVines().setDecorators
+                            (ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).build()));
 
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
@@ -2462,7 +2470,7 @@ public class TreeFeatures {
         protected static final BlockState CORK_OAK_LOG = TreeBlocks.CORK_OAK_LOG.get().getDefaultState();
         protected static final BlockState CORK_OAK_LEAVES = TreeBlocks.CORK_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OBTUSA_OAK_LOG = TreeBlocks.OBTUSA_OAK_LOG.get().getDefaultState();
+        protected static final BlockState LAUREL_OAK_LOG = TreeBlocks.LAUREL_OAK_LOG.get().getDefaultState();
         protected static final BlockState OBTUSA_OAK_LEAVES = TreeBlocks.OBTUSA_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLEANDER_LOG = TreeBlocks.OLEANDER_LOG.get().getDefaultState();

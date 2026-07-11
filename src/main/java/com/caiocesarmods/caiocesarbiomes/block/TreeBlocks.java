@@ -2559,9 +2559,9 @@ public class TreeBlocks {
 
 
     //Obtusa oak (decidous only in zone 7) - Swamp Oak shape
-    public static final RegistryObject<Block> OBTUSA_OAK_LOG = registerBlock("obtusa_oak_log",
+    public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_LOG = registerBlock("stripped_obtusa_oak_log",
+    public static final RegistryObject<Block> STRIPPED_LAUREL_OAK_LOG = registerBlock("stripped_laurel_oak_log",
             ModLogs::new);
     public static final RegistryObject<Block> OBTUSA_OAK_LEAVES = registerBlock("obtusa_oak_leaves",
             () -> new ObtusaOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

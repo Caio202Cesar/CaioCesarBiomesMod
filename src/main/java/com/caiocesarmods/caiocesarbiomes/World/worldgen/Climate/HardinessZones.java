@@ -265,6 +265,9 @@ public class HardinessZones {
                 "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "gloriosa_lily"), "HZ(min) 8, HZ(max) 12 (1.6F);" +
                 "⚠ can be grown under glass in colder biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"), "HZ(min) 7, HZ(max) 11;" +
+                "⚠ Can't grow in dry biomes");
+
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +
                 "⚠ can be grown in colder biomes if under a 7x7 glass roof");
