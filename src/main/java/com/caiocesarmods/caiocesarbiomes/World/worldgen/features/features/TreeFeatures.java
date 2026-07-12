@@ -852,7 +852,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 7),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
