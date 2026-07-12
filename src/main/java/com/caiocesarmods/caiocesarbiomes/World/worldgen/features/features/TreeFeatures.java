@@ -161,14 +161,8 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_TREE_WITH_IVY = register("forest_ocotea_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_FOREST_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.IVY_VINE_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE = register("forest_ocotea_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
@@ -1959,7 +1953,6 @@ public class TreeFeatures {
                     new GiantTrunkPlacer(18, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHUSQUEA_BAMBOO = register("chusquea_bamboo",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CHUSQUEA_BAMBOO_LOG),
