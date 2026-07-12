@@ -150,7 +150,7 @@ public class YewSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            return TreeFeatures.YEW_TREE;
+            return TreeFeatures.ANCIENT_YEW_TREE;
         }
     }
 }

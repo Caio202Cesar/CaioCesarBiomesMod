@@ -991,23 +991,16 @@ public class TreeFeatures {
                     new YewFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(8, 3, 2),
                     new TwoLayerFeature(2, 0, 2))
-                    .setIgnoreVines().build())));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE = register("yew_tree",
+                    .setIgnoreVines().setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(
+                            new SimpleBlockStateProvider(States.PODZOL)))).build())));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_YEW_TREE = register("ancient_yew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(6, 2, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YEW_TREE_WITH_IVY = register("yew_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
-                    new SimpleBlockStateProvider(States.YEW_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(6, 2, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
-                    new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Dragon Blood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRAGON_BLOOD_TREE = register("dragon_blood_tree",
@@ -1088,30 +1081,21 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE_WITH_KIWI = register("plane_tree_with_kiwi",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE, Features.Placements.BEES_005_PLACEMENT))
-                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_FANCY_TREE_WITH_IVY = register("ivy_plane_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
-                            Features.Placements.BEES_0002_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_0002_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE_WITH_IVY = register("plane_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, Features.Placements.BEES_005_PLACEMENT))
-                    .setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
 
     //Acacia-like conifers
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
