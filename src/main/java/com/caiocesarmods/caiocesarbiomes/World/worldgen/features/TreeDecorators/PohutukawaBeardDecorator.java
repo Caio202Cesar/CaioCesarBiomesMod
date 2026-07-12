@@ -39,8 +39,10 @@ public class PohutukawaBeardDecorator extends TreeDecorator {
                 BlockPos below = pos.down();
 
                 if (world.isAirBlock(below)) {
-                    world.setBlockState(below,
-                            TreeBlocks.POHUTUKAWA_BEARD.get().getDefaultState(), 3);
+                    if (rand.nextInt(2) == 0) {
+                        world.setBlockState(below,
+                                TreeBlocks.POHUTUKAWA_BEARD.get().getDefaultState(), 3);
+                    }
                 }
             }
         }
