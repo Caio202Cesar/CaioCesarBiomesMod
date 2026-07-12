@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.AncientMetrosiderosTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.BaobabTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
@@ -844,14 +845,14 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA_WITH_MOSS = register("ancient_pohutukawa_with_moss",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(10, 4, 2),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 7),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));

@@ -30,6 +30,13 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(UmbrellaTrunkPlacer.CODEC)
             );
 
+    public static final TrunkPlacerType<AncientMetrosiderosTrunkPlacer> ANCIENT_METROSIDEROS =
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:ancient_metrosideros_trunk",
+                    new TrunkPlacerType<>(AncientMetrosiderosTrunkPlacer.CODEC)
+            );
+
     static {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
     }

@@ -13,8 +13,8 @@ import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 
-public class PohutukawaLeaves extends LeavesBlock implements IForgeShearable {
-    public PohutukawaLeaves(Properties properties) {
+public class PohutukawaBuddingLeaves extends LeavesBlock implements IForgeShearable {
+    public PohutukawaBuddingLeaves(Properties properties) {
         super(properties);
 
     }
@@ -38,22 +38,30 @@ public class PohutukawaLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for tropical biomes
-        if (temp >= 0.9F && random.nextInt(175) == 0) {
+        if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            return;
+        }
+
+        if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
 
         //Pattern for subtropical biomes
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_FLOWERING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
