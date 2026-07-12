@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.GloriosaTrunkDecorator;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.PeppercornVineTrunkDecorator;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.PohutukawaBeardDecorator;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
@@ -351,7 +352,8 @@ public class ModFeatures implements IFeatureConfig {
         public static final PohutukawaBeardDecorator POHUTUKAWA_BEARD_PLACEMENT = new PohutukawaBeardDecorator(0.25F);
         public static final PeppercornVineTrunkDecorator PEPPERCORN_VINE_PLACEMENT = new PeppercornVineTrunkDecorator(0.25F);
         public static final PeppercornVineTrunkDecorator PEPPERCORN_VINE_PLACEMENT100 = new PeppercornVineTrunkDecorator(1.0F);
-
+        public static final GloriosaTrunkDecorator GLORIOSA_VINE_PLACEMENT = new GloriosaTrunkDecorator(0.25F);
+        public static final GloriosaTrunkDecorator GLORIOSA_VINE_PLACEMENT100 = new GloriosaTrunkDecorator(1.0F);
     }
 
     public static final class States {
