@@ -1050,21 +1050,30 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Sycamore fig tree (native of dry biomes, it has Fig Log and fancy tree shape and must grow in Savannah, Tropical Desert or mediterranean dry scrub)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_FANCY_TREE = register("sycamore_fig_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.SYCAMORE_FIG_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_ANCIENT_TREE = register("ancient_sycamore_fig_tree",
+    //mediterranean dry scrub
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SYCAMORE_FIG_TREE = register("sycamore_fig_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(7, 4, 2),
+                    new DarkOakTrunkPlacer(6, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_SYCAMORE_FIG = register("ancient_sycamore_fig",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
+                    new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBRELLA_ANCIENT_SYCAMORE_FIG = register("umbrella_ancient_sycamore_fig",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
+                    new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
+                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 4, 4),
+                    new UmbrellaTrunkPlacer(3, 4, 2, 5, 6),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     //Plane tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE = register("plane_tree",
