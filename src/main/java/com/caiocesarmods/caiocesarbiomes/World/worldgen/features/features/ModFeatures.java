@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.PohutukawaBeardDecorator;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
@@ -12,8 +13,8 @@ import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
-import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.*;
+import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 
 import java.util.function.Supplier;
 
@@ -345,6 +346,10 @@ public class ModFeatures implements IFeatureConfig {
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
+    public static final class Placements {
+        public static final PohutukawaBeardDecorator POHUTUKAWA_BEARD_PLACEMENT = new PohutukawaBeardDecorator(0.05F);
+
+    }
 
     public static final class States {
         protected static final BlockState ANIS = ModPlants.ANIS.get().getDefaultState();

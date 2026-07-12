@@ -87,7 +87,7 @@ public class DefaultBiomeTreeFeatures {
                             GLORIOSA_CASUARINA_TREE.withChance(0.05F), INDIAN_LAUREL_TREE.withChance(0.1F),
                             INDIAN_LAUREL_WITH_GLORIOSA.withChance(0.05F),
                             ORCHID_TREE.withChance(0.2F),ANCIENT_POHUTUKAWA_WITH_MOSS.withChance(0.02F),
-                            ANCIENT_POHUTUKAWA.withChance(0.079F)), POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            ANCIENT_POHUTUKAWA.withChance(0.04F)), POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     //Exclusive for oak forest = trocar Sand Oak Tree no posição Southern Live Oak (0.6F)

@@ -56,7 +56,7 @@ public class TreeFeatures {
                     new BaobabFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new BaobabTrunkPlacer(16, 4, 2, 3),
                     new TwoLayerFeature(1, 0, 2)))
-                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACACIA_TREE_WITH_GLORIOSA = register("acacia_with_gloriosa",
@@ -65,7 +65,7 @@ public class TreeFeatures {
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2)))
-                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
 
     //Desert Rose Tree
@@ -432,8 +432,8 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE,
-                            Features.Placements.BEES_005_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, Features.Placements.BEES_005_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Avocado Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AVOCADO_TREE = register("avocado_tree",
@@ -554,7 +554,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.RED_KAPOK_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Forest Acacia Tree
@@ -569,7 +569,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.ACACIA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Japanese Maple Tree
@@ -769,8 +769,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.TAMARIND_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaLeavesDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Eucalyptus Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_TALL_TREE = register("eucalyptus_tall_tree",
@@ -793,8 +792,8 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, GloriosaTrunkDecorator.INSTANCE,
-                            GloriosaLeavesDecorator.INSTANCE)).build())); //Tropical eucalyptus forest
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, GloriosaTrunkDecorator.INSTANCE))
+                    .build())); //Tropical eucalyptus forest
 
     //Casuarina Tree - also part of tropical eucalyptus forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINE_LIKE_CASUARINA_TREE = register("pine_like_casuarina_tree",
@@ -830,8 +829,7 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
                     new TwoLayerFeature(2, 0, 2)))
-                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
-                    .setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Pohutukawa
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> POHUTUKAWA_TREE = register("pohutukawa_tree",
@@ -847,6 +845,7 @@ public class TreeFeatures {
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.POHUTUKAWA_BEARD_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA_WITH_MOSS = register("ancient_pohutukawa_with_moss",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
@@ -854,7 +853,8 @@ public class TreeFeatures {
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.POHUTUKAWA_BEARD_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Cherry Plum Tree
@@ -1012,7 +1012,7 @@ public class TreeFeatures {
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
-                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_TREE = register("indian_laurel_tree",
@@ -1043,7 +1043,7 @@ public class TreeFeatures {
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
-                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUBBER_TREE = register("rubber_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
@@ -1075,7 +1075,7 @@ public class TreeFeatures {
                     new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
-                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    .setDecorators(ImmutableList.of(FicusRootsDecorator.INSTANCE, GloriosaTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Jungle Figs with Peppercorn Vine
@@ -1740,7 +1740,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.DURIAN_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Marula (savanna)
@@ -1770,7 +1770,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 4),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE)).build()));
 
     //Oil Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OIL_PALM_TREE = register("oil_palm_tree",
@@ -1798,7 +1798,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(TreeFeatures.States.JACKALBERRY_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(GloriosaTrunkDecorator.INSTANCE))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Mountain Biome
@@ -2059,8 +2059,7 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE))
-                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            GloriosaTrunkDecorator.INSTANCE)).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Plumeria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_RED_TREE = register("plumeria_red_tree",
@@ -2121,16 +2120,14 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
-                            GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, GloriosaTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_TEAK_TREE_WITH_GLORIOSA = register("mega_teak_tree_with_gloriosa",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new MegaJungleTrunkPlacer(10, 2, 19),
                     new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            GloriosaTrunkDecorator.INSTANCE, GloriosaLeavesDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, GloriosaTrunkDecorator.INSTANCE)).build()));
 
     //Pewen coniferous grove
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PATAGONIAN_CYPRESS1 = register("patagonian_cypress1",
