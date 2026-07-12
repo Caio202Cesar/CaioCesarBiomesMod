@@ -126,7 +126,11 @@ public class RedMapleSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.RED_MAPLE_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.RED_MAPLE_FANCY_TREE;
+            } else {
+                return TreeFeatures.RED_MAPLE_TREE;
+            }
         }
     }
 }

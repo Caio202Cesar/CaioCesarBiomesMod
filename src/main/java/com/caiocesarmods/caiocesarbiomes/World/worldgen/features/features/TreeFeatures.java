@@ -1069,7 +1069,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBRELLA_ANCIENT_SYCAMORE_FIG = register("umbrella_ancient_sycamore_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
-                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 4, 4),
+                    new RoyalPoincianaFoliagePlacer(FeatureSpread.create(6), FeatureSpread.create(0), 4, 5),
                     new UmbrellaTrunkPlacer(3, 4, 2, 5, 6),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -1119,20 +1119,6 @@ public class TreeFeatures {
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KIWI_CHINESE_RED_PINE_TREE = register("kiwi_chinese_pine_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
-                    new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setDecorators(ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE))
-                    .setIgnoreVines().build()));
-
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));*/
 
     //Socotra Cucumber Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOCOTRA_CUCUMBER_TREE = register("socotra_cucumber_tree",
@@ -1332,7 +1318,6 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-
     //Red Maple Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE = register("tall_red_maple_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
@@ -1340,12 +1325,6 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE_WITH_KIWI = register("red_maple_tree_with_kiwi",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
-                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(8, 3, 0),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of((KiwiVineTrunkDecorator.INSTANCE))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE_WITH_CREEPING_FIG = register("red_maple_tree_with_creeping_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
                     new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
@@ -1353,12 +1332,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLOB_RED_MAPLE_TREE = register("red_maple_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.RED_MAPLE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_FANCY_TREE = register("red_maple_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JAPANESE_MAPLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.RED_MAPLE_LEAVES),
@@ -2022,6 +1995,13 @@ public class TreeFeatures {
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
+                    new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));*/
 
     public static final class States {
 
