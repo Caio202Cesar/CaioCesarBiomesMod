@@ -139,9 +139,6 @@ public class ModDefaultBiomeFeatures {
     public static void withSouthernBeechVegetation(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SOUTHERN_BEECH_FOREST_VEGETATION);
     }
-    public static void withChileanBellflower(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.COIHUE_TREES_WITH_BELLFLOWER);
-    }
     public static void withTropicalJungleFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_JUNGLE_FRUIT_TREES);
     }
