@@ -14,10 +14,8 @@ import java.util.Random;
 import java.util.Set;
 
 public class PohutukawaBeardDecorator extends TreeDecorator {
-    public static final PohutukawaBeardDecorator INSTANCE = new PohutukawaBeardDecorator();
-    public static final Codec<PohutukawaBeardDecorator> CODEC = Codec.unit(PohutukawaBeardDecorator::new);
-
-    public static final Codec<BeehiveTreeDecorator> field_236863_a_ = Codec.floatRange(0.0F, 1.0F).fieldOf("probability").xmap(BeehiveTreeDecorator::new, (p_236865_0_) -> {
+    public static final Codec<PohutukawaBeardDecorator> CODEC = Codec.floatRange(0.0F, 1.0F).fieldOf("probability")
+            .xmap(PohutukawaBeardDecorator::new, (p_236865_0_) -> {
         return p_236865_0_.probability;
     }).codec();
 
@@ -36,10 +34,13 @@ public class PohutukawaBeardDecorator extends TreeDecorator {
 
     @Override
     public void func_225576_a_(ISeedReader world, Random rand, List<BlockPos> logPositions, List<BlockPos> leafPositions, Set<BlockPos> changedBlocks, MutableBoundingBox boundingBox) {
-        for (BlockPos pos : leafPositions) {
-            if (world.getBlockState(pos.down()).isAir()) {
-                if (rand.nextInt(2) == 0) {
-                    world.setBlockState(pos.down(), TreeBlocks.POHUTUKAWA_BEARD.get().getDefaultState(), 3);
+        if (rand.nextFloat() < this.probability) {
+            for (BlockPos pos : leafPositions) {
+                BlockPos below = pos.down();
+
+                if (world.isAirBlock(below)) {
+                    world.setBlockState(below,
+                            TreeBlocks.POHUTUKAWA_BEARD.get().getDefaultState(), 3);
                 }
             }
         }
