@@ -364,6 +364,8 @@ public class ModFeatures implements IFeatureConfig {
         public static final KiwiGoldVineTrunkDecorator GOLDEN_KIWI_VINE_PLACEMENT = new KiwiGoldVineTrunkDecorator(0.25F);
         public static final KiwiGoldVineTrunkDecorator GOLDEN_KIWI_VINE_PLACEMENT100 = new KiwiGoldVineTrunkDecorator(1.0F);
         public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT = new SpanishMossLeavesDecorator(0.25F);
+        public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT045 = new SpanishMossLeavesDecorator(0.45F);
+        public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT075 = new SpanishMossLeavesDecorator(0.75F);
         public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT100 = new SpanishMossLeavesDecorator(1.0F);
     }
 

@@ -1348,7 +1348,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(5, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
-
     //Blue Spruce
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLUE_SPRUCE = register("blue_spruce",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPRUCE_LOG),
@@ -1456,7 +1455,9 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.SAUSAGE_TREE_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
 
     //Hawthorn
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAWTHORN_TREE = register("hawthorn_tree",
@@ -1480,7 +1481,9 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.BREADFRUIT_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(12, 6, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT,
+                            ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT)).setIgnoreVines().build()));
 
     //Durian (jungle)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DURIAN_TREE = register("durian_tree",
@@ -1489,16 +1492,16 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Marula (savanna)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARULA_TREE = register("marula_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.MARULA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyTrunkPlacer(4, 17, 0),
+                    new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Bismarck Palm (savanna)
@@ -1619,6 +1622,15 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT100))
                     .setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GLORIOSA_JUNGLE_TREE = register("gloriosa_jungle_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(States.JUNGLE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 8, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT100))
+                    .setIgnoreVines().build()));
+
     //Persimmon
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERSIMMON_FANCY_TREE = register("persimmon_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PERSIMMON_LOG),
@@ -1641,7 +1653,8 @@ public class TreeFeatures {
                             FeatureSpread.create(1, 1)),
                     new StraightTrunkPlacer(7, 2, 1),
                     new TwoLayerFeature(2, 0, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setMaxWaterDepth(2).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_BALD_CYPRESS = register("mega_bald_cypress",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
@@ -1649,25 +1662,9 @@ public class TreeFeatures {
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new GiantTrunkPlacer(16, 5, 4),
                     new TwoLayerFeature(1, 1, 2)))
-                    .setMaxWaterDepth(2).setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPANISH_MOSS_BALD_CYPRESS = register("spanish_moss_bald_cypress",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2),
-                            FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(7, 2, 1),
-                    new TwoLayerFeature(2, 0, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
-                            SpanishMossLeavesDecorator.INSTANCE))
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setMaxWaterDepth(2).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPANISH_MOSS_MEGA_BALD_CYPRESS = register("spanish_moss_mega_bald_cypress",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALD_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.BALD_CYPRESS_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new GiantTrunkPlacer(16, 5, 4),
-                    new TwoLayerFeature(1, 1, 2)))
-                    .setMaxWaterDepth(2).setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
-                            SpanishMossLeavesDecorator.INSTANCE)).build()));
 
     //Fremont Poplar
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FREMONT_POPLAR_TREE = register("fremont_poplar_tree",
@@ -1706,7 +1703,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAIGA_LARCH_TREE = register("taiga_larch_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARCH_LOG),
                     new SimpleBlockStateProvider(States.LARCH_TAIGA_SPRING_BRANCHES),
@@ -1787,17 +1783,17 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IVORY_FANCY_TREE = register("pink_ivory_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PINK_IVORY_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PINK_IVORY_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Plumeria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_RED_TREE = register("plumeria_red_tree",
@@ -1837,15 +1833,16 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEAK_FANCY_TREE = register("teak_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_TEAK_TREE = register("mega_teak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
@@ -1890,21 +1887,32 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-
     //Laurel forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMPHOR_TREE = register("camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_CAMPHOR_TREE = register("big_camphor_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMPHOR_LOG),
+                    new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
+                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 4, 2),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_CAMPHOR_TREE = register("ancient_camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
-                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT045, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
+                    .setIgnoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CINNAMON_TREE = register("cinnamon_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CINNAMON_LOG),
@@ -1933,36 +1941,25 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_FANCY_TREE = register("lithocarpus_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
                     new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_TREE_WITH_KIWI = register("lithocarpus_tree_with_kiwi",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
-                    new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setDecorators
-                            (ImmutableList.of(KiwiVineTrunkDecorator.INSTANCE, Features.Placements.BEES_005_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OBTUSA_OAK_TREE = register("obtusa_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
                     new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setMaxWaterDepth(2).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOSSED_OBTUSA_OAK_TREE = register("mossed_obtusa_oak_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
-                    new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setMaxWaterDepth(2).setIgnoreVines().setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setMaxWaterDepth(2).setIgnoreVines().build()));
 
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
