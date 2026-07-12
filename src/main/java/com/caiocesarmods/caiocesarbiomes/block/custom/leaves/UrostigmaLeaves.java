@@ -37,10 +37,6 @@ public class UrostigmaLeaves extends LeavesBlock {
             world.setBlockState(down, this.getDefaultState(), 2);
         }
 
-        if (temp <= 0.89F || biome.getPrecipitation() == Biome.RainType.NONE) {
-            world.destroyBlock(pos, false); // no drop
-        }
-
         if (random.nextFloat() < 0.78f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = world.getBlockState(belowPos);
