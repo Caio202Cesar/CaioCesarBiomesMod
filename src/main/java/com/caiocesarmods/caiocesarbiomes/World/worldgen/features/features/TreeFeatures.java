@@ -674,7 +674,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 5),
+                    new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.SPANISH_MOSS_PLACEMENT100,
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045))
