@@ -1,8 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
-import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.GloriosaLily;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.IvyVine;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.PeppercornVine;
 import com.mojang.serialization.Codec;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
@@ -21,48 +23,57 @@ public class IvyTrunkDecorator extends TreeDecorator {
     public static final Codec<IvyTrunkDecorator> CODEC = Codec.unit(IvyTrunkDecorator::new);
     public static final IvyTrunkDecorator INSTANCE = new IvyTrunkDecorator();
 
-    @Override
     protected TreeDecoratorType<?> getDecoratorType() {
         return ModTreeDecorators.TRUNK_IVY_DECORATOR.get();
     }
 
-    public void func_225576_a_(ISeedReader world, Random rand, List<BlockPos> trunkPositions,
-                               List<BlockPos> leavesPositions, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
+    public void func_225576_a_(ISeedReader world, Random rand, List<BlockPos> trunkPositions, List<BlockPos> leavesPositions, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         trunkPositions.forEach((pos) -> {
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos = pos.west();
                 if (Feature.isAirAt(world, blockpos)) {
-                    this.placeVine(world, blockpos, CreepingFigVine.EAST, placed, boundingBox);
+                    this.placeVine(world, blockpos, IvyVine.EAST, placed, boundingBox);
+                }
+            }
 
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos1 = pos.east();
+                if (Feature.isAirAt(world, blockpos1)) {
+                    this.placeVine(world, blockpos1, IvyVine.WEST, placed, boundingBox);
+                }
+            }
 
-    }}
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos2 = pos.north();
+                if (Feature.isAirAt(world, blockpos2)) {
+                    this.placeVine(world, blockpos2, IvyVine.SOUTH, placed, boundingBox);
+                }
+            }
 
-    private void placeCustomVine(IWorldGenerationReader world, BlockPos pos,
-                                 BlockState state, Set<BlockPos> placed,
-                                 MutableBoundingBox boundingBox) {
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos3 = pos.south();
+                if (Feature.isAirAt(world, blockpos3)) {
+                    this.placeVine(world, blockpos3, IvyVine.NORTH, placed, boundingBox);
+                }
+            }
 
+        });
+    }
+
+    private void placeCustomVine(IWorldGenerationReader world, BlockPos pos, BlockState state, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         world.setBlockState(pos, state, 19);
         placed.add(pos.toImmutable());
     }
 
-    private void placeVine(IWorldGenerationReader world, BlockPos pos,
-                           BooleanProperty property, Set<BlockPos> placed,
-                           MutableBoundingBox boundingBox) {
-
-        BlockState vineState = ModPlants.GLORIOSA_LILY.get()
-                .getDefaultState()
-                .with(property, true);
-
-        placeCustomVine(world, pos, vineState, placed, boundingBox);
-
+    private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
+        BlockState vineState = ModPlants.IVY.get().getDefaultState().with(property, true);
+        this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;
 
-        for (BlockPos downPos = pos.down();
-             Feature.isAirAt(world, downPos) && i > 0;
-             downPos = downPos.down(), --i) {
-
-            placeCustomVine(world, downPos, vineState, placed, boundingBox);
+        for(BlockPos downPos = pos.down(); Feature.isAirAt(world, downPos) && i > 0; --i) {
+            this.placeCustomVine(world, downPos, vineState, placed, boundingBox);
+            downPos = downPos.down();
         }
+
     }
 }
-
