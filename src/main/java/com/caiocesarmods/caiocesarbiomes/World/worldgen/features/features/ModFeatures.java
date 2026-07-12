@@ -1,8 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.GloriosaTrunkDecorator;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.PeppercornVineTrunkDecorator;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.PohutukawaBeardDecorator;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
@@ -354,6 +352,14 @@ public class ModFeatures implements IFeatureConfig {
         public static final PeppercornVineTrunkDecorator PEPPERCORN_VINE_PLACEMENT100 = new PeppercornVineTrunkDecorator(1.0F);
         public static final GloriosaTrunkDecorator GLORIOSA_VINE_PLACEMENT = new GloriosaTrunkDecorator(0.25F);
         public static final GloriosaTrunkDecorator GLORIOSA_VINE_PLACEMENT100 = new GloriosaTrunkDecorator(1.0F);
+        public static final ChileanBellflowerMagentaTrunkDecorator MAGENTA_BELLFLOWER_PLACEMENT =
+                new ChileanBellflowerMagentaTrunkDecorator(0.25F);
+        public static final ChileanBellflowerPinkTrunkDecorator PINK_BELLFLOWER_PLACEMENT =
+                new ChileanBellflowerPinkTrunkDecorator(0.35F);
+        public static final ChileanBellflowerRedTrunkDecorator RED_BELLFLOWER_PLACEMENT =
+                new ChileanBellflowerRedTrunkDecorator(0.45F);
+        public static final ChileanBellflowerWhiteTrunkDecorator WHITE_BELLFLOWER_PLACEMENT =
+                new ChileanBellflowerWhiteTrunkDecorator(0.15F);
     }
 
     public static final class States {
