@@ -25,7 +25,6 @@ public class PohutukawaBeardDecorator extends TreeDecorator {
         this.probability = probabilityIn;
     }
 
-
     @Override
     protected TreeDecoratorType<?> getDecoratorType() {
         return ModTreeDecorators.POHUTUKAWA_HANGING_ROOTS.get();

@@ -11,9 +11,6 @@ public class ModTreeDecorators {
     public static final DeferredRegister<TreeDecoratorType<?>> TREE_DECORATORS =
             DeferredRegister.create(ForgeRegistries.TREE_DECORATOR_TYPES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<TreeDecoratorType<FicusRootsDecorator>> FICUS_HANGING_ROOTS =
-            TREE_DECORATORS.register("ficus_hanging_roots",
-                    () -> new TreeDecoratorType<>(FicusRootsDecorator.CODEC));
 
     public static final RegistryObject<TreeDecoratorType<PohutukawaBeardDecorator>> POHUTUKAWA_HANGING_ROOTS =
             TREE_DECORATORS.register("pohutukawa_hanging_roots",
