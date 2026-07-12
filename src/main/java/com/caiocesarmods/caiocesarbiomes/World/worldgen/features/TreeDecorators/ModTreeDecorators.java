@@ -15,6 +15,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("ficus_hanging_roots",
                     () -> new TreeDecoratorType<>(FicusRootsDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<PohutukawaBeardDecorator>> POHUTUKAWA_HANGING_ROOTS =
+            TREE_DECORATORS.register("pohutukawa_hanging_roots",
+                    () -> new TreeDecoratorType<>(PohutukawaBeardDecorator.CODEC));
+
     public static final RegistryObject<TreeDecoratorType<CucumberTreeVinesDecorator>> CUCUMBER_TREE_VINE =
             TREE_DECORATORS.register("cucumber_tree_vine",
                     () -> new TreeDecoratorType<>(CucumberTreeVinesDecorator.CODEC));

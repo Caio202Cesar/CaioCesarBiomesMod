@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.FicusRootsPlantBlock;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.PohutukawaBeardBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.SocotraCucumberLeavesVineBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.fruiting.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
@@ -1696,12 +1697,16 @@ public class TreeBlocks {
     //Pohutukawa
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
             ModLogs::new);
+    public static final RegistryObject<Block> POHUTUKAWA_BEARD = registerBlock("pohutukawa_beard",
+            () -> new PohutukawaBeardBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
+                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> POHUTUKAWA_SPARSE_FLOWERING_LEAVES = registerBlock("pohutukawa_sparse_flowering_leaves",
             () -> new PohutukawaBuddingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POHUTUKAWA_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> POHUTUKAWA_FLOWERING_LEAVES = registerBlock("pohutukawa_flowering_leaves",
             () -> new PohutukawaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POHUTUKAWA_LEAVES));
