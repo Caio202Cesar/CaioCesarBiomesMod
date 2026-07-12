@@ -13,6 +13,7 @@ import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
@@ -82,7 +83,6 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
 
         int baseRadius = this.canopyRadius;
 
-        // Two foliage layers
         for (int y = 0; y <= 1; y++) {
 
             double scale = (y == 0) ? 1.0D : 0.94D;
@@ -104,13 +104,11 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
                     if (dist > 1.0D)
                         continue;
 
-                    // Thin only the very outer rim
                     if (dist > 0.96D && random.nextFloat() < 0.35F)
                         continue;
 
                     int yOffset = 0;
 
-                    // Slight umbrella droop
                     if (dist > 0.80D)
                         yOffset = -1;
 
@@ -121,7 +119,6 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
 
                     placeLeaf(world, random, config, pos, leaves, box);
 
-                    // Small protrusions around the edge
                     if (dist > 0.88D && random.nextFloat() < 0.10F) {
 
                         int px = x + random.nextInt(3) - 1;
@@ -131,16 +128,35 @@ public class RoyalPoincianaFoliagePlacer extends FoliagePlacer {
 
                         placeLeaf(world, random, config, extra, leaves, box);
                     }
-
-                    // Very rare hanging leaves
-                    if (dist > 0.95D && random.nextFloat() < 0.03F) {
-
-                        placeLeaf(world, random, config,
-                                pos.down(),
-                                leaves,
-                                box);
-                    }
                 }
+            }
+        }
+
+        // Hanging foliage pass
+        for (BlockPos leaf : new HashSet<>(leaves)) {
+
+            if (random.nextFloat() > 0.05F)
+                continue;
+
+            // Only generate from the underside of the canopy
+            if (leaves.contains(leaf.up()))
+                continue;
+
+            BlockPos below = leaf.down();
+
+            if (!TreeFeature.isReplaceableAt(world, below))
+                continue;
+
+            // Require neighboring leaves so isolated leaves cannot spawn
+            int neighbors = 0;
+
+            if (leaves.contains(leaf.north())) neighbors++;
+            if (leaves.contains(leaf.south())) neighbors++;
+            if (leaves.contains(leaf.east())) neighbors++;
+            if (leaves.contains(leaf.west())) neighbors++;
+
+            if (neighbors >= 2) {
+                placeLeaf(world, random, config, below, leaves, box);
             }
         }
     }
