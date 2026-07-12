@@ -12,6 +12,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +26,7 @@ public class SubtropicalEucalyptusDryForestBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> SUBTROPICAL_EUCALYPTUS_DRY_FOREST = BIOMES.register("subtropical_eucalyptus_dry_forest",
-            () -> makeSubtropicalEucalyptusDryForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+            () -> makeSubtropicalEucalyptusDryForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.3f));
 
 
     private static Biome makeSubtropicalEucalyptusDryForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

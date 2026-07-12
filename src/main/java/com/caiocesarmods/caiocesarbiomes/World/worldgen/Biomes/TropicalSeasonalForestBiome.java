@@ -13,6 +13,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +26,7 @@ public class TropicalSeasonalForestBiome {
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    public static final RegistryObject<Biome> TROPICAL_SEASONAL_FOREST = BIOMES.register("tropical_seasonal_forest",
-           () -> makeTropicalSeasonalForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+           () -> makeTropicalSeasonalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.3f));
 
    private static Biome makeTropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();

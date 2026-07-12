@@ -13,6 +13,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,7 +27,7 @@ public class HumidSubtropicalPineForest {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> HUMID_SUBTROPICAL_PINE_FOREST = BIOMES.register("humid_subtropical_pine_forest",
-            () -> makeHumidSubtropicalPineForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.2f));
+            () -> makeHumidSubtropicalPineForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.2f));
 
 
     private static Biome makeHumidSubtropicalPineForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

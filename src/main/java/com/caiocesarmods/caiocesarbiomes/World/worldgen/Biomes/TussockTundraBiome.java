@@ -23,7 +23,7 @@ public class TussockTundraBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TUSSOCK_TUNDRA = BIOMES.register("tussock_tundra",
-            () -> makeTussockTundraBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.12f));
+            () -> makeTussockTundraBiome(() -> ModConfiguredSurfaceBuilders.VEGETATION_TUNDRA_SURFACE, 0.1f, 0.12f));
 
 
     private static Biome makeTussockTundraBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

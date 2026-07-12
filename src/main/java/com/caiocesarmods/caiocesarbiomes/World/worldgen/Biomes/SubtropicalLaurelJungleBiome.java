@@ -11,6 +11,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,7 +25,7 @@ public class SubtropicalLaurelJungleBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("subtropical_laurel_jungle",
-           () -> makeSubtropicalLaurelJungleBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.2f));
+           () -> makeSubtropicalLaurelJungleBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 
    private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
