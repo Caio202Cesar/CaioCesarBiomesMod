@@ -350,6 +350,7 @@ public class ModFeatures implements IFeatureConfig {
     public static final class Placements {
         public static final PohutukawaBeardDecorator POHUTUKAWA_BEARD_PLACEMENT = new PohutukawaBeardDecorator(0.25F);
         public static final PeppercornVineTrunkDecorator PEPPERCORN_VINE_PLACEMENT = new PeppercornVineTrunkDecorator(0.25F);
+        public static final PeppercornVineTrunkDecorator PEPPERCORN_VINE_PLACEMENT100 = new PeppercornVineTrunkDecorator(1.0F);
 
     }
 

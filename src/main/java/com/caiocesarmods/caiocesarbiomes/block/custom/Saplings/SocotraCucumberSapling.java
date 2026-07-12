@@ -30,7 +30,7 @@ import java.util.Random;
 
 public class SocotraCucumberSapling extends SaplingBlock {
     public SocotraCucumberSapling() {
-        super(new AvocadoTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+        super(new SocotraCumcumberTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -138,7 +138,7 @@ public class SocotraCucumberSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class AvocadoTree extends Tree {
+    private static class SocotraCumcumberTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
