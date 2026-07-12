@@ -33,15 +33,9 @@ public class ModBiomeGeneration {
 
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
-        addBiome(BunyaPineSubtropicalSeasonalForestBiome.BUNYA_PINE_SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD,
-                LUSH, DENSE, CONIFEROUS);
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
-
-        addBiome(BunyaPineSubtropicalLaurelForestBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, LUSH, DENSE, CONIFEROUS);
-
-        addBiome(BunyaPineSubtropicalLaurelJungleBiome.BUNYA_PINE_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 12, OVERWORLD, LUSH, DENSE, JUNGLE, WET, CONIFEROUS);
 
         addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH,
                 DENSE, JUNGLE, WET, RARE);

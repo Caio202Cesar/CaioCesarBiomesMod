@@ -83,9 +83,6 @@ public class CaioCesarBiomesMod
         OliveGroveBiome.register(eventBus);
         CorkOakSavannaBiome.register(eventBus);
         SubtropicalSeasonalForestBiome.register(eventBus);
-        BunyaPineSubtropicalSeasonalForestBiome.register(eventBus);
-        BunyaPineSubtropicalLaurelForestBiome.register(eventBus);
-        BunyaPineSubtropicalLaurelJungleBiome.register(eventBus);
         TropicalSeasonalForestBiome.register(eventBus);
         SubtropicalLaurelForestBiome.register(eventBus);
         SubtropicalLaurelJungleBiome.register(eventBus);

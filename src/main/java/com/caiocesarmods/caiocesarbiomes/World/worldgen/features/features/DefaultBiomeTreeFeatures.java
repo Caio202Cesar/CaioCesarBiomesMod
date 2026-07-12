@@ -43,20 +43,15 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_TREES = register("mediterranean_pine_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CANARY_PINE_TREE_TALL.withChance(0.5F), STONE_PINE_TREE.withChance(0.39F),
-                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.4F),
-                            ALEPPO_PINE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
-                            PLANE_FANCY_TREE.withChance(0.19F)), CANARY_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.5F),
+                            CANARY_PINE_TREE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
+                            PLANE_FANCY_TREE.withChance(0.19F)), ALEPPO_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             LOBLOLLY_PINE.withChance(0.5F), TALL_LOBLOLLY_PINE.withChance(0.35F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 6))));
-
-    public static final ConfiguredFeature<?, ?> TEMPERATE_EUCALYPTUS_SAVANNA_TREES = register("temperate_eucalyptus_savanna_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of( EUCALYPTUS_TALL_TREE.withChance(0.2F),
-                            LOMBARDY_POPLAR_TREE.withChance(0.12F)), EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_DESERT_TREES = register("temperate_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.2F),
@@ -86,8 +81,8 @@ public class DefaultBiomeTreeFeatures {
                             SABAL_PALM_TREE.withChance(0.7F), PINE_LIKE_CASUARINA_TREE.withChance(0.1F),
                             GLORIOSA_CASUARINA_TREE.withChance(0.05F), INDIAN_LAUREL_TREE.withChance(0.1F),
                             INDIAN_LAUREL_WITH_GLORIOSA.withChance(0.05F),
-                            ORCHID_TREE.withChance(0.2F),ANCIENT_POHUTUKAWA_WITH_MOSS.withChance(0.02F),
-                            ANCIENT_POHUTUKAWA.withChance(0.04F)), POHUTUKAWA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            ORCHID_TREE.withChance(0.2F), ANCIENT_POHUTUKAWA_WITH_MOSS.withChance(0.1F),
+                            POHUTUKAWA_TREE.withChance(0.1F)), ANCIENT_POHUTUKAWA)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     //Exclusive for oak forest = trocar Sand Oak Tree no posição Southern Live Oak (0.6F)
@@ -542,7 +537,6 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_BUNYA_PINE_TREE.withChance(0.2F)),
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
-
 
     public static final ConfiguredFeature<?, ?> SOUTHERN_BEECH_FOREST_VEGETATION = register("southern_beech_forest_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOUTHERN_BEECH_SHRUB.withChance(0.1F),
