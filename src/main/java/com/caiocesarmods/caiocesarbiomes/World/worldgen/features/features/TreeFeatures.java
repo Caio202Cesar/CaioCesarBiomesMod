@@ -1325,13 +1325,6 @@ public class TreeFeatures {
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(8, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE_WITH_CREEPING_FIG = register("red_maple_tree_with_creeping_fig",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
-                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(8, 3, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(CreepingFigTrunkDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_FANCY_TREE = register("red_maple_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JAPANESE_MAPLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.RED_MAPLE_LEAVES),
