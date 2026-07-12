@@ -2006,13 +2006,7 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerPinkTrunkDecorator.INSTANCE))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_MAGENTA_BELLFLOWER = register("coihue_tree_with_magenta_bellflower",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
-                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(ChileanBellflowerMagentaTrunkDecorator.INSTANCE))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     //Laurel forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMPHOR_TREE = register("camphor_tree",
@@ -2085,8 +2079,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setMaxWaterDepth(2).setIgnoreVines().setDecorators
-                            (ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).build()));
+                    .setMaxWaterDepth(2).setIgnoreVines().setDecorators(ImmutableList.of(SpanishMossLeavesDecorator.INSTANCE)).build()));
 
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
@@ -2094,7 +2087,8 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Australian Pine Tropical Rainforest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AGATHIS_TREE1 = register("agathis_tree1",

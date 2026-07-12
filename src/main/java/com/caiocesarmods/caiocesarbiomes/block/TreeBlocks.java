@@ -1698,8 +1698,8 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
             ModLogs::new);
     public static final RegistryObject<Block> POHUTUKAWA_BEARD = registerBlock("pohutukawa_beard",
-            () -> new PohutukawaBeardBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
-                    doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
+            () -> new PohutukawaBeardBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN)
+                    .tickRandomly().hardnessAndResistance(0.4F).sound(SoundType.VINE)));
 
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
