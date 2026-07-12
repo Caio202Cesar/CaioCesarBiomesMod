@@ -24,10 +24,6 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("spanish_moss_decorator",
                     () -> new TreeDecoratorType<>(SpanishMossLeavesDecorator.CODEC));
 
-    public static final RegistryObject<TreeDecoratorType<CreepingFigLeavesDecorator>> CREEPING_FIG_LEAVES_DECORATOR =
-            TREE_DECORATORS.register("creeping_fig_leaves_decorator",
-                    () -> new TreeDecoratorType<>(CreepingFigLeavesDecorator.CODEC));
-
     public static final RegistryObject<TreeDecoratorType<CreepingFigTrunkDecorator>> TRUNK_CREEPING_FIG_DECORATOR =
             TREE_DECORATORS.register("creeping_fig_trunk_decorator",
                     () -> new TreeDecoratorType<>(CreepingFigTrunkDecorator.CODEC));
@@ -35,6 +31,10 @@ public class ModTreeDecorators {
     public static final RegistryObject<TreeDecoratorType<IvyTrunkDecorator>> TRUNK_IVY_DECORATOR =
             TREE_DECORATORS.register("ivy_trunk_decorator",
                     () -> new TreeDecoratorType<>(IvyTrunkDecorator.CODEC));
+
+    public static final RegistryObject<TreeDecoratorType<IvyLeavesDecorator>> IVY_LEAVES_DECORATOR =
+            TREE_DECORATORS.register("ivy_leaves_decorator",
+                    () -> new TreeDecoratorType<>(IvyLeavesDecorator.CODEC));
 
     public static final RegistryObject<TreeDecoratorType<KiwiVineTrunkDecorator>> KIWI_VINE_TRUNK_DECORATOR =
             TREE_DECORATORS.register("kiwi_vine_trunk_decorator",

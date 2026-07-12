@@ -356,14 +356,14 @@ public class ModFeatures implements IFeatureConfig {
         public static final ChileanBellflowerPinkTrunkDecorator PINK_BELLFLOWER_PLACEMENT = new ChileanBellflowerPinkTrunkDecorator(0.35F);
         public static final ChileanBellflowerRedTrunkDecorator RED_BELLFLOWER_PLACEMENT = new ChileanBellflowerRedTrunkDecorator(0.45F);
         public static final ChileanBellflowerWhiteTrunkDecorator WHITE_BELLFLOWER_PLACEMENT = new ChileanBellflowerWhiteTrunkDecorator(0.15F);
-        public static final IvyTrunkDecorator IVY_VINE_PLACEMENT = new IvyTrunkDecorator(0.25F);
-        public static final IvyTrunkDecorator IVY_VINE_PLACEMENT100 = new IvyTrunkDecorator(1.0F);
         public static final CreepingFigTrunkDecorator CREEPING_FIG_VINE_TRUNK_PLACEMENT = new CreepingFigTrunkDecorator(0.25F);
         public static final CreepingFigTrunkDecorator CREEPING_FIG_VINE_TRUNK_PLACEMENT100 = new CreepingFigTrunkDecorator(1.0F);
         public static final KiwiVineTrunkDecorator KIWI_VINE_PLACEMENT = new KiwiVineTrunkDecorator(0.25F);
         public static final KiwiVineTrunkDecorator KIWI_VINE_PLACEMENT100 = new KiwiVineTrunkDecorator(1.0F);
         public static final KiwiGoldVineTrunkDecorator GOLDEN_KIWI_VINE_PLACEMENT = new KiwiGoldVineTrunkDecorator(0.25F);
         public static final KiwiGoldVineTrunkDecorator GOLDEN_KIWI_VINE_PLACEMENT100 = new KiwiGoldVineTrunkDecorator(1.0F);
+        public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT = new SpanishMossLeavesDecorator(0.45F);
+        public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT100 = new SpanishMossLeavesDecorator(1.0F);
     }
 
     public static final class States {

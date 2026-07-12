@@ -162,7 +162,8 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(ModFeatures.Placements.IVY_VINE_PLACEMENT)).build()));
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.IVY_VINE_PLACEMENT,
+                            ModFeatures.Placements.IVY_VINE_LEAVES_PLACEMENT,)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE = register("forest_ocotea_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
