@@ -2,15 +2,26 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.HotMediterraneanBeachBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MediterraneanScrublandBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeResolver;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRegistry;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraft.world.gen.layer.traits.ICastleTransformer;
 
 public enum CustomShoreLayer implements ICastleTransformer {
     INSTANCE;
+
+    private Registry<Biome> registry;
+
+
+    public void setup(Registry<Biome> registry) {
+        this.registry = registry;
+    }
+
 
     @Override
     public int apply(INoiseRandom rand,
@@ -20,12 +31,10 @@ public enum CustomShoreLayer implements ICastleTransformer {
                      int west,
                      int center) {
 
-        // Oceans stay oceans.
         if (isOcean(center)) {
             return center;
         }
 
-        // Only generate beaches when touching an ocean.
         if (!touchesOcean(north, east, south, west)) {
             return center;
         }
@@ -33,42 +42,70 @@ public enum CustomShoreLayer implements ICastleTransformer {
         return getBeach(center);
     }
 
-    private static boolean touchesOcean(int north, int east, int south, int west) {
+
+    private boolean touchesOcean(int north, int east, int south, int west) {
         return isOcean(north)
                 || isOcean(east)
                 || isOcean(south)
                 || isOcean(west);
     }
 
-    // Copied from LayerUtil.
-    private static boolean isOcean(int biome) {
-        return biome == 44
-                || biome == 45
-                || biome == 0
-                || biome == 46
-                || biome == 10
-                || biome == 47
-                || biome == 48
-                || biome == 24
-                || biome == 49
-                || biome == 50;
+
+    private boolean isOcean(int biomeId) {
+
+        Biome biome = BiomeResolver.getBiomeById(registry, biomeId);
+
+        if (biome == null) {
+            return false;
+        }
+
+        ResourceLocation id = BiomeResolver.getLocation(registry, biome);
+
+        return id != null &&
+                id.getNamespace().equals("minecraft") &&
+                (
+                        id.getPath().contains("ocean")
+                );
     }
 
 
-    private static int getBeach(int biome) {
+    private int getBeach(int biomeId) {
 
-        ResourceLocation id = registry.getKey(currentBiome);
+        Biome currentBiome = BiomeResolver.getBiomeById(registry, biomeId);
+
+        if (currentBiome == null) {
+            return biomeId;
+        }
+
+
+        ResourceLocation id = BiomeResolver.getLocation(registry, currentBiome);
+
+        if (id == null) {
+            return biomeId;
+        }
+
 
         BiomeDefinition definition = ModBiomeRegistry.get(id);
 
-        if (definition != null) {
-            ResourceLocation beach = definition.getVariant(BiomeVariant.BEACH);
-
-            if (beach != null) {
-                return biomeIdFromResourceLocation(beach);
-            }
+        if (definition == null) {
+            return biomeId;
         }
 
-        return biome;
+
+        ResourceLocation beach = definition.getVariant(BiomeVariant.BEACH);
+
+        if (beach == null) {
+            return biomeId;
+        }
+
+
+        Biome beachBiome = BiomeResolver.getBiome(registry, beach);
+
+        if (beachBiome == null) {
+            return biomeId;
+        }
+
+
+        return BiomeResolver.getRawId(registry, beachBiome);
     }
 }
