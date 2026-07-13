@@ -11,8 +11,8 @@ public class BiomeDefinitions {
         ModBiomeRegistry.register(
                 BiomeDefinition.builder(ModBiomes.JUNGLE)
                         .family(BiomeFamily.TROPICAL_RAINFOREST)
-                        .variant(BiomeVariant.BEACH, ModBiomes.TROPICAL_BEACH).
-                        variant(BiomeVariant.HILLS, ModBiomes.JUNGLE_HILLS)
+                        .variant(BiomeVariant.BEACH, ModBiomes.TROPICAL_BEACH)
+                        .variant(BiomeVariant.HILLS, ModBiomes.JUNGLE_HILLS)
                         .build()
         );
 
