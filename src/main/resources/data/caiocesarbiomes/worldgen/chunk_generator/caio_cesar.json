@@ -1,0 +1,15 @@
+{
+  "type": "caiocesarbiomes:caio_cesar",
+  "biome_source": {
+    "type": "caiocesarbiomes:caio_cesar",
+    "biomes": "minecraft:overworld"
+  },
+  "settings": {
+    "structures": {},
+    "stronghold": {
+      "distance": 32,
+      "spread": 3,
+      "count": 128
+    }
+  }
+}

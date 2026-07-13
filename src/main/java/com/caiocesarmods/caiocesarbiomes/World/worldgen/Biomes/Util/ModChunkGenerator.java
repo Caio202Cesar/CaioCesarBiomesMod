@@ -58,7 +58,7 @@ public class ModChunkGenerator extends ChunkGenerator {
 
     @Override
     public int getHeight(int x, int z, Heightmap.Type heightmapType) {
-        return 0;
+        return 64;
     }
 
     @Override
