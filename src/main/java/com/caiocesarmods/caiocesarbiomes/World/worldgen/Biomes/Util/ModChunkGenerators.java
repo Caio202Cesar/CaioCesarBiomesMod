@@ -10,23 +10,23 @@ import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.settings.DimensionStructuresSettings;
 
 public class ModChunkGenerators {
+
     public static final Codec<ModChunkGenerator> CAIO_CESAR =
             RecordCodecBuilder.create(instance ->
                     instance.group(
-                            BiomeProvider.CODEC.fieldOf("biome_source")
-                                    .forGetter(generator -> generator.biomeProvider),
+                            BiomeProvider.CODEC
+                                    .fieldOf("biome_source")
+                                    .forGetter(generator -> generator.getBiomeProvider()),
 
-                            DimensionStructuresSettings.field_236193_a_
+                            DimensionStructuresSettings.field_236190_a_
                                     .forGetter(generator -> generator.func_235957_b_())
+
                     ).apply(
                             instance,
                             ModChunkGenerator::new
                     )
             );
 
-    protected Codec<? extends ChunkGenerator> func_230347_a_() {
-        return ModChunkGenerators.CAIO_CESAR;
-    }
 
     public static void register() {
 

@@ -25,12 +25,12 @@ public class ModChunkGenerator extends ChunkGenerator {
 
     @Override
     protected Codec<? extends ChunkGenerator> func_230347_a_() {
-        return null;
+        return ModChunkGenerators.CAIO_CESAR;
     }
 
     @Override
     public ChunkGenerator func_230349_a_(long p_230349_1_) {
-        return null;
+        return this;
     }
 
     @Override
