@@ -64,7 +64,6 @@ public class CaioCesarBiomesMod
         ModWood.register(eventBus);
         MiscBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
-        ModChunkGenerators.register();
 
         ModPotions.register(eventBus);
 
@@ -137,6 +136,7 @@ public class CaioCesarBiomesMod
 
         ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(eventBus);
+        ModChunkGenerators.register();
 
     }
 

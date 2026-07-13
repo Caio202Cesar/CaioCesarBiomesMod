@@ -26,9 +26,9 @@ public class ModBiomeRegistry {
         return DEFINITIONS.containsKey(biome);
     }
 
-    public static Set<Biome> getBiomes(Registry<Biome> registry) {
+    public static List<Biome> getBiomes(Registry<Biome> registry) {
 
-        Set<Biome> biomes = new HashSet<>();
+        List<Biome> biomes = new ArrayList<>();
 
         for (BiomeDefinition definition : DEFINITIONS.values()) {
 

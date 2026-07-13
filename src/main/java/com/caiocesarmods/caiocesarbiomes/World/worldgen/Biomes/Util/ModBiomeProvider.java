@@ -16,25 +16,13 @@ public class ModBiomeProvider extends BiomeProvider {
 
     private final Registry<Biome> registry;
 
-
     public ModBiomeProvider(Registry<Biome> registry) {
 
-        super(new ArrayList<>(ModBiomeRegistry.getBiomes(registry)));
+        super(
+                ModBiomeRegistry.getBiomes(registry)
+        );
 
         this.registry = registry;
-    }
-
-
-    @Override
-    protected Codec<? extends BiomeProvider> getBiomeProviderCodec() {
-        return null;
-    }
-
-
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public BiomeProvider getBiomeProvider(long seed) {
-        return this;
     }
 
 
@@ -46,6 +34,24 @@ public class ModBiomeProvider extends BiomeProvider {
                 "subtropical_laurel_forest"
         );
 
-        return BiomeResolver.getBiome(registry, id);
+        return BiomeResolver.getBiome(
+                registry,
+                id
+        );
+    }
+
+    public Registry<Biome> getRegistry() {
+        return this.registry;
+    }
+
+    @Override
+    protected Codec<? extends BiomeProvider> getBiomeProviderCodec() {
+        return null;
+    }
+
+
+    @Override
+    public BiomeProvider getBiomeProvider(long seed) {
+        return this;
     }
 }
