@@ -14,22 +14,15 @@ public class BiomeDefinitions {
         ModBiomeRegistry.register(
                 BiomeDefinition.builder(Biomes.JUNGLE.getLocation())
                         .family(BiomeFamily.TROPICAL_RAINFOREST)
-                        .variant(BiomeVariant.BEACH,
-                                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach"))
-                        .variant(BiomeVariant.HIGHLANDS,
-                                Biomes.JUNGLE_HILLS.getLocation())
+                        .variant(BiomeVariant.BEACH, new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach"))
+                        .variant(BiomeVariant.HIGHLANDS, Biomes.JUNGLE_HILLS.getLocation())
                         .build()
         );
 
         ModBiomeRegistry.register(
-                BiomeDefinition.builder(new ResourceLocation(
-                                CaioCesarBiomesMod.MOD_ID,
-                                "mediterranean_scrubland"))
+                BiomeDefinition.builder(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland"))
                         .family(BiomeFamily.MEDITERRANEAN)
-                        .variant(BiomeVariant.BEACH,
-                                new ResourceLocation(
-                                        CaioCesarBiomesMod.MOD_ID,
-                                        "hot_mediterranean_beach"))
+                        .variant(BiomeVariant.BEACH, new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach"))
                         .build()
         );
     }

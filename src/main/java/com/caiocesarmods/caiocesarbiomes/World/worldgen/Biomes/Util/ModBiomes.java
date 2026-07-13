@@ -9,4 +9,7 @@ public class ModBiomes {
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
 
+    public static final ResourceLocation TROPICAL_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
+
 }
