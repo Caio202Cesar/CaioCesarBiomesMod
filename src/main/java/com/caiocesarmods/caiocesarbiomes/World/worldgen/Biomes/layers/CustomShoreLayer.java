@@ -15,7 +15,6 @@ public enum CustomShoreLayer implements ICastleTransformer {
 
     private Registry<Biome> registry;
 
-
     public void setup(Registry<Biome> registry) {
         this.registry = registry;
     }

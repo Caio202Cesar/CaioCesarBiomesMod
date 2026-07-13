@@ -1,12 +1,16 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import net.minecraft.data.BiomeProvider;
-import net.minecraft.data.DataGenerator;
+import com.mojang.serialization.Codec;
+import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.ArrayList;
 
 public class ModBiomeProvider extends BiomeProvider {
 
@@ -15,13 +19,27 @@ public class ModBiomeProvider extends BiomeProvider {
 
     public ModBiomeProvider(Registry<Biome> registry) {
 
-        super((DataGenerator) ModBiomeRegistry.getBiomes(registry));
+        super(new ArrayList<>(ModBiomeRegistry.getBiomes(registry)));
 
         this.registry = registry;
     }
 
 
-    public Biome getBiome(BlockPos pos) {
+    @Override
+    protected Codec<? extends BiomeProvider> getBiomeProviderCodec() {
+        return null;
+    }
+
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public BiomeProvider getBiomeProvider(long seed) {
+        return this;
+    }
+
+
+    @Override
+    public Biome getNoiseBiome(int x, int y, int z) {
 
         ResourceLocation id = new ResourceLocation(
                 CaioCesarBiomesMod.MOD_ID,

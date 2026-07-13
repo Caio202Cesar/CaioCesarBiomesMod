@@ -6,19 +6,20 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.world.chunk.IChunk;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.gen.DimensionSettings;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.WorldGenRegion;
 import net.minecraft.world.gen.feature.structure.StructureManager;
+import net.minecraft.world.gen.settings.DimensionStructuresSettings;
 
 public class ModChunkGenerator extends ChunkGenerator {
+
     public ModChunkGenerator(
             BiomeProvider biomeProvider,
-            DimensionSettings settings
+            DimensionStructuresSettings settings
     ) {
         super(
                 biomeProvider,
-                settings.getStructures()
+                settings
         );
     }
 
