@@ -1,12 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.AncientMetrosiderosTrunkPlacer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.BaobabTrunkPlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.*;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.DesertRoseTrunkPlacer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -264,6 +261,13 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.COAST_COTTONWOOD_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_COAST_COTTONWOOD_TREE = register("coast_cottonwood_big_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COAST_COTTONWOOD_LOG),
+                    new SimpleBlockStateProvider(States.COAST_COTTONWOOD_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new CoastalLeaningTrunkPlacer(10, 3,  2,  4,  7),
+                    new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Fig Tree

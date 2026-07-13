@@ -199,7 +199,7 @@ public class CoastCottonwoodSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            return null;
+            return TreeFeatures.BIG_COAST_COTTONWOOD_TREE;
         }
     }
 }

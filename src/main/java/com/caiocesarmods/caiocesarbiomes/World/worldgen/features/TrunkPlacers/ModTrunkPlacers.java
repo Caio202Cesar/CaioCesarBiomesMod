@@ -37,6 +37,13 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(AncientMetrosiderosTrunkPlacer.CODEC)
             );
 
+    public static final TrunkPlacerType<CoastalLeaningTrunkPlacer> COASTAL_LEANING =
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:coastal_leaning_trunk",
+                    new TrunkPlacerType<>(CoastalLeaningTrunkPlacer.CODEC)
+            );
+
     static {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
     }
