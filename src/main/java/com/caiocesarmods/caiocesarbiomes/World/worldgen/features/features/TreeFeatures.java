@@ -1901,19 +1901,19 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_CAMPHOR_TREE = register("big_camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
-                    new AncientFigFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(6, 4, 2),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_CAMPHOR_TREE = register("ancient_camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT045, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
                     .setIgnoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CINNAMON_TREE = register("cinnamon_tree",

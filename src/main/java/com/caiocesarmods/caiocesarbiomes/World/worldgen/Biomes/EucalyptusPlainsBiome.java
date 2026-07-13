@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
