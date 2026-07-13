@@ -16,10 +16,10 @@ public class ModChunkGenerators {
                     instance.group(
                             BiomeProvider.CODEC
                                     .fieldOf("biome_source")
-                                    .forGetter(generator -> generator.getBiomeProvider()),
+                                    .forGetter(ChunkGenerator::getBiomeProvider),
 
-                            DimensionStructuresSettings.field_236190_a_
-                                    .forGetter(ModChunkGenerator.func_235957_b_())
+                            DimensionStructuresSettings.field_236190_a_.fieldOf("settings")
+                                    .forGetter(ModChunkGenerator::getStructureSettings)
 
                     ).apply(
                             instance,

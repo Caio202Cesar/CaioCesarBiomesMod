@@ -13,6 +13,8 @@ import net.minecraft.world.gen.settings.DimensionStructuresSettings;
 
 public class ModChunkGenerator extends ChunkGenerator {
 
+    private final DimensionStructuresSettings structureSettings;
+
     public ModChunkGenerator(
             BiomeProvider biomeProvider,
             DimensionStructuresSettings settings
@@ -21,7 +23,15 @@ public class ModChunkGenerator extends ChunkGenerator {
                 biomeProvider,
                 settings
         );
+
+        this.structureSettings = settings;
     }
+
+
+    public DimensionStructuresSettings getStructureSettings() {
+        return this.structureSettings;
+    }
+
 
     @Override
     protected Codec<? extends ChunkGenerator> func_230347_a_() {
@@ -53,7 +63,4 @@ public class ModChunkGenerator extends ChunkGenerator {
         return null;
     }
 
-    public DimensionStructuresSettings getStructureSettings() {
-        return func_235957_b_();
-    }
 }
