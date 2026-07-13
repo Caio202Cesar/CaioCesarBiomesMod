@@ -1,15 +1,13 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.HotMediterraneanBeachBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MediterraneanScrublandBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeDefinition;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeResolver;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeVariant;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRegistry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraft.world.gen.layer.traits.ICastleTransformer;
 
 public enum CustomShoreLayer implements ICastleTransformer {

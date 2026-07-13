@@ -1,9 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers.BiomeDefinition;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers.BiomeFamily;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers.BiomeVariant;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biomes;
 

@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers.BiomeDefinition;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;

@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import net.minecraft.util.ResourceLocation;
 
