@@ -19,7 +19,7 @@ public class ModChunkGenerators {
                                     .forGetter(generator -> generator.getBiomeProvider()),
 
                             DimensionStructuresSettings.field_236190_a_
-                                    .forGetter(generator -> generator.func_235957_b_())
+                                    .forGetter(ModChunkGenerator.func_235957_b_())
 
                     ).apply(
                             instance,

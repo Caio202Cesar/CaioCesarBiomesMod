@@ -52,4 +52,8 @@ public class ModChunkGenerator extends ChunkGenerator {
     public IBlockReader func_230348_a_(int p_230348_1_, int p_230348_2_) {
         return null;
     }
+
+    public DimensionStructuresSettings getStructureSettings() {
+        return func_235957_b_();
+    }
 }
