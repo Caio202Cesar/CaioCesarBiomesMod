@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -184,7 +185,7 @@ public class CoastCottonwoodSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CoastCottonwoodTree extends Tree {
+    private static class CoastCottonwoodTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
@@ -193,6 +194,12 @@ public class CoastCottonwoodSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.COAST_COTTONWOOD_TREE;
             }
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return null;
         }
     }
 }
