@@ -1063,11 +1063,11 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_SYCAMORE_FIG = register("ancient_sycamore_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
-                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBRELLA_ANCIENT_SYCAMORE_FIG = register("umbrella_ancient_sycamore_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
@@ -1902,7 +1902,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
+                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
@@ -1910,7 +1910,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 5),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
