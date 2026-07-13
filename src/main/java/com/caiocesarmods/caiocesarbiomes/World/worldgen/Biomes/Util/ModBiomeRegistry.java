@@ -1,10 +1,11 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.biome.Biome;
 
 import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ModBiomeRegistry {
 
@@ -23,5 +24,19 @@ public class ModBiomeRegistry {
 
     public static boolean hasDefinition(ResourceLocation biome) {
         return DEFINITIONS.containsKey(biome);
+    }
+
+    public static Set<Biome> getBiomes(Registry<Biome> registry) {
+
+        Set<Biome> biomes = new HashSet<>();
+
+        for (BiomeDefinition definition : DEFINITIONS.values()) {
+
+            registry.getOptional(definition.getBiome())
+                    .ifPresent(biomes::add);
+
+        }
+
+        return biomes;
     }
 }

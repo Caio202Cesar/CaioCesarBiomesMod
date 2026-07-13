@@ -9,10 +9,10 @@ public class BiomeDefinitions {
     public static void register() {
 
         ModBiomeRegistry.register(
-                BiomeDefinition.builder(Biomes.JUNGLE.getLocation())
+                BiomeDefinition.builder(ModBiomes.JUNGLE)
                         .family(BiomeFamily.TROPICAL_RAINFOREST)
-                        .variant(BiomeVariant.BEACH, new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach"))
-                        .variant(BiomeVariant.HIGHLANDS, Biomes.JUNGLE_HILLS.getLocation())
+                        .variant(BiomeVariant.BEACH, ModBiomes.TROPICAL_BEACH).
+                        variant(BiomeVariant.HILLS, ModBiomes.JUNGLE_HILLS)
                         .build()
         );
 

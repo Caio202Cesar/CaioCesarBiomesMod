@@ -128,6 +128,8 @@ public class CaioCesarBiomesMod
         MediterraneanOakSparseWoodlandBiome.register(eventBus);
         TropicalIslandBiome.register(eventBus);
 
+        BiomeDefinitions.register();
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -172,9 +174,7 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.CORK_OAK_WOOD.get(), TreeBlocks.STRIPPED_CORK_OAK_WOOD.get())
                     .build();
 
-
             ModBiomeGeneration.generateBiomes();
-            BiomeDefinitions.register();
 
         });
     }
