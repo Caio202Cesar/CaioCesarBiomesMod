@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.layers;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.HotMediterraneanBeachBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MediterraneanScrublandBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRegistry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.INoiseRandom;
@@ -56,7 +57,7 @@ public enum CustomShoreLayer implements ICastleTransformer {
 
     private static int getBeach(int biome) {
 
-        ResourceLocation id = WorldGenRegistries..getKey(currentBiome);
+        ResourceLocation id = registry.getKey(currentBiome);
 
         BiomeDefinition definition = ModBiomeRegistry.get(id);
 
@@ -67,5 +68,7 @@ public enum CustomShoreLayer implements ICastleTransformer {
                 return biomeIdFromResourceLocation(beach);
             }
         }
+
+        return biome;
     }
 }
