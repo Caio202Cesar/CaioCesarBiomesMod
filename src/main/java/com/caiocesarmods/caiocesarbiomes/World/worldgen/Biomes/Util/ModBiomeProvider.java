@@ -24,6 +24,10 @@ public class ModBiomeProvider extends BiomeProvider {
     @Override
     public Biome getNoiseBiome(int x, int y, int z) {
 
+        System.out.println(
+                "Biome requested at: " + x + " " + z
+        );
+
         ResourceLocation id = new ResourceLocation(
                 CaioCesarBiomesMod.MOD_ID,
                 "subtropical_laurel_forest"

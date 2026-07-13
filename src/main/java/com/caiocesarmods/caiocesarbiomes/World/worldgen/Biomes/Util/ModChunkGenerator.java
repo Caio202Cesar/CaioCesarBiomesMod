@@ -40,7 +40,10 @@ public class ModChunkGenerator extends ChunkGenerator {
 
     @Override
     public ChunkGenerator func_230349_a_(long p_230349_1_) {
-        return this;
+        return new ModChunkGenerator(
+                this.biomeProvider.getBiomeProvider(p_230349_1_),
+                this.structureSettings
+        );
     }
 
     @Override
