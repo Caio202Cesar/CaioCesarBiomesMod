@@ -266,7 +266,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COAST_COTTONWOOD_LOG),
                     new SimpleBlockStateProvider(States.COAST_COTTONWOOD_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new CoastalLeaningTrunkPlacer(10, 3,  2,  4,  7),
+                    new CoastalLeaningTrunkPlacer(0, 3,  2,  4,  5),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
