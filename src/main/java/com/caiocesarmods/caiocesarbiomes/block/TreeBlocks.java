@@ -2476,8 +2476,8 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",
-            CamphorSapling::new);*/
+    public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",
+            CamphorSapling::new);
 
     public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
             ModLogs::new);
