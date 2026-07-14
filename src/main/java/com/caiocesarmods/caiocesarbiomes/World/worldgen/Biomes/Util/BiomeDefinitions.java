@@ -12,15 +12,11 @@ public class BiomeDefinitions {
                 BiomeDefinition.builder(ModBiomes.JUNGLE)
                         .family(BiomeFamily.TROPICAL_RAINFOREST)
                         .variant(BiomeVariant.BEACH, ModBiomes.TROPICAL_BEACH)
-                        .variant(BiomeVariant.HILLS, ModBiomes.JUNGLE_HILLS)
                         .build()
         );
 
-        ModBiomeRegistry.register(
-                BiomeDefinition.builder(new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland"))
-                        .family(BiomeFamily.MEDITERRANEAN)
-                        .variant(BiomeVariant.BEACH, new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach"))
-                        .build()
-        );
+        BiomeDefinition.builder(ModBiomes.MEDITERRANEAN_SCRUBLAND)
+                .variant(BiomeVariant.BEACH, ModBiomes.MEDITERRANEAN_BEACH)
+                .build();
     }
 }

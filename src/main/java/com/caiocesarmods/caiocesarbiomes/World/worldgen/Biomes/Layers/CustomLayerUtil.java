@@ -1,8 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
 
-import it.unimi.dsi.fastutil.ints.Int2IntMap;
-import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
-import net.minecraft.util.Util;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.LazyAreaLayerContext;
 import net.minecraft.world.gen.area.IArea;
@@ -14,77 +14,6 @@ import net.minecraft.world.gen.layer.traits.IAreaTransformer1;
 import java.util.function.LongFunction;
 
 public class CustomLayerUtil {
-    private static final Int2IntMap field_242937_a = Util.make(new Int2IntOpenHashMap(), (p_242938_0_) -> {
-        func_242939_a(p_242938_0_, LayerUtil.Type.BEACH, 16);
-        func_242939_a(p_242938_0_, LayerUtil.Type.BEACH, 26);
-        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 2);
-        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 17);
-        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 130);
-        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 131);
-        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 162);
-        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 20);
-        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 3);
-        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 34);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 27);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 28);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 29);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 157);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 132);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 4);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 155);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 156);
-        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 18);
-        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 140);
-        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 13);
-        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 12);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 168);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 169);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 21);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 23);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 22);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 149);
-        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 151);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 37);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 165);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 167);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 166);
-        func_242939_a(p_242938_0_, LayerUtil.Type.BADLANDS_PLATEAU, 39);
-        func_242939_a(p_242938_0_, LayerUtil.Type.BADLANDS_PLATEAU, 38);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MUSHROOM, 14);
-        func_242939_a(p_242938_0_, LayerUtil.Type.MUSHROOM, 15);
-        func_242939_a(p_242938_0_, LayerUtil.Type.NONE, 25);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 46);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 49);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 50);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 48);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 24);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 47);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 10);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 45);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 0);
-        func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 44);
-        func_242939_a(p_242938_0_, LayerUtil.Type.PLAINS, 1);
-        func_242939_a(p_242938_0_, LayerUtil.Type.PLAINS, 129);
-        func_242939_a(p_242938_0_, LayerUtil.Type.RIVER, 11);
-        func_242939_a(p_242938_0_, LayerUtil.Type.RIVER, 7);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 35);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 36);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 163);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 164);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SWAMP, 6);
-        func_242939_a(p_242938_0_, LayerUtil.Type.SWAMP, 134);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 160);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 161);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 32);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 33);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 30);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 31);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 158);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 5);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 19);
-        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 133);
-    });
-
     public static <T extends IArea, C extends IExtendedNoiseRandom<T>> IAreaFactory<T> repeat(long seed, IAreaTransformer1 parent, IAreaFactory<T> p_202829_3_, int count, LongFunction<C> contextFactory) {
         IAreaFactory<T> iareafactory = p_202829_3_;
 
@@ -155,42 +84,35 @@ public class CustomLayerUtil {
         return new Layer(iareafactory);
     }
 
-    public static boolean areBiomesSimilar(int p_202826_0_, int p_202826_1_) {
-        if (p_202826_0_ == p_202826_1_) {
+    public static boolean areBiomesSimilar(int firstId, int secondId) {
+
+        if (firstId == secondId)
             return true;
-        } else {
-            return field_242937_a.get(p_202826_0_) == field_242937_a.get(p_202826_1_);
-        }
+
+        Biome first = WorldGenRegistries.BIOME.getByValue(firstId);
+        Biome second = WorldGenRegistries.BIOME.getByValue(secondId);
+
+        if (first == null || second == null)
+            return false;
+
+        return first.getCategory() == second.getCategory();
     }
 
-    private static void func_242939_a(Int2IntOpenHashMap p_242939_0_, CustomLayerUtil.Type p_242939_1_, int p_242939_2_) {
-        p_242939_0_.put(p_242939_2_, p_242939_1_.ordinal());
+    protected static boolean isOcean(int biomeId) {
+        Biome biome = WorldGenRegistries.BIOME.getByValue(biomeId);
+
+        return biome != null
+                && biome.getCategory() == Biome.Category.OCEAN;
     }
 
-    protected static boolean isOcean(int biomeIn) {
-        return biomeIn == 44 || biomeIn == 45 || biomeIn == 0 || biomeIn == 46 || biomeIn == 10 || biomeIn == 47 || biomeIn == 48 || biomeIn == 24 || biomeIn == 49 || biomeIn == 50;
-    }
+    protected static boolean isShallowOcean(int biomeId) {
 
-    protected static boolean isShallowOcean(int biomeIn) {
-        return biomeIn == 44 || biomeIn == 45 || biomeIn == 0 || biomeIn == 46 || biomeIn == 10;
-    }
+        Biome biome = WorldGenRegistries.BIOME.getByValue(biomeId);
 
-    static enum Type {
-        NONE,
-        TAIGA,
-        EXTREME_HILLS,
-        JUNGLE,
-        MESA,
-        BADLANDS_PLATEAU,
-        PLAINS,
-        SAVANNA,
-        ICY,
-        BEACH,
-        FOREST,
-        OCEAN,
-        DESERT,
-        RIVER,
-        SWAMP,
-        MUSHROOM;
+        return biome == WorldGenRegistries.BIOME.getOrThrow(Biomes.OCEAN)
+                || biome == WorldGenRegistries.BIOME.getOrThrow(Biomes.WARM_OCEAN)
+                || biome == WorldGenRegistries.BIOME.getOrThrow(Biomes.LUKEWARM_OCEAN)
+                || biome == WorldGenRegistries.BIOME.getOrThrow(Biomes.COLD_OCEAN)
+                || biome == WorldGenRegistries.BIOME.getOrThrow(Biomes.FROZEN_OCEAN);
     }
 }
