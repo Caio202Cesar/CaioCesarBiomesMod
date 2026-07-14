@@ -1,56 +1,138 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.Biome;
 
 import javax.annotation.Nullable;
-import java.util.Optional;
 
 public final class BiomeResolver {
 
     private BiomeResolver() {
     }
 
-
+    /**
+     * Returns the family of a biome.
+     */
     @Nullable
-    public static Biome getBiome(Registry<Biome> registry, ResourceLocation location) {
-        Optional<Biome> biome = registry.getOptional(location);
-        return biome.orElse(null);
+    public static BiomeFamily getFamily(ResourceLocation biome) {
+        BiomeDefinition definition = ModBiomeRegistry.get(biome);
+        return definition != null ? definition.getFamily() : null;
     }
 
-
-    public static RegistryKey<Biome> getKey(ResourceLocation location) {
-        return RegistryKey.getOrCreateKey(Registry.BIOME_KEY, location);
+    /**
+     * Returns a biome variant (HILLS, PLATEAU, MOUNTAINS, etc.).
+     */
+    @Nullable
+    public static ResourceLocation getVariant(ResourceLocation biome, BiomeVariant variant) {
+        return ModBiomeRegistry.getVariant(biome, variant);
     }
 
+    /**
+     * Returns the beach biome for the biome's family.
+     */
     @Nullable
-    public static Biome getBiomeById(Registry<Biome> registry, int id) {
+    public static ResourceLocation getBeach(ResourceLocation biome) {
 
-        for (Biome biome : registry) {
+        BiomeFamily family = getFamily(biome);
 
-            if (registry.getId(biome) == id) {
-                return biome;
-            }
+        if (family == null) {
+            return null;
         }
 
-        return null;
+        return BiomeFamilyRegistry.getBeach(family);
     }
 
+    /**
+     * Returns the river biome for the biome's family.
+     */
     @Nullable
-    public static Biome getBiome(Registry<Biome> registry, RegistryKey<Biome> key) {
-        return registry.getValueForKey(key);
+    public static ResourceLocation getRiver(ResourceLocation biome) {
+
+        BiomeFamily family = getFamily(biome);
+
+        if (family == null) {
+            return null;
+        }
+
+        return BiomeFamilyRegistry.getRiver(family);
     }
 
-
+    /**
+     * Returns the hills variant.
+     */
     @Nullable
-    public static ResourceLocation getLocation(Registry<Biome> registry, Biome biome) {
-        return registry.getKey(biome);
+    public static ResourceLocation getHills(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.HILLS);
     }
 
+    /**
+     * Returns the mountains variant.
+     */
+    @Nullable
+    public static ResourceLocation getMountains(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.MOUNTAINS);
+    }
 
-    public static int getRawId(Registry<Biome> registry, Biome biome) {
-        return registry.getId(biome);
+    /**
+     * Returns the plateau variant.
+     */
+    @Nullable
+    public static ResourceLocation getPlateau(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.PLATEAU);
+    }
+
+    /**
+     * Returns the highlands variant.
+     */
+    @Nullable
+    public static ResourceLocation getHighlands(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.HIGHLANDS);
+    }
+
+    /**
+     * Returns the wooded highlands variant.
+     */
+    @Nullable
+    public static ResourceLocation getWoodedHighlands(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.WOODED_HIGHLANDS);
+    }
+
+    /**
+     * Returns the foothills variant.
+     */
+    @Nullable
+    public static ResourceLocation getFoothills(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.FOOTHILLS);
+    }
+
+    /**
+     * Returns the cliffs variant.
+     */
+    @Nullable
+    public static ResourceLocation getCliffs(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.CLIFFS);
+    }
+
+    /**
+     * Returns the dense variant.
+     */
+    @Nullable
+    public static ResourceLocation getDense(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.DENSE);
+    }
+
+    /**
+     * Returns the sparse variant.
+     */
+    @Nullable
+    public static ResourceLocation getSparse(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.SPARSE);
+    }
+
+    /**
+     * Returns the volcanic variant.
+     */
+    @Nullable
+    public static ResourceLocation getVolcanic(ResourceLocation biome) {
+        return getVariant(biome, BiomeVariant.VOLCANIC);
     }
 }

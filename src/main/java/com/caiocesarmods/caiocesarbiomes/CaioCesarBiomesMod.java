@@ -4,8 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeDefinitions;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeProviders;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModChunkGenerators;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeFamilyDefinitions;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
@@ -131,14 +130,13 @@ public class CaioCesarBiomesMod
         TropicalIslandBiome.register(eventBus);
 
         BiomeDefinitions.register();
+        BiomeFamilyDefinitions.register();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
         ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(eventBus);
-        ModChunkGenerators.register();
-        ModBiomeProviders.register();
 
     }
 
