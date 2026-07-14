@@ -2,12 +2,21 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
 
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraft.world.gen.layer.traits.ICastleTransformer;
+import net.minecraft.util.registry.Registry;
+
 
 public enum CustomShoreLayer  implements ICastleTransformer {
     INSTANCE;
+
+    private static final int BEACH = WorldGenRegistries.BIOME.getId(WorldGenRegistries.BIOME.getOrThrow(Biomes.BEACH));
+    private static final int STONE_SHORE = Registry.BIOME.getId(Biomes.STONE_SHORE);
+    private static final int SNOWY_BEACH = Registry.BIOME.getId(Biomes.SNOWY_BEACH);
+    private static final int DESERT = Registry.BIOME.getId(Biomes.DESERT);
+    private static final int MUSHROOM_FIELD_SHORE = Registry.BIOME.getId(Biomes.MUSHROOM_FIELD_SHORE);
 
     private static final IntSet field_242942_b = new IntOpenHashSet(new int[]{26, 11, 12, 13, 140, 30, 31, 158, 10});
     private static final IntSet field_242943_c = new IntOpenHashSet(new int[]{168, 169, 21, 22, 23, 149, 151});

@@ -15,6 +15,44 @@ import java.util.function.LongFunction;
 
 public class CustomLayerUtil {
     private static final Int2IntMap field_242937_a = Util.make(new Int2IntOpenHashMap(), (p_242938_0_) -> {
+        func_242939_a(p_242938_0_, LayerUtil.Type.BEACH, 16);
+        func_242939_a(p_242938_0_, LayerUtil.Type.BEACH, 26);
+        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 2);
+        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 17);
+        func_242939_a(p_242938_0_, LayerUtil.Type.DESERT, 130);
+        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 131);
+        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 162);
+        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 20);
+        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 3);
+        func_242939_a(p_242938_0_, LayerUtil.Type.EXTREME_HILLS, 34);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 27);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 28);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 29);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 157);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 132);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 4);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 155);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 156);
+        func_242939_a(p_242938_0_, LayerUtil.Type.FOREST, 18);
+        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 140);
+        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 13);
+        func_242939_a(p_242938_0_, LayerUtil.Type.ICY, 12);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 168);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 169);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 21);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 23);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 22);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 149);
+        func_242939_a(p_242938_0_, LayerUtil.Type.JUNGLE, 151);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 37);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 165);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 167);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MESA, 166);
+        func_242939_a(p_242938_0_, LayerUtil.Type.BADLANDS_PLATEAU, 39);
+        func_242939_a(p_242938_0_, LayerUtil.Type.BADLANDS_PLATEAU, 38);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MUSHROOM, 14);
+        func_242939_a(p_242938_0_, LayerUtil.Type.MUSHROOM, 15);
+        func_242939_a(p_242938_0_, LayerUtil.Type.NONE, 25);
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 46);
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 49);
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 50);
@@ -25,6 +63,26 @@ public class CustomLayerUtil {
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 45);
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 0);
         func_242939_a(p_242938_0_, CustomLayerUtil.Type.OCEAN, 44);
+        func_242939_a(p_242938_0_, LayerUtil.Type.PLAINS, 1);
+        func_242939_a(p_242938_0_, LayerUtil.Type.PLAINS, 129);
+        func_242939_a(p_242938_0_, LayerUtil.Type.RIVER, 11);
+        func_242939_a(p_242938_0_, LayerUtil.Type.RIVER, 7);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 35);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 36);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 163);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SAVANNA, 164);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SWAMP, 6);
+        func_242939_a(p_242938_0_, LayerUtil.Type.SWAMP, 134);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 160);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 161);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 32);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 33);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 30);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 31);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 158);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 5);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 19);
+        func_242939_a(p_242938_0_, LayerUtil.Type.TAIGA, 133);
     });
 
     public static <T extends IArea, C extends IExtendedNoiseRandom<T>> IAreaFactory<T> repeat(long seed, IAreaTransformer1 parent, IAreaFactory<T> p_202829_3_, int count, LongFunction<C> contextFactory) {
@@ -80,7 +138,7 @@ public class CustomLayerUtil {
             }
 
             if (i == 1 || p_237216_1_ == 1) {
-                lvt_7_1_ = ShoreLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_7_1_);
+                lvt_7_1_ = CustomShoreLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_7_1_);
             }
         }
 
