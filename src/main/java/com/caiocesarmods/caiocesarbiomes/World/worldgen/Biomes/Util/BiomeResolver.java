@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.Biome;
 
 import javax.annotation.Nullable;
 
@@ -16,6 +18,21 @@ public final class BiomeResolver {
     public static BiomeFamily getFamily(ResourceLocation biome) {
         BiomeDefinition definition = ModBiomeRegistry.get(biome);
         return definition != null ? definition.getFamily() : null;
+    }
+
+    @Nullable
+    public static Biome getBeachBiome(Biome biome) {
+        ResourceLocation id = WorldGenRegistries.BIOME.getKey(biome);
+
+        if (id == null)
+            return null;
+
+        ResourceLocation beach = getBeach(id);
+
+        if (beach == null)
+            return null;
+
+        return WorldGenRegistries.BIOME.getOptional(beach).orElse(null);
     }
 
     /**
