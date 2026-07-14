@@ -135,6 +135,10 @@ public class BiomeDefinition {
         return hasVariant(BiomeVariant.FOOTHILLS);
     }
 
+    public void setBiomeObject(Biome biome) {
+        this.biomeObject = biome;
+    }
+
     /**
      * Returns the cliffs variant.
      */

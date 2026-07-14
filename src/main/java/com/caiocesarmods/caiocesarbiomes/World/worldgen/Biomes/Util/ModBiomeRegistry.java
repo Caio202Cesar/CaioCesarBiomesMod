@@ -1,7 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 
 import javax.annotation.Nullable;
@@ -46,6 +49,23 @@ public class ModBiomeRegistry {
         BiomeFamily biomeFamily = getFamily(biome);
 
         return biomeFamily == family;
+    }
+
+    private static final Int2ObjectMap<BiomeDefinition> DEFINITIONS_BY_ID =
+            new Int2ObjectOpenHashMap<>();
+
+    public static BiomeDefinition byId(int id) {
+        return DEFINITIONS_BY_ID.get(id);
+    }
+
+    public static void register(BiomeDefinition definition) {
+
+        Biome biome = WorldGenRegistries.BIOME.getOrDefault(definition.getBiome());
+
+        definition.setBiomeObject(biome);
+
+        DEFINITIONS.put(definition.getBiome(), definition);
+        DEFINITIONS_BY_ID.put(WorldGenRegistries.BIOME.getId(biome), definition);
     }
 
     /**
