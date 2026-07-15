@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeResolver;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRegistry;
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
 import net.minecraft.util.ResourceLocation;
@@ -58,7 +59,7 @@ public enum CustomShoreLayer implements ICastleTransformer {
 
         if (biomeId != null) {
 
-            ResourceLocation beachId = BiomeResolver.getBeach(biomeId);
+            ResourceLocation beachId = ModBiomeRegistry.getBeach(biomeId);
 
             if (beachId != null) {
 

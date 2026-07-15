@@ -1,26 +1,24 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeFamily;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeVariant;
-import net.minecraft.util.ResourceLocation;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeDefinition;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRegistry;
+import net.minecraft.world.gen.INoiseRandom;
+import net.minecraft.world.gen.layer.traits.IC0Transformer;
 
-import java.util.EnumMap;
+public enum CustomBiomeLayer implements IC0Transformer {
+    INSTANCE;
 
-public class CustomBiomeLayer {
+    @Override
+    public int apply(INoiseRandom context, int value) {
 
-    private final ResourceLocation biome;
-    private final BiomeFamily family;
-    private final EnumMap<BiomeVariant, ResourceLocation> variants;
+        BiomeDefinition definition = ModBiomeRegistry.byId(value);
 
-    // Cache the registry ID
-    private int biomeId = -1;
+        if (definition == null) {
+            return value;
+        }
 
-    public int getBiomeId() {
-        return biomeId;
+        // choose variant...
+
+        return value;
     }
-
-    public void setBiomeId(int biomeId) {
-        this.biomeId = biomeId;
-    }
-
 }

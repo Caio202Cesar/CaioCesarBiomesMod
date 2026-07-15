@@ -5,7 +5,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biomes;
 
 public class BiomeDefinitions {
-
     public static void register() {
 
         ModBiomeRegistry.register(

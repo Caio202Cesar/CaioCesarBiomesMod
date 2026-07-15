@@ -13,7 +13,7 @@ import java.util.*;
 public class ModBiomeRegistry {
 
     private static final Map<ResourceLocation, BiomeDefinition> DEFINITIONS = new HashMap<>();
-
+    private static final Int2ObjectMap<BiomeDefinition> DEFINITIONS_BY_ID = new Int2ObjectOpenHashMap<>();
     /**
      * Prevents this utility class from being instantiated.
      */
@@ -23,17 +23,24 @@ public class ModBiomeRegistry {
     /**
      * Registers one or more biome definitions.
      */
-    public static void register(BiomeDefinition... definitions) {
-        for (BiomeDefinition definition : definitions) {
+    public static void register(BiomeDefinition definition) {
 
-            ResourceLocation id = definition.getBiome();
+        Biome biome = WorldGenRegistries.BIOME.getOptional(definition.getBiome())
+                .orElseThrow(() -> new IllegalStateException(
+                        "Unknown biome: " + definition.getBiome()));
 
-            if (DEFINITIONS.containsKey(id)) {
-                throw new IllegalStateException("Biome definition already registered: " + id);
-            }
+        definition.setBiomeObject(biome);
 
-            DEFINITIONS.put(id, definition);
-        }
+        DEFINITIONS.put(definition.getBiome(), definition);
+        DEFINITIONS_BY_ID.put(WorldGenRegistries.BIOME.getId(biome), definition);
+    }
+
+    public static BiomeDefinition byId(int id) {
+        return DEFINITIONS_BY_ID.get(id);
+    }
+
+    public static BiomeDefinition get(ResourceLocation id) {
+        return DEFINITIONS.get(id);
     }
 
     @Nullable
@@ -49,31 +56,6 @@ public class ModBiomeRegistry {
         BiomeFamily biomeFamily = getFamily(biome);
 
         return biomeFamily == family;
-    }
-
-    private static final Int2ObjectMap<BiomeDefinition> DEFINITIONS_BY_ID =
-            new Int2ObjectOpenHashMap<>();
-
-    public static BiomeDefinition byId(int id) {
-        return DEFINITIONS_BY_ID.get(id);
-    }
-
-    public static void register(BiomeDefinition definition) {
-
-        Biome biome = WorldGenRegistries.BIOME.getOrDefault(definition.getBiome());
-
-        definition.setBiomeObject(biome);
-
-        DEFINITIONS.put(definition.getBiome(), definition);
-        DEFINITIONS_BY_ID.put(WorldGenRegistries.BIOME.getId(biome), definition);
-    }
-
-    /**
-     * Returns the biome definition for the given biome ID.
-     */
-    @Nullable
-    public static BiomeDefinition get(ResourceLocation biome) {
-        return DEFINITIONS.get(biome);
     }
 
     /**

@@ -72,7 +72,7 @@ public class CustomLayerUtil {
         }
 
         lvt_7_1_ = SmoothLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_7_1_);
-        lvt_7_1_ = MixRiverLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, lvt_6_1_);
+        lvt_7_1_ = CustomMixRiverLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, lvt_6_1_);
         return MixOceansLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, iareafactory1);
     }
 
