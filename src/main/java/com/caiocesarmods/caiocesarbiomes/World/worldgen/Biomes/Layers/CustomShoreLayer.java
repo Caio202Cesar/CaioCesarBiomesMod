@@ -30,6 +30,8 @@ public enum CustomShoreLayer implements ICastleTransformer {
                      int east,
                      int center) {
 
+        System.out.println("CustomShoreLayer running");
+
         if (CustomLayerUtil.isOcean(center)) {
             return center;
         }
