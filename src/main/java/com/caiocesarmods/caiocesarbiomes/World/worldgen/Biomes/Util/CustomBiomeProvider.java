@@ -9,12 +9,10 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.provider.BiomeProvider;
-import net.minecraft.world.biome.provider.OverworldBiomeProvider;
 import net.minecraft.world.gen.layer.Layer;
 import net.minecraftforge.common.BiomeManager;
 
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class CustomBiomeProvider extends BiomeProvider {
