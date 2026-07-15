@@ -8,10 +8,7 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraft.world.gen.layer.traits.ICastleTransformer;
-
-import static net.minecraft.world.biome.Biomes.*;
 
 public enum CustomBeachLayer implements ICastleTransformer {
     INSTANCE;
@@ -31,6 +28,7 @@ public enum CustomBeachLayer implements ICastleTransformer {
             WorldGenRegistries.BIOME.getId(
                     WorldGenRegistries.BIOME.getOrThrow(Biomes.STONE_SHORE));
 
+    @Override
     public int apply(INoiseRandom context, int north, int west, int south, int east, int center) {
         if (center == 14) {
             if (CustomLayerUtil.isShallowOcean(north) || CustomLayerUtil.isShallowOcean(west) ||

@@ -58,9 +58,12 @@ public class CustomLayerUtil {
         lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, 2, p_237216_3_);
         lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, p_237216_2_, p_237216_3_);
         lvt_6_1_ = RiverLayer.INSTANCE.apply(p_237216_3_.apply(1L), lvt_6_1_);
-        lvt_7_1_ = CustomBeachLayer.INSTANCE.apply(p_237216_3_.apply(1001L), lvt_7_1_);
-        lvt_6_1_ = SmoothLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_6_1_);
-        lvt_7_1_ = RareBiomeLayer.INSTANCE.apply(p_237216_3_.apply(1001L), lvt_7_1_);
+        ICastleTransformer transformer = CustomBeachLayer.INSTANCE;
+        lvt_7_1_ = transformer.apply(
+                p_237216_3_.apply(1001L),
+                lvt_7_1_);        lvt_6_1_ = SmoothLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_6_1_);
+
+                lvt_7_1_ = RareBiomeLayer.INSTANCE.apply(p_237216_3_.apply(1001L), lvt_7_1_);
 
         for(int i = 0; i < p_237216_1_; ++i) {
             lvt_7_1_ = ZoomLayer.NORMAL.apply(p_237216_3_.apply((long)(1000 + i)), lvt_7_1_);
@@ -69,7 +72,6 @@ public class CustomLayerUtil {
             }
 
             if (i == 1 || p_237216_1_ == 1) {
-                ICastleTransformer transformer = ShoreLayer.INSTANCE;
 
                 lvt_7_1_ = transformer.apply(
                         p_237216_3_.apply(1000L),
