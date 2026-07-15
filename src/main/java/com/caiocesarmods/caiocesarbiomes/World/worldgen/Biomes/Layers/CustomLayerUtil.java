@@ -10,6 +10,7 @@ import net.minecraft.world.gen.area.IAreaFactory;
 import net.minecraft.world.gen.area.LazyArea;
 import net.minecraft.world.gen.layer.*;
 import net.minecraft.world.gen.layer.traits.IAreaTransformer1;
+import net.minecraft.world.gen.layer.traits.ICastleTransformer;
 
 import java.util.function.LongFunction;
 
@@ -57,6 +58,7 @@ public class CustomLayerUtil {
         lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, 2, p_237216_3_);
         lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, p_237216_2_, p_237216_3_);
         lvt_6_1_ = RiverLayer.INSTANCE.apply(p_237216_3_.apply(1L), lvt_6_1_);
+        lvt_7_1_ = CustomBeachLayer.INSTANCE.apply(p_237216_3_.apply(1001L), lvt_7_1_);
         lvt_6_1_ = SmoothLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_6_1_);
         lvt_7_1_ = RareBiomeLayer.INSTANCE.apply(p_237216_3_.apply(1001L), lvt_7_1_);
 
@@ -67,12 +69,15 @@ public class CustomLayerUtil {
             }
 
             if (i == 1 || p_237216_1_ == 1) {
-                lvt_7_1_ = CustomShoreLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_7_1_);
-            }
+                ICastleTransformer transformer = ShoreLayer.INSTANCE;
+
+                lvt_7_1_ = transformer.apply(
+                        p_237216_3_.apply(1000L),
+                        lvt_7_1_);            }
         }
 
         lvt_7_1_ = SmoothLayer.INSTANCE.apply(p_237216_3_.apply(1000L), lvt_7_1_);
-        lvt_7_1_ = CustomMixRiverLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, lvt_6_1_);
+        lvt_7_1_ = MixRiverLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, lvt_6_1_);
         return MixOceansLayer.INSTANCE.apply(p_237216_3_.apply(100L), lvt_7_1_, iareafactory1);
     }
 
