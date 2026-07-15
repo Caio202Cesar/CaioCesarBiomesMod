@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.CustomBiomeProvider;
+import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.world.gen.DimensionSettings;
 import net.minecraft.world.gen.NoiseChunkGenerator;
 import net.minecraftforge.common.world.ForgeWorldType;
