@@ -1,7 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -13,7 +11,6 @@ import java.util.*;
 public class ModBiomeRegistry {
 
     private static final Map<ResourceLocation, BiomeDefinition> DEFINITIONS = new HashMap<>();
-    private static final Int2ObjectMap<BiomeDefinition> DEFINITIONS_BY_ID = new Int2ObjectOpenHashMap<>();
     /**
      * Prevents this utility class from being instantiated.
      */
@@ -25,18 +22,26 @@ public class ModBiomeRegistry {
      */
     public static void register(BiomeDefinition definition) {
 
-        Biome biome = WorldGenRegistries.BIOME.getOptional(definition.getBiome())
-                .orElseThrow(() -> new IllegalStateException(
-                        "Unknown biome: " + definition.getBiome()));
-
-        definition.setBiomeObject(biome);
-
         DEFINITIONS.put(definition.getBiome(), definition);
-        DEFINITIONS_BY_ID.put(WorldGenRegistries.BIOME.getId(biome), definition);
+
     }
 
+    @Nullable
     public static BiomeDefinition byId(int id) {
-        return DEFINITIONS_BY_ID.get(id);
+
+        Biome biome = WorldGenRegistries.BIOME.getByValue(id);
+
+        if (biome == null) {
+            return null;
+        }
+
+        ResourceLocation key = WorldGenRegistries.BIOME.getKey(biome);
+
+        if (key == null) {
+            return null;
+        }
+
+        return DEFINITIONS.get(key);
     }
 
     public static BiomeDefinition get(ResourceLocation id) {

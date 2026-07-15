@@ -8,13 +8,12 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland");
     public static final ResourceLocation MEDITERRANEAN_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
+    public static final ResourceLocation OLEANDER_GARDENS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "oleander_gardens");
+
     public static final ResourceLocation TROPICAL_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
     public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
 
-    public static final ResourceLocation JUNGLE =
-            new ResourceLocation("minecraft", "jungle");
-    public static final ResourceLocation JUNGLE_HILLS =
-            new ResourceLocation("minecraft", "jungle_hills");
 }

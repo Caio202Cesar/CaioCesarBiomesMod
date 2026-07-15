@@ -17,7 +17,6 @@ public class BiomeDefinition {
     private final ResourceLocation biome;
     private final BiomeFamily family;
     private final Map<BiomeVariant, ResourceLocation> variants;
-    private Biome biomeObject;
 
     private BiomeDefinition(Builder builder) {
         this.biome = builder.biome;
@@ -69,9 +68,6 @@ public class BiomeDefinition {
         return getVariant(BiomeVariant.HILLS);
     }
 
-    /**
-     * Returns true if this biome has a hills variant.
-     */
     public boolean hasHills() {
         return hasVariant(BiomeVariant.HILLS);
     }
@@ -134,14 +130,6 @@ public class BiomeDefinition {
 
     public boolean hasFoothills() {
         return hasVariant(BiomeVariant.FOOTHILLS);
-    }
-
-    public Biome getBiomeObject() {
-        return biomeObject;
-    }
-
-    public void setBiomeObject(Biome biome) {
-        this.biomeObject = biome;
     }
 
     /**

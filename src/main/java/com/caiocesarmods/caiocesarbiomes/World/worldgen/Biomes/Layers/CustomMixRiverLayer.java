@@ -67,7 +67,14 @@ public enum CustomMixRiverLayer implements IAreaTransformer2, IDimOffset0Transfo
         }
 
         // Look up the biome definition
-        BiomeDefinition definition = ModBiomeRegistry.byId(biomeId);
+        Biome biome = WorldGenRegistries.BIOME.getByValue(biomeId);
+
+        if (biome == null)
+            return biomeId;
+
+        ResourceLocation key = WorldGenRegistries.BIOME.getKey(biome);
+
+        BiomeDefinition definition = ModBiomeRegistry.get(key);
 
         if (definition != null) {
 
