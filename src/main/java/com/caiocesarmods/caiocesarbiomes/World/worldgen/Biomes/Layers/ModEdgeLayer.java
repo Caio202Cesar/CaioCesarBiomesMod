@@ -2,11 +2,11 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
 
 import com.caiocesarmods.caiocesarbiomes.Api.ModBiomes;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.layer.traits.ICastleTransformer;
 import net.minecraft.world.gen.layer.LayerUtil;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Optional;
 
@@ -29,7 +29,7 @@ public enum ModEdgeLayer implements ICastleTransformer {
                                      Optional<Biome> fromBiome, Optional<Biome> toBiome) {
 
         return fromBiome.isPresent() && toBiome.isPresent() && this.replaceBiomeEdge(outId, northBiomeId, eastBiomeId, southBiomeId, westBiomeId, biomeId,
-                Registry.BIOME.getId(fromBiome.get()), Registry.BIOME.getId(toBiome.get()));
+                WorldGenRegistries.BIOME.getId(fromBiome.get()), WorldGenRegistries.BIOME.getId(toBiome.get()));
 
     }
 
@@ -37,7 +37,7 @@ public enum ModEdgeLayer implements ICastleTransformer {
                                      Optional<Biome> fromBiome, int toBiome) {
 
         return fromBiome.isPresent() && this.replaceBiomeEdge(outId, northBiomeId, eastBiomeId, southBiomeId, westBiomeId, biomeId,
-                Registry.BIOME.getId(fromBiome.get()), toBiome);
+                WorldGenRegistries.BIOME.getId(fromBiome.get()), toBiome);
     }
 
     private boolean replaceBiomeEdge(int[] outId, int northBiomeId, int eastBiomeId, int southBiomeId, int westBiomeId,
@@ -53,22 +53,6 @@ public enum ModEdgeLayer implements ICastleTransformer {
             }
 
             return true;
-        }
-    }
-
-    private boolean canBiomesBeNeighbors(int biomeIdA, int biomeIdB) {
-        if (LayerUtil.areBiomesSimilar(biomeIdA, biomeIdB)) {
-            return true;
-        } else {
-            Biome biomeA = Registry.BIOME.byId(biomeIdA);
-            Biome biomeB = Registry.BIOME.byId(biomeIdB);
-            if (biomeA != null && biomeB != null) {
-                Biome.Climate catA = biomeA.getTemperature();
-                Biome.TempCategory catB = biomeB.getTemperatureCategory();
-                return catA == catB || catA == Biome.TempCategory.MEDIUM || catB == Biome.CODEC.MEDIUM;
-            } else {
-                return false;
-            }
         }
     }
 }
