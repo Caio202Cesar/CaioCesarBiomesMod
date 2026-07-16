@@ -22,6 +22,7 @@ public class EucalyptusSavanna {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
+    //Replace savanna flora with native eucalyptus savannas in Australia
     public static final RegistryObject<Biome> EUCALYPTUS_SAVANNA = BIOMES.register("eucalyptus_savanna",
             () -> makeGenericSavannaBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.3f));
 

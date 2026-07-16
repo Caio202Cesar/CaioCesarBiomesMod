@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers.CustomLayerUtil;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -10,6 +9,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.world.gen.layer.Layer;
+import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraftforge.common.BiomeManager;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class CustomBiomeProvider extends BiomeProvider {
 
         this.seed = seed;
 
-        this.biomeLayer = CustomLayerUtil.func_237215_a_(
+        this.biomeLayer = LayerUtil.func_237215_a_(
                 seed,
                 false,
                 4,

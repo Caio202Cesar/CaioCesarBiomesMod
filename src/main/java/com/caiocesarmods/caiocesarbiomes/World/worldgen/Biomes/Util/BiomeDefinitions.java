@@ -1,5 +1,6 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+/*package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.Api.ModBiomes;
 import net.minecraft.world.biome.Biomes;
 
 public class BiomeDefinitions {
@@ -42,4 +43,4 @@ public class BiomeDefinitions {
                         .variant(BiomeVariant.BEACH, ModBiomes.MEDITERRANEAN_BEACH)
                         .build());
     }
-}
+}*/

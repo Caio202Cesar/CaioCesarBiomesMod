@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.Api.ModBiomes;
+
 public class BiomeFamilyDefinitions {
 
     public static void register() {
@@ -7,12 +9,12 @@ public class BiomeFamilyDefinitions {
         BiomeFamilyRegistry.register(
 
                 BiomeFamilyDefinition.builder(BiomeFamily.TROPICAL_RAINFOREST)
-                        .beach(ModBiomes.TROPICAL_BEACH)
+                        .beach(ModResourceLocations.TROPICAL_BEACH)
                         //.river(ModBiomes.TROPICAL_RIVER)
                         .build(),
 
                 BiomeFamilyDefinition.builder(BiomeFamily.MEDITERRANEAN)
-                        .beach(ModBiomes.MEDITERRANEAN_BEACH)
+                        .beach(ModResourceLocations.MEDITERRANEAN_BEACH)
                         //.river(ModBiomes.MEDITERRANEAN_RIVER)
                         .build()
 
