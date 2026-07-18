@@ -156,7 +156,6 @@ public class DefaultBiomeTreeFeatures {
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORCHID_TREE.withChance(0.2F),
                             TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             RUBBER_TREE.withChance(0.2F),
-                            YOUNG_BUNYA_PINE_TREE.withChance(0.35F),
                             RAINBOW_EUCALYPTUS_TREE.withChance(0.198F)),
                             INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.3F, 2))));
@@ -522,7 +521,7 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BUNYA_PINES = register("bunya_pines",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_BUNYA_PINE_TREE.withChance(0.2F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HOOP_PINE_TREE.withChance(0.2F)),
                             BUNYA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 

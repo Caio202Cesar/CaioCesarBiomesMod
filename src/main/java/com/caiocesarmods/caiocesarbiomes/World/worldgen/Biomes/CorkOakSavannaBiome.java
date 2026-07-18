@@ -56,11 +56,12 @@ public class CorkOakSavannaBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CORK_OAK_FANCY_TREE);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
+
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CORK_OAK_FANCY_TREE);
 
         //Hardiness zone 9: 0.8F - 0.84F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(depth).scale(scale)

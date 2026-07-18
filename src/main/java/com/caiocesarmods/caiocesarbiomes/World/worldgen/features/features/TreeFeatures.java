@@ -873,7 +873,9 @@ public class TreeFeatures {
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YOUNG_BUNYA_PINE_TREE = register("young_bunya_pine_tree",
+
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOOP_PINE_TREE = register("hoop_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.BUNYA_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 3), FeatureSpread.create(3, 0)),
