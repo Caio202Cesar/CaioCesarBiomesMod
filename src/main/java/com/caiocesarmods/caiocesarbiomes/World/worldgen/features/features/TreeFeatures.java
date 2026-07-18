@@ -1123,7 +1123,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_PINE_LOG),
                     new SimpleBlockStateProvider(States.JAPANESE_PINE_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new JapaneseBlackPineTrunkPlacer(10, 3, 2),
+                    new JapaneseBlackPineTrunkPlacer(5, 3, 2),
                     new TwoLayerFeature(1,0,2)).setIgnoreVines().build())));
 
 

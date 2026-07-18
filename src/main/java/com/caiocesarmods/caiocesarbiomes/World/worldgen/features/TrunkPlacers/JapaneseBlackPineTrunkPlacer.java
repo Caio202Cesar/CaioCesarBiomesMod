@@ -186,7 +186,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
         foliage.add(
                 new FoliagePlacer.Foliage(
                         mainLeader.get(mainLeader.size() - 1),
-                        0,
+                        3,
                         false));
 
         if (!secondaryLeader.isEmpty()) {
@@ -194,7 +194,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             foliage.add(
                     new FoliagePlacer.Foliage(
                             secondaryLeader.get(secondaryLeader.size() - 1),
-                            0,
+                            2,
                             false));
         }
 
@@ -207,13 +207,13 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             foliage.add(
                     new FoliagePlacer.Foliage(
                             tip,
-                            0,
+                            1,
                             false));
 
             foliage.add(
                     new FoliagePlacer.Foliage(
                             tip.up(),
-                            0,
+                            1,
                             false));
 
             if (rand.nextFloat() < 0.45F) {
@@ -221,7 +221,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                 foliage.add(
                         new FoliagePlacer.Foliage(
                                 tip.offset(Direction.Plane.HORIZONTAL.random(rand)),
-                                0,
+                                1,
                                 false));
             }
         }
@@ -239,126 +239,130 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             BaseTreeFeatureConfig config,
             List<BlockPos> branchTips) {
 
-        int length = 5 + rand.nextInt(4); // 5–8 blocks
+        int length = 6 + rand.nextInt(3);
 
-        BlockPos.Mutable branch = origin.toMutable();
+        BlockPos current = origin;
 
-        int horizontalX = dir.getXOffset();
-        int horizontalZ = dir.getZOffset();
+        // Thick shoulder where the branch leaves the trunk
+        for (int i = 0; i < 2; i++) {
 
-        int sagStart = length / 3;
-        int riseStart = (length * 2) / 3;
-
-        for (int step = 0; step < length; step++) {
-
-            //----------------------------------------------------
-            // Horizontal advance
-            //----------------------------------------------------
-
-            branch.move(horizontalX, 0, horizontalZ);
-
-            //----------------------------------------------------
-            // Thick branch base
-            //----------------------------------------------------
-
-            if (step < 2) {
-
-                for (Direction side : Direction.Plane.HORIZONTAL) {
-
-                    if (side != dir && side != dir.getOpposite()) {
-
-                        placeLog(
-                                reader,
-                                rand,
-                                branch.toImmutable().offset(side),
-                                changedBlocks,
-                                box,
-                                config);
-                    }
-                }
-            }
-
-            //----------------------------------------------------
-            // Slight downward sag
-            //----------------------------------------------------
-
-            if (step >= sagStart && step < riseStart) {
-
-                if (rand.nextFloat() < 0.35F) {
-
-                    branch.move(Direction.DOWN);
-
-                }
-
-            }
-
-            //----------------------------------------------------
-            // Upward recovery near the tip
-            //----------------------------------------------------
-
-            if (step >= riseStart) {
-
-                branch.move(Direction.UP);
-
-                if (rand.nextFloat() < 0.25F) {
-
-                    branch.move(horizontalX, 0, horizontalZ);
-
-                }
-            }
-
-            //----------------------------------------------------
-            // Small natural waviness
-            //----------------------------------------------------
-
-            if (step > 1 && step < riseStart && rand.nextFloat() < 0.15F) {
-
-                Direction side =
-                        rand.nextBoolean()
-                                ? dir.rotateY()
-                                : dir.rotateYCCW();
-
-                branch.move(side);
-
-            }
-
-            //----------------------------------------------------
-            // Place branch log
-            //----------------------------------------------------
+            current = current.offset(dir);
 
             placeLog(
                     reader,
                     rand,
-                    branch.toImmutable(),
+                    current,
                     changedBlocks,
                     box,
                     config);
         }
 
-        //--------------------------------------------------------
-        // Upturned terminal shoot
-        //--------------------------------------------------------
+        int phase1 = length / 3;
+        int phase2 = (length * 2) / 3;
+
+        for (int step = 2; step < length; step++) {
+
+            //---------------------------------------------------
+            // Horizontal growth (always connected)
+            //---------------------------------------------------
+
+            BlockPos next = current.offset(dir);
+
+            placeLog(
+                    reader,
+                    rand,
+                    next,
+                    changedBlocks,
+                    box,
+                    config);
+
+            current = next;
+
+            //---------------------------------------------------
+            // Middle section sags slightly
+            //---------------------------------------------------
+
+            if (step >= phase1 && step < phase2) {
+
+                if (rand.nextFloat() < 0.30F) {
+
+                    next = current.down();
+
+                    placeLog(
+                            reader,
+                            rand,
+                            next,
+                            changedBlocks,
+                            box,
+                            config);
+
+                    current = next;
+                }
+            }
+
+            //---------------------------------------------------
+            // Tip curves upward
+            //---------------------------------------------------
+
+            if (step >= phase2) {
+
+                next = current.up();
+
+                placeLog(
+                        reader,
+                        rand,
+                        next,
+                        changedBlocks,
+                        box,
+                        config);
+
+                current = next;
+            }
+
+            //---------------------------------------------------
+            // Gentle sideways waviness
+            //---------------------------------------------------
+
+            if (step > 2 && step < phase2 && rand.nextFloat() < 0.15F) {
+
+                Direction side = rand.nextBoolean()
+                        ? dir.rotateY()
+                        : dir.rotateYCCW();
+
+                next = current.offset(side);
+
+                placeLog(
+                        reader,
+                        rand,
+                        next,
+                        changedBlocks,
+                        box,
+                        config);
+
+                current = next;
+            }
+        }
+
+        //---------------------------------------------------
+        // Terminal shoot
+        //---------------------------------------------------
 
         int shoot = 1 + rand.nextInt(2);
 
         for (int i = 0; i < shoot; i++) {
 
-            branch.move(Direction.UP);
+            current = current.up();
 
             placeLog(
                     reader,
                     rand,
-                    branch.toImmutable(),
+                    current,
                     changedBlocks,
                     box,
                     config);
         }
 
-        //--------------------------------------------------------
-        // Foliage attachment
-        //--------------------------------------------------------
-
-        branchTips.add(branch.toImmutable());
+        branchTips.add(current);
     }
 
     private void placeLog(
