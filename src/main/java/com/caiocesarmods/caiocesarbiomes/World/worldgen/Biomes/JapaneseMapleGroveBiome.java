@@ -67,6 +67,8 @@ public class JapaneseMapleGroveBiome {
         ModDefaultBiomeFeatures.withJapaneseGroveFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
 
+        //Add sugi tree to make shadow to the maples and, possible, change the summer heat to hot.
+
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 

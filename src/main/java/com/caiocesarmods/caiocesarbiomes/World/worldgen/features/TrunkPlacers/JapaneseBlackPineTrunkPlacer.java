@@ -54,7 +54,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             trunkPositions.add(trunkPos);
 
             // place trunk block
-            func_236909_a_(reader, trunk);
+            placeLog(reader, rand, startPos, changedBlocks, box, config);
 
             if(y < 3){
 
@@ -62,8 +62,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
 
                     BlockPos thick = trunkPos.offset(side);
 
-                    func_236909_a_(
-                            reader, thick);
+                    placeLog(reader, rand, startPos, changedBlocks, box, config);
 
                 }
             }
@@ -103,7 +102,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                 BlockPos extra = trunk.toImmutable()
                         .offset(Direction.Plane.HORIZONTAL.random(rand));
 
-                func_236909_a_(reader, extra);
+                placeLog(reader, rand, startPos, changedBlocks, box, config);
 
             }
 
@@ -259,7 +258,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                                 branch.toImmutable()
                                         .offset(side);
 
-                        func_236909_a_(reader, thick);
+                        placeLog(reader, rand, thick, changedBlocks, box, config);
 
                     }
 
@@ -276,8 +275,8 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             }
 
 
-            func_236909_a_(reader, branch
-            );
+            placeLog(reader, rand, branch, changedBlocks, box, config);
+
 
         }
 
@@ -290,5 +289,22 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                         false
                 )
         );*/
+    }
+
+    private void placeLog(
+            IWorldGenerationReader reader,
+            Random rand,
+            BlockPos pos,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config) {
+
+        func_236911_a_(
+                reader,
+                rand,
+                pos,
+                logs,
+                box,
+                config);
     }
 }
