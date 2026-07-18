@@ -1118,7 +1118,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
 
-    //Acacia-like conifers
+    //Japanese Pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_PINE_LOG),
                     new SimpleBlockStateProvider(States.JAPANESE_PINE_LEAVES),
@@ -1126,7 +1126,7 @@ public class TreeFeatures {
                     new JapaneseBlackPineTrunkPlacer(5, 3, 2),
                     new TwoLayerFeature(1,0,2)).setIgnoreVines().build())));
 
-
+    //Chinese red pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("chinese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
                     new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),
