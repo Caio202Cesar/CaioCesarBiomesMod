@@ -54,7 +54,6 @@ public class SahelBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withBadlandsGrassAndBush(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
