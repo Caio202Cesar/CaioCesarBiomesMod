@@ -13,14 +13,14 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-public class JapanesePineFoliagePlacer extends FoliagePlacer {
+public class CedarFoliagePlacer extends FoliagePlacer {
 
-    public static final Codec<JapanesePineFoliagePlacer> CODEC =
+    public static final Codec<CedarFoliagePlacer> CODEC =
             RecordCodecBuilder.create(instance ->
                     func_242830_b(instance)
-                            .apply(instance, JapanesePineFoliagePlacer::new));
+                            .apply(instance, CedarFoliagePlacer::new));
 
-    public JapanesePineFoliagePlacer(
+    public CedarFoliagePlacer(
             FeatureSpread radius,
             FeatureSpread offset) {
 
@@ -29,7 +29,7 @@ public class JapanesePineFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.JAPANESE_PINE_FOLIAGE_PLACER.get();
+        return ModFoliagePlacer.CEDAR_FOLIAGE_PLACER.get();
     }
 
     @Override

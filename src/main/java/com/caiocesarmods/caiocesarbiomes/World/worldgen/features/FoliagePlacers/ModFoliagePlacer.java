@@ -42,9 +42,9 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("royal_poinciana_foliage_placer",
                     () -> new FoliagePlacerType<>(RoyalPoincianaFoliagePlacer.CODEC));
 
-    public static final RegistryObject<FoliagePlacerType<JapanesePineFoliagePlacer>> JAPANESE_PINE_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("japanese_pine_foliage_placer",
-                    () -> new FoliagePlacerType<>(JapanesePineFoliagePlacer.CODEC));
+    public static final RegistryObject<FoliagePlacerType<CedarFoliagePlacer>> CEDAR_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("cedar_foliage_placer",
+                    () -> new FoliagePlacerType<>(CedarFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
