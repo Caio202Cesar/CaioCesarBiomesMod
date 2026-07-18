@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.CustomBiomeLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.ModEdgeLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.LazyAreaLayerContext;
 import net.minecraft.world.gen.area.IArea;
@@ -53,9 +55,10 @@ public class CustomLayerUtil {
         IAreaFactory<T> lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, iareafactory, 0, contextFactory);
         lvt_6_1_ = StartRiverLayer.INSTANCE.apply(contextFactory.apply(100L), lvt_6_1_);
         IAreaFactory<T> lvt_7_1_ = (new BiomeLayer(legacy)).apply(contextFactory.apply(200L), iareafactory);
+        lvt_7_1_ = CustomBiomeLayer.INSTANCE.apply(contextFactory.apply(201L), lvt_7_1_);
         lvt_7_1_ = AddBambooForestLayer.INSTANCE.apply(contextFactory.apply(1001L), lvt_7_1_);
         lvt_7_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_7_1_, 2, contextFactory);
-        lvt_7_1_ = EdgeBiomeLayer.INSTANCE.apply(contextFactory.apply(1000L), lvt_7_1_);
+        lvt_7_1_ = ModEdgeLayer.INSTANCE.apply(contextFactory.apply(1000L), lvt_7_1_);
         IAreaFactory<T> lvt_8_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, 2, contextFactory);
         lvt_7_1_ = HillsLayer.INSTANCE.apply(contextFactory.apply(1000L), lvt_7_1_, lvt_8_1_);
         lvt_6_1_ = repeat(1000L, ZoomLayer.NORMAL, lvt_6_1_, 2, contextFactory);

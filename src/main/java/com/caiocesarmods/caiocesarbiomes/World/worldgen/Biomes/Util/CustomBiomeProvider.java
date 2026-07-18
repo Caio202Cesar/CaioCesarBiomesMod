@@ -38,12 +38,7 @@ public class CustomBiomeProvider extends BiomeProvider {
 
         this.seed = seed;
 
-        this.biomeLayer = LayerUtil.func_237215_a_(
-                seed,
-                false,
-                4,
-                4
-        );
+        this.biomeLayer = CustomLayerUtil.createLayers(seed);
     }
 
     @Override
