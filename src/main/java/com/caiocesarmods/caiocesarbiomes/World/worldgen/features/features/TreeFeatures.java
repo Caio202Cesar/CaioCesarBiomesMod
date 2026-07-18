@@ -1122,9 +1122,11 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JAPANESE_PINE_TREE = register("japanese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_PINE_LOG),
                     new SimpleBlockStateProvider(States.JAPANESE_PINE_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new AcaciaFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new JapaneseBlackPineTrunkPlacer(10, 3, 2),
+                    new TwoLayerFeature(1,0,2)).setIgnoreVines().build())));
+
+
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHINESE_RED_PINE_TREE = register("chinese_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LOG),
                     new SimpleBlockStateProvider(States.CHINESE_RED_PINE_LEAVES),

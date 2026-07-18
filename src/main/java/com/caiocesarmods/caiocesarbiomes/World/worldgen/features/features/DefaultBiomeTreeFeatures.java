@@ -568,7 +568,9 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> JAPANESE_GROVE_TREES = register("japanese_grove_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SUPER_BIRCH_BEES_0002.withChance(0.3F),
-                    JAPANESE_PINE_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.1F), FANCY_OAK_TREE_WITH_IVY.withChance(0.198F),
+                    TEA_TREE.withChance(0.1F), CAMELLIA_TREE.withChance(0.3F),
+                    JAPANESE_PINE_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.1F),
+                    FANCY_OAK_TREE_WITH_IVY.withChance(0.198F),
                     OAK.withChance(0.4F), PEACH_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F)), SPRUCE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 }
