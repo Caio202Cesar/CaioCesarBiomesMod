@@ -41,6 +41,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
 
         List<FoliagePlacer.Foliage> foliage = Lists.newArrayList();
         List<BlockPos> trunkPositions = new ArrayList<>();
+        List<BlockPos> branchTips = new ArrayList<>();
 
         BlockPos.Mutable trunk = startPos.toMutable();
 
@@ -170,7 +171,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                         changedBlocks,
                         box,
                         config,
-                        foliage
+                        branchTips
                 );
 
             }
@@ -178,16 +179,22 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             rotation++;
         }
 
+        for(BlockPos tip : branchTips){
+
+            foliage.add(
+                    new FoliagePlacer.Foliage(
+                            tip,
+                            1,
+                            false
+                    )
+            );
+
+        }
+
+        /*
         BlockPos top = startPos.up(treeHeight);
 
-        foliage.add(
-                new FoliagePlacer.Foliage(
-                        top,
-                        1,
-                        false
-                )
-        );
-
+        foliage.add(new FoliagePlacer.Foliage(top, 1, false));
 
         for(Direction d : Direction.Plane.HORIZONTAL){
 
@@ -199,7 +206,17 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
                     )
             );
 
-        }
+        }*/
+
+        BlockPos top = trunkPositions.get(trunkPositions.size()-1);
+
+        foliage.add(
+                new FoliagePlacer.Foliage(
+                        top,
+                        1,
+                        false
+                )
+        );
 
         return foliage;
 
@@ -213,7 +230,7 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             Set<BlockPos> changedBlocks,
             MutableBoundingBox box,
             BaseTreeFeatureConfig config,
-            List<FoliagePlacer.Foliage> foliage
+            List<BlockPos> branchTips
     ){
 
         int length = 6 + rand.nextInt(3);
@@ -264,12 +281,14 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
 
         }
 
-        foliage.add(
+        branchTips.add(branch.toImmutable());
+
+        /*foliage.add(
                 new FoliagePlacer.Foliage(
                         branch.toImmutable(),
                         1,
                         false
                 )
-        );
+        );*/
     }
 }
