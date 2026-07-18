@@ -40,185 +40,193 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             BaseTreeFeatureConfig config) {
 
         List<FoliagePlacer.Foliage> foliage = Lists.newArrayList();
-        List<BlockPos> trunkPositions = new ArrayList<>();
         List<BlockPos> branchTips = new ArrayList<>();
+
+        List<BlockPos> mainLeader = new ArrayList<>();
+        List<BlockPos> secondaryLeader = new ArrayList<>();
+
+        //------------------------------------------------------------
+        // Build the main trunk
+        //------------------------------------------------------------
 
         BlockPos.Mutable trunk = startPos.toMutable();
 
         int leanX = 0;
         int leanZ = 0;
 
-        for(int y = 0; y < treeHeight; y++) {
+        int forkHeight = 2 + rand.nextInt(3);
 
-            BlockPos trunkPos = trunk.toImmutable();
-            trunkPositions.add(trunkPos);
+        BlockPos forkOrigin = null;
 
-            // place trunk block
-            placeLog(reader, rand, startPos, changedBlocks, box, config);
+        for (int y = 0; y < treeHeight; y++) {
 
-            if(y < 3){
+            BlockPos current = trunk.toImmutable();
 
-                for(Direction side : Direction.Plane.HORIZONTAL){
+            placeLog(
+                    reader,
+                    rand,
+                    current,
+                    changedBlocks,
+                    box,
+                    config);
 
-                    BlockPos thick = trunkPos.offset(side);
+            mainLeader.add(current);
 
-                    placeLog(reader, rand, startPos, changedBlocks, box, config);
+            if (y == forkHeight)
+                forkOrigin = current;
 
-                }
+            if (y > treeHeight * 0.40F) {
+
+                if (rand.nextFloat() < 0.12F)
+                    leanX = rand.nextInt(3) - 1;
+
+                if (rand.nextFloat() < 0.12F)
+                    leanZ = rand.nextInt(3) - 1;
             }
 
-            /*
-             * Gradual upper trunk movement
-             */
-            if(y > treeHeight * 0.35F){
-
-                if(rand.nextFloat() < 0.20F){
-
-                    leanX = Math.max(-1, Math.min(1, leanX + rand.nextInt(3)-1));
-
-                }
-
-
-                if(rand.nextFloat() < 0.20F){
-
-                    leanZ = Math.max(-1, Math.min(1, leanZ + rand.nextInt(3)-1));
-
-                }
-
-            }
-
-            if(y < treeHeight - 1){
-
-                trunk.move(
-                        leanX,
-                        1,
-                        leanZ
-                );
-
-            }
-
-            if(y < treeHeight * 0.25F && rand.nextFloat() < 0.5F){
-
-                BlockPos extra = trunk.toImmutable()
-                        .offset(Direction.Plane.HORIZONTAL.random(rand));
-
-                placeLog(reader, rand, startPos, changedBlocks, box, config);
-
-            }
-
-            // Apply the lean every few blocks
-            if(y % 2 == 0){
-
-                trunk.move(
-                        leanX,
-                        1,
-                        leanZ
-                );
-
-            }
-            else{
-
-                trunk.move(Direction.UP);
-
-            }
-
+            if (y < treeHeight - 1)
+                trunk.move(leanX, 1, leanZ);
         }
 
-        //Branches
+        //------------------------------------------------------------
+        // Secondary leader
+        //------------------------------------------------------------
 
-        int branchCount = 3 + rand.nextInt(3);
+        if (forkOrigin != null) {
 
-        List<Integer> branchLevels = new ArrayList<>();
+            Direction forkDir = Direction.Plane.HORIZONTAL.random(rand);
 
-        int current = (int)(treeHeight * 0.50F);
+            BlockPos.Mutable leader = forkOrigin.toMutable();
 
-        while(branchLevels.size() < branchCount && current < treeHeight - 2){
+            int sideLeanX = forkDir.getXOffset();
+            int sideLeanZ = forkDir.getZOffset();
 
-            branchLevels.add(current);
+            int secondaryHeight = treeHeight - forkHeight - 2;
 
-            current += 2 + rand.nextInt(2);
+            for (int i = 0; i < secondaryHeight; i++) {
 
+                if (rand.nextFloat() < 0.30F)
+                    leader.move(forkDir);
+
+                leader.move(Direction.UP);
+
+                BlockPos pos = leader.toImmutable();
+
+                placeLog(
+                        reader,
+                        rand,
+                        pos,
+                        changedBlocks,
+                        box,
+                        config);
+
+                secondaryLeader.add(pos);
+
+                if (i > secondaryHeight * 0.55F) {
+
+                    if (rand.nextFloat() < 0.18F)
+                        leader.move(sideLeanX, 0, sideLeanZ);
+                }
+            }
         }
 
-        Direction[] dirs = {
-                Direction.NORTH,
-                Direction.EAST,
-                Direction.SOUTH,
-                Direction.WEST
-        };
+        //------------------------------------------------------------
+        // Branch generation
+        //------------------------------------------------------------
 
-        int rotation = rand.nextInt(4);
+        List<BlockPos> origins = new ArrayList<>();
 
-        for(int level : branchLevels){
+        for (int i = (int)(mainLeader.size() * 0.55F);
+             i < mainLeader.size() - 2;
+             i += 3 + rand.nextInt(2)) {
 
-            if(level >= trunkPositions.size())
-                continue;
+            origins.add(mainLeader.get(i));
+        }
 
-            BlockPos origin = trunkPositions.get(level);
+        for (int i = secondaryLeader.size() / 3;
+             i < secondaryLeader.size() - 1;
+             i += 3 + rand.nextInt(2)) {
 
-            int branches = 2 + rand.nextInt(2); // 2 or 3
+            origins.add(secondaryLeader.get(i));
+        }
 
-            for(int b = 0; b < branches; b++){
+        Collections.shuffle(origins, rand);
 
-                Direction dir = dirs[(rotation + b * 2) % 4];
+        for (BlockPos origin : origins) {
+
+            List<Direction> directions = new ArrayList<>(
+                    Arrays.asList(
+                            Direction.NORTH,
+                            Direction.SOUTH,
+                            Direction.EAST,
+                            Direction.WEST));
+
+            Collections.shuffle(directions, rand);
+
+            int branchCount = 1 + rand.nextInt(2);
+
+            for (int i = 0; i < branchCount; i++) {
 
                 makeBranch(
                         reader,
                         rand,
                         origin,
-                        dir,
+                        directions.get(i),
                         changedBlocks,
                         box,
                         config,
-                        branchTips
-                );
-
+                        branchTips);
             }
-
-            rotation++;
         }
 
-        for(BlockPos tip : branchTips){
+        //------------------------------------------------------------
+        // Trunk foliage
+        //------------------------------------------------------------
+
+        foliage.add(
+                new FoliagePlacer.Foliage(
+                        mainLeader.get(mainLeader.size() - 1),
+                        0,
+                        false));
+
+        if (!secondaryLeader.isEmpty()) {
+
+            foliage.add(
+                    new FoliagePlacer.Foliage(
+                            secondaryLeader.get(secondaryLeader.size() - 1),
+                            0,
+                            false));
+        }
+
+        //------------------------------------------------------------
+        // Branch foliage
+        //------------------------------------------------------------
+
+        for (BlockPos tip : branchTips) {
 
             foliage.add(
                     new FoliagePlacer.Foliage(
                             tip,
-                            1,
-                            false
-                    )
-            );
-
-        }
-
-        /*
-        BlockPos top = startPos.up(treeHeight);
-
-        foliage.add(new FoliagePlacer.Foliage(top, 1, false));
-
-        for(Direction d : Direction.Plane.HORIZONTAL){
+                            0,
+                            false));
 
             foliage.add(
                     new FoliagePlacer.Foliage(
-                            top.offset(d, 2),
-                            1,
-                            false
-                    )
-            );
+                            tip.up(),
+                            0,
+                            false));
 
-        }*/
+            if (rand.nextFloat() < 0.45F) {
 
-        BlockPos top = trunkPositions.get(trunkPositions.size()-1);
-
-        foliage.add(
-                new FoliagePlacer.Foliage(
-                        top,
-                        1,
-                        false
-                )
-        );
+                foliage.add(
+                        new FoliagePlacer.Foliage(
+                                tip.offset(Direction.Plane.HORIZONTAL.random(rand)),
+                                0,
+                                false));
+            }
+        }
 
         return foliage;
-
     }
 
     private void makeBranch(
@@ -229,66 +237,128 @@ public class JapaneseBlackPineTrunkPlacer extends AbstractTrunkPlacer {
             Set<BlockPos> changedBlocks,
             MutableBoundingBox box,
             BaseTreeFeatureConfig config,
-            List<BlockPos> branchTips
-    ){
+            List<BlockPos> branchTips) {
 
-        int length = 6 + rand.nextInt(3);
+        int length = 5 + rand.nextInt(4); // 5–8 blocks
 
         BlockPos.Mutable branch = origin.toMutable();
 
+        int horizontalX = dir.getXOffset();
+        int horizontalZ = dir.getZOffset();
 
-        for(int step = 0; step < length; step++){
+        int sagStart = length / 3;
+        int riseStart = (length * 2) / 3;
 
-            branch.move(dir);
+        for (int step = 0; step < length; step++) {
 
+            //----------------------------------------------------
+            // Horizontal advance
+            //----------------------------------------------------
 
-            // scaffold section
-            if(step < length - 2){
+            branch.move(horizontalX, 0, horizontalZ);
 
-                // occasional downward sag
-                if(step > 1 && rand.nextFloat() < 0.25F){
-                    branch.move(Direction.DOWN);
-                }
+            //----------------------------------------------------
+            // Thick branch base
+            //----------------------------------------------------
 
-                if(step < 2){
+            if (step < 2) {
 
-                    for(Direction side : Direction.Plane.HORIZONTAL){
+                for (Direction side : Direction.Plane.HORIZONTAL) {
 
-                        BlockPos thick =
-                                branch.toImmutable()
-                                        .offset(side);
+                    if (side != dir && side != dir.getOpposite()) {
 
-                        placeLog(reader, rand, thick, changedBlocks, box, config);
-
+                        placeLog(
+                                reader,
+                                rand,
+                                branch.toImmutable().offset(side),
+                                changedBlocks,
+                                box,
+                                config);
                     }
+                }
+            }
+
+            //----------------------------------------------------
+            // Slight downward sag
+            //----------------------------------------------------
+
+            if (step >= sagStart && step < riseStart) {
+
+                if (rand.nextFloat() < 0.35F) {
+
+                    branch.move(Direction.DOWN);
 
                 }
 
             }
 
+            //----------------------------------------------------
+            // Upward recovery near the tip
+            //----------------------------------------------------
 
-            // terminal upward growth
-            else{
+            if (step >= riseStart) {
 
                 branch.move(Direction.UP);
 
+                if (rand.nextFloat() < 0.25F) {
+
+                    branch.move(horizontalX, 0, horizontalZ);
+
+                }
             }
 
+            //----------------------------------------------------
+            // Small natural waviness
+            //----------------------------------------------------
 
-            placeLog(reader, rand, branch, changedBlocks, box, config);
+            if (step > 1 && step < riseStart && rand.nextFloat() < 0.15F) {
 
+                Direction side =
+                        rand.nextBoolean()
+                                ? dir.rotateY()
+                                : dir.rotateYCCW();
 
+                branch.move(side);
+
+            }
+
+            //----------------------------------------------------
+            // Place branch log
+            //----------------------------------------------------
+
+            placeLog(
+                    reader,
+                    rand,
+                    branch.toImmutable(),
+                    changedBlocks,
+                    box,
+                    config);
         }
 
-        branchTips.add(branch.toImmutable());
+        //--------------------------------------------------------
+        // Upturned terminal shoot
+        //--------------------------------------------------------
 
-        /*foliage.add(
-                new FoliagePlacer.Foliage(
-                        branch.toImmutable(),
-                        1,
-                        false
-                )
-        );*/
+        int shoot = 1 + rand.nextInt(2);
+
+        for (int i = 0; i < shoot; i++) {
+
+            branch.move(Direction.UP);
+
+            placeLog(
+                    reader,
+                    rand,
+                    branch.toImmutable(),
+                    changedBlocks,
+                    box,
+                    config);
+        }
+
+        //--------------------------------------------------------
+        // Foliage attachment
+        //--------------------------------------------------------
+
+        branchTips.add(branch.toImmutable());
     }
 
     private void placeLog(
