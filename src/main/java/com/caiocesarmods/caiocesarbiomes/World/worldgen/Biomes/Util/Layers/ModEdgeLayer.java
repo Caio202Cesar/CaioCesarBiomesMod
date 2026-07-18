@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Layers;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers;
 
 import com.caiocesarmods.caiocesarbiomes.Api.ModBiomes;
 import net.minecraft.util.registry.Registry;

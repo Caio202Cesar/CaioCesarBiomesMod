@@ -15,4 +15,9 @@ public class ModResourceLocations {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
     public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
+
+    public static final ResourceLocation MEDITERRANEAN_OAK_WOODLAND =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_woodland");
+    public static final ResourceLocation MEDITERRANEAN_OAK_SPARSE_WOODLAND =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_sparse_woodland");
 }

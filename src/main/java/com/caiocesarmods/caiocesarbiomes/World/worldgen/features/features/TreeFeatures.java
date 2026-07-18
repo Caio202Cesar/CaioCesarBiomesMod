@@ -21,8 +21,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
 
-import static net.minecraft.world.gen.feature.Features.*;
-
 public class TreeFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, CaioCesarBiomesMod.MOD_ID);
 
@@ -1162,7 +1160,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DATE_PALM_TREE = register("date_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.DATE_LEAVES),
-                    new DateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
@@ -1538,7 +1536,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OIL_PALM_TREE = register("oil_palm_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OIL_PALM_LOG),
                     new SimpleBlockStateProvider(States.OIL_PALM_LEAVES),
-                    new OilPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 4, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
