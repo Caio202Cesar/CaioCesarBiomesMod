@@ -190,7 +190,7 @@ public class ModFeatures implements IFeatureConfig {
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(DESERT_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
-    public static final ConfiguredFeature<?, ?> PATCH_DESERT_ROSE = register("sahel_tall_vegetation",
+    public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_DRYLAND_TALL_PLANTS = register("tropical_dryland_tall_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAHEL_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 

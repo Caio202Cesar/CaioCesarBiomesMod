@@ -108,8 +108,8 @@ public class ModDefaultBiomeFeatures {
     public static void withHighlandOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HIGHLAND_OCOTEA_TREES);
     }
-    public static void withDesertRose(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_DESERT_ROSE);
+    public static void withTropicalDrylandTallPlants(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_TROPICAL_DRYLAND_TALL_PLANTS);
     }
     public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);

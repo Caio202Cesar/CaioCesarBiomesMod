@@ -56,7 +56,8 @@ public class SahelBiome {
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
 
         //Hardiness zone 12 - TROPICAL: +0.95F

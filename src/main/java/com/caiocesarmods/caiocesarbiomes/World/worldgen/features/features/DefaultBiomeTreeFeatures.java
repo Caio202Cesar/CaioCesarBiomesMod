@@ -498,11 +498,10 @@ public class DefaultBiomeTreeFeatures {
                             OIL_PALM_TREE.withChance(0.1F)), FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
-    private static final ConfiguredFeature<?,?> ACACIA_TREE = Features.ACACIA;
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.089F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAMARIND_TREE.withChance(0.089F),
                             MESQUITE_TREE.withChance(0.1F), DATE_PALM_TREE.withChance(0.15F)),
-                            ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            BAOBAB_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 3))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
