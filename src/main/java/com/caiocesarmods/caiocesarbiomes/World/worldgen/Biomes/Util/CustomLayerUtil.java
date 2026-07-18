@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.CustomBiomeLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.CustomLayer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.ModEdgeLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.LazyAreaLayerContext;
@@ -13,7 +14,7 @@ import net.minecraft.world.gen.layer.traits.IAreaTransformer1;
 import java.util.function.LongFunction;
 
 public class CustomLayerUtil {
-    public static Layer createLayers(long seed) {
+    public static CustomLayer createLayers(long seed) {
         IAreaFactory<LazyArea> factory = buildOverworld(
                 false,      // legacy
                 4,          // biome size
@@ -21,7 +22,7 @@ public class CustomLayerUtil {
                 salt -> new LazyAreaLayerContext(25, seed, salt)
         );
 
-        return new Layer(factory);
+        return new CustomLayer(factory);
     }
 
     private static <T extends IArea, C extends IExtendedNoiseRandom<T>>

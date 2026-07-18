@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.CustomBiomeIdRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -28,6 +29,10 @@ public class BambooSubtropicalLaurelJungleBiome {
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> BAMBOO_SUBTROPICAL_LAUREL_JUNGLE = BIOMES.register("bamboo_subtropical_laurel_jungle",
            () -> makeSubtropicalLaurelJungleBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
+
+   static {
+      CustomBiomeIdRegistry.register(300, BAMBOO_SUBTROPICAL_LAUREL_JUNGLE);
+   }
 
    private static Biome makeSubtropicalLaurelJungleBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
