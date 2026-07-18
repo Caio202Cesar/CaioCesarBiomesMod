@@ -46,14 +46,11 @@ public class JapanesePineFoliagePlacer extends FoliagePlacer {
             MutableBoundingBox box) {
 
         BlockPos center = foliage.func_236763_a_();
-
         boolean giant = foliage.func_236765_c_();
 
-        // Bottom pad
+        // Main lower pad (the broad horizontal canopy)
         this.func_236753_a_(
-                reader,
-                rand,
-                config,
+                reader, rand, config,
                 center,
                 4,
                 leaves,
@@ -61,11 +58,9 @@ public class JapanesePineFoliagePlacer extends FoliagePlacer {
                 giant,
                 box);
 
-        // Middle pad
+        // Upper pad, shifted one block up to create a second canopy layer
         this.func_236753_a_(
-                reader,
-                rand,
-                config,
+                reader, rand, config,
                 center.up(),
                 3,
                 leaves,
@@ -73,11 +68,9 @@ public class JapanesePineFoliagePlacer extends FoliagePlacer {
                 giant,
                 box);
 
-        // Upper pad
+        // Small top pad that covers the terminal log completely
         this.func_236753_a_(
-                reader,
-                rand,
-                config,
+                reader, rand, config,
                 center.up(2),
                 2,
                 leaves,
@@ -85,20 +78,15 @@ public class JapanesePineFoliagePlacer extends FoliagePlacer {
                 giant,
                 box);
 
-        // Terminal tuft
-        if (rand.nextFloat() < 0.70F) {
-
-            this.func_236753_a_(
-                    reader,
-                    rand,
-                    config,
-                    center.up(3),
-                    1,
-                    leaves,
-                    0,
-                    giant,
-                    box);
-        }
+        // Tiny apex tuft; radius 1 creates a 3x3 pad centered above the leader
+        this.func_236753_a_(
+                reader, rand, config,
+                center.up(3),
+                1,
+                leaves,
+                0,
+                giant,
+                box);
     }
 
     @Override
