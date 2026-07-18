@@ -30,14 +30,6 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("virginiana_foliage_placer",
                     () -> new FoliagePlacerType<>(VirginianaFoliagePlacer.CODEC));
 
-    public static final RegistryObject<FoliagePlacerType<BaobabFoliagePlacer>> BAOBAB_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("baobab_foliage_placer",
-                    () -> new FoliagePlacerType<>(BaobabFoliagePlacer.CODEC));
-
-    public static final RegistryObject<FoliagePlacerType<AncientFigFoliagePlacer>> ANCIENT_FIG_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("ancient_fig_foliage_placer",
-                    () -> new FoliagePlacerType<>(AncientFigFoliagePlacer.CODEC));
-
     public static final RegistryObject<FoliagePlacerType<DesertRoseFoliagePlacer>> DESERT_ROSE_FOLIAGE_PLACER =
             FOLIAGE_PLACERS.register("desert_rose_foliage_placer",
                     () -> new FoliagePlacerType<>(DesertRoseFoliagePlacer.CODEC));
