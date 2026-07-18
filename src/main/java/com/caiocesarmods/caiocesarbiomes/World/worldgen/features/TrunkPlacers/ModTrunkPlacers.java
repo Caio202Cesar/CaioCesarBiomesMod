@@ -44,6 +44,13 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(CoastalLeaningTrunkPlacer.CODEC)
             );
 
+    public static final TrunkPlacerType<JapaneseBlackPineTrunkPlacer> JAPANESE_BLACK_PINE =
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:japanese_black_pine_trunk",
+                    new TrunkPlacerType<>(JapaneseBlackPineTrunkPlacer.CODEC)
+            );
+
     static {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
     }
