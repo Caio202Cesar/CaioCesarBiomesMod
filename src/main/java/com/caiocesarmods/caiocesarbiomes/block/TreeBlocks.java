@@ -2553,6 +2553,7 @@ public class TreeBlocks {
             CoihueSapling::new);
 
 
+    //Jungle
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
             ModLogs::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LEAVES = registerBlock("rainbow_eucalyptus_leaves",
@@ -2610,8 +2611,8 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
-            CallistemonSapling::new);*/
+    public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
+            CallistemonSapling::new);
 
     //Tropical Australian Pine Rainforest
     public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",
