@@ -1928,6 +1928,7 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Laurel forest
+    //Fancy and big camphor trees spawn in the forest and jungle. Ancient camphor spawns only in the highland.
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMPHOR_TREE = register("camphor_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMPHOR_LOG),
                     new SimpleBlockStateProvider(States.CAMPHOR_LEAVES),

@@ -48,9 +48,6 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withHighlandOcoteaTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
@@ -58,6 +55,9 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withRainforestChestnuts(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withHighlandOcoteaTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

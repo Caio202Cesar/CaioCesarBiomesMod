@@ -336,7 +336,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HIGHLAND_OCOTEA_TREES = register("highland_ocotea",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            ELDERBERRY_TREE.withChance(0.1F), HIGHLAND_OCOTEA_TREE_WITH_IVY.withChance(0.2F)),
+                            ELDERBERRY_TREE.withChance(0.1F), HIGHLAND_OCOTEA_TREE_WITH_IVY.withChance(0.2F),
+                            ANCIENT_CAMPHOR_TREE.withChance(0.2F)),
                             HIGHLAND_OCOTEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
