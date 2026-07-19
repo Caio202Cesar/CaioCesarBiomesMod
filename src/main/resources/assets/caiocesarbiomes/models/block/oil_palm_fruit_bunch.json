@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/oil_palm_fruit_bunch",
+    "particle": "caiocesarbiomes:block/oil_palm_fruit_bunch"
+  }
+}

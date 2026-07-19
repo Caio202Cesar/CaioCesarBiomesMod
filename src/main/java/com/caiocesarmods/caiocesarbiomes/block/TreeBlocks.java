@@ -1461,7 +1461,13 @@ public class TreeBlocks {
     public static final RegistryObject<Block> OIL_PALM_LOG = registerBlock("oil_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> OIL_PALM_LEAVES = registerBlock("oil_palm_leaves",
-            ModLeaves::new);
+            () -> new OilPalmLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> OIL_PALM_FRUIT_BUNCH = registerBlock("oil_palm_fruit_bunch",
+            OilPalmFruitBunchBlock::new);
     public static final RegistryObject<Block> OIL_PALM_SAPLING = registerBlock("oil_palm_sapling",
             OilPalmSapling::new);
     @SuppressWarnings("deprecation")

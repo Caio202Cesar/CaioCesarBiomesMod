@@ -77,6 +77,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BaobabBudBlock.registerRenderLayer();
         BaobabStalkBlock.registerRenderLayer();
 
+        OilPalmFruitBunchBlock.registerRenderLayer();
+
         AvocadoSapling.registerRenderLayer();
         AlmondSapling.registerRenderLayer();
         BlackPoplarSapling.registerRenderLayer();
