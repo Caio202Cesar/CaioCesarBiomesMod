@@ -2408,6 +2408,27 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.TEAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
+            () -> new BaobabLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_BRANCHES));
+    public static final RegistryObject<Block> BAOBAB_BRANCHES = registerBlock("baobab_branches",
+            () -> new BaobabBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_LEAVES));
+    public static final RegistryObject<Block> BAOBAB_FLOWER = registerBlock("baobab_flower",
+            BaobabFlowerBlock::new);
+    public static final RegistryObject<Block> BAOBAB_STALK = registerBlock("baobab_stalk",
+            BaobabStalkBlock::new);
+    public static final RegistryObject<Block> BAOBAB_BUD = registerBlock("baobab_bud",
+            BaobabBudBlock::new);
+    public static final RegistryObject<Block> BAOBAB_FRUIT = registerBlock("baobab_fruit",
+            BaobabFruitBlock::new);
+
+    public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
+            BaobabSapling::new);
+
     //Sugar apple
 
     //Coast coral
@@ -2433,14 +2454,21 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    /*
+    public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_PALM_LEAVES = registerBlock("royal_palm_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ROYAL_PALM_SAPLING = registerBlock("royal_palm_sapling",
+            RoyalPalmSapling::new);
+
+
     public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
             ModLogs::new);
 
     public static final RegistryObject<Block> BLACK_POUI_LEAVES = registerBlock("black_poui_leaves",
-            () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new BlackPouiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
     public static final RegistryObject<Block> BLACK_POUI_BRANCHES = registerBlock("black_poui_branches",
             () -> new LycheeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -2448,15 +2476,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BLACK_POUI_BLOSSOM = registerBlock("black_poui_blossom",
             () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POUI_LEAVES));
-
-    public static final RegistryObject<Block> LYCHEE_SAPLING = registerBlock("lychee_sapling",
-            LycheeSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_LYCHEE_SAPLING = BLOCKS.register("potted_lychee_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> BLACK_POUI_SAPLING = registerBlock("black_poui_sapling",
+            BlackPouiSapling::new);
 
 
+    //Subtropical Laurel Forest
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
 
@@ -2471,16 +2495,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_LEAVES));
     public static final RegistryObject<Block> LYCHEE_SAPLING = registerBlock("lychee_sapling",
             LycheeSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_LYCHEE_SAPLING = BLOCKS.register("potted_lychee_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.LYCHEE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
-
-    public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
-            ModLogs::new); */
-
-    //Subtropical Laurel Forest
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
@@ -2492,35 +2507,17 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
-            CinnamonSapling::new);*/
+    /ublic static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
+            CinnamonSapling::new);
 
     public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
             ModLeaves::new); //Avocado log
-    /*public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
-            MachillusSapling::new);*/
+    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
+            MachillusSapling::new);
 
 
 
-    public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
-            () -> new BaobabLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_BRANCHES));
-    public static final RegistryObject<Block> BAOBAB_BRANCHES = registerBlock("baobab_branches",
-            () -> new BaobabBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_LEAVES));
-    public static final RegistryObject<Block> BAOBAB_FLOWER = registerBlock("baobab_flower",
-            BaobabFlowerBlock::new);
-    public static final RegistryObject<Block> BAOBAB_STALK = registerBlock("baobab_stalk",
-            BaobabStalkBlock::new);
-    public static final RegistryObject<Block> BAOBAB_BUD = registerBlock("baobab_bud",
-            BaobabBudBlock::new);
-    public static final RegistryObject<Block> BAOBAB_FRUIT = registerBlock("baobab_fruit",
-            BaobabFruitBlock::new);
 
-    public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
-            BaobabSapling::new);
 
 
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
