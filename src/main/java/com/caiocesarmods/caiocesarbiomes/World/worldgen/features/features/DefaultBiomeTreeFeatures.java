@@ -141,6 +141,7 @@ public class DefaultBiomeTreeFeatures {
                             INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.3F, 0))));
 
+    //Countains the australian pines (agathis, bunya and hoop pine, podocarpus) --> tropical montane laurel forest
     public static final ConfiguredFeature<?, ?> JUNGLE_HILLS_EXTRA_VEGETATION = register("jungle_hills_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.2F),
                             BIG_WEEPING_FIG_TREE.withChance(0.2F), MANGO_FANCY_TREE.withChance(0.15F),
@@ -153,12 +154,10 @@ public class DefaultBiomeTreeFeatures {
                             BIG_INDIAN_LAUREL_TREE.withChance(0.2F), BANANA_TREE.withChance(0.4F),
                             AVOCADO_TREE.withChance(0.4F),
                             STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.3F),
-                            PEPPERCORN_JUNGLE_TREE.withChance(0.28F), //BUNYA_PINE_TREE.withChance(0.4F),
-                            TROPICAL_ALMOND_TREE.withChance(0.2F),
-                            TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORCHID_TREE.withChance(0.2F),
-                            TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
-                            RUBBER_TREE.withChance(0.2F),
-                            RAINBOW_EUCALYPTUS_TREE.withChance(0.198F)),
+                            PEPPERCORN_JUNGLE_TREE.withChance(0.28F), BUNYA_PINE_TREE.withChance(0.4F),
+                            AGATHIS_TREE1.withChance(0.3F), BUNYA_PINE_TREE2.withChance(0.35F),
+                            AGATHIS_TREE2.withChance(0.35F), HOOP_PINE_TREE.withChance(0.32F),
+                            ORCHID_TREE.withChance(0.2F), RUBBER_TREE.withChance(0.2F), RAINBOW_EUCALYPTUS_TREE.withChance(0.198F)),
                             INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.3F, 2))));
 

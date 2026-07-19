@@ -37,8 +37,7 @@ public class AgathisSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.AVOCADO_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_AVOCADO_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.AGATHIS_SAPLING.get(), RenderType.getCutout());
 
     }
 
