@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/woollybutt_leaves",
+        "weight": 7},
+      {"model": "caiocesarbiomes:block/woollybutt_flowering_leaves",
+        "weight": 4}
+    ]
+  }
+}

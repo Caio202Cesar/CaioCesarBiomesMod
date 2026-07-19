@@ -912,7 +912,10 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-
+    public static final RegistryObject<Block> WOOLLYBUTT_LEAVES = registerBlock("woollybutt_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WOOLLYBUTT_SAPLING = registerBlock("woollybutt_sapling",
+            WoollybuttSapling::new);
 
     //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
