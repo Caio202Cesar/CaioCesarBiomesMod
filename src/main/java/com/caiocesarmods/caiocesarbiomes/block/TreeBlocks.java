@@ -2466,7 +2466,6 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
             ModLogs::new);
-
     public static final RegistryObject<Block> BLACK_POUI_LEAVES = registerBlock("black_poui_leaves",
             () -> new BlackPouiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
