@@ -66,8 +66,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chinese_red_pine_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "citron_sapling"), "HZ(min) 10, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coast_cottonwood_sapling"), "HZ(min) 10, HZ(max) 12;" +
-                        "⚠ can be grown in colder biomes if under a 5x5 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coast_cottonwood_sapling"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coconut_sapling"), "HZ(min) 11, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cook_pine_sapling"), "HZ(min) 9, HZ(max) 12;" +
                 "⚠ sapling can die in HZ 9's winter.");
@@ -266,6 +265,8 @@ public class HardinessZones {
                 "⚠ can be grown under glass in colder biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"), "HZ(min) 7, HZ(max) 11;" +
                 "⚠ Can't grow in dry biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cinnamon_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F)");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "camphor_sapling"), "HZ(min) 9, HZ(max) 11");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +

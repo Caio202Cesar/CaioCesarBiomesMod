@@ -2506,7 +2506,7 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
             ModLeaves::new);
-    /ublic static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
+    public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
             CinnamonSapling::new);
 
     public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",

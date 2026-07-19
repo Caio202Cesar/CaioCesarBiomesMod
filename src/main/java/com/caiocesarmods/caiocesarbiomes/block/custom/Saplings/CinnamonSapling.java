@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
@@ -26,9 +29,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CoastCottonwoodSapling extends SaplingBlock {
-    public CoastCottonwoodSapling() {
-        super(new CoastCottonwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class CinnamonSapling extends SaplingBlock {
+    public CinnamonSapling() {
+        super(new CoastCottonwoodTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -39,12 +42,12 @@ public class CoastCottonwoodSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10
+    //Hardy from zone 10 to 12 (1.2F)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.85f;
-        float maxTemp = 1.6f;
+        float maxTemp = 1.2f;
 
         if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)) {
 
@@ -65,7 +68,7 @@ public class CoastCottonwoodSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
+        boolean tooHot = temp > 1.2F;
         boolean tooCold = temp < 0.85F;
 
         if (tooHot || tooCold) {
@@ -85,7 +88,7 @@ public class CoastCottonwoodSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 1.6f;
+            float minTemp = 0.85f, maxTemp = 1.2f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -120,21 +123,15 @@ public class CoastCottonwoodSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CoastCottonwoodTree extends BigTree {
+    private static class CoastCottonwoodTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.COAST_COTTONWOOD_FANCY_TREE;
+                return TreeFeatures.CINNAMON_FANCY_TREE;
             } else {
-                return TreeFeatures.COAST_COTTONWOOD_TREE;
+                return TreeFeatures.CINNAMON_TREE;
             }
-        }
-
-        @Nullable
-        @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            return TreeFeatures.BIG_COAST_COTTONWOOD_TREE;
         }
     }
 }
