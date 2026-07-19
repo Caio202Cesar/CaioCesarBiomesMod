@@ -272,6 +272,7 @@ public class ModFoods {
     public static final Food CARROT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food BEETROOT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food BAOBAB_FRUIT = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food LYCHEE = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

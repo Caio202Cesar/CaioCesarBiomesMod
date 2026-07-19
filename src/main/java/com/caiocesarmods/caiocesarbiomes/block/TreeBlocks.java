@@ -2470,10 +2470,10 @@ public class TreeBlocks {
             () -> new BlackPouiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
     public static final RegistryObject<Block> BLACK_POUI_BRANCHES = registerBlock("black_poui_branches",
-            () -> new LycheeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new BlackPouiBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_LEAVES));
     public static final RegistryObject<Block> BLACK_POUI_BLOSSOM = registerBlock("black_poui_blossom",
-            () -> new LycheeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new BlackPouiFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POUI_LEAVES));
     public static final RegistryObject<Block> BLACK_POUI_SAPLING = registerBlock("black_poui_sapling",
             BlackPouiSapling::new);

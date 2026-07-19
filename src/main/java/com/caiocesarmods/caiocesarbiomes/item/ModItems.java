@@ -158,6 +158,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(Foods.SWEET_BERRIES)));
     public static final RegistryObject<Item> CHILEAN_GUAVA = ITEMS.register("chilean_guava",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(Foods.SWEET_BERRIES)));
+    public static final RegistryObject<Item> LYCHEE = ITEMS.register("lychee",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.LYCHEE)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
