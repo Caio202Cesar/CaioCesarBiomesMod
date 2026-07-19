@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/cinnamon_sapling",
+    "particle": "caiocesarbiomes:block/cinnamon_sapling"
+  }
+}
