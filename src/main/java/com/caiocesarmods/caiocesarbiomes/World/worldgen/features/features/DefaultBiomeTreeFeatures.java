@@ -437,9 +437,9 @@ public class DefaultBiomeTreeFeatures {
                             STARFRUIT_TREE.withChance(0.08F), ORCHID_TREE.withChance(0.09F),
                             PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
-                            TROPICAL_ALMOND_TREE.withChance(0.12F),
-                            TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORANGE_OLEANDER_TREE.withChance(0.09F),
-                            YELLOW_OLEANDER_TREE.withChance(0.09F), FOREST_ACACIA_TREE.withChance(0.34F)), TAMARIND_TREE))
+                            TROPICAL_ALMOND_TREE.withChance(0.12F), TROPICAL_ALMOND_BIG_TREE.withChance(0.2F),
+                            ORANGE_OLEANDER_TREE.withChance(0.09F), YELLOW_OLEANDER_TREE.withChance(0.09F),
+                            FOREST_ACACIA_TREE.withChance(0.34F)), TAMARIND_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.25F, 6))));
 
