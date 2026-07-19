@@ -2009,7 +2009,8 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
-                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setMaxWaterDepth(2).setIgnoreVines().build()));
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setMaxWaterDepth(1).setIgnoreVines().build()));
 
     //Jungle only
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RAINBOW_EUCALYPTUS_TREE = register("rainbow_eucalyptus",
@@ -2059,6 +2060,23 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE1 = register("callistemon_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CALLISTEMON_LOG),
+                    new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE2 = register("callistemon_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CALLISTEMON_LOG),
+                    new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
 
     public static final class States {
 
@@ -2076,6 +2094,9 @@ public class TreeFeatures {
 
         protected static final BlockState CAMPHOR_LOG = TreeBlocks.CAMPHOR_LOG.get().getDefaultState();
         protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CALLISTEMON_LOG = TreeBlocks.CALLISTEMON_LOG.get().getDefaultState();
+        protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
 
         protected static final BlockState LYCHEE_LOG = TreeBlocks.LYCHEE_LOG.get().getDefaultState();
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
