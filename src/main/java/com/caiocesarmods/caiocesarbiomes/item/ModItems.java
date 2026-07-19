@@ -635,7 +635,6 @@ public class ModItems {
             () -> new HardinessZoneScannerItem(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> SALTPETER = ITEMS.register("saltpeter",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
-    //Hammer like item used both to make 9 raw toast from 1 bread and 9 butter nugget from 1 butter
     public static final RegistryObject<Item> BREAD_KNIFE = ITEMS.register("bread_knife",
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CCB_GROUP).maxDamage(238)));
     public static final RegistryObject<Item> NUTCRACKER = ITEMS.register("nutcracker",
@@ -643,6 +642,8 @@ public class ModItems {
     public static final RegistryObject<Item> MALABAR_SILK_FLOSS = ITEMS.register("malabar_silk_cotton",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> CHUSQUEA_BAMBOO = ITEMS.register("chusquea_bamboo",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final RegistryObject<Item> CINNAMON = ITEMS.register("cinnamon",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
