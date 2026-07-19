@@ -729,17 +729,19 @@ public class TreeFeatures {
     //Woollybutt
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WOOLLYBUTT_TREE = register("woollybutt_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUCALYPTUS_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.WOOLLYBUTT_LEAVES, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT),
+                    new SimpleBlockStateProvider(TreeFeatures.States.WOOLLYBUTT_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WOOLLYBUTT_FANCY_TREE = register("woollybutt_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUCALYPTUS_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.WOOLLYBUTT_LEAVES, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT),
+                    new SimpleBlockStateProvider(TreeFeatures.States.WOOLLYBUTT_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Casuarina Tree - also part of tropical eucalyptus forest
@@ -889,7 +891,13 @@ public class TreeFeatures {
                     new GiantTrunkPlacer(5, 11, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BUNYA_PINE_TREE2 = register("bunya_pine_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
+                    new SimpleBlockStateProvider(States.BUNYA_PINE_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(18, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOOP_PINE_TREE = register("hoop_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),

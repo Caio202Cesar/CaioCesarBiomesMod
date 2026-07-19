@@ -127,8 +127,11 @@ public class BunyaPineSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 8) {
                 return TreeFeatures.BUNYA_PINE_TREE;
-
+            } else {
+                return TreeFeatures.BUNYA_PINE_TREE2;
+            }
         }
     }
 }
