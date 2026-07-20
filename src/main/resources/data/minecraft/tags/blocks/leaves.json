@@ -332,7 +332,10 @@
     "caiocesarbiomes:callistemon_leaves",
     "caiocesarbiomes:agathis_leaves",
     "caiocesarbiomes:castanopsis_leaves",
-    "caiocesarbiomes:castanopsis_flowering_leaves"
+    "caiocesarbiomes:castanopsis_flowering_leaves",
+    "caiocesarbiomes:privet_leaves",
+    "caiocesarbiomes:privet_flowering_leaves",
+    "caiocesarbiomes:privet_fruiting_leaves"
   ]
 }
 

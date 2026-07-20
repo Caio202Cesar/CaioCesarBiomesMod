@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/privet_log",
+    "side": "caiocesarbiomes:block/privet_log"
+  }
+}

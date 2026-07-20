@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_lychee_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:lychee_planks",
+    "count": 4
+  }
+}

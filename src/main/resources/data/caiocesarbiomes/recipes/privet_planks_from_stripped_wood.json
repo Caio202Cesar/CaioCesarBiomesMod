@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_privet_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:privet_planks",
+    "count": 4
+  }
+}
