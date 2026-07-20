@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.BambooSubtropicalLaurelJungleBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DryTropicalBeachBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MediterraneanScrublandBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.CustomLayer;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
@@ -16,6 +17,7 @@ import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraftforge.common.BiomeManager;
 
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class CustomBiomeProvider extends BiomeProvider {
@@ -30,15 +32,19 @@ public class CustomBiomeProvider extends BiomeProvider {
     private final long seed;
     private final CustomLayer biomeLayer;
 
-    private static final List<RegistryKey<Biome>> BIOMES = ImmutableList.of(
-
-               );
+    private static Stream<Supplier<Biome>> createBiomeStream() {
+        return Stream.concat(
+                ModBiomeRegistry.getBiomes(WorldGenRegistries.BIOME)
+                        .stream()
+                        .map(biome -> (Supplier<Biome>) () -> biome),
+                BiomeManager.getAdditionalOverworldBiomes()
+                        .stream()
+                        .map(key -> (Supplier<Biome>) () -> WorldGenRegistries.BIOME.getOrThrow(key))
+        );
+    }
 
     public CustomBiomeProvider(long seed) {
-        super(Stream.concat(
-                BIOMES.stream(),
-                BiomeManager.getAdditionalOverworldBiomes().stream()
-        ).map(key -> () -> WorldGenRegistries.BIOME.getOrThrow(key)));
+        super(createBiomeStream());
 
         this.seed = seed;
         this.biomeLayer = CustomLayerUtil.createLayers(seed);

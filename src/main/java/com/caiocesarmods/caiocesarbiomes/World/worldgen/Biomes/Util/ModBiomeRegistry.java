@@ -92,6 +92,10 @@ public class ModBiomeRegistry {
         return Collections.unmodifiableCollection(DEFINITIONS.values());
     }
 
+    public static Collection<ResourceLocation> getBiomeIds() {
+        return Collections.unmodifiableSet(DEFINITIONS.keySet());
+    }
+
     public static boolean isRegistered(ResourceLocation biome) {
         return DEFINITIONS.containsKey(biome);
     }
