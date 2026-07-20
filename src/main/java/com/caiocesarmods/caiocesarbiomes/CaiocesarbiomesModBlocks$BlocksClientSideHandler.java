@@ -218,6 +218,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         LycheeSapling.registerRenderLayer();
         CallistemonSapling.registerRenderLayer();
         AgathisSapling.registerRenderLayer();
-
+        StoneOakSapling.registerRenderLayer();
     }
 }
