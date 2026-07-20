@@ -2483,6 +2483,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PRIVET_LOG = registerBlock("stripped_privet_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_WOOD = registerBlock("privet_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PRIVET_WOOD = registerBlock("stripped_privet_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> PRIVET_LEAVES = registerBlock("privet_leaves",
             () -> new PrivetLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_FLOWERING_LEAVES));
