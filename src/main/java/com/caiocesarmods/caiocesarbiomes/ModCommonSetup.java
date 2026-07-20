@@ -30,5 +30,23 @@ public class ModCommonSetup {
                         Potions.STRONG_POISON
                 )
         );
+
+        BrewingRecipeRegistry.addRecipe(
+                Ingredient.fromItems(Items.LINGERING_POTION),
+                Ingredient.fromItems(ModItems.YEW_BERRIES.get()),
+                PotionUtils.addPotionToItemStack(
+                        new ItemStack(Items.LINGERING_POTION),
+                        Potions.STRONG_POISON
+                )
+        );
+
+        BrewingRecipeRegistry.addRecipe(
+                Ingredient.fromItems(Items.LINGERING_POTION),
+                Ingredient.fromItems(ModItems.PRIVET_BERRIES.get()),
+                PotionUtils.addPotionToItemStack(
+                        new ItemStack(Items.LINGERING_POTION),
+                        Potions.STRONG_POISON
+                )
+        );
     }
 }
