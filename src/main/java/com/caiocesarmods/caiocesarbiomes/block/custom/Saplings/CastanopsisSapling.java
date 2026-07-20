@@ -126,7 +126,7 @@ public class CastanopsisSapling extends SaplingBlock {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.CASUARINA_FANCY_TREE;
+                return TreeFeatures.CASTANOPSIS_FANCY_TREE;
             } else {
                 return TreeFeatures.CASTANOPSIS_TREE;
             }
