@@ -2569,19 +2569,19 @@ public class TreeBlocks {
 
 
     //Subtropical Oak Forest
-    public static final RegistryObject<Block> LITHOCARPUS_LOG = registerBlock("lithocarpus_log",
+    public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
             ModLogs::new);
-    public static final RegistryObject<Block> LITHOCARPUS_LEAVES = registerBlock("lithocarpus_leaves",
+    public static final RegistryObject<Block> STONE_OAK_LEAVES = registerBlock("stone_oak_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> LITHOCARPUS_SAPLING = registerBlock("lithocarpus_sapling",
-            LithocarpusSapling::new);*/
+    public static final RegistryObject<Block> STONE_OAK_SAPLING = registerBlock("stone_oak_sapling",
+            StoneOakSapling::new); //Hardy from zone 7 to 10
 
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
             ModLogs::new);
     public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
-            CastanopsisSapling::new);
+            CastanopsisSapling::new); //Hardy from zone 7 to 10
 
     public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
             ModLogs::new);
@@ -2601,8 +2601,8 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> SAND_LAUREL_LEAVES = registerBlock("sand_laurel_oak_leaves",
             ModLeaves::new);
-    /*public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
-            SandLaurelOakSapling::new);*/
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
+            SandLaurelOakSapling::new);
 
     //Subtropical Eucalyptus Forest
     public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",

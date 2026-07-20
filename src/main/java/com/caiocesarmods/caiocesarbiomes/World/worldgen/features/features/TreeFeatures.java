@@ -1981,26 +1981,30 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASTANOPSIS_TREE = register("castanopsis_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASTANOPSIS_LOG),
                     new SimpleBlockStateProvider(States.CASTANOPSIS_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
+                    .setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASTANOPSIS_FANCY_TREE = register("castanopsis_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASTANOPSIS_LOG),
+                    new SimpleBlockStateProvider(States.CASTANOPSIS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_TREE = register("lithocarpus_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
-                    new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STONE_OAK_TREE = register("stone_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_OAK_LOG),
+                    new SimpleBlockStateProvider(States.STONE_OAK_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT))
                     .setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LITHOCARPUS_FANCY_TREE = register("lithocarpus_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LITHOCARPUS_LOG),
-                    new SimpleBlockStateProvider(States.LITHOCARPUS_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
-                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OBTUSA_OAK_TREE = register("obtusa_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
@@ -2086,8 +2090,8 @@ public class TreeFeatures {
         protected static final BlockState AGATHIS_LOG = TreeBlocks.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LITHOCARPUS_LOG = TreeBlocks.LITHOCARPUS_LOG.get().getDefaultState();
-        protected static final BlockState LITHOCARPUS_LEAVES = TreeBlocks.LITHOCARPUS_LEAVES.get().getDefaultState();
+        protected static final BlockState STONE_OAK_LOG = TreeBlocks.STONE_OAK_LOG.get().getDefaultState();
+        protected static final BlockState STONE_OAK_LEAVES = TreeBlocks.STONE_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();
