@@ -81,7 +81,7 @@ public class ModItems {
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.MANGO)));
     public static final RegistryObject<Item> UNRIPE_MANGO = ITEMS.register("unripe_mango",
-            () -> new UnripeMangoItem(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.GREEN_MANGO))); //Can only be eaten with salt
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.GREEN_MANGO))); //Can only be eaten with salt
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.BLUEBERRIES)));
     public static final RegistryObject<Item> WALNUT = ITEMS.register("walnut",
@@ -111,7 +111,7 @@ public class ModItems {
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.JUNIPER_BERRIES)));
     public static final RegistryObject<Item> UNRIPE_CREEPING_FIG = ITEMS.register("unripe_creeping_fig",
-            () -> new UnripeCreepingFigItem(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES)));
     public static final RegistryObject<Item> RIPE_CREEPING_FIG = ITEMS.register("ripe_creeping_fig",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.CREEPING_FIG)));
     public static final RegistryObject<Item> RED_CURRANT = ITEMS.register("red_currant",
@@ -160,6 +160,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(Foods.SWEET_BERRIES)));
     public static final RegistryObject<Item> LYCHEE = ITEMS.register("lychee",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.LYCHEE)));
+    public static final RegistryObject<Item> PRIVET_BERRIES = ITEMS.register("privet_berries",
+            () -> new PrivetBerriesItem(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES).food(ModFoods.PRIVET_BERRIES)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",

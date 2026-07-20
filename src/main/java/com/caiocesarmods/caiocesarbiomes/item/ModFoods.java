@@ -273,6 +273,11 @@ public class ModFoods {
     public static final Food BEETROOT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food BAOBAB_FRUIT = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food LYCHEE = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food PRIVET_BERRIES = (new Food.Builder()).hunger(1).saturation(0.1F)
+            .effect(new EffectInstance(Effects.POISON, 500, 6), 1.0F)
+            .effect(new EffectInstance(Effects.NAUSEA, 500, 6), 1.0F)
+            .effect(new EffectInstance(Effects.HUNGER, 500, 6), 1.0F)
+            .effect(new EffectInstance(Effects.BLINDNESS, 500, 6), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

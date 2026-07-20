@@ -1085,7 +1085,9 @@
   "block.caiocesarbiomes.starfruit_winter_fruiting_leaves": "Folhas de caramboleira com frutos",
   "block.caiocesarbiomes.starfruit_branches": "Galhos de caramboleira",
 
-  "biome.caiocesarbiomes.tropical_island": "Ilha Tropical"
+  "biome.caiocesarbiomes.tropical_island": "Ilha Tropical",
+
+  "tooltip.caiocesarbiomes.privet_berries": "☠ Altamente tóxico!!! Não coma. ☠"
 }
 
 

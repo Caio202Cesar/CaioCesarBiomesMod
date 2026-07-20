@@ -1977,6 +1977,14 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT))
                     .setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PRIVET_TREE = register("privet_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PRIVET_LOG),
+                    new SimpleBlockStateProvider(States.PRIVET_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
+
     //Subtropical oak forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASTANOPSIS_TREE = register("castanopsis_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASTANOPSIS_LOG),
@@ -2042,12 +2050,12 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //California coastal woodland
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
                     new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));*/
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
     //Eucalyptus Forest
     //Blackwood Tree
@@ -2104,6 +2112,9 @@ public class TreeFeatures {
 
         protected static final BlockState LYCHEE_LOG = TreeBlocks.LYCHEE_LOG.get().getDefaultState();
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PRIVET_LOG = TreeBlocks.PRIVET_LOG.get().getDefaultState();
+        protected static final BlockState PRIVET_LEAVES = TreeBlocks.PRIVET_LEAVES.get().getDefaultState();
 
         protected static final BlockState CINNAMON_LOG = TreeBlocks.CINNAMON_LOG.get().getDefaultState();
         protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();
