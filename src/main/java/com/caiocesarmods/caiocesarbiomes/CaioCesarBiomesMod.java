@@ -144,6 +144,9 @@ public class CaioCesarBiomesMod
         event.enqueueWork(() -> {
 
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+                    .put(TreeBlocks.LYCHEE_LOG.get(), TreeBlocks.STRIPPED_LYCHEE_LOG.get())
+                    .put(TreeBlocks.LYCHEE_WOOD.get(), TreeBlocks.STRIPPED_LYCHEE_WOOD.get())
+
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(TreeBlocks.AVOCADO_LOG.get(), TreeBlocks.STRIPPED_AVOCADO_LOG.get())

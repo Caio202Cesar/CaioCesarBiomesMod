@@ -2482,6 +2482,13 @@ public class TreeBlocks {
     //Subtropical Laurel Forest
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LYCHEE_LOG = registerBlock("stripped_lychee_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LYCHEE_WOOD = registerBlock("lychee_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LYCHEE_WOOD = registerBlock("stripped_lychee_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
             () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
