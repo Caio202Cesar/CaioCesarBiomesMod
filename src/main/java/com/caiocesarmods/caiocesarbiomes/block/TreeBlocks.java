@@ -2514,10 +2514,7 @@ public class TreeBlocks {
             MachillusSapling::new);
 
 
-
-
-
-
+    //Chilean forests
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
             ModLogs::new);
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_LEAVES = registerBlock("chusquea_bamboo_leaves",
@@ -2597,12 +2594,7 @@ public class TreeBlocks {
             () -> new ObtusaOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_LEAVES));
     public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
-            ObtusaOakSapling::new); //Hardy from zone 7 to 10
-
-    public static final RegistryObject<Block> SAND_LAUREL_LEAVES = registerBlock("sand_laurel_oak_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
-            SandLaurelOakSapling::new);
+            ObtusaOakSapling::new); //Hardy from zone 7 to 11
 
     //Subtropical Eucalyptus Forest
     public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",
