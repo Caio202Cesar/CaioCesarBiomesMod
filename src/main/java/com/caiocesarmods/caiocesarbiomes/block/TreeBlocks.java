@@ -2576,7 +2576,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
             ModLogs::new);
     public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
-            ModLeaves::new);
+            () -> new ObtusaOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_FALL_LEAVES));
+    public static final RegistryObject<Block> CASTANOPSIS_FLOWERING_LEAVES = registerBlock("castanopsis_leaves",
+            () -> new ObtusaOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_WINTER_BRANCHES));
     public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
             CastanopsisSapling::new); //Hardy from zone 7 to 10
 
