@@ -2479,6 +2479,22 @@ public class TreeBlocks {
             BlackPouiSapling::new);
 
 
+    public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PRIVET_LOG = registerBlock("stripped_privet_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_LEAVES = registerBlock("privet_leaves",
+            () -> new PrivetLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PRIVET_FLOWERING_LEAVES = registerBlock("privet_flowering_leaves",
+            () -> new PrivetFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PRIVET_FRUITING_LEAVES = registerBlock("privet_fruiting_leaves",
+            () -> new PrivetFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_LEAVES));
+    public static final RegistryObject<Block> PRIVET_SAPLING = registerBlock("privet_sapling",
+            PrivetSapling::new);
+
     //Subtropical Laurel Forest
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
@@ -2488,7 +2504,6 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LYCHEE_WOOD = registerBlock("stripped_lychee_wood",
             ModLogs::new);
-
     public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
             () -> new LycheeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LYCHEE_FLOWERING_LEAVES));
