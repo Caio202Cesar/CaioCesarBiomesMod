@@ -4,7 +4,6 @@ public enum BiomeVariant {
     BEACH,
     RIVER,
     HILLS,
-
     HIGHLANDS,
     MOUNTAINS,
     PLATEAU,

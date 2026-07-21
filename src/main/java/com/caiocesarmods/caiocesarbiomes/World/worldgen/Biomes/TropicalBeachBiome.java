@@ -20,8 +20,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-import static net.minecraft.world.biome.BiomeMaker.makeGenericBeachBiome;
-
 public class TropicalBeachBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);

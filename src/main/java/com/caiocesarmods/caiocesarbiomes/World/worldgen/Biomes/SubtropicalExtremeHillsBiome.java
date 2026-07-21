@@ -27,10 +27,10 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> SUBTROPICAL_EXTREME_HILLS = BIOMES.register("subtropical_extreme_hills",
-        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.7f, 0.9f));
+        () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.7f, 0.9f, true));
 
 
-private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale, boolean isHighland) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
