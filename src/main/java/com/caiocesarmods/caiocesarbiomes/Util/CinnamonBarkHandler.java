@@ -14,7 +14,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = "caiocesarbiomes", bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = "caiocesarbiomes", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CinnamonBarkHandler {
 
     @SubscribeEvent
@@ -61,8 +61,5 @@ public class CinnamonBarkHandler {
                         p -> p.sendBreakAnimation(event.getHand()));
             }
         }
-
-
-        event.setCanceled(true);
     }
 }

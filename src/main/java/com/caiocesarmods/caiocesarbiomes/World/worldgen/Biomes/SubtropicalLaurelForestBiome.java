@@ -28,7 +28,7 @@ public class SubtropicalLaurelForestBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> SUBTROPICAL_LAUREL_FOREST = BIOMES.register("subtropical_laurel_forest",
-           () -> makeSubtropicalLaurelForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.27f));
+           () -> makeSubtropicalLaurelForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 
    private static Biome makeSubtropicalLaurelForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

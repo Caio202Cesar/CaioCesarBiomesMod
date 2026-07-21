@@ -27,7 +27,7 @@ public class OleanderGardensBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> OLEANDER_GARDENS = BIOMES.register("oleander_gardens",
-           () -> makeOleanderGardensBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+           () -> makeOleanderGardensBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1F, 0.2F));
 
 
    private static Biome makeOleanderGardensBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

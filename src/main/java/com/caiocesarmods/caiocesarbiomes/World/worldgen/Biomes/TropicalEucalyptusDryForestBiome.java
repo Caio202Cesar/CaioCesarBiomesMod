@@ -25,7 +25,7 @@ public class TropicalEucalyptusDryForestBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> TROPICAL_EUCALYPTUS_DRY_FOREST = BIOMES.register("tropical_eucalyptus_dry_forest",
-            () -> makeTropicalEucalyptusForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+            () -> makeTropicalEucalyptusForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1F, 0.2F));
 
     private static Biome makeTropicalEucalyptusForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();

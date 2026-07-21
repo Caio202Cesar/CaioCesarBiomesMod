@@ -1,14 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
@@ -22,13 +18,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SubtropicalSeasonalForestBiome {
+public class SubtropicalOakForestHills {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST = BIOMES.register("subtropical_seasonal_forest",
-           () -> makeSubtropicalSeasonalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
+   public static final RegistryObject<Biome> SUBTROPICAL_OAK_FOREST_HILLS = BIOMES.register("subtropical_oak_forest_hills",
+           () -> makeSubtropicalSeasonalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.4f));
 
 
    private static Biome makeSubtropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

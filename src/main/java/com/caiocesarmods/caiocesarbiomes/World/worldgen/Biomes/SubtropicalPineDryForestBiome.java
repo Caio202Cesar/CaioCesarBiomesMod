@@ -26,7 +26,7 @@ public class SubtropicalPineDryForestBiome {
     //mediterranean_pine_forest
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> SUBTROPICAL_PINE_DRY_FOREST = BIOMES.register("subtropical_pine_dry_forest",
-            () -> makeSubtropicalPineDryForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+            () -> makeSubtropicalPineDryForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1F, 0.2F));
 
 
     private static Biome makeSubtropicalPineDryForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

@@ -25,7 +25,7 @@ public class TemperateRainforest {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TEMPERATE_RAINFOREST = BIOMES.register("temperate_rainforest",
-            () -> makeTemperateRainforestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.4f));
+            () -> makeTemperateRainforestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 
     private static Biome makeTemperateRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

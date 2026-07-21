@@ -23,6 +23,7 @@ import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -146,7 +147,7 @@ public class CaioCesarBiomesMod
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
                     .put(TreeBlocks.LYCHEE_LOG.get(), TreeBlocks.STRIPPED_LYCHEE_LOG.get())
                     .put(TreeBlocks.LYCHEE_WOOD.get(), TreeBlocks.STRIPPED_LYCHEE_WOOD.get())
-
+                    .put(TreeBlocks.CINNAMON_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(TreeBlocks.AVOCADO_LOG.get(), TreeBlocks.STRIPPED_AVOCADO_LOG.get())
