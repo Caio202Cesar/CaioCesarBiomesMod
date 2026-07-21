@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/wax_leaf_privet_leaves",
+    "particle": "caiocesarbiomes:block/wax_leaf_privet_leaves"
+  }
+}

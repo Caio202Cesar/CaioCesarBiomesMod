@@ -1977,7 +1977,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT))
                     .setIgnoreVines().build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PRIVET_TREE = register("privet_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WAX_LEAF_PRIVET_TREE = register("wax_leaf_privet_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PRIVET_LOG),
                     new SimpleBlockStateProvider(States.PRIVET_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
@@ -2051,8 +2051,8 @@ public class TreeFeatures {
 
     //California coastal woodland
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LOG),
-                    new SimpleBlockStateProvider(States.MONTEREY_CYPRESS_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HOLM_OAK_LOG),
+                    new SimpleBlockStateProvider(States.HOLM_OAK_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
@@ -2114,7 +2114,7 @@ public class TreeFeatures {
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
 
         protected static final BlockState PRIVET_LOG = TreeBlocks.PRIVET_LOG.get().getDefaultState();
-        protected static final BlockState PRIVET_LEAVES = TreeBlocks.PRIVET_LEAVES.get().getDefaultState();
+        protected static final BlockState PRIVET_LEAVES = TreeBlocks.WAX_LEAF_PRIVET_LEAVES.get().getDefaultState();
 
         protected static final BlockState CINNAMON_LOG = TreeBlocks.CINNAMON_LOG.get().getDefaultState();
         protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();

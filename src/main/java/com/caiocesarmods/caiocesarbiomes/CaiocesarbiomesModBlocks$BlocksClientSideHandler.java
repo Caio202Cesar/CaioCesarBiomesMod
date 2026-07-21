@@ -219,5 +219,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CallistemonSapling.registerRenderLayer();
         AgathisSapling.registerRenderLayer();
         StoneOakSapling.registerRenderLayer();
+        WaxLeafPrivetSapling.registerRenderLayer();
     }
 }

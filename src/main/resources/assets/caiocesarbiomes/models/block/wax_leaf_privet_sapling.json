@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/wax_leaf_privet_sapling",
+    "particle": "caiocesarbiomes:block/wax_leaf_privet_sapling"
+  }
+}

@@ -914,8 +914,7 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> WOOLLYBUTT_LEAVES = registerBlock("woollybutt_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> WOOLLYBUTT_SAPLING = registerBlock("woollybutt_sapling",
-            WoollybuttSapling::new);
+    //public static final RegistryObject<Block> WOOLLYBUTT_SAPLING = registerBlock("woollybutt_sapling", WoollybuttSapling::new);
 
     //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
@@ -2458,11 +2457,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> ROYAL_PALM_LEAVES = registerBlock("royal_palm_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> ROYAL_PALM_SAPLING = registerBlock("royal_palm_sapling",
-            RoyalPalmSapling::new);
+    //public static final RegistryObject<Block> ROYAL_PALM_SAPLING = registerBlock("royal_palm_sapling", RoyalPalmSapling::new);
 
 
-    public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
+    /*public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
             ModLogs::new);
@@ -2476,7 +2474,7 @@ public class TreeBlocks {
             () -> new BlackPouiFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POUI_LEAVES));
     public static final RegistryObject<Block> BLACK_POUI_SAPLING = registerBlock("black_poui_sapling",
-            BlackPouiSapling::new);
+            BlackPouiSapling::new);*/
 
 
     public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
@@ -2487,17 +2485,17 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PRIVET_WOOD = registerBlock("stripped_privet_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> PRIVET_LEAVES = registerBlock("privet_leaves",
+    public static final RegistryObject<Block> WAX_LEAF_PRIVET_LEAVES = registerBlock("wax_leaf_privet_leaves",
             () -> new PrivetLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> PRIVET_FLOWERING_LEAVES = registerBlock("privet_flowering_leaves",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WAX_LEAF_PRIVET_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> WAX_LEAF_PRIVET_FLOWERING_LEAVES = registerBlock("wax_leaf_privet_flowering_leaves",
             () -> new PrivetFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_FRUITING_LEAVES));
-    public static final RegistryObject<Block> PRIVET_FRUITING_LEAVES = registerBlock("privet_fruiting_leaves",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WAX_LEAF_PRIVET_FRUITING_LEAVES));
+    public static final RegistryObject<Block> WAX_LEAF_PRIVET_FRUITING_LEAVES = registerBlock("wax_leaf_privet_fruiting_leaves",
             () -> new PrivetFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PRIVET_LEAVES));
-    public static final RegistryObject<Block> PRIVET_SAPLING = registerBlock("privet_sapling",
-            PrivetSapling::new);
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WAX_LEAF_PRIVET_LEAVES));
+    public static final RegistryObject<Block> WAX_LEAF_PRIVET_SAPLING = registerBlock("wax_leaf_privet_sapling",
+            WaxLeafPrivetSapling::new);
 
     //Subtropical Laurel Forest
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
@@ -2536,8 +2534,7 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
             ModLeaves::new); //Avocado log
-    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
-            MachillusSapling::new);
+    //public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling", MachillusSapling::new);
 
 
     //Chilean forests

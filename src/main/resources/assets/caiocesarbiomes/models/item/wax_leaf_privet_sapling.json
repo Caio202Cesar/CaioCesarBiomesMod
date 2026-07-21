@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "caiocesarbiomes:item/wax_leaf_privet_sapling"
+  }
+}
