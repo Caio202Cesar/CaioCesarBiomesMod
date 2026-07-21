@@ -53,7 +53,7 @@ public class EucalyptusSahelBiome {
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
 

@@ -57,8 +57,7 @@ public class TropicalDesertBiome {
       DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
-
-      biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_DESERT_ROSE);
+      ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

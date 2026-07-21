@@ -157,9 +157,6 @@ public class ModDefaultBiomeFeatures {
     public static void withCamelliaAndTeaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.CAMELLIA_TREES);
     }
-    public static void withBunyaPines(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.BUNYA_PINES);
-    }
     public static void withTropicalTallPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TROPICAL_TALL_PLANTS_VEGETATION);
     }

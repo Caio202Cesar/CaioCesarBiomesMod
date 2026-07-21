@@ -52,7 +52,7 @@ public class SocotraTropicalDryland {
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withDesertRose(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSocotraTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
