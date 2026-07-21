@@ -36,18 +36,8 @@ public class CustomBiomeProvider extends BiomeProvider {
     private final CustomLayer biomeLayer;
 
     private static Stream<Supplier<Biome>> createBiomeStream() {
-        return Stream.concat(
-                WorldGenRegistries.BIOME.stream()
-                        .filter(biome -> {
-                            ResourceLocation id = WorldGenRegistries.BIOME.getKey(biome);
-                            return id != null &&
-                                    id.getNamespace().equals(CaioCesarBiomesMod.MOD_ID);
-                        })
-                        .map(biome -> () -> biome),
-
-                BiomeManager.getAdditionalOverworldBiomes().stream()
-                        .map(key -> () -> WorldGenRegistries.BIOME.getOrThrow(key))
-        );
+        return WorldGenRegistries.BIOME.stream()
+                .map(b -> () -> b);
     }
 
     public CustomBiomeProvider(long seed) {
