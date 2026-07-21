@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:privet_leaves"
+              "name": "caiocesarbiomes:wax_leaf_privet_flowering_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "caiocesarbiomes:privet_sapling"
+              "name": "caiocesarbiomes:wax_leaf_privet_sapling"
             }
           ]
         }
