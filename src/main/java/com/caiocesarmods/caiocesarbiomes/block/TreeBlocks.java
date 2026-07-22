@@ -2520,6 +2520,8 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMPHOR_LOG = registerBlock("stripped_camphor_log",
+            ModLogs::new);
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",
