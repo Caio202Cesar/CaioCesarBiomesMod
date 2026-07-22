@@ -1143,6 +1143,12 @@ public class TreeBlocks {
     //Italian Cypress
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ITALIAN_CYPRESS_WOOD = registerBlock("italian_cypress_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_SAPLING = registerBlock("italian_cypress_sapling",
@@ -2554,6 +2560,8 @@ public class TreeBlocks {
             ChusqueaBambooSapling::new);
 
     public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LOG = registerBlock("patagonian_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_WOOD = registerBlock("patagonian_cypress_wood",
             ModLogs::new);
     public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LEAVES = registerBlock("patagonian_cypress_leaves",
             ModLeaves::new);

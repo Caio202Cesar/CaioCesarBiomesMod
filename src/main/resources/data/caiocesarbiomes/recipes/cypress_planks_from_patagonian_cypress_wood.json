@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:patagonian_cypress_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:italian_cypress_planks",
+    "count": 4
+  }
+}

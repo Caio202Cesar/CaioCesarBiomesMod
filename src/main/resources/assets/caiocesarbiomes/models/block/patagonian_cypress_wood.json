@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/patagonian_cypress_log",
+    "side": "caiocesarbiomes:block/patagonian_cypress_log"
+  }
+}

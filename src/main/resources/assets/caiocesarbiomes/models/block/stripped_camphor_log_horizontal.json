@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/stripped_camphor_log_top",
+    "side": "caiocesarbiomes:block/stripped_camphor_log"
+  }
+}
