@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
@@ -9,14 +10,13 @@ import net.minecraft.world.gen.layer.LayerUtil;
 public enum RelationshipType {
     EDGE {
         @Override
-        public Integer apply(
-                BiomeRelationship relationship,
-                INoiseRandom random,
-                int north,
-                int west,
-                int south,
-                int east,
-                int center) {
+        public Integer apply(BiomeRelationship relationship,
+                             INoiseRandom random,
+                             int north,
+                             int west,
+                             int south,
+                             int east,
+                             int center) {
 
             if (!(LayerUtil.areBiomesSimilar(north, center)
                     && LayerUtil.areBiomesSimilar(south, center)
@@ -29,20 +29,19 @@ public enum RelationshipType {
                         .orElse(center);
             }
 
-            return null;
+            return center;
         }
     },
 
     SUB_BIOME {
         @Override
-        public Integer apply(
-                BiomeRelationship relationship,
-                INoiseRandom random,
-                int north,
-                int west,
-                int south,
-                int east,
-                int center) {
+        public Integer apply(BiomeRelationship relationship,
+                             INoiseRandom random,
+                             int north,
+                             int west,
+                             int south,
+                             int east,
+                             int center) {
 
             if (random.random(relationship.getChance()) == 0) {
 
@@ -52,9 +51,9 @@ public enum RelationshipType {
                         .orElse(center);
             }
 
-            return null;
+            return center;
         }
-    },
+    }; /*
 
     BEACH {
         @Override
@@ -80,7 +79,7 @@ public enum RelationshipType {
             return center;
         }
 
-    },
+    };
 
     HILLS {
         @Override
@@ -129,21 +128,26 @@ public enum RelationshipType {
         }
     };
 
+    private static int id(RegistryKey<Biome> key) {
+        return WorldGenRegistries.BIOME.getId(
+                WorldGenRegistries.BIOME.getOrThrow(key));
+    }
+
     public static class RelationshipUtil {
 
         public static boolean isOcean(int biomeId) {
-            return LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.DEEP_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.COLD_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.DEEP_COLD_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.FROZEN_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.DEEP_FROZEN_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.LUKEWARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.DEEP_LUKEWARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.WARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, Biome.getId(Biomes.DEEP_WARM_OCEAN));
+            return LayerUtil.areBiomesSimilar(biomeId, id(Biomes.OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.COLD_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_COLD_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.FROZEN_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_FROZEN_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.LUKEWARM_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_LUKEWARM_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.WARM_OCEAN))
+                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_WARM_OCEAN));
         }
-    }
+    }*/
 
     public abstract Integer apply(
             BiomeRelationship relationship,
