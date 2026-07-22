@@ -7,7 +7,9 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
                 RelationshipType.SUB_BIOME,
-                4);
+                4,
+                5,
+                6);
 
         // More relationships...
     }

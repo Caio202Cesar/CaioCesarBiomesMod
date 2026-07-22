@@ -19,9 +19,11 @@ public class BiomeRelationshipRegistry {
             ResourceLocation parent,
             ResourceLocation child,
             RelationshipType type,
-            int chance) {
+            int chance,
+            int edgeSize,
+            int priority) {
 
-        register(new BiomeRelationship(parent, child, type, chance));
+        register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority));
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {

@@ -20,6 +20,9 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
                 OVERWORLD);
 
+        addBiome(MediterraneanOakSparseWoodlandBiome.MEDITERRANEAN_OAK_SPARSE_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
+                OVERWORLD);
+
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
 
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD,
