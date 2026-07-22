@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/stripped_stone_oak_log",
+    "side": "caiocesarbiomes:block/stripped_stone_oak_log"
+  }
+}
