@@ -61,5 +61,34 @@ public class CinnamonBarkHandler {
                         p -> p.sendBreakAnimation(event.getHand()));
             }
         }
+
+        // Check cinnamon wood
+        if (state.getBlock() != TreeBlocks.CINNAMON_WOOD.get())
+            return;
+
+        if (!world.isRemote) {
+
+            // Give cinnamon bark
+            Block.spawnAsEntity(
+                    world,
+                    pos,
+                    new ItemStack(ModItems.CINNAMON.get())
+            );
+
+
+            // Replace with stripped log
+            world.setBlockState(
+                    pos,
+                    Blocks.STRIPPED_JUNGLE_WOOD
+                            .getDefaultState()
+            );
+
+
+            // Damage axe
+            if (!player.isCreative()) {
+                held.damageItem(1, player,
+                        p -> p.sendBreakAnimation(event.getHand()));
+            }
+        }
     }
 }

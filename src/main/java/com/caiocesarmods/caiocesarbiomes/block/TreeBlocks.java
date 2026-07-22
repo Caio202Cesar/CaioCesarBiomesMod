@@ -2533,6 +2533,8 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CINNAMON_WOOD = registerBlock("cinnamon_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
