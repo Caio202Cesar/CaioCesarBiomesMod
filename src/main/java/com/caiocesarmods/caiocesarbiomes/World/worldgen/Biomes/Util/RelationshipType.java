@@ -1,7 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-public enum BiomeVariant {
+public enum RelationshipType {
+    SUB_BIOME,
     BEACH,
+    SHORE,
     RIVER,
     HILLS,
     HIGHLANDS,

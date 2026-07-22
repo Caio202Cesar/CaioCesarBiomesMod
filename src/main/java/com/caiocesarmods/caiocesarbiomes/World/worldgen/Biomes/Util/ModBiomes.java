@@ -7,7 +7,7 @@ import net.minecraft.util.registry.WorldGenRegistries;
 public class ModBiomes {
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland");
-    public static final ResourceLocation MEDITERRANEAN_BEACH =
+    public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
     public static final ResourceLocation OLEANDER_GARDENS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "oleander_gardens");

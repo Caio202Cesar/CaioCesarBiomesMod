@@ -3,10 +3,10 @@ package com.caiocesarmods.caiocesarbiomes;
 import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRelationships;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModWorldTypes;
 import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
@@ -135,7 +135,6 @@ public class CaioCesarBiomesMod
         ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(eventBus);
 
-        ModWorldTypes.WORLD_TYPES.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -178,7 +177,7 @@ public class CaioCesarBiomesMod
                     .build();
 
             ModBiomeGeneration.generateBiomes();
-
+            ModBiomeRelationships.register();
         });
     }
 
