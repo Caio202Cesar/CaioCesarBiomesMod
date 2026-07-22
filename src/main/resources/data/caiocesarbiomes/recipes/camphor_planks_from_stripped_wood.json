@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_camphor_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:camphor_planks",
+    "count": 4
+  }
+}

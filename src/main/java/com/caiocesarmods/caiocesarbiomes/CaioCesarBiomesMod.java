@@ -144,6 +144,11 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.LYCHEE_LOG.get(), TreeBlocks.STRIPPED_LYCHEE_LOG.get())
                     .put(TreeBlocks.LYCHEE_WOOD.get(), TreeBlocks.STRIPPED_LYCHEE_WOOD.get())
                     .put(TreeBlocks.CINNAMON_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
+                    .put(TreeBlocks.PRIVET_LOG.get(), TreeBlocks.STRIPPED_PRIVET_LOG.get())
+                    .put(TreeBlocks.PRIVET_WOOD.get(), TreeBlocks.STRIPPED_PRIVET_WOOD.get())
+                    .put(TreeBlocks.CAMPHOR_LOG.get(), TreeBlocks.STRIPPED_CAMPHOR_LOG.get())
+                    .put(TreeBlocks.CAMPHOR_WOOD.get(), TreeBlocks.STRIPPED_CAMPHOR_WOOD.get())
+
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(TreeBlocks.AVOCADO_LOG.get(), TreeBlocks.STRIPPED_AVOCADO_LOG.get())
