@@ -38,11 +38,9 @@ public class DefaultBiomeTreeFeatures {
                             OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_TREES = register("mediterranean_pine_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            CANARY_PINE_TREE_TALL.withChance(0.5F), STONE_PINE_TREE.withChance(0.39F),
-                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.5F),
-                            CANARY_PINE_TREE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_CONIFERS = register("mediterranean_pine_forest_conifers",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE.withChance(0.39F),
+                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
                             PLANE_FANCY_TREE.withChance(0.19F)), ALEPPO_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
@@ -50,6 +48,13 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             LOBLOLLY_PINE.withChance(0.5F), TALL_LOBLOLLY_PINE.withChance(0.35F)), SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 6))));
+
+    public static final ConfiguredFeature<?, ?> LAUREAL_FOREST_CONIFER_TREES = register("laurel_forest_conifer_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            CANARY_PINE_TREE.withChance(0.5F), CANARY_PINE_TREE_TALL.withChance(0.35F),
+                            AGATHIS_TREE1.withChance(0.2F)),
+                            SLASH_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 6))));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_DESERT_TREES = register("temperate_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.2F),
