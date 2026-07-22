@@ -2589,6 +2589,8 @@ public class TreeBlocks {
     //Jungle
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOOD = registerBlock("rainbow_eucalyptus_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LEAVES = registerBlock("rainbow_eucalyptus_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_SAPLING = registerBlock("rainbow_eucalyptus_sapling",
@@ -2604,6 +2606,12 @@ public class TreeBlocks {
 
     //Subtropical Oak Forest
     public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STONE_OAK_WOOD = registerBlock("stone_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_STONE_OAK_LOG = registerBlock("stripped_stone_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_STONE_OAK_WOOD = registerBlock("stripped_stone_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STONE_OAK_LEAVES = registerBlock("stone_oak_leaves",
             ModLeaves::new);
