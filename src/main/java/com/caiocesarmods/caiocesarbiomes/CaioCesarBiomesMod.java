@@ -153,6 +153,10 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.PATAGONIAN_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_CYPRESS_WOOD.get())
                     .put(TreeBlocks.ITALIAN_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_CYPRESS_LOG.get())
                     .put(TreeBlocks.ITALIAN_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_CYPRESS_WOOD.get())
+                    .put(TreeBlocks.EUCALYPTUS_LOG.get(), TreeBlocks.STRIPPED_EUCALYPTUS_LOG.get())
+                    .put(TreeBlocks.EUCALYPTUS_WOOD.get(), TreeBlocks.STRIPPED_EUCALYPTUS_WOOD.get())
+                    .put(TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get(), TreeBlocks.STRIPPED_EUCALYPTUS_LOG.get())
+                    .put(TreeBlocks.RAINBOW_EUCALYPTUS_WOOD.get(), TreeBlocks.STRIPPED_EUCALYPTUS_WOOD.get())
                     .put(TreeBlocks.STONE_OAK_LOG.get(), TreeBlocks.STRIPPED_STONE_OAK_LOG.get())
                     .put(TreeBlocks.STONE_OAK_WOOD.get(), TreeBlocks.STRIPPED_STONE_OAK_WOOD.get())
 
