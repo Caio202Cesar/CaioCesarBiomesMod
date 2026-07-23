@@ -39,9 +39,10 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_CONIFERS = register("mediterranean_pine_forest_conifers",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE.withChance(0.39F),
-                            STONE_PINE_TREE2.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.5F), PLANE_TREE.withChance(0.22F),
-                            PLANE_FANCY_TREE.withChance(0.19F)), ALEPPO_PINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ALEPPO_PINE.withChance(0.6F),
+                            STONE_PINE_TREE.withChance(0.34F), ITALIAN_CYPRESS_TREE.withChance(0.5F),
+                            PLANE_TREE.withChance(0.22F),
+                            PLANE_FANCY_TREE.withChance(0.19F)), STONE_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 4))));
 
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_PINE_TREES = register("humid_subtropical_pine_trees",
