@@ -2558,6 +2558,18 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
             MachillusSapling::new);
 
+    public static final RegistryObject<Block> CHAMPAK_LOG = registerBlock("champak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CHAMPAK_LOG = registerBlock("stripped_champak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHAMPAK_WOOD = registerBlock("champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CHAMPAK_WOOD = registerBlock("stripped_champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHAMPAK_LEAVES = registerBlock("champak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CHAMPAK_SAPLING = registerBlock("champak_sapling",
+            ChampakSapling::new);
 
     //Chilean forests
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
