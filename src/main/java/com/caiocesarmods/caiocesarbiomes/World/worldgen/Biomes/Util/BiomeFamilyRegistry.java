@@ -2,20 +2,20 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import net.minecraft.util.ResourceLocation;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class BiomeFamilyRegistry {
-    Map<ResourceLocation, ResourceLocation> BIOME_TO_FAMILY;
+
+    private static final Map<ResourceLocation, ResourceLocation> BIOME_TO_FAMILY = new HashMap<>();
+
+    private BiomeFamilyRegistry() {}
 
     public static void register(ResourceLocation biome, ResourceLocation family) {
-        register(
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND
-        );
+        BIOME_TO_FAMILY.put(biome, family);
+    }
 
-        register(
-                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND
-        );
+    public static ResourceLocation getFamily(ResourceLocation biome) {
+        return BIOME_TO_FAMILY.getOrDefault(biome, biome);
     }
 }

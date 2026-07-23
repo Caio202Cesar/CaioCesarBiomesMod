@@ -12,13 +12,15 @@ function initializeCoreMod() {
 
                 var instructions = method.instructions;
 
-                var foundBiomeEdgeLayer = false;
+                // Have we already found the EdgeBiomeLayer output?
+                var foundEdgeBiomeLayer = false;
 
                 for (var insn = instructions.getFirst();
                      insn != null;
                      insn = insn.getNext()) {
 
-                    // Find EdgeBiomeLayer.apply(...)
+                    // Look for:
+                    // EdgeBiomeLayer.INSTANCE.apply(...)
                     if (!foundEdgeBiomeLayer &&
                         insn.getOpcode() == Opcodes.INVOKEVIRTUAL &&
                         insn.owner == "net/minecraft/world/gen/layer/EdgeBiomeLayer" &&
@@ -28,7 +30,7 @@ function initializeCoreMod() {
                         continue;
                     }
 
-                    // Find the ASTORE 7 immediately afterwards
+                    // The resulting IAreaFactory is immediately stored in local 7.
                     if (foundEdgeBiomeLayer &&
                         insn.getOpcode() == Opcodes.ASTORE &&
                         insn.var == 7) {
@@ -45,13 +47,13 @@ function initializeCoreMod() {
                             "Lcom/caiocesarmods/caiocesarbiomes/World/worldgen/Biomes/Util/Layers/RelationshipLayer;"
                         ));
 
-                        // LongFunction
+                        // LongFunction (parameter #3)
                         inject.add(new VarInsnNode(
                             Opcodes.ALOAD,
                             3
                         ));
 
-                        // Seed
+                        // Seed used by RelationshipLayer
                         inject.add(new LdcInsnNode(
                             java.lang.Long.valueOf(201L)
                         ));
@@ -69,13 +71,13 @@ function initializeCoreMod() {
                             "net/minecraft/world/gen/IExtendedNoiseRandom"
                         ));
 
-                        // Current biome factory
+                        // Current biome layer
                         inject.add(new VarInsnNode(
                             Opcodes.ALOAD,
                             7
                         ));
 
-                        // RelationshipLayer.apply(...)
+                        // IAreaTransformer1.apply(...)
                         inject.add(new MethodInsnNode(
                             Opcodes.INVOKEINTERFACE,
                             "net/minecraft/world/gen/layer/traits/IAreaTransformer1",
@@ -84,6 +86,7 @@ function initializeCoreMod() {
                             true
                         ));
 
+                        // Replace local 7 with the transformed layer
                         inject.add(new VarInsnNode(
                             Opcodes.ASTORE,
                             7
@@ -91,7 +94,7 @@ function initializeCoreMod() {
 
                         instructions.insert(insn, inject);
 
-                        print("[CaioCesarBiomes] Injected RelationshipLayer.");
+                        print("[CaioCesarBiomes] Injected RelationshipLayer after EdgeBiomeLayer.");
 
                         break;
                     }

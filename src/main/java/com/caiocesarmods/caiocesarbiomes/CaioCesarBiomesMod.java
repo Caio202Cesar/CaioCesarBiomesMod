@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes;
 import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeFamilies;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRelationships;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
@@ -198,6 +199,7 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
             ModBiomeRelationships.register();
+            ModBiomeFamilies.register();
         });
     }
 

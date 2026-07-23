@@ -24,6 +24,7 @@ public enum RelationshipLayer implements ICastleTransformer {
                      int center) {
 
         Biome biome = WorldGenRegistries.BIOME.getByValue(center);
+        System.out.println("[RelationshipLayer] center biome id = " + center);
 
         if (biome == null)
             return center;

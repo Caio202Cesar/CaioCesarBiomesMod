@@ -1,8 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.layer.LayerUtil;
 
 public enum RelationshipType {
     EDGE {
@@ -15,10 +16,15 @@ public enum RelationshipType {
                              int east,
                              int center) {
 
-            if (!(LayerUtil.areBiomesSimilar(north, center)
-                    && LayerUtil.areBiomesSimilar(south, center)
-                    && LayerUtil.areBiomesSimilar(east, center)
-                    && LayerUtil.areBiomesSimilar(west, center))) {
+            ResourceLocation centerFamily = family(center);
+
+            if (centerFamily == null)
+                return center;
+
+            if (!(centerFamily.equals(family(north))
+                    && centerFamily.equals(family(south))
+                    && centerFamily.equals(family(east))
+                    && centerFamily.equals(family(west)))) {
 
                 return WorldGenRegistries.BIOME
                         .getOptional(relationship.getChild())
@@ -50,7 +56,24 @@ public enum RelationshipType {
 
             return center;
         }
-    }; /*
+    };
+
+    private static ResourceLocation family(int biomeId) {
+
+        Biome biome = WorldGenRegistries.BIOME.getByValue(biomeId);
+
+        if (biome == null)
+            return new ResourceLocation("minecraft", "unknown");
+
+        ResourceLocation id = WorldGenRegistries.BIOME.getKey(biome);
+
+        if (id == null)
+            return new ResourceLocation("minecraft", "unknown");
+
+        return BiomeFamilyRegistry.getFamily(id);
+    }
+
+    /*
 
     BEACH {
         @Override
