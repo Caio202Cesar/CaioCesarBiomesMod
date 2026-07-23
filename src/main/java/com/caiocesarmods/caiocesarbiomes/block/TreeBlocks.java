@@ -2594,9 +2594,9 @@ public class TreeBlocks {
 
     //Jungle
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
-            ModLogs::new);
+            EucalyptusLog::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOOD = registerBlock("rainbow_eucalyptus_wood",
-            ModLogs::new);
+            EucalyptusLog::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LEAVES = registerBlock("rainbow_eucalyptus_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_SAPLING = registerBlock("rainbow_eucalyptus_sapling",
@@ -2625,6 +2625,12 @@ public class TreeBlocks {
             StoneOakSapling::new); //Hardy from zone 7 to 10
 
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASTANOPSIS_WOOD = registerBlock("castanopsis_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASTANOPSIS_LOG = registerBlock("stripped_castanopsis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASTANOPSIS_WOOD = registerBlock("stripped_castanopsis_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
             () -> new CastanopsisLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
