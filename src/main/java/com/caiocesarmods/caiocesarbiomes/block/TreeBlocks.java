@@ -2422,6 +2422,12 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BAOBAB_WOOD = registerBlock("baobab_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAOBAB_LOG = registerBlock("stripped_baobab_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAOBAB_WOOD = registerBlock("stripped_baobab_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
             () -> new BaobabLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BAOBAB_BRANCHES));

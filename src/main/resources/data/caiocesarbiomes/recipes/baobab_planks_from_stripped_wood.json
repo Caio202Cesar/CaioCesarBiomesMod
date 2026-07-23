@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_baobab_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:baobab_planks",
+    "count": 4
+  }
+}
