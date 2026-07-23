@@ -2442,13 +2442,8 @@ public class TreeBlocks {
             BaobabBudBlock::new);
     public static final RegistryObject<Block> BAOBAB_FRUIT = registerBlock("baobab_fruit",
             BaobabFruitBlock::new);
-
     public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
             BaobabSapling::new);
-
-    //Sugar apple
-
-    //Coast coral
 
     //Acerola
     public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
@@ -2560,7 +2555,8 @@ public class TreeBlocks {
 
     public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
             ModLeaves::new); //Avocado log
-    //public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling", MachillusSapling::new);
+    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
+            MachillusSapling::new);
 
 
     //Chilean forests
