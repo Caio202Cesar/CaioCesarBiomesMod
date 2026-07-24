@@ -154,6 +154,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> BAOBAB_PLANKS = registerBlock("baobab_planks",
             ModLogs::new);
+    public static final RegistryObject<Block> OBTUSA_OAK_PLANKS = registerBlock("obtusa_oak_planks",
+            ModLogs::new);
     public static final RegistryObject<Block> CHAMPAK_PLANKS = registerBlock("champak_planks",
             ModLogs::new);
 
