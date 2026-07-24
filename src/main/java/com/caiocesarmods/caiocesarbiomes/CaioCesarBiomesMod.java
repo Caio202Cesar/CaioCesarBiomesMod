@@ -172,6 +172,10 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.CALLISTEMON_WOOD.get(), TreeBlocks.STRIPPED_CALLISTEMON_WOOD.get())
                     .put(TreeBlocks.AGATHIS_LOG.get(), TreeBlocks.STRIPPED_AGATHIS_LOG.get())
                     .put(TreeBlocks.AGATHIS_WOOD.get(), TreeBlocks.STRIPPED_AGATHIS_WOOD.get())
+                    .put(TreeBlocks.RING_CUPPED_OAK_LOG.get(), Blocks.STRIPPED_OAK_LOG)
+                    .put(TreeBlocks.RING_CUPPED_OAK_WOOD.get(), Blocks.STRIPPED_OAK_WOOD)
+                    .put(TreeBlocks.LIVE_OAK_LOG.get(), Blocks.STRIPPED_OAK_LOG)
+                    .put(TreeBlocks.LIVE_OAK_WOOD.get(), Blocks.STRIPPED_OAK_WOOD)
 
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())

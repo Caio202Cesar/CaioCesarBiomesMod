@@ -1256,8 +1256,10 @@ public class TreeBlocks {
 
 
     ///L
-//Live Oak
+    //Live Oak
     public static final RegistryObject<Block> LIVE_OAK_LOG = registerBlock("live_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LIVE_OAK_WOOD = registerBlock("live_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> LIVE_OAK_LEAVES = registerBlock("live_oak_leaves",
             ModLeaves::new);
@@ -2647,6 +2649,15 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> STONE_OAK_SAPLING = registerBlock("stone_oak_sapling",
             StoneOakSapling::new); //Hardy from zone 7 to 10
+
+    public static final RegistryObject<Block> RING_CUPPED_OAK_LOG = registerBlock("ring_cupped_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> RING_CUPPED_OAK_WOOD = registerBlock("ring_cupped_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> RING_CUPPED_OAK_LEAVES = registerBlock("ring_cupped_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RING_CUPPED_OAK_SAPLING = registerBlock("ring_cupped_oak_sapling",
+            StoneOakSapling::new); //Hardy from zone 7 to 9
 
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
             ModLogs::new);

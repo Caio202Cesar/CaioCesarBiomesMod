@@ -2148,6 +2148,27 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RING_CUPPED_OAK_TREE = register("ring_cupped_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RING_CUPPED_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RING_CUPPED_OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT045, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025,
+                            ModFeatures.Placements.KIWI_VINE_PLACEMENT))
+                    .setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RING_CUPPED_OAK_FANCY_TREE = register("ring_cupped_oak_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.RING_CUPPED_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RING_CUPPED_OAK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025,
+                            ModFeatures.Placements.KIWI_VINE_PLACEMENT))
+                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
@@ -2158,6 +2179,9 @@ public class TreeFeatures {
 
         protected static final BlockState STONE_OAK_LOG = TreeBlocks.STONE_OAK_LOG.get().getDefaultState();
         protected static final BlockState STONE_OAK_LEAVES = TreeBlocks.STONE_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState RING_CUPPED_OAK_LOG = TreeBlocks.RING_CUPPED_OAK_LOG.get().getDefaultState();
+        protected static final BlockState RING_CUPPED_OAK_LEAVES = TreeBlocks.RING_CUPPED_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();
