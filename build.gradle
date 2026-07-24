@@ -66,14 +66,24 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        name = "Progwml6 maven"
+        name = "Progwml6"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
+
     maven {
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
     }
 
+    maven {
+        name = "Maven Central"
+        url = "https://repo.maven.apache.org/maven2"
+    }
+
+    maven {
+        name = "JitPack"
+        url = "https://jitpack.io"
+    }
 }
 
 dependencies {
@@ -81,6 +91,11 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    implementation "io.github.llamalad7:mixinextras-forge:0.3.5"
+
+    compileOnly "io.github.llamalad7:mixinextras-common:0.3.5"
+    annotationProcessor "io.github.llamalad7:mixinextras-common:0.3.5"
 
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153")
