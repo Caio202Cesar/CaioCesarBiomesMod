@@ -2665,9 +2665,13 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
             CastanopsisSapling::new); //Hardy from zone 7 to 10
 
-    public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
+    public static final RegistryObject<Block> OBTUSA_OAK_LOG = registerBlock("obtusa_oak_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LAUREL_OAK_LOG = registerBlock("stripped_laurel_oak_log",
+    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_LOG = registerBlock("stripped_obtusa_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> OBTUSA_OAK_WOOD = registerBlock("obtusa_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_WOOD = registerBlock("stripped_obtusa_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> OBTUSA_OAK_LEAVES = registerBlock("obtusa_oak_leaves",
             () -> new ObtusaOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
