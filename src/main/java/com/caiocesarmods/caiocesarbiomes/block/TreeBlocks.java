@@ -2657,7 +2657,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RING_CUPPED_OAK_LEAVES = registerBlock("ring_cupped_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RING_CUPPED_OAK_SAPLING = registerBlock("ring_cupped_oak_sapling",
-            StoneOakSapling::new); //Hardy from zone 7 to 9
+            RingCuppedOakSapling::new); //Hardy from zone 7 to 9
 
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
             ModLogs::new);
