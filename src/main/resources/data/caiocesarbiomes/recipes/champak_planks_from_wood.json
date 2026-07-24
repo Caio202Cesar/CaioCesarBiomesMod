@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:champak_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:champak_planks",
+    "count": 4
+  }
+}

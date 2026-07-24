@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/champak_leaves",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/champak_flowering_leaves",
+        "weight": 2}
+    ]
+  }}
