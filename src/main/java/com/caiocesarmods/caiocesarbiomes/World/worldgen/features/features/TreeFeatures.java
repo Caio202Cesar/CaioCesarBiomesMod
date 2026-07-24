@@ -1966,9 +1966,16 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.COIHUE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COIHUE_TREE_WITH_BELLFLOWER = register("coihue_tree_with_bellflower",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.COIHUE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ModFeatures.Placements.RED_BELLFLOWER_PLACEMENT,
-                            ModFeatures.Placements.MAGENTA_BELLFLOWER_PLACEMENT, ModFeatures.Placements.PINK_BELLFLOWER_PLACEMENT,
-                            ModFeatures.Placements.WHITE_BELLFLOWER_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    ModFeatures.Placements.MAGENTA_BELLFLOWER_PLACEMENT, ModFeatures.Placements.PINK_BELLFLOWER_PLACEMENT,
+                    ModFeatures.Placements.WHITE_BELLFLOWER_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LENGA_BEECH_TREE = register("lenga_beech_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),

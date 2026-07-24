@@ -56,6 +56,7 @@ public class SouthernBeechForestBiome {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateMagellanicPlants(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSouthernBeechs(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
