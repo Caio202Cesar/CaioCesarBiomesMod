@@ -2690,6 +2690,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CALLISTEMON_LOG = registerBlock("stripped_callistemon_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CALLISTEMON_WOOD = registerBlock("callistemon_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CALLISTEMON_WOOD = registerBlock("stripped_callistemon_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",

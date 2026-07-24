@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_callistemon_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:callistemon_planks",
+    "count": 4
+  }
+}

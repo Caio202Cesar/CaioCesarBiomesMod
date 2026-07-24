@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:callistemon_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:callistemon_wood",
+    "count": 3
+  }
+}
