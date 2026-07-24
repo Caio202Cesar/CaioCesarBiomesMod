@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:stripped_agathis_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:agathis_planks",
+    "count": 4
+  }
+}

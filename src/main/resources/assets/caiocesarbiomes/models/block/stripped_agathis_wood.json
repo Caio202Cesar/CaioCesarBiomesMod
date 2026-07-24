@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/stripped_agathis_log",
+    "side": "caiocesarbiomes:block/stripped_agathis_log"
+  }
+}
