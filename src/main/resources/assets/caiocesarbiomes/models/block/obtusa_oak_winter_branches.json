@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/obtusa_oak_winter_branches",
+    "particle": "caiocesarbiomes:block/obtusa_oak_winter_branches"
+  }
+}
