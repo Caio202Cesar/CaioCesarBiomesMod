@@ -2706,6 +2706,10 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_AGATHIS_LOG = registerBlock("stripped_agathis_log",
             ModLogs::new);
+    public static final RegistryObject<Block> AGATHIS_WOOD = registerBlock("agathis_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AGATHIS_WOOD = registerBlock("stripped_agathis_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> AGATHIS_SAPLING = registerBlock("agathis_sapling",
             AgathisSapling::new);
 
