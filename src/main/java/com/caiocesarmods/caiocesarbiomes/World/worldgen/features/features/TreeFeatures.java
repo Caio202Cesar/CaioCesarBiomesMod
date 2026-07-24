@@ -2139,6 +2139,14 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHAMPAK_TREE = register("champak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHAMPAK_LOG),
+                    new SimpleBlockStateProvider(States.CHAMPAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setIgnoreVines().build()));
 
     public static final class States {
 
@@ -2200,6 +2208,9 @@ public class TreeFeatures {
         protected static final BlockState AVOCADO_LOG = TreeBlocks.AVOCADO_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
         protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CHAMPAK_LOG = TreeBlocks.CHAMPAK_LOG.get().getDefaultState();
+        protected static final BlockState CHAMPAK_LEAVES = TreeBlocks.CHAMPAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState ALMOND_BLOSSOM = TreeBlocks.ALMOND_BLOSSOM.get().getDefaultState();
         protected static final BlockState ALMOND_LEAVES = TreeBlocks.ALMOND_LEAVES.get().getDefaultState();

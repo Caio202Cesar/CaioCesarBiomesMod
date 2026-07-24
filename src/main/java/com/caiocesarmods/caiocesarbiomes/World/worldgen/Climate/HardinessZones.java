@@ -279,6 +279,8 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "machillus_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "maritime_pine_sapling"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "brutia_pine_sapling"), "HZ(min) 6, HZ(max) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "champak_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F);" +
+                "⚠ can be grown under 5x5 glass structure in colder biomes.");
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +
