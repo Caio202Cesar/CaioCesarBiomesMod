@@ -338,8 +338,10 @@
     "caiocesarbiomes:wax_leaf_privet_fruiting_leaves",
     "caiocesarbiomes:machillus_leaves",
     "caiocesarbiomes:maritime_pine_leaves",
-    "caiocesarbiomes:brutia_pine_leaves"
-
+    "caiocesarbiomes:brutia_pine_leaves",
+    "caiocesarbiomes:obtusa_oak_leaves",
+    "caiocesarbiomes:obtusa_oak_fall_leaves",
+    "caiocesarbiomes:obtusa_oak_winter_branches"
   ]
 }
 
