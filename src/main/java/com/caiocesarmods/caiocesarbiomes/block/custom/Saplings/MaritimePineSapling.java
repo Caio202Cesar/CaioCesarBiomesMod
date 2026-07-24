@@ -2,7 +2,10 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -25,104 +28,49 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CallistemonSapling extends SaplingBlock {
-    public CallistemonSapling() {
-        super(new CallistemonTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class MaritimePineSapling extends SaplingBlock {
+    public MaritimePineSapling() {
+        super(new MaritimePineTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.CALLISTEMON_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.MARITIME_PINE_SAPLING.get(), RenderType.getCutout());
 
     }
 
-    //Hardy to zone 8 to 12 (1.6F)
+    //Hardy from zone 8 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.75f;
-        float maxTemp = 1.6f;
+        float maxTemp = 0.89f;
 
-        boolean isProtectedByGlass = isUnderGlass(world, pos);
-
-        if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)
-                || (biomeTemp < minTemp && isProtectedByGlass)) {
-
+        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
+            // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
         // If biome temperature is too low/high, do nothing (block natural growth)
     }
 
-    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
-
-        BlockPos.Mutable mutable = new BlockPos.Mutable();
-
-        // Step 1: Find the first block above that blocks the sky (roof height)
-        int roofY = -1;
-
-        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
-            mutable.setPos(pos.getX(), y, pos.getZ());
-
-            if (!world.isAirBlock(mutable)) {
-                roofY = y;
-                break;
-            }
-        }
-
-        if (roofY == -1) {
-            return false; // No roof found
-        }
-
-        // (radius 2 → 5x5 small green house)
-        // (radius 3 → 7x7 medium green house)
-        // (radius 4 → 9x9 large green house)
-        int radius = 3;
-
-        for (int x = -radius; x <= radius; x++) {
-            for (int z = -radius; z <= radius; z++) {
-
-                mutable.setPos(pos.getX() + x, roofY, pos.getZ() + z);
-                BlockState state = world.getBlockState(mutable);
-
-                if (!(state.getBlock() instanceof GlassBlock)) {
-                    return false; // If any block is not glass → fail
-                }
-            }
-        }
-
-        return true; // Entire roof area is glass
-    }
-
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-        float temp = world.getBiome(pos).getTemperature(pos);
 
-        boolean isProtectedByGlass = false;
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
 
-        if (world instanceof ServerWorld) {
-            isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
-        }
+        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
+        boolean tooHot = temp > 0.89F;
+        boolean tooCold = temp < 0.75F;
 
-        float minTemp = 0.75F;
-        float maxTemp = 1.6F;
-
-        // If protected, ignore cold restriction
-        if (!isProtectedByGlass) {
-            if (temp < minTemp || temp > maxTemp) {
-                return false;
-            }
-        } else {
-            // Under glass → only block extreme heat
-            if (temp > maxTemp) {
-                return false;
-            }
+        if (tooHot || tooCold) {
+            return false;
         }
 
         return super.canGrow(worldIn, pos, state, isClient);
@@ -138,20 +86,14 @@ public class CallistemonSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 1.6f;
+            float minTemp = 0.75f, maxTemp = 0.89f;
 
-            boolean isProtectedByGlass = false;
-
-            if (worldIn instanceof ServerWorld) {
-                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
-            }
-
-            if (temp < minTemp && !isProtectedByGlass) {
+            if (temp < minTemp) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS;
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
             if (temp > maxTemp) {
@@ -159,12 +101,13 @@ public class CallistemonSapling extends SaplingBlock {
                         new StringTextComponent("This biome is too hot for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS;
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
             }
 
+            // If temp is in range, optionally allow normal processing:
+            // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
-
         return ActionResultType.SUCCESS;
     }
 
@@ -176,15 +119,11 @@ public class CallistemonSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CallistemonTree extends Tree {
+    private static class MaritimePineTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
-                return TreeFeatures.CALLISTEMON_TREE2;
-            } else {
-                return TreeFeatures.CALLISTEMON_TREE1;
-            }
+                return TreeFeatures.MARITIME_PINE;
         }
     }
 }
