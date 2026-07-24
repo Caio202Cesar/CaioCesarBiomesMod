@@ -387,7 +387,6 @@ public class TreeFeatures {
                     new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(8, 6, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-
     //Aleppo Pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALEPPO_PINE = register("aleppo_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STONE_PINE_LOG),
@@ -395,6 +394,13 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(7, 6, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    //Maritime Pine
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARITIME_PINE = register("maritime_pine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STONE_PINE_LOG),
+                    new SimpleBlockStateProvider(States.MARITIME_PINE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Indian Coral Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_CORAL_TREE = register("indian_coral_tree",
@@ -2359,6 +2365,7 @@ public class TreeFeatures {
         protected static final BlockState STONE_PINE_LOG = TreeBlocks.STONE_PINE_LOG.get().getDefaultState();
         protected static final BlockState STONE_PINE_LEAVES = TreeBlocks.STONE_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState ALEPPO_PINE_LEAVES = TreeBlocks.ALEPPO_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState MARITIME_PINE_LEAVES = TreeBlocks.MARITIME_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHINESE_RED_PINE_LOG = TreeBlocks.CHINESE_RED_PINE_LOG.get().getDefaultState();
         protected static final BlockState CHINESE_RED_PINE_LEAVES = TreeBlocks.CHINESE_RED_PINE_LEAVES.get().getDefaultState();

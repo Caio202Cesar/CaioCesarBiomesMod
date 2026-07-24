@@ -2618,12 +2618,16 @@ public class TreeBlocks {
             RainbowEucalyptusSapling::new);
 
 
-    //Mediterranean
+    //Mediterranean Pines
     public static final RegistryObject<Block> ALEPPO_PINE_LEAVES = registerBlock("aleppo_pine_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ALEPPO_PINE_SAPLING = registerBlock("aleppo_pine_sapling",
             AleppoPineSapling::new);
 
+    public static final RegistryObject<Block> MARITIME_PINE_LEAVES = registerBlock("maritime_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MARITIME_PINE_SAPLING = registerBlock("maritime_pine_sapling",
+            MaritimePineSapling::new);
 
     //Subtropical Oak Forest
     public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
