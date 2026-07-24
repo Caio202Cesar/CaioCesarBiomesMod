@@ -380,27 +380,49 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(States.STONE_PINE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(8, 6, 0), new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+                    new ForkyTrunkPlacer(8, 6, 0),
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STONE_PINE_TREE2 = register("stone_pine_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(States.STONE_PINE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(8, 6, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     //Aleppo Pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALEPPO_PINE = register("aleppo_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ALEPPO_PINE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(7, 6, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     //Maritime Pine
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MARITIME_PINE = register("maritime_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.STONE_PINE_LOG),
                     new SimpleBlockStateProvider(States.MARITIME_PINE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    //Brutia Pine
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRUTIA_PINE_FANCY_TREE = register("brutia_pine_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
+                    new SimpleBlockStateProvider(States.BRUTIA_PINE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRUTIA_PINE_FORKY_TREE = register("brutia_pine_forky_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_PINE_LOG),
+                    new SimpleBlockStateProvider(States.BRUTIA_PINE_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
+
 
     //Indian Coral Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_CORAL_TREE = register("indian_coral_tree",
@@ -508,7 +530,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
 
     //Elderberry Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ELDERBERRY_TREE = register("elderberry_tree",
@@ -771,9 +793,11 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINE_LIKE_CASUARINA_TREE = register("pine_like_casuarina_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASUARINA_LOG),
                     new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2), FeatureSpread.create(3, 0)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3, 0), FeatureSpread.create(3, 2),
+                            FeatureSpread.create(3, 0)),
                     new StraightTrunkPlacer(16, 2, 1),
-                    new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(2, 0, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASUARINA_FANCY_TREE = register("casuarina_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CASUARINA_LOG),
                     new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
@@ -781,13 +805,15 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LARGE_CASUARINA = register("large_casuarina",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASUARINA_LOG),
                     new SimpleBlockStateProvider(States.CASUARINA_LEAVES),
                     new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(8,   4, 2),
-                    new TwoLayerFeature(1, 0, 2)).setIgnoreVines().build())));
+                    new TwoLayerFeature(1, 0, 2))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL))))
+                    .setIgnoreVines().build())));
 
     //Pohutukawa
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> POHUTUKAWA_TREE = register("pohutukawa_tree",
@@ -877,7 +903,8 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOK_PINE_TREE = register("cook_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.COOK_PINE_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 0), FeatureSpread.create(2, 2),
+                            FeatureSpread.create(2, 0)),
                     new StraightTrunkPlacer(19, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
@@ -2366,6 +2393,7 @@ public class TreeFeatures {
         protected static final BlockState STONE_PINE_LEAVES = TreeBlocks.STONE_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState ALEPPO_PINE_LEAVES = TreeBlocks.ALEPPO_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState MARITIME_PINE_LEAVES = TreeBlocks.MARITIME_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState BRUTIA_PINE_LEAVES = TreeBlocks.BRUTIA_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHINESE_RED_PINE_LOG = TreeBlocks.CHINESE_RED_PINE_LOG.get().getDefaultState();
         protected static final BlockState CHINESE_RED_PINE_LEAVES = TreeBlocks.CHINESE_RED_PINE_LEAVES.get().getDefaultState();

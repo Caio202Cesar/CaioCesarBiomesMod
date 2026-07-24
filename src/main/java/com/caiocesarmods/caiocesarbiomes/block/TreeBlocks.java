@@ -2629,6 +2629,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MARITIME_PINE_SAPLING = registerBlock("maritime_pine_sapling",
             MaritimePineSapling::new);
 
+    public static final RegistryObject<Block> BRUTIA_PINE_LEAVES = registerBlock("brutia_pine_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BRUTIA_PINE_SAPLING = registerBlock("brutia_pine_sapling",
+            BrutiaPineSapling::new);
+
     //Subtropical Oak Forest
     public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
             ModLogs::new);

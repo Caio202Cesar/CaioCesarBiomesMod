@@ -222,6 +222,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         WaxLeafPrivetSapling.registerRenderLayer();
         MachillusSapling.registerRenderLayer();
         MaritimePineSapling.registerRenderLayer();
+        BrutiaPineSapling.registerRenderLayer();
 
     }
 }
