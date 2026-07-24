@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -31,6 +32,8 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
+            property 'mixin.env.remapRefMap', 'true'
+
             mods {
                 "caiocesarbiomes" {
                     source sourceSets.main
@@ -53,6 +56,12 @@ minecraft {
     }
 }
 
+mixin {
+    add sourceSets.main, "caiocesarbiomes.refmap.json"
+
+    config "caiocesarbiomes.mixins.json"
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
@@ -70,6 +79,8 @@ repositories {
 dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153")

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.caiocesarmods.caiocesarbiomes.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "caiocesarbiomes.refmap.json",
+  "mixins": [
+    "LayerUtilMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
