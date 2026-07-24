@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:live_oak_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:live_oak_wood",
+    "count": 3
+  }
+}

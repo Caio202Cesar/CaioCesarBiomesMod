@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "caiocesarbiomes:block/ring_cupped_oak_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "caiocesarbiomes:block/ring_cupped_oak_wood"
+    },
+    "axis=z": {
+      "model": "caiocesarbiomes:block/ring_cupped_oak_wood",
+      "x": 90
+    }
+  }
+}

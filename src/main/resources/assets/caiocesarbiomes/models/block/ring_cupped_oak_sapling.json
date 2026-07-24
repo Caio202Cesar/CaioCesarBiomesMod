@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/ring_cupped_oak_sapling",
+    "particle": "caiocesarbiomes:block/ring_cupped_oak_sapling"
+  }
+}
