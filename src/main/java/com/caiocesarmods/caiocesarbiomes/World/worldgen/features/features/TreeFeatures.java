@@ -2117,17 +2117,19 @@ public class TreeFeatures {
     //Eucalyptus Forest
     //Blackwood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACKWOOD_ACACIA_TREE = register("blackwood_acacia_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HOLM_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.HOLM_OAK_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACKWOOD_ACACIA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BLACKWOOD_ACACIA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACKWOOD_ACACIA_FANCY_TREE = register("blackwood_acacia_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.HOLM_OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.HOLM_OAK_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACKWOOD_ACACIA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BLACKWOOD_ACACIA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE1 = register("callistemon_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CALLISTEMON_LOG),
@@ -2181,6 +2183,9 @@ public class TreeFeatures {
 
         protected static final BlockState AGATHIS_LOG = TreeBlocks.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BLACKWOOD_ACACIA_LOG = TreeBlocks.BLACKWOOD_ACACIA_LOG.get().getDefaultState();
+        protected static final BlockState BLACKWOOD_ACACIA_LEAVES = TreeBlocks.BLACKWOOD_ACACIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState STONE_OAK_LOG = TreeBlocks.STONE_OAK_LOG.get().getDefaultState();
         protected static final BlockState STONE_OAK_LEAVES = TreeBlocks.STONE_OAK_LEAVES.get().getDefaultState();
