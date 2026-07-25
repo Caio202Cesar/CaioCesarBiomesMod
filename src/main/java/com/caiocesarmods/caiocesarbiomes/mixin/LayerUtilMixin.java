@@ -26,8 +26,6 @@ public class LayerUtilMixin {
             IExtendedNoiseRandom<T> random,
             IAreaFactory<T> area) {
 
-        System.out.println("[CCB] Redirected EdgeBiomeLayer.apply()");
-
         IAreaFactory<T> result = instance.apply(random, area);
 
         System.out.println("[CCB] Injecting RelationshipLayer");
