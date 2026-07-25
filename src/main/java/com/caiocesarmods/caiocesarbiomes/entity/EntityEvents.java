@@ -17,9 +17,6 @@ public class EntityEvents {
 
         CreeperEntity creeper = (CreeperEntity) event.getEntity();
 
-        creeper.goalSelector.addGoal(
-                1,
-                new AvoidCamphorGoal(creeper, 1.0D, 1.25D)
-        );
+        //creeper.goalSelector.addGoal(1, new AvoidCamphorGoal(creeper, 1.0D, 1.25D));
     }
 }
