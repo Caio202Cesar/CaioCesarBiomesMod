@@ -25,7 +25,7 @@ public class SaltDesertBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> SALT_DESERT = BIOMES.register("salt_desert",
-           () -> makeSaltDesertBiome(() -> ModConfiguredSurfaceBuilders.SALT_DESERT_SURFACE, 0.125f, 0.4f));
+           () -> makeSaltDesertBiome(() -> ModConfiguredSurfaceBuilders.SALT_DESERT_SURFACE, 0.0F, 0.025F));
 
 
    private static Biome makeSaltDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
