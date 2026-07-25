@@ -68,6 +68,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("gloriosa_trunk_decorator",
                     () -> new TreeDecoratorType<>(GloriosaTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<ResurrectionFernTreeDecorator>> RESURRECTION_FERN_TRUNK_DECORATOR =
+            TREE_DECORATORS.register("resurrection_fern_trunk_decorator",
+                    () -> new TreeDecoratorType<>(ResurrectionFernTreeDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
