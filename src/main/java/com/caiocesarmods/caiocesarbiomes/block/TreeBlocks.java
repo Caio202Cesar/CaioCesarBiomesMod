@@ -927,9 +927,6 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> WOOLLYBUTT_LEAVES = registerBlock("woollybutt_leaves",
-            ModLeaves::new);
-    //public static final RegistryObject<Block> WOOLLYBUTT_SAPLING = registerBlock("woollybutt_sapling", WoollybuttSapling::new);
 
     //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
@@ -2732,6 +2729,17 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> AGATHIS_SAPLING = registerBlock("agathis_sapling",
             AgathisSapling::new);
+
+    //Eucalyptus Forests
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_LOG = registerBlock("blackwood_acacia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_WOOD = registerBlock("blackwood_acacia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_LEAVES = registerBlock("blackwood_acacia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_SAPLING = registerBlock("blackwood_acacia_sapling",
+            BlackwoodAcaciaSapling::new);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
