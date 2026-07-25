@@ -2,7 +2,6 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -31,13 +30,13 @@ import net.minecraftforge.common.PlantType;
 
 import java.util.Random;
 
-public class ResurrectionFernBlock extends Block implements IForgeShearable {
+public class ResurrectionFernDormantBlock extends Block implements IForgeShearable {
     public static final BooleanProperty NORTH = BlockStateProperties.NORTH;
     public static final BooleanProperty SOUTH = BlockStateProperties.SOUTH;
     public static final BooleanProperty EAST  = BlockStateProperties.EAST;
     public static final BooleanProperty WEST  = BlockStateProperties.WEST;
 
-    public ResurrectionFernBlock(Properties properties) {
+    public ResurrectionFernDormantBlock(Properties properties) {
         super(properties);
 
         this.setDefaultState(this.stateContainer.getBaseState()
@@ -230,14 +229,14 @@ public class ResurrectionFernBlock extends Block implements IForgeShearable {
 
         boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
 
-        boolean goDormant = ("SUMMER".equals(currentSeason) || "FALL".equals(currentSeason)) && !hasRain;
+        boolean goGreen = ("WINTER".equals(currentSeason) || "SPRING".equals(currentSeason)) && !hasRain;
 
         BlockState newState = state;
 
         // Mediterranean and tropical summer/fall drought
-        if (goDormant && random.nextInt(15) == 0) {
+        if (goGreen && random.nextInt(15) == 0) {
 
-            newState = ModPlants.RESURRECTION_FERN_DORMANT.get()
+            newState = ModPlants.RESURRECTION_FERN.get()
                     .getDefaultState();
 
         }
@@ -246,10 +245,10 @@ public class ResurrectionFernBlock extends Block implements IForgeShearable {
         if (newState.getBlock() != state.getBlock()) {
 
             newState = newState
-                    .with(ResurrectionFernBlock.NORTH, state.get(ResurrectionFernBlock.NORTH))
-                    .with(ResurrectionFernBlock.SOUTH, state.get(ResurrectionFernBlock.SOUTH))
-                    .with(ResurrectionFernBlock.EAST, state.get(ResurrectionFernBlock.EAST))
-                    .with(ResurrectionFernBlock.WEST, state.get(ResurrectionFernBlock.WEST));
+                    .with(ResurrectionFernDormantBlock.NORTH, state.get(ResurrectionFernDormantBlock.NORTH))
+                    .with(ResurrectionFernDormantBlock.SOUTH, state.get(ResurrectionFernDormantBlock.SOUTH))
+                    .with(ResurrectionFernDormantBlock.EAST, state.get(ResurrectionFernDormantBlock.EAST))
+                    .with(ResurrectionFernDormantBlock.WEST, state.get(ResurrectionFernDormantBlock.WEST));
 
             worldIn.setBlockState(pos, newState, 3);
         }
@@ -258,13 +257,6 @@ public class ResurrectionFernBlock extends Block implements IForgeShearable {
         if (temp < MIN_TEMP || temp > MAX_TEMP) {
             worldIn.destroyBlock(pos, false);
         }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(ModPlants.RESURRECTION_FERN.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModPlants.RESURRECTION_FERN_DORMANT.get(), RenderType.getCutout());
-
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {

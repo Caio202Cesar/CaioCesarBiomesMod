@@ -285,6 +285,10 @@ public class HardinessZones {
                 "⚠ Can't grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hoop_pine_sapling"), "HZ(min) 9, HZ(max) 12 (1.6F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "blackwood_acacia_sapling"), "HZ(min) 8, HZ(max) 12 (1.6F)");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "resurrection_fern"), "HZ(min) 6, HZ(max) 12 (1.2F)");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "resurrection_fern_dormant"), "HZ(min) 6, HZ(max) 12 (1.2F)");
+
+
 
         // OTHER MODS
         SAPLING_ZONES.put(new ResourceLocation("brbiomesmod", "acai_sapling"), "HZ(min) 11, HZ(max) 12 (1.2F); " +

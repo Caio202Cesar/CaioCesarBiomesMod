@@ -333,7 +333,9 @@ public class ModPlants {
     public static final RegistryObject<Block> RESURRECTION_FERN = registerBlock("resurrection_fern",
             () -> new ResurrectionFernBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.GREEN)
                     .setRequiresTool().notSolid().doesNotBlockMovement().zeroHardnessAndResistance()));
-
+    public static final RegistryObject<Block> RESURRECTION_FERN_DORMANT = registerBlock("resurrection_fern_dormant",
+            () -> new ResurrectionFernDormantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN)
+                    .setRequiresTool().notSolid().doesNotBlockMovement().zeroHardnessAndResistance()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
