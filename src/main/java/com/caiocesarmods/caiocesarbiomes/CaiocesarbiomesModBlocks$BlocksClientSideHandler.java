@@ -225,5 +225,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BrutiaPineSapling.registerRenderLayer();
         ChampakSapling.registerRenderLayer();
         RingCuppedOakSapling.registerRenderLayer();
+        HoopPineSapling.registerRenderLayer();
     }
 }

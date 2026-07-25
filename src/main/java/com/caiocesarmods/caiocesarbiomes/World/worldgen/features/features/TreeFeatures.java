@@ -951,7 +951,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HOOP_PINE_TREE = register("hoop_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
-                    new SimpleBlockStateProvider(States.BUNYA_PINE_LEAVES),
+                    new SimpleBlockStateProvider(States.HOOP_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(4, 0), FeatureSpread.create(4, 4), FeatureSpread.create(4, 0)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
@@ -2366,6 +2366,7 @@ public class TreeFeatures {
         protected static final BlockState NORFOLK_PINE_LEAVES = TreeBlocks.NORFOLK_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState MONKEY_PUZZLE_LEAVES = TreeBlocks.MONKEY_PUZZLE_LEAVES.get().getDefaultState();
         protected static final BlockState BUNYA_PINE_LEAVES = TreeBlocks.BUNYA_PINE_LEAVES.get().getDefaultState();
+        protected static final BlockState HOOP_PINE_LEAVES = TreeBlocks.HOOP_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState JUNGLE_FIG_LOG = TreeBlocks.JUNGLE_FIG_LOG.get().getDefaultState();
         protected static final BlockState WEEPING_FIG_LEAVES = TreeBlocks.WEEPING_FIG_LEAVES.get().getDefaultState();
