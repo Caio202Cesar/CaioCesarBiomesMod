@@ -24,7 +24,11 @@ public enum RelationshipLayer implements ICastleTransformer {
                      int center) {
 
         Biome biome = WorldGenRegistries.BIOME.getByValue(center);
-        System.out.println("[RelationshipLayer] center biome id = " + center);
+
+        System.out.println(
+                "[RelationshipLayer] center id=" + center +
+                        " biome=" + WorldGenRegistries.BIOME.getKey(biome)
+        );
 
         if (biome == null)
             return center;
@@ -45,8 +49,10 @@ public enum RelationshipLayer implements ICastleTransformer {
                 east,
                 center);
 
-        if (edge != null)
+        if (edge != null) {
+            System.out.println("[RelationshipLayer] EDGE -> " + edge);
             return edge;
+        }
 
         // SUB BIOME
         Integer subBiome = applyRelationship(
@@ -59,8 +65,10 @@ public enum RelationshipLayer implements ICastleTransformer {
                 east,
                 center);
 
-        if (subBiome != null)
+        if (subBiome != null) {
+            System.out.println("[RelationshipLayer] SUB -> " + subBiome);
             return subBiome;
+        }
 
         return center;
     }
