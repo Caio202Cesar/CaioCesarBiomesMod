@@ -15,8 +15,17 @@ public enum RelationshipType {
                              int south,
                              int east,
                              int center) {
-
+            
             ResourceLocation centerFamily = family(center);
+
+            System.out.println(
+                    "CENTER=" + biomeName(center) +
+                            " CF=" + centerFamily +
+                            " NF=" + family(north) +
+                            " SF=" + family(south) +
+                            " EF=" + family(east) +
+                            " WF=" + family(west)
+            );
 
             if (centerFamily == null)
                 return center;
@@ -57,6 +66,18 @@ public enum RelationshipType {
             return center;
         }
     };
+
+    private static String biomeName(int id) {
+        Biome biome = WorldGenRegistries.BIOME.getByValue(id);
+
+        if (biome == null) {
+            return "null(" + id + ")";
+        }
+
+        ResourceLocation key = WorldGenRegistries.BIOME.getKey(biome);
+
+        return key == null ? "unknown(" + id + ")" : key.toString();
+    }
 
     private static ResourceLocation family(int biomeId) {
 

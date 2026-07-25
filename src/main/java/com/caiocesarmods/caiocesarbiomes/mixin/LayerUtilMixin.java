@@ -4,8 +4,8 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.Relat
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;
-import net.minecraft.world.gen.layer.EdgeBiomeLayer;
 import net.minecraft.world.gen.layer.LayerUtil;
+import net.minecraft.world.gen.layer.RareBiomeLayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -17,18 +17,17 @@ public class LayerUtilMixin {
             method = "setupOverworldLayer",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/gen/layer/EdgeBiomeLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+                    target = "Lnet/minecraft/world/gen/layer/RareBiomeLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
             )
     )
-    private static <T extends IArea>
-    IAreaFactory<T> redirectEdgeBiome(
-            EdgeBiomeLayer instance,
+    private static <T extends IArea> IAreaFactory<T> redirectRareBiome(
+            RareBiomeLayer instance,
             IExtendedNoiseRandom<T> random,
             IAreaFactory<T> area) {
 
-        IAreaFactory<T> result = instance.apply(random, area);
+        System.out.println("[CCB] Injecting RelationshipLayer after RareBiomeLayer");
 
-        System.out.println("[CCB] Injecting RelationshipLayer");
+        IAreaFactory<T> result = instance.apply(random, area);
 
         return RelationshipLayer.INSTANCE.apply(random, result);
     }

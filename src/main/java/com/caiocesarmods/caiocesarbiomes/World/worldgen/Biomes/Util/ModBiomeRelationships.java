@@ -11,7 +11,13 @@ public class ModBiomeRelationships {
                 5,
                 6);
 
-        // More relationships...
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
+                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
+                RelationshipType.SUB_BIOME,
+                4,
+                5,
+                6);
     }
 
 }

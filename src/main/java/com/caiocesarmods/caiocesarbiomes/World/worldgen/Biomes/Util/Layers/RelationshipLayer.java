@@ -38,22 +38,6 @@ public enum RelationshipLayer implements ICastleTransformer {
         if (id == null)
             return center;
 
-        // EDGE
-        Integer edge = applyRelationship(
-                RelationshipType.EDGE,
-                id,
-                random,
-                north,
-                west,
-                south,
-                east,
-                center);
-
-        if (edge != null) {
-            System.out.println("[RelationshipLayer] EDGE -> " + edge);
-            return edge;
-        }
-
         // SUB BIOME
         Integer subBiome = applyRelationship(
                 RelationshipType.SUB_BIOME,
@@ -68,6 +52,22 @@ public enum RelationshipLayer implements ICastleTransformer {
         if (subBiome != null) {
             System.out.println("[RelationshipLayer] SUB -> " + subBiome);
             return subBiome;
+        }
+
+        // EDGE
+        Integer edge = applyRelationship(
+                RelationshipType.EDGE,
+                id,
+                random,
+                north,
+                west,
+                south,
+                east,
+                center);
+
+        if (edge != null) {
+            System.out.println("[RelationshipLayer] EDGE -> " + edge);
+            return edge;
         }
 
         return center;
