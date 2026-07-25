@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/blackwood_acacia_log",
+    "side": "caiocesarbiomes:block/blackwood_acacia_log"
+  }
+}
