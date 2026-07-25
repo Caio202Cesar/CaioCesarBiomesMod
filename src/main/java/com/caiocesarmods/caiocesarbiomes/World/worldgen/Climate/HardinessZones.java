@@ -114,7 +114,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "monkey_puzzle_sapling"), "HZ(min) 7, HZ(max) 10;" +
                 "⚠ requires warm to cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mossed_live_oak_sapling"), "HZ(min) 8, HZ(max) 11" +
-                "⚠ Can't be grow in dry biomes");
+                "⚠ Can't be grown in dry biomes, ⚠ Large specimens can grow with four saplings");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mountain_hemlock_sapling"), "HZ(min) 2, HZ(max) 8" +
                 "⚠ requires cooler summers");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "mugo_pine_sapling"), "HZ(min) 2, HZ(max) 7" +
