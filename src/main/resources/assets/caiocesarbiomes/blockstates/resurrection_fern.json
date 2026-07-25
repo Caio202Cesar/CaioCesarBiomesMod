@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "caiocesarbiomes:block/resurrection_fern_north"
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "caiocesarbiomes:block/resurrection_fern_south"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "caiocesarbiomes:block/resurrection_fern_east"
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "caiocesarbiomes:block/resurrection_fern_west"
+      }
+    }
+  ]
+}

@@ -59,6 +59,8 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
 
         ModCactuses.registerRenderLayer();
 
+        ResurrectionFernBlock.registerRenderLayer();
+
         BlueberryBush.registerRenderLayer();
         BlueberryFloweringBush.registerRenderLayer();
         BlueberryFruitingBush.registerRenderLayer();

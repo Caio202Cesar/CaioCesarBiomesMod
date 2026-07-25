@@ -1,0 +1,28 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "0": "caiocesarbiomes:block/resurrection_fern"
+  },
+  "elements": [
+    {
+      "from": [
+        15,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#0"
+        },
+        "west": {
+          "texture": "#0"
+        }
+      }
+    }
+  ]
+}
