@@ -451,7 +451,8 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
-                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
+                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
+                            ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT045))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IVY_AVOCADO_TREE = register("avocado_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
@@ -468,7 +469,8 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT,
-                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
+                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
+                            ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT045))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IVY_MACHILLUS_TREE = register("machillus_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
@@ -711,14 +713,8 @@ public class TreeFeatures {
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setMaxWaterDepth(1).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.SPANISH_MOSS_PLACEMENT100,
-                            ModFeatures.Placements.KIWI_VINE_PLACEMENT,
-                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE_WITHOUT_MOSS = register("southern_live_oak_tree_without_moss",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
-                    new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setMaxWaterDepth(1).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025,
+                            ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT075)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_LIVE_OAK_TREE = register("big_live_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
                     new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
@@ -726,8 +722,15 @@ public class TreeFeatures {
                     new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.SPANISH_MOSS_PLACEMENT100,
-                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045))
+                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025,
+                            ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT095))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_LIVE_OAK_TREE_WITHOUT_MOSS = register("southern_live_oak_tree_without_moss",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LIVE_OAK_LOG),
+                    new SimpleBlockStateProvider(States.LIVE_OAK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setMaxWaterDepth(1).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Royal Poinciana Tree (Tropical Deciduous Forest)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROYAL_POINCIANA_TREE = register("royal_poinciana",
