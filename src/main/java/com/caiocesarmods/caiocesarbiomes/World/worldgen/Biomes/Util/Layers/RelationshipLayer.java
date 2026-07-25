@@ -38,6 +38,10 @@ public enum RelationshipLayer implements ICastleTransformer {
         if (id == null)
             return center;
 
+        if (id.equals(new ResourceLocation("caiocesarbiomes", "mediterranean_sparse_oak_woodland"))) {
+            System.out.println("[RelationshipLayer] Existing sparse woodland!");
+        }
+
         // SUB BIOME
         Integer subBiome = applyRelationship(
                 RelationshipType.SUB_BIOME,
