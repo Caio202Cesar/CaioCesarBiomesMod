@@ -1,25 +1,37 @@
 package com.caiocesarmods.caiocesarbiomes.mixin;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RelationshipLayer;
+import net.minecraft.world.gen.IExtendedNoiseRandom;
+import net.minecraft.world.gen.area.IArea;
+import net.minecraft.world.gen.area.IAreaFactory;
+import net.minecraft.world.gen.layer.EdgeBiomeLayer;
 import net.minecraft.world.gen.layer.LayerUtil;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LayerUtil.class)
 public class LayerUtilMixin {
 
-    @Inject(
+    @Redirect(
             method = "setupOverworldLayer",
-            at = @At("HEAD")
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/gen/layer/EdgeBiomeLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+            )
     )
-    private static void onSetupOverworldLayer(
-            boolean legacyBiomeInitLayer,
-            int biomeSize,
-            int riverSize,
-            java.util.function.LongFunction<?> contextFactory,
-            CallbackInfoReturnable<?> cir) {
+    private static <T extends IArea>
+    IAreaFactory<T> redirectEdgeBiome(
+            EdgeBiomeLayer instance,
+            IExtendedNoiseRandom<T> random,
+            IAreaFactory<T> area) {
 
-        System.out.println("[CCB MIXIN] LayerUtil.setupOverworldLayer()");
+        System.out.println("[CCB] Redirected EdgeBiomeLayer.apply()");
+
+        IAreaFactory<T> result = instance.apply(random, area);
+
+        System.out.println("[CCB] Injecting RelationshipLayer");
+
+        return RelationshipLayer.INSTANCE.apply(random, result);
     }
 }
