@@ -363,13 +363,13 @@ public class ModFeatures implements IFeatureConfig {
         public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT075 = new SpanishMossLeavesDecorator(0.75F);
         public static final SpanishMossLeavesDecorator SPANISH_MOSS_PLACEMENT100 = new SpanishMossLeavesDecorator(1.0F);
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT025 =
-                new ResurrectionFernTreeDecorator(0.25F, 16);
+                new ResurrectionFernTreeDecorator(0.25F, 70);
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT045 =
-                new ResurrectionFernTreeDecorator(0.45F, 16);
+                new ResurrectionFernTreeDecorator(0.45F, 70);
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT075 =
-                new ResurrectionFernTreeDecorator(0.75F, 16);
+                new ResurrectionFernTreeDecorator(0.75F, 70);
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT095 =
-                new ResurrectionFernTreeDecorator(0.95F, 16);
+                new ResurrectionFernTreeDecorator(0.95F, 70);
     }
 
     public static final class States {
