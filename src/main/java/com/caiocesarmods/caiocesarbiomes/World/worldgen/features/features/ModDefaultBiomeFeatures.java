@@ -90,8 +90,8 @@ public class ModDefaultBiomeFeatures {
     public static void withTropicalForestDeciduousTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_FOREST_DECIDUOUS_TREES);
     }
-    public static void withSubtropicalLaurelForestTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_LAUREL_FOREST_TREES);
+    public static void withSubtropicalLaurelForestMiscTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.LAUREL_FOREST_MISCELLANEOUS_TREES);
     }
     /*public static void withSubtropicalEucalyptusForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
@@ -99,8 +99,8 @@ public class ModDefaultBiomeFeatures {
     public static void withJungleOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JUNGLE_OCOTEA_TREES);
     }
-    public static void withForestOcoteaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.FOREST_OCOTEA_TREES);
+    public static void withSubtropicalForestLauraceae(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_LAURACEAE);
     }
     public static void withHighlandOcoteaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HIGHLAND_OCOTEA_TREES);

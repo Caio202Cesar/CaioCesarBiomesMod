@@ -60,9 +60,8 @@ public class BambooSubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalLaurelForestTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalForestOaks(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalBambooVegetation(biomegenerationsettings$builder);

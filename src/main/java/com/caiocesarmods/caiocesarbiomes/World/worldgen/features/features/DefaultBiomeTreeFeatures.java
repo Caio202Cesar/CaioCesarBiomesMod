@@ -454,16 +454,35 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.25F, 6))));
 
-    public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_TREES = register("subtropical_laurel_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.3F),
-                            SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
-                            STARFRUIT_TREE.withChance(0.4F), OAK_TREE_WITH_GOLD_KIWI.withChance(0.09F),
-                            MULBERRY_TREE.withChance(0.4F), ORCHID_TREE.withChance(0.3F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            ELDERBERRY_TREE.withChance(0.3F), PERSIMMON_TREE.withChance(0.4F),
-                            PERSIMMON_FANCY_TREE.withChance(0.35F), INDIAN_LAUREL_TREE.withChance(0.1F),
-                            BIG_INDIAN_LAUREL_TREE.withChance(0.073F),
-                            AVOCADO_TREE.withChance(0.5F), PEACH_TREE.withChance(0.19F)),
+    //Miscellaneous trees found both in subtropical laurel forest and subtropical evergreen oak forest
+    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_FOREST_MISCELLANEOUS_TREES = register(
+            "humid_subtropical_forest_misc_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                    LOQUAT_TREE.withChance(0.3F), SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
+                            STARFRUIT_TREE.withChance(0.4F), MULBERRY_TREE.withChance(0.4F), ORCHID_TREE.withChance(0.3F),
+                            ELDERBERRY_TREE.withChance(0.3F), PERSIMMON_TREE.withChance(0.4F), PERSIMMON_FANCY_TREE.withChance(0.35F),
+                            PEACH_TREE.withChance(0.25F), SABAL_PALM_TREE.withChance(0.5F), SABAL_PALM_FANCY_TREE.withChance(0.45F),
+                            TEA_TREE.withChance(0.45F), CAMELLIA_TREE.withChance(0.45F)
+                    ), WAX_LEAF_PRIVET_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+
+    //Miscellaneous (non-lauraceae) subtropical trees from laurel forest only
+    public static final ConfiguredFeature<?, ?> LAUREL_FOREST_MISCELLANEOUS_TREES = register("laurel_forest_misc_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LYCHEE_TREE.withChance(0.6F)),
+                            CHAMPAK_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+
+    public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                            OCOTEA_JUNGLE_TREE.withChance(0.5F)), OCOTEA_JUNGLE_FANCY_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_LAURACEAE = register("subtropical_forest_lauraceae",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.5F),
+                            OCOTEA_FOREST_FANCY_TREE_WITH_IVY.withChance(0.35F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F),),
                             ANCIENT_CAMPHOR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
@@ -472,23 +491,11 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOQUAT_TREE.withChance(0.4F),
                             ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.4F), AVOCADO_TREE.withChance(0.3F),
                             PECAN_FANCY_TREE.withChance(0.4F), PECAN_TREE.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.26F),
+                            PERSIMMON_TREE.withChance(0.3F), STARFRUIT_TREE.withChance(0.26F), OAK_TREE_WITH_GOLD_KIWI.withChance(0.09F),
                             PERSIMMON_FANCY_TREE.withChance(0.4F), PEACH_TREE.withChance(0.3F),
                             PINK_IVORY_TREE.withChance(0.26F), PINK_IVORY_FANCY_TREE.withChance(0.3F),
-                            SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F)), SOUTHERN_MAGNOLIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F)), FANCY_OAK_TREE_WITH_IVY)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
-
-    public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            OCOTEA_JUNGLE_TREE.withChance(0.5F)), OCOTEA_JUNGLE_FANCY_TREE))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
-
-    public static final ConfiguredFeature<?, ?> FOREST_OCOTEA_TREES = register("forest_ocotea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.3F),
-                            OCOTEA_FOREST_FANCY_TREE_WITH_IVY.withChance(0.5F)), OCOTEA_FOREST_FANCY_TREE))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
