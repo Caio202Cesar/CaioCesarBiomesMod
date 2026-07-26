@@ -8,15 +8,7 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
                 RelationshipType.EDGE,
                 4,
-                5,
-                6);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
-                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
-                RelationshipType.SUB_BIOME,
-                4,
-                5,
+                7,
                 6);
     }
 

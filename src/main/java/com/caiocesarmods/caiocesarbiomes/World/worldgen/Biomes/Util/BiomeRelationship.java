@@ -2,9 +2,6 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import net.minecraft.util.ResourceLocation;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BiomeRelationship {
     private final ResourceLocation parent;
     private final ResourceLocation child;
