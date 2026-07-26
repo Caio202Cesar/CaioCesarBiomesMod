@@ -20,9 +20,6 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
                 OVERWORLD);
 
-        addBiome(MediterraneanOakSparseWoodlandBiome.MEDITERRANEAN_OAK_SPARSE_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE,
-                OVERWORLD);
-
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
 
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD,
@@ -30,12 +27,6 @@ public class ModBiomeGeneration {
 
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
-
-        addBiome(CorkOakBeach.CORK_OAK_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
-                SAVANNA, BEACH);
-
-        addBiome(OliveGroveBeach.OLIVE_GROVE_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
-                SAVANNA, BEACH);
 
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
@@ -82,12 +73,6 @@ public class ModBiomeGeneration {
 
         addBiome(EucalyptusPlainsBiome.EUCALYPTUS_PLAINS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, PLAINS, SPARSE);
 
-        addBiome(HotMediterraneanBeachBiome.HOT_MEDITERRANEAN_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY);
-
-        addBiome(MediterraneanConiferSavannaBiomeBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY);
-
-        addBiome(HumidSubtropicalBeachBiome.HUMID_SUBTROPICAL_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, BEACH, SANDY, WET, LUSH);
-
         addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
 
         addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
@@ -97,8 +82,6 @@ public class ModBiomeGeneration {
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DRY, SANDY);
 
         addBiome(TemperateDesert.TEMPERATE_DESERT.get(), BiomeManager.BiomeType.COOL, 23, OVERWORLD, DRY, SANDY);
-
-        addBiome(StonyMediterraneanShoreBiome.STONY_MEDITERRANEAN_SHORE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, BEACH);
 
         addBiome(CookPineIslandBiome.COOK_PINE_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD);
 
