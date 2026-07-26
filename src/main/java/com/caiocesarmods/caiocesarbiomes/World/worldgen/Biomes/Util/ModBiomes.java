@@ -42,6 +42,11 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove_beach");
 
     //Tropical domain
+    public static final ResourceLocation TROPICAL_BAMBOO_MARSH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_bamboo_marsh"); //Add mangrove as its beach biome
+    public static final ResourceLocation TROPICAL_BAMBOO_MARSH_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_bamboo_marsh_river");
+
     public static final ResourceLocation TROPICAL_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
 

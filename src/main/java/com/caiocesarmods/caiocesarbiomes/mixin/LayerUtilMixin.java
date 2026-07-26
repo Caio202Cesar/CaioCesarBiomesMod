@@ -2,11 +2,13 @@ package com.caiocesarmods.caiocesarbiomes.mixin;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.BeachReplacementLayer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RelationshipLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RiverReplacementLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;
 import net.minecraft.world.gen.layer.LayerUtil;
 import net.minecraft.world.gen.layer.RareBiomeLayer;
+import net.minecraft.world.gen.layer.MixRiverLayer;
 import net.minecraft.world.gen.layer.ShoreLayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -42,6 +44,7 @@ public class LayerUtilMixin {
                             "Lnet/minecraft/world/gen/layer/ShoreLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
             )
     )
+
     private static <T extends IArea>
     IAreaFactory<T> redirectShoreLayer(
             ShoreLayer instance,
@@ -59,4 +62,28 @@ public class LayerUtilMixin {
                 area,
                 result);
     }
+
+    /*@Redirect(
+            method = "setupOverworldLayer",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/gen/layer/RiverMixLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+            )
+    )
+    private static <T extends IArea>
+    IAreaFactory<T> redirectRiverLayer(
+            MixRiverLayer instance,
+            IExtendedNoiseRandom<T> random,
+            IAreaFactory<T> biomeLayer,
+            IAreaFactory<T> riverLayer) {
+
+        // Vanilla river generation
+        IAreaFactory<T> result =
+                instance.apply(random, biomeLayer, riverLayer);
+
+        return RiverReplacementLayer.INSTANCE.apply(
+                random,
+                biomeLayer,
+                result);
+    }*/
 }

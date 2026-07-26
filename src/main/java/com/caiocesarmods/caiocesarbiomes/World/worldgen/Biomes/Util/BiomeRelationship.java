@@ -9,13 +9,17 @@ public class BiomeRelationship {
     private final int chance;
     private final int edgeSize;     // optional
     private final int priority;     // optional
+    private final boolean beach;
+    private final boolean river;
 
     public BiomeRelationship(ResourceLocation parent,
                              ResourceLocation child,
                              RelationshipType type,
                              int chance,
                              int edgeSize,
-                             int priority) {
+                             int priority,
+                             boolean beach,
+                             boolean river) {
 
         this.parent = parent;
         this.child = child;
@@ -23,6 +27,8 @@ public class BiomeRelationship {
         this.chance = chance;
         this.edgeSize = edgeSize;
         this.priority = priority;
+        this.beach = beach;
+        this.river = river;
     }
 
     public ResourceLocation getParent() {
@@ -39,5 +45,13 @@ public class BiomeRelationship {
 
     public int getChance() {
         return chance;
+    }
+
+    public boolean isBeach() {
+        return beach;
+    }
+
+    public boolean isRiver() {
+        return river;
     }
 }

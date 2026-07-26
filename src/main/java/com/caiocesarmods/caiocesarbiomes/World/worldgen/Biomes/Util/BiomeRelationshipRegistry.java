@@ -21,9 +21,11 @@ public class BiomeRelationshipRegistry {
             RelationshipType type,
             int chance,
             int edgeSize,
-            int priority) {
+            int priority,
+            boolean beach,
+            boolean river) {
 
-        register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority));
+        register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority, beach, river));
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {
@@ -41,6 +43,29 @@ public class BiomeRelationshipRegistry {
                 .stream()
                 .filter(r -> r.getType() == type)
                 .findFirst();
+    }
+
+    public static Optional<BiomeRelationship> getRiverRelationship(ResourceLocation biome) {
+
+        return getRelationships(biome)
+                .stream()
+                .filter(BiomeRelationship::isRiver)
+                .findFirst();
+    }
+
+    public static void registerRiver(
+            ResourceLocation parent,
+            ResourceLocation child) {
+
+        register(new BiomeRelationship(
+                parent,
+                child,
+                null,
+                0,
+                0,
+                0,
+                false,   // beach
+                true));  // river
     }
 
     public static void clear() {
