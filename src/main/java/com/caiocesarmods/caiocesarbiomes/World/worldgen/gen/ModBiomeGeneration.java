@@ -31,6 +31,9 @@ public class ModBiomeGeneration {
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
                 SAVANNA);
 
+        addBiome(CorkOakBeach.CORK_OAK_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY,
+                SAVANNA, BEACH);
+
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_SEASONAL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
 
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);

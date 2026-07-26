@@ -58,6 +58,14 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.CORK_OAK_SAVANNA,
+                ModBiomes.CORK_OAK_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
     }
 
 }
