@@ -18,6 +18,14 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
     }
 
 }
