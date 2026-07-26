@@ -26,6 +26,30 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MEDITERRANEAN_SCRUBLAND,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.OLEANDER_GARDENS,
+                ModBiomes.STONY_MEDITERRANEAN_SHORE,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MEDITERRANEAN_PINE_FOREST,
+                ModBiomes.STONY_MEDITERRANEAN_SHORE,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
     }
 
 }
