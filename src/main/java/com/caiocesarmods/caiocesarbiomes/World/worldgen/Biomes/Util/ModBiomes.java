@@ -5,28 +5,41 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 
 public class ModBiomes {
+
+    //Mediterranean domain
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland");
 
     public static final ResourceLocation OLEANDER_GARDENS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "oleander_gardens");
+
     public static final ResourceLocation MEDITERRANEAN_PINE_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_pine_dry_forest");
 
-    public static final ResourceLocation TROPICAL_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
-    public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
+    public static final ResourceLocation MEDITERRANEAN_CONIFEROUS_SAVANNA =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna");
 
     public static final ResourceLocation MEDITERRANEAN_OAK_WOODLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_woodland");
+
     public static final ResourceLocation MEDITERRANEAN_OAK_SPARSE_WOODLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_sparse_woodland");
+
 
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
     public static final ResourceLocation STONY_MEDITERRANEAN_SHORE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "stony_mediterranean_shore");
+    public static final ResourceLocation CONIFEROUS_STONY_MEDITERRANEAN_SHORE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
+
+    //Tropical domain
+    public static final ResourceLocation TROPICAL_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
+
+    //Humid subtropical domain
+    public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
 }
 
 

@@ -45,7 +45,15 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_PINE_FOREST,
-                ModBiomes.STONY_MEDITERRANEAN_SHORE,
+                ModBiomes.CONIFEROUS_STONY_MEDITERRANEAN_SHORE,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
+                ModBiomes.CONIFEROUS_STONY_MEDITERRANEAN_SHORE,
                 RelationshipType.BEACH,
                 0,
                 0,

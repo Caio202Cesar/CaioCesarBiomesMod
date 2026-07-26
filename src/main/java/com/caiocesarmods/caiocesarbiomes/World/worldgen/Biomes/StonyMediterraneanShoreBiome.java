@@ -56,6 +56,7 @@ public class StonyMediterraneanShoreBiome {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);

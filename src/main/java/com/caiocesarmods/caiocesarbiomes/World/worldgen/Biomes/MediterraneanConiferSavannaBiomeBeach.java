@@ -62,6 +62,7 @@ public class MediterraneanConiferSavannaBiomeBeach {
         ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanBeachFlowers(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

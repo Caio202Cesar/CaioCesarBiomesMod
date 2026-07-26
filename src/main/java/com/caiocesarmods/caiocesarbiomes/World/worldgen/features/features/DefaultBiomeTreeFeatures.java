@@ -371,7 +371,9 @@ public class DefaultBiomeTreeFeatures {
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.3F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_CONIFER_TREES = register("mediterranean_conifer_trees", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE2.withChance(0.1F), ITALIAN_CYPRESS_TREE.withChance(0.5F)),
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(STONE_PINE_TREE2.withChance(0.1F),
+                    ITALIAN_CYPRESS_TREE.withChance(0.5F), MARITIME_PINE.withChance(0.25F), BRUTIA_PINE_FANCY_TREE.withChance(0.1F),
+                    BRUTIA_PINE_FORKY_TREE.withChance(0.2F), ALEPPO_PINE.withChance(0.15F)),
                     STONE_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
