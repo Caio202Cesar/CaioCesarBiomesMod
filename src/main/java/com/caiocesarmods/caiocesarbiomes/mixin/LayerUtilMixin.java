@@ -2,7 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.mixin;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.BeachReplacementLayer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RelationshipLayer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RiverReplacementLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RiverRelationshipLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;
@@ -67,21 +67,25 @@ public class LayerUtilMixin {
             method = "setupOverworldLayer",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/gen/layer/RiverMixLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+                    target =
+                            "Lnet/minecraft/world/gen/layer/MixRiverLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
             )
     )
     private static <T extends IArea>
-    IAreaFactory<T> redirectRiverLayer(
+    IAreaFactory<T> redirectMixRiverLayer(
             MixRiverLayer instance,
             IExtendedNoiseRandom<T> random,
             IAreaFactory<T> biomeLayer,
             IAreaFactory<T> riverLayer) {
 
-        // Vanilla river generation
+        // Vanilla river mixing
         IAreaFactory<T> result =
                 instance.apply(random, biomeLayer, riverLayer);
 
-        return RiverReplacementLayer.INSTANCE.apply(
+        System.out.println("[CCB] Injecting RiverRelationshipLayer");
+
+        // Replace vanilla rivers with custom river biomes
+        return RiverRelationshipLayer.INSTANCE.apply(
                 random,
                 biomeLayer,
                 result);
