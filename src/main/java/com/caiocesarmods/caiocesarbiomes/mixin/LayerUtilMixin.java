@@ -63,7 +63,7 @@ public class LayerUtilMixin {
                 result);
     }
 
-    /*@Redirect(
+    @Redirect(
             method = "setupOverworldLayer",
             at = @At(
                     value = "INVOKE",
@@ -85,5 +85,5 @@ public class LayerUtilMixin {
                 random,
                 biomeLayer,
                 result);
-    }*/
+    }
 }

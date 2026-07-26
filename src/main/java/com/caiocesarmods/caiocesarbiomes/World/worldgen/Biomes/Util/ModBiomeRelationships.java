@@ -86,10 +86,9 @@ public class ModBiomeRelationships {
                 true, false);
 
         //Tropical
-        /*
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
-                ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);*/
+                ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);
     }
 
 }

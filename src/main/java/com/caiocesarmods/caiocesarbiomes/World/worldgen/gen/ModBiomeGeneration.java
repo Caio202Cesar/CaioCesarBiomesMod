@@ -97,8 +97,6 @@ public class ModBiomeGeneration {
 
         addBiome(TropicalBambooMarsh.TROPICAL_BAMBOO_MARSH.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP);
 
-        addBiome(TropicalBambooMarshRiver.TROPICAL_BAMBOO_MARSH_RIVER.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP, RIVER);
-
         addBiome(SaltDesertBiome.SALT_DESERT.get(), BiomeManager.BiomeType.DESERT, 15, OVERWORLD, HOT, DRY, WASTELAND);
 
         addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);
