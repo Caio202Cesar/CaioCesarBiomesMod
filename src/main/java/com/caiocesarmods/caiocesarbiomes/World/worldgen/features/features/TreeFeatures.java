@@ -620,13 +620,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.KIWI_VINE_PLACEMENT100)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_GOLD_KIWI = register("oak_tree_with_gold_kiwi",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT100)).build()));
 
     //Starfruit Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STARFRUIT_TREE = register("starfruit_tree",

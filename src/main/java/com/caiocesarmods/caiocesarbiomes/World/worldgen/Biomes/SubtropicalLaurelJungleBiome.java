@@ -58,15 +58,16 @@ public class SubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withMushroomBiomeVegetation(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
+
+      ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withLaurelJungleTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalForestOaks(biomegenerationsettings$builder);
+
+      ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

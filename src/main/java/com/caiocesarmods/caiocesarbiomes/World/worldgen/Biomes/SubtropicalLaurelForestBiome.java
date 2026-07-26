@@ -58,13 +58,15 @@ public class SubtropicalLaurelForestBiome {
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withForestOcoteaTrees(biomegenerationsettings$builder);
+
+      ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
+
+      ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
