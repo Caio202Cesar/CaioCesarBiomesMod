@@ -27,13 +27,15 @@ public class TropicalBambooMarshRiver {
     public static final RegistryObject<Biome> TROPICAL_BAMBOO_MARSH_RIVER = BIOMES.register("tropical_bamboo_marsh_river",
             () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP, 0.1f, 0.156f));
 
-    //Add irisis, ginger lily and spider lily
+    //Add tropical river vegetation, like white ginger lily
     private static Biome makeTropicalBambooMarshRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 7, 5, 7));
         mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.DROWNED, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_CREATURE, new MobSpawnInfo.Spawners(EntityType.SQUID, 7, 3, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_CREATURE, new MobSpawnInfo.Spawners(EntityType.TROPICAL_FISH, 7, 5, 7));
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
