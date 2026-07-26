@@ -59,6 +59,7 @@ public class SubtropicalLaurelJungleBiome {
       DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
 
+      ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
