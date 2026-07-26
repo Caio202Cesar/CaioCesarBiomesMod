@@ -32,12 +32,8 @@ public class UrostigmaLeaves extends LeavesBlock {
         float temp = biome.getTemperature(pos);
 
         //Only in tropical and wet climates
-        if (world.isAirBlock(down) && temp >= 0.9F && biome.getPrecipitation() == Biome.RainType.RAIN
-                && random.nextFloat() < 0.001F) { //1% chance to grow
-            world.setBlockState(down, this.getDefaultState(), 2);
-        }
-
-        if (random.nextFloat() < 0.78f) {
+        if (world.isAirBlock(down) && temp >= 0.9F && biome.getPrecipitation() == Biome.RainType.RAIN && random.nextFloat() < 0.78F)
+        {
             BlockPos belowPos = pos.down();
             BlockState belowState = world.getBlockState(belowPos);
 
