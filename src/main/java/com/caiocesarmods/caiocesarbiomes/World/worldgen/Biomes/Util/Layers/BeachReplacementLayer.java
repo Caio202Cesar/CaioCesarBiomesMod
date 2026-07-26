@@ -54,6 +54,11 @@ public enum BeachReplacementLayer implements IAreaTransformer2, IDimOffset0Trans
                         id,
                         RelationshipType.BEACH);
 
+        System.out.println(
+                "[Beach] before=" + id +
+                        " after=" + WorldGenRegistries.BIOME.getKey(
+                        WorldGenRegistries.BIOME.getByValue(after)));
+
         if (!relationship.isPresent())
             return after;
 
@@ -66,6 +71,10 @@ public enum BeachReplacementLayer implements IAreaTransformer2, IDimOffset0Trans
                         before,
                         before,
                         after);
+
+        System.out.println(
+                "[Beach] Replacing with " +
+                        relationship.get().getChild());
 
         return replacement == null ? after : replacement;
     }

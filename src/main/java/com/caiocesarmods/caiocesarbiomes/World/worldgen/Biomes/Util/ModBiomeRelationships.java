@@ -15,9 +15,9 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
                 RelationshipType.BEACH,
-                4,
-                7,
-                6);
+                0,
+                0,
+                0);
     }
 
 }
