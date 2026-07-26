@@ -96,6 +96,9 @@ public class ModDefaultBiomeFeatures {
     public static void withSubtropicalForestLauraceae(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_LAURACEAE);
     }
+    public static void withSubtropicalOakForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_OAK_FOREST_TREES);
+    }
     public static void withLaurelJungleTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.LAUREL_JUNGLE_TREES);
     }

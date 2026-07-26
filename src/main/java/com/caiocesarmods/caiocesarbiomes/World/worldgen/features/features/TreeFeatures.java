@@ -1181,7 +1181,7 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
-                            Features.Placements.BEES_0002_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            Features.Placements.BEES_005_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLANE_TREE_WITH_IVY = register("plane_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLANE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PLANE_LEAVES),
@@ -1418,6 +1418,21 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_FANCY_TREE_WITH_IVY = register("ivy_red_maple_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JAPANESE_MAPLE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.RED_MAPLE_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                    Features.Placements.BEES_005_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_RED_MAPLE_TREE_WITH_IVY = register("ivy_tall_red_maple_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JAPANESE_MAPLE_LOG),
+                    new SimpleBlockStateProvider(States.RED_MAPLE_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(8, 3, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
 
     //Douglas Fir
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GIANT_DOUGLAS_FIR_TREE = register("giant_douglas_fir",
