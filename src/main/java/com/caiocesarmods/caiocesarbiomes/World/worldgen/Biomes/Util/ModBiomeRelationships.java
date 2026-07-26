@@ -42,7 +42,7 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.OLEANDER_GARDENS,
-                ModBiomes.STONY_MEDITERRANEAN_SHORE,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
                 RelationshipType.BEACH,
                 0,
                 0,
@@ -51,7 +51,7 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_PINE_FOREST,
-                ModBiomes.CONIFEROUS_STONY_MEDITERRANEAN_SHORE,
+                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
                 RelationshipType.BEACH,
                 0,
                 0,
@@ -60,7 +60,7 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
-                ModBiomes.CONIFEROUS_STONY_MEDITERRANEAN_SHORE,
+                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
                 RelationshipType.BEACH,
                 0,
                 0,

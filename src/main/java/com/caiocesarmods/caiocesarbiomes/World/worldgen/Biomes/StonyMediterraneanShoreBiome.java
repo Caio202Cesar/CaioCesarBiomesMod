@@ -32,6 +32,7 @@ public class StonyMediterraneanShoreBiome {
             () -> makeGenericBeachBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_STONY_SHORE_SURFACE, 0.1F, 0.8F));
 
 
+    //Used in Csb biomes
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));

@@ -52,7 +52,6 @@ public class CorkOakBeach {
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);

@@ -28,7 +28,7 @@ public class MediterraneanConiferSavannaBiomeBeach {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MEDITERRANEAN_CONIFER_SAVANNA_BEACH = BIOMES.register("mediterranean_conifer_savanna_beach",
-            () -> makeGenericBeachBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_STONY_SHORE_SURFACE, 0.0F, 0.025F));
+            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
 
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -57,11 +57,11 @@ public class MediterraneanConiferSavannaBiomeBeach {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

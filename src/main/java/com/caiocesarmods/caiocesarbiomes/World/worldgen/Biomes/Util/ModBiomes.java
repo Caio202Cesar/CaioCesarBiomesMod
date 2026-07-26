@@ -34,7 +34,7 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
     public static final ResourceLocation STONY_MEDITERRANEAN_SHORE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "stony_mediterranean_shore");
-    public static final ResourceLocation CONIFEROUS_STONY_MEDITERRANEAN_SHORE =
+    public static final ResourceLocation CONIFEROUS_MEDITERRANEAN_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
     public static final ResourceLocation CORK_OAK_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_beach");

@@ -54,17 +54,16 @@ public class MediterraneanConiferSavannaBiome {
       DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-      DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
+      ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
 
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

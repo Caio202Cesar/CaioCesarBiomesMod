@@ -481,10 +481,10 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_OAK_FOREST_TREES = register("subtropical_oak_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.4F),
-                            CASTANOPSIS_TREE.withChance(0.35F), STONE_OAK_TREE.withChance(0.4F), RING_CUPPED_OAK_TREE.withChance(0.45F),
-                            RING_CUPPED_OAK_FANCY_TREE.withChance(0.35F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
-                            FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F), SOUTHERN_LIVE_OAK_TREE.withChance(0.4F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.3F),
+                            CASTANOPSIS_TREE.withChance(0.3F), STONE_OAK_TREE.withChance(0.3F), RING_CUPPED_OAK_TREE.withChance(0.3F),
+                            RING_CUPPED_OAK_FANCY_TREE.withChance(0.3F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
+                            FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F), SOUTHERN_LIVE_OAK_TREE.withChance(0.3F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.32F), OAK_TREE_WITH_IVY.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
                             BIG_LIVE_OAK_TREE.withChance(0.25F)), SUBTROPICAL_SPRING_ORCHID_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
