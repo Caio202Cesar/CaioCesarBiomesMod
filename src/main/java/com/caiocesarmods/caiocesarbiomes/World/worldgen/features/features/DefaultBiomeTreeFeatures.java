@@ -443,7 +443,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_FOREST_MISCELLANEOUS_TREES = register(
             "humid_subtropical_forest_misc_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                    LOQUAT_TREE.withChance(0.3F), SOUTHERN_MAGNOLIA_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
+                    LOQUAT_TREE.withChance(0.3F), WAX_LEAF_PRIVET_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
                             STARFRUIT_TREE.withChance(0.4F), MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F),
                             PERSIMMON_TREE.withChance(0.4F), PERSIMMON_FANCY_TREE.withChance(0.35F),
                             PLANE_TREE.withChance(0.098F), PLANE_FANCY_TREE.withChance(0.098F), PLANE_TREE_WITH_IVY.withChance(0.098F),
@@ -451,7 +451,7 @@ public class DefaultBiomeTreeFeatures {
                             TALL_RED_MAPLE_TREE_WITH_IVY.withChance(0.098F),
                             RED_MAPLE_FANCY_TREE.withChance(0.098F), RED_MAPLE_TREE.withChance(0.098F),
                             PEACH_TREE.withChance(0.25F), SABAL_PALM_TREE.withChance(0.5F), SABAL_PALM_FANCY_TREE.withChance(0.45F),
-                            TEA_TREE.withChance(0.45F), CAMELLIA_TREE.withChance(0.45F)), WAX_LEAF_PRIVET_TREE))
+                            TEA_TREE.withChance(0.45F), CAMELLIA_TREE.withChance(0.45F)), SOUTHERN_MAGNOLIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
@@ -486,8 +486,8 @@ public class DefaultBiomeTreeFeatures {
                             RING_CUPPED_OAK_FANCY_TREE.withChance(0.35F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
                             FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.32F), OAK_TREE_WITH_IVY.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.4F)),
-                            BIG_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.4F)),
+                            SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
