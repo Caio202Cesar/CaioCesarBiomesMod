@@ -95,17 +95,17 @@ public class ResurrectionFernBlock extends Block implements IForgeShearable {
         return state.isIn(BlockTags.LOGS);
     }
 
-    private static final VoxelShape NORTH_SHAPE =
-            Block.makeCuboidShape(0, 0, 15, 16, 16, 16);
-
-    private static final VoxelShape SOUTH_SHAPE =
-            Block.makeCuboidShape(0, 0, 0, 16, 16, 1);
-
-    private static final VoxelShape EAST_SHAPE =
+    private static final VoxelShape WEST_SHAPE =
             Block.makeCuboidShape(0, 0, 0, 1, 16, 16);
 
-    private static final VoxelShape WEST_SHAPE =
+    private static final VoxelShape EAST_SHAPE =
             Block.makeCuboidShape(15, 0, 0, 16, 16, 16);
+
+    private static final VoxelShape NORTH_SHAPE =
+            Block.makeCuboidShape(0, 0, 0, 16, 16, 1);
+
+    private static final VoxelShape SOUTH_SHAPE =
+            Block.makeCuboidShape(0, 0, 15, 16, 16, 16);
 
     @Override
     public VoxelShape getShape(BlockState state,
