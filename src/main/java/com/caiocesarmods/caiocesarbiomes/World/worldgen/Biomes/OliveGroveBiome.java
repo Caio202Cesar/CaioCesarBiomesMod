@@ -25,7 +25,7 @@ public class OliveGroveBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> OLIVE_GROVE = BIOMES.register("olive_grove",
-            () -> makeOliveGroveBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.125f, 0.35f));
+            () -> makeOliveGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.35f));
 
     private static Biome makeOliveGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
