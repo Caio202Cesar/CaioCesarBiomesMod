@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -27,7 +28,7 @@ public class MediterraneanConiferSavannaBiomeBeach {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MEDITERRANEAN_CONIFER_SAVANNA_BEACH = BIOMES.register("mediterranean_conifer_savanna_beach",
-            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
+            () -> makeGenericBeachBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_STONY_SHORE_SURFACE, 0.0F, 0.025F));
 
 
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
