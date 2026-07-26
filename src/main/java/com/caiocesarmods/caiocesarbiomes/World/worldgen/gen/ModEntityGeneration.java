@@ -114,6 +114,18 @@ public class ModEntityGeneration {
             ));
         }
 
+        if (event.getName().equals(CorkOakBeach.CORK_OAK_BEACH.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.MEDITERRANEAN_MERCHANT.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.MEDITERRANEAN_MERCHANT.get(),
+                    12, // weight
+                    1,  // min
+                    2   // max
+            ));
+        }
+
         if (event.getName().equals(OleanderGardensBiome.OLEANDER_GARDENS.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(

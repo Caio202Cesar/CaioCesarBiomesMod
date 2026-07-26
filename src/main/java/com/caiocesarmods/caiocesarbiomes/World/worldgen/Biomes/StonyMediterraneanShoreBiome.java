@@ -62,7 +62,6 @@ public class StonyMediterraneanShoreBiome {
         ModDefaultBiomeFeatures.withMediterraneanConiferTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanBeachFlowers(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

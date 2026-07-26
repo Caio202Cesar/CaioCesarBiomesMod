@@ -130,6 +130,7 @@ public class CaioCesarBiomesMod
         MediterraneanOakSparseWoodlandBiome.register(eventBus);
         TropicalIslandBiome.register(eventBus);
         CorkOakBeach.register(eventBus);
+        OliveGroveBeach.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

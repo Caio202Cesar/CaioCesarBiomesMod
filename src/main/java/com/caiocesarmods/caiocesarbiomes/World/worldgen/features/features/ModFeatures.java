@@ -56,9 +56,6 @@ public class ModFeatures implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(Configs.JAPANESE_GROVE_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> BEACH_FLOWER_MEDITERRANEAN = register("beach_flower_mediterranean",
-            Feature.FLOWER.withConfiguration(ModFeatures.Configs.MEDITERRANEAN_BEACH_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SUBTROPICAL_TALL_PLANT_VEGETATION_LIST = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.ROSE_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
@@ -214,11 +211,7 @@ public class ModFeatures implements IFeatureConfig {
                         .addWeightedBlockstate(States.OREGANO, 1)
                         .addWeightedBlockstate(States.ROSEMARY, 1)
                         .addWeightedBlockstate(States.THYME, 1)
-                        .addWeightedBlockstate(States.OXEYE_DAISY, 1),
-                        SimpleBlockPlacer.PLACER)).tries(64).build();
-
-        public static final BlockClusterFeatureConfig MEDITERRANEAN_BEACH_FLOWER_CONFIG =
-                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.OXEYE_DAISY, 1)
                         .addWeightedBlockstate(States.WHITE_CISTUS, 1)
                         .addWeightedBlockstate(States.PINK_CISTUS, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();

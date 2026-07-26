@@ -18,9 +18,6 @@ public class ModDefaultBiomeFeatures {
     public static void withPlumeriaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.PLUMERIA_TREES);
     }
-    public static void withMediterraneanBeachFlowers(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BEACH_FLOWER_MEDITERRANEAN);
-    }
     public static void withMediterraneanOakTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_OAK_TREES);
     }
