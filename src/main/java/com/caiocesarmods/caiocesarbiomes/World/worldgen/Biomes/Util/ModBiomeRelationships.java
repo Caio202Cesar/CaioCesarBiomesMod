@@ -66,6 +66,14 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.OLIVE_GROVE,
+                ModBiomes.OLIVE_GROVE_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0);
     }
 
 }

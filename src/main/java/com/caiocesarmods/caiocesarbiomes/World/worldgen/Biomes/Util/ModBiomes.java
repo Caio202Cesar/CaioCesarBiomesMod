@@ -22,6 +22,9 @@ public class ModBiomes {
     public static final ResourceLocation CORK_OAK_SAVANNA =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_savanna");
 
+    public static final ResourceLocation OLIVE_GROVE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove");
+
     public static final ResourceLocation MEDITERRANEAN_OAK_WOODLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_woodland");
     public static final ResourceLocation MEDITERRANEAN_OAK_SPARSE_WOODLAND =
@@ -35,6 +38,8 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
     public static final ResourceLocation CORK_OAK_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_beach");
+    public static final ResourceLocation OLIVE_GROVE_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove_beach");
 
     //Tropical domain
     public static final ResourceLocation TROPICAL_BEACH =
