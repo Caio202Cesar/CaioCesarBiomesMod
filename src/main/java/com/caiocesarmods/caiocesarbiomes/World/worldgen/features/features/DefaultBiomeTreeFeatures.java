@@ -484,10 +484,10 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.4F),
                             CASTANOPSIS_TREE.withChance(0.35F), STONE_OAK_TREE.withChance(0.4F), RING_CUPPED_OAK_TREE.withChance(0.45F),
                             RING_CUPPED_OAK_FANCY_TREE.withChance(0.35F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
-                            FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F),
+                            FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F), SOUTHERN_LIVE_OAK_TREE.withChance(0.4F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.32F), OAK_TREE_WITH_IVY.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            SUBTROPICAL_SPRING_ORCHID_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.4F)),
-                            SOUTHERN_LIVE_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            BIG_LIVE_OAK_TREE.withChance(0.25F)), SUBTROPICAL_SPRING_ORCHID_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
