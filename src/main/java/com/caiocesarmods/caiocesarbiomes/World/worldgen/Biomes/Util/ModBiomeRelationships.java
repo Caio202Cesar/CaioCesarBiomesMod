@@ -101,7 +101,8 @@ public class ModBiomeRelationships {
         //Mangrove beach - "indochina and bangladesh mangroves"
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
-                ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);
+                ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER); //This is different from the bamboo jungle river.
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
@@ -110,6 +111,15 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.BAMBOO_JUNGLE,
+                ModBiomes.TROPICAL_BAMBOO_MARSH,
+                RelationshipType.SUB_BIOME,
+                0,
+                0,
+                0,
+                false, false);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.TROPICAL_SEASONAL_FOREST,

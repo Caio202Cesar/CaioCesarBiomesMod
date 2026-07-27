@@ -122,10 +122,7 @@ public class BiomeRelationshipRegistry {
                 .findFirst();
     }
 
-    public static void registerRiver(
-            ResourceLocation parent,
-            ResourceLocation child) {
-
+    public static void registerRiver(ResourceLocation parent, ResourceLocation child) {
         register(new BiomeRelationship(
                 parent,
                 child,
