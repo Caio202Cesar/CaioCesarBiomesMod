@@ -3,7 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 public class ModBiomeRelationships {
     public static void register() {
 
-        //Mediterranean Oak Woodland
+        ///Mediterranean Oak Woodland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
@@ -39,7 +39,7 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND_RIVER);
 
-        //Mediterranean Scrubland
+        ///Mediterranean Scrubland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
@@ -49,6 +49,7 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        /// Oleander Gardens
         BiomeRelationshipRegistry.register(
                 ModBiomes.OLEANDER_GARDENS,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,

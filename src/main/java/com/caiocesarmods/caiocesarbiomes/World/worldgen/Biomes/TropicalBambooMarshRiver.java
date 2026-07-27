@@ -25,10 +25,10 @@ public class TropicalBambooMarshRiver {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TROPICAL_BAMBOO_MARSH_RIVER = BIOMES.register("tropical_bamboo_marsh_river",
-            () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP));
+            () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP, 0.1f, 0.156f));
 
     //Add tropical river vegetation, like white ginger lily
-    private static Biome makeTropicalBambooMarshRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder) {
+    private static Biome makeTropicalBambooMarshRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
@@ -62,7 +62,7 @@ public class TropicalBambooMarshRiver {
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SEAGRASS_RIVER);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
                 .temperature(0.95F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(13028309)

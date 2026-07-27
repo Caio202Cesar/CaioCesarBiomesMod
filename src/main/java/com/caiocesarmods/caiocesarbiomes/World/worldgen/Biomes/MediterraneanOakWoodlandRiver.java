@@ -27,10 +27,10 @@ public class MediterraneanOakWoodlandRiver {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MEDITERRANEAN_OAK_WOODLAND_RIVER = BIOMES.register("mediterranean_oak_woodland_river",
-            () -> makeMediterraneanOakWoodlandRiver(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE));
+            () -> makeMediterraneanOakWoodlandRiver(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.156f));
 
 
-    private static Biome makeMediterraneanOakWoodlandRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder) {
+    private static Biome makeMediterraneanOakWoodlandRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
@@ -69,7 +69,7 @@ public class MediterraneanOakWoodlandRiver {
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         //Hardiness zone 10: 0.85F - 0.89F
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.RIVER)
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.RIVER).depth(depth).scale(scale)
                 .temperature(0.89F).downfall(0.3F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(14807295)
