@@ -98,7 +98,6 @@ public class ModBiomeRelationships {
                 true, false);
 
         //Tropical
-
         //Mangrove beach - "indochina and bangladesh mangroves"
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
@@ -121,7 +120,6 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
-
         BiomeRelationshipRegistry.register(
                 Biomes.SAVANNA_PLATEAU,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
@@ -130,7 +128,6 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
-
         BiomeRelationshipRegistry.register(
                 Biomes.SHATTERED_SAVANNA,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
@@ -139,10 +136,66 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
-
         BiomeRelationshipRegistry.register(
                 Biomes.SHATTERED_SAVANNA_PLATEAU,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.JUNGLE,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.JUNGLE_EDGE,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.JUNGLE_HILLS,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.MODIFIED_JUNGLE,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.MODIFIED_JUNGLE_EDGE,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.BAMBOO_JUNGLE,
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                Biomes.BAMBOO_JUNGLE_HILLS,
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
                 RelationshipType.BEACH,
                 0,
                 0,
