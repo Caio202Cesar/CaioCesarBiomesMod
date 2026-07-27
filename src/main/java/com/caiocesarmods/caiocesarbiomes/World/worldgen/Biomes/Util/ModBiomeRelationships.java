@@ -102,6 +102,14 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_BAMBOO_MARSH,
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.TROPICAL_SEASONAL_FOREST,
