@@ -2740,6 +2740,15 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BLACKWOOD_ACACIA_SAPLING = registerBlock("blackwood_acacia_sapling",
             BlackwoodAcaciaSapling::new);
 
+    //Cool-mediterranean Coastal Grove
+    public static final RegistryObject<Block> COAST_LIVE_OAK_LOG = registerBlock("coast_live_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> COAST_LIVE_OAK_WOOD = registerBlock("coast_live_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> COAST_LIVE_OAK_LEAVES = registerBlock("coast_live_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COAST_LIVE_OAK_SAPLING = registerBlock("coast_live_oak_sapling",
+            CoastLiveOakSapling::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
