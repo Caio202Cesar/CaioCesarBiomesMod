@@ -23,6 +23,13 @@ public class DefaultBiomeTreeFeatures {
                             FANCY_OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> MEDITERRANEAN_RIPARIAN_TREES = register("mediterranean_riparian_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.3F),
+                            PLANE_TREE.withChance(0.3F), PLANE_FANCY_TREE.withChance(0.25F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.12F),
+                            PLANE_TREE_WITH_IVY.withChance(0.12F)), BLACK_POPLAR_FANCY_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SPARSE_OAK_TREES = register("mediterranean_sparse_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CORK_OAK_TREE.withChance(0.3F),
                             HOLM_OAK_FANCY_TREE.withChance(0.095F), CORK_OAK_FANCY_TREE.withChance(0.095F), FANCY_OAK.withChance(0.078F),

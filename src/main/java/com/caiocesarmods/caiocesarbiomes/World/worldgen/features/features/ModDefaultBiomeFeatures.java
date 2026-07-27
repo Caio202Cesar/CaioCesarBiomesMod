@@ -12,8 +12,8 @@ public class ModDefaultBiomeFeatures {
     public static void withSavannaPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_SAVANNA);
     }
-    public static void withSavannaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SAVANNA_EXTRA_VEGETATION);
+    public static void withMediterraneanRiparianTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_RIPARIAN_TREES);
     }
     public static void withPlumeriaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.PLUMERIA_TREES);

@@ -1,7 +1,10 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -11,7 +14,6 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,23 +21,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class TropicalBambooMarshRiver {
+public class MediterraneanOakWoodlandRiver {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> TROPICAL_BAMBOO_MARSH_RIVER = BIOMES.register("tropical_bamboo_marsh_river",
-            () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP));
+    public static final RegistryObject<Biome> MEDITERRANEAN_OAK_WOODLAND_RIVER = BIOMES.register("mediterranean_oak_woodland_river",
+            () -> makeMediterraneanOakWoodlandRiver(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE));
 
-    //Add tropical river vegetation, like white ginger lily
-    private static Biome makeTropicalBambooMarshRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder) {
+
+    private static Biome makeMediterraneanOakWoodlandRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
-        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 7, 5, 7));
         mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.DROWNED, 7, 5, 7));
         mobspawninfo$builder.withSpawner(EntityClassification.WATER_CREATURE, new MobSpawnInfo.Spawners(EntityType.SQUID, 7, 3, 7));
-        mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.TROPICAL_FISH, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.SALMON, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.COD, 7, 5, 7));
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
@@ -44,29 +46,35 @@ public class TropicalBambooMarshRiver {
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanOakTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanRiparianTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withOakShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SEAGRASS_RIVER);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ELDERBERRY_TREE);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER)
-                .temperature(0.95F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(4110351)
-                        .withGrassColor(6604607).setFogColor(13028309)
-                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
+
+        //Hardiness zone 10: 0.85F - 0.89F
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.RIVER)
+                .temperature(0.89F).downfall(0.3F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
+                        .withGrassColor(12564309).setFogColor(14807295)
+                        .setAmbientSound(ModSoundEvents.MEDITERRANEAN_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
@@ -76,8 +84,3 @@ public class TropicalBambooMarshRiver {
         BIOMES.register(eventBus);
     }
 }
-
-
-
-
-

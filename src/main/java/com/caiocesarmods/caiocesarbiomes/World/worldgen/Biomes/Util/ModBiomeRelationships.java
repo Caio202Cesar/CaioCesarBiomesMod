@@ -3,7 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 public class ModBiomeRelationships {
     public static void register() {
 
-        //Mediterranean
+        //Mediterranean Oak Woodland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
@@ -31,6 +31,15 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
+                ModBiomes.MEDITERRANEAN_OAK_WOODLAND_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
+                ModBiomes.MEDITERRANEAN_OAK_WOODLAND_RIVER);
+
+        //Mediterranean Scrubland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
@@ -86,6 +95,8 @@ public class ModBiomeRelationships {
                 true, false);
 
         //Tropical
+
+        //Mangrove beach - "indochina and bangladesh mangroves"
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);
