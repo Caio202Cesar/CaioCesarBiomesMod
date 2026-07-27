@@ -121,5 +121,32 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.SAVANNA_PLATEAU,
+                ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.SHATTERED_SAVANNA,
+                ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.SHATTERED_SAVANNA_PLATEAU,
+                ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
     }
 }
