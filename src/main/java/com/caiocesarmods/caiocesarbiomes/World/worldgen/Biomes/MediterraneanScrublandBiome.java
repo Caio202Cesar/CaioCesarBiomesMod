@@ -61,7 +61,7 @@ public class MediterraneanScrublandBiome {
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrublandTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrublandOleanderShrubs(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withOakShrubs(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanOakShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrublandConifers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
