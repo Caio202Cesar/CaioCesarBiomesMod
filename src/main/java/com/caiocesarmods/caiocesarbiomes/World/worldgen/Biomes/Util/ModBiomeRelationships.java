@@ -116,9 +116,9 @@ public class ModBiomeRelationships {
                 Biomes.BAMBOO_JUNGLE,
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 RelationshipType.SUB_BIOME,
+                3,
                 0,
-                0,
-                0,
+                1,
                 false, false);
 
         BiomeRelationshipRegistry.register(
