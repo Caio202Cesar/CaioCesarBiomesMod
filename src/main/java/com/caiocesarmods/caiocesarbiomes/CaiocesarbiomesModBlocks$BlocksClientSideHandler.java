@@ -56,7 +56,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         ChileanBellflowerPink.registerRenderLayer();
         ChileanBellflowerMagenta.registerRenderLayer();
         GloriosaLily.registerRenderLayer();
-        Grapevine.registerRenderLayer();
+        //Grapevine.registerRenderLayer();
 
         ModCactuses.registerRenderLayer();
 

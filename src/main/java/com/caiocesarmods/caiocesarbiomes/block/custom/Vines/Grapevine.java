@@ -43,6 +43,7 @@ public class Grapevine extends VineBlock implements IForgeShearable {
     public static final float MIN_TEMP = 0.6F;
     public static final float MAX_TEMP = 2F;
 
+    /*
     //Hardy from zone 6 to 13 (Vitis vinifera subsp. sylvestris)
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
@@ -79,7 +80,7 @@ public class Grapevine extends VineBlock implements IForgeShearable {
         RenderTypeLookup.setRenderLayer(ModPlants.GRAPEVINE_FALL1.get(), RenderType.getCutout());
 
 
-    }
+    }*/
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
