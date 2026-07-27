@@ -79,14 +79,16 @@ public class ModPlants {
     public static final RegistryObject<Block> GLORIOSA_LILY = registerBlock("gloriosa_lily",
             GloriosaLily::new);
 
-    /*public static final RegistryObject<Block> GRAPEVINE = registerBlock("grapevine",
+    public static final RegistryObject<Block> GRAPEVINE = registerBlock("grapevine",
             Grapevine::new);
+    public static final RegistryObject<Block> GRAPEVINE_FRUITING = registerBlock("grapevine_fruiting",
+            GrapevineFruiting::new);
     public static final RegistryObject<Block> GRAPEVINE_FALL1 = registerBlock("grapevine_fall1",
             GrapevineFall::new);
     public static final RegistryObject<Block> GRAPEVINE_FALL2 = registerBlock("grapevine_fall2",
             GrapevineWinter::new);
     public static final RegistryObject<Block> GRAPEVINE_BRANCHES = registerBlock("grapevine_branches",
-            GrapevineBranches::new);*/
+            GrapevineBranches::new);
 
     public static final RegistryObject<Block> KIWI_VINE = registerBlock("kiwi_vine",
             KiwiVine::new);
