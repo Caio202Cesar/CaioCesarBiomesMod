@@ -35,7 +35,7 @@ public class ModBiomes {
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");
     public static final ResourceLocation STONY_MEDITERRANEAN_SHORE =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "stony_mediterranean_shore");
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "stony_mediterranean_shore"); //For Csb biomes
     public static final ResourceLocation CONIFEROUS_MEDITERRANEAN_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
     public static final ResourceLocation CORK_OAK_BEACH =
@@ -49,8 +49,15 @@ public class ModBiomes {
     public static final ResourceLocation TROPICAL_BAMBOO_MARSH_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_bamboo_marsh_river");
 
-    public static final ResourceLocation TROPICAL_BEACH =
+    public static final ResourceLocation TROPICAL_SEASONAL_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_seasonal_forest");
+    public static final ResourceLocation SAVANNA =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "savanna");
+
+    public static final ResourceLocation TROPICAL_WET_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
+    public static final ResourceLocation TROPICAL_SAVANNA_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "dry_tropical_beach");
 
     //Humid subtropical domain
     public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =

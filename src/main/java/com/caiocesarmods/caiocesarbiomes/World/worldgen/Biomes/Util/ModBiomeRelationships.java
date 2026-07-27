@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import net.minecraft.world.biome.Biomes;
+
 public class ModBiomeRelationships {
     public static void register() {
 
@@ -101,6 +103,23 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER);
-    }
 
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_SEASONAL_FOREST,
+                ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                Biomes.SAVANNA,
+                ModBiomes.TROPICAL_SAVANNA_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+    }
 }

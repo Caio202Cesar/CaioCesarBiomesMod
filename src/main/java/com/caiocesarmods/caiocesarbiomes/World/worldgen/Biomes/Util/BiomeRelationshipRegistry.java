@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 
 import java.util.*;
 
@@ -15,6 +17,7 @@ public class BiomeRelationshipRegistry {
                 .add(relationship);
     }
 
+    //Mod -> Mod
     public static void register(
             ResourceLocation parent,
             ResourceLocation child,
@@ -26,6 +29,72 @@ public class BiomeRelationshipRegistry {
             boolean river) {
 
         register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority, beach, river));
+    }
+
+    //Vanilla -> Mod
+    public static void register(
+            RegistryKey<Biome> parent,
+            ResourceLocation child,
+            RelationshipType type,
+            int chance,
+            int edgeSize,
+            int priority,
+            boolean beach,
+            boolean river) {
+
+        register(
+                parent.getLocation(),
+                child,
+                type,
+                chance,
+                edgeSize,
+                priority,
+                beach,
+                river);
+    }
+
+    //Vanilla -> Vanilla
+    public static void register(
+            RegistryKey<Biome> parent,
+            RegistryKey<Biome> child,
+            RelationshipType type,
+            int chance,
+            int edgeSize,
+            int priority,
+            boolean beach,
+            boolean river) {
+
+        register(
+                parent.getLocation(),
+                child.getLocation(),
+                type,
+                chance,
+                edgeSize,
+                priority,
+                beach,
+                river);
+    }
+
+    //Mod -> Vanilla
+    public static void register(
+            ResourceLocation parent,
+            RegistryKey<Biome> child,
+            RelationshipType type,
+            int chance,
+            int edgeSize,
+            int priority,
+            boolean beach,
+            boolean river) {
+
+        register(
+                parent,
+                child.getLocation(),
+                type,
+                chance,
+                edgeSize,
+                priority,
+                beach,
+                river);
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {
