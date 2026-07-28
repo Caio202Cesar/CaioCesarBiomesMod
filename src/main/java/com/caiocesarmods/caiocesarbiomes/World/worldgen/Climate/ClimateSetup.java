@@ -117,10 +117,11 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:snowy_beach", ClimateDomain.SNOWY);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_beach"), 0.2F);
             ClimateDomainRegistry.register("minecraft:ice_spikes", ClimateDomain.ICE_CAP);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ice_spikes"), 0.0F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ice_spikes"), 0.15F);
 
-
+            ClimateDomainRegistry.register("minecraft:mushroom_fields", ClimateDomain.TROPICAL_MARITIME);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.85F);
+            ClimateDomainRegistry.register("minecraft:mushroom_fields_shore", ClimateDomain.TROPICAL_MARITIME);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields_shore"), 0.85F);
 
 
@@ -173,36 +174,37 @@ public class ClimateSetup {
 
 
             ClimateDomainRegistry.register("minecraft:soul_sand_valley", ClimateDomain.HELL);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "soul_sand_valley"), 3.0F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "soul_sand_valley"), 4.0F);
             ClimateDomainRegistry.register("minecraft:crimson_forest", ClimateDomain.HELL);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "crimson_forest"), 3.0F);
             ClimateDomainRegistry.register("minecraft:warped_forest", ClimateDomain.HELL);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "warped_forest"), 2.5F);
             ClimateDomainRegistry.register("minecraft:basalt_deltas", ClimateDomain.HELL);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "basalt_deltas"), 3.5F);
+            ClimateDomainRegistry.register("minecraft:nether_wastes", ClimateDomain.HELL);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "nether_wastes"), 4.0F);
+
+
+            ClimateDomainRegistry.register("minecraft:badlands", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "badlands"), 1.0F);
+            ClimateDomainRegistry.register("minecraft:wooded_badlands_plateau", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_badlands_plateau"), 1.0F);
+            ClimateDomainRegistry.register("minecraft:badlands_plateau", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "badlands_plateau"), 1.0F);
+            ClimateDomainRegistry.register("minecraft:eroded_badlands", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "eroded_badlands"), 1.0F);
+            ClimateDomainRegistry.register("minecraft:modified_wooded_badlands_plateau", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_wooded_badlands_plateau"), 1.0F);
+            ClimateDomainRegistry.register("minecraft:modified_wooded_badlands_plateau", ClimateDomain.TEMPERATE_CONTINENTAL_DESERT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_badlands_plateau"), 1.0F);
 
 
             ClimateDomainRegistry.register("minecraft:the_void", ClimateDomain.NONE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "the_void"), 0.0F);
-
-
-
-            public static final RegistryKey<Biome> THE_END = makeKey("the_end");
-            public static final RegistryKey<Biome> SMALL_END_ISLANDS = makeKey("small_end_islands");
-            public static final RegistryKey<Biome> END_MIDLANDS = makeKey("end_midlands");
-            public static final RegistryKey<Biome> END_HIGHLANDS = makeKey("end_highlands");
-            public static final RegistryKey<Biome> END_BARRENS = makeKey("end_barrens");
-
-
-            SummerHeatHelper.register("minecraft:badlands", SummerHeat.SCHORCHING);
-            SummerHeatHelper.register("minecraft:wooded_badlands_plateau", SummerHeat.WARM);
-            SummerHeatHelper.register("minecraft:badlands_plateau", SummerHeat.WARM);
-            SummerHeatHelper.register("minecraft:eroded_badlands", SummerHeat.SCHORCHING);
-            SummerHeatHelper.register("minecraft:modified_wooded_badlands_plateau", SummerHeat.WARM);
-            SummerHeatHelper.register("minecraft:modified_badlands_plateau", SummerHeat.WARM);
-
-
-
+            ClimateDomainRegistry.register("minecraft:the_end", ClimateDomain.NONE);
+            ClimateDomainRegistry.register("minecraft:small_end_islands", ClimateDomain.NONE);
+            ClimateDomainRegistry.register("minecraft:end_midlands", ClimateDomain.NONE);
+            ClimateDomainRegistry.register("minecraft:the_end", ClimateDomain.NONE);
+            ClimateDomainRegistry.register("minecraft:small_end_islands", ClimateDomain.NONE);
 
 
             /// Caio Cesar Biomes / Caio Cesar's Naturalistic Voyage

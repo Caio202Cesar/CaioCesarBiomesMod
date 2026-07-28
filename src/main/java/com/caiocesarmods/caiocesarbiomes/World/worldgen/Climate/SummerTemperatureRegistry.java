@@ -20,14 +20,6 @@ public class SummerTemperatureRegistry {
 
         ResourceLocation id = ForgeRegistries.BIOMES.getKey(biome);
 
-        Float value = SUMMER_TEMPERATURES.get(id);
-
-        if (value == null) {
-            throw new IllegalStateException(
-                    "Missing summer temperature for biome: " + id
-            );
-        }
-
-        return value;
+        return SUMMER_TEMPERATURES.getOrDefault(id, -0.5F);
     }
 }

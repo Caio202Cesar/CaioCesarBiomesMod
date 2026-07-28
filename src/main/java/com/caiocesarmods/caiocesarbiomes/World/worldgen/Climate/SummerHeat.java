@@ -2,7 +2,8 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
 public enum SummerHeat {
 
-    ICY(Float.NEGATIVE_INFINITY, 0.2F),
+    ABSENT(Float.NEGATIVE_INFINITY, 0.0F),
+    ICY( 0.0F, 0.2F),
     TUNDRA_COLD(0.2F, 0.4F),
     COOLER(0.4F, 0.6F),
     MILD(0.6F, 0.8F),
