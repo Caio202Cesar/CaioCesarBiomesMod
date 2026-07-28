@@ -35,37 +35,37 @@ public class ExtendedBiomeBuilder extends Biome.Builder {
     }
 
     @Override
-    public Biome.Builder precipitation(Biome.RainType precipitationIn) {
+    public ExtendedBiomeBuilder precipitation(Biome.RainType precipitationIn) {
         super.precipitation(precipitationIn);
         return this;
     }
 
     @Override
-    public Biome.Builder category(Biome.Category biomeCategory) {
+    public ExtendedBiomeBuilder category(Biome.Category biomeCategory) {
         super.category(biomeCategory);
         return this;
     }
 
     @Override
-    public Biome.Builder setEffects(BiomeAmbience effects) {
+    public ExtendedBiomeBuilder setEffects(BiomeAmbience effects) {
         super.setEffects(effects);
         return this;
     }
 
     @Override
-    public Biome.Builder withMobSpawnSettings(MobSpawnInfo mobSpawnSettings) {
+    public ExtendedBiomeBuilder withMobSpawnSettings(MobSpawnInfo mobSpawnSettings) {
         super.withMobSpawnSettings(mobSpawnSettings);
         return this;
     }
 
     @Override
-    public Biome.Builder withGenerationSettings(BiomeGenerationSettings generationSettings) {
+    public ExtendedBiomeBuilder withGenerationSettings(BiomeGenerationSettings generationSettings) {
         super.withGenerationSettings(generationSettings);
         return this;
     }
 
     @Override
-    public Biome.Builder withTemperatureModifier(Biome.TemperatureModifier temperatureSettings) {
+    public ExtendedBiomeBuilder withTemperatureModifier(Biome.TemperatureModifier temperatureSettings) {
         super.withTemperatureModifier(temperatureSettings);
         return this;
     }

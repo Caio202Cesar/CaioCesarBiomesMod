@@ -7,8 +7,11 @@
     "LayerUtilMixin",
     "BambooFeatureMixin",
     "BiomeMixin",
-    "BiomeRegistryMixin",
-    "BiomeAcessorMixin"
+    "BiomeAccessor",
+    "ClimateAccessor",
+    "BiomeMutableMixin",
+    "MutableBiomeClimateMixin"
+
   ],
   "client": [],
   "server": [],
