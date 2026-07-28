@@ -6,7 +6,6 @@
   "mixins": [
     "LayerUtilMixin",
     "BambooFeatureMixin",
-    "BiomeMixin",
     "BiomeAccessor",
     "ClimateAccessor",
     "BiomeMutableMixin",
