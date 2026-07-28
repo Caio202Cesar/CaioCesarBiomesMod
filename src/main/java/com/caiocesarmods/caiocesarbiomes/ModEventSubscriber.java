@@ -73,7 +73,7 @@ public class ModEventSubscriber {
 
             event.setClimate(new Biome.Climate(
                     Biome.RainType.RAIN,          // rain
-                    0.79f,                         // new temperature - hardiness zone 8
+                    0.74f,                         // new temperature - hardiness zone 7
                     Biome.TemperatureModifier.NONE,
                     0.4f                          // downfall
             ));
