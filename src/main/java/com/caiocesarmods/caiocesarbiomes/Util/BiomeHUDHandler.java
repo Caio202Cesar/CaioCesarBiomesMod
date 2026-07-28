@@ -34,8 +34,9 @@ public class BiomeHUDHandler {
 
         int zone = HardinessZones.getZone(world, pos);
 
-        SummerTemperatureBuilder summerTemperature = (SummerTemperatureBuilder) (Object) biome;
-        SummerHeat summerHeat = summerTemperature.getSummerHeat(pos);
+        SummerHeat summerHeat = SummerHeat.fromTemperature(
+                SummerTemperature.get(world, pos)
+        );
 
         ClimateDomain climate = ClimateDomainRegistry.get(world, pos);
 
