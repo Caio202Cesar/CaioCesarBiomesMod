@@ -11,7 +11,7 @@ public class SummerHeatHelper {
 
         Biome biome = world.getBiome(pos);
 
-        BiomeSummerTemperature climate = (BiomeSummerTemperature) (Object) biome;
+        BiomeClimate climate = (BiomeClimate) (Object) biome;
 
         return SummerHeat.fromTemperature(
                 climate.getSummerTemperature(pos));
