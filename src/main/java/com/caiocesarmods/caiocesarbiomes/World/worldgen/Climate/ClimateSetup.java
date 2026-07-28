@@ -257,7 +257,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("brbiomesmod:pampas_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_hills"), 0.9F);
             ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
-            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.9F);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.95F);
             ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
             SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.9F);
 
