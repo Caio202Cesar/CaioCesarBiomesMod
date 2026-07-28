@@ -119,6 +119,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:ice_spikes", ClimateDomain.ICE_CAP);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ice_spikes"), 0.15F);
 
+
             ClimateDomainRegistry.register("minecraft:mushroom_fields", ClimateDomain.TROPICAL_MARITIME);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.85F);
             ClimateDomainRegistry.register("minecraft:mushroom_fields_shore", ClimateDomain.TROPICAL_MARITIME);
