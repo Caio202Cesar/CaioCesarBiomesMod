@@ -14,8 +14,7 @@ public class ClimateSetup {
         event.enqueueWork(() -> {
 
             /// Minecraft Vanilla
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "desert"), 1.8F);
-            //SummerHeatHelper.register("minecraft:ocean", SummerHeat.WARM);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ocean"), 1.2F);
             ClimateDomainRegistry.register("minecraft:ocean", ClimateDomain.OCEAN);
            // SummerHeatHelper.register("minecraft:deep_ocean", SummerHeat.WARM);
             ClimateDomainRegistry.register("minecraft:deep_ocean", ClimateDomain.OCEAN);
