@@ -32,8 +32,8 @@ public class ClimateDomainRegistry {
                 .getRegistry(Registry.BIOME_KEY)
                 .getKey(biome);
 
-        if (id == null) return ClimateDomain.TEMPERATE_OCEANIC; // safe fallback
+        if (id == null) return ClimateDomain.NONE; // safe fallback
 
-        return MAP.getOrDefault(id, ClimateDomain.TEMPERATE_OCEANIC);
+        return MAP.getOrDefault(id, ClimateDomain.NONE);
     }
 }

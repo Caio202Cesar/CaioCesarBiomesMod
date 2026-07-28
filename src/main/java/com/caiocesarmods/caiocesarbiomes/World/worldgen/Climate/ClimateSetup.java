@@ -43,28 +43,45 @@ public class ClimateSetup {
 
 
             SummerHeatRegistry.register("minecraft:desert", SummerHeat.SCHORCHING);
+            ClimateDomainRegistry.register("minecraft:desert", ClimateDomain.SUBTROPICAL_DESERT);
             SummerHeatRegistry.register("minecraft:desert_hills", SummerHeat.SCHORCHING);
+            ClimateDomainRegistry.register("minecraft:desert_hills", ClimateDomain.SUBTROPICAL_DESERT);
             SummerHeatRegistry.register("minecraft:desert_lakes", SummerHeat.SCHORCHING);
+            ClimateDomainRegistry.register("minecraft:desert_lakes", ClimateDomain.SUBTROPICAL_DESERT);
 
 
             SummerHeatRegistry.register("minecraft:mountains", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:mountains", ClimateDomain.ALPINE);
             SummerHeatRegistry.register("minecraft:mountain_edge", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:mountain_edge", ClimateDomain.ALPINE);
             SummerHeatRegistry.register("minecraft:wooded_mountains", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:wooded_mountains", ClimateDomain.ALPINE);
             SummerHeatRegistry.register("minecraft:gravelly_mountains", SummerHeat.TUNDRA_COLD);
+            ClimateDomainRegistry.register("minecraft:gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
 
 
             SummerHeatRegistry.register("minecraft:forest", SummerHeat.WARM); //It has a temperate oceanic climate due to birch trees
+            ClimateDomainRegistry.register("minecraft:forest", ClimateDomain.TEMPERATE_OCEANIC);
             SummerHeatRegistry.register("minecraft:wooded_hills", SummerHeat.WARM);
+            ClimateDomainRegistry.register("minecraft:wooded_hills", ClimateDomain.TEMPERATE_OCEANIC);
             SummerHeatRegistry.register("minecraft:flower_forest", SummerHeat.WARM);
+            ClimateDomainRegistry.register("minecraft:flower_forest", ClimateDomain.TEMPERATE_OCEANIC);
 
 
             SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:taiga", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:taiga_hills", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:taiga_hills", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:snowy_taiga", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:snowy_taiga", ClimateDomain.SNOWY);
             SummerHeatRegistry.register("minecraft:snowy_taiga_hills", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:snowy_taiga_hills", ClimateDomain.SNOWY);
             SummerHeatRegistry.register("minecraft:giant_tree_taiga", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:giant_tree_taiga", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:giant_tree_taiga_hills", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:giant_tree_taiga_hills", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:taiga_mountains", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:taiga_mountains", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:snowy_taiga_mountains", SummerHeat.ICY);
             SummerHeatRegistry.register("minecraft:giant_spruce_taiga", SummerHeat.COOLER);
             SummerHeatRegistry.register("minecraft:giant_spruce_taiga_hills", SummerHeat.COOLER);

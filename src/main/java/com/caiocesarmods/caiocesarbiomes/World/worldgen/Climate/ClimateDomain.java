@@ -1,8 +1,12 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
 public enum ClimateDomain {
+    NONE,
     ICE_CAP,
+    SNOWY,
     TUNDRA,
+    ALPINE,
+    ALPINE_TUNDRA,
     SUBPOLAR_OCEANIC,
     SUBARTIC,
     TEMPERATE_CONTINENTAL,
