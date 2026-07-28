@@ -65,6 +65,7 @@ public enum Season {
         y += lineHeight;
 
         drawText(mc, event, "Biome: " + biomeName, 10, y);
+        y += lineHeight;
 
         drawText(mc, event, "Hardiness Zone: " + zone, 10, y);
         y += lineHeight;
