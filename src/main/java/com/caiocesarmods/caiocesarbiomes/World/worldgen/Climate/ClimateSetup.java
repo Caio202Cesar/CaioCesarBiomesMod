@@ -11,18 +11,39 @@ public class ClimateSetup {
     public static void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             SummerHeatRegistry.register("minecraft:ocean", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:plains", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:desert", SummerHeat.SCHORCHING);
-            SummerHeatRegistry.register("minecraft:mountains", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:forest", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:swamp", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:frozen_ocean", SummerHeat.ICY);
+
+
             SummerHeatRegistry.register("minecraft:frozen_river", SummerHeat.ICY);
+
+
+            SummerHeatRegistry.register("minecraft:plains", SummerHeat.HOT); //Considering absence of birch trees.
+
+
+            SummerHeatRegistry.register("minecraft:desert", SummerHeat.SCHORCHING);
+
+
+            SummerHeatRegistry.register("minecraft:mountains", SummerHeat.COOLER);
+
+
+            SummerHeatRegistry.register("minecraft:forest", SummerHeat.WARM); //It has an temperate oceanic climate due to birch trees
+
+
+            SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
+
+
+            SummerHeatRegistry.register("minecraft:swamp", SummerHeat.HOT);
+
+
+            SummerHeatRegistry.register("minecraft:frozen_ocean", SummerHeat.ICY);
+
+
             SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.ICY);
             SummerHeatRegistry.register("minecraft:snowy_mountains", SummerHeat.ICY);
+
             SummerHeatRegistry.register("minecraft:mushroom_fields", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:mushroom_fields_shore", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("minecraft:beach", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:desert_hills", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:wooded_hills", SummerHeat.WARM);
