@@ -31,6 +31,18 @@ public class BiomeRelationshipRegistry {
         register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority, beach, river));
     }
 
+    public static void registerRiver(ResourceLocation parent, ResourceLocation child) {
+        register(new BiomeRelationship(
+                parent,
+                child,
+                null,
+                0,
+                0,
+                0,
+                false,   // beach
+                true));  // river
+    }
+
     //Vanilla -> Mod
     public static void register(
             RegistryKey<Biome> parent,
@@ -51,6 +63,18 @@ public class BiomeRelationshipRegistry {
                 priority,
                 beach,
                 river);
+    }
+
+    public static void registerRiver(RegistryKey<Biome> parent, ResourceLocation child) {
+        register(new BiomeRelationship(
+                parent.getLocation(),
+                child,
+                null,
+                0,
+                0,
+                0,
+                false,   // beach
+                true));  // river
     }
 
     //Vanilla -> Vanilla
@@ -75,6 +99,18 @@ public class BiomeRelationshipRegistry {
                 river);
     }
 
+    public static void registerRiver(RegistryKey<Biome> parent, RegistryKey<Biome> child) {
+        register(new BiomeRelationship(
+                parent.getLocation(),
+                child.getLocation(),
+                null,
+                0,
+                0,
+                0,
+                false,   // beach
+                true));  // river
+    }
+
     //Mod -> Vanilla
     public static void register(
             ResourceLocation parent,
@@ -95,6 +131,18 @@ public class BiomeRelationshipRegistry {
                 priority,
                 beach,
                 river);
+    }
+
+    public static void registerRiver(ResourceLocation parent, RegistryKey<Biome> child) {
+        register(new BiomeRelationship(
+                parent,
+                child.getLocation(),
+                null,
+                0,
+                0,
+                0,
+                false,   // beach
+                true));  // river
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {
@@ -120,18 +168,6 @@ public class BiomeRelationshipRegistry {
                 .stream()
                 .filter(BiomeRelationship::isRiver)
                 .findFirst();
-    }
-
-    public static void registerRiver(ResourceLocation parent, ResourceLocation child) {
-        register(new BiomeRelationship(
-                parent,
-                child,
-                null,
-                0,
-                0,
-                0,
-                false,   // beach
-                true));  // river
     }
 
     public static void clear() {
