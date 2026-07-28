@@ -152,7 +152,7 @@ public class ClimateSetup {
 
 
             /// Caio Cesar Biomes / Caio Cesar's Naturalistic Voyage
-            SummerHeatHelper.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
+           /* SummerHeatHelper.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
 
 
             SummerHeatHelper.register("caiocesarbiomes:coastal_subtropical_desert", SummerHeat.WARM);
@@ -210,36 +210,36 @@ public class ClimateSetup {
             SummerHeatHelper.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
             SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
             SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
-            SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
+            SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);*/
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", ClimateDomain.SUBTROPICAL_MEDITERRANEAN);
 
-            SummerHeatHelper.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:amazon_rainforest", ClimateDomain.TROPICAL_FOREST);
-            SummerHeatHelper.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:amazon_varzea_forest", ClimateDomain.TROPICAL_FOREST);
-            SummerHeatHelper.register("brbiomesmod:araucaria_plateau", SummerHeat.WARM);
+            //SummerHeatHelper.register("brbiomesmod:araucaria_plateau", SummerHeat.WARM);
             ClimateDomainRegistry.register("brbiomesmod:araucaria_plateau", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
-            SummerHeatHelper.register("brbiomesmod:atlantic_forest", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:atlantic_forest", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:atlantic_forest", ClimateDomain.TROPICAL_FOREST);
-            SummerHeatHelper.register("brbiomesmod:atlantic_forest_hills", SummerHeat.WARM);
+            //SummerHeatHelper.register("brbiomesmod:atlantic_forest_hills", SummerHeat.WARM);
             ClimateDomainRegistry.register("brbiomesmod:atlantic_forest_hills", ClimateDomain.TROPICAL_MONTANE);
-            SummerHeatHelper.register("brbiomesmod:butia_pampas", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:butia_pampas", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:butia_pampas", ClimateDomain.HUMID_SUBTROPICAL);
-            SummerHeatHelper.register("brbiomesmod:caatinga_shrubland", SummerHeat.SCHORCHING);
+            //SummerHeatHelper.register("brbiomesmod:caatinga_shrubland", SummerHeat.SCHORCHING);
             ClimateDomainRegistry.register("brbiomesmod:caatinga_shrubland", ClimateDomain.TROPICAL_SEMIARID);
-            SummerHeatHelper.register("brbiomesmod:cerrado", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:cerrado", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:cerrado", ClimateDomain.TROPICAL_SAVANNA);
-            SummerHeatHelper.register("brbiomesmod:pampas_hills", SummerHeat.WARM);
+            //SummerHeatHelper.register("brbiomesmod:pampas_hills", SummerHeat.WARM);
             ClimateDomainRegistry.register("brbiomesmod:pampas_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
-            SummerHeatHelper.register("brbiomesmod:dunas_restinga", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:dunas_restinga", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:dunas_restinga", ClimateDomain.TROPICAL_SAVANNA);
-            SummerHeatHelper.register("brbiomesmod:pampas", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:pampas", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
-            SummerHeatHelper.register("brbiomesmod:pampas_coastal_fields", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:pampas_coastal_fields", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
-            SummerHeatHelper.register("brbiomesmod:pantanal", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:pantanal", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
-            SummerHeatHelper.register("brbiomesmod:restinga_beach", SummerHeat.HOT);
+            //SummerHeatHelper.register("brbiomesmod:restinga_beach", SummerHeat.HOT);
             ClimateDomainRegistry.register("brbiomesmod:restinga_beach", ClimateDomain.TROPICAL_SAVANNA);
         });
     }

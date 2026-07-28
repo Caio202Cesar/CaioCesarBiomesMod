@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.mixin;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ExtendedBiomeBuilder;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.BiomeClimate;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerTemperatureBuilder;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.Biome;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Biome.class)
-public abstract class BiomeMixin implements BiomeClimate {
+public abstract class BiomeMixin implements SummerTemperatureBuilder {
 
     @Shadow
     public abstract float getTemperature();

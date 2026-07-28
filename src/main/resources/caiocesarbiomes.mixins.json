@@ -10,7 +10,8 @@
     "BiomeAccessor",
     "ClimateAccessor",
     "BiomeMutableMixin",
-    "MutableBiomeClimateMixin"
+    "MutableBiomeClimateMixin",
+    "BiomeBuilderMixin"
 
   ],
   "client": [],
