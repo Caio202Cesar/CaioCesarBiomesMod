@@ -10,6 +10,8 @@ public class ClimateSetup {
     @SubscribeEvent
     public static void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
+            /// Minecraft Vanilla
             SummerHeatRegistry.register("minecraft:ocean", SummerHeat.WARM);
             ClimateDomainRegistry.register("minecraft:ocean", ClimateDomain.OCEAN);
             SummerHeatRegistry.register("minecraft:deep_ocean", SummerHeat.WARM);
@@ -58,6 +60,8 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:wooded_mountains", ClimateDomain.ALPINE);
             SummerHeatRegistry.register("minecraft:gravelly_mountains", SummerHeat.TUNDRA_COLD);
             ClimateDomainRegistry.register("minecraft:gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
+            SummerHeatRegistry.register("minecraft:modified_gravelly_mountains", SummerHeat.TUNDRA_COLD);
+            ClimateDomainRegistry.register("minecraft:modified_gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
 
 
             SummerHeatRegistry.register("minecraft:forest", SummerHeat.WARM); //It has a temperate oceanic climate due to birch trees
@@ -83,14 +87,17 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:taiga_mountains", SummerHeat.COOLER);
             ClimateDomainRegistry.register("minecraft:taiga_mountains", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:snowy_taiga_mountains", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:snowy_taiga_mountains", ClimateDomain.SNOWY);
             SummerHeatRegistry.register("minecraft:giant_spruce_taiga", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:giant_spruce_taiga", ClimateDomain.SUBARTIC);
             SummerHeatRegistry.register("minecraft:giant_spruce_taiga_hills", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:giant_spruce_taiga_hills", ClimateDomain.SUBARTIC);
 
 
             SummerHeatRegistry.register("minecraft:swamp", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:swamp", ClimateDomain.HUMID_SUBTROPICAL);
             SummerHeatRegistry.register("minecraft:swamp_hills", SummerHeat.HOT);
-
-
+            ClimateDomainRegistry.register("minecraft:swamp_hills", ClimateDomain.HUMID_SUBTROPICAL);
 
 
             SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.ICY);
@@ -111,6 +118,8 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:jungle_edge", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:modified_jungle", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:modified_jungle_edge", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:bamboo_jungle", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:bamboo_jungle_hills", SummerHeat.HOT);
 
 
             SummerHeatRegistry.register("minecraft:birch_forest", SummerHeat.WARM);
@@ -125,6 +134,8 @@ public class ClimateSetup {
 
             SummerHeatRegistry.register("minecraft:savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:savanna_plateau", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:shattered_savanna", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:shattered_savanna_plateau", SummerHeat.HOT);
 
 
             SummerHeatRegistry.register("minecraft:badlands", SummerHeat.SCHORCHING);
@@ -135,24 +146,26 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:ice_spikes", SummerHeat.ICY);
 
 
-
-
-
-            SummerHeatRegistry.register("minecraft:modified_gravelly_mountains", SummerHeat.TUNDRA_COLD);
-            SummerHeatRegistry.register("minecraft:shattered_savanna", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:shattered_savanna_plateau", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:eroded_badlands", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("minecraft:modified_wooded_badlands_plateau", SummerHeat.WARM);
             SummerHeatRegistry.register("minecraft:modified_badlands_plateau", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:bamboo_jungle", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:bamboo_jungle_hills", SummerHeat.HOT);
 
+
+            /// Caio Cesar Biomes / Caio Cesar's Naturalistic Voyage
             SummerHeatRegistry.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", SummerHeat.WARM);
+
+
             SummerHeatRegistry.register("caiocesarbiomes:tropical_pine_island", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("caiocesarbiomes:cork_oak_savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:cork_oak_beach", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("caiocesarbiomes:dry_tropical_beach", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_plains", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_sahel", SummerHeat.SCHORCHING);
@@ -198,21 +211,36 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
             SummerHeatRegistry.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
+            ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", ClimateDomain.SUBTROPICAL_MEDITERRANEAN);
 
             SummerHeatRegistry.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:amazon_rainforest", ClimateDomain.TROPICAL_FOREST);
             SummerHeatRegistry.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:amazon_varzea_forest", ClimateDomain.TROPICAL_FOREST);
             SummerHeatRegistry.register("brbiomesmod:araucaria_plateau", SummerHeat.WARM);
+            ClimateDomainRegistry.register("brbiomesmod:araucaria_plateau", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             SummerHeatRegistry.register("brbiomesmod:atlantic_forest", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:atlantic_forest", ClimateDomain.TROPICAL_FOREST);
             SummerHeatRegistry.register("brbiomesmod:atlantic_forest_hills", SummerHeat.WARM);
+            ClimateDomainRegistry.register("brbiomesmod:atlantic_forest_hills", ClimateDomain.TROPICAL_MONTANE);
             SummerHeatRegistry.register("brbiomesmod:butia_pampas", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:butia_pampas", ClimateDomain.HUMID_SUBTROPICAL);
             SummerHeatRegistry.register("brbiomesmod:caatinga_shrubland", SummerHeat.SCHORCHING);
+            ClimateDomainRegistry.register("brbiomesmod:caatinga_shrubland", ClimateDomain.TROPICAL_SEMIARID);
             SummerHeatRegistry.register("brbiomesmod:cerrado", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:cerrado", ClimateDomain.TROPICAL_SAVANNA);
             SummerHeatRegistry.register("brbiomesmod:pampas_hills", SummerHeat.WARM);
+            ClimateDomainRegistry.register("brbiomesmod:pampas_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             SummerHeatRegistry.register("brbiomesmod:dunas_restinga", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:dunas_restinga", ClimateDomain.TROPICAL_SAVANNA);
             SummerHeatRegistry.register("brbiomesmod:pampas", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
             SummerHeatRegistry.register("brbiomesmod:pampas_coastal_fields", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
             SummerHeatRegistry.register("brbiomesmod:pantanal", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
             SummerHeatRegistry.register("brbiomesmod:restinga_beach", SummerHeat.HOT);
+            ClimateDomainRegistry.register("brbiomesmod:restinga_beach", ClimateDomain.TROPICAL_SAVANNA);
         });
     }
 }
