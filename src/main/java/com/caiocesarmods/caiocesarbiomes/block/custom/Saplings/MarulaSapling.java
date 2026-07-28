@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -45,7 +46,7 @@ public class MarulaSapling extends SaplingBlock {
 
     //Hardy to zone 10 (requires hot summers)
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        SummerHeat heat = SummerHeatHelper.get(world, pos);
         return heat == SummerHeat.HOT;
     }
 

@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -29,7 +30,7 @@ public class ChileanBellflowerPink extends VineBlock implements IForgeShearable 
     }
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        SummerHeat heat = SummerHeatHelper.get(world, pos);
         return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
     }
 
