@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -12,6 +14,7 @@ public class ClimateSetup {
         event.enqueueWork(() -> {
 
             /// Minecraft Vanilla
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "desert"), 1.8F);
             //SummerHeatHelper.register("minecraft:ocean", SummerHeat.WARM);
             ClimateDomainRegistry.register("minecraft:ocean", ClimateDomain.OCEAN);
            // SummerHeatHelper.register("minecraft:deep_ocean", SummerHeat.WARM);
