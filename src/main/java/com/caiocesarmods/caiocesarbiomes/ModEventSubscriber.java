@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
+import com.caiocesarmods.caiocesarbiomes.Util.BiomeHUDHandler;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -38,7 +39,7 @@ public class ModEventSubscriber {
 
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
-        Season.onRenderGameOverlay(event);
+        BiomeHUDHandler.onRenderGameOverlay(event);
     }
 
     @SubscribeEvent
