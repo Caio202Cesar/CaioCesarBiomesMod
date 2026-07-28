@@ -30,25 +30,25 @@ public class ClimateSetup {
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_ocean"), 0.8F);
 
             ClimateDomainRegistry.register("minecraft:cold_ocean", ClimateDomain.COLD_OCEAN);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "cold_ocean"), 0.75F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "cold_ocean"), 0.6F);
             ClimateDomainRegistry.register("minecraft:deep_cold_ocean", ClimateDomain.COLD_OCEAN);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_cold_ocean"), 0.75F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_cold_ocean"), 0.6F);
 
             ClimateDomainRegistry.register("minecraft:frozen_ocean", ClimateDomain.ICY_OCEAN);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_ocean"), 0.6F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_ocean"), 0.2F);
             ClimateDomainRegistry.register("minecraft:deep_frozen_ocean", ClimateDomain.ICY_OCEAN);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_frozen_ocean"), 0.7F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_frozen_ocean"), 0.2F);
 
 
             ClimateDomainRegistry.register("minecraft:frozen_river", ClimateDomain.ICE_CAP);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_river"), 0.6F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_river"), 0.2F);
 
 
            //Considering absence of birch trees, summer here is hot;
             ClimateDomainRegistry.register("minecraft:plains", ClimateDomain.TEMPERATE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "plains"), 0.9F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "plains"), 0.95F);
             ClimateDomainRegistry.register("minecraft:sunflower_plains", ClimateDomain.TEMPERATE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "sunflower_plains"), 0.9F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "sunflower_plains"), 0.95F);
 
 
             ClimateDomainRegistry.register("minecraft:desert", ClimateDomain.SUBTROPICAL_DESERT);
@@ -60,15 +60,15 @@ public class ClimateSetup {
 
 
             ClimateDomainRegistry.register("minecraft:mountains", ClimateDomain.ALPINE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountains"), 0.8F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountains"), 0.7F);
             ClimateDomainRegistry.register("minecraft:mountain_edge", ClimateDomain.ALPINE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountain_edge"), 0.8F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountain_edge"), 0.7F);
             ClimateDomainRegistry.register("minecraft:wooded_mountains", ClimateDomain.ALPINE);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_mountains"), 0.8F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_mountains"), 0.7F);
             ClimateDomainRegistry.register("minecraft:gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "gravelly_mountains"), 0.75F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "gravelly_mountains"), 0.5F);
             ClimateDomainRegistry.register("minecraft:modified_gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_gravelly_mountains"), 0.75F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_gravelly_mountains"), 0.5F);
 
 
            //It has a temperate oceanic climate due to birch trees (Eastern Europe)
@@ -81,53 +81,57 @@ public class ClimateSetup {
 
 
             ClimateDomainRegistry.register("minecraft:taiga", ClimateDomain.SUBARTIC);
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga"), 0.85F);
-            // SummerHeatHelper.register("minecraft:taiga_hills", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga"), 0.6F);
             ClimateDomainRegistry.register("minecraft:taiga_hills", ClimateDomain.SUBARTIC);
-           // SummerHeatHelper.register("minecraft:snowy_taiga", SummerHeat.ICY);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_hills"), 0.6F);
             ClimateDomainRegistry.register("minecraft:snowy_taiga", ClimateDomain.SNOWY);
-           // SummerHeatHelper.register("minecraft:snowy_taiga_hills", SummerHeat.ICY);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga"), 0.2F);
             ClimateDomainRegistry.register("minecraft:snowy_taiga_hills", ClimateDomain.SNOWY);
-          //  SummerHeatHelper.register("minecraft:giant_tree_taiga", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_hills"), 0.2F);
             ClimateDomainRegistry.register("minecraft:giant_tree_taiga", ClimateDomain.SUBARTIC);
-          //  SummerHeatHelper.register("minecraft:giant_tree_taiga_hills", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga"), 0.6F);
             ClimateDomainRegistry.register("minecraft:giant_tree_taiga_hills", ClimateDomain.SUBARTIC);
-           // SummerHeatHelper.register("minecraft:taiga_mountains", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga_hills"), 0.6F);
             ClimateDomainRegistry.register("minecraft:taiga_mountains", ClimateDomain.SUBARTIC);
-          //  SummerHeatHelper.register("minecraft:snowy_taiga_mountains", SummerHeat.ICY);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_mountains"), 0.6F);
             ClimateDomainRegistry.register("minecraft:snowy_taiga_mountains", ClimateDomain.SNOWY);
-           // SummerHeatHelper.register("minecraft:giant_spruce_taiga", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_mountains"), 0.2F);
             ClimateDomainRegistry.register("minecraft:giant_spruce_taiga", ClimateDomain.SUBARTIC);
-          //  SummerHeatHelper.register("minecraft:giant_spruce_taiga_hills", SummerHeat.COOLER);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga"), 0.6F);
             ClimateDomainRegistry.register("minecraft:giant_spruce_taiga_hills", ClimateDomain.SUBARTIC);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga_hills"), 0.6F);
 
 
-         //   SummerHeatHelper.register("minecraft:swamp", SummerHeat.HOT);
             ClimateDomainRegistry.register("minecraft:swamp", ClimateDomain.HUMID_SUBTROPICAL);
-          //  SummerHeatHelper.register("minecraft:swamp_hills", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp"), 0.95F);
             ClimateDomainRegistry.register("minecraft:swamp_hills", ClimateDomain.HUMID_SUBTROPICAL);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp_hills"), 0.95F);
 
 
-           // SummerHeatHelper.register("minecraft:snowy_tundra", SummerHeat.ICY);
-           // SummerHeatHelper.register("minecraft:snowy_mountains", SummerHeat.ICY);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_tundra"), 0.2F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_mountains"), 0.2F);
 
 
-           // SummerHeatHelper.register("minecraft:mushroom_fields", SummerHeat.HOT);
-            // SummerHeatHelper.register("minecraft:mushroom_fields_shore", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.85F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields_shore"), 0.85F);
 
 
-           /* SummerHeatHelper.register("minecraft:beach", SummerHeat.HOT); //Cfa temperate beach
-            SummerHeatHelper.register("minecraft:stone_shore", SummerHeat.COOLER);
-            SummerHeatHelper.register("minecraft:snowy_beach", SummerHeat.ICY);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "beach"), 0.85F); //Cfb temperate beach
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "stone_beach"), 0.6F); //taiga beach
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_beach"), 0.2F);
 
 
-            SummerHeatHelper.register("minecraft:jungle", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:jungle_hills", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:jungle_edge", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:modified_jungle", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:modified_jungle_edge", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:bamboo_jungle", SummerHeat.HOT);
-            SummerHeatHelper.register("minecraft:bamboo_jungle_hills", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "jungle"), 0.85F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "jungle_hills"), 0.85F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "jungle_edge"), 0.85F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_jungle"), 0.85F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_jungle_edge"), 0.85F); //Cfb temperate beach
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "bamboo_jungle"), 0.6F); //taiga beach
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "bamboo_jungle_hills"), 0.2F);
+
+
+
+
 
 
             SummerHeatHelper.register("minecraft:birch_forest", SummerHeat.WARM);
@@ -232,23 +236,29 @@ public class ClimateSetup {
             //SummerHeatHelper.register("brbiomesmod:atlantic_forest_hills", SummerHeat.WARM);
             ClimateDomainRegistry.register("brbiomesmod:atlantic_forest_hills", ClimateDomain.TROPICAL_MONTANE);
             //SummerHeatHelper.register("brbiomesmod:butia_pampas", SummerHeat.HOT);
-            ClimateDomainRegistry.register("brbiomesmod:butia_pampas", ClimateDomain.HUMID_SUBTROPICAL);
             //SummerHeatHelper.register("brbiomesmod:caatinga_shrubland", SummerHeat.SCHORCHING);
             ClimateDomainRegistry.register("brbiomesmod:caatinga_shrubland", ClimateDomain.TROPICAL_SEMIARID);
             //SummerHeatHelper.register("brbiomesmod:cerrado", SummerHeat.HOT);
+
             ClimateDomainRegistry.register("brbiomesmod:cerrado", ClimateDomain.TROPICAL_SAVANNA);
-            //SummerHeatHelper.register("brbiomesmod:pampas_hills", SummerHeat.WARM);
-            ClimateDomainRegistry.register("brbiomesmod:pampas_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
-            //SummerHeatHelper.register("brbiomesmod:dunas_restinga", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cerrado"), 0.95F);
+
             ClimateDomainRegistry.register("brbiomesmod:dunas_restinga", ClimateDomain.TROPICAL_SAVANNA);
-            //SummerHeatHelper.register("brbiomesmod:pampas", SummerHeat.HOT);
-            ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
-            //SummerHeatHelper.register("brbiomesmod:pampas_coastal_fields", SummerHeat.HOT);
-            ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
-            //SummerHeatHelper.register("brbiomesmod:pantanal", SummerHeat.HOT);
-            ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
-            //SummerHeatHelper.register("brbiomesmod:restinga_beach", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "dunas_restinga"), 1.0F);
             ClimateDomainRegistry.register("brbiomesmod:restinga_beach", ClimateDomain.TROPICAL_SAVANNA);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "restinga_beach"), 1.0F);
+
+            ClimateDomainRegistry.register("brbiomesmod:butia_pampas", ClimateDomain.HUMID_SUBTROPICAL);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "butia_pampas"), 0.9F);
+            ClimateDomainRegistry.register("brbiomesmod:pampas_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_hills"), 0.9F);
+            ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.9F);
+            ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.9F);
+
+            ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cerrado"), 0.9F);
         });
     }
 }
