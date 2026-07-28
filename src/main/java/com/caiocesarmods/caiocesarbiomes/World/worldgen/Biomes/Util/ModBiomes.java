@@ -51,8 +51,11 @@ public class ModBiomes {
 
     public static final ResourceLocation TROPICAL_SEASONAL_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_seasonal_forest");
-    public static final ResourceLocation SAVANNA =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "savanna");
+
+    public static final ResourceLocation TROPICAL_PINE_ISLAND =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_pine_island");
+    public static final ResourceLocation TROPICAL_ISLAND =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_island");
 
     public static final ResourceLocation TROPICAL_WET_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
@@ -64,6 +67,13 @@ public class ModBiomes {
     //Humid subtropical domain
     public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
+
+    /// Tundra
+    //Tussock tundra
+    public static final ResourceLocation TUSSOCK_TUNDRA =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tussock_tundra");
+    public static final ResourceLocation TUSSOCK_TUNDRA_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tussock_tundra_beach");
 }
 
 

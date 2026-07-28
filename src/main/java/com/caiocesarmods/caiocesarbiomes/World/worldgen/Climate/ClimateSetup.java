@@ -79,13 +79,11 @@ public class ClimateSetup {
             SummerHeatRegistry.register("minecraft:bamboo_jungle_hills", SummerHeat.HOT);
 
             SummerHeatRegistry.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
-            SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_laurel_forest", SummerHeat.HOT);
-            SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_laurel_jungle", SummerHeat.HOT);
-            SummerHeatRegistry.register("caiocesarbiomes:bunya_subtropical_seasonal_forest", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:tropical_pine_island", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:cork_oak_savanna", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:cork_oak_beach", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:dry_tropical_beach", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_plains", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:eucalyptus_sahel", SummerHeat.SCHORCHING);
@@ -108,6 +106,7 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:oleander_gardens", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:montane_laurel_grove", SummerHeat.WARM);
             SummerHeatRegistry.register("caiocesarbiomes:olive_grove", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:olive_grove_beach", SummerHeat.HOT);
             SummerHeatRegistry.register("caiocesarbiomes:pewen_coniferous_grove", SummerHeat.COOLER);
             SummerHeatRegistry.register("caiocesarbiomes:sahel", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:salt_desert", SummerHeat.SCHORCHING);

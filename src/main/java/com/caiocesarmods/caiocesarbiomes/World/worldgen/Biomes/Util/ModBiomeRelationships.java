@@ -97,8 +97,18 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
-        //Tropical
+        ///Tropical
         //Mangrove beach - "indochina and bangladesh mangroves"
+
+        //Bamboo marsh
+        BiomeRelationshipRegistry.register(
+                Biomes.BAMBOO_JUNGLE,
+                ModBiomes.TROPICAL_BAMBOO_MARSH,
+                RelationshipType.SUB_BIOME,
+                3,
+                0,
+                1,
+                false, false);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER); //This is different from the bamboo jungle river.
@@ -110,15 +120,8 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
-        BiomeRelationshipRegistry.register(
-                Biomes.BAMBOO_JUNGLE,
-                ModBiomes.TROPICAL_BAMBOO_MARSH,
-                RelationshipType.SUB_BIOME,
-                3,
-                0,
-                1,
-                false, false);
 
+        //Tropical Seasonal Forest
         BiomeRelationshipRegistry.register(
                 ModBiomes.TROPICAL_SEASONAL_FOREST,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
@@ -128,6 +131,7 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        //Savanna
         BiomeRelationshipRegistry.register(
                 Biomes.SAVANNA,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
@@ -161,6 +165,7 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        //Jungle
         BiomeRelationshipRegistry.register(
                 Biomes.JUNGLE,
                 ModBiomes.TROPICAL_WET_BEACH,
@@ -212,6 +217,35 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 Biomes.BAMBOO_JUNGLE_HILLS,
                 ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        //Tropical islands
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_PINE_ISLAND,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_ISLAND,
+                ModBiomes.TROPICAL_WET_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+
+        /// Tundra
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TUSSOCK_TUNDRA,
+                ModBiomes.TUSSOCK_TUNDRA_BEACH,
                 RelationshipType.BEACH,
                 0,
                 0,
