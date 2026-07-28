@@ -14,9 +14,9 @@ public class ClimateSetup {
         event.enqueueWork(() -> {
 
             /// Minecraft Vanilla
-            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ocean"), 1.2F);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ocean"), 1.0F);
             ClimateDomainRegistry.register("minecraft:ocean", ClimateDomain.OCEAN);
-           // SummerHeatHelper.register("minecraft:deep_ocean", SummerHeat.WARM);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_ocean"), 1.0F);
             ClimateDomainRegistry.register("minecraft:deep_ocean", ClimateDomain.OCEAN);
             //SummerHeatHelper.register("minecraft:warm_ocean", SummerHeat.HOT);
             ClimateDomainRegistry.register("minecraft:warm_ocean", ClimateDomain.WARM_OCEAN);
@@ -40,10 +40,11 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:frozen_river", ClimateDomain.ICE_CAP);
 
 
-           // SummerHeatHelper.register("minecraft:plains", SummerHeat.HOT); //Considering absence of birch trees.
+           //Considering absence of birch trees, summer here is hot;
             ClimateDomainRegistry.register("minecraft:plains", ClimateDomain.TEMPERATE);
-            //SummerHeatHelper.register("minecraft:sunflower_plains", SummerHeat.HOT);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "plains"), 1.60F);
             ClimateDomainRegistry.register("minecraft:sunflower_plains", ClimateDomain.TEMPERATE);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "sunflower_plains"), 1.60F);
 
 
             //SummerHeatHelper.register("minecraft:desert", SummerHeat.SCHORCHING);
@@ -66,15 +67,17 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:modified_gravelly_mountains", ClimateDomain.ALPINE_TUNDRA);
 
 
-           // SummerHeatHelper.register("minecraft:forest", SummerHeat.WARM); //It has a temperate oceanic climate due to birch trees
+           //It has a temperate oceanic climate due to birch trees
             ClimateDomainRegistry.register("minecraft:forest", ClimateDomain.TEMPERATE_OCEANIC);
-          //  SummerHeatHelper.register("minecraft:wooded_hills", SummerHeat.WARM);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "forest"), 0.90F);
             ClimateDomainRegistry.register("minecraft:wooded_hills", ClimateDomain.TEMPERATE_OCEANIC);
-           // SummerHeatHelper.register("minecraft:flower_forest", SummerHeat.WARM);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_hills"), 0.90F);
             ClimateDomainRegistry.register("minecraft:flower_forest", ClimateDomain.TEMPERATE_OCEANIC);
+            SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "flower_forest"), 0.90F);
 
 
-           // SummerHeatHelper.register("minecraft:taiga", SummerHeat.COOLER);
+
+            // SummerHeatHelper.register("minecraft:taiga", SummerHeat.COOLER);
             ClimateDomainRegistry.register("minecraft:taiga", ClimateDomain.SUBARTIC);
            // SummerHeatHelper.register("minecraft:taiga_hills", SummerHeat.COOLER);
             ClimateDomainRegistry.register("minecraft:taiga_hills", ClimateDomain.SUBARTIC);
