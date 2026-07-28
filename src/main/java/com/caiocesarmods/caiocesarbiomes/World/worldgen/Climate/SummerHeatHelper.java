@@ -5,15 +5,22 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class SummerHeatHelper {
-    private SummerHeatHelper() {}
-
-    public static SummerHeat get(World world, BlockPos pos) {
+    public static float get(World world, BlockPos pos) {
 
         Biome biome = world.getBiome(pos);
 
-        SummerTemperatureBuilder climate = (SummerTemperatureBuilder) (Object) biome;
+        float temperature = biome.getTemperature();
 
-        return SummerHeat.fromTemperature(
-                climate.getSummerTemperature(pos));
+        temperature += getAltitudeModifier(pos);
+
+        return temperature;
+    }
+
+
+    private static float getAltitudeModifier(BlockPos pos) {
+
+        int altitude = pos.getY() - 64;
+
+        return altitude * -0.005F;
     }
 }

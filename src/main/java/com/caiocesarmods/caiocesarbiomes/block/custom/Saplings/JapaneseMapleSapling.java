@@ -81,7 +81,7 @@ public class JapaneseMapleSapling extends SaplingBlock {
     }
 
     private static boolean isSummerHot(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.HOT;
     }
 

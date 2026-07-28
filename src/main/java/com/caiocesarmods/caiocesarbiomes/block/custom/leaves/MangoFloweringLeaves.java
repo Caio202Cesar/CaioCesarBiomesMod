@@ -26,7 +26,7 @@ public class MangoFloweringLeaves extends LeavesBlock implements IForgeShearable
     }
 
     private static boolean isSummerHot(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.HOT;
     }
 

@@ -23,7 +23,7 @@ public class PistachioLeaves extends LeavesBlock implements IForgeShearable {
     }
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.HOT;
     }
 

@@ -3,7 +3,6 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerTemperature;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
@@ -44,9 +43,7 @@ public class TropicalAlmondSapling extends SaplingBlock {
 
     //Hardy to zone 10 (requires hot summers)
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeat.fromTemperature(
-                SummerTemperature.get(world, pos)
-        );
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.HOT;
     }
 

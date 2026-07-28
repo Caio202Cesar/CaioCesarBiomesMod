@@ -45,7 +45,7 @@ public class HollySapling extends SaplingBlock {
 
     //Hardy to zone 4 to 10
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
     }
 

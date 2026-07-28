@@ -40,7 +40,7 @@ public class ChusqueaBambooSapling extends SaplingBlock {
     }
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
     }
 

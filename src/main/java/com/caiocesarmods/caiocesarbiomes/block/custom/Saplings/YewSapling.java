@@ -45,7 +45,7 @@ public class YewSapling extends SaplingBlock {
 
     //Hardy from zone 5 to 10
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatHelper.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
     }
 
