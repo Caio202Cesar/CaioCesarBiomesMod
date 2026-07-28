@@ -11,85 +11,116 @@ public class ClimateSetup {
     public static void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             SummerHeatRegistry.register("minecraft:ocean", SummerHeat.WARM);
+            ClimateDomainRegistry.register("minecraft:ocean", ClimateDomain.OCEAN);
+            SummerHeatRegistry.register("minecraft:deep_ocean", SummerHeat.WARM);
+            ClimateDomainRegistry.register("minecraft:deep_ocean", ClimateDomain.OCEAN);
+            SummerHeatRegistry.register("minecraft:warm_ocean", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:warm_ocean", ClimateDomain.WARM_OCEAN);
+            SummerHeatRegistry.register("minecraft:lukewarm_ocean", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:lukewarm_ocean", ClimateDomain.LUKEWARM_OCEAN);
+            SummerHeatRegistry.register("minecraft:cold_ocean", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:cold_ocean", ClimateDomain.COLD_OCEAN);
+            SummerHeatRegistry.register("minecraft:deep_warm_ocean", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:deep_warm_ocean", ClimateDomain.WARM_OCEAN);
+            SummerHeatRegistry.register("minecraft:deep_lukewarm_ocean", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:deep_lukewarm_ocean", ClimateDomain.WARM_OCEAN);
+            SummerHeatRegistry.register("minecraft:deep_cold_ocean", SummerHeat.COOLER);
+            ClimateDomainRegistry.register("minecraft:deep_cold_ocean", ClimateDomain.COLD_OCEAN);
+            SummerHeatRegistry.register("minecraft:frozen_ocean", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:frozen_ocean", ClimateDomain.ICY_OCEAN);
+            SummerHeatRegistry.register("minecraft:deep_frozen_ocean", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:deep_frozen_ocean", ClimateDomain.ICY_OCEAN);
 
 
             SummerHeatRegistry.register("minecraft:frozen_river", SummerHeat.ICY);
+            ClimateDomainRegistry.register("minecraft:frozen_river", ClimateDomain.ICE_CAP);
 
 
             SummerHeatRegistry.register("minecraft:plains", SummerHeat.HOT); //Considering absence of birch trees.
+            ClimateDomainRegistry.register("minecraft:plains", ClimateDomain.TEMPERATE);
+            SummerHeatRegistry.register("minecraft:sunflower_plains", SummerHeat.HOT);
+            ClimateDomainRegistry.register("minecraft:sunflower_plains", ClimateDomain.TEMPERATE);
 
 
             SummerHeatRegistry.register("minecraft:desert", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("minecraft:desert_hills", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("minecraft:desert_lakes", SummerHeat.SCHORCHING);
 
 
             SummerHeatRegistry.register("minecraft:mountains", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:mountain_edge", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:wooded_mountains", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:gravelly_mountains", SummerHeat.TUNDRA_COLD);
 
 
-            SummerHeatRegistry.register("minecraft:forest", SummerHeat.WARM); //It has an temperate oceanic climate due to birch trees
+            SummerHeatRegistry.register("minecraft:forest", SummerHeat.WARM); //It has a temperate oceanic climate due to birch trees
+            SummerHeatRegistry.register("minecraft:wooded_hills", SummerHeat.WARM);
+            SummerHeatRegistry.register("minecraft:flower_forest", SummerHeat.WARM);
 
 
             SummerHeatRegistry.register("minecraft:taiga", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:taiga_hills", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:snowy_taiga", SummerHeat.ICY);
+            SummerHeatRegistry.register("minecraft:snowy_taiga_hills", SummerHeat.ICY);
+            SummerHeatRegistry.register("minecraft:giant_tree_taiga", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:giant_tree_taiga_hills", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:taiga_mountains", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:snowy_taiga_mountains", SummerHeat.ICY);
+            SummerHeatRegistry.register("minecraft:giant_spruce_taiga", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:giant_spruce_taiga_hills", SummerHeat.COOLER);
 
 
             SummerHeatRegistry.register("minecraft:swamp", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:swamp_hills", SummerHeat.HOT);
 
 
-            SummerHeatRegistry.register("minecraft:frozen_ocean", SummerHeat.ICY);
 
 
             SummerHeatRegistry.register("minecraft:snowy_tundra", SummerHeat.ICY);
             SummerHeatRegistry.register("minecraft:snowy_mountains", SummerHeat.ICY);
 
+
             SummerHeatRegistry.register("minecraft:mushroom_fields", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:mushroom_fields_shore", SummerHeat.HOT);
 
 
-            SummerHeatRegistry.register("minecraft:beach", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:desert_hills", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:wooded_hills", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:taiga_hills", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:mountain_edge", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:beach", SummerHeat.HOT); //Cfa temperate beach
+            SummerHeatRegistry.register("minecraft:stone_shore", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:snowy_beach", SummerHeat.ICY);
+
+
             SummerHeatRegistry.register("minecraft:jungle", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:jungle_hills", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:jungle_edge", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:deep_ocean", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:stone_shore", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:snowy_beach", SummerHeat.ICY);
+            SummerHeatRegistry.register("minecraft:modified_jungle", SummerHeat.HOT);
+            SummerHeatRegistry.register("minecraft:modified_jungle_edge", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("minecraft:birch_forest", SummerHeat.WARM);
             SummerHeatRegistry.register("minecraft:birch_forest_hills", SummerHeat.WARM);
+            SummerHeatRegistry.register("minecraft:tall_birch_forest", SummerHeat.WARM);
+            SummerHeatRegistry.register("minecraft:tall_birch_hills", SummerHeat.WARM);
+
+
             SummerHeatRegistry.register("minecraft:dark_forest", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:snowy_taiga", SummerHeat.ICY);
-            SummerHeatRegistry.register("minecraft:snowy_taiga_hills", SummerHeat.ICY);
-            SummerHeatRegistry.register("minecraft:giant_tree_taiga", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:giant_tree_taiga_hills", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:wooded_mountains", SummerHeat.COOLER);
+            SummerHeatRegistry.register("minecraft:dark_forest_hills", SummerHeat.WARM);
+
+
             SummerHeatRegistry.register("minecraft:savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:savanna_plateau", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("minecraft:badlands", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("minecraft:wooded_badlands_plateau", SummerHeat.WARM);
             SummerHeatRegistry.register("minecraft:badlands_plateau", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:warm_ocean", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:lukewarm_ocean", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:cold_ocean", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:deep_warm_ocean", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:deep_lukewarm_ocean", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:deep_cold_ocean", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:deep_frozen_ocean", SummerHeat.TUNDRA_COLD);
-            SummerHeatRegistry.register("minecraft:sunflower_plains", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:desert_lakes", SummerHeat.SCHORCHING);
-            SummerHeatRegistry.register("minecraft:gravelly_mountains", SummerHeat.TUNDRA_COLD);
-            SummerHeatRegistry.register("minecraft:flower_forest", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:taiga_mountains", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:swamp_hills", SummerHeat.HOT);
+
+
             SummerHeatRegistry.register("minecraft:ice_spikes", SummerHeat.ICY);
-            SummerHeatRegistry.register("minecraft:modified_jungle", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:modified_jungle_edge", SummerHeat.HOT);
-            SummerHeatRegistry.register("minecraft:tall_birch_forest", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:tall_birch_hills", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:dark_forest_hills", SummerHeat.WARM);
-            SummerHeatRegistry.register("minecraft:snowy_taiga_mountains", SummerHeat.ICY);
-            SummerHeatRegistry.register("minecraft:giant_spruce_taiga", SummerHeat.COOLER);
-            SummerHeatRegistry.register("minecraft:giant_spruce_taiga_hills", SummerHeat.COOLER);
+
+
+
+
+
             SummerHeatRegistry.register("minecraft:modified_gravelly_mountains", SummerHeat.TUNDRA_COLD);
             SummerHeatRegistry.register("minecraft:shattered_savanna", SummerHeat.HOT);
             SummerHeatRegistry.register("minecraft:shattered_savanna_plateau", SummerHeat.HOT);

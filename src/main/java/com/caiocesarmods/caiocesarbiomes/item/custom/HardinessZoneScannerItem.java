@@ -1,8 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.HardinessZones;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.VineBlock;
@@ -80,6 +78,7 @@ public class HardinessZoneScannerItem extends Item {
 
             int zone = HardinessZones.getZone(world, pos);
             SummerHeat summerHeat = SummerHeatRegistry.get(world, pos);
+            ClimateDomain climate = ClimateDomainRegistry.get(world, pos);
             float baseTemp = biome.getTemperature(pos);
             float downfall = biome.getDownfall();
 
@@ -87,6 +86,7 @@ public class HardinessZoneScannerItem extends Item {
                     new StringTextComponent(
                             "§aCold Hardiness Zone: §e" + zone +
                                     "\n§aSummer heat: §e" + summerHeat.name() +
+                                    "\n§aClimate: §e" + climate.name() +
                                     "\n§aBiome: §e" + biome.getRegistryName() +
                                     "\n§aBase temperature: §e" + String.format("%.2f", baseTemp) +
                                     "\n§aDownfall: §e" + String.format("%.2f", downfall)
