@@ -121,13 +121,16 @@ tasks.named('jar', Jar).configure {
 
 publishing {
     publications {
-        register('mavenJava', MavenPublication) {
-            artifact jar
+        mavenJava(MavenPublication) {
+            artifact tasks.jar
+            groupId = 'com.caiocesarmods'
+            artifactId = 'caiocesarbiomes'
+            version = '1.0.0'
         }
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            url = uri("C:/Users/ADM/IdeaProjects/CaioCesarBiomesMod/mcmodsrepo")
         }
     }
 }
