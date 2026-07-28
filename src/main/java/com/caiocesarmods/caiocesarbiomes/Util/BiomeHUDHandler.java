@@ -33,7 +33,7 @@ public class BiomeHUDHandler {
         ).getString();
 
         int zone = HardinessZones.getZone(world, pos);
-        SummerHeat summerHeat = SummerHeatRegistry.get(world, pos);
+        SummerHeat summerHeat = SummerHeatHelper.get(world, pos);
         ClimateDomain climate = ClimateDomainRegistry.get(world, pos);
 
         float baseTemp = biome.getTemperature(pos);

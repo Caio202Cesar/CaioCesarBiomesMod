@@ -5,7 +5,8 @@
   "refmap": "caiocesarbiomes.refmap.json",
   "mixins": [
     "LayerUtilMixin",
-    "BambooFeatureMixin"
+    "BambooFeatureMixin",
+    "BiomeMixin"
   ],
   "client": [],
   "server": [],
