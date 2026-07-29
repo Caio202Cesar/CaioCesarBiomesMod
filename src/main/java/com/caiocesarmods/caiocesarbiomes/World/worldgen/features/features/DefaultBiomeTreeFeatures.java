@@ -338,7 +338,7 @@ public class DefaultBiomeTreeFeatures {
                             DARK_OAK_WITH_IVY)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
-    //No birch, southern USA pine trees, liquidambar and crape myrtles.
+    //No birch, southern USA pine trees, liquidambar and crape myrtles. This forest has, like the average forest, a base hardiness zone of 8 to 7 (based on factors like altitude and latitude)
     public static final ConfiguredFeature<?, ?> HOT_TEMPERATE_FOREST_VEGETATION = register("hot_summer_temperate_forest_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.1F),
                             WHITE_CRABAPPLE_TREE.withChance(0.1F), RED_CRABAPPLE_TREE.withChance(0.077F), JAPANESE_MAPLE_TREE.withChance(0.07F),
