@@ -30,7 +30,7 @@ public enum SummerHeat {
                 return heat;
             }
         }
-        return SCORCHING;
+        return WARM;
     }
 }
 

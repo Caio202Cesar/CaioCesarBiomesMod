@@ -188,7 +188,8 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.9F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.9F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cerrado"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pantanal"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cocal_forest"), 0.95F);
 
         System.out.println("After: " + SummerTemperatureRegistry.size());
 
