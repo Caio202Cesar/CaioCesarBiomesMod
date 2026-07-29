@@ -126,6 +126,8 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_pine_island", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("caiocesarbiomes:monsoon_ficus_tropical_forest", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_bamboo_marsh", ClimateDomain.TROPICAL_FOREST);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_bamboo_marsh_river", ClimateDomain.TROPICAL_FOREST);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_bamboo_beach", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_beach", ClimateDomain.TROPICAL_FOREST);
 
             ClimateDomainRegistry.register("caiocesarbiomes:dry_tropical_beach", ClimateDomain.TROPICAL_SAVANNA);
@@ -154,7 +156,8 @@ public class ClimateSetup {
 
             ClimateDomainRegistry.register("caiocesarbiomes:gravel_tundra", ClimateDomain.TUNDRA);
             ClimateDomainRegistry.register("caiocesarbiomes:lush_southern_tundra", ClimateDomain.TUNDRA);
-            ClimateDomainRegistry.register("caiocesarbiomes:gravel_tundra", ClimateDomain.TUNDRA);
+            ClimateDomainRegistry.register("caiocesarbiomes:tussock_tundra", ClimateDomain.TUNDRA);
+            ClimateDomainRegistry.register("caiocesarbiomes:tussock_tundra_beach", ClimateDomain.TUNDRA);
 
             ClimateDomainRegistry.register("caiocesarbiomes:ginkgo_forest", ClimateDomain.TEMPERATE_CONTINENTAL);
 
@@ -176,11 +179,7 @@ public class ClimateSetup {
 
             ClimateDomainRegistry.register("caiocesarbiomes:temperate_rainforest", ClimateDomain.TEMPERATE_OCEANIC);
 
-
-
-
-            SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
-            SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
+            ClimateDomainRegistry.register("caiocesarbiomes:volcanic_site", ClimateDomain.NONE);
 
             /// Brazillian Biomes
             ClimateDomainRegistry.register("brbiomesmod:amazon_rainforest", ClimateDomain.TROPICAL_FOREST);

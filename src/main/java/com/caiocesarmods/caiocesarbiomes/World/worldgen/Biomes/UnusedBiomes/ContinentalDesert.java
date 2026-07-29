@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.UnusedBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
@@ -22,7 +22,7 @@ public class ContinentalDesert {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> TEMPERATE_DESERT = BIOMES.register("temperate_desert",
+    public static final RegistryObject<Biome> TEMPERATE_DESERT = BIOMES.register("continental_desert",
             () -> makeTemperateDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.2f, 0.4f));
 
     private static Biome makeTemperateDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

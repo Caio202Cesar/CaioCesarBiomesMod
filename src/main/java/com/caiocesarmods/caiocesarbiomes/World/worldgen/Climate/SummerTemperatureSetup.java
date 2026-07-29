@@ -115,6 +115,8 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_pine_island"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "monsoon_ficus_tropical_forest"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_bamboo_marsh"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_bamboo_marsh_river"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_bamboo_beach"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_beach"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "dry_tropical_beach"), 0.95F);
@@ -142,6 +144,8 @@ public class SummerTemperatureSetup {
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "gravel_tundra"), 0.29F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "lush_southern_tundra"), 0.29F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tussock_tundra"), 0.29F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tussock_tundra_beach"), 0.29F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "ginkgo_forest"), 0.89F);
         //Hot continental forest has a summer temperature of 0.89
@@ -162,13 +166,6 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_desert"), 1.5F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_rainforest"), 0.79F);
-
-
-
-
-        SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
-        SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
-        SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
 
         /// Brazillian Biomes
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_rainforest"), 0.95F);
