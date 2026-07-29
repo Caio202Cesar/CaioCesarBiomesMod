@@ -116,12 +116,17 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_laurel_jungle", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_extreme_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
+            ClimateDomainRegistry.register("caiocesarbiomes:subtropical_seasonal_forest", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert", ClimateDomain.SUBTROPICAL_MILD_DESERT);
             ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", ClimateDomain.SUBTROPICAL_MILD_DESERT);
 
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_pine_island", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("caiocesarbiomes:monsoon_ficus_tropical_forest", ClimateDomain.TROPICAL_FOREST);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_bamboo_marsh", ClimateDomain.TROPICAL_FOREST);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_beach", ClimateDomain.TROPICAL_FOREST);
 
             ClimateDomainRegistry.register("caiocesarbiomes:dry_tropical_beach", ClimateDomain.TROPICAL_SAVANNA);
 
@@ -137,6 +142,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:oleander_gardens", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:olive_grove", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:olive_grove_beach", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
+            ClimateDomainRegistry.register("caiocesarbiomes:subtropical_pine_dry_forest", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
 
             ClimateDomainRegistry.register("caiocesarbiomes:stony_mediterranean_shore", ClimateDomain.SUBTROPICAL_COOL_MEDITERRANEAN);
 
@@ -144,17 +150,16 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:eucalyptus_sahel", ClimateDomain.TROPICAL_SEMIARID);
             ClimateDomainRegistry.register("caiocesarbiomes:eucalyptus_savanna", ClimateDomain.TROPICAL_SAVANNA);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_eucalyptus_dry_forest", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_eucalyptus_dry_forest", ClimateDomain.TROPICAL_SAVANNA);
 
             ClimateDomainRegistry.register("caiocesarbiomes:gravel_tundra", ClimateDomain.TUNDRA);
             ClimateDomainRegistry.register("caiocesarbiomes:lush_southern_tundra", ClimateDomain.TUNDRA);
+            ClimateDomainRegistry.register("caiocesarbiomes:gravel_tundra", ClimateDomain.TUNDRA);
 
             ClimateDomainRegistry.register("caiocesarbiomes:ginkgo_forest", ClimateDomain.TEMPERATE_CONTINENTAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:hemiboreal_forest", ClimateDomain.HEMIBOREAL_CONTINENTAL);
             ClimateDomainRegistry.register("caiocesarbiomes:hemiboreal_steppe", ClimateDomain.HEMIBOREAL_CONTINENTAL_SEMIARID);
-
-            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
-            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:inactive_volcanic_site", ClimateDomain.NONE);
 
@@ -166,18 +171,14 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:sahel", ClimateDomain.TROPICAL_SEMIARID);
             ClimateDomainRegistry.register("caiocesarbiomes:salt_desert", ClimateDomain.NONE);
             ClimateDomainRegistry.register("caiocesarbiomes:socotra_dryland", ClimateDomain.TROPICAL_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:temperate_desert", ClimateDomain.TEMPERATE_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:tropical_desert", ClimateDomain.TROPICAL_DESERT);
+
+            ClimateDomainRegistry.register("caiocesarbiomes:temperate_rainforest", ClimateDomain.TEMPERATE_OCEANIC);
 
 
 
-            SummerHeatHelper.register("caiocesarbiomes:subtropical_pine_dry_forest", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:subtropical_seasonal_forest", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:temperate_desert", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:temperate_rainforest", SummerHeat.WARM);
-            SummerHeatHelper.register("caiocesarbiomes:tropical_bamboo_marsh", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:tropical_beach", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:tropical_desert", SummerHeat.SCHORCHING);
-            SummerHeatHelper.register("caiocesarbiomes:tropical_eucalyptus_dry_forest", SummerHeat.HOT);
-            SummerHeatHelper.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
+
             SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
             SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
 

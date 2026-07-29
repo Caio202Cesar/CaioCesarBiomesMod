@@ -105,14 +105,20 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_laurel_jungle"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_extreme_hills"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_seasonal_forest"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_pine_forest"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "coastal_subtropical_desert"), 0.79F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "coastal_subtropical_desert_lomas"), 0.79F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_pine_island"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "monsoon_ficus_tropical_forest"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_bamboo_marsh"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_beach"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "dry_tropical_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_seasonal_forest"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "cork_oak_beach"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "cork_oak_savanna"), 0.95F);
@@ -123,12 +129,16 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_sparse_woodland"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_woodland_river"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_scrubland"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "olive_grove"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "olive_grove_beach"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "oleander_gardens"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_pine_dry_forest"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_plains"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_sahel"), 1.2F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_savanna"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_eucalyptus_dry_forest"), 0.89F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_eucalyptus_dry_forest"), 0.95F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "gravel_tundra"), 0.29F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "lush_southern_tundra"), 0.29F);
@@ -139,29 +149,23 @@ public class SummerTemperatureSetup {
         //Medicine hat (Steepes based on central asia would have a 0.99F, but a hemiboreal one has milder temperatures)
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "hemiboreal_steppe"), 0.75F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_beach"), 0.95F);
-        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_pine_forest"), 0.95F);
-
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "japanese_maple_grove"), 0.79F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "pewen_coniferous_grove"), 0.79F);
+        //Valdivian Temperate Forests are cooler (0.69F) than northern hemisphere based temperate oceanic biomes.
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "pewen_coniferous_grove"), 0.69F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "southern_beech_forest"), 0.32F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "sahel"), 1.2F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "salt_desert"), 1.5F);
-        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "socotra_dryland"), 1.2F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "socotra_dryland"), 1.5F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_desert"), 1.5F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_desert"), 1.5F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_rainforest"), 0.79F);
 
 
 
-        SummerHeatHelper.register("caiocesarbiomes:subtropical_pine_dry_forest", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:subtropical_seasonal_forest", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:temperate_desert", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:temperate_rainforest", SummerHeat.WARM);
-        SummerHeatHelper.register("caiocesarbiomes:tropical_bamboo_marsh", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:tropical_beach", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:tropical_desert", SummerHeat.SCHORCHING);
-        SummerHeatHelper.register("caiocesarbiomes:tropical_eucalyptus_dry_forest", SummerHeat.HOT);
-        SummerHeatHelper.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
+
         SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
         SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
         SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
