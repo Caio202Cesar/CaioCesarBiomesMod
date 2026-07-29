@@ -1,6 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -22,11 +25,15 @@ public class SummerTemperatureRegistry {
         return SUMMER_TEMPERATURES.size();
     }
 
-    public static float get(Biome biome) {
+    public static float get(World world, BlockPos pos) {
+        Biome biome = world.getBiome(pos);
 
-        ResourceLocation id = ForgeRegistries.BIOMES.getKey(biome);
-        System.out.println("Biome id = " + id);
-        System.out.println("Contains = " + SUMMER_TEMPERATURES.containsKey(id));
+        ResourceLocation id = world.func_241828_r()
+                .getRegistry(Registry.BIOME_KEY)
+                .getKey(biome);
+
+        if (id == null)
+            return -0.5F;
 
         return SUMMER_TEMPERATURES.getOrDefault(id, -0.5F);
     }

@@ -10,10 +10,10 @@ public class SummerHeatHelper {
 
         Biome biome = world.getBiome(pos);
 
-        float summer = SummerTemperatureRegistry.get(biome);
+        float summer = SummerTemperatureRegistry.get(world, pos);
 
         float altitudeModifier = (pos.getY() - 64) * -0.005F;
 
-        return summer + altitudeModifier;
+        return SummerTemperatureRegistry.get(world, pos) + altitudeModifier;
     }
 }
