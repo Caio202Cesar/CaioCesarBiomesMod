@@ -40,7 +40,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> DefaultBiomeTreeFeatures.FOREST_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.TEMPERATE_OCEANIC_FOREST_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
