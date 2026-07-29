@@ -27,7 +27,7 @@ public class ModItemGroup {
 
     };
 
-    public static final ItemGroup FRUITS_AND_VEGETABLES = new ItemGroup("CaioCesarBiomes:FruitsAndVegetables")
+    public static final ItemGroup CROPS = new ItemGroup("CaioCesarBiomes:Crops")
     {
         @Override
         public ItemStack createIcon() {
