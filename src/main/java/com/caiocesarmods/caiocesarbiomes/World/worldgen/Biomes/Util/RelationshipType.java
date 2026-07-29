@@ -86,6 +86,56 @@ public enum RelationshipType {
                     .map(WorldGenRegistries.BIOME::getId)
                     .orElse(center);
         }
+    },
+
+    OASIS {
+        @Override
+        public Integer apply(
+                BiomeRelationship relationship,
+                INoiseRandom random,
+                int north,
+                int west,
+                int south,
+                int east,
+                int center) {
+
+            int chance = relationship.getChance();
+
+            if (chance <= 0)
+                return null;
+
+            if (random.random(chance) == 0) {
+                return WorldGenRegistries.BIOME
+                        .getOptional(relationship.getChild())
+                        .map(WorldGenRegistries.BIOME::getId)
+                        .orElse(center);
+            }
+
+            return null;
+        }
+    },
+
+    RARE {
+        @Override
+        public Integer apply(
+                BiomeRelationship relationship,
+                INoiseRandom random,
+                int north,
+                int west,
+                int south,
+                int east,
+                int center) {
+
+            if (random.random(relationship.getChance()) == 0) {
+
+                return WorldGenRegistries.BIOME
+                        .getOptional(relationship.getChild())
+                        .map(WorldGenRegistries.BIOME::getId)
+                        .orElse(center);
+            }
+
+            return null;
+        }
     };
 
     private static String biomeName(int id) {

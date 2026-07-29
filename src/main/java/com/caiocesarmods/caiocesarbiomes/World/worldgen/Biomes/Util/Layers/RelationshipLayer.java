@@ -42,22 +42,6 @@ public enum RelationshipLayer implements ICastleTransformer {
             System.out.println("[RelationshipLayer] Existing sparse woodland!");
         }
 
-        // SUB BIOME
-        Integer subBiome = applyRelationship(
-                RelationshipType.SUB_BIOME,
-                id,
-                random,
-                north,
-                west,
-                south,
-                east,
-                center);
-
-        if (subBiome != null) {
-            System.out.println("[RelationshipLayer] SUB -> " + subBiome);
-            return subBiome;
-        }
-
         // EDGE
         Integer edge = applyRelationship(
                 RelationshipType.EDGE,
@@ -74,7 +58,40 @@ public enum RelationshipLayer implements ICastleTransformer {
             return edge;
         }
 
+        //RARE
+        Integer rare = applyRelationship(
+                RelationshipType.RARE,
+                id,
+                random,
+                north,
+                west,
+                south,
+                east,
+                center);
+
+        if (rare != null) {
+            System.out.println("[RelationshipLayer] RARE -> " + rare);
+            return rare;
+        }
+
+        // SUB BIOME
+        Integer subBiome = applyRelationship(
+                RelationshipType.SUB_BIOME,
+                id,
+                random,
+                north,
+                west,
+                south,
+                east,
+                center);
+
+        if (subBiome != null) {
+            System.out.println("[RelationshipLayer] SUB -> " + subBiome);
+            return subBiome;
+        }
+
         return center;
+
     }
 
     private Integer applyRelationship(

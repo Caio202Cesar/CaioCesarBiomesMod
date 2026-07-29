@@ -315,5 +315,17 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_VARZEA_FOREST,
                 ModBiomes.AMAZON_SOLIMON_RIVER);*/
+
+        /// Deserts
+        //Temperate Desert
+        BiomeRelationshipRegistry.register(
+                Biomes.DESERT,
+                ModBiomes.OASIS,
+                RelationshipType.OASIS,
+                250,
+                0,
+                0,
+                false,
+                false);
     }
 }
