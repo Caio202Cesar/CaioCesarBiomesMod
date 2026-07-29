@@ -1,21 +1,14 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate;
 
-import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClimateSetup {
-
-    @SubscribeEvent
-    public static void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
+    public static void register() {
 
             /// Minecraft Vanilla
+            System.out.println("ClimateSetup.register()");
+            System.out.println("Before: " + SummerTemperatureRegistry.size());
+
             ClimateDomainRegistry.register("minecraft:warm_ocean", ClimateDomain.WARM_OCEAN);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "warm_ocean"), 0.9F);
             ClimateDomainRegistry.register("minecraft:deep_warm_ocean", ClimateDomain.WARM_OCEAN);
@@ -73,7 +66,7 @@ public class ClimateSetup {
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_gravelly_mountains"), 0.5F);
 
 
-           //It has a temperate oceanic climate due to birch trees (Eastern Europe)
+            //It has a temperate oceanic climate due to birch trees (Eastern Europe)
             ClimateDomainRegistry.register("minecraft:forest", ClimateDomain.TEMPERATE_OCEANIC);
             SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "forest"), 0.85F);
             ClimateDomainRegistry.register("minecraft:wooded_hills", ClimateDomain.TEMPERATE_OCEANIC);
@@ -207,8 +200,12 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("minecraft:the_end", ClimateDomain.NONE);
             ClimateDomainRegistry.register("minecraft:small_end_islands", ClimateDomain.NONE);
 
+            System.out.println("After: " + SummerTemperatureRegistry.size());
+
+
 
             /// Caio Cesar Biomes / Caio Cesar's Naturalistic Voyage
+        /*
             SummerHeatHelper.register("caiocesarbiomes:bamboo_subtropical_laurel_jungle", SummerHeat.HOT);
 
 
@@ -271,6 +268,7 @@ public class ClimateSetup {
             SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", ClimateDomain.SUBTROPICAL_MEDITERRANEAN);
 
+         
             /// Brazillian Biomes
             ClimateDomainRegistry.register("brbiomesmod:amazon_rainforest", ClimateDomain.TROPICAL_FOREST);
             SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_rainforest"), 0.95F);
@@ -308,7 +306,6 @@ public class ClimateSetup {
             SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.9F);
 
             ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
-            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cerrado"), 0.95F);
-        });
+            SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cerrado"), 0.95F);*/
     }
 }
