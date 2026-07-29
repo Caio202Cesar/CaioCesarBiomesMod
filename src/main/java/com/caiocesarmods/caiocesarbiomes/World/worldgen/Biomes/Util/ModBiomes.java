@@ -21,9 +21,13 @@ public class ModBiomes {
 
     public static final ResourceLocation CORK_OAK_SAVANNA =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_savanna");
+    public static final ResourceLocation CORK_OAK_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_beach");
 
     public static final ResourceLocation OLIVE_GROVE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove");
+    public static final ResourceLocation OLIVE_GROVE_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove_beach");
 
     public static final ResourceLocation MEDITERRANEAN_OAK_WOODLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_oak_woodland");
@@ -38,10 +42,12 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "stony_mediterranean_shore"); //For Csb biomes
     public static final ResourceLocation CONIFEROUS_MEDITERRANEAN_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
-    public static final ResourceLocation CORK_OAK_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "cork_oak_beach");
-    public static final ResourceLocation OLIVE_GROVE_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "olive_grove_beach");
+
+    //Desert
+    public static final ResourceLocation TEMPERATE_DESERT =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert");
+    public static final ResourceLocation TEMPERATE_DESERT_OASIS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_oasis");
 
     //Tropical domain
     public static final ResourceLocation TROPICAL_BAMBOO_MARSH =

@@ -319,8 +319,8 @@ public class ModBiomeRelationships {
         /// Deserts
         //Temperate Desert
         BiomeRelationshipRegistry.register(
-                Biomes.DESERT,
-                ModBiomes.OASIS,
+                ModBiomes.TEMPERATE_DESERT,
+                ModBiomes.TEMPERATE_DESERT_OASIS,
                 RelationshipType.OASIS,
                 250,
                 0,
