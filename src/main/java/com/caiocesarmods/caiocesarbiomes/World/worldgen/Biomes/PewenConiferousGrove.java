@@ -27,7 +27,7 @@ public class PewenConiferousGrove {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> PEWEN_CONIFEROUS_GROVE = BIOMES.register("pewen_coniferous_grove",
-            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.4f, 0.7f));
+            () -> makePewenConiferousGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.7f, 0.7f));
 
 
     private static Biome makePewenConiferousGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -62,8 +62,6 @@ public class PewenConiferousGrove {
         ModDefaultBiomeFeatures.withTemperateMagellanicPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSouthernBeechs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMagellanicTemperateTallPlants(biomegenerationsettings$builder);
-
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COIHUE_TREE_WITH_BELLFLOWER);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);

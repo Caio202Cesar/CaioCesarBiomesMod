@@ -29,7 +29,7 @@ private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> SUBTROPICAL_EXTREME_HILLS = BIOMES.register("subtropical_extreme_hills",
         () -> makeMontainBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.7f, 0.9f, true));
 
-
+//Subtropical Oak Forest highland
 private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale, boolean isHighland) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
@@ -59,7 +59,6 @@ private static Biome makeMontainBiome(final Supplier<ConfiguredSurfaceBuilder<?>
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_EXTREME_HILLS_VEGETATION);

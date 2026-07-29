@@ -152,9 +152,6 @@ public class ModDefaultBiomeFeatures {
     public static void withCoconutTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.COCONUT_TREES);
     }
-    public static void withCamelliaAndTeaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.CAMELLIA_TREES);
-    }
     public static void withTropicalTallPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TROPICAL_TALL_PLANTS_VEGETATION);
     }

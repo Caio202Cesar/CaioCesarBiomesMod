@@ -9,22 +9,22 @@ public class SummerTemperatureSetup {
         System.out.println("SummerTemperatureSetup.register()");
         System.out.println("Before: " + SummerTemperatureRegistry.size());
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "warm_ocean"), 0.9F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_warm_ocean"), 0.9F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "lukewarm_ocean"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_lukewarm_ocean"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ocean"), 0.8F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_ocean"), 0.8F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "cold_ocean"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_cold_ocean"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_ocean"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_frozen_ocean"), 0.2F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "warm_ocean"), 0.89F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_warm_ocean"), 0.89F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "lukewarm_ocean"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_lukewarm_ocean"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ocean"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_ocean"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "cold_ocean"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_cold_ocean"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_ocean"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "deep_frozen_ocean"), 0.14F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_river"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_tundra"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_mountains"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_beach"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ice_spikes"), 0.15F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "frozen_river"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_tundra"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_mountains"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_beach"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "ice_spikes"), 0.1F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "plains"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "sunflower_plains"), 0.95F);
@@ -33,26 +33,26 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "desert_hills"), 1.5F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "desert_lakes"), 1.5F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountains"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountain_edge"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_mountains"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "gravelly_mountains"), 0.5F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_gravelly_mountains"), 0.5F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountains"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mountain_edge"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_mountains"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "gravelly_mountains"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_gravelly_mountains"), 0.49F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "forest"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_hills"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "flower_forest"), 0.85F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "forest"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "wooded_hills"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "flower_forest"), 0.79F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_hills"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_hills"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga_hills"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_mountains"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_mountains"), 0.2F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga"), 0.6F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga_hills"), 0.6F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_hills"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_hills"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_tree_taiga_hills"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "taiga_mountains"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "snowy_taiga_mountains"), 0.14F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga"), 0.49F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "giant_spruce_taiga_hills"), 0.49F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp_hills"), 0.95F);
@@ -60,8 +60,8 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.85F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields_shore"), 0.85F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "beach"), 0.85F); //Cfb temperate beach
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "stone_beach"), 0.6F); //taiga beach
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "beach"), 0.79F); //Cfb temperate beach
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "stone_beach"), 0.49F); //taiga beach
 
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "jungle"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "jungle_hills"), 0.95F);
@@ -71,13 +71,13 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "bamboo_jungle"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "bamboo_jungle_hills"), 0.95F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "birch_forest"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "birch_forest_hills"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "tall_birch_forest"), 0.7F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "tall_birch_hills"), 0.7F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "birch_forest"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "birch_forest_hills"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "tall_birch_forest"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "tall_birch_hills"), 0.69F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "dark_forest"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "dark_forest_hills"), 0.85F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "dark_forest"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "dark_forest_hills"), 0.79F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "savanna"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "savanna_plateau"), 0.95F);
@@ -96,6 +96,75 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "eroded_badlands"), 1.0F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_wooded_badlands_plateau"), 1.0F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_badlands_plateau"), 1.0F);
+
+        /// Caio César's Naturalistic Voyage
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "bamboo_subtropical_laurel_jungle"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "montane_laurel_grove"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_laurel_forest"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_laurel_jungle"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_extreme_hills"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "coastal_subtropical_desert"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "coastal_subtropical_desert_lomas"), 0.79F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_pine_island"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "monsoon_ficus_tropical_forest"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "dry_tropical_beach"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "cork_oak_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "cork_oak_savanna"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "hot_mediterranean_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_conifer_savanna"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_conifer_savanna_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_woodland"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_sparse_woodland"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_woodland_river"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_scrubland"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "oleander_gardens"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_plains"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_sahel"), 1.2F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "eucalyptus_savanna"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_eucalyptus_dry_forest"), 0.89F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "gravel_tundra"), 0.29F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "lush_southern_tundra"), 0.29F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "ginkgo_forest"), 0.89F);
+        //Hot continental forest has a summer temperature of 0.89
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "hemiboreal_forest"), 0.75F);
+        //Medicine hat (Steepes based on central asia would have a 0.99F, but a hemiboreal one has milder temperatures)
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "hemiboreal_steppe"), 0.75F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_pine_forest"), 0.95F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "japanese_maple_grove"), 0.79F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "pewen_coniferous_grove"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "southern_beech_forest"), 0.32F);
+
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "sahel"), 1.2F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "salt_desert"), 1.5F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "socotra_dryland"), 1.2F);
+
+
+
+        SummerHeatHelper.register("caiocesarbiomes:subtropical_pine_dry_forest", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:subtropical_seasonal_forest", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:temperate_desert", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:temperate_rainforest", SummerHeat.WARM);
+        SummerHeatHelper.register("caiocesarbiomes:tropical_bamboo_marsh", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:tropical_beach", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:tropical_desert", SummerHeat.SCHORCHING);
+        SummerHeatHelper.register("caiocesarbiomes:tropical_eucalyptus_dry_forest", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
+        SummerHeatHelper.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
+        SummerHeatHelper.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
+        SummerHeatHelper.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", SummerHeat.HOT);
 
         /// Brazillian Biomes
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_rainforest"), 0.95F);

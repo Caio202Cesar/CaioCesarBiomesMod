@@ -23,9 +23,9 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> MONTANE_LAUREL_GROVE = BIOMES.register("montane_laurel_grove",
-        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 1.7f, 0.060f));
+        () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.7f, 0.5f));
 
-
+//Laurel Forest highland
 private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
@@ -52,7 +52,6 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withCamelliaAndTeaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withRainforestChestnuts(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withHighlandOcoteaTrees(biomegenerationsettings$builder);
