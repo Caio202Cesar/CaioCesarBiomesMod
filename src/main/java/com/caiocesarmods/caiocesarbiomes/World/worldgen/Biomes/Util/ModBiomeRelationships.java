@@ -281,6 +281,19 @@ public class ModBiomeRelationships {
                 6,
                 true, false);
 
+        //Pampas
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS,
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS_COAST,
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.COXILHAS,
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_RIVER);
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_COAST,
@@ -289,16 +302,6 @@ public class ModBiomeRelationships {
                 0,
                 6,
                 false, false);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.PAMPAS,
-                ModBiomes.COXILHAS,
-                RelationshipType.SUB_BIOME,
-                8,
-                0,
-                6,
-                false, false);
-
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.BUTIA_PAMPAS,

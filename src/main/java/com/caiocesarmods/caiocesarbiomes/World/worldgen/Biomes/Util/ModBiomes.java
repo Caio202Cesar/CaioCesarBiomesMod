@@ -102,9 +102,6 @@ public class ModBiomes {
     public static final ResourceLocation SERRA_DO_MAR_FOREST =
             new ResourceLocation("brbiomesmod", "atlantic_forest_hills");
 
-    public static final ResourceLocation BUTIA_PAMPAS =
-            new ResourceLocation("brbiomesmod", "butia_pampas");
-
     public static final ResourceLocation CAATINGA =
             new ResourceLocation("brbiomesmod", "caatinga_shrubland");
 
@@ -114,17 +111,19 @@ public class ModBiomes {
     public static final ResourceLocation COCAL_FOREST =
             new ResourceLocation("brbiomesmod", "cocal_forest");
 
-    public static final ResourceLocation COXILHAS =
-            new ResourceLocation("brbiomesmod", "pampas_hills");
-
     public static final ResourceLocation DUNAS_RESTINGA =
             new ResourceLocation("brbiomesmod", "dunas_restinga");
 
     public static final ResourceLocation PAMPAS =
             new ResourceLocation("brbiomesmod", "pampas");
-
+    public static final ResourceLocation PAMPAS_RIVER =
+            new ResourceLocation("brbiomesmod", "pampas_river");
     public static final ResourceLocation PAMPAS_COAST =
             new ResourceLocation("brbiomesmod", "pampas_coastal_fields");
+    public static final ResourceLocation COXILHAS =
+            new ResourceLocation("brbiomesmod", "pampas_hills");
+    public static final ResourceLocation BUTIA_PAMPAS =
+            new ResourceLocation("brbiomesmod", "butia_pampas");
 
     public static final ResourceLocation PANTANAL =
             new ResourceLocation("brbiomesmod", "pantanal");
