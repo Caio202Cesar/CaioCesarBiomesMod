@@ -303,14 +303,23 @@ public class ModBiomeRelationships {
                 0,
                 17,
                 false, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.ATLANTIC_FOREST,
+                ModBiomes.ATLANTIC_FOREST_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
         BiomeRelationshipRegistry.register(
                 ModBiomes.SERRA_DO_MAR_FOREST,
-                ModBiomes.ARAUCARIA_PLATEAU,
-                RelationshipType.HILL,
-                5,
+                ModBiomes.ATLANTIC_FOREST_BEACH,
+                RelationshipType.BEACH,
                 0,
-                11,
-                false, false);
+                0,
+                0,
+                true, false);
 
         //Pampas
         BiomeRelationshipRegistry.register(

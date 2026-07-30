@@ -196,6 +196,7 @@ public class ClimateSetup {
 
             ClimateDomainRegistry.register("brbiomesmod:atlantic_forest", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("brbiomesmod:atlantic_forest_hills", ClimateDomain.TROPICAL_MONTANE);
+            ClimateDomainRegistry.register("brbiomesmod:atlantic_forest_beach", ClimateDomain.TROPICAL_FOREST);
 
             ClimateDomainRegistry.register("brbiomesmod:caatinga_shrubland", ClimateDomain.TROPICAL_SEMIARID);
 

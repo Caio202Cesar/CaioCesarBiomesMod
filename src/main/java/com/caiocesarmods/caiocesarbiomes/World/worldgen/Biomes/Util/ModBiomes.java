@@ -100,9 +100,10 @@ public class ModBiomes {
 
     public static final ResourceLocation ATLANTIC_FOREST =
             new ResourceLocation("brbiomesmod", "atlantic_forest");
-
     public static final ResourceLocation SERRA_DO_MAR_FOREST =
             new ResourceLocation("brbiomesmod", "atlantic_forest_hills");
+    public static final ResourceLocation ATLANTIC_FOREST_BEACH =
+            new ResourceLocation("brbiomesmod", "atlantic_forest_beach");
 
     public static final ResourceLocation CAATINGA =
             new ResourceLocation("brbiomesmod", "caatinga_shrubland");
@@ -115,6 +116,8 @@ public class ModBiomes {
 
     public static final ResourceLocation DUNAS_RESTINGA =
             new ResourceLocation("brbiomesmod", "dunas_restinga");
+    public static final ResourceLocation RESTINGA_BEACH =
+            new ResourceLocation("brbiomesmod", "restinga_beach");
 
     public static final ResourceLocation PAMPAS =
             new ResourceLocation("brbiomesmod", "pampas");
@@ -131,9 +134,6 @@ public class ModBiomes {
 
     public static final ResourceLocation PANTANAL =
             new ResourceLocation("brbiomesmod", "pantanal");
-
-    public static final ResourceLocation RESTINGA_BEACH =
-            new ResourceLocation("brbiomesmod", "restinga_beach");
 
 }
 
