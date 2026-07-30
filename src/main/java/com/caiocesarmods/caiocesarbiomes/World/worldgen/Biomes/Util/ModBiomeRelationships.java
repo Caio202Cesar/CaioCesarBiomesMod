@@ -272,6 +272,19 @@ public class ModBiomeRelationships {
                 6,
                 false, false);
 
+       BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.AMAZON_RAINFOREST,
+                ModBiomes.BLACK_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.AMAZON_VARZEA_FOREST,
+                ModBiomes.AMAZON_SOLIMON_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.AMAZON_RAINFOREST_EDGE,
+                ModBiomes.ALLUVIAL_AMAZON_EDGE_FOREST_RIVER);
+
+        //Restinga
         BiomeRelationshipRegistry.register(
                 ModBiomes.DUNAS_RESTINGA,
                 ModBiomes.RESTINGA_BEACH,
@@ -315,14 +328,6 @@ public class ModBiomeRelationships {
                 0,
                 6,
                 false, false);
-
-        /*BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_RAINFOREST,
-                ModBiomes.BLACK_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_VARZEA_FOREST,
-                ModBiomes.AMAZON_SOLIMON_RIVER);*/
 
         /// Deserts
         //Temperate Desert
