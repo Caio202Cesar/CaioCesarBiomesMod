@@ -361,9 +361,9 @@ public class ModBiomeRelationships {
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
                 RelationshipType.SUB_BIOME,
-                8,
-                0,
-                23,
+                4,
+                15,
+                5,
                 false, false);
 
         BiomeRelationshipRegistry.register(
@@ -371,17 +371,17 @@ public class ModBiomeRelationships {
                 ModBiomes.BUTIA_PAMPAS,
                 RelationshipType.SUB_BIOME,
                 4,
-                0,
+                15,
                 10,
                 false, false);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
-                RelationshipType.HILL,
-                20,
-                0,
-                26,
+                RelationshipType.SUB_BIOME,
+                4,
+                15,
+                10,
                 false, false);
 
         BiomeRelationshipRegistry.registerRiver(
