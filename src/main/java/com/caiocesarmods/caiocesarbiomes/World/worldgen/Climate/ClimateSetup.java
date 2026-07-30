@@ -190,6 +190,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("brbiomesmod:amazon_varzea_forest", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("brbiomesmod:amazon_rainforest_edge", ClimateDomain.TROPICAL_SAVANNA);
             ClimateDomainRegistry.register("brbiomesmod:solimoes_amazon_river", ClimateDomain.TROPICAL_FOREST);
+            ClimateDomainRegistry.register("brbiomesmod:black_amazon_river", ClimateDomain.TROPICAL_FOREST);
 
             ClimateDomainRegistry.register("brbiomesmod:araucaria_plateau", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
 

@@ -92,6 +92,8 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "amazon_varzea_forest");
     public static final ResourceLocation SOLIMOES_RIVER =
             new ResourceLocation("brbiomesmod", "solimoes_amazon_river");
+    public static final ResourceLocation BLACK_AMAZON_RIVER =
+            new ResourceLocation("brbiomesmod", "black_amazon_river");
 
     public static final ResourceLocation ARAUCARIA_PLATEAU =
             new ResourceLocation("brbiomesmod", "araucaria_plateau");
