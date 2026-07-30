@@ -252,6 +252,31 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        //Subtropical
+        BiomeRelationshipRegistry.register(
+                ModBiomes.LAUREL_FOREST,
+                ModBiomes.MONTANE_LAUREL_GROVE,
+                RelationshipType.HILL,
+                25,
+                30,
+                17,
+                false, false);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.LAUREL_JUNGLE,
+                ModBiomes.MONTANE_LAUREL_GROVE,
+                RelationshipType.HILL,
+                25,
+                30,
+                17,
+                false, false);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
+                ModBiomes.MONTANE_LAUREL_GROVE,
+                RelationshipType.HILL,
+                25,
+                30,
+                17,
+                false, false);
 
         /// Tundra
         BiomeRelationshipRegistry.register(
@@ -263,7 +288,6 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
-
         /// Brazillian Biomes
         BiomeRelationshipRegistry.register(
                 ModBiomes.AMAZON_RAINFOREST,
@@ -274,26 +298,13 @@ public class ModBiomeRelationships {
                 6,
                 false, false);
 
-        BiomeRelationshipRegistry.register(
-                ModBiomes.AMAZON_RAINFOREST,
-                ModBiomes.AMAZON_VARZEA_FOREST,
-                RelationshipType.SUB_BIOME,
-                8,
-                0,
-                6,
-                false, false);
-
        BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST,
-                ModBiomes.BLACK_AMAZON_RIVER);
+                ModBiomes.AMAZON_VARZEA_FOREST);
 
         BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_VARZEA_FOREST,
-                ModBiomes.SOLIMOES_RIVER);
-
-        /*BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_RAINFOREST_EDGE,
-                ModBiomes.ALLUVIAL_AMAZON_EDGE_FOREST_RIVER);*/
+                ModBiomes.AMAZON_RAINFOREST,
+                ModBiomes.BLACK_AMAZON_RIVER);
 
         //Restinga
         BiomeRelationshipRegistry.register(
@@ -310,7 +321,7 @@ public class ModBiomeRelationships {
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 RelationshipType.HILL,
-                8,
+                25,
                 0,
                 17,
                 false, false);
@@ -348,7 +359,7 @@ public class ModBiomeRelationships {
                 RelationshipType.SUB_BIOME,
                 8,
                 0,
-                6,
+                23,
                 false, false);
 
         BiomeRelationshipRegistry.register(
@@ -357,16 +368,16 @@ public class ModBiomeRelationships {
                 RelationshipType.SUB_BIOME,
                 4,
                 0,
-                6,
+                10,
                 false, false);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
                 RelationshipType.HILL,
-                8,
+                20,
                 0,
-                17,
+                26,
                 false, false);
 
         BiomeRelationshipRegistry.registerRiver(
@@ -436,5 +447,14 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.COASTAL_SUBTROPICAL_DESERT,
+                ModBiomes.COASTAL_SUBTROPICAL_DESERT_LOMAS,
+                RelationshipType.HILL,
+                20,
+                0,
+                26,
+                false, false);
     }
 }

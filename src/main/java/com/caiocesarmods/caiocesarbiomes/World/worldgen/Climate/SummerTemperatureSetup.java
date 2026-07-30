@@ -176,8 +176,7 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_rainforest"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_varzea_forest"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "amazon_rainforest_edge"), 0.95F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "solimoes_amazon_river"), 0.95F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "black_amazon_river"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "black_amazon_river"), 0.89F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "araucaria_plateau"), 0.9F);
 

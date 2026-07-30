@@ -52,6 +52,11 @@ public class ModBiomes {
     public static final ResourceLocation TEMPERATE_DESERT_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_river");
 
+    public static final ResourceLocation COASTAL_SUBTROPICAL_DESERT =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert");
+    public static final ResourceLocation COASTAL_SUBTROPICAL_DESERT_LOMAS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert_lomas");
+
     //Tropical domain
     public static final ResourceLocation TROPICAL_BAMBOO_MARSH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_bamboo_marsh"); //Add mangrove as its beach biome
@@ -73,16 +78,26 @@ public class ModBiomes {
     public static final ResourceLocation TROPICAL_SAVANNA_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "dry_tropical_beach");
 
-    //Humid subtropical domain
-    public static final ResourceLocation SUBTROPICAL_LAUREL_FOREST =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
-
     /// Tundra
     //Tussock tundra
     public static final ResourceLocation TUSSOCK_TUNDRA =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tussock_tundra");
     public static final ResourceLocation TUSSOCK_TUNDRA_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tussock_tundra_beach");
+
+    /// Humid Subtropical
+    public static final ResourceLocation LAUREL_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_forest");
+    public static final ResourceLocation LAUREL_JUNGLE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_jungle");
+    public static final ResourceLocation BAMBOO_SUBTROPICAL_LAUREL_JUNGLE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_laurel_jungle");
+    public static final ResourceLocation MONTANE_LAUREL_GROVE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
+
+    public static final ResourceLocation SUBTROPICAL_OAK_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");
+
 
     /// Brazillian Biomes
     public static final ResourceLocation AMAZON_RAINFOREST =
@@ -91,8 +106,6 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "amazon_rainforest_edge");
     public static final ResourceLocation AMAZON_VARZEA_FOREST =
             new ResourceLocation("brbiomesmod", "amazon_varzea_forest");
-    public static final ResourceLocation SOLIMOES_RIVER =
-            new ResourceLocation("brbiomesmod", "solimoes_amazon_river");
     public static final ResourceLocation BLACK_AMAZON_RIVER =
             new ResourceLocation("brbiomesmod", "black_amazon_river");
 
