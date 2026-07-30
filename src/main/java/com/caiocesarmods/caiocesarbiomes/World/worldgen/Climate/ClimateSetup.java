@@ -120,8 +120,8 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", ClimateDomain.HUMID_SUBTROPICAL);
 
-            ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert", ClimateDomain.MILD_OCEANIC_DESERT);
-            ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", ClimateDomain.MILD_OCEANIC_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert", ClimateDomain.FOGGY_MILD_TROPICAL_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert_lomas", ClimateDomain.FOGGY_MILD_TROPICAL_DESERT);
 
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_pine_island", ClimateDomain.TROPICAL_FOREST);
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_island", ClimateDomain.TROPICAL_FOREST);
