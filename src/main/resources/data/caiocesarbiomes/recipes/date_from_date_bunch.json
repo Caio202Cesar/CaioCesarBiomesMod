@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:date_bunch"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:dates",
+    "count": 7
+  }
+}

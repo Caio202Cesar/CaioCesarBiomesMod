@@ -1,7 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.fruiting;
 
 
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -9,6 +11,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -41,9 +45,44 @@ public class DateBunchBlock extends Block implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (random.nextFloat() < 0.0025F) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("FALL".equals(currentSeason) && random.nextFloat() < 0.0025F) {
 
             worldIn.destroyBlock(pos, false);
+
+            int dropCount = 4 + random.nextInt(3);;
+
+            ItemStack itemStack = new ItemStack(ModItems.DATES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+        }
+
+        if ("WINTER".equals(currentSeason) && random.nextFloat() < 0.325F) {
+
+            worldIn.destroyBlock(pos, false);
+
+            int dropCount = 4 + random.nextInt(3);;
+
+            ItemStack itemStack = new ItemStack(ModItems.DATES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+        }
+
+        if ("SPRING".equals(currentSeason) && random.nextFloat() < 0.525F) {
+
+            worldIn.destroyBlock(pos, false);
+
+            int dropCount = 4 + random.nextInt(3);;
+
+            ItemStack itemStack = new ItemStack(ModItems.DATES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
 
         }
     }
