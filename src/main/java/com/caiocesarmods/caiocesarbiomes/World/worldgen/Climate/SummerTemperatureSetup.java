@@ -162,7 +162,11 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "sahel"), 1.2F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "salt_desert"), 1.5F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "socotra_dryland"), 1.5F);
+
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_desert"), 1.5F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_desert_oasis"), 0.99F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_desert_river"), 0.99F);
+
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "tropical_desert"), 1.5F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "temperate_rainforest"), 0.79F);

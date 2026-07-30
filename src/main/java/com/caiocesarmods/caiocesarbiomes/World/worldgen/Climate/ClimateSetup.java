@@ -174,7 +174,11 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:sahel", ClimateDomain.TROPICAL_SEMIARID);
             ClimateDomainRegistry.register("caiocesarbiomes:salt_desert", ClimateDomain.NONE);
             ClimateDomainRegistry.register("caiocesarbiomes:socotra_dryland", ClimateDomain.TROPICAL_DESERT);
+
             ClimateDomainRegistry.register("caiocesarbiomes:temperate_desert", ClimateDomain.TEMPERATE_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:temperate_desert_oasis", ClimateDomain.TEMPERATE_DESERT);
+            ClimateDomainRegistry.register("caiocesarbiomes:temperate_desert_river", ClimateDomain.TEMPERATE_DESERT);
+
             ClimateDomainRegistry.register("caiocesarbiomes:tropical_desert", ClimateDomain.TROPICAL_DESERT);
 
             ClimateDomainRegistry.register("caiocesarbiomes:temperate_rainforest", ClimateDomain.TEMPERATE_OCEANIC);
