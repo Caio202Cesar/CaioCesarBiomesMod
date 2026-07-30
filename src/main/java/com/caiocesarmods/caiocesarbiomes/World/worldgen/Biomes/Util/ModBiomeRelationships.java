@@ -278,7 +278,7 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_VARZEA_FOREST,
-                ModBiomes.SOLIMOES_AMAZON_RIVER);
+                ModBiomes.SOLIMOES_RIVER);
 
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST_EDGE,

@@ -86,12 +86,12 @@ public class ModBiomes {
     /// Brazillian Biomes
     public static final ResourceLocation AMAZON_RAINFOREST =
             new ResourceLocation("brbiomesmod", "amazon_rainforest");
-
     public static final ResourceLocation AMAZON_RAINFOREST_EDGE =
             new ResourceLocation("brbiomesmod", "amazon_rainforest_edge");
-
     public static final ResourceLocation AMAZON_VARZEA_FOREST =
             new ResourceLocation("brbiomesmod", "amazon_varzea_forest");
+    public static final ResourceLocation SOLIMOES_RIVER =
+            new ResourceLocation("brbiomesmod", "solimoes_amazon_river");
 
     public static final ResourceLocation ARAUCARIA_PLATEAU =
             new ResourceLocation("brbiomesmod", "araucaria_plateau");
