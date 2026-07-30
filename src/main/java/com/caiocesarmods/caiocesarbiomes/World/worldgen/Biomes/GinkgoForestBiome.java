@@ -55,7 +55,6 @@ public class GinkgoForestBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withForestBirchTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
