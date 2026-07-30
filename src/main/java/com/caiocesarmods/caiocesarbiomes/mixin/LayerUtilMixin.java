@@ -1,15 +1,13 @@
 package com.caiocesarmods.caiocesarbiomes.mixin;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.BeachReplacementLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.HillsRelationshipLayer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RelationshipLayer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RiverRelationshipLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;
-import net.minecraft.world.gen.layer.LayerUtil;
-import net.minecraft.world.gen.layer.RareBiomeLayer;
-import net.minecraft.world.gen.layer.MixRiverLayer;
-import net.minecraft.world.gen.layer.ShoreLayer;
+import net.minecraft.world.gen.layer.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -86,6 +84,34 @@ public class LayerUtilMixin {
 
         // Replace vanilla rivers with custom river biomes
         return RiverRelationshipLayer.INSTANCE.apply(
+                random,
+                biomeLayer,
+                result);
+    }
+
+    @Redirect(
+            method = "setupOverworldLayer",
+            at = @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/world/gen/layer/HillsLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+            )
+    )
+    private static <T extends IArea>
+    IAreaFactory<T> redirectHillsLayer(
+            HillsLayer instance,
+            IExtendedNoiseRandom<T> random,
+            IAreaFactory<T> biomeLayer,
+            IAreaFactory<T> riverLayer) {
+
+        // Vanilla hill generation
+        IAreaFactory<T> result =
+                instance.apply(random, biomeLayer, riverLayer);
+
+        System.out.println("[CCB] Injecting HillsRelationshipLayer");
+
+        // Replace only the hills of biomes that have a registered HILL relationship.
+        return HillsRelationshipLayer.INSTANCE.apply(
                 random,
                 biomeLayer,
                 result);

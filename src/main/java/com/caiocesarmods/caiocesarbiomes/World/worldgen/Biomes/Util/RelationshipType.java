@@ -115,6 +115,27 @@ public enum RelationshipType {
         }
     },
 
+    HILL {
+        @Override
+        public Integer apply(
+                BiomeRelationship relationship,
+                INoiseRandom random,
+                int north,
+                int west,
+                int south,
+                int east,
+                int center) {
+
+            if (random.random(relationship.getChance()) != 0)
+                return null;
+
+            return WorldGenRegistries.BIOME
+                    .getOptional(relationship.getChild())
+                    .map(WorldGenRegistries.BIOME::getId)
+                    .orElse(center);
+        }
+    },
+
     RARE {
         @Override
         public Integer apply(
