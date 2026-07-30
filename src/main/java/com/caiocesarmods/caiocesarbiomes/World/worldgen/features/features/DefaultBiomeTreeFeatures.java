@@ -81,8 +81,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
-                            CANARY_DATE_PALM_TREE.withChance(0.089F), CAROB_TREE.withChance(0.25F), ALMOND_TREE1.withChance(0.073F),
-                            ALMOND_TREE2.withChance(0.073F), FORKY_FIG_TREE.withChance(0.3F), POMEGRANATE_TREE.withChance(0.2F),
+                            CANARY_DATE_PALM_TREE.withChance(0.089F), CAROB_TREE.withChance(0.25F), ALMOND_TREE.withChance(0.073F),
+                            FORKY_FIG_TREE.withChance(0.3F), POMEGRANATE_TREE.withChance(0.2F),
                             CORK_OAK_TREE.withChance(0.3F), STRAWBERRY_TREE1.withChance(0.16F), WHITE_FIG_TREE.withChance(0.000015F),
                             STRAWBERRY_TREE2.withChance(0.2F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));
@@ -214,8 +214,8 @@ public class DefaultBiomeTreeFeatures {
     /// Desert and drylands
     public static final ConfiguredFeature<?, ?> TEMPERATE_DESERT_TREES = register("temperate_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.2F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.3F), ALMOND_TREE1.withChance(0.3F),
-                            ALMOND_TREE2.withChance(0.3F)), LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.3F), ALMOND_TREE.withChance(0.3F)), LOMBARDY_POPLAR_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.5F, 6))));
 
     public static final ConfiguredFeature<?, ?> LOWLAND_BADLANDS_VEGETATION = register("lowland_badlands_vegetation",
@@ -374,8 +374,7 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> HEMIBOREAL_PRAIRIE_TREES = register("hemiboreal_prairie_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.5F),
-                            ALMOND_TREE2.withChance(0.4F), ALMOND_TREE1.withChance(0.5F)),
-                            LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            ALMOND_TREE.withChance(0.4F)), LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_SHRUBS = register("temperate_rainforest_shrubs",

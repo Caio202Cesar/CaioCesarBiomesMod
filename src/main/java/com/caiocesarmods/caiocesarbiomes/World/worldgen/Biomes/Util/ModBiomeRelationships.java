@@ -363,10 +363,10 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
-                RelationshipType.SUB_BIOME,
-                4,
+                RelationshipType.HILL,
+                8,
                 0,
-                6,
+                17,
                 false, false);
 
         BiomeRelationshipRegistry.registerRiver(
@@ -426,6 +426,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_RIVER);
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,
