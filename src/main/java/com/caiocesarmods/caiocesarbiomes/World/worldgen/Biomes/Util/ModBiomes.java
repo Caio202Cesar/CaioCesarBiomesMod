@@ -54,7 +54,7 @@ public class ModBiomes {
 
     public static final ResourceLocation COASTAL_SUBTROPICAL_DESERT =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert");
-    public static final ResourceLocation COASTAL_SUBTROPICAL_DESERT_LOMAS =
+    public static final ResourceLocation FOG_OASIS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert_lomas");
 
     //Tropical domain

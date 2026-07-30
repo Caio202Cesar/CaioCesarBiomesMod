@@ -454,11 +454,11 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
-                ModBiomes.COASTAL_SUBTROPICAL_DESERT_LOMAS,
-                RelationshipType.HILL,
-                20,
+                ModBiomes.FOG_OASIS,
+                RelationshipType.SUB_BIOME,
+                10,
                 0,
-                26,
+                15,
                 false, false);
     }
 }
