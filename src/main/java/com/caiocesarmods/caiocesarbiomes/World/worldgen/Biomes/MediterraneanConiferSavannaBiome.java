@@ -28,7 +28,7 @@ public class MediterraneanConiferSavannaBiome {
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
    public static final RegistryObject<Biome> MEDITERRANEAN_CONIFER_SAVANNA = BIOMES.register("mediterranean_conifer_savanna",
-           () -> makeMediterraneanConiferSavannaBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.4f));
+           () -> makeMediterraneanConiferSavannaBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
 
 
    private static Biome makeMediterraneanConiferSavannaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
