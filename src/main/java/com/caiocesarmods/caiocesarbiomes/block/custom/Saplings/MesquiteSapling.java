@@ -121,7 +121,11 @@ public class MesquiteSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.MESQUITE_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.MESQUITE_FANCY_TREE;
+            } else {
+                return TreeFeatures.MESQUITE_TREE;
+            }
         }
     }
 }

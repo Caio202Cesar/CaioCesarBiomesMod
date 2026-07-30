@@ -220,7 +220,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> LOWLAND_BADLANDS_VEGETATION = register("lowland_badlands_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUNIPER_TREE.withChance(0.3F),
-                            MESQUITE_TREE.withChance(0.15F), FREMONT_POPLAR_TREE.withChance(0.2F)), PINYON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            MESQUITE_TREE.withChance(0.15F), MESQUITE_FANCY_TREE.withChance(0.25F),
+                            FREMONT_POPLAR_TREE.withChance(0.34F)), PINYON_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WOODED_BADLANDS_VEGETATION = register("wooded_badlands_vegetation",
@@ -238,13 +239,13 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAMARIND_TREE.withChance(0.089F),
-                            MESQUITE_TREE.withChance(0.1F), DATE_PALM_TREE.withChance(0.15F)),
+                            MESQUITE_TREE.withChance(0.1F), MESQUITE_FANCY_TREE.withChance(0.15F), DATE_PALM_TREE.withChance(0.15F)),
                             BAOBAB_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
-                            ACACIA.withChance(0.3F), MESQUITE_TREE.withChance(0.3F), DATE_PALM_TREE.withChance(0.5F)),
+                            ACACIA.withChance(0.3F), MESQUITE_TREE.withChance(0.3F), MESQUITE_FANCY_TREE.withChance(0.55F), DATE_PALM_TREE.withChance(0.5F)),
                             ANCIENT_SYCAMORE_FIG)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
 
