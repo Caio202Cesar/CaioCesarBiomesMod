@@ -25,7 +25,7 @@ public class TropicalBambooMarshRiver {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TROPICAL_BAMBOO_MARSH_RIVER = BIOMES.register("tropical_bamboo_marsh_river",
-            () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP, 0.1f, 0.156f));
+            () -> makeTropicalBambooMarshRiver(() -> ConfiguredSurfaceBuilders.SWAMP, -0.5F, 0.0f));
 
     //Add tropical river vegetation, like white ginger lily
     private static Biome makeTropicalBambooMarshRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
