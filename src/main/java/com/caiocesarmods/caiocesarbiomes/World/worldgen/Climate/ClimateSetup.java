@@ -140,7 +140,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_conifer_savanna_beach", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_woodland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
-            ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_woodland_river", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
+            ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_scrubland_river", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_scrubland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:oleander_gardens", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:olive_grove", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);

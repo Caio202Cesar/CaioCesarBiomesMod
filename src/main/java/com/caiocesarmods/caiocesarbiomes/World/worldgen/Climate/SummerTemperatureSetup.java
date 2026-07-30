@@ -130,7 +130,7 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_conifer_savanna_beach"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_woodland"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_sparse_woodland"), 0.95F);
-        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_oak_woodland_river"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_scrubland_river"), 0.89F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "mediterranean_scrubland"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "olive_grove"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "olive_grove_beach"), 0.95F);

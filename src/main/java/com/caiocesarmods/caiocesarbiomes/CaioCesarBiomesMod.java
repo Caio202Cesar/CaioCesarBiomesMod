@@ -135,7 +135,7 @@ public class CaioCesarBiomesMod
         CorkOakBeach.register(eventBus);
         OliveGroveBeach.register(eventBus);
         TropicalBambooMarshRiver.register(eventBus);
-        MediterraneanOakWoodlandRiver.register(eventBus);
+        MediterraneanScrublandRiver.register(eventBus);
         TropicalBambooBeachBiome.register(eventBus);
         TussockTundraBeach.register(eventBus);
 

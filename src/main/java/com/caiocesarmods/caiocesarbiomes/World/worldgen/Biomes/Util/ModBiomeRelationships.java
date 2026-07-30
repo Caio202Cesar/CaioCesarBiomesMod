@@ -5,7 +5,8 @@ import net.minecraft.world.biome.Biomes;
 public class ModBiomeRelationships {
     public static void register() {
 
-        ///Mediterranean Oak Woodland
+        ///Mediterranean
+        //Oak Woodland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
@@ -35,13 +36,13 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND_RIVER);
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
-                ModBiomes.MEDITERRANEAN_OAK_WOODLAND_RIVER);
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
-        ///Mediterranean Scrubland
+        //Mediterranean Scrubland
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
@@ -50,6 +51,10 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MEDITERRANEAN_SCRUBLAND,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
         /// Oleander Gardens
         BiomeRelationshipRegistry.register(
@@ -61,6 +66,11 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.OLEANDER_GARDENS,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
+
+        //Coniferous (Zone 9)
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_PINE_FOREST,
                 ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
@@ -79,6 +89,7 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        //Zone 9
         BiomeRelationshipRegistry.register(
                 ModBiomes.CORK_OAK_SAVANNA,
                 ModBiomes.CORK_OAK_BEACH,

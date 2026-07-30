@@ -4,7 +4,6 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -21,16 +20,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MediterraneanOakWoodlandRiver {
+public class MediterraneanScrublandRiver {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> MEDITERRANEAN_OAK_WOODLAND_RIVER = BIOMES.register("mediterranean_oak_woodland_river",
-            () -> makeMediterraneanOakWoodlandRiver(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, -0.5F, 0.0f));
+    public static final RegistryObject<Biome> MEDITERRANEAN_SCRUBLAND_RIVER = BIOMES.register("mediterranean_scrubland_river",
+            () -> makeMediterraneanScrublandRiver(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, -0.5F, 0.0f));
 
 
-    private static Biome makeMediterraneanOakWoodlandRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeMediterraneanScrublandRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
@@ -57,16 +56,14 @@ public class MediterraneanOakWoodlandRiver {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanOakTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withOleanderShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanRiparianTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMediterraneanSavannaSmallTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanOakShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-
-        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         //Hardiness zone 10: 0.85F - 0.89F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.RIVER).depth(depth).scale(scale)
