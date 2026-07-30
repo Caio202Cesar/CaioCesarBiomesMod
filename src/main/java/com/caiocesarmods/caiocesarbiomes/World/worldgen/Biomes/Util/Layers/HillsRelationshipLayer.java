@@ -48,6 +48,10 @@ public enum HillsRelationshipLayer implements ICastleTransformer {
                         id,
                         RelationshipType.HILL);
 
+        System.out.println(
+                "[Hill] relationship="
+                        + relationship.isPresent());
+
         if (!relationship.isPresent())
             return center;
 
@@ -67,6 +71,24 @@ public enum HillsRelationshipLayer implements ICastleTransformer {
         if (family.equals(family(east)))  matches++;
         if (family.equals(family(west)))  matches++;
 
+        System.out.println(
+                "[Hill] north=" + family(north));
+
+        System.out.println(
+                "[Hill] south=" + family(south));
+
+        System.out.println(
+                "[Hill] east=" + family(east));
+
+        System.out.println(
+                "[Hill] west=" + family(west));
+
+        System.out.println(
+                "[Hill] center=" + family(center));
+
+        System.out.println(
+                "[Hill] matches=" + matches);
+
         // Only inside large continuous patches.
         if (matches < 4)
             return center;
@@ -76,10 +98,17 @@ public enum HillsRelationshipLayer implements ICastleTransformer {
                         " -> " +
                         relationship.get().getChild());
 
-        return WorldGenRegistries.BIOME
-                .getOptional(relationship.get().getChild())
-                .map(WorldGenRegistries.BIOME::getId)
-                .orElse(center);
+        int replacement =
+                WorldGenRegistries.BIOME
+                        .getOptional(relationship.get().getChild())
+                        .map(WorldGenRegistries.BIOME::getId)
+                        .orElse(center);
+
+        System.out.println(
+                "[Hill] returning biome id="
+                        + replacement);
+
+        return replacement;
     }
 
     private ResourceLocation family(int biomeId) {
