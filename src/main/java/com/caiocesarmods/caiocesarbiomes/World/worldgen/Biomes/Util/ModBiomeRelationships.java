@@ -306,6 +306,10 @@ public class ModBiomeRelationships {
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.BLACK_AMAZON_RIVER);
 
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.AMAZON_RAINFOREST_EDGE,
+                ModBiomes.AMAZON_VARZEA_FOREST);
+
         //Restinga
         BiomeRelationshipRegistry.register(
                 ModBiomes.DUNAS_RESTINGA,
