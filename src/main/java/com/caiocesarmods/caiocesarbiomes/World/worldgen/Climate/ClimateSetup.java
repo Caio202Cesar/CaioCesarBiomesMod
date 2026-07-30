@@ -209,6 +209,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("brbiomesmod:pampas", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("brbiomesmod:pampas_coastal_fields", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("brbiomesmod:pampas_river", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("brbiomesmod:pampas_beach", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("brbiomesmod:pantanal", ClimateDomain.TROPICAL_SAVANNA);
             ClimateDomainRegistry.register("brbiomesmod:cocal_forest", ClimateDomain.TROPICAL_SAVANNA);

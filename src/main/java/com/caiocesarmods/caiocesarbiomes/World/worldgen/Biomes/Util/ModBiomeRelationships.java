@@ -289,9 +289,9 @@ public class ModBiomeRelationships {
                 ModBiomes.DUNAS_RESTINGA,
                 ModBiomes.RESTINGA_BEACH,
                 RelationshipType.BEACH,
-                8,
                 0,
-                6,
+                0,
+                0,
                 true, false);
 
         //Atlantic Forest
@@ -313,22 +313,6 @@ public class ModBiomeRelationships {
                 false, false);
 
         //Pampas
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.PAMPAS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.COXILHAS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.BUTIA_PAMPAS,
-                ModBiomes.PAMPAS_RIVER);
-
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
@@ -355,6 +339,62 @@ public class ModBiomeRelationships {
                 0,
                 6,
                 false, false);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS,
+                ModBiomes.PAMPAS_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS_COASTAL_FIELDS,
+                ModBiomes.PAMPAS_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.COXILHAS,
+                ModBiomes.PAMPAS_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS_BEACH,
+                ModBiomes.PAMPAS_RIVER);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS,
+                ModBiomes.PAMPAS_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS_COASTAL_FIELDS,
+                ModBiomes.PAMPAS_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.COXILHAS,
+                ModBiomes.PAMPAS_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true, false);
 
         /// Deserts
         //Temperate Desert

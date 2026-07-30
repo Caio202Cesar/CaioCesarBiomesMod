@@ -118,6 +118,8 @@ public class ModBiomes {
 
     public static final ResourceLocation PAMPAS =
             new ResourceLocation("brbiomesmod", "pampas");
+    public static final ResourceLocation PAMPAS_BEACH =
+            new ResourceLocation("brbiomesmod", "pampas_beach");
     public static final ResourceLocation PAMPAS_RIVER =
             new ResourceLocation("brbiomesmod", "pampas_river");
     public static final ResourceLocation PAMPAS_COASTAL_FIELDS =
