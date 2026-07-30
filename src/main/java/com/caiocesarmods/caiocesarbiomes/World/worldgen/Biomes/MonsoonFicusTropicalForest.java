@@ -25,7 +25,7 @@ public class MonsoonFicusTropicalForest {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MONSOON_FICUS_FOREST = BIOMES.register("monsoon_ficus_tropical_forest",
-            () -> makeMonsoonFicusTropicalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.3f));
+            () -> makeMonsoonFicusTropicalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 
     private static Biome makeMonsoonFicusTropicalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

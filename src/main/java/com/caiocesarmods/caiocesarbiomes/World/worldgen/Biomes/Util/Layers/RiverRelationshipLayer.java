@@ -51,11 +51,19 @@ public enum RiverRelationshipLayer implements IAreaTransformer2, IDimOffset0Tran
         Optional<BiomeRelationship> relationship =
                 BiomeRelationshipRegistry.getRiverRelationship(id);
 
+        Biome afterBiome = WorldGenRegistries.BIOME.getByValue(after);
+
+        ResourceLocation afterId =
+                afterBiome == null
+                        ? null
+                        : WorldGenRegistries.BIOME.getKey(afterBiome);
+
         System.out.println(
-                "[River] before=" + id +
-                        " after=" +
-                        WorldGenRegistries.BIOME.getKey(
-                                WorldGenRegistries.BIOME.getByValue(after)));
+                "[River]"
+                        + " before=" + before
+                        + " (" + id + ")"
+                        + " after=" + after
+                        + " (" + afterId + ")");
 
         if (!relationship.isPresent())
             return after;
@@ -63,6 +71,12 @@ public enum RiverRelationshipLayer implements IAreaTransformer2, IDimOffset0Tran
         System.out.println(
                 "[River] Replacing with " +
                         relationship.get().getChild());
+
+        System.out.println(
+                "[River] replacing "
+                        + afterId
+                        + " -> "
+                        + relationship.get().getChild());
 
         return WorldGenRegistries.BIOME
                 .getOptional(relationship.get().getChild())
