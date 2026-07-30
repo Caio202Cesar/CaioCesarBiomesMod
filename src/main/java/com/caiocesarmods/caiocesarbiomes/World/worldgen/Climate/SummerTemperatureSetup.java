@@ -183,6 +183,7 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "atlantic_forest"), 0.93F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "atlantic_forest_hills"), 0.93F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "atlantic_forest_beach"), 0.93F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "atlantic_forest_river"), 0.89F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "caatinga_shrubland"), 1.2F);
 

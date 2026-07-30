@@ -104,6 +104,8 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "atlantic_forest_hills");
     public static final ResourceLocation ATLANTIC_FOREST_BEACH =
             new ResourceLocation("brbiomesmod", "atlantic_forest_beach");
+    public static final ResourceLocation ATLANTIC_FOREST_RIVER =
+            new ResourceLocation("brbiomesmod", "atlantic_forest_river");
 
     public static final ResourceLocation CAATINGA =
             new ResourceLocation("brbiomesmod", "caatinga_shrubland");

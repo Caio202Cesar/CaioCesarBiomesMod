@@ -312,6 +312,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_BEACH,
@@ -320,6 +321,14 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 true, false);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.ATLANTIC_FOREST,
+                ModBiomes.ATLANTIC_FOREST_RIVER);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SERRA_DO_MAR_FOREST,
+                ModBiomes.ATLANTIC_FOREST_RIVER);
 
         //Pampas
         BiomeRelationshipRegistry.register(
@@ -363,10 +372,6 @@ public class ModBiomeRelationships {
 
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.BUTIA_PAMPAS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.PAMPAS_BEACH,
                 ModBiomes.PAMPAS_RIVER);
 
         BiomeRelationshipRegistry.register(
