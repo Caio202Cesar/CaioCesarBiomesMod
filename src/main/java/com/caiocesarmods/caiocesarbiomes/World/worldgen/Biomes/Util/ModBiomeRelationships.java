@@ -318,6 +318,9 @@ public class ModBiomeRelationships {
 
         /// Deserts
         //Temperate Desert
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.TEMPERATE_DESERT,
+                ModBiomes.TEMPERATE_DESERT_RIVER);
         BiomeRelationshipRegistry.register(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,

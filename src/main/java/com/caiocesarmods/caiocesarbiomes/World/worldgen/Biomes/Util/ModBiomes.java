@@ -48,6 +48,8 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert");
     public static final ResourceLocation TEMPERATE_DESERT_OASIS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_oasis");
+    public static final ResourceLocation TEMPERATE_DESERT_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_river");
 
     //Tropical domain
     public static final ResourceLocation TROPICAL_BAMBOO_MARSH =

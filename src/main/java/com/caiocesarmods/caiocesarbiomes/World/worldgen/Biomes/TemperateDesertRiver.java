@@ -3,6 +3,8 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -17,18 +19,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class TemperateDesertOasis {
+public class TemperateDesertRiver {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> TEMPERATE_DESERT_OASIS = BIOMES.register("temperate_desert_oasis",
-            () -> makeTemperateDesertOasis(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.0F, 0.025F));
+    public static final RegistryObject<Biome> TEMPERATE_DESERT_RIVER = BIOMES.register("temperate_desert_river",
+            () -> makeTemperateDesertRiver(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, -0.5F, 0.0f));
 
-    private static Biome makeTemperateDesertOasis(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeTemperateDesertRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-        DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
+
+        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.DROWNED, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_CREATURE, new MobSpawnInfo.Spawners(EntityType.SQUID, 7, 3, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.SALMON, 7, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.COD, 7, 5, 7));
+
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
