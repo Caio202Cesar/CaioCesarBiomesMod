@@ -26,7 +26,7 @@ public class TemperateDesert {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TEMPERATE_DESERT = BIOMES.register("temperate_desert",
-            () -> makeTemperateDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1F, 0.2F));
+            () -> makeTemperateDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.126f));
 
     private static Biome makeTemperateDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
@@ -43,7 +43,6 @@ public class TemperateDesert {
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);

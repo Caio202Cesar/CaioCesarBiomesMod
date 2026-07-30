@@ -23,7 +23,7 @@ public class TemperateDesertOasis {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> TEMPERATE_DESERT_OASIS = BIOMES.register("temperate_desert_oasis",
-            () -> makeTemperateDesertOasis(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.0F, 0.025F));
+            () -> makeTemperateDesertOasis(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.126f));
 
     private static Biome makeTemperateDesertOasis(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
