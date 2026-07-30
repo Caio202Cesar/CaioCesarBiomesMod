@@ -27,7 +27,7 @@ public class HemiborealForestBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> HEMIBOREAL_FOREST = BIOMES.register("hemiboreal_forest",
-            () -> makeForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+            () -> makeForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 
     private static Biome makeForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

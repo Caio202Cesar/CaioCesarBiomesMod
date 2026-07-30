@@ -29,7 +29,7 @@ public class MediterraneanOakWoodlandBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MEDITERRANEAN_OAK_WOODLAND = BIOMES.register("mediterranean_oak_woodland",
-            () -> makeMediterraneanOakWoodlandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.125f, 0.3f));
+            () -> makeMediterraneanOakWoodlandBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1F, 0.2F));
 
 
     private static Biome makeMediterraneanOakWoodlandBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

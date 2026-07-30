@@ -25,7 +25,7 @@ public class SouthernBeechForestBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> SOUTHERN_BEECH_FOREST = BIOMES.register("southern_beech_forest",
-            () -> makeSouthernBeechForestBiome(() -> ModConfiguredSurfaceBuilders.VEGETATION_TUNDRA_SURFACE, 0.1f, 0.4f));
+            () -> makeSouthernBeechForestBiome(() -> ModConfiguredSurfaceBuilders.VEGETATION_TUNDRA_SURFACE, 0.1f, 0.2f));
 
 
     private static Biome makeSouthernBeechForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

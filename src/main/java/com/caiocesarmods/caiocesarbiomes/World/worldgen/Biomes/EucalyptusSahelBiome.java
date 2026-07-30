@@ -22,7 +22,7 @@ public class EucalyptusSahelBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> EUCALYPTUS_SAHEL = BIOMES.register("eucalyptus_sahel",
-            () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.125f, 0.3f));
+            () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.1f, 0.126f));
 
     private static Biome makeSahelBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();

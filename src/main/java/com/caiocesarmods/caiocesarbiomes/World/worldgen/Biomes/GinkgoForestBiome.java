@@ -26,7 +26,7 @@ public class GinkgoForestBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> GINKGO_FOREST = BIOMES.register("ginkgo_forest",
-            () -> makeGinkgoForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.125f, 0.35f));
+            () -> makeGinkgoForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1F, 0.2F));
 
     private static Biome makeGinkgoForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
 

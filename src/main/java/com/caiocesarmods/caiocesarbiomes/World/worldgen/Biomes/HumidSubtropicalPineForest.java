@@ -27,7 +27,7 @@ public class HumidSubtropicalPineForest {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> HUMID_SUBTROPICAL_PINE_FOREST = BIOMES.register("humid_subtropical_pine_forest",
-            () -> makeHumidSubtropicalPineForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.125f, 0.2f));
+            () -> makeHumidSubtropicalPineForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 
     private static Biome makeHumidSubtropicalPineForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

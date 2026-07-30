@@ -28,7 +28,7 @@ public class JapaneseMapleGroveBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> JAPANESE_MAPLE_GROVE = BIOMES.register("japanese_maple_grove",
-            () -> makeJapaneseMapleGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.4f));
+            () -> makeJapaneseMapleGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 
     private static Biome makeJapaneseMapleGroveBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

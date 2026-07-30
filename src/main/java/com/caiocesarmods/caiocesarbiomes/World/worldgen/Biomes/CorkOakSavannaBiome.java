@@ -26,7 +26,7 @@ public class CorkOakSavannaBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> CORK_OAK_SAVANNA = BIOMES.register("cork_oak_savanna",
-            () -> makeMediterraneanCorkOakSavanna(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.11f));
+            () -> makeMediterraneanCorkOakSavanna(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_SURFACE, 0.1f, 0.126f));
 
     private static Biome makeMediterraneanCorkOakSavanna(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
