@@ -57,8 +57,6 @@ public class ModBiomeGeneration {
 
         addBiome(SocotraTropicalDryland.SOCOTRA_DRYLAND.get(), BiomeManager.BiomeType.DESERT, 10, OVERWORLD, HOT, DRY, SPARSE, RARE);
 
-        addBiome(TropicalBeachBiome.TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, SANDY);
-
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, FOREST, LUSH);
 
         addBiome(HemiborealForestBiome.HEMIBOREAL_FOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, COLD);
@@ -76,8 +74,6 @@ public class ModBiomeGeneration {
         addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
 
         addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
-
-        addBiome(DryTropicalBeachBiome.DRY_TROPICAL_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, DRY, SANDY);
 
         addBiome(TropicalDesertBiome.TROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DRY, SANDY);
 

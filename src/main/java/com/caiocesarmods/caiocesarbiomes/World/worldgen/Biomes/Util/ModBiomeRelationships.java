@@ -347,6 +347,15 @@ public class ModBiomeRelationships {
                 6,
                 false, false);
 
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS,
+                ModBiomes.COXILHAS,
+                RelationshipType.SUB_BIOME,
+                4,
+                0,
+                6,
+                false, false);
+
         /// Deserts
         //Temperate Desert
         BiomeRelationshipRegistry.registerRiver(
