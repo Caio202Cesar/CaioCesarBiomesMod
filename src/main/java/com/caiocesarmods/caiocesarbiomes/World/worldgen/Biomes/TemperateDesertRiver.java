@@ -39,12 +39,6 @@ public class TemperateDesertRiver {
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-        biomegenerationsettings$builder.withStructure(StructureFeatures.DESERT_PYRAMID);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_DESERT);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
-
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
