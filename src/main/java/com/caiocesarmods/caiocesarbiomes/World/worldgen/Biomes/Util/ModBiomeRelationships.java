@@ -294,6 +294,24 @@ public class ModBiomeRelationships {
                 6,
                 true, false);
 
+        //Atlantic Forest
+        BiomeRelationshipRegistry.register(
+                ModBiomes.ATLANTIC_FOREST,
+                ModBiomes.SERRA_DO_MAR_FOREST,
+                RelationshipType.HILL,
+                8,
+                0,
+                17,
+                false, false);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.SERRA_DO_MAR_FOREST,
+                ModBiomes.ARAUCARIA_PLATEAU,
+                RelationshipType.HILL,
+                5,
+                0,
+                11,
+                false, false);
+
         //Pampas
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS,
