@@ -57,8 +57,8 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "swamp_hills"), 0.95F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.85F);
-        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields_shore"), 0.85F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields"), 0.79F);
+        SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "mushroom_fields_shore"), 0.79F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "beach"), 0.79F); //Cfb temperate beach
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "stone_beach"), 0.49F); //taiga beach
