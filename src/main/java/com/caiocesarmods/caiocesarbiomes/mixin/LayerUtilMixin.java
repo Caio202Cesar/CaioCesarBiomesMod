@@ -94,26 +94,26 @@ public class LayerUtilMixin {
             at = @At(
                     value = "INVOKE",
                     target =
-                            "Lnet/minecraft/world/gen/layer/HillsLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
+                            "Lnet/minecraft/world/gen/layer/EdgeBiomeLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
             )
     )
-    private static <T extends IArea>
-    IAreaFactory<T> redirectHillsLayer(
-            HillsLayer instance,
+    private static <T extends IArea> IAreaFactory<T> redirectEdgeBiomeLayer(
+            EdgeBiomeLayer instance,
             IExtendedNoiseRandom<T> random,
-            IAreaFactory<T> biomeLayer,
-            IAreaFactory<T> riverLayer) {
+            IAreaFactory<T> area) {
 
-        // Vanilla hill generation
+        // Vanilla edge biome generation
         IAreaFactory<T> result =
-                instance.apply(random, biomeLayer, riverLayer);
+                instance.apply(random, area);
 
         System.out.println("[CCB] Injecting HillsRelationshipLayer");
 
-        // Replace only the hills of biomes that have a registered HILL relationship.
-        return HillsRelationshipLayer.INSTANCE.apply(
+        result = HillsRelationshipLayer.INSTANCE.apply(
                 random,
-                biomeLayer,
                 result);
+
+        System.out.println("[CCB] HillsRelationshipLayer inserted");
+
+        return result;
     }
 }

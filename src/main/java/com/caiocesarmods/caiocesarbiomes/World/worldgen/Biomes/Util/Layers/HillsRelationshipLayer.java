@@ -8,47 +8,40 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.area.IArea;
-import net.minecraft.world.gen.layer.traits.IAreaTransformer2;
-import net.minecraft.world.gen.layer.traits.IDimOffset0Transformer;
+import net.minecraft.world.gen.layer.traits.ICastleTransformer;
 
 import java.util.Optional;
 
-public enum HillsRelationshipLayer implements IAreaTransformer2, IDimOffset0Transformer {
+public enum HillsRelationshipLayer implements ICastleTransformer {
 
     INSTANCE;
 
     @Override
     public int apply(
             INoiseRandom random,
-            IArea previous,
-            IArea current,
-            int x,
-            int z) {
+            int north,
+            int west,
+            int south,
+            int east,
+            int center) {
 
-        int before = previous.getValue(
-                getOffsetX(x),
-                getOffsetZ(z));
+        Biome biome =
+                WorldGenRegistries.BIOME.getByValue(center);
 
-        int after = current.getValue(
-                getOffsetX(x),
-                getOffsetZ(z));
-
-        // Vanilla didn't generate a hill here.
-        if (before == after)
-            return after;
-
-        Biome beforeBiome =
-                WorldGenRegistries.BIOME.getByValue(before);
-
-        if (beforeBiome == null)
-            return after;
+        if (biome == null)
+            return center;
 
         ResourceLocation id =
-                WorldGenRegistries.BIOME.getKey(beforeBiome);
+                WorldGenRegistries.BIOME.getKey(biome);
+
+        System.out.println(
+                "[Hill] center="
+                        + center
+                        + " biome="
+                        + id);
 
         if (id == null)
-            return after;
+            return center;
 
         Optional<BiomeRelationship> relationship =
                 BiomeRelationshipRegistry.getRelationship(
@@ -56,39 +49,37 @@ public enum HillsRelationshipLayer implements IAreaTransformer2, IDimOffset0Tran
                         RelationshipType.HILL);
 
         if (!relationship.isPresent())
-            return after;
+            return center;
 
-        // Chance failed
         if (random.random(relationship.get().getChance()) != 0)
-            return after;
+            return center;
 
         ResourceLocation family =
                 BiomeFamilyRegistry.getFamily(id);
 
         if (family == null)
-            return after;
+            return center;
 
         int matches = 0;
 
-        if (family.equals(family(previous.getValue(x, z - 1)))) matches++;
-        if (family.equals(family(previous.getValue(x, z + 1)))) matches++;
-        if (family.equals(family(previous.getValue(x - 1, z)))) matches++;
-        if (family.equals(family(previous.getValue(x + 1, z)))) matches++;
+        if (family.equals(family(north))) matches++;
+        if (family.equals(family(south))) matches++;
+        if (family.equals(family(east)))  matches++;
+        if (family.equals(family(west)))  matches++;
 
-        // Require all four neighbours to belong to the same family.
+        // Only inside large continuous patches.
         if (matches < 4)
-            return after;
+            return center;
 
         System.out.println(
-                "[Hill] Replacing "
-                        + id
-                        + " -> "
-                        + relationship.get().getChild());
+                "[Hill] " + id +
+                        " -> " +
+                        relationship.get().getChild());
 
         return WorldGenRegistries.BIOME
                 .getOptional(relationship.get().getChild())
                 .map(WorldGenRegistries.BIOME::getId)
-                .orElse(after);
+                .orElse(center);
     }
 
     private ResourceLocation family(int biomeId) {

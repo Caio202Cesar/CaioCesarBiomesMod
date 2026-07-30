@@ -429,7 +429,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,
-                RelationshipType.SUB_BIOME,
+                RelationshipType.RARE,
                 250,
                 0,
                 3,

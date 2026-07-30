@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeFamilyRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationship;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationshipRegistry;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.RelationshipType;
