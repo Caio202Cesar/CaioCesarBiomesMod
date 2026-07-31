@@ -21,20 +21,48 @@ public class SetSeasonCommand {
 
                                     switch (season) {
                                         case "SPRING":
+                                        case "EARLY_SPRING":
                                             seasonDay = 0;
                                             break;
+                                        case "MID_SPRING":
+                                            seasonDay = 8;
+                                            break;
+                                        case "LATE_SPRING":
+                                            seasonDay = 16;
+                                            break;
                                         case "SUMMER":
+                                        case "EARLY_SUMMER":
                                             seasonDay = 24;
                                             break;
+                                        case "MID_SUMMER":
+                                            seasonDay = 32;
+                                            break;
+                                        case "LATE_SUMMER":
+                                            seasonDay = 40;
+                                            break;
                                         case "FALL":
+                                        case "EARLY_FALL":
                                             seasonDay = 48;
                                             break;
+                                        case "MID_FALL":
+                                            seasonDay = 56;
+                                            break;
+                                        case "LATE_FALL":
+                                            seasonDay = 64;
+                                            break;
                                         case "WINTER":
+                                        case "EARLY_WINTER":
                                             seasonDay = 72;
+                                            break;
+                                        case "MID_WINTER":
+                                            seasonDay = 80;
+                                            break;
+                                        case "LATE_WINTER":
+                                            seasonDay = 88;
                                             break;
                                         default:
                                             ctx.getSource().sendErrorMessage(
-                                                    new StringTextComponent("Invalid season! Use: spring, summer, autumn, winter")
+                                                    new StringTextComponent("Invalid season! Use: (early, mid, late) spring, summer, autumn, winter")
                                             );
                                             return 0;
                                     }

@@ -12,7 +12,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 
 public enum Season {
-    SPRING, SUMMER, FALL, WINTER;
+    SPRING,
+    SUMMER,
+    FALL,
+    WINTER;
 
     public static String getSeason(long dayTime) {
             long days = dayTime / 24000; // Convert ticks to days
