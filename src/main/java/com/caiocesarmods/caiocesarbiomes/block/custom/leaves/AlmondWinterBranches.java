@@ -40,7 +40,7 @@ public class AlmondWinterBranches extends LeavesBlock implements IForgeShearable
         String currentSeason = Season.getSeason(worldIn.getDayTime());
         String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
-        if ("LATE_WINTER".equals(phase) && nextStage != null && random.nextInt(150) == 0) {
+        if ("LATE_WINTER".equals(phase) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

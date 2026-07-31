@@ -1509,7 +1509,7 @@ public class TreeFeatures {
     //Almond Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALMOND_TREE = register("almond_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUM_LOG),
-                    new SimpleBlockStateProvider(States.ALMOND_BLOSSOM),
+                    new SimpleBlockStateProvider(States.ALMOND_EARLY_SPRING_FRUITING_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(2), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
@@ -2258,7 +2258,7 @@ public class TreeFeatures {
         protected static final BlockState CHAMPAK_LOG = TreeBlocks.CHAMPAK_LOG.get().getDefaultState();
         protected static final BlockState CHAMPAK_LEAVES = TreeBlocks.CHAMPAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ALMOND_BLOSSOM = TreeBlocks.ALMOND_BLOSSOM.get().getDefaultState();
+        protected static final BlockState ALMOND_EARLY_SPRING_FRUITING_LEAVES = TreeBlocks.ALMOND_FRUITING_LEAVES.get().getDefaultState();
         protected static final BlockState ALMOND_LEAVES = TreeBlocks.ALMOND_LEAVES.get().getDefaultState();
 
         protected static final BlockState BALD_CYPRESS_LOG = TreeBlocks.BALD_CYPRESS_LOG.get().getDefaultState();
