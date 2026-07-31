@@ -446,7 +446,7 @@ public class ModBiomeRelationships {
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,
                 RelationshipType.RARE,
-                250,
+                2,
                 0,
                 3,
                 false,
