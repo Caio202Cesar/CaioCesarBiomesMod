@@ -293,8 +293,8 @@ public class ModBiomeRelationships {
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.AMAZON_RAINFOREST_EDGE,
                 RelationshipType.EDGE,
+                4,
                 7,
-                17,
                 6,
                 false, false);
 
