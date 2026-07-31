@@ -1033,7 +1033,7 @@
   "biome.caiocesarbiomes.subtropical_coastal_beach": "Subtropical Coastal Beach",
   "biome.caiocesarbiomes.tussock_tundra": "Tussock Tundra",
   "biome.caiocesarbiomes.tropical_eucalyptus_dry_forest": "Tropical Eucalyptus Dry Forest",
-  "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Subtropical Eucalyptus Dry Forest",
+  "biome.caiocesarbiomes.subtropical_eucalyptus_dry_forest": "Subtropical Eucalyptus Forest",
   "biome.caiocesarbiomes.eucalyptus_plains": "Eucalyptus Plains",
   "biome.caiocesarbiomes.eucalyptus_sahel": "Eucalyptus Sahel",
   "biome.caiocesarbiomes.hot_mediterranean_beach": "Mediterranean Scrubland Beach",
@@ -1068,6 +1068,7 @@
   "tooltip.caiocesarbiomes.marula": "Eat before it ferments and you won't get sick.",
   "tooltip.caiocesarbiomes.hardiness_scanner": "Press shoft and ight-click a sapling or vine with me to see a plant's climatic conditions.",
   "tooltip.caiocesarbiomes.privet_berries": "☠ Hightly toxic!!! Do not eat. ☠",
+
   "itemGroup.CaioCesarBiomesTab": "Caio Cesar Biomes: Miscellaneous",
   "itemGroup.CaioCesarBiomes:Culinary": "Caio Cesar Biomes: Culinary",
   "itemGroup.CaioCesarBiomes:Crops": "Caio Cesar Biomes: Crops",

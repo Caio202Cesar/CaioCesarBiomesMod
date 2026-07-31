@@ -8,7 +8,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.ClimateSetup;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerTemperatureSetup;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;

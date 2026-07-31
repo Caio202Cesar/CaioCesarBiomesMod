@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import net.minecraft.util.RegistryKey;
