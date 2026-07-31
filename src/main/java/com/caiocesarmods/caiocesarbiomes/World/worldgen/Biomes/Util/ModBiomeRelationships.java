@@ -294,7 +294,7 @@ public class ModBiomeRelationships {
                 ModBiomes.AMAZON_RAINFOREST_EDGE,
                 RelationshipType.EDGE,
                 4,
-                7,
+                15,
                 6,
                 false, false);
 
@@ -325,9 +325,9 @@ public class ModBiomeRelationships {
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 RelationshipType.HILL,
-                25,
-                0,
-                17,
+                2,
+                36,
+                10,
                 false, false);
 
         BiomeRelationshipRegistry.register(
@@ -379,8 +379,8 @@ public class ModBiomeRelationships {
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
                 RelationshipType.SUB_BIOME,
-                4,
-                15,
+                2,
+                25,
                 10,
                 false, false);
 
@@ -446,9 +446,9 @@ public class ModBiomeRelationships {
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,
                 RelationshipType.RARE,
-                2,
+                15,
                 0,
-                3,
+                2,
                 false,
                 false);
 
@@ -456,9 +456,9 @@ public class ModBiomeRelationships {
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
                 ModBiomes.FOG_OASIS,
                 RelationshipType.SUB_BIOME,
-                10,
+                3,
                 0,
-                15,
+                6,
                 false, false);
     }
 }
