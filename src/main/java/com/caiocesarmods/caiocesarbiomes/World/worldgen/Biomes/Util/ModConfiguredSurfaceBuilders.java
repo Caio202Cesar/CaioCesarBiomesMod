@@ -50,7 +50,7 @@ public class ModConfiguredSurfaceBuilders {
     public static ConfiguredSurfaceBuilder<?> STEEPE_SURFACE = register("steepe_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
                     Blocks.COARSE_DIRT.getDefaultState(),
-                    Blocks.STONE.getDefaultState(),
+                    Blocks.COARSE_DIRT.getDefaultState(),
                     Blocks.SAND.getDefaultState()
             )));
 
