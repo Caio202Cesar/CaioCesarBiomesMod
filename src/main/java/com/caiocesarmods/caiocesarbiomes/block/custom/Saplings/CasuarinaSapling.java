@@ -120,7 +120,7 @@ public class CasuarinaSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CasuarinaTree extends BigTree {
+    private static class CasuarinaTree extends Tree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
@@ -129,12 +129,6 @@ public class CasuarinaSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.PINE_LIKE_CASUARINA_TREE;
             }
-        }
-
-        @Nullable
-        @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random random) {
-            return TreeFeatures.LARGE_CASUARINA;
         }
     }
 }

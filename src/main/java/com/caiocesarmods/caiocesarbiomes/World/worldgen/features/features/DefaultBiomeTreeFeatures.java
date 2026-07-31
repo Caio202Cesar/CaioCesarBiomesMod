@@ -589,8 +589,7 @@ public class DefaultBiomeTreeFeatures {
                     .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CASUARINA_TREES = register("casuarina_trees", Feature.RANDOM_SELECTOR.withConfiguration(
-                    new MultipleRandomFeatureConfig((ImmutableList.of(CASUARINA_FANCY_TREE.withChance(0.4F),
-                            LARGE_CASUARINA.withChance(0.35F))), PINE_LIKE_CASUARINA_TREE))
+                    new MultipleRandomFeatureConfig((ImmutableList.of(CASUARINA_FANCY_TREE.withChance(0.4F))), PINE_LIKE_CASUARINA_TREE))
             .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
