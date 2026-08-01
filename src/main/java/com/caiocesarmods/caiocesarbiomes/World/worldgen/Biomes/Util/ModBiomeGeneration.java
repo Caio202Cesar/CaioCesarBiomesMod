@@ -31,7 +31,7 @@ public class ModBiomeGeneration {
         addBiome(SubtropicalExtremeHillsBiome.SUBTROPICAL_EXTREME_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalEucalyptusForestBiome.SUBTROPICAL_EUCALYPTUS_FOREST.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, FOREST, DRY, DENSE);
         addBiome(EucalyptusPlainsBiome.EUCALYPTUS_PLAINS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, PLAINS, SPARSE);
-        //addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, MOUNTAIN, CONIFEROUS);
+        addBiome(ValdivianTemperateRainforest.VALDIVIAN_TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, WET, DENSE, JUNGLE);
         addBiome(HumidSubtropicalPineForest.HUMID_SUBTROPICAL_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, CONIFEROUS, LUSH, DENSE);
 
         /// Tropical
