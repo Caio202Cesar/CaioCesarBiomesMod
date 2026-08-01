@@ -63,7 +63,7 @@ public class CoastalSubtropicalDesertBiome {
 
         //Hardiness zone 11: 0.9F - 0.94F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
-                .temperature(0.94F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.9F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(5216810)
                         .withGrassColor(6604607).setFogColor(15658734)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
