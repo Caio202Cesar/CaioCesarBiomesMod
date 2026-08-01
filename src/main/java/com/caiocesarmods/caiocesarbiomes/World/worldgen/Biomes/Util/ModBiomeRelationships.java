@@ -461,5 +461,14 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
+        //Cerrado
+        BiomeRelationshipRegistry.register(
+                ModBiomes.CERRADO,
+                ModBiomes.COCAL_FOREST,
+                RelationshipType.TRANSITIONAL_EDGE,
+                4,
+                15,
+                6,
+                false, false);
     }
 }

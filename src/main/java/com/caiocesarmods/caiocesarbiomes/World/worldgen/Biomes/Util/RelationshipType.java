@@ -8,6 +8,8 @@ import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.layer.LayerUtil;
 
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.*;
+
 public enum RelationshipType {
     EDGE {
         @Override
@@ -45,6 +47,106 @@ public enum RelationshipType {
             }
 
             return null;
+        }
+    },
+
+    TRANSITIONAL_EDGE {
+        @Override
+        public Integer apply(BiomeRelationship relationship,
+                             INoiseRandom random,
+                             int north,
+                             int west,
+                             int south,
+                             int east,
+                             int center) {
+
+            ResourceLocation centerBiome = biomeId(center);
+
+            if (!CERRADO.equals(centerBiome))
+                return center;
+
+            boolean amazonEdge = false;
+            boolean caatinga = false;
+
+            int[] neighbours = {
+                    north,
+                    south,
+                    east,
+                    west
+            };
+
+            for (int neighbour : neighbours) {
+
+                ResourceLocation biome = biomeId(neighbour);
+
+                if (AMAZON_RAINFOREST_EDGE.equals(biome))
+                    amazonEdge = true;
+
+                if (CAATINGA.equals(biome))
+                    caatinga = true;
+            }
+
+            if (amazonEdge && caatinga) {
+
+                System.out.println(
+                        "[TRANSITION] CERRADO -> COCAL_FOREST"
+                );
+
+                return WorldGenRegistries.BIOME
+                        .getOptional(COCAL_FOREST)
+                        .map(WorldGenRegistries.BIOME::getId)
+                        .orElse(center);
+            }
+
+            return center;
+        }
+    },
+
+    BRIDGE {
+        @Override
+        public Integer apply(BiomeRelationship relationship,
+                             INoiseRandom random,
+                             int north,
+                             int west,
+                             int south,
+                             int east,
+                             int center) {
+
+            ResourceLocation centerBiome = biomeId(center);
+
+            if (AMAZON_RAINFOREST_EDGE.equals(centerBiome)) {
+
+                boolean caatinga =
+                        CAATINGA.equals(biomeId(north))
+                                || CAATINGA.equals(biomeId(south))
+                                || CAATINGA.equals(biomeId(east))
+                                || CAATINGA.equals(biomeId(west));
+
+                if (caatinga) {
+                    return WorldGenRegistries.BIOME
+                            .getOptional(COCAL_FOREST)
+                            .map(WorldGenRegistries.BIOME::getId)
+                            .orElse(center);
+                }
+            }
+
+            if (CAATINGA.equals(centerBiome)) {
+
+                boolean amazonEdge =
+                        AMAZON_RAINFOREST_EDGE.equals(biomeId(north))
+                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(south))
+                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(east))
+                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(west));
+
+                if (amazonEdge) {
+                    return WorldGenRegistries.BIOME
+                            .getOptional(COCAL_FOREST)
+                            .map(WorldGenRegistries.BIOME::getId)
+                            .orElse(center);
+                }
+            }
+
+            return center;
         }
     },
 
@@ -164,20 +266,14 @@ public enum RelationshipType {
                 WorldGenRegistries.BIOME.getOrThrow(key));
     }
 
-    public static class RelationshipUtil {
+    private static ResourceLocation biomeId(int biomeId) {
 
-        public static boolean isOcean(int biomeId) {
-            return LayerUtil.areBiomesSimilar(biomeId, id(Biomes.OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.COLD_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_COLD_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.FROZEN_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_FROZEN_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.LUKEWARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_LUKEWARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.WARM_OCEAN))
-                    || LayerUtil.areBiomesSimilar(biomeId, id(Biomes.DEEP_WARM_OCEAN));
-        }
+        Biome biome = WorldGenRegistries.BIOME.getByValue(biomeId);
+
+        if (biome == null)
+            return null;
+
+        return WorldGenRegistries.BIOME.getKey(biome);
     }
 
     public abstract Integer apply(
