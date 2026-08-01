@@ -2669,9 +2669,9 @@ public class TreeBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_WOOD = registerBlock("bambooleaf_oak_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_LOG = registerBlock("bambooleaf_oak_log",
+    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_LOG = registerBlock("stripped_bambooleaf_oak_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_WOOD = registerBlock("bambooleaf_oak_wood",
+    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_WOOD = registerBlock("stripped_bambooleaf_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_LEAVES = registerBlock("bambooleaf_oak_leaves",
             ModLeaves::new);
