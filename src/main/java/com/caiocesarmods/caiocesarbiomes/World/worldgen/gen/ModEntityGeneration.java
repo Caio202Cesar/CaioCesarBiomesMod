@@ -175,7 +175,7 @@ public class ModEntityGeneration {
             ));
         }
 
-        if (event.getName().equals(SahelBiome.SAHEL.get().getRegistryName())) {
+        if (event.getName().equals(SahelBiome.TROPICAL_XERIC_SCRUBLAND.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.DESERT_MERCHANT.get().getClassification()

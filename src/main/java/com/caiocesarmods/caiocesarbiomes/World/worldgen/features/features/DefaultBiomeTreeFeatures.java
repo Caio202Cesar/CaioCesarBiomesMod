@@ -206,7 +206,7 @@ public class DefaultBiomeTreeFeatures {
                             RING_CUPPED_OAK_FANCY_TREE.withChance(0.3F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
                             FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F), SOUTHERN_LIVE_OAK_TREE.withChance(0.3F),
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.32F), OAK_TREE_WITH_IVY.withChance(0.3F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            BIG_LIVE_OAK_TREE.withChance(0.25F)), SUBTROPICAL_SPRING_ORCHID_TREE))
+                            BIG_LIVE_OAK_TREE.withChance(0.25F)), SUBTROPICAL_SPRING_ORCHID_TREE1))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 

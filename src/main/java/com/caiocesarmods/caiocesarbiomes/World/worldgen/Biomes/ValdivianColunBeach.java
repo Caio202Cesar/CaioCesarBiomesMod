@@ -62,8 +62,6 @@ public class ValdivianColunBeach {
         ModDefaultBiomeFeatures.withSouthernBeechs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMagellanicTemperateTallPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.OLIVILLO_TREE);
-
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
