@@ -2481,9 +2481,9 @@ public class TreeBlocks {
     //public static final RegistryObject<Block> ROYAL_PALM_SAPLING = registerBlock("royal_palm_sapling", RoyalPalmSapling::new);
 
 
-    /*public static final RegistryObject<Block> BLACK_POUI_LOG = registerBlock("black_poui_log",
+    /*public static final RegistryObject<Block> JACARANDA_LOG = registerBlock("jacaranda_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BLACK_POUI_LOG = registerBlock("stripped_black_poui_log",
+    public static final RegistryObject<Block> STRIPPED_JACARANDA_LOG = registerBlock("stripped_jacaranda_log",
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_POUI_LEAVES = registerBlock("black_poui_leaves",
             () -> new BlackPouiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -2664,6 +2664,19 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> RING_CUPPED_OAK_SAPLING = registerBlock("ring_cupped_oak_sapling",
             RingCuppedOakSapling::new); //Hardy from zone 7 to 9
+
+    public static final RegistryObject<Block> BAMBOOLEAF_OAK_LOG = registerBlock("bambooleaf_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BAMBOOLEAF_OAK_WOOD = registerBlock("bambooleaf_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_LOG = registerBlock("bambooleaf_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_WOOD = registerBlock("bambooleaf_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BAMBOOLEAF_OAK_LEAVES = registerBlock("bambooleaf_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BAMBOOLEAF_OAK_SAPLING = registerBlock("bambooleaf_oak_sapling",
+            RingCuppedOakSapling::new);
 
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
             ModLogs::new);

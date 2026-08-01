@@ -188,7 +188,11 @@ public class OrchidTreeSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.ORCHID_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.ORCHID_TREE2;
+            } else {
+                return TreeFeatures.ORCHID_TREE1;
+            }
         }
     }
 }
