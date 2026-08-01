@@ -8,9 +8,13 @@ import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.layer.LayerUtil;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.*;
 
 public enum RelationshipType {
+
     EDGE {
         @Override
         public Integer apply(BiomeRelationship relationship,
@@ -51,22 +55,33 @@ public enum RelationshipType {
     },
 
     TRANSITIONAL_EDGE {
+
         @Override
-        public Integer apply(BiomeRelationship relationship,
-                             INoiseRandom random,
-                             int north,
-                             int west,
-                             int south,
-                             int east,
-                             int center) {
+        public Integer apply(
+                BiomeRelationship relationship,
+                INoiseRandom random,
+                int north,
+                int west,
+                int south,
+                int east,
+                int center) {
 
             ResourceLocation centerBiome = biomeId(center);
 
-            if (!CERRADO.equals(centerBiome))
+            if (!relationship.getParent().equals(centerBiome))
                 return center;
 
-            boolean amazonEdge = false;
-            boolean caatinga = false;
+            Set<ResourceLocation> required = relationship.getRequiredNeighbours();
+
+            if (required.isEmpty()) {
+                // No neighbour requirements.
+                return WorldGenRegistries.BIOME
+                        .getOptional(relationship.getChild())
+                        .map(WorldGenRegistries.BIOME::getId)
+                        .orElse(center);
+            }
+
+            int found = 0;
 
             int[] neighbours = {
                     north,
@@ -79,74 +94,39 @@ public enum RelationshipType {
 
                 ResourceLocation biome = biomeId(neighbour);
 
-                if (AMAZON_RAINFOREST_EDGE.equals(biome))
-                    amazonEdge = true;
-
-                if (CAATINGA.equals(biome))
-                    caatinga = true;
+                if (required.contains(biome))
+                    found++;
             }
 
-            if (amazonEdge && caatinga) {
+            boolean success;
 
-                System.out.println(
-                        "[TRANSITION] CERRADO -> COCAL_FOREST"
-                );
+            switch (relationship.getMatchMode()) {
 
-                return WorldGenRegistries.BIOME
-                        .getOptional(COCAL_FOREST)
-                        .map(WorldGenRegistries.BIOME::getId)
-                        .orElse(center);
+                case ALL:
+                    success = found >= required.size();
+                    break;
+
+                case ANY:
+                    success = found > 0;
+                    break;
+
+                default:
+                    success = false;
             }
 
-            return center;
-        }
-    },
+            if (!success)
+                return center;
 
-    BRIDGE {
-        @Override
-        public Integer apply(BiomeRelationship relationship,
-                             INoiseRandom random,
-                             int north,
-                             int west,
-                             int south,
-                             int east,
-                             int center) {
+            System.out.println(
+                    "[TRANSITION] "
+                            + centerBiome
+                            + " -> "
+                            + relationship.getChild());
 
-            ResourceLocation centerBiome = biomeId(center);
-
-            if (AMAZON_RAINFOREST_EDGE.equals(centerBiome)) {
-
-                boolean caatinga =
-                        CAATINGA.equals(biomeId(north))
-                                || CAATINGA.equals(biomeId(south))
-                                || CAATINGA.equals(biomeId(east))
-                                || CAATINGA.equals(biomeId(west));
-
-                if (caatinga) {
-                    return WorldGenRegistries.BIOME
-                            .getOptional(COCAL_FOREST)
-                            .map(WorldGenRegistries.BIOME::getId)
-                            .orElse(center);
-                }
-            }
-
-            if (CAATINGA.equals(centerBiome)) {
-
-                boolean amazonEdge =
-                        AMAZON_RAINFOREST_EDGE.equals(biomeId(north))
-                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(south))
-                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(east))
-                                || AMAZON_RAINFOREST_EDGE.equals(biomeId(west));
-
-                if (amazonEdge) {
-                    return WorldGenRegistries.BIOME
-                            .getOptional(COCAL_FOREST)
-                            .map(WorldGenRegistries.BIOME::getId)
-                            .orElse(center);
-                }
-            }
-
-            return center;
+            return WorldGenRegistries.BIOME
+                    .getOptional(relationship.getChild())
+                    .map(WorldGenRegistries.BIOME::getId)
+                    .orElse(center);
         }
     },
 

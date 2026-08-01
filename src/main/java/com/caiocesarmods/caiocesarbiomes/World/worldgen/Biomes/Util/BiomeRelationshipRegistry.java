@@ -26,9 +26,21 @@ public class BiomeRelationshipRegistry {
             int edgeSize,
             int priority,
             boolean beach,
-            boolean river) {
+            boolean river,
+            MatchMode matchMode,
+            ResourceLocation... requiredNeighbours) {
 
-        register(new BiomeRelationship(parent, child, type, chance, edgeSize, priority, beach, river));
+        register(new BiomeRelationship(
+                parent,
+                child,
+                type,
+                chance,
+                edgeSize,
+                priority,
+                beach,
+                river,
+                matchMode,
+                requiredNeighbours));
     }
 
     public static void registerRiver(ResourceLocation parent, ResourceLocation child) {
@@ -40,7 +52,8 @@ public class BiomeRelationshipRegistry {
                 0,
                 0,
                 false,   // beach
-                true));  // river
+                true, // river
+                null));
     }
 
     //Vanilla -> Mod
@@ -52,7 +65,9 @@ public class BiomeRelationshipRegistry {
             int edgeSize,
             int priority,
             boolean beach,
-            boolean river) {
+            boolean river,
+            MatchMode matchMode,
+            ResourceLocation... requiredNeighbours) {
 
         register(
                 parent.getLocation(),
@@ -62,7 +77,9 @@ public class BiomeRelationshipRegistry {
                 edgeSize,
                 priority,
                 beach,
-                river);
+                river,
+                matchMode,
+                requiredNeighbours);
     }
 
     public static void registerRiver(RegistryKey<Biome> parent, ResourceLocation child) {
@@ -74,7 +91,8 @@ public class BiomeRelationshipRegistry {
                 0,
                 0,
                 false,   // beach
-                true));  // river
+                true, // river
+                null));
     }
 
     //Vanilla -> Vanilla
@@ -86,7 +104,9 @@ public class BiomeRelationshipRegistry {
             int edgeSize,
             int priority,
             boolean beach,
-            boolean river) {
+            boolean river,
+            MatchMode matchMode,
+            ResourceLocation... requiredNeighbours) {
 
         register(
                 parent.getLocation(),
@@ -96,7 +116,9 @@ public class BiomeRelationshipRegistry {
                 edgeSize,
                 priority,
                 beach,
-                river);
+                river,
+                matchMode,
+                requiredNeighbours);
     }
 
     public static void registerRiver(RegistryKey<Biome> parent, RegistryKey<Biome> child) {
@@ -108,7 +130,8 @@ public class BiomeRelationshipRegistry {
                 0,
                 0,
                 false,   // beach
-                true));  // river
+                true, // river
+                null));
     }
 
     //Mod -> Vanilla
@@ -120,7 +143,9 @@ public class BiomeRelationshipRegistry {
             int edgeSize,
             int priority,
             boolean beach,
-            boolean river) {
+            boolean river,
+            MatchMode matchMode,
+            ResourceLocation... requiredNeighbours) {
 
         register(
                 parent,
@@ -130,7 +155,9 @@ public class BiomeRelationshipRegistry {
                 edgeSize,
                 priority,
                 beach,
-                river);
+                river,
+                matchMode,
+                requiredNeighbours);
     }
 
     public static void registerRiver(ResourceLocation parent, RegistryKey<Biome> child) {
@@ -142,7 +169,8 @@ public class BiomeRelationshipRegistry {
                 0,
                 0,
                 false,   // beach
-                true));  // river
+                true,    // river
+                null));
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {
