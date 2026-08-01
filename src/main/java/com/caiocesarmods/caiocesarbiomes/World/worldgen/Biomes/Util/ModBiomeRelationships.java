@@ -257,7 +257,7 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 RelationshipType.HILL,
-                25,
+                5,
                 30,
                 17,
                 false, false);
@@ -265,7 +265,7 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 RelationshipType.HILL,
-                25,
+                5,
                 30,
                 17,
                 false, false);
@@ -273,7 +273,7 @@ public class ModBiomeRelationships {
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 RelationshipType.HILL,
-                25,
+                5,
                 30,
                 17,
                 false, false);
@@ -289,7 +289,7 @@ public class ModBiomeRelationships {
                 ModBiomes.TEMPERATE_DESERT_OASIS,
                 RelationshipType.RARE,
                 15,
-                0,
+                15,
                 2,
                 false,
                 false);
