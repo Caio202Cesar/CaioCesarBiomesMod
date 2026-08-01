@@ -214,7 +214,7 @@ public class DefaultBiomeTreeFeatures {
     /// Desert and drylands
     public static final ConfiguredFeature<?, ?> TEMPERATE_DESERT_TREES = register("temperate_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PISTACHIO_TREE.withChance(0.2F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.3F), DATE_PALM_TREE.withChance(0.18F), ALMOND_TREE.withChance(0.3F)),
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.3F), DATE_PALM_TREE.withChance(0.2F), ALMOND_TREE.withChance(0.3F)),
                             LOMBARDY_POPLAR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.5F, 6))));
