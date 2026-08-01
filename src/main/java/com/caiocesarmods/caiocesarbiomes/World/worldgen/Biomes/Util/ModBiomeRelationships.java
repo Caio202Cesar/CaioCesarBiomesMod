@@ -278,6 +278,31 @@ public class ModBiomeRelationships {
                 17,
                 false, false);
 
+        /// Deserts
+        //Temperate Desert
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.TEMPERATE_DESERT,
+                ModBiomes.TEMPERATE_DESERT_RIVER);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.TEMPERATE_DESERT,
+                ModBiomes.TEMPERATE_DESERT_OASIS,
+                RelationshipType.RARE,
+                15,
+                0,
+                2,
+                false,
+                false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.COASTAL_SUBTROPICAL_DESERT,
+                ModBiomes.FOG_OASIS,
+                RelationshipType.SUB_BIOME,
+                3,
+                0,
+                6,
+                false, false);
+
         /// Tundra
         BiomeRelationshipRegistry.register(
                 ModBiomes.TUSSOCK_TUNDRA,
@@ -436,29 +461,5 @@ public class ModBiomeRelationships {
                 0,
                 true, false);
 
-        /// Deserts
-        //Temperate Desert
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.TEMPERATE_DESERT,
-                ModBiomes.TEMPERATE_DESERT_RIVER);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.TEMPERATE_DESERT,
-                ModBiomes.TEMPERATE_DESERT_OASIS,
-                RelationshipType.RARE,
-                15,
-                0,
-                2,
-                false,
-                false);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.COASTAL_SUBTROPICAL_DESERT,
-                ModBiomes.FOG_OASIS,
-                RelationshipType.SUB_BIOME,
-                3,
-                0,
-                6,
-                false, false);
     }
 }

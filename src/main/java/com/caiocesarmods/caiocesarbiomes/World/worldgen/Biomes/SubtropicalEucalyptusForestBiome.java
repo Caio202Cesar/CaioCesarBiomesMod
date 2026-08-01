@@ -23,11 +23,11 @@ public class SubtropicalEucalyptusForestBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> SUBTROPICAL_EUCALYPTUS_DRY_FOREST = BIOMES.register("subtropical_eucalyptus_dry_forest",
-            () -> makeSubtropicalEucalyptusDryForestBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.1F, 0.2F));
+    public static final RegistryObject<Biome> SUBTROPICAL_EUCALYPTUS_FOREST = BIOMES.register("subtropical_eucalyptus_dry_forest",
+            () -> makeSubtropicalEucalyptusForestBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.1F, 0.2F));
 
     //Inspired in eastern australian temperate forests (this biome is actually humid subtropical, not dry).
-    private static Biome makeSubtropicalEucalyptusDryForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeSubtropicalEucalyptusForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);

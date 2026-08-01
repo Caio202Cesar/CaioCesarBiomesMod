@@ -24,7 +24,7 @@ public class SahelBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<Biome> SAHEL = BIOMES.register("sahel",
+    public static final RegistryObject<Biome> TROPICAL_XERIC_SCRUBLAND = BIOMES.register("sahel",
             () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.1F, 0.2F));
 
     private static Biome makeSahelBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

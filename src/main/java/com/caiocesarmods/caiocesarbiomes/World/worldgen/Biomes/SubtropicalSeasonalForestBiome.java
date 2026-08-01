@@ -27,11 +27,11 @@ public class SubtropicalSeasonalForestBiome {
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_SEASONAL_FOREST = BIOMES.register("subtropical_seasonal_forest",
-           () -> makeSubtropicalSeasonalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
+   public static final RegistryObject<Biome> SUBTROPICAL_EVERGREEN_OAK_FOREST = BIOMES.register("subtropical_seasonal_forest",
+           () -> makeSubtropicalEvergreenOakForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 
-   private static Biome makeSubtropicalSeasonalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+   private static Biome makeSubtropicalEvergreenOakForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
       DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
