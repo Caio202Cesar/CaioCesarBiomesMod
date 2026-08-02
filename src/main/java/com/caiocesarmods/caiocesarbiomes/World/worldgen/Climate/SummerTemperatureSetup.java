@@ -191,12 +191,12 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "dunas_restinga"), 1.0F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "restinga_beach"), 1.0F);
 
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "butia_pampas"), 0.9F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_hills"), 0.93F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.93F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.9F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_river"), 0.89F);
-        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_beach"), 0.9F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "butia_pampas"), 0.85F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_hills"), 0.9F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas"), 0.9F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_coastal_fields"), 0.85F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_river"), 0.83F);
+        SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pampas_beach"), 0.83F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "pantanal"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("brbiomesmod", "cocal_forest"), 0.95F);
