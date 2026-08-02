@@ -62,7 +62,6 @@ public class HemiborealForestBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTaigaVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withHemiborealForestVegetation(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withContinentalMapleTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);

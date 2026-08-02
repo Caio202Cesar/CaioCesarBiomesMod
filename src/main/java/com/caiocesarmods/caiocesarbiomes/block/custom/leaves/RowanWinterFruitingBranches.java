@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.SeasonalPhase;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
@@ -14,6 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -44,8 +46,31 @@ public class RowanWinterFruitingBranches extends LeavesBlock implements IForgeSh
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for temperate biomes
+        if (temp >= 0.4F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.ROWAN_BERRIES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+        }
+
+        //Pattern for taiga biomes
+        if (temp < 0.4F && "MID_SPRING".equals(phase) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 

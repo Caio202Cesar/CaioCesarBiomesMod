@@ -38,9 +38,6 @@ public class ModDefaultBiomeFeatures {
     public static void withScrublandTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TREES_SCRUBLAND);
     }
-    public static void withContinentalMapleTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MIXED_CONTINENTAL_MAPLE_TREES);
-    }
     public static void withMediterraneanConiferTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_CONIFER_TREES);
     }

@@ -1498,13 +1498,13 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROWAN_TREE2 = register("rowan_tree2",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ROWAN_TREE_SPRING = register("rowan_tree_spring",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ROWAN_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.ROWAN_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
+                    new SimpleBlockStateProvider(States.ROWAN_BRANCHES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
 
     //Almond Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALMOND_TREE = register("almond_tree",
@@ -1556,7 +1556,7 @@ public class TreeFeatures {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SPRING_HAWTHORN_TREE = register("spring_hawthorn_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HAWTHORN_LOG),
-                    new SimpleBlockStateProvider(States.HAWTHORN_LEAVES),
+                    new SimpleBlockStateProvider(States.HAWTHORN_FRUITING_BRANCHES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
@@ -2326,9 +2326,11 @@ public class TreeFeatures {
 
         protected static final BlockState ROWAN_LOG = TreeBlocks.ROWAN_LOG.get().getDefaultState();
         protected static final BlockState ROWAN_LEAVES = TreeBlocks.ROWAN_LEAVES.get().getDefaultState();
+        protected static final BlockState ROWAN_BRANCHES = TreeBlocks.ROWAN_WINTER_BRANCHES.get().getDefaultState();
 
         protected static final BlockState HAWTHORN_LOG = TreeBlocks.HAWTHORN_LOG.get().getDefaultState();
         protected static final BlockState HAWTHORN_LEAVES = TreeBlocks.HAWTHORN_LEAVES.get().getDefaultState();
+        protected static final BlockState HAWTHORN_FRUITING_BRANCHES = TreeBlocks.HAWTHORN_WINTER_FRUITING_BRANCHES.get().getDefaultState();
 
         protected static final BlockState JUNIPER_LOG = TreeBlocks.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = TreeBlocks.JUNIPER_LEAVES.get().getDefaultState();
