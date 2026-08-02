@@ -337,7 +337,7 @@ public class DefaultBiomeTreeFeatures {
 
     //No birch, southern USA pine trees, liquidambar and crape myrtles. This forest has, like the average forest, a base hardiness zone of 8 to 7 (based on factors like altitude and latitude)
     public static final ConfiguredFeature<?, ?> HOT_TEMPERATE_FOREST_VEGETATION = register("hot_summer_temperate_forest_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.1F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.12F),
                             WHITE_CRABAPPLE_TREE.withChance(0.1F), RED_CRABAPPLE_TREE.withChance(0.077F), JAPANESE_MAPLE_TREE.withChance(0.07F),
                             MULBERRY_TREE.withChance(0.2F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_FANCY_TREE.withChance(0.15F),
                             ELDERBERRY_TREE.withChance(0.2F), PEACH_TREE.withChance(0.2F), SOUTHERN_MAGNOLIA_TREE.withChance(0.1F),
@@ -345,9 +345,10 @@ public class DefaultBiomeTreeFeatures {
                             PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F), CAMELLIA_TREE.withChance(0.087F),
                             WAX_LEAF_PRIVET_TREE.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.02F), RING_CUPPED_OAK_FANCY_TREE.withChance(0.12F),
                             RING_CUPPED_OAK_TREE.withChance(0.12F), FANCY_OAK.withChance(0.3F), OAK.withChance(0.35F), OAK_BEES_002.withChance(0.04F),
-                            OAK_TREE_WITH_KIWI.withChance(0.087F),
+                            OAK_TREE_WITH_KIWI.withChance(0.087F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.2F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            SPRING_HAWTHORN_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.6F),
+                            SPRING_HAWTHORN_TREE.withChance(0.2F), OBTUSA_OAK_TREE.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F),
+                            LIQUIDAMBAR_TREE.withChance(0.3F), PLANE_TREE.withChance(0.3F),
                             CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)), OAK_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));

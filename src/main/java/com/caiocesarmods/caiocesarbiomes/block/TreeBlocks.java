@@ -2772,6 +2772,20 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COAST_LIVE_OAK_SAPLING = registerBlock("coast_live_oak_sapling",
             CoastLiveOakSapling::new);
 
+    //Hot temperate forest
+    public static final RegistryObject<Block> LIQUIDAMBAR_LOG = registerBlock("liquidambar_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_champak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LIQUIDAMBAR_WOOD = registerBlock("champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_WOOD = registerBlock("stripped_champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHAMPAK_LEAVES = registerBlock("champak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> LIQUIDAMBAR_SAPLING = registerBlock("champak_sapling",
+            ChampakSapling::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
