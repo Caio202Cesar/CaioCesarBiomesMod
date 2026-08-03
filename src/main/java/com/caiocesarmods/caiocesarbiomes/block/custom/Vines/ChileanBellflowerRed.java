@@ -31,7 +31,7 @@ public class ChileanBellflowerRed extends VineBlock implements IForgeShearable {
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
-        return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
+        return heat == SummerHeat.WARM || heat == SummerHeat.MILD;
     }
 
     public boolean ticksRandomly(BlockState state) {

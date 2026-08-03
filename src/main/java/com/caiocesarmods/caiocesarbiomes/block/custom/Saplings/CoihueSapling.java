@@ -44,22 +44,23 @@ public class CoihueSapling extends SaplingBlock {
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
-        return heat == SummerHeat.WARM || heat == SummerHeat.COOLER;
+        return heat == SummerHeat.WARM || heat == SummerHeat.MILD || heat == SummerHeat.COOLER;
     }
 
     //Requires mild summers (hardy from zone 6 to zone 9)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+        Biome biome = world.getBiome(pos);
+
+        float temp = biome.getTemperature(pos);
         float minTemp = 0.6f;
         float maxTemp = 0.84f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
+        boolean validTemp = temp >= minTemp && temp <= maxTemp;
 
-        // Summer heat check (NEW)
-        if (!isSummerAllowed(world, pos)) return;
-
-        super.randomTick(state, world, pos, random);
+        if (validTemp && isSummerAllowed(world, pos)) {
+            super.randomTick(state, world, pos, random);
+        }
     }
 
     @Override
@@ -69,19 +70,15 @@ public class CoihueSapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
+        float temp = biome.getTemperature(pos);
         boolean tooHot = temp > 0.84F;
         boolean tooCold = temp < 0.6F;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || !isSummerAllowed(world, pos)) {
             return false;
         }
-
-        if (!isSummerAllowed(world, pos)) return false;
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -116,7 +113,7 @@ public class CoihueSapling extends SaplingBlock {
 
             if (!isSummerAllowed(worldIn, pos)) {
                 player.sendMessage(
-                        new StringTextComponent("Summers are too hot for this sapling."),
+                        new StringTextComponent("Summers are too hot or too cold for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;

@@ -249,24 +249,35 @@ public class HardinessZones {
                 "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lenga_sapling"), "HZ(min) 6, HZ(max) 9;" +
                 "⚠ Requires warm to cooler summers.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coihue_sapling"), "HZ(min) 6, HZ(max) 9;" +
-                "⚠ Requires warm to cooler summers.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_red"), "HZ(min) 9, HZ(max) 10;" +
-                "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_pink"), "HZ(min) 9, HZ(max) 10;" +
-                "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_magenta"), "HZ(min) 9, HZ(max) 10;" +
-                "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_white"), "HZ(min) 9, HZ(max) 10;" +
-                "⚠ Requires warm to cooler summers; can be grown under glass in colder biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "coihue_sapling"),
+                "Biome temperature zone: (min) 6, (max) 9;" +
+                "Summer heat requirements: warm to cooler");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_red"),
+                "Biome temperature zone: (min) 9, (max) 10;" +
+                "Summer heat requirements: warm to mild" +
+                        "Can be grown under glass in colder biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_pink"),
+                "Biome temperature zone: (min) 9, (max) 10;" +
+                "Summer heat requirements: warm to mild" +
+                "Can be grown under glass in colder biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_magenta"),
+                "Biome temperature zone: (min) 9, (max) 10;" +
+                        "Summer heat requirements: warm to mild" +
+                        "Can be grown under glass in colder biomes.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "chilean_bellflower_white"),
+                "Biome temperature zone: (min) 9, (max) 10;" +
+                        "Summer heat requirements: warm to mild" +
+                        "Can be grown under glass in colder biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "gloriosa_lily"), "HZ(min) 8, HZ(max) 12 (1.6F);" +
                 "⚠ can be grown under glass in colder biomes.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "castanopsis_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rainbow_eucalyptus_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F);" +
                 "⚠ Can't grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aleppo_pine_sapling"), "HZ(min) 8, HZ(max) 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"), "HZ(min) 7, HZ(max) 11;" +
-                "⚠ Can't grow in dry biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"),
+                "Biome temperature zone: (min) 7, (max) 10;" +
+                "Moisture requirements: Can't grow in dry biomes; " +
+                        "Summer heat requirements: very hot to hot");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "camphor_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cinnamon_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "lychee_sapling"), "HZ(min) 10, HZ(max) 10; " +

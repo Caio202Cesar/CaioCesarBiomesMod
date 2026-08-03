@@ -2193,6 +2193,14 @@ public class TreeFeatures {
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT075, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025,
                             ModFeatures.Placements.KIWI_VINE_PLACEMENT)).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAND_LAUREL_OAK_TREE = register("sand_laurel_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SAND_LAUREL_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SAND_LAUREL_OAK_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     ///Csb biome
     //Cork Oak Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COAST_LIVE_OAK_TREE = register("coast_live_oak_tree",
@@ -2224,6 +2232,9 @@ public class TreeFeatures {
 
         protected static final BlockState RING_CUPPED_OAK_LOG = TreeBlocks.RING_CUPPED_OAK_LOG.get().getDefaultState();
         protected static final BlockState RING_CUPPED_OAK_LEAVES = TreeBlocks.RING_CUPPED_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SAND_LAUREL_OAK_LOG = TreeBlocks.SAND_LAUREL_OAK_LOG.get().getDefaultState();
+        protected static final BlockState SAND_LAUREL_OAK_LEAVES = TreeBlocks.SAND_LAUREL_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();
