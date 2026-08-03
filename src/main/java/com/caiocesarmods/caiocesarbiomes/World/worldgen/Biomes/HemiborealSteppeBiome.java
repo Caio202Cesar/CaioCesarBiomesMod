@@ -29,6 +29,7 @@ public class HemiborealSteppeBiome {
             () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
 
 
+    //Sub-biome: Sagebrush steppe
     private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
