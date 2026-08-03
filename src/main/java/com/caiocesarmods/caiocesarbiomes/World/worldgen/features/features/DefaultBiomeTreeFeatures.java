@@ -182,7 +182,16 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EVERGREEN_OAK_BEACH_TREES = register("subtropical_evergreen_oak_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE.withChance(0.36F),
                             ANCIENT_POHUTUKAWA.withChance(0.22F), BIG_LIVE_OAK_TREE.withChance(0.22F), SABAL_PALM_FANCY_TREE.withChance(0.2F),
-                            SABAL_PALM_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.36F)), SAND_LAUREL_OAK_TREE))
+                            SABAL_PALM_TREE.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.36F),
+                            SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.34F)), SAND_LAUREL_OAK_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_LAUREL_FOREST_BEACH_TREES = register("subtropical_laurel_forest_beach_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE.withChance(0.36F),
+                            ANCIENT_POHUTUKAWA.withChance(0.22F), BIG_INDIAN_LAUREL_TREE.withChance(0.12F),
+                            SABAL_PALM_FANCY_TREE.withChance(0.2F), SABAL_PALM_TREE.withChance(0.2F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.36F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.34F)), RUBBER_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 

@@ -103,7 +103,7 @@ public class CaioCesarBiomesMod
         SubtropicalEucalyptusForestBiome.register(eventBus);
         EucalyptusPlainsBiome.register(eventBus);
         HotMediterraneanBeachBiome.register(eventBus);
-        HumidSubtropicalBeachBiome.register(eventBus);
+        LaurelForestSubtropicalBeach.register(eventBus);
         EucalyptusSahelBiome.register(eventBus);
         SouthernBeechForestBiome.register(eventBus);
         LushSouthernTundraBiome.register(eventBus);
