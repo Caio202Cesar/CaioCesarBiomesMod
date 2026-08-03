@@ -92,7 +92,9 @@ public class CoihueSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            Biome biome = worldIn.getBiome(pos);
+
+            float temp = biome.getTemperature(pos);
             float minTemp = 0.6f, maxTemp = 0.84f;
 
             if (temp < minTemp) {

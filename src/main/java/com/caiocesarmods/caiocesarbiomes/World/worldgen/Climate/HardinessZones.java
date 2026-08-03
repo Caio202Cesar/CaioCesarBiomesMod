@@ -41,11 +41,13 @@ public class HardinessZones {
 
 
         // CAIO CESAR BIOMES MOD
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"),
+                "Biome temperature zone: (min) 10" +
+                        "Summer heat requirements: schorching to hot" +
+                "⚠ Can be grown in colder biomes if under a 5x5 glass.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "HZ(min) 5, HZ(max) 10" +
                 "⚠ requires dry biomes to thrive");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "HZ(min) 7, HZ(max) 7");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"), "HZ(min) 9, HZ(max) 12" +
-                "⚠ can be grown in colder biomes if under a 5x5 glass roof");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "HZ(min) 4, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "banana_sapling"), "HZ(min) 9, HZ(max) 12");
@@ -276,7 +278,7 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aleppo_pine_sapling"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"),
                 "Biome temperature zone: (min) 7, (max) 10;" +
-                "Moisture requirements: Can't grow in dry biomes; " +
+                "Moisture requirements: Can't grow in dry biomes;" +
                         "Summer heat requirements: very hot to hot");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "camphor_sapling"), "HZ(min) 9, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "cinnamon_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F)");
@@ -292,8 +294,10 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "brutia_pine_sapling"), "HZ(min) 6, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "champak_sapling"), "HZ(min) 10, HZ(max) 12 (1.2F);" +
                 "⚠ can be grown under 5x5 glass structure in colder biomes.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ring_cupped_oak_sapling"), "HZ(min) 7, HZ(max) 9;" +
-                "⚠ Can't grow in dry biomes");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "ring_cupped_oak_sapling"),
+                "Biome temperature zone: (min) 7, (max) 9;" +
+                "Moisture requirements: Can't grow in dry biomes;" +
+                        "Summer heat requirements: very hot to hot");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "hoop_pine_sapling"), "HZ(min) 9, HZ(max) 12 (1.6F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "blackwood_acacia_sapling"), "HZ(min) 8, HZ(max) 12 (1.6F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "resurrection_fern"), "HZ(min) 6, HZ(max) 12 (1.2F)");

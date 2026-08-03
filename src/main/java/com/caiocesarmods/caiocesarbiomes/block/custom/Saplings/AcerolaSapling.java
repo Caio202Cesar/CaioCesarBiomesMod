@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
@@ -39,6 +41,11 @@ public class AcerolaSapling extends SaplingBlock {
 
     }
 
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
+        return heat == SummerHeat.SCORCHING || heat == SummerHeat.VERY_HOT || heat == SummerHeat.HOT;
+    }
+
     public boolean ticksRandomly(BlockState state) {
         return true;
     }
@@ -51,31 +58,50 @@ public class AcerolaSapling extends SaplingBlock {
      * @param pos
      * @param random
      */
-    //Hardy to zone 9
+    //Hardy to zone 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(world.getDayTime());
 
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.8f;
-        float maxTemp = 1.6f;
+        Biome biome = world.getBiome(pos);
 
+        float temp = biome.getTemperature(pos);
+        float minTemp = 0.85f;
+
+        boolean validTemp = temp >= minTemp;
         boolean isProtectedByGlass = isUnderGlass(world, pos);
+        boolean isSaplingSheltered = isPlantSheltered(world, pos);
+        boolean isSummerAllowed = isSummerAllowed(world, pos);
 
-        if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)
-                || (biomeTemp < minTemp && isProtectedByGlass)) {
-
+        //Tree growth condition
+        if (validTemp && isSummerAllowed || (temp < minTemp && isProtectedByGlass) || (!isSummerAllowed && isProtectedByGlass)) {
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
 
-        if (biomeTemp < minTemp && "WINTER".equals(currentSeason) && !isProtectedByGlass && random.nextInt(3) == 0) {
+        //Sapling kill
+        if (temp < minTemp && "WINTER".equals(currentSeason) && !isSaplingSheltered && random.nextInt(3) == 0) {
             world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
         }
+    }
 
-        if (biomeTemp > maxTemp && random.nextInt(3) == 0) {
-            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+    private boolean isPlantSheltered(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // Any block overhead shelters the plant.
+            return true;
         }
+
+        return false;
     }
 
     private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
@@ -120,13 +146,15 @@ public class AcerolaSapling extends SaplingBlock {
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-        float temp = world.getBiome(pos).getTemperature(pos);
+        Biome biome = world.getBiome(pos);
+
+        float temp = biome.getTemperature(pos);
+        boolean tooCold = temp < 0.85F;
 
         boolean isProtectedByGlass = false;
 
@@ -134,17 +162,9 @@ public class AcerolaSapling extends SaplingBlock {
             isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
         }
 
-        float minTemp = 0.8F;
-        float maxTemp = 1.6F;
-
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
-            if (temp < minTemp || temp > maxTemp) {
-                return false;
-            }
-        } else {
-            // Under glass → only block extreme heat
-            if (temp > maxTemp) {
+            if (tooCold || !isSummerAllowed(world, pos)) {
                 return false;
             }
         }
@@ -159,15 +179,12 @@ public class AcerolaSapling extends SaplingBlock {
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn,
-                                             BlockPos pos, PlayerEntity player,
-                                             Hand handIn, BlockRayTraceResult hit) {
-
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
+            Biome biome = worldIn.getBiome(pos);
 
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f;
-            float maxTemp = 1.6f;
+            float temp = biome.getTemperature(pos);
+            float minTemp = 0.85f;
 
             boolean isProtectedByGlass = false;
 
@@ -183,9 +200,9 @@ public class AcerolaSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS;
             }
 
-            if (temp > maxTemp) {
+            if (!isSummerAllowed(worldIn, pos) && !isProtectedByGlass) {
                 player.sendMessage(
-                        new StringTextComponent("This biome is too hot for this sapling."),
+                        new StringTextComponent("Summers are too cold for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;
