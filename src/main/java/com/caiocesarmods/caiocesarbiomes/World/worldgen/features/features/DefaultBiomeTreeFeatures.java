@@ -180,7 +180,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EVERGREEN_OAK_BEACH_TREES = register("subtropical_evergreen_oak_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE.withChance(0.36F),
-                            ANCIENT_POHUTUKAWA.withChance(0.22F)), SAND_LAUREL_OAK_TREE))
+                            ANCIENT_POHUTUKAWA.withChance(0.22F), BIG_LIVE_OAK_TREE.withChance(0.22F),
+                            SOUTHERN_LIVE_OAK_TREE.withChance(0.36F)), SAND_LAUREL_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 

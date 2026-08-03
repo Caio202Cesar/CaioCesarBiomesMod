@@ -2775,17 +2775,25 @@ public class TreeBlocks {
     //Hot temperate forest
     public static final RegistryObject<Block> LIQUIDAMBAR_LOG = registerBlock("liquidambar_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_champak_log",
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_liquidambar_log",
             ModLogs::new);
-    public static final RegistryObject<Block> LIQUIDAMBAR_WOOD = registerBlock("champak_wood",
+    public static final RegistryObject<Block> LIQUIDAMBAR_WOOD = registerBlock("liquidambar_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_WOOD = registerBlock("stripped_champak_wood",
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_WOOD = registerBlock("stripped_liquidambar_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> CHAMPAK_LEAVES = registerBlock("champak_leaves",
+    public static final RegistryObject<Block> LIQUIDAMBAR_LEAVES = registerBlock("liquidambar_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> LIQUIDAMBAR_SAPLING = registerBlock("champak_sapling",
+    public static final RegistryObject<Block> LIQUIDAMBAR_SAPLING = registerBlock("liquidambar_sapling",
             ChampakSapling::new);
 
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_LOG = registerBlock("sand_laurel_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_WOOD = registerBlock("sand_laurel_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_LEAVES = registerBlock("sand_laurel_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
+            SandLaurelOakSapling::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
