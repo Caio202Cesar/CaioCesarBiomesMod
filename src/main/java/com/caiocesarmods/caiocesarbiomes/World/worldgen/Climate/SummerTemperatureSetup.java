@@ -98,7 +98,6 @@ public class SummerTemperatureSetup {
         SummerTemperatureRegistry.register(new ResourceLocation("minecraft", "modified_badlands_plateau"), 1.0F);
 
         /// Caio César's Naturalistic Voyage
-
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "bamboo_subtropical_laurel_jungle"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "montane_laurel_grove"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_laurel_forest"), 0.95F);
@@ -106,6 +105,8 @@ public class SummerTemperatureSetup {
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_extreme_hills"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_seasonal_forest"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_lucidophyll_oak_forest_beach"), 0.95F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "subtropical_lucidophyll_oak_forest_river"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_beach"), 0.95F);
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "humid_subtropical_pine_forest"), 0.95F);
 

@@ -5,6 +5,8 @@ import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -24,22 +26,22 @@ public class SubtropicalEvergreenOakForestBeach {
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH = BIOMES.register("subtropical_evergreen_oak_forest_beach",
+   public static final RegistryObject<Biome> SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH = BIOMES.register("subtropical_lucidophyll_oak_forest_beach",
            () -> makeSubtropicalEvergreenOakForestBeach(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
-
 
    private static Biome makeSubtropicalEvergreenOakForestBeach(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
       MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-      DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
+
+      mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));
+      mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PARROT, 10, 5, 7));
       DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
+
       BiomeGenerationSettings.Builder biomegenerationsettings$builder =
               (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
       biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-      biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_SWAMP);
       biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-      biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
-      biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
+      biomegenerationsettings$builder.withStructure(StructureFeatures.SHIPWRECK_BEACHED);
 
       DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
@@ -53,6 +55,7 @@ public class SubtropicalEvergreenOakForestBeach {
       DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
+      DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
 
       ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalOakForestTrees(biomegenerationsettings$builder);

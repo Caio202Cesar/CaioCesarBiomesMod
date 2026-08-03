@@ -117,6 +117,8 @@ public class ClimateSetup {
 
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_extreme_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_seasonal_forest", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:subtropical_lucidophyll_oak_forest_beach", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:subtropical_lucidophyll_oak_forest_river", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", ClimateDomain.HUMID_SUBTROPICAL);
 

@@ -346,6 +346,9 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
+                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER);
 
         /// Deserts
         //Temperate Desert
