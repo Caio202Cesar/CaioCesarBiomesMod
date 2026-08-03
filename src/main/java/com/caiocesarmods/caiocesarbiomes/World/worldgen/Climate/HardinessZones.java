@@ -181,6 +181,9 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "rubber_tree_sapling"), "HZ(min) 10, HZ(max) 12;");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sabal_sapling"), "HZ(min) 8, HZ(max) 12;" +
                 "⚠ can be grown in colder biomes if under a 5x5 glass roof");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sand_laurel_oak_sapling"),
+                "Biome temperature zone: (min) 6 (0.65F), (max) 9;" +
+                        "Summer heat requirements: scorching to hot.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "sausage_tree_sapling"), "HZ(min) 10, HZ(max) 12;");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "slash_pine_sapling"), "HZ(min) 7, HZ(max) 11");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "socotra_cucumber_sapling"), "HZ(min) 9, HZ(max) 13 (2F);" +

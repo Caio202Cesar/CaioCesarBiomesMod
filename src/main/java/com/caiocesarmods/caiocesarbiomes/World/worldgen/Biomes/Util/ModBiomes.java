@@ -95,9 +95,10 @@ public class ModBiomes {
     public static final ResourceLocation MONTANE_LAUREL_GROVE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
 
-    public static final ResourceLocation SUBTROPICAL_OAK_FOREST =
+    public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");
-
+    public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_evergreen_oak_forest_beach");
 
     /// Brazillian Biomes
     public static final ResourceLocation AMAZON_RAINFOREST =
