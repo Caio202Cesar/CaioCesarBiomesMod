@@ -2561,8 +2561,16 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
             CinnamonSapling::new);
 
+    //Avocado log
     public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
-            ModLeaves::new); //Avocado log
+            () -> new MachillusLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES = registerBlock("machillus_flowering_leaves",
+            () -> new MachillusFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES2));
+    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES2 = registerBlock("machillus_flowering_leaves2",
+            () -> new MachillusFloweringLeaves2(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_LEAVES));
     public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
             MachillusSapling::new);
 

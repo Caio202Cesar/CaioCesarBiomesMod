@@ -1,8 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "caiocesarbiomes:block/machillus_flowering_leaves", "weight": 1},
-      {"model": "caiocesarbiomes:block/machillus_leaves", "weight": 3}
-    ]
+  "variants": {
+    "": {
+      "model": "caiocesarbiomes:block/machillus_leaves"
+    }
   }
 }
