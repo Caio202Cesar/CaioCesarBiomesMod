@@ -42,15 +42,17 @@ public class HardinessZones {
 
         // CAIO CESAR BIOMES MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"),
-                "Biome temperature zone: (min) 10" +
-                        "Summer heat requirements: schorching to hot" +
+                "Biome temperature zone: (min) 10;" +
+                        "Summer heat requirements: schorching to hot;" +
                 "⚠ Can be grown in colder biomes if under a 5x5 glass.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "agathis_sapling"),
-                "Biome temperature zone: (min) 8" +
+                "Biome temperature zone: (min) 8;" +
                         "Moisture requirements: Can't grow in dry biomes;" +
-                        "Summer heat requirements: very hot to mild");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "HZ(min) 5, HZ(max) 10" +
-                "⚠ requires dry biomes to thrive");
+                        "Summer heat requirements: very hot to mild.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"),
+                "Biome temperature zone: (min) 5, (max) 10;" +
+                        "Moisture requirements: Can't grow in rainy biomes;" +
+                        "Summer heat requirements: schorching to warm.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "HZ(min) 7, HZ(max) 7");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "avocado_sapling"), "HZ(min) 9, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "bald_cypress_sapling"), "HZ(min) 4, HZ(max) 11");
