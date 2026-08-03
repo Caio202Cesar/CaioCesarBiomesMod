@@ -1,5 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.BlockState;
@@ -39,6 +41,11 @@ public class AspenSapling extends SaplingBlock {
         RenderTypeLookup.setRenderLayer(TreeBlocks.ASPEN_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TreeBlocks.POTTED_ASPEN_SAPLING.get(), RenderType.getCutout());
 
+    }
+
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
+        return heat == SummerHeat.SCORCHING || heat == SummerHeat.VERY_HOT || heat == SummerHeat.HOT || heat == SummerHeat.WARM;
     }
 
     //Hardy to zone 2 to 7
