@@ -277,7 +277,7 @@ public class HardinessZones {
                 "⚠ Can't grow in dry biomes");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aleppo_pine_sapling"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "obtusa_oak_sapling"),
-                "Biome temperature zone: (min) 7, (max) 10;" +
+                "Biome temperature zone: (min) 6(0.65F), (max) 10;" +
                 "Moisture requirements: Can't grow in dry biomes;" +
                         "Summer heat requirements: very hot to hot");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "camphor_sapling"), "HZ(min) 9, HZ(max) 11");

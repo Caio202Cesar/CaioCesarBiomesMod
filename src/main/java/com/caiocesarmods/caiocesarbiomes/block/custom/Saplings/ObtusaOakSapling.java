@@ -55,7 +55,7 @@ public class ObtusaOakSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
 
         float temp = biome.getTemperature(pos);
-        float minTemp = 0.6f;
+        float minTemp = 0.65f;
         float maxTemp = 0.89f;
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
@@ -104,7 +104,7 @@ public class ObtusaOakSapling extends SaplingBlock {
 
         float temp = biome.getTemperature(pos);
         boolean tooHot = temp > 0.89F;
-        boolean tooCold = temp < 0.6F;
+        boolean tooCold = temp < 0.65F;
 
         boolean noRain = biome.getPrecipitation() == Biome.RainType.NONE;
 
@@ -127,7 +127,7 @@ public class ObtusaOakSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
 
             float temp = biome.getTemperature(pos);
-            float minTemp = 0.6f, maxTemp = 0.89f;
+            float minTemp = 0.65f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
