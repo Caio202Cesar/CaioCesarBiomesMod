@@ -1,12 +1,11 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -41,27 +40,54 @@ public class AgathisSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 8 to zone 12 (1.2F)
+    private static boolean isSummerAllowed(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
+        return heat == SummerHeat.VERY_HOT || heat == SummerHeat.HOT || heat == SummerHeat.WARM || heat == SummerHeat.MILD;
+    }
+
+    //Hardy from zone 8
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(world.getDayTime());
 
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.75f;
-        float maxTemp = 1.2f;
+        Biome biome = world.getBiome(pos);
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
+        float temp = biome.getTemperature(pos);
+        float minTemp = 0.75f;
+
+        boolean validTemp = temp >= minTemp;
+        boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
+        boolean isSaplingSheltered = isPlantSheltered(world, pos);
+        boolean isSummerAllowed = isSummerAllowed(world, pos);
+
+        if (validTemp || hasRain || isSummerAllowed) {
             // Only attempt natural growth in suitable biomes
             super.randomTick(state, world, pos, random);
         }
 
-        if (biomeTemp < minTemp && "WINTER".equals(currentSeason) && random.nextInt(3) == 0) {
+        if (temp < minTemp && "WINTER".equals(currentSeason) &&!isSaplingSheltered && random.nextInt(3) == 0) {
             world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
+        }
+    }
+
+    private boolean isPlantSheltered(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // Any block overhead shelters the plant.
+            return true;
         }
 
-        if (biomeTemp > maxTemp && random.nextInt(3) == 0) {
-            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
-        }
+        return false;
     }
 
     @Override
@@ -71,15 +97,14 @@ public class AgathisSapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.2F;
+        float temp = biome.getTemperature(pos);
         boolean tooCold = temp < 0.75F;
 
-        if (tooHot || tooCold) {
+        boolean noRain = biome.getPrecipitation() == Biome.RainType.NONE;
+
+        if (tooCold || noRain || !isSummerAllowed(world, pos)) {
             return false;
         }
 
@@ -95,27 +120,27 @@ public class AgathisSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 1.2f;
+            Biome biome = worldIn.getBiome(pos);
+
+            float temp = biome.getTemperature(pos);
+            float minTemp = 0.75f;
 
             if (temp < minTemp) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
-            if (temp > maxTemp) {
+            if (!isSummerAllowed(worldIn, pos)) {
                 player.sendMessage(
-                        new StringTextComponent("This biome is too hot for this sapling."),
+                        new StringTextComponent("Summers are too cold or too hot for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;

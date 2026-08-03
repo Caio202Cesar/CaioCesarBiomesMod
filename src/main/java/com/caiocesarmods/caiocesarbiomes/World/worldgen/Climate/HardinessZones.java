@@ -45,6 +45,10 @@ public class HardinessZones {
                 "Biome temperature zone: (min) 10" +
                         "Summer heat requirements: schorching to hot" +
                 "⚠ Can be grown in colder biomes if under a 5x5 glass.");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "agathis_sapling"),
+                "Biome temperature zone: (min) 8" +
+                        "Moisture requirements: Can't grow in dry biomes;" +
+                        "Summer heat requirements: very hot to mild");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"), "HZ(min) 5, HZ(max) 10" +
                 "⚠ requires dry biomes to thrive");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "aspen_sapling"), "HZ(min) 7, HZ(max) 7");
@@ -286,7 +290,6 @@ public class HardinessZones {
                 "⚠ Requires warm to hot summers.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "callistemon_sapling"), "HZ(min) 8, HZ(max) 12 (1.6F);" +
                 "⚠ can be grown under glass in colder biomes.");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "agathis_sapling"), "HZ(min) 8, HZ(max) 12 (1.2F)");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "stone_oak_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "wax_leaf_privet_sapling"), "HZ(min) 7, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "machillus_sapling"), "HZ(min) 9, HZ(max) 11");

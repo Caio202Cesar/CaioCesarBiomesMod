@@ -2114,14 +2114,16 @@ public class TreeFeatures {
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new GiantTrunkPlacer(18, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AGATHIS_TREE2 = register("agathis_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AGATHIS_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.AGATHIS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
 
     //California coastal woodland
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONTEREY_CYPRESS_TREE = register("monterey_cypress_tree",
