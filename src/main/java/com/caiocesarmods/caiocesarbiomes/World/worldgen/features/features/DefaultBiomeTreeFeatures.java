@@ -163,7 +163,7 @@ public class DefaultBiomeTreeFeatures {
                             PERSIMMON_TREE.withChance(0.4F), PERSIMMON_FANCY_TREE.withChance(0.35F),
                             PLANE_TREE.withChance(0.098F), PLANE_FANCY_TREE.withChance(0.098F), PLANE_TREE_WITH_IVY.withChance(0.098F),
                             PLANE_FANCY_TREE_WITH_IVY.withChance(0.098F), RED_MAPLE_FANCY_TREE_WITH_IVY.withChance(0.098F),
-                            TALL_RED_MAPLE_TREE_WITH_IVY.withChance(0.098F),
+                            TALL_RED_MAPLE_TREE_WITH_IVY.withChance(0.098F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F),
                             RED_MAPLE_FANCY_TREE.withChance(0.098F), RED_MAPLE_TREE.withChance(0.098F),
                             PEACH_TREE.withChance(0.25F), SABAL_PALM_TREE.withChance(0.5F), SABAL_PALM_FANCY_TREE.withChance(0.45F),
                             TEA_TREE.withChance(0.45F), CAMELLIA_TREE.withChance(0.45F)), SOUTHERN_MAGNOLIA_TREE))
@@ -175,6 +175,12 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LYCHEE_TREE.withChance(0.36F),
                             ORCHID_TREE1.withChance(0.22F), ORCHID_TREE2.withChance(0.3F), CHAMPAK_TREE.withChance(0.35F), CINNAMON_TREE.withChance(0.45F)),
                             CINNAMON_FANCY_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+
+    public static final ConfiguredFeature<?, ?> SUBTROPICAL_EVERGREEN_OAK_BEACH_TREES = register("subtropical_evergreen_oak_beach_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE.withChance(0.36F),
+                            ANCIENT_POHUTUKAWA.withChance(0.22F)), SAND_LAUREL_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
@@ -504,7 +510,7 @@ public class DefaultBiomeTreeFeatures {
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             COAST_COTTONWOOD_FANCY_TREE.withChance(0.16F), BIG_COAST_COTTONWOOD_TREE.withChance(0.2F),
                             COAST_COTTONWOOD_TREE.withChance(0.15F), COCONUT_PALM_TREE.withChance(0.1F), ORCHID_TREE2.withChance(0.23F),
-                            ORCHID_TREE1.withChance(0.01F)), SMALL_COCONUT_PALM_TREE))
+                            ORCHID_TREE1.withChance(0.01F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F)), SMALL_COCONUT_PALM_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.1F, 4))));
 
@@ -536,7 +542,7 @@ public class DefaultBiomeTreeFeatures {
                             ROYAL_POINCIANA_TREE.withChance(0.1F),  MANGO_TREE.withChance(0.25F), ACEROLA_TREE.withChance(0.09F),
                             MANGO_FANCY_TREE.withChance(0.3F), BISMARCK_PALM.withChance(0.08F), BISMARCK_PALM.withChance(0.07F),
                             STARFRUIT_TREE.withChance(0.08F), ORCHID_TREE1.withChance(0.29F),  ORCHID_TREE2.withChance(0.33F),
-                            PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F),
+                            PINK_IVORY_TREE.withChance(0.2F), PINK_IVORY_FANCY_TREE.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F),
                             ROYAL_POINCIANA_BIG_TREE.withChance(0.3F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             TROPICAL_ALMOND_TREE.withChance(0.12F), TROPICAL_ALMOND_BIG_TREE.withChance(0.2F),
                             ORANGE_OLEANDER_TREE.withChance(0.09F), YELLOW_OLEANDER_TREE.withChance(0.09F),
@@ -550,7 +556,7 @@ public class DefaultBiomeTreeFeatures {
                             RED_KAPOK_TREE.withChance(0.1F), ORCHID_TREE1.withChance(0.13F), ORCHID_TREE2.withChance(0.23F), ACEROLA_TREE.withChance(0.1F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
                             ORANGE_OLEANDER_TREE.withChance(0.12F), YELLOW_OLEANDER_TREE.withChance(0.12F), TROPICAL_ALMOND_TREE.withChance(0.12F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), COAST_COTTONWOOD_TREE.withChance(0.3F), COAST_COTTONWOOD_TREE.withChance(0.25F),
-                            INDIAN_CORAL_FANCY_TREE.withChance(0.2F), TAMARIND_TREE.withChance(0.2F),
+                            INDIAN_CORAL_FANCY_TREE.withChance(0.2F), TAMARIND_TREE.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F),
                             OIL_PALM_TREE.withChance(0.1F)), FOREST_ACACIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
