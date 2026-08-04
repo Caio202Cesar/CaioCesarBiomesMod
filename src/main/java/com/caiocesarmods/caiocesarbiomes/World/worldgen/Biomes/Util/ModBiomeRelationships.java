@@ -399,14 +399,14 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
-                5,
-                125,
-                17,
+                RelationshipType.HIGHLAND,
+                8,
+                0,
+                0,
                 4,
                 false,
                 false,
-                null);
+                MatchMode.ANY);
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
@@ -547,29 +547,17 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.SERRA_DO_MAR_FOREST,
-                RelationshipType.HILL,
-                2,
-                120,
-                10,
-                4,
+                RelationshipType.HIGHLAND,
+                8,
+                0,
+                0,
+                3,
                 false,
                 false,
-                null);
+                MatchMode.ANY);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.ATLANTIC_FOREST,
-                ModBiomes.ATLANTIC_FOREST_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_BEACH,
                 RelationshipType.BEACH,
                 0,
