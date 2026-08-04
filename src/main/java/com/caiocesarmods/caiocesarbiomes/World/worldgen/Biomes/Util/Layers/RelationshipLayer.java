@@ -91,6 +91,26 @@ public enum RelationshipLayer implements ICastleTransformer {
             return subBiome;
         }
 
+        // HIGHLAND
+        Integer highland = applyHighland(
+                id,
+                random,
+                north,
+                west,
+                south,
+                east,
+                center);
+
+        if (highland != null) {
+
+            System.out.println(
+                    "[RelationshipLayer] HIGHLAND -> " +
+                            WorldGenRegistries.BIOME.getKey(
+                                    WorldGenRegistries.BIOME.getByValue(highland)));
+
+            return highland;
+        }
+
         return center;
 
     }
@@ -119,5 +139,69 @@ public enum RelationshipLayer implements ICastleTransformer {
                 south,
                 east,
                 center);
+    }
+
+    private Integer applyHighland(
+            ResourceLocation biome,
+            INoiseRandom random,
+            int north,
+            int west,
+            int south,
+            int east,
+            int center) {
+
+        Optional<BiomeRelationship> relationship =
+                BiomeRelationshipRegistry.getRelationship(
+                        biome,
+                        RelationshipType.HIGHLAND);
+
+        if (!relationship.isPresent())
+            return null;
+
+        if (random.random(relationship.get().getChance()) != 0)
+            return null;
+
+        ResourceLocation centerFamily = family(center);
+
+        if (centerFamily == null)
+            return null;
+
+        int matches = 0;
+
+        if (centerFamily.equals(family(north))) matches++;
+        if (centerFamily.equals(family(south))) matches++;
+        if (centerFamily.equals(family(east)))  matches++;
+        if (centerFamily.equals(family(west)))  matches++;
+
+        if (matches < relationship.get().getMinNeighbourMatches())
+            return null;
+
+        System.out.println(
+                "[Highland] " +
+                        biome +
+                        " -> " +
+                        relationship.get().getChild());
+
+        return WorldGenRegistries.BIOME
+                .getOptional(relationship.get().getChild())
+                .map(WorldGenRegistries.BIOME::getId)
+                .orElse(null);
+    }
+
+    private ResourceLocation family(int biomeId) {
+
+        Biome biome =
+                WorldGenRegistries.BIOME.getByValue(biomeId);
+
+        if (biome == null)
+            return null;
+
+        ResourceLocation id =
+                WorldGenRegistries.BIOME.getKey(biome);
+
+        if (id == null)
+            return null;
+
+        return BiomeFamilyRegistry.getFamily(id);
     }
 }

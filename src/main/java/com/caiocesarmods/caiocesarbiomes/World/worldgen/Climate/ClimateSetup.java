@@ -174,6 +174,9 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:japanese_maple_grove", ClimateDomain.HEMIBOREAL_CONTINENTAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:pewen_coniferous_grove", ClimateDomain.HUMID_SUBTROPICAL_OCEANIC_MONTANE);
+            ClimateDomainRegistry.register("caiocesarbiomes:valdivian_temperate_rainforest", ClimateDomain.HUMID_SUBTROPICAL_OCEANIC);
+            ClimateDomainRegistry.register("caiocesarbiomes:valdivian_colun_beach", ClimateDomain.HUMID_SUBTROPICAL_OCEANIC);
+
             ClimateDomainRegistry.register("caiocesarbiomes:southern_beech_forest", ClimateDomain.SUBPOLAR_OCEANIC);
 
             ClimateDomainRegistry.register("caiocesarbiomes:sahel", ClimateDomain.TROPICAL_SEMIARID);

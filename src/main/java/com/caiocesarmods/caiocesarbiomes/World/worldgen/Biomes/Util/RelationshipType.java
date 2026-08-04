@@ -9,6 +9,7 @@ import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.layer.LayerUtil;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.*;
@@ -210,6 +211,22 @@ public enum RelationshipType {
                         .orElse(center);
             }
 
+            return null;
+        }
+    },
+
+    HIGHLAND {
+        @Override
+        public Integer apply(
+                BiomeRelationship relationship,
+                INoiseRandom random,
+                int north,
+                int west,
+                int south,
+                int east,
+                int center) {
+
+            // Highland generation is handled by RelationshipLayer.
             return null;
         }
     };

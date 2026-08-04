@@ -13,6 +13,7 @@ public class BiomeRelationship {
     private final int chance;
     private final int edgeSize;     // optional
     private final int priority;     // optional
+    private final int minNeighbourMatches;
     private final boolean beach;
     private final boolean river;
     private final Set<ResourceLocation> requiredNeighbours;
@@ -24,6 +25,7 @@ public class BiomeRelationship {
                              int chance,
                              int edgeSize,
                              int priority,
+                             int minNeighbourMatches,
                              boolean beach,
                              boolean river,
                              MatchMode matchMode,
@@ -35,6 +37,7 @@ public class BiomeRelationship {
         this.chance = chance;
         this.edgeSize = edgeSize;
         this.priority = priority;
+        this.minNeighbourMatches = minNeighbourMatches;
         this.beach = beach;
         this.river = river;
         this.matchMode = matchMode;
@@ -61,9 +64,9 @@ public class BiomeRelationship {
         return type;
     }
 
-    public MatchMode getMatchMode() {
-        return matchMode;
-    }
+    public MatchMode getMatchMode() {return matchMode;}
+
+    public int getMinNeighbourMatches() {return minNeighbourMatches;}
 
     public int getChance() {
         return chance;

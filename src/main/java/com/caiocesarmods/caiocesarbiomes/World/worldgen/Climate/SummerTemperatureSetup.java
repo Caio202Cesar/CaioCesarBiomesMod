@@ -161,6 +161,9 @@ public class SummerTemperatureSetup {
 
         //Valdivian Temperate Forests are cooler (0.69F) than northern hemisphere based temperate oceanic biomes.
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "pewen_coniferous_grove"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "valdivian_temperate_rainforest"), 0.69F);
+        SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "valdivian_colun_beach"), 0.69F);
+
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "southern_beech_forest"), 0.32F);
 
         SummerTemperatureRegistry.register(new ResourceLocation("caiocesarbiomes", "sahel"), 1.2F);

@@ -4,6 +4,8 @@ import net.minecraft.world.biome.Biomes;
 
 import java.util.Set;
 
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.MatchMode.ANY;
+
 public class ModBiomeRelationships {
     public static void register() {
 
@@ -16,6 +18,7 @@ public class ModBiomeRelationships {
                 4,
                 7,
                 6,
+                0,
                 false,
                 false,
                 null);
@@ -27,6 +30,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -35,6 +39,7 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -58,6 +63,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -70,6 +76,7 @@ public class ModBiomeRelationships {
                 ModBiomes.OLEANDER_GARDENS,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -88,6 +95,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -99,6 +107,7 @@ public class ModBiomeRelationships {
                 ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
                 ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -117,6 +126,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -128,6 +138,7 @@ public class ModBiomeRelationships {
                 ModBiomes.OLIVE_GROVE,
                 ModBiomes.OLIVE_GROVE_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -149,6 +160,7 @@ public class ModBiomeRelationships {
                 3,
                 0,
                 1,
+                2,
                 false,
                 false,
                 null);
@@ -159,6 +171,7 @@ public class ModBiomeRelationships {
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -174,6 +187,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -183,6 +197,7 @@ public class ModBiomeRelationships {
                 Biomes.SAVANNA,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -196,6 +211,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -206,6 +222,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -213,6 +230,7 @@ public class ModBiomeRelationships {
                 Biomes.SHATTERED_SAVANNA_PLATEAU,
                 ModBiomes.TROPICAL_SAVANNA_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -228,6 +246,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -235,6 +254,7 @@ public class ModBiomeRelationships {
                 Biomes.JUNGLE_EDGE,
                 ModBiomes.TROPICAL_WET_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -248,6 +268,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -255,6 +276,7 @@ public class ModBiomeRelationships {
                 Biomes.MODIFIED_JUNGLE,
                 ModBiomes.TROPICAL_WET_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -268,6 +290,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -278,6 +301,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -285,6 +309,7 @@ public class ModBiomeRelationships {
                 Biomes.BAMBOO_JUNGLE_HILLS,
                 ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -300,6 +325,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -310,13 +336,13 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
 
         ///Subtropical
         //Laurel Forest
-
         //If register as a sub-biome, it should have beach and river.
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_FOREST,
@@ -325,6 +351,7 @@ public class ModBiomeRelationships {
                 5,
                 100,
                 17,
+                4,
                 false,
                 false,
                 null);
@@ -332,6 +359,7 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -349,6 +377,7 @@ public class ModBiomeRelationships {
                 5,
                 100,
                 17,
+                4,
                 false,
                 false,
                 null);
@@ -356,6 +385,7 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -373,6 +403,7 @@ public class ModBiomeRelationships {
                 5,
                 125,
                 17,
+                4,
                 false,
                 false,
                 null);
@@ -380,6 +411,7 @@ public class ModBiomeRelationships {
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -398,6 +430,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -409,17 +442,19 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
-                RelationshipType.SUB_BIOME,
-                5,
-                130,
-                17,
+                RelationshipType.HIGHLAND,
+                8,
+                0,
+                0,
+                4,
                 false,
                 false,
-                null);
+                MatchMode.ANY);
         BiomeRelationshipRegistry.register(
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -440,6 +475,7 @@ public class ModBiomeRelationships {
                 15,
                 15,
                 2,
+                3,
                 false,
                 false,
                 null);
@@ -451,6 +487,7 @@ public class ModBiomeRelationships {
                 3,
                 0,
                 6,
+                3,
                 false,
                 false,
                 null);
@@ -460,6 +497,7 @@ public class ModBiomeRelationships {
                 ModBiomes.TUSSOCK_TUNDRA,
                 ModBiomes.TUSSOCK_TUNDRA_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -475,6 +513,7 @@ public class ModBiomeRelationships {
                 4,
                 15,
                 6,
+                0,
                 false,
                 false,
                 null);
@@ -499,6 +538,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -511,6 +551,7 @@ public class ModBiomeRelationships {
                 2,
                 120,
                 10,
+                4,
                 false,
                 false,
                 null);
@@ -522,6 +563,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -530,6 +572,7 @@ public class ModBiomeRelationships {
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -547,23 +590,13 @@ public class ModBiomeRelationships {
 
         //Pampas
         BiomeRelationshipRegistry.register(
-                ModBiomes.PAMPAS,
-                ModBiomes.PAMPAS_COASTAL_FIELDS,
-                RelationshipType.SUB_BIOME,
-                4,
-                15,
-                5,
-                false,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
                 ModBiomes.BUTIA_PAMPAS,
                 RelationshipType.SUB_BIOME,
                 4,
                 15,
                 10,
+                3,
                 false,
                 false,
                 null);
@@ -571,10 +604,11 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
-                RelationshipType.SUB_BIOME,
+                RelationshipType.HILL,
                 2,
                 25,
                 10,
+                3,
                 false,
                 false,
                 null);
@@ -602,6 +636,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -610,6 +645,7 @@ public class ModBiomeRelationships {
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
                 ModBiomes.PAMPAS_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -624,6 +660,7 @@ public class ModBiomeRelationships {
                 0,
                 0,
                 0,
+                0,
                 true,
                 false,
                 null);
@@ -632,6 +669,7 @@ public class ModBiomeRelationships {
                 ModBiomes.BUTIA_PAMPAS,
                 ModBiomes.PAMPAS_BEACH,
                 RelationshipType.BEACH,
+                0,
                 0,
                 0,
                 0,
@@ -645,6 +683,7 @@ public class ModBiomeRelationships {
                 ModBiomes.COCAL_FOREST,
                 RelationshipType.TRANSITIONAL_EDGE,
                 1,
+                0,
                 0,
                 0,
                 false,
@@ -661,9 +700,10 @@ public class ModBiomeRelationships {
                 1,
                 0,
                 0,
+                0,
                 false,
                 false,
-                MatchMode.ANY,
+                ANY,
                 ModBiomes.CAATINGA
         );
     }
