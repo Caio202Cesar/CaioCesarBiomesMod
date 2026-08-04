@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -57,7 +58,6 @@ public class ValdivianTemperateRainforest {
         DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMonkeyPuzzleTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateMagellanicPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSouthernBeechs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withMagellanicTemperateTallPlants(biomegenerationsettings$builder);
@@ -70,9 +70,9 @@ public class ValdivianTemperateRainforest {
         //Hardiness zone 9: 0.8F - 0.84F (Altitude should put in in a colder zone).
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
                 .temperature(0.84F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                        .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
-                        .withGrassColor(11437360).setFogColor(14807295)
-                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+                        .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(560646)
+                        .withGrassColor(5017094).setFogColor(14807295)
+                        .setAmbientSound(ModSoundEvents.LAURISSILVA_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
