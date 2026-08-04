@@ -242,7 +242,9 @@ public class ModFeatures implements IFeatureConfig {
                         .addWeightedBlockstate(States.PINK_AZALEA, 1)
                         .addWeightedBlockstate(States.GREEN_AZALEA, 1)
                         .addWeightedBlockstate(States.WHITE_AZALEA, 2)
-                        .addWeightedBlockstate(States.SAW_PALMETTO, 5),
+                        .addWeightedBlockstate(States.SAW_PALMETTO, 5)
+                        .addWeightedBlockstate(States.INKBERRY_BUSH, 7)
+                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TROPICAL_PLANTS_CONFIG =
@@ -277,8 +279,6 @@ public class ModFeatures implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig TEMPERATE_FOREST_PLANT_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.INKBERRY_BUSH, 7)
-                        .addWeightedBlockstate(States.INKBERRY_FRUITING_BUSH, 7)
                         .addWeightedBlockstate(States.BLACK_CURRANT_BUSH, 4)
                         .addWeightedBlockstate(States.RED_CURRANT_BUSH, 4)
                         .addWeightedBlockstate(States.DAFFODIL_WHITE, 7)
