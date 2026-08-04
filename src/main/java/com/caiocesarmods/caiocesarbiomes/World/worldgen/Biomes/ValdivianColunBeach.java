@@ -69,7 +69,7 @@ public class ValdivianColunBeach {
 
         //Hardiness zone 10: 0.85F - 0.89F (Altitude should put in in a colder zone).
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                .temperature(0.86F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                         .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                         .withGrassColor(11437360).setFogColor(14807295)
                         .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())

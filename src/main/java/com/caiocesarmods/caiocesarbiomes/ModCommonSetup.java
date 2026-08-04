@@ -20,19 +20,22 @@ public class ModCommonSetup {
 
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event) {
+
+        System.out.println("Common setup fired!");
+
         event.enqueueWork(() -> {
+
+            System.out.println("enqueueWork running!");
 
             registerBrewingRecipes();
 
-           for (Biome biome : WorldGenRegistries.BIOME) {
+            int count = 0;
 
-                RegistryKey<Biome> key =
-                        WorldGenRegistries.BIOME.getOptionalKey(biome).orElse(null);
-
-                if (key != null) {
-                    VanillaBiomeTweaks.apply(key, biome);
-                }
+            for (Biome biome : WorldGenRegistries.BIOME) {
+                count++;
             }
+
+            System.out.println("Biome count = " + count);
 
         });
     }
