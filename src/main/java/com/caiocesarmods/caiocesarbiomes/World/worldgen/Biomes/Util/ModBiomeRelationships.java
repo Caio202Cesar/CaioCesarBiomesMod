@@ -318,7 +318,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
+                RelationshipType.SUB_BIOME,
                 5,
                 30,
                 17,
@@ -328,7 +328,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
+                RelationshipType.SUB_BIOME,
                 5,
                 30,
                 17,
@@ -338,7 +338,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
+                RelationshipType.SUB_BIOME,
                 5,
                 30,
                 17,
@@ -411,6 +411,28 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER);
+
+        //Chilean Temperate Biomes
+        BiomeRelationshipRegistry.register(
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
+                ModBiomes.PEWEN_CONIFEROUS_GROVE,
+                RelationshipType.SUB_BIOME,
+                5,
+                30,
+                17,
+                false,
+                false,
+                null);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null);
 
         /// Deserts
         //Temperate Desert

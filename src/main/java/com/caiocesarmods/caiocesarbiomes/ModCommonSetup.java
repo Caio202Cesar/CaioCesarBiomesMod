@@ -24,7 +24,7 @@ public class ModCommonSetup {
 
             registerBrewingRecipes();
 
-            for (Biome biome : WorldGenRegistries.BIOME) {
+           for (Biome biome : WorldGenRegistries.BIOME) {
 
                 RegistryKey<Biome> key =
                         WorldGenRegistries.BIOME.getOptionalKey(biome).orElse(null);
