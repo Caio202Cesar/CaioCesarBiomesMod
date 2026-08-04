@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -26,7 +27,7 @@ public class ValdivianColunBeach {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> VALDIVIAN_COLUN_BEACH = BIOMES.register("valdivian_colun_beach",
-            () -> makeValdivianColunBeach(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
+            () -> makeValdivianColunBeach(() -> ModConfiguredSurfaceBuilders.COLUN_BEACH, 0.1F, 0.2F));
 
 
     private static Biome makeValdivianColunBeach(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

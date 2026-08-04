@@ -61,6 +61,13 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.MAGMA_BLOCK.getDefaultState()
             )));
 
+    public static ConfiguredSurfaceBuilder<?> COLUN_BEACH = register("colun_beach",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    MiscBlocks.COLUN_SAND.get().getDefaultState(),
+                    MiscBlocks.COLUN_SAND.get().getDefaultState(),
+                    MiscBlocks.COLUN_SAND.get().getDefaultState()
+            )));
+
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name,
                                                                                            ConfiguredSurfaceBuilder<SC> csb) {
         return WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER,
