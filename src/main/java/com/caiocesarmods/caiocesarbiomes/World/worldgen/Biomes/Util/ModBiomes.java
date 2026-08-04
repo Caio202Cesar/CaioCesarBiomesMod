@@ -36,6 +36,8 @@ public class ModBiomes {
 
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_scrubland_river");
+    public static final ResourceLocation MEDITERRANEAN_SAVANNA_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_savanna_river");
 
     public static final ResourceLocation MEDITERRANEAN_SCRUBLAND_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "hot_mediterranean_beach");

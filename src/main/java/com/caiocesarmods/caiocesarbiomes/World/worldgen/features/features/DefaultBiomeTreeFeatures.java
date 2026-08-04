@@ -28,7 +28,8 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_RIPARIAN_TREES = register("mediterranean_riparian_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.3F),
                             PLANE_TREE.withChance(0.3F), PLANE_FANCY_TREE.withChance(0.25F), PLANE_FANCY_TREE_WITH_IVY.withChance(0.12F),
-                            PLANE_TREE_WITH_IVY.withChance(0.12F), ELDERBERRY_TREE.withChance(0.2F)), BLACK_POPLAR_FANCY_TREE))
+                            PLANE_TREE_WITH_IVY.withChance(0.12F), ELDERBERRY_TREE.withChance(0.2F), WEEPING_WILLOW_FANCY.withChance(0.12F)),
+                            BLACK_POPLAR_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 

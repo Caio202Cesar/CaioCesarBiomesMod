@@ -61,7 +61,6 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
-
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
@@ -77,7 +76,6 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
-
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.OLEANDER_GARDENS,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
@@ -93,6 +91,9 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MEDITERRANEAN_PINE_FOREST,
+                ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
@@ -104,6 +105,9 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
+                ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         //Zone 9
         BiomeRelationshipRegistry.register(
@@ -116,6 +120,9 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.CORK_OAK_SAVANNA,
+                ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.OLIVE_GROVE,
@@ -127,6 +134,9 @@ public class ModBiomeRelationships {
                 true,
                 false,
                 null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.OLIVE_GROVE,
+                ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         ///Tropical
         //Mangrove beach - "indochina and bangladesh mangroves"
