@@ -8,6 +8,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -32,8 +33,15 @@ public class ModCommonSetup {
             int count = 0;
 
             for (Biome biome : WorldGenRegistries.BIOME) {
-                count++;
+
+                ResourceLocation id = WorldGenRegistries.BIOME.getKey(biome);
+
+                System.out.println(id);
+
+                VanillaBiomeTweaks.apply(id, biome);
             }
+
+            System.out.println("Biome count = " + count);
 
             System.out.println("Biome count = " + count);
 

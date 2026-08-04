@@ -314,7 +314,8 @@ public class ModBiomeRelationships {
                 false,
                 null);
 
-        //Subtropical
+        ///Subtropical
+        //Laurel Forest
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.MONTANE_LAUREL_GROVE,
@@ -326,6 +327,20 @@ public class ModBiomeRelationships {
                 false,
                 null);
         BiomeRelationshipRegistry.register(
+                ModBiomes.LAUREL_FOREST,
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.LAUREL_FOREST,
+                ModBiomes.LAUREL_FOREST_RIVER);
+
+        BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 RelationshipType.SUB_BIOME,
@@ -335,6 +350,20 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 null);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.LAUREL_JUNGLE,
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.LAUREL_JUNGLE,
+                ModBiomes.LAUREL_FOREST_RIVER);
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
@@ -345,45 +374,6 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 null);
-        BiomeRelationshipRegistry.register(
-                ModBiomes.LAUREL_FOREST,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.LAUREL_FOREST,
-                ModBiomes.LAUREL_FOREST_RIVER);
-        BiomeRelationshipRegistry.register(
-                ModBiomes.LAUREL_JUNGLE,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.LAUREL_JUNGLE,
-                ModBiomes.LAUREL_FOREST_RIVER);
-        BiomeRelationshipRegistry.register(
-                ModBiomes.MONTANE_LAUREL_GROVE,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.MONTANE_LAUREL_GROVE,
-                ModBiomes.LAUREL_FOREST_RIVER);
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
@@ -398,6 +388,7 @@ public class ModBiomeRelationships {
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_RIVER);
 
+        //Lucidophyllous oak forest
         BiomeRelationshipRegistry.register(
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH,

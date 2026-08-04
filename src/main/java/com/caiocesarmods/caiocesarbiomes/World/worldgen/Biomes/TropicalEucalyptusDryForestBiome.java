@@ -56,7 +56,6 @@ public class TropicalEucalyptusDryForestBiome {
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withEucalyptusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCasuarinaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);

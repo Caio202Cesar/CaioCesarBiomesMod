@@ -55,7 +55,8 @@ public class SubtropicalEucalyptusForestBiome {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withEucalyptusTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
