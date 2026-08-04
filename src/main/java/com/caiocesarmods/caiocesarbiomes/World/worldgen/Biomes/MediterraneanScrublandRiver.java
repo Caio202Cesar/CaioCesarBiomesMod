@@ -42,9 +42,6 @@ public class MediterraneanScrublandRiver {
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-        biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
-
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
