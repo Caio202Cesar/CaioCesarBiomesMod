@@ -114,12 +114,13 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:montane_laurel_grove", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_laurel_forest", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_laurel_jungle", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:laurel_forest_river", ClimateDomain.HUMID_SUBTROPICAL);
+            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_extreme_hills", ClimateDomain.HUMID_SUBTROPICAL_HIGHLAND);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_seasonal_forest", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_lucidophyll_oak_forest_beach", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:subtropical_lucidophyll_oak_forest_river", ClimateDomain.HUMID_SUBTROPICAL);
-            ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_beach", ClimateDomain.HUMID_SUBTROPICAL);
             ClimateDomainRegistry.register("caiocesarbiomes:humid_subtropical_pine_forest", ClimateDomain.HUMID_SUBTROPICAL);
 
             ClimateDomainRegistry.register("caiocesarbiomes:coastal_subtropical_desert", ClimateDomain.FOGGY_MILD_TROPICAL_DESERT);
@@ -143,6 +144,7 @@ public class ClimateSetup {
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_woodland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_oak_sparse_woodland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_scrubland_river", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
+            ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_savanna_river", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:mediterranean_scrubland", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:oleander_gardens", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);
             ClimateDomainRegistry.register("caiocesarbiomes:olive_grove", ClimateDomain.SUBTROPICAL_HOT_MEDITERRANEAN);

@@ -367,8 +367,7 @@ public class DefaultBiomeTreeFeatures {
                             OAK_TREE_WITH_KIWI.withChance(0.087F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.2F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
                             SPRING_HAWTHORN_TREE.withChance(0.2F), OBTUSA_OAK_TREE.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F),
-                            LIQUIDAMBAR_TREE.withChance(0.3F), PLANE_TREE.withChance(0.3F),
-                            CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)), OAK_SHRUB))
+                            PLANE_TREE.withChance(0.3F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)), OAK_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
