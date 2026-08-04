@@ -316,10 +316,12 @@ public class ModBiomeRelationships {
 
         ///Subtropical
         //Laurel Forest
+
+        //If register as a sub-biome, it should have beach and river.
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.SUB_BIOME,
+                RelationshipType.HILL,
                 5,
                 100,
                 17,
@@ -343,7 +345,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.SUB_BIOME,
+                RelationshipType.HILL,
                 5,
                 100,
                 17,
@@ -367,7 +369,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.SUB_BIOME,
+                RelationshipType.HILL,
                 5,
                 125,
                 17,
