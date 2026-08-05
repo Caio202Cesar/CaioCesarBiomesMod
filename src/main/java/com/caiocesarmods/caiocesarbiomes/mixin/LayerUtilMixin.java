@@ -30,11 +30,6 @@ public class LayerUtilMixin {
 
         result = RelationshipLayer.INSTANCE.apply(random, result);
 
-        /*
-        result = HighlandExpansionLayer.INSTANCE.apply(random, result);
-        result = HighlandExpansionLayer.INSTANCE.apply(random, result);
-        result = HighlandExpansionLayer.INSTANCE.apply(random, result);*/
-
         return result;
     }
 
@@ -91,33 +86,5 @@ public class LayerUtilMixin {
                 random,
                 biomeLayer,
                 result);
-    }
-
-    @Redirect(
-            method = "setupOverworldLayer",
-            at = @At(
-                    value = "INVOKE",
-                    target =
-                            "Lnet/minecraft/world/gen/layer/EdgeBiomeLayer;apply(Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory;"
-            )
-    )
-    private static <T extends IArea> IAreaFactory<T> redirectEdgeBiomeLayer(
-            EdgeBiomeLayer instance,
-            IExtendedNoiseRandom<T> random,
-            IAreaFactory<T> area) {
-
-        // Vanilla edge biome generation
-        IAreaFactory<T> result =
-                instance.apply(random, area);
-
-        System.out.println("[CCB] Injecting HillsRelationshipLayer");
-
-        result = HillsRelationshipLayer.INSTANCE.apply(
-                random,
-                result);
-
-        System.out.println("[CCB] HillsRelationshipLayer inserted");
-
-        return result;
     }
 }
