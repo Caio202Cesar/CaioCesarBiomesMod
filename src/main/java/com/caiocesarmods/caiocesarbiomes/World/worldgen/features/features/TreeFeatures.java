@@ -1692,14 +1692,15 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LOBLOLLY_PINE = register("tall_loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new SpruceFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(14, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_LOBLOLLY_PINE = register("tall_loblolly_pine",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOBLOLLY_PINE = register("loblolly_pine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SLASH_PINE_LOG),
                     new SimpleBlockStateProvider(States.LOBLOLLY_PINE_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(4), FeatureSpread.create(6)),
