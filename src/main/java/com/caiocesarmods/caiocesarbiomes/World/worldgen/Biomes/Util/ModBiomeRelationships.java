@@ -267,7 +267,6 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);
-
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);

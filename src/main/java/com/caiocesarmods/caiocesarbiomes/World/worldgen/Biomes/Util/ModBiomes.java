@@ -107,7 +107,7 @@ public class ModBiomes {
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_evergreen_oak_forest_beach");
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_lucidophyll_oak_forest_beach");
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_lucidophyll_oak_forest_river");
 
