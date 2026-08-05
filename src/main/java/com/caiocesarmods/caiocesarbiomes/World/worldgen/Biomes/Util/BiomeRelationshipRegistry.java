@@ -8,11 +8,18 @@ import java.util.*;
 
 public class BiomeRelationshipRegistry {
     private static final Map<ResourceLocation, List<BiomeRelationship>> RELATIONSHIPS = new HashMap<>();
+    private static final Map<ResourceLocation, List<BiomeRelationship>> PARENTS = new HashMap<>();
 
     public static void register(BiomeRelationship relationship) {
         RELATIONSHIPS
                 .computeIfAbsent(
                         relationship.getParent(),
+                        k -> new ArrayList<>())
+                .add(relationship);
+
+        PARENTS
+                .computeIfAbsent(
+                        relationship.getChild(),
                         k -> new ArrayList<>())
                 .add(relationship);
     }
@@ -279,6 +286,17 @@ public class BiomeRelationshipRegistry {
         return getRelationships(biome)
                 .stream()
                 .filter(BiomeRelationship::isRiver)
+                .findFirst();
+    }
+
+    public static Optional<BiomeRelationship> getParentRelationship(
+            ResourceLocation biome,
+            RelationshipType type) {
+
+        return PARENTS
+                .getOrDefault(biome, Collections.emptyList())
+                .stream()
+                .filter(r -> r.getType() == type)
                 .findFirst();
     }
 

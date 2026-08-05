@@ -92,7 +92,8 @@ public enum RelationshipLayer implements ICastleTransformer {
         }
 
         // HIGHLAND
-        Integer highland = applyHighland(
+        Integer highland = applyRelationship(
+                RelationshipType.HIGHLAND,
                 id,
                 random,
                 north,
