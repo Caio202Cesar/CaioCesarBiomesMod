@@ -51,24 +51,30 @@ public class WeepingFoliagePlacer extends FoliagePlacer {
 
         BlockPos top = foliage.func_236763_a_();
 
-        for (int y = -2; y <= 0; y++) {
+        for (int y = -1; y <= 1; y++) {
 
-            int layerRadius = radius + 2 - Math.abs(y);
+            int layerRadius = radius + 1 - Math.abs(y);
 
             for (int x = -layerRadius; x <= layerRadius; x++) {
                 for (int z = -layerRadius; z <= layerRadius; z++) {
 
                     if (x * x + z * z <= layerRadius * layerRadius) {
 
-                        BlockPos leafPos = top.add(x, y, z);
+                        BlockPos leafPos = top.up(1).add(x, y, z);
 
                         placeLeaf(world, rand, config, leafPos, leaves, box);
 
-                        // hanging outer edge only
                         if (Math.abs(x) >= layerRadius - 1 ||
                                 Math.abs(z) >= layerRadius - 1) {
 
-                            createHangingLeaves(world, rand, config, leafPos, leaves, box);
+                            createHangingLeaves(
+                                    world,
+                                    rand,
+                                    config,
+                                    leafPos,
+                                    leaves,
+                                    box
+                            );
                         }
                     }
                 }
@@ -104,7 +110,8 @@ public class WeepingFoliagePlacer extends FoliagePlacer {
                              Set<BlockPos> leaves,
                              MutableBoundingBox box) {
 
-        if (TreeFeature.isReplaceableAt(world, pos)) {
+        if (world.hasBlockState(pos, state ->
+                state.isAir() || state.getBlock() instanceof LeavesBlock)) {
 
             BlockState leafState = config.leavesProvider
                     .getBlockState(rand, pos)
