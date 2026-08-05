@@ -101,6 +101,9 @@ public class ModBiomes {
     public static final ResourceLocation LAUREL_FOREST_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_forest_river");
 
+    public static final ResourceLocation SUBTROPICAL_EXTREME_HILLS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_extreme_hills");
+
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH =

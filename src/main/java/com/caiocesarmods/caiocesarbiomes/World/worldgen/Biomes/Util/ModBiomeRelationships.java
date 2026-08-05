@@ -182,12 +182,32 @@ public class ModBiomeRelationships {
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 ModBiomes.LAUREL_FOREST_RIVER);
 
+        BiomeRelationshipRegistry.register(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_JUNGLE,
+                RelationshipType.EDGE,
+                4,
+                15,
+                6,
+                0,
+                false,
+                false,
+                null,
+                0);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_FOREST_RIVER);
+
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_RIVER);
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
