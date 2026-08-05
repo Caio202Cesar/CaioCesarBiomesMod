@@ -144,7 +144,7 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "black_amazon_river");
 
     public static final ResourceLocation ARAUCARIA_PLATEAU =
-            new ResourceLocation("brbiomesmod", "araucaria_plateau");
+            new ResourceLocation("brbiomesmod", "araucaria_plateau"); //Edge Southern Alto Parana Forest
 
     public static final ResourceLocation ATLANTIC_FOREST =
             new ResourceLocation("brbiomesmod", "atlantic_forest");
@@ -175,12 +175,16 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "pampas_beach");
     public static final ResourceLocation PAMPAS_RIVER =
             new ResourceLocation("brbiomesmod", "pampas_river");
-    public static final ResourceLocation PAMPAS_COASTAL_FIELDS =
-            new ResourceLocation("brbiomesmod", "pampas_coastal_fields");
     public static final ResourceLocation COXILHAS =
             new ResourceLocation("brbiomesmod", "pampas_hills");
+    public static final ResourceLocation PAMPAS_COASTAL_FIELDS =
+            new ResourceLocation("brbiomesmod", "pampas_coastal_fields");
+    public static final ResourceLocation PAMPAS_COASTAL_FIELDS_BEACH =
+            new ResourceLocation("brbiomesmod", "pampas_coastal_fields_beach");
+    public static final ResourceLocation PAMPAS_COASTAL_FIELDS_RIVER =
+            new ResourceLocation("brbiomesmod", "pampas_river");
     public static final ResourceLocation BUTIA_PAMPAS =
-            new ResourceLocation("brbiomesmod", "butia_pampas");
+            new ResourceLocation("brbiomesmod", "butia_coastal_fields_pampas");
 
     public static final ResourceLocation PANTANAL =
             new ResourceLocation("brbiomesmod", "pantanal");

@@ -377,10 +377,17 @@ public class ModBiomeRelationships {
                 0);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_RIVER);
+                ModBiomes.PAMPAS_COASTAL_FIELDS_RIVER);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_BEACH);
+                ModBiomes.PAMPAS_COASTAL_FIELDS_BEACH);
+
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_COASTAL_FIELDS_RIVER);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_COASTAL_FIELDS_BEACH);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
@@ -406,13 +413,6 @@ public class ModBiomeRelationships {
                 ModBiomes.PAMPAS_RIVER);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.COXILHAS,
-                ModBiomes.PAMPAS_BEACH);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.BUTIA_PAMPAS,
-                ModBiomes.PAMPAS_RIVER);
-        BiomeRelationshipRegistry.registerBeach(
-                ModBiomes.BUTIA_PAMPAS,
                 ModBiomes.PAMPAS_BEACH);
 
         //Cocal Forest
