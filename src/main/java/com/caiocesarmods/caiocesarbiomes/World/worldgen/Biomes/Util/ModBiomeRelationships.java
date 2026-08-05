@@ -21,137 +21,69 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null);
-
-        BiomeRelationshipRegistry.register(
+                null,
+                0);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
-                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
-                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
-
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_OAK_SPARSE_WOODLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
         //Mediterranean Scrubland
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
-                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_SCRUBLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
-        /// Oleander Gardens
-        BiomeRelationshipRegistry.register(
+        //Oleander Gardens
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.OLEANDER_GARDENS,
-                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.OLEANDER_GARDENS,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_RIVER);
 
         //Coniferous (Zone 9)
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MEDITERRANEAN_PINE_FOREST,
-                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_PINE_FOREST,
                 ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
-                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.CONIFEROUS_MEDITERRANEAN_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.MEDITERRANEAN_CONIFEROUS_SAVANNA,
                 ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         //Zone 9
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.CORK_OAK_SAVANNA,
-                ModBiomes.CORK_OAK_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.CORK_OAK_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.CORK_OAK_SAVANNA,
                 ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.OLIVE_GROVE,
-                ModBiomes.OLIVE_GROVE_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.OLIVE_GROVE_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.OLIVE_GROVE,
                 ModBiomes.MEDITERRANEAN_SAVANNA_RIVER);
 
         ///Tropical
         //Mangrove beach - "indochina and bangladesh mangroves"
-
         //Bamboo marsh
         BiomeRelationshipRegistry.register(
                 Biomes.BAMBOO_JUNGLE,
@@ -163,183 +95,64 @@ public class ModBiomeRelationships {
                 2,
                 false,
                 false,
-                null);
+                null,
+                0);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER); //This is different from the bamboo jungle river.
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
-                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH);
 
         //Tropical Seasonal Forest
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.TROPICAL_SEASONAL_FOREST,
-                ModBiomes.TROPICAL_SAVANNA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.TROPICAL_SAVANNA_BEACH);
 
         //Savanna
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.SAVANNA,
-                ModBiomes.TROPICAL_SAVANNA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_SAVANNA_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.SAVANNA_PLATEAU,
-                ModBiomes.TROPICAL_SAVANNA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_SAVANNA_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.SHATTERED_SAVANNA,
-                ModBiomes.TROPICAL_SAVANNA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_SAVANNA_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.SHATTERED_SAVANNA_PLATEAU,
-                ModBiomes.TROPICAL_SAVANNA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.TROPICAL_SAVANNA_BEACH);
 
         //Jungle
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.JUNGLE,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.JUNGLE_EDGE,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.JUNGLE_HILLS,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.MODIFIED_JUNGLE,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.MODIFIED_JUNGLE_EDGE,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.BAMBOO_JUNGLE,
-                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 Biomes.BAMBOO_JUNGLE_HILLS,
-                ModBiomes.BAMBOO_TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.BAMBOO_TROPICAL_WET_BEACH);
 
         //Tropical islands
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.TROPICAL_PINE_ISLAND,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ModBiomes.TROPICAL_WET_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.TROPICAL_ISLAND,
-                ModBiomes.TROPICAL_WET_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.TROPICAL_WET_BEACH);
 
         ///Subtropical
         //Laurel Forest
@@ -347,25 +160,18 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
+                RelationshipType.HIGHLAND,
                 5,
-                100,
-                17,
+                0,
+                0,
                 4,
                 false,
                 false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ANY,
+                0.65F);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_FOREST,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.LAUREL_FOREST_RIVER);
@@ -373,25 +179,18 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HILL,
+                RelationshipType.HIGHLAND,
                 5,
-                100,
-                17,
+                0,
+                0,
                 4,
                 false,
                 false,
-                null);
-        BiomeRelationshipRegistry.register(
+                ANY,
+                0.65F);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_JUNGLE,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_RIVER);
@@ -400,40 +199,25 @@ public class ModBiomeRelationships {
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 RelationshipType.HIGHLAND,
-                8,
+                5,
                 0,
                 0,
                 4,
                 false,
                 false,
-                MatchMode.ANY);
-        BiomeRelationshipRegistry.register(
+                ANY,
+                0.65F);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_RIVER);
 
         //Lucidophyllous oak forest
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
-                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER);
@@ -443,31 +227,23 @@ public class ModBiomeRelationships {
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
                 RelationshipType.HIGHLAND,
-                8,
+                5,
                 0,
                 0,
                 4,
                 false,
                 false,
-                MatchMode.ANY);
-        BiomeRelationshipRegistry.register(
+                ANY,
+                0.65F);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
-                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);
 
         /// Deserts
         //Temperate Desert
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_RIVER);
-
         BiomeRelationshipRegistry.register(
                 ModBiomes.TEMPERATE_DESERT,
                 ModBiomes.TEMPERATE_DESERT_OASIS,
@@ -478,7 +254,8 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null);
+                null,
+                0);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
@@ -490,20 +267,13 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null);
+                null,
+                0);
 
         /// Tundra
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.TUSSOCK_TUNDRA,
-                ModBiomes.TUSSOCK_TUNDRA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.TUSSOCK_TUNDRA_BEACH);
 
         /// Brazillian Biomes
         BiomeRelationshipRegistry.register(
@@ -516,62 +286,42 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null);
-
+                null,
+                0);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.AMAZON_RAINFOREST_EDGE,
+                ModBiomes.AMAZON_VARZEA_FOREST);
        BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.AMAZON_VARZEA_FOREST);
-
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.BLACK_AMAZON_RIVER);
 
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_RAINFOREST_EDGE,
-                ModBiomes.AMAZON_VARZEA_FOREST);
-
         //Restinga
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.DUNAS_RESTINGA,
-                ModBiomes.RESTINGA_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.RESTINGA_BEACH);
 
         //Atlantic Forest
         BiomeRelationshipRegistry.register(
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 RelationshipType.HIGHLAND,
-                8,
+                5,
                 0,
                 0,
                 3,
                 false,
                 false,
-                MatchMode.ANY);
-
-        BiomeRelationshipRegistry.register(
+                ANY,
+                0.65F);
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.ATLANTIC_FOREST,
-                ModBiomes.ATLANTIC_FOREST_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
+                ModBiomes.ATLANTIC_FOREST_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.ATLANTIC_FOREST_RIVER);
-
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_RIVER);
@@ -587,83 +337,44 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null);
-
+                null,
+                0);
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
-                RelationshipType.HILL,
-                2,
-                25,
-                10,
-                3,
+                RelationshipType.HIGHLAND,
+                5,
+                0,
+                0,
+                4,
                 false,
                 false,
-                null);
-
+                ANY,
+                0.65F);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_RIVER);
-
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.PAMPAS,
+                ModBiomes.PAMPAS_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
                 ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.COXILHAS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.BUTIA_PAMPAS,
-                ModBiomes.PAMPAS_RIVER);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.PAMPAS,
-                ModBiomes.PAMPAS_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
+        BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.COXILHAS,
-                ModBiomes.PAMPAS_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
-
-        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.COXILHAS,
+                ModBiomes.PAMPAS_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.BUTIA_PAMPAS,
-                ModBiomes.PAMPAS_BEACH,
-                RelationshipType.BEACH,
-                0,
-                0,
-                0,
-                0,
-                true,
-                false,
-                null);
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.BUTIA_PAMPAS,
+                ModBiomes.PAMPAS_BEACH);
 
         //Cocal Forest
         new BiomeRelationship(
@@ -673,10 +384,11 @@ public class ModBiomeRelationships {
                 1,
                 0,
                 0,
-                0,
+                2,
                 false,
                 false,
                 MatchMode.ALL,
+                0,
                 ModBiomes.AMAZON_RAINFOREST_EDGE,
                 ModBiomes.CAATINGA
         );
@@ -688,10 +400,11 @@ public class ModBiomeRelationships {
                 1,
                 0,
                 0,
-                0,
+                1,
                 false,
                 false,
                 ANY,
+                0,
                 ModBiomes.CAATINGA
         );
     }

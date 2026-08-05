@@ -176,6 +176,8 @@ public enum RelationshipLayer implements ICastleTransformer {
         if (matches < relationship.get().getMinNeighbourMatches())
             return null;
 
+       // if (noiseValue <= relationship.get().getNoiseThreshold()) return null;
+
         System.out.println(
                 "[Highland] " +
                         biome +
@@ -204,4 +206,5 @@ public enum RelationshipLayer implements ICastleTransformer {
 
         return BiomeFamilyRegistry.getFamily(id);
     }
+
 }

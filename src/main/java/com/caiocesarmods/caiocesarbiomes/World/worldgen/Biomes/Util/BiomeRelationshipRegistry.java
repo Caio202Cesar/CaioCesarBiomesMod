@@ -29,6 +29,7 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
+            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(new BiomeRelationship(
@@ -42,6 +43,7 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
+                noiseThreshold,
                 requiredNeighbours));
     }
 
@@ -56,7 +58,23 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null));
+                null,
+                0));
+    }
+
+    public static void registerBeach(ResourceLocation parent, ResourceLocation child) {
+        register(new BiomeRelationship(
+                parent,
+                child,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null,
+                0));
     }
 
     //Vanilla -> Mod
@@ -71,6 +89,7 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
+            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -84,6 +103,7 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
+                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -98,7 +118,23 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null));
+                null,
+                0));
+    }
+
+    public static void registerBeach(RegistryKey<Biome> parent, ResourceLocation child) {
+        register(new BiomeRelationship(
+                parent.getLocation(),
+                child,
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null,
+                0));
     }
 
     //Vanilla -> Vanilla
@@ -113,6 +149,7 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
+            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -126,6 +163,7 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
+                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -140,7 +178,23 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null));
+                null,
+                0));
+    }
+
+    public static void registerBeach(RegistryKey<Biome> parent, RegistryKey<Biome> child) {
+        register(new BiomeRelationship(
+                parent.getLocation(),
+                child.getLocation(),
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null,
+                0));
     }
 
     //Mod -> Vanilla
@@ -155,6 +209,7 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
+            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -168,6 +223,7 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
+                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -182,7 +238,23 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true,    // river
-                null));
+                null,
+                0));
+    }
+
+    public static void registerBeach(ResourceLocation parent, RegistryKey<Biome> child) {
+        register(new BiomeRelationship(
+                parent,
+                child.getLocation(),
+                RelationshipType.BEACH,
+                0,
+                0,
+                0,
+                0,
+                true,
+                false,
+                null,
+                0));
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {
