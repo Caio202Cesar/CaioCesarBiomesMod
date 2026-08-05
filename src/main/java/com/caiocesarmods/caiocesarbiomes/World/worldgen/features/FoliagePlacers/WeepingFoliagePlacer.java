@@ -1,7 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
-import com.mojang.datafixers.optics.profunctors.Cocartesian;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
@@ -11,14 +9,10 @@ import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
-import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
-import net.minecraft.world.gen.feature.Feature;
-
-import static com.ibm.icu.impl.ValidIdentifiers.Datatype.x;
 
 public class WeepingFoliagePlacer extends FoliagePlacer {
     public WeepingFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
