@@ -18,7 +18,6 @@ public class BiomeRelationship {
     private final boolean river;
     private final Set<ResourceLocation> requiredNeighbours;
     private final MatchMode matchMode;
-    private final float noiseThreshold;
 
     public BiomeRelationship(ResourceLocation parent,
                              ResourceLocation child,
@@ -30,7 +29,6 @@ public class BiomeRelationship {
                              boolean beach,
                              boolean river,
                              MatchMode matchMode,
-                             float noiseThreshold,
                              ResourceLocation... requiredNeighbours) {
 
         this.parent = parent;
@@ -43,8 +41,6 @@ public class BiomeRelationship {
         this.beach = beach;
         this.river = river;
         this.matchMode = matchMode;
-        this.noiseThreshold = noiseThreshold;
-
         this.requiredNeighbours = new HashSet<>();
 
         if (requiredNeighbours != null) {
@@ -77,10 +73,6 @@ public class BiomeRelationship {
 
     public boolean isBeach() {
         return beach;
-    }
-
-    public float getNoiseThreshold() {
-        return noiseThreshold;
     }
 
     public boolean isRiver() {

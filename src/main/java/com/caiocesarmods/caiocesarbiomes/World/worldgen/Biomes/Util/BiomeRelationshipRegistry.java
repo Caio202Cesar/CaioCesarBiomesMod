@@ -36,7 +36,6 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
-            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(new BiomeRelationship(
@@ -50,7 +49,6 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
-                noiseThreshold,
                 requiredNeighbours));
     }
 
@@ -65,8 +63,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null,
-                0));
+                null));
     }
 
     public static void registerBeach(ResourceLocation parent, ResourceLocation child) {
@@ -80,8 +77,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 true,
                 false,
-                null,
-                0));
+                null));
     }
 
     //Vanilla -> Mod
@@ -96,7 +92,6 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
-            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -110,7 +105,6 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
-                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -125,8 +119,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null,
-                0));
+                null));
     }
 
     public static void registerBeach(RegistryKey<Biome> parent, ResourceLocation child) {
@@ -140,8 +133,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 true,
                 false,
-                null,
-                0));
+                null));
     }
 
     //Vanilla -> Vanilla
@@ -156,7 +148,6 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
-            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -170,7 +161,6 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
-                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -185,8 +175,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true, // river
-                null,
-                0));
+                null));
     }
 
     public static void registerBeach(RegistryKey<Biome> parent, RegistryKey<Biome> child) {
@@ -200,8 +189,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 true,
                 false,
-                null,
-                0));
+                null));
     }
 
     //Mod -> Vanilla
@@ -216,7 +204,6 @@ public class BiomeRelationshipRegistry {
             boolean beach,
             boolean river,
             MatchMode matchMode,
-            float noiseThreshold,
             ResourceLocation... requiredNeighbours) {
 
         register(
@@ -230,7 +217,6 @@ public class BiomeRelationshipRegistry {
                 beach,
                 river,
                 matchMode,
-                noiseThreshold,
                 requiredNeighbours);
     }
 
@@ -245,8 +231,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 false,   // beach
                 true,    // river
-                null,
-                0));
+                null));
     }
 
     public static void registerBeach(ResourceLocation parent, RegistryKey<Biome> child) {
@@ -260,8 +245,7 @@ public class BiomeRelationshipRegistry {
                 0,
                 true,
                 false,
-                null,
-                0));
+                null));
     }
 
     public static List<BiomeRelationship> getRelationships(ResourceLocation biome) {

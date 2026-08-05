@@ -21,8 +21,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MEDITERRANEAN_OAK_WOODLAND,
                 ModBiomes.MEDITERRANEAN_SCRUBLAND_BEACH);
@@ -95,8 +94,7 @@ public class ModBiomeRelationships {
                 2,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.TROPICAL_BAMBOO_MARSH,
                 ModBiomes.TROPICAL_BAMBOO_MARSH_RIVER); //This is different from the bamboo jungle river.
@@ -173,8 +171,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.MONTANE_LAUREL_GROVE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
@@ -192,8 +189,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.SUBTROPICAL_EXTREME_HILLS,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
@@ -218,8 +214,7 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
@@ -262,8 +257,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);
@@ -286,8 +280,7 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null,
-                0);
+                null);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
@@ -299,8 +292,7 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null,
-                0);
+                null);
 
         /// Tundra
         BiomeRelationshipRegistry.registerBeach(
@@ -318,8 +310,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST_EDGE,
                 ModBiomes.AMAZON_VARZEA_FOREST);
@@ -346,8 +337,7 @@ public class ModBiomeRelationships {
                 0,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_RIVER);
@@ -372,8 +362,7 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,
                 ModBiomes.PAMPAS_COASTAL_FIELDS_RIVER);
@@ -398,8 +387,7 @@ public class ModBiomeRelationships {
                 3,
                 false,
                 false,
-                null,
-                0);
+                null);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_RIVER);
@@ -426,7 +414,6 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 MatchMode.ALL,
-                0,
                 ModBiomes.AMAZON_RAINFOREST_EDGE,
                 ModBiomes.CAATINGA
         );
@@ -442,7 +429,6 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 ANY,
-                0,
                 ModBiomes.CAATINGA
         );
     }
