@@ -2050,6 +2050,14 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT))
                     .setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LYCHEE_TREE2 = register("lychee_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LYCHEE_LOG),
+                    new SimpleBlockStateProvider(States.LYCHEE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT))
+                    .setIgnoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WAX_LEAF_PRIVET_TREE = register("wax_leaf_privet_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PRIVET_LOG),

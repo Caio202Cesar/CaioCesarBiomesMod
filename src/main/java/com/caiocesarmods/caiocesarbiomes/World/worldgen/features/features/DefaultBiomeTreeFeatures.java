@@ -174,8 +174,8 @@ public class DefaultBiomeTreeFeatures {
 
     //Miscellaneous (non-lauraceae) subtropical trees from laurel forest only (zone 10 exclusives or not)
     public static final ConfiguredFeature<?, ?> LAUREL_FOREST_MISCELLANEOUS_TREES = register("laurel_forest_misc_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LYCHEE_TREE.withChance(0.36F),
-                            ORCHID_TREE1.withChance(0.092F), ORCHID_TREE2.withChance(0.092F), CHAMPAK_TREE.withChance(0.35F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LYCHEE_TREE.withChance(0.23F),
+                            LYCHEE_TREE2.withChance(0.36F), ORCHID_TREE1.withChance(0.092F), ORCHID_TREE2.withChance(0.092F), CHAMPAK_TREE.withChance(0.35F),
                             CINNAMON_TREE.withChance(0.45F), YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
                             CINNAMON_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
