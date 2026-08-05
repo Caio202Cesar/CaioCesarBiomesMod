@@ -63,7 +63,7 @@ public class EucalyptusPlainsBiome {
 
         //Hardiness zone 9: 0.8F - 0.84F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.84F).downfall(0.15F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.84F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(9218863)
                         .withGrassColor(10075481).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

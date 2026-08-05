@@ -38,8 +38,6 @@ public class LaurelForestRiver {
 
       mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.DROWNED, 7, 5, 7));
       mobspawninfo$builder.withSpawner(EntityClassification.WATER_CREATURE, new MobSpawnInfo.Spawners(EntityType.SQUID, 7, 3, 7));
-      mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.SALMON, 7, 5, 7));
-      mobspawninfo$builder.withSpawner(EntityClassification.WATER_AMBIENT, new MobSpawnInfo.Spawners(EntityType.COD, 7, 5, 7));
 
       DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
       DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);

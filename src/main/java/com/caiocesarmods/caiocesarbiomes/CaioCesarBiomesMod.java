@@ -102,6 +102,8 @@ public class CaioCesarBiomesMod
         TussockTundraBiome.register(eventBus);
         SubtropicalEucalyptusForestBiome.register(eventBus);
         EucalyptusPlainsBiome.register(eventBus);
+        EucalyptusPlainsBeach.register(eventBus);
+        EucalyptusPlainsRiver.register(eventBus);
         HotMediterraneanBeachBiome.register(eventBus);
         LaurelForestSubtropicalBeach.register(eventBus);
         EucalyptusSahelBiome.register(eventBus);

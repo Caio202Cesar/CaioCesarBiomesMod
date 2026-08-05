@@ -1,8 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -21,16 +19,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class LaurelForestSubtropicalBeach {
+//Eucalyptus subtropical plains
+public class EucalyptusPlainsBeach {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> LAUREL_FOREST_SUBTROPICAL_BEACH = BIOMES.register("humid_subtropical_beach",
-            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
+    public static final RegistryObject<Biome> EUCALYPTUS_PLAINS_BEACH = BIOMES.register("eucalyptus_plains_beach",
+            () -> makeEucalyptusPlainsBeach(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
-    //Subtropical Oak Beach
-    private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeEucalyptusPlainsBeach(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.TURTLE, 5, 2, 5));
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -42,38 +40,27 @@ public class LaurelForestSubtropicalBeach {
         biomegenerationsettings$builder.withStructure(StructureFeatures.SHIPWRECK_BEACHED);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withBadlandsGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
-
-        ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-
-        ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);
-
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                DefaultBiomeTreeFeatures.SUBTROPICAL_LAUREL_FOREST_BEACH_TREES);
+        ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        //Hardiness Zone 10
+        //Hardiness zone 9: 0.8F - 0.84F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
-                        .withGrassColor(2791997).setFogColor(14807295)
-                        .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
+                .temperature(0.84F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(9218863)
+                        .withGrassColor(10075481).setFogColor(14807295)
+                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
@@ -83,5 +70,3 @@ public class LaurelForestSubtropicalBeach {
         BIOMES.register(eventBus);
     }
 }
-
-

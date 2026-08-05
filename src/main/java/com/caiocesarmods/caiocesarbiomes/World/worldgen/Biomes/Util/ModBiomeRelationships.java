@@ -243,6 +243,14 @@ public class ModBiomeRelationships {
                 ModBiomes.SUBTROPICAL_PINE_FOREST,
                 ModBiomes.SUBTROPICAL_PINE_RIVER);
 
+        //Eucalyptus Plains
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.EUCALYPTUS_PLAINS,
+                ModBiomes.EUCALYPTUS_PLAINS_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.EUCALYPTUS_PLAINS,
+                ModBiomes.EUCALYPTUS_PLAINS_RIVER);
+
         //Chilean Temperate Biomes
         BiomeRelationshipRegistry.register(
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
