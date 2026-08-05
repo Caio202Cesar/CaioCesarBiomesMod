@@ -4,5 +4,5 @@ import net.minecraft.util.IStringSerializable;
 
 public enum ModBiomeCategory {
     MEDITERRANEAN,
-    LAUREL_FOREST,
+    LAUREL_FOREST
 }
