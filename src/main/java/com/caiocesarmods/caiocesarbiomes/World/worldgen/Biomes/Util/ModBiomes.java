@@ -111,6 +111,13 @@ public class ModBiomes {
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_lucidophyll_oak_forest_river");
 
+    public static final ResourceLocation SUBTROPICAL_PINE_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "humid_subtropical_pine_forest");
+    public static final ResourceLocation SUBTROPICAL_PINE_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "humid_subtropical_pine_beach");
+    public static final ResourceLocation SUBTROPICAL_PINE_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "humid_subtropical_pine_river");
+
     //Chilean biomes
     public static final ResourceLocation VALDIVIAN_TEMPERATE_RAINFOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "valdivian_temperate_rainforest");

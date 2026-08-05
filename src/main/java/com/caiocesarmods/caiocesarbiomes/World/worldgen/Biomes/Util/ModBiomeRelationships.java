@@ -235,6 +235,14 @@ public class ModBiomeRelationships {
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
                 ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER);
 
+        //Humid subtropical pine forest
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.SUBTROPICAL_PINE_FOREST,
+                ModBiomes.SUBTROPICAL_PINE_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SUBTROPICAL_PINE_FOREST,
+                ModBiomes.SUBTROPICAL_PINE_RIVER);
+
         //Chilean Temperate Biomes
         BiomeRelationshipRegistry.register(
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,

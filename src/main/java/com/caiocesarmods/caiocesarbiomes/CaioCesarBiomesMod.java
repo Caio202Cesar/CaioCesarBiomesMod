@@ -130,6 +130,8 @@ public class CaioCesarBiomesMod
         TemperateDesertOasis.register(eventBus);
         TemperateDesertRiver.register(eventBus);
         HumidSubtropicalPineForest.register(eventBus);
+        HumidSubtropicalPineBeach.register(eventBus);
+        HumidSubtropicalPineRiver.register(eventBus);
         MediterraneanOakSparseWoodlandBiome.register(eventBus);
         TropicalIslandBiome.register(eventBus);
         CorkOakBeach.register(eventBus);

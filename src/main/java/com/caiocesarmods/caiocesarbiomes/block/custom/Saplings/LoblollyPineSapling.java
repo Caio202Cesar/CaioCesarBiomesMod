@@ -126,7 +126,11 @@ public class LoblollyPineSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.LOBLOLLY_PINE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.TALL_LOBLOLLY_PINE;
+            } else {
+                return TreeFeatures.LOBLOLLY_PINE;
+            }
         }
     }
 }
