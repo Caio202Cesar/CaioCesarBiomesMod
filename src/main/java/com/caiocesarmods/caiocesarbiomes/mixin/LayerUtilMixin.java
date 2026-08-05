@@ -1,9 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.mixin;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.BeachReplacementLayer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.HillsRelationshipLayer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RelationshipLayer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.RiverRelationshipLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.*;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;
@@ -31,7 +28,14 @@ public class LayerUtilMixin {
 
         IAreaFactory<T> result = instance.apply(random, area);
 
-        return RelationshipLayer.INSTANCE.apply(random, result);
+        result = RelationshipLayer.INSTANCE.apply(random, result);
+
+        /*
+        result = HighlandExpansionLayer.INSTANCE.apply(random, result);
+        result = HighlandExpansionLayer.INSTANCE.apply(random, result);
+        result = HighlandExpansionLayer.INSTANCE.apply(random, result);*/
+
+        return result;
     }
 
     @Redirect(

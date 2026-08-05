@@ -156,19 +156,6 @@ public class ModBiomeRelationships {
 
         ///Subtropical
         //Laurel Forest
-        //If register as a sub-biome, it should have beach and river.
-        BiomeRelationshipRegistry.register(
-                ModBiomes.LAUREL_FOREST,
-                ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HIGHLAND,
-                5,
-                0,
-                0,
-                4,
-                false,
-                false,
-                ANY,
-                0.65F);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_FOREST,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
@@ -177,36 +164,42 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_FOREST_RIVER);
 
         BiomeRelationshipRegistry.register(
-                ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HIGHLAND,
-                5,
-                0,
-                0,
+                ModBiomes.LAUREL_FOREST,
+                RelationshipType.EDGE,
                 4,
+                15,
+                6,
+                0,
                 false,
                 false,
-                ANY,
-                0.65F);
+                null,
+                0);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.MONTANE_LAUREL_GROVE,
+                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.MONTANE_LAUREL_GROVE,
+                ModBiomes.LAUREL_FOREST_RIVER);
+
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_RIVER);
-
         BiomeRelationshipRegistry.register(
+                ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
-                ModBiomes.MONTANE_LAUREL_GROVE,
-                RelationshipType.HIGHLAND,
-                5,
-                0,
-                0,
-                4,
+                RelationshipType.RARE,
+                15,
+                15,
+                2,
+                3,
                 false,
                 false,
-                ANY,
-                0.65F);
+                null,
+                0);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
@@ -224,17 +217,21 @@ public class ModBiomeRelationships {
 
         //Chilean Temperate Biomes
         BiomeRelationshipRegistry.register(
-                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.PEWEN_CONIFEROUS_GROVE,
-                RelationshipType.HIGHLAND,
-                5,
-                0,
-                0,
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
+                RelationshipType.EDGE,
                 4,
+                15,
+                6,
+                0,
                 false,
                 false,
-                ANY,
-                0.65F);
+                null,
+                0);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.PEWEN_CONIFEROUS_GROVE,
+                ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);
+
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST,
                 ModBiomes.VALDIVIAN_TEMPERATE_RAINFOREST_BEACH);
@@ -260,10 +257,10 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.register(
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
                 ModBiomes.FOG_OASIS,
-                RelationshipType.SUB_BIOME,
-                3,
-                0,
-                6,
+                RelationshipType.RARE,
+                15,
+                15,
+                2,
                 3,
                 false,
                 false,

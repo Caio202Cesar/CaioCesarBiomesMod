@@ -26,13 +26,12 @@ public class ModBiomeGeneration {
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
-        //addBiome(BambooSubtropicalLaurelJungleBiome.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 3, OVERWORLD, LUSH, DENSE, JUNGLE, WET, RARE);
-        //addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
-        //Not a sub-biome
+        addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalExtremeHillsBiome.SUBTROPICAL_EXTREME_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalEucalyptusForestBiome.SUBTROPICAL_EUCALYPTUS_FOREST.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, FOREST, DRY, DENSE);
         addBiome(EucalyptusPlainsBiome.EUCALYPTUS_PLAINS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, PLAINS, SPARSE);
         addBiome(ValdivianTemperateRainforest.VALDIVIAN_TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, WET, DENSE, JUNGLE);
+        addBiome(PewenConiferousGrove.PEWEN_CONIFEROUS_GROVE.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, WET, DENSE, JUNGLE, MOUNTAIN);
         addBiome(HumidSubtropicalPineForest.HUMID_SUBTROPICAL_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, CONIFEROUS, LUSH, DENSE);
 
         /// Tropical
