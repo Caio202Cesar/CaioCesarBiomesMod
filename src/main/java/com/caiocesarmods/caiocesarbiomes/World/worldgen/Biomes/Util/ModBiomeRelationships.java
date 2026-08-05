@@ -302,25 +302,28 @@ public class ModBiomeRelationships {
 
         //Atlantic Forest
         BiomeRelationshipRegistry.register(
-                ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.SERRA_DO_MAR_FOREST,
-                RelationshipType.HIGHLAND,
-                5,
+                ModBiomes.ATLANTIC_FOREST,
+                RelationshipType.EDGE,
+                4,
+                15,
+                6,
                 0,
-                0,
-                3,
                 false,
                 false,
-                ANY,
-                0.65F);
+                null,
+                0);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SERRA_DO_MAR_FOREST,
+                ModBiomes.ATLANTIC_FOREST_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SERRA_DO_MAR_FOREST,
+                ModBiomes.ATLANTIC_FOREST_BEACH);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.ATLANTIC_FOREST_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.ATLANTIC_FOREST,
-                ModBiomes.ATLANTIC_FOREST_RIVER);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.SERRA_DO_MAR_FOREST,
                 ModBiomes.ATLANTIC_FOREST_RIVER);
 
         //Pampas
@@ -336,36 +339,39 @@ public class ModBiomeRelationships {
                 false,
                 null,
                 0);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.PAMPAS_COASTAL_FIELDS,
+                ModBiomes.PAMPAS_RIVER);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.PAMPAS_COASTAL_FIELDS,
+                ModBiomes.PAMPAS_BEACH);
+
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS,
                 ModBiomes.COXILHAS,
-                RelationshipType.HIGHLAND,
-                5,
-                0,
-                0,
+                RelationshipType.SUB_BIOME,
                 4,
+                15,
+                10,
+                3,
                 false,
                 false,
-                ANY,
-                0.65F);
+                null,
+                0);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_RIVER);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.PAMPAS,
                 ModBiomes.PAMPAS_BEACH);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_RIVER);
-        BiomeRelationshipRegistry.registerBeach(
-                ModBiomes.PAMPAS_COASTAL_FIELDS,
-                ModBiomes.PAMPAS_BEACH);
+
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.COXILHAS,
                 ModBiomes.PAMPAS_RIVER);
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.COXILHAS,
                 ModBiomes.PAMPAS_BEACH);
+
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.BUTIA_PAMPAS,
                 ModBiomes.PAMPAS_RIVER);
