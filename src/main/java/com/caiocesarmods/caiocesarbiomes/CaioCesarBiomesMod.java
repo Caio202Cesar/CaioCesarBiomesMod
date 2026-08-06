@@ -201,11 +201,14 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.SAND_LAUREL_OAK_WOOD.get(), Blocks.STRIPPED_OAK_WOOD)
                     .put(TreeBlocks.PODOCARPUS_LOG.get(), TreeBlocks.STRIPPED_PODOCARPUS_LOG.get())
                     .put(TreeBlocks.PODOCARPUS_WOOD.get(), TreeBlocks.STRIPPED_PODOCARPUS_WOOD.get())
+                    .put(TreeBlocks.LAUREL_LOG.get(), TreeBlocks.STRIPPED_LAUREL_LOG.get())
+                    .put(TreeBlocks.LAUREL_WOOD.get(), TreeBlocks.STRIPPED_LAUREL_WOOD.get())
+                    .put(TreeBlocks.WEEPING_WILLOW_LOG.get(), TreeBlocks.STRIPPED_WILLOW_LOG.get())
+                    .put(TreeBlocks.WEEPING_WILLOW_WOOD.get(), TreeBlocks.STRIPPED_WILLOW_WOOD.get())
 
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
-                    .put(TreeBlocks.LAUREL_LOG.get(), TreeBlocks.STRIPPED_LAUREL_LOG.get())
-                    .put(TreeBlocks.LAUREL_WOOD.get(), TreeBlocks.STRIPPED_LAUREL_WOOD.get())
+
                     .put(TreeBlocks.BALD_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_LOG.get())
                     .put(TreeBlocks.BALD_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_WOOD.get())
                     .put(TreeBlocks.BEECH_LOG.get(), TreeBlocks.STRIPPED_BEECH_LOG.get())
