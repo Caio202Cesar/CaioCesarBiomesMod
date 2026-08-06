@@ -199,6 +199,8 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.BLACKWOOD_ACACIA_WOOD.get(), Blocks.STRIPPED_ACACIA_WOOD)
                     .put(TreeBlocks.SAND_LAUREL_OAK_LOG.get(), Blocks.STRIPPED_OAK_LOG)
                     .put(TreeBlocks.SAND_LAUREL_OAK_WOOD.get(), Blocks.STRIPPED_OAK_WOOD)
+                    .put(TreeBlocks.PODOCARPUS_LOG.get(), TreeBlocks.STRIPPED_PODOCARPUS_LOG.get())
+                    .put(TreeBlocks.PODOCARPUS_WOOD.get(), TreeBlocks.STRIPPED_PODOCARPUS_WOOD.get())
 
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())

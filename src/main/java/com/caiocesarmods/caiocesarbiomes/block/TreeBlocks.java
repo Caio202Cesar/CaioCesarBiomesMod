@@ -2798,6 +2798,16 @@ public class TreeBlocks {
     public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
             SandLaurelOakSapling::new);
 
+    public static final RegistryObject<Block> PODOCARPUS_LOG = registerBlock("podocarpus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_LOG = registerBlock("stripped_podocarpus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_WOOD = registerBlock("podocarpus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_WOOD = registerBlock("stripped_podocarpus_wood",
+            ModLogs::new);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
