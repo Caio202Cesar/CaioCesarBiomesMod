@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:ocotea_jungle_log"
+      "item": "caiocesarbiomes:laurel_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:ocotea_planks",
+    "item": "caiocesarbiomes:laurel_planks",
     "count": 4
   }
 }
