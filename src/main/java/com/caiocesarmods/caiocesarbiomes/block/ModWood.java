@@ -24,8 +24,6 @@ public class ModWood {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
     //Planks
-    public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
-            ModPlanks::new);
     public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
@@ -35,8 +33,6 @@ public class ModWood {
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MYRTLE_PLANKS = registerBlock("myrtle_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> OCOTEA_PLANKS = registerBlock("ocotea_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
             ModPlanks::new);
@@ -165,6 +161,8 @@ public class ModWood {
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_PLANKS = registerBlock("bambooleaf_oak_planks",
             ModLogs::new);
     public static final RegistryObject<Block> LIQUIDAMBAR_PLANKS = registerBlock("liquidambar_planks",
+            ModLogs::new);
+    public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModLogs::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

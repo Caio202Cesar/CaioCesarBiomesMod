@@ -34,8 +34,46 @@ public class TreeBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
+
+    //Laurel-based trees
+    public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LAUREL_WOOD = registerBlock("laurel_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
+            () -> new AvocadoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> AVOCADO_FLOWERING_LEAVES = registerBlock("avocado_flowering_leaves",
+            () -> new AvocadoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FRUITING_LEAVES));
+    public static final RegistryObject<Block> AVOCADO_FRUITING_LEAVES = registerBlock("avocado_fruiting_leaves",
+            () -> new AvocadoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_LEAVES));
+
+    public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
+            AvocadoSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> OCOTEA_LEAVES = registerBlock("ocotea_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> OCOTEA_FOREST_SAPLING = registerBlock("ocotea_forest_sapling",
+            OcoteaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_OCOTEA_FOREST_SAPLING = BLOCKS.register("potted_ocotea_forest_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.OCOTEA_FOREST_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
     ///A
-//Araucaria
+    //Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_ARAUCARIA_LOG = registerBlock("stripped_araucaria_log",
@@ -86,33 +124,6 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> HOOP_PINE_SAPLING = registerBlock("hoop_pine_sapling",
             HoopPineSapling::new);
-
-    //Avocado
-    public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_AVOCADO_LOG = registerBlock("stripped_avocado_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_AVOCADO_WOOD = registerBlock("stripped_avocado_wood",
-            ModLogs::new);
-
-    public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
-            () -> new AvocadoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> AVOCADO_FLOWERING_LEAVES = registerBlock("avocado_flowering_leaves",
-            () -> new AvocadoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_FRUITING_LEAVES));
-    public static final RegistryObject<Block> AVOCADO_FRUITING_LEAVES = registerBlock("avocado_fruiting_leaves",
-            () -> new AvocadoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_LEAVES));
-
-    public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
-            AvocadoSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_AVOCADO_SAPLING = BLOCKS.register("potted_avocado_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.AVOCADO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
 
     //Aspen
@@ -1457,22 +1468,6 @@ public class TreeBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_SOUTHERN_BEECH_SAPLING = BLOCKS.register("potted_southern_beech_sapling",
             () -> new FlowerPotBlock(TreeBlocks.SOUTHERN_BEECH_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
-
-
-    ///O
-//Ocotea
-    public static final RegistryObject<Block> OCOTEA_FOREST_LOG = registerBlock("ocotea_forest_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> OCOTEA_JUNGLE_LOG = registerBlock("ocotea_jungle_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> OCOTEA_LEAVES = registerBlock("ocotea_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> OCOTEA_FOREST_SAPLING = registerBlock("ocotea_forest_sapling",
-            OcoteaSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_OCOTEA_FOREST_SAPLING = BLOCKS.register("potted_ocotea_forest_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.OCOTEA_FOREST_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

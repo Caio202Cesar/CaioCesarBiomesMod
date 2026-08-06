@@ -4,8 +4,6 @@
     "caiocesarbiomes:holm_oak_log",
     "caiocesarbiomes:cork_oak_log",
     "caiocesarbiomes:oleander_log",
-    "caiocesarbiomes:ocotea_forest_log",
-    "caiocesarbiomes:ocotea_jungle_log",
     "caiocesarbiomes:mesquite_log",
     "caiocesarbiomes:coast_cottonwood_log",
     "caiocesarbiomes:fig_log",
@@ -15,7 +13,6 @@
     "caiocesarbiomes:tropical_almond_log",
     "caiocesarbiomes:southern_magnolia_log",
     "caiocesarbiomes:myrtle_log",
-    "caiocesarbiomes:avocado_log",
     "caiocesarbiomes:stone_pine_log",
     "caiocesarbiomes:crabapple_log",
     "caiocesarbiomes:loquat_log",
@@ -99,7 +96,8 @@
     "caiocesarbiomes:ring_cupped_oak_log",
     "caiocesarbiomes:blackwood_acacia_log",
     "caiocesarbiomes:coast_live_oak_log",
-    "caiocesarbiomes:sand_laurel_oak_log"
+    "caiocesarbiomes:sand_laurel_oak_log",
+    "caiocesarbiomes:laurel_log"
 
   ]
 }

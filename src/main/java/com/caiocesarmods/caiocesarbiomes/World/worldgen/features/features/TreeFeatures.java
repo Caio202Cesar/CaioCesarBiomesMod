@@ -152,7 +152,7 @@ public class TreeFeatures {
 
     //Ocotea Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE = register("forest_ocotea_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -161,7 +161,7 @@ public class TreeFeatures {
                     ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT, Features.Placements.BEES_0002_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_TREE = register("forest_ocotea_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_FOREST_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -170,7 +170,7 @@ public class TreeFeatures {
                             ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE_WITH_IVY = register("forest_ocotea_fancy_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -178,7 +178,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_TREE_WITH_IVY = register("forest_ocotea_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_FOREST_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -187,7 +187,7 @@ public class TreeFeatures {
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE = register("jungle_ocotea_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
@@ -195,7 +195,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE = register("jungle_ocotea_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
@@ -203,7 +203,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE_WITH_IVY = register("ivy_jungle_ocotea_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
@@ -211,7 +211,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE_WITH_IVY = register("ivy_jungle_ocotea_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
@@ -220,7 +220,7 @@ public class TreeFeatures {
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE = register("highland_ocotea_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
@@ -229,7 +229,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
                             ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT, Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HIGHLAND_OCOTEA_TREE_WITH_IVY = register("highland_ocotea_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OCOTEA_JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OCOTEA_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(6, 2, 1),
@@ -452,7 +452,7 @@ public class TreeFeatures {
 
     //Avocado Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AVOCADO_TREE = register("avocado_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.AVOCADO_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -462,7 +462,7 @@ public class TreeFeatures {
                             ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT045))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IVY_AVOCADO_TREE = register("avocado_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.AVOCADO_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -470,7 +470,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MACHILLUS_TREE = register("machillus_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -480,7 +480,7 @@ public class TreeFeatures {
                             ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT045))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IVY_MACHILLUS_TREE = register("machillus_tree_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.AVOCADO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -2232,6 +2232,11 @@ public class TreeFeatures {
         protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
 
+        protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
+        protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
+        protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
+        protected static final BlockState OCOTEA_LEAVES = TreeBlocks.OCOTEA_LEAVES.get().getDefaultState();
+
         protected static final BlockState AGATHIS_LOG = TreeBlocks.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
 
@@ -2292,10 +2297,6 @@ public class TreeFeatures {
 
         protected static final BlockState BANANA_LOG = TreeBlocks.BANANA_LOG.get().getDefaultState();
         protected static final BlockState BANANA_LEAVES = TreeBlocks.BANANA_LEAVES.get().getDefaultState();
-
-        protected static final BlockState AVOCADO_LOG = TreeBlocks.AVOCADO_LOG.get().getDefaultState();
-        protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
-        protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHAMPAK_LOG = TreeBlocks.CHAMPAK_LOG.get().getDefaultState();
         protected static final BlockState CHAMPAK_LEAVES = TreeBlocks.CHAMPAK_LEAVES.get().getDefaultState();
@@ -2455,10 +2456,6 @@ public class TreeFeatures {
         protected static final BlockState DARK_PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_DARK_PINK_LEAVES.get().getDefaultState();
         protected static final BlockState ORANGE_OLEANDER_LEAVES = TreeBlocks.ORANGE_OLEANDER_LEAVES.get().getDefaultState();
         protected static final BlockState YELLOW_OLEANDER_LEAVES = TreeBlocks.YELLOW_OLEANDER_LEAVES.get().getDefaultState();
-
-        protected static final BlockState OCOTEA_FOREST_LOG = TreeBlocks.OCOTEA_FOREST_LOG.get().getDefaultState();
-        protected static final BlockState OCOTEA_JUNGLE_LOG = TreeBlocks.OCOTEA_JUNGLE_LOG.get().getDefaultState();
-        protected static final BlockState OCOTEA_LEAVES = TreeBlocks.OCOTEA_LEAVES.get().getDefaultState();
 
         protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState MESQUITE_LEAVES = TreeBlocks.MESQUITE_LEAVES.get().getDefaultState();

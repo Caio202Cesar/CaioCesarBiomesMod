@@ -4,7 +4,6 @@
     "caiocesarbiomes:holm_oak_planks",
     "caiocesarbiomes:cork_oak_planks",
     "caiocesarbiomes:oleander_planks",
-    "caiocesarbiomes:ocotea_planks",
     "caiocesarbiomes:mesquite_planks",
     "caiocesarbiomes:coast_cottonwood_planks",
     "caiocesarbiomes:fig_planks",
@@ -13,7 +12,6 @@
     "caiocesarbiomes:erythrina_planks",
     "caiocesarbiomes:southern_magnolia_planks",
     "caiocesarbiomes:myrtle_planks",
-    "caiocesarbiomes:avocado_planks",
     "caiocesarbiomes:stone_pine_planks",
     "caiocesarbiomes:crabapple_planks",
     "caiocesarbiomes:loquat_planks",
@@ -69,6 +67,7 @@
     "caiocesarbiomes:obtusa_oak_planks",
     "caiocesarbiomes:champak_planks",
     "caiocesarbiomes:callistemon_planks",
-    "caiocesarbiomes:agathis_planks"
+    "caiocesarbiomes:agathis_planks",
+    "caiocesarbiomes:laurel_planks"
   ]
 }
