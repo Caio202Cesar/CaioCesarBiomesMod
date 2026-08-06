@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "brbiomesmod:block/podocarpus_planks"
+      "model": "caiocesarbiomes:block/podocarpus_planks"
     }
   }
 }

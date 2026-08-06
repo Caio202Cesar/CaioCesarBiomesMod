@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "log",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:podocarpus_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:podocarpus_wood",
+    "count": 3
+  }
+}

@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "brbiomesmod:block/podocarpus_log_horizontal",
+      "model": "caiocesarbiomes:block/podocarpus_log_horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "brbiomesmod:block/podocarpus_log"
+      "model": "caiocesarbiomes:block/podocarpus_log"
     },
     "axis=z": {
-      "model": "brbiomesmod:block/podocarpus_log_horizontal",
+      "model": "caiocesarbiomes:block/podocarpus_log_horizontal",
       "x": 90
     }
   }
