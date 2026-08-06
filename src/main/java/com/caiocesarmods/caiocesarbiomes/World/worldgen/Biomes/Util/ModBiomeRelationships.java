@@ -5,6 +5,7 @@ import net.minecraft.world.biome.Biomes;
 import java.util.Set;
 
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.MatchMode.ANY;
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.ARAUCARIA_PLATEAU;
 
 public class ModBiomeRelationships {
     public static void register() {
@@ -431,5 +432,20 @@ public class ModBiomeRelationships {
                 ANY,
                 ModBiomes.CAATINGA
         );
+
+        /*
+        new BiomeRelationship(
+                ModBiomes.ARAUCARIA_PLATEAU,
+                ModBiomes.GOATBEARD_GRASS_FIELDS,
+                RelationshipType.TRANSITIONAL_EDGE,
+                1,
+                0,
+                0,
+                1,
+                false,
+                false,
+                ANY,
+                ModBiomes.PAMPAS
+        );*/
     }
 }
