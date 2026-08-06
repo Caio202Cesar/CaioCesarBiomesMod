@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:weeping_willow_wood"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:willow_planks",
+    "count": 4
+  }
+}
