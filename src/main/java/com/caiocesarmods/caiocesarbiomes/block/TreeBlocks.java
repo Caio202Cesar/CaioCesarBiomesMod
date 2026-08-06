@@ -2211,6 +2211,12 @@ public class TreeBlocks {
     //Weeping Willow
     public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> WEEPING_WILLOW_WOOD = registerBlock("weeping_willow_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> WEEPING_WILLOW_LEAVES = registerBlock("weeping_willow_leaves",
             () -> new WeepingWillowLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

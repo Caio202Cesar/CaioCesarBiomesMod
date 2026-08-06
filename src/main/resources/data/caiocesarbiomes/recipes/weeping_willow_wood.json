@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:weeping_willow_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:weeping_willow_wood",
+    "count": 3
+  }
+}
