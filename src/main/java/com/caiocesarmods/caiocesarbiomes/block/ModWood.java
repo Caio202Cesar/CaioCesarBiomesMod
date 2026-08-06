@@ -164,6 +164,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_PLANKS = registerBlock("podocarpus_planks",
+            ModLogs::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
