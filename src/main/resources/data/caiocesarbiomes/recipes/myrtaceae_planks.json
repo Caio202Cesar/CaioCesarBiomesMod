@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:pohutukawa_log"
+      "item": "caiocesarbiomes:myrtaceae_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:pohutukawa_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }

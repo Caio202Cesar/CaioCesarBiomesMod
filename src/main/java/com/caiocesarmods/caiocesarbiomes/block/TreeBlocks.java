@@ -35,7 +35,7 @@ public class TreeBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
 
-    //Myrtaceae-based trees = REMOVE POHUTUKAWA PLANKS
+    //Myrtaceae-based trees
     public static final RegistryObject<Block> MYRTACEAE_LOG = registerBlock("myrtaceae_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_MYRTACEAE_LOG = registerBlock("stripped_myrtaceae_log",
