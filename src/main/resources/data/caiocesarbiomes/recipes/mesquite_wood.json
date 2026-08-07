@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:mesquite_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:mesquite_wood",
+    "count": 3
+  }
+}
