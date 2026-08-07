@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:cinnamon_log"
+      "item": "caiocesarbiomes:stripped_laurel_wood"
     }
   ],
   "result": {
-    "item": "minecraft:jungle_planks",
+    "item": "caiocesarbiomes:laurel_planks",
     "count": 4
   }
 }
