@@ -42,14 +42,17 @@ public class HardinessZones {
 
         // CAIO CESAR BIOMES MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"),
-                "Biome temperature zone: (min) 10;" +
+                "''Malpighia emarginata''" +
+                        "Biome temperature zone: (min) 10;" +
                         "Summer heat requirements: schorching to hot;" +
                 "⚠ Can be grown in colder biomes if under a 5x5 glass.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "agathis_sapling"),
+                "''Agathis spp''" +
                 "Biome temperature zone: (min) 8;" +
                         "Moisture requirements: Can't grow in dry biomes;" +
                         "Summer heat requirements: very hot to mild.");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "almond_sapling"),
+                "''Prunus dulcis''" +
                 "Biome temperature zone: (min) 5, (max) 10;" +
                         "Moisture requirements: Can't grow in rainy biomes;" +
                         "Summer heat requirements: schorching to warm.");
