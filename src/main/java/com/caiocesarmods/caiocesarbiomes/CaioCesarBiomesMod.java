@@ -206,10 +206,11 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.PODOCARPUS_WOOD.get(), TreeBlocks.STRIPPED_PODOCARPUS_WOOD.get())
                     .put(TreeBlocks.WEEPING_WILLOW_LOG.get(), TreeBlocks.STRIPPED_WILLOW_LOG.get())
                     .put(TreeBlocks.WEEPING_WILLOW_WOOD.get(), TreeBlocks.STRIPPED_WILLOW_WOOD.get())
+                    .put(TreeBlocks.MYRTACEAE_LOG.get(), TreeBlocks.STRIPPED_MYRTACEAE_LOG.get())
+                    .put(TreeBlocks.MYRTACEAE_WOOD.get(), TreeBlocks.STRIPPED_MYRTACEAE_WOOD.get())
 
                     .put(TreeBlocks.ARAUCARIA_LOG.get(), TreeBlocks.STRIPPED_ARAUCARIA_LOG.get())
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
-
                     .put(TreeBlocks.BALD_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_LOG.get())
                     .put(TreeBlocks.BALD_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_WOOD.get())
                     .put(TreeBlocks.BEECH_LOG.get(), TreeBlocks.STRIPPED_BEECH_LOG.get())
