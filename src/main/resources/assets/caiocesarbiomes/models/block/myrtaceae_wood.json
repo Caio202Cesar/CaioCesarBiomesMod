@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/myrtaceae_log",
+    "side": "caiocesarbiomes:block/myrtaceae_log"
+  }
+}
