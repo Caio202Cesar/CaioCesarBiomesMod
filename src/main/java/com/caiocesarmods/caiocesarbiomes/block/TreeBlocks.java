@@ -45,6 +45,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> STRIPPED_MYRTACEAE_WOOD = registerBlock("stripped_myrtaceae_wood",
             ModLogs::new);
 
+
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -63,6 +64,19 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_POHUTUKAWA_SAPLING = BLOCKS.register("potted_pohutukawa_sapling",
             () -> new FlowerPotBlock(TreeBlocks.POHUTUKAWA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> LILLY_PILLY_LEAVES = registerBlock("lilly_pilly_leaves",
+            () -> new LillyPillyLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LILLY_PILLY_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> LILLY_PILLY_FLOWERING_LEAVES = registerBlock("lilly_pilly_flowering_leaves",
+            () -> new LillyPillyFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LILLY_PILLY_FRUITING_LEAVES));
+    public static final RegistryObject<Block> LILLY_PILLY_FRUITING_LEAVES = registerBlock("lilly_pilly_fruiting_leaves",
+            () -> new LillyPillyFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LILLY_PILLY_LEAVES));
+    public static final RegistryObject<Block> LILLY_PILLY_SAPLING = registerBlock("lilly_pilly_sapling",
+            LillyPillySapling::new);
 
 
     //Laurel-based trees
@@ -84,7 +98,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> AVOCADO_FRUITING_LEAVES = registerBlock("avocado_fruiting_leaves",
             () -> new AvocadoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.AVOCADO_LEAVES));
-
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
             AvocadoSapling::new);
     @SuppressWarnings("deprecation")
@@ -101,6 +114,29 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OCOTEA_FOREST_SAPLING = BLOCKS.register("potted_ocotea_forest_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OCOTEA_FOREST_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CINNAMON_WOOD = registerBlock("cinnamon_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
+            CinnamonSapling::new);
+
+
+    public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
+            () -> new MachillusLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES = registerBlock("machillus_flowering_leaves",
+            () -> new MachillusFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES2));
+    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES2 = registerBlock("machillus_flowering_leaves2",
+            () -> new MachillusFloweringLeaves2(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_LEAVES));
+    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
+            MachillusSapling::new);
 
     ///A
     //Araucaria
@@ -1413,13 +1449,18 @@ public class TreeBlocks {
     //Mesquite
     public static final RegistryObject<Block> MESQUITE_LOG = registerBlock("mesquite_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MESQUITE_WOOD = registerBlock("mesquite_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MESQUITE_LOG = registerBlock("stripped_mesquite_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MESQUITE_WOOD = registerBlock("stripped_mesquite_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
             () -> new MesquiteLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_WINTER_BRANCHES));
     public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_winter_branches",
             () -> new MesquiteWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_LEAVES));
-            //Only to Temperate Biomes (excluding subtropical and tropical)*/
     public static final RegistryObject<Block> MESQUITE_SAPLING = registerBlock("mesquite_sapling",
             MesquiteSapling::new);
     @SuppressWarnings("deprecation")
@@ -2556,27 +2597,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",
             CamphorSapling::new);
 
-    public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CINNAMON_WOOD = registerBlock("cinnamon_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
-            CinnamonSapling::new);
-
-    //Avocado log
-    public static final RegistryObject<Block> MACHILLUS_LEAVES = registerBlock("machillus_leaves",
-            () -> new MachillusLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES = registerBlock("machillus_flowering_leaves",
-            () -> new MachillusFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_FLOWERING_LEAVES2));
-    public static final RegistryObject<Block> MACHILLUS_FLOWERING_LEAVES2 = registerBlock("machillus_flowering_leaves2",
-            () -> new MachillusFloweringLeaves2(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_LEAVES));
-    public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
-            MachillusSapling::new);
 
     //Jungle and laurel forest
     public static final RegistryObject<Block> CHAMPAK_LOG = registerBlock("champak_log",
