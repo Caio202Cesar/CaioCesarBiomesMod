@@ -148,6 +148,7 @@ public class CaioCesarBiomesMod
         SubtropicalEvergreenOakForestRiver.register(eventBus);
         MediterraneanSavannaRiver.register(eventBus);
         LaurelForestRiver.register(eventBus);
+        LaurelJungleSubtropicalBeach.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

@@ -21,12 +21,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class LaurelForestSubtropicalBeach {
+public class LaurelJungleSubtropicalBeach {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> LAUREL_FOREST_SUBTROPICAL_BEACH = BIOMES.register("humid_subtropical_beach",
+    public static final RegistryObject<Biome> LAUREL_JUNGLE_SUBTROPICAL_BEACH = BIOMES.register("laurel_jungle_beach",
             () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
     //Subtropical Oak Beach
@@ -54,9 +54,12 @@ public class LaurelForestSubtropicalBeach {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
 
+        ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalForestMiscTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalLaurelForestMiscTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withLaurelJungleTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSubtropicalBambooVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
 
@@ -70,7 +73,7 @@ public class LaurelForestSubtropicalBeach {
 
         //Hardiness Zone 10
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.85F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.89F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                         .withGrassColor(2791997).setFogColor(14807295)
                         .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())

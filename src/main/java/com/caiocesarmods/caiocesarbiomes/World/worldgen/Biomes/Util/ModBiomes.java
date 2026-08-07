@@ -98,6 +98,8 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
     public static final ResourceLocation LAUREL_FOREST_SUBTROPICAL_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "humid_subtropical_beach");
+    public static final ResourceLocation LAUREL_JUNGLE_SUBTROPICAL_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_jungle_beach");
     public static final ResourceLocation LAUREL_FOREST_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_forest_river");
 
