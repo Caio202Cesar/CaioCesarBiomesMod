@@ -192,7 +192,7 @@ public class TreeBlocks {
             HoopPineSapling::new);
 
 
-    //Aspen
+    //Aspen and birch
     public static final RegistryObject<Block> ASPEN_LEAVES = registerBlock("aspen_leaves",
             () -> new AspenLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_FALL_LEAVES));
@@ -209,6 +209,12 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.ASPEN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> BIRCH_FALL_LEAVES = registerBlock("birch_fall_leaves",
+            () -> new BirchFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BIRCH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> BIRCH_WINTER_BRANCHES = registerBlock("birch_winter_branches",
+            () -> new BirchWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), (Supplier<Block>) Blocks.BIRCH_LEAVES));
 
     //Almond
     public static final RegistryObject<Block> ALMOND_LEAVES = registerBlock("almond_leaves",
