@@ -28,7 +28,7 @@ public class ModWood {
             ModPlanks::new);
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_PLANKS = registerBlock("italian_cypress_planks",
+    public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("italian_cypress_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
