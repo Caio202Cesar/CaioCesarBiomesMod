@@ -376,7 +376,7 @@ public class TreeFeatures {
 
     //Southern Wax Myrtle Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOUTHERN_WAX_MYRTLE_SHRUB = register("southern_wax_myrtle_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BAYBERRY_LOG),
                     new SimpleBlockStateProvider(States.SOUTHERN_WAX_MYRTLE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(2, 1, 0),
@@ -2519,6 +2519,7 @@ public class TreeFeatures {
         protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
 
+        protected static final BlockState BAYBERRY_LOG = TreeBlocks.BAYBERRY_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_WAX_MYRTLE_LEAVES = TreeBlocks.SOUTHERN_WAX_MYRTLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState STONE_PINE_LOG = TreeBlocks.STONE_PINE_LOG.get().getDefaultState();

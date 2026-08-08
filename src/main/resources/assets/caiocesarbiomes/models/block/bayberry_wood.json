@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/bayberry_log",
+    "side": "caiocesarbiomes:block/bayberry_log"
+  }
+}

@@ -212,6 +212,8 @@ public class CaioCesarBiomesMod
                     .put(TreeBlocks.ARAUCARIA_WOOD.get(), TreeBlocks.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(TreeBlocks.MESQUITE_LOG.get(), TreeBlocks.STRIPPED_MESQUITE_LOG.get())
                     .put(TreeBlocks.MESQUITE_WOOD.get(), TreeBlocks.STRIPPED_MESQUITE_WOOD.get())
+                    .put(TreeBlocks.BAYBERRY_LOG.get(), TreeBlocks.STRIPPED_BAYBERRY_LOG.get())
+                    .put(TreeBlocks.BAYBERRY_WOOD.get(), TreeBlocks.STRIPPED_BAYBERRY_WOOD.get())
 
                     .put(TreeBlocks.BALD_CYPRESS_LOG.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_LOG.get())
                     .put(TreeBlocks.BALD_CYPRESS_WOOD.get(), TreeBlocks.STRIPPED_BALD_CYPRESS_WOOD.get())
