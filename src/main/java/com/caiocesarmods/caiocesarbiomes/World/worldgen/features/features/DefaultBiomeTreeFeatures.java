@@ -435,10 +435,10 @@ public class DefaultBiomeTreeFeatures {
                             BIG_INDIAN_LAUREL_TREE.withChance(0.2F), OIL_PALM_TREE.withChance(0.3F),
                             BANANA_TREE.withChance(0.4F), AVOCADO_TREE.withChance(0.4F),
                             STARFRUIT_TREE.withChance(0.4F), TROPICAL_ALMOND_TREE.withChance(0.2F),
-                            TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
+                            TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F), MEGA_RAINBOW_EUCALYPTUS_TREE.withChance(0.189F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), RED_KAPOK_TREE.withChance(0.3F),
                             ORCHID_TREE1.withChance(0.2F), ORCHID_TREE2.withChance(0.23F), RUBBER_TREE.withChance(0.2F),
-                            PEPPERCORN_JUNGLE_TREE.withChance(0.28F), RAINBOW_EUCALYPTUS_TREE.withChance(0.198F)),
+                            PEPPERCORN_JUNGLE_TREE.withChance(0.28F), RAINBOW_EUCALYPTUS_TREE.withChance(0.2F)),
                             INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.3F, 0))));
 
@@ -452,7 +452,7 @@ public class DefaultBiomeTreeFeatures {
                             CINNAMON_FANCY_TREE.withChance(0.13F), GLORIOSA_JUNGLE_TREE.withChance(0.03F),
                             BREADFRUIT_TREE.withChance(0.25F), ORCHID_TREE2.withChance(0.23F),
                             BIG_INDIAN_LAUREL_TREE.withChance(0.2F), BANANA_TREE.withChance(0.4F),
-                            AVOCADO_TREE.withChance(0.4F),
+                            AVOCADO_TREE.withChance(0.4F), MEGA_RAINBOW_EUCALYPTUS_TREE.withChance(0.189F),
                             STARFRUIT_TREE.withChance(0.4F), RED_KAPOK_TREE.withChance(0.3F),
                             PEPPERCORN_JUNGLE_TREE.withChance(0.28F), BUNYA_PINE_TREE.withChance(0.4F),
                             AGATHIS_TREE1.withChance(0.3F), BUNYA_PINE_TREE2.withChance(0.35F),
@@ -471,8 +471,8 @@ public class DefaultBiomeTreeFeatures {
                             CINNAMON_FANCY_TREE.withChance(0.13F), GLORIOSA_JUNGLE_TREE.withChance(0.03F),
                             BIG_INDIAN_LAUREL_TREE.withChance(0.35F), BANANA_TREE.withChance(0.4F),
                             AVOCADO_TREE.withChance(0.4F), GLORIOSA_JUNGLE_TREE.withChance(0.03F),
-                            STARFRUIT_TREE.withChance(0.4F),
-                            TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
+                            STARFRUIT_TREE.withChance(0.4F), MEGA_RAINBOW_EUCALYPTUS_TREE.withChance(0.189F),
+                            TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F), RAINBOW_EUCALYPTUS_TREE.withChance(0.198F),
                             RED_KAPOK_TREE.withChance(0.2F), TROPICAL_ALMOND_TREE.withChance(0.2F),
                             RAINBOW_EUCALYPTUS_TREE.withChance(0.198F),
                             TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), ORCHID_TREE1.withChance(0.2F), ORCHID_TREE2.withChance(0.23F),
@@ -612,6 +612,12 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASUARINA_FANCY_TREE.withChance(0.5F)),
                     EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                    .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("humid_subtropical_eucalyptus_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LILLY_PILLY_TREE.withChance(0.22F),
+                    CALLISTEMON_TREE1.withChance(0.35F), CALLISTEMON_TREE2.withChance(0.23F), RUSTY_GUM_TREE.withChance(0.24F)),
+                    MORETON_BAY_FIG_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EUCALYPTUS_TREES = register("plains_eucalyptus_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F)),

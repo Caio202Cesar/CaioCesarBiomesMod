@@ -2112,9 +2112,17 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LOG),
                     new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT))
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT,
+                            Features.Placements.BEES_002_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_RAINBOW_EUCALYPTUS_TREE = register("mega_rainbow_eucalyptus",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RAINBOW_EUCALYPTUS_LOG),
+                            new SimpleBlockStateProvider(TreeFeatures.States.RAINBOW_EUCALYPTUS_LEAVES),
+                            new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                            new MegaJungleTrunkPlacer(8, 16, 8),
+                            new TwoLayerFeature(2, 0, 1)))
+                            .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
 
     //Australian Pine Tropical Rainforest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AGATHIS_TREE1 = register("agathis_tree1",
@@ -2176,6 +2184,23 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LILLY_PILLY_TREE = register("lilly_pilly_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.LILLY_PILLY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setIgnoreVines().build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUSTY_GUM_TREE = register("rusty_gum_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RUSTY_GUM_LOG),
+                    new SimpleBlockStateProvider(States.RUSTY_GUM_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Laurel Forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHAMPAK_TREE = register("champak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CHAMPAK_LOG),
                     new SimpleBlockStateProvider(States.CHAMPAK_LEAVES),
@@ -2185,6 +2210,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setIgnoreVines().build()));
 
+    //Ring cupped oak
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RING_CUPPED_OAK_TREE = register("ring_cupped_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RING_CUPPED_OAK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.RING_CUPPED_OAK_LEAVES),
@@ -2234,6 +2260,7 @@ public class TreeFeatures {
 
         protected static final BlockState MYRTACEAE_LOG = TreeBlocks.MYRTACEAE_LOG.get().getDefaultState();
         protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
+        protected static final BlockState LILLY_PILLY_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
 
         protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
@@ -2567,7 +2594,8 @@ public class TreeFeatures {
 
         protected static final BlockState EUCALYPTUS_LOG = TreeBlocks.EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState EUCALYPTUS_LEAVES = TreeBlocks.EUCALYPTUS_LEAVES.get().getDefaultState();
-        //protected static final BlockState WOOLLYBUTT_LEAVES = TreeBlocks.WOOLLYBUTT_LEAVES.get().getDefaultState();
+        protected static final BlockState RUSTY_GUM_LOG = TreeBlocks.RUSTY_GUM_LOG.get().getDefaultState();
+        protected static final BlockState RUSTY_GUM_LEAVES = TreeBlocks.RUSTY_GUM_LEAVES.get().getDefaultState();
 
         protected static final BlockState CASUARINA_LOG = TreeBlocks.CASUARINA_LOG.get().getDefaultState();
         protected static final BlockState CASUARINA_LEAVES = TreeBlocks.CASUARINA_LEAVES.get().getDefaultState();
