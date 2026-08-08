@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:rainbow_eucalyptus_log"
+      "item": "caiocesarbiomes:eucalyptus_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:eucalyptus_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }

@@ -79,6 +79,7 @@ public class TreeBlocks {
             LillyPillySapling::new);
 
 
+    //Callistemon and melaleuca
     public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
             ModLogs::new);
     public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
@@ -88,6 +89,20 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
             CallistemonSapling::new);
+
+
+    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
+            EucalyptusLog::new);
+    public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
+            EucalyptusLog::new);
+    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
+            EucalyptusLeaves::new);
+    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
+            EucalyptusSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
+            () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     //Laurel-based trees
@@ -1001,24 +1016,6 @@ public class TreeBlocks {
 
     //Ebony = rainforest/jungle fancy tree (not dry forest) - this tree should be rare and low frequent.
 
-
-    //Eucalyptus
-    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
-            EucalyptusLog::new);
-    public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
-            EucalyptusLog::new);
-    public static final RegistryObject<Block> STRIPPED_EUCALYPTUS_LOG = registerBlock("stripped_eucalyptus_log",
-            EucalyptusLog::new);
-    public static final RegistryObject<Block> STRIPPED_EUCALYPTUS_WOOD = registerBlock("stripped_eucalyptus_wood",
-            EucalyptusLog::new);
-    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
-            EucalyptusLeaves::new);
-    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
-            EucalyptusSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
 
     //Erythrina

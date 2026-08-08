@@ -27,7 +27,6 @@
     "caiocesarbiomes:citrus_log",
     "caiocesarbiomes:tamarind_log",
     "caiocesarbiomes:royal_poinciana_log",
-    "caiocesarbiomes:eucalyptus_log",
     "caiocesarbiomes:casuarina_log",
     "caiocesarbiomes:plum_log",
     "caiocesarbiomes:black_poplar_log",
@@ -86,7 +85,6 @@
     "caiocesarbiomes:camphor_log",
     "caiocesarbiomes:lychee_log",
     "caiocesarbiomes:cinnamon_log",
-    "caiocesarbiomes:paperbark_log",
     "caiocesarbiomes:agathis_log",
     "caiocesarbiomes:castanopsis_log",
     "caiocesarbiomes:privet_log",
@@ -98,7 +96,8 @@
     "caiocesarbiomes:sand_laurel_oak_log",
     "caiocesarbiomes:laurel_log",
     "caiocesarbiomes:podocarpus_log",
-    "caiocesarbiomes:myrtaceae_log"
+    "caiocesarbiomes:myrtaceae_log",
+    "caiocesarbiomes:paperbark_log"
 
   ]
 }

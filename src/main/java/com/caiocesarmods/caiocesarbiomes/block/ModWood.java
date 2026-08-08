@@ -66,8 +66,6 @@ public class ModWood {
             ModPlanks::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> EUCALYPTUS_PLANKS = registerBlock("eucalyptus_planks",
-            ModPlanks::new);
     public static final RegistryObject<Block> PLUM_PLANKS = registerBlock("plum_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
@@ -151,8 +149,6 @@ public class ModWood {
     public static final RegistryObject<Block> OBTUSA_OAK_PLANKS = registerBlock("obtusa_oak_planks",
             ModLogs::new);
     public static final RegistryObject<Block> CHAMPAK_PLANKS = registerBlock("champak_planks",
-            ModLogs::new);
-    public static final RegistryObject<Block> CALLISTEMON_PLANKS = registerBlock("callistemon_planks",
             ModLogs::new);
     public static final RegistryObject<Block> AGATHIS_PLANKS = registerBlock("agathis_planks",
             ModLogs::new);

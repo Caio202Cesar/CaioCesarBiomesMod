@@ -86,7 +86,6 @@
     "caiocesarbiomes:camphor_log",
     "caiocesarbiomes:lychee_log",
     "caiocesarbiomes:cinnamon_log",
-    "caiocesarbiomes:paperbark_log",
     "caiocesarbiomes:agathis_log",
     "caiocesarbiomes:castanopsis_log",
     "caiocesarbiomes:privet_log",
@@ -98,7 +97,7 @@
     "caiocesarbiomes:sand_laurel_oak_log",
     "caiocesarbiomes:laurel_log",
     "caiocesarbiomes:podocarpus_log",
-    "caiocesarbiomes:myrtaceae_log"
-
+    "caiocesarbiomes:myrtaceae_log",
+    "caiocesarbiomes:paperbark_log"
   ]
 }
