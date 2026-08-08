@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "caiocesarbiomes:block/stripped_callistemon_log",
-    "side": "caiocesarbiomes:block/stripped_callistemon_log"
-  }
-}

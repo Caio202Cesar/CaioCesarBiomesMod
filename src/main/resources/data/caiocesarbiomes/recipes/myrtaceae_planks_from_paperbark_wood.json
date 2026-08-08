@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:callistemon_wood"
+      "item": "caiocesarbiomes:paperbark_wood"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:callistemon_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }

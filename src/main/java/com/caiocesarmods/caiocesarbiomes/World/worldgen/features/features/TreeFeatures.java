@@ -2168,7 +2168,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE1 = register("callistemon_tree1",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CALLISTEMON_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PAPERBARK_LOG),
                     new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -2176,7 +2176,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE2 = register("callistemon_tree2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CALLISTEMON_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PAPERBARK_LOG),
                     new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
@@ -2288,7 +2288,7 @@ public class TreeFeatures {
         protected static final BlockState CAMPHOR_LOG = TreeBlocks.CAMPHOR_LOG.get().getDefaultState();
         protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CALLISTEMON_LOG = TreeBlocks.CALLISTEMON_LOG.get().getDefaultState();
+        protected static final BlockState PAPERBARK_LOG = TreeBlocks.PAPERBARK_LOG.get().getDefaultState();
         protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
 
         protected static final BlockState LYCHEE_LOG = TreeBlocks.LYCHEE_LOG.get().getDefaultState();

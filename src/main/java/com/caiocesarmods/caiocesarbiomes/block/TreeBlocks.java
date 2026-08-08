@@ -79,6 +79,17 @@ public class TreeBlocks {
             LillyPillySapling::new);
 
 
+    public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
+            CallistemonSapling::new);
+
+
     //Laurel-based trees
     public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
             ModLogs::new);
@@ -2761,20 +2772,6 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_LEAVES));
     public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
             ObtusaOakSapling::new); //Hardy from zone 7 to 11
-
-    //Subtropical Eucalyptus Forest
-    public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CALLISTEMON_LOG = registerBlock("stripped_callistemon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CALLISTEMON_WOOD = registerBlock("callistemon_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CALLISTEMON_WOOD = registerBlock("stripped_callistemon_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
-            CallistemonSapling::new);
 
     //Tropical Australian Pine Rainforest
     public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",
