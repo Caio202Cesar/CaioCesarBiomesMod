@@ -1,16 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.Seasons;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.*;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
-
 public enum Season {
     SPRING,
     SUMMER,

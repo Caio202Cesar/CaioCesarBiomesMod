@@ -158,7 +158,8 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
-                    ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT, Features.Placements.BEES_0002_PLACEMENT))
+                    ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT, Features.Placements.BEES_0002_PLACEMENT
+                            , ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_TREE = register("forest_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
@@ -192,7 +193,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
-                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075,
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_FANCY_TREE = register("jungle_ocotea_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
@@ -200,7 +201,7 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
-                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075,
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_JUNGLE_TREE_WITH_IVY = register("ivy_jungle_ocotea_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
