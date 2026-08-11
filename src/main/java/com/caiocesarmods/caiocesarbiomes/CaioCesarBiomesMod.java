@@ -4,7 +4,6 @@ import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomeRelationships;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.ClimateSetup;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerTemperatureSetup;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
@@ -245,7 +244,6 @@ public class CaioCesarBiomesMod
 
             ModBiomeGeneration.generateBiomes();
             ModBiomeRelationships.register();
-            ClimateSetup.register();
             SummerTemperatureSetup.register();
 
         });

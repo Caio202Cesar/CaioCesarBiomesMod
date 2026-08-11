@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.Util;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SeasonalPhase;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.*;
 import net.minecraft.client.Minecraft;
@@ -26,7 +25,6 @@ public class BiomeHUDHandler {
         BlockPos pos = player.getPosition();
         Biome biome = world.getBiome(pos);
 
-        String season = Season.getSeason(dayTime);
         String subSeason = String.valueOf(SeasonalPhase.getPhase(dayTime)); // if you create this
         String biomeName = new TranslationTextComponent(
                 "biome." + biome.getRegistryName().getNamespace() + "." + biome.getRegistryName().getPath()
@@ -38,16 +36,11 @@ public class BiomeHUDHandler {
                 SummerHeatHelper.get(world, pos)
         );
 
-        ClimateDomain climate = ClimateDomainRegistry.get(world, pos);
-
         float baseTemp = biome.getTemperature(pos);
         float downfall = biome.getDownfall();
 
         int y = 10;
         int lineHeight = 12;
-
-        drawText(mc, event, "Season: " + season, 10, y);
-        y += lineHeight;
 
         drawText(mc, event, "Phase: " + subSeason, 10, y);
         y += lineHeight;
@@ -59,9 +52,6 @@ public class BiomeHUDHandler {
         y += lineHeight;
 
         drawText(mc, event, "Summer Heat: " + summerHeat, 10, y);
-        y += lineHeight;
-
-        drawText(mc, event, "Climate: " + climate, 10, y);
         y += lineHeight;
 
         drawText(mc, event, String.format("Biome Base Temperature: %.2f", baseTemp), 10, y);
