@@ -32,13 +32,6 @@ public class BiomeHUDHandler {
 
         int zone = HardinessZones.getZone(world, pos);
 
-        SummerHeat summerHeat = SummerHeat.fromTemperature(
-                SummerHeatHelper.get(world, pos)
-        );
-
-        float baseTemp = biome.getTemperature(pos);
-        float downfall = biome.getDownfall();
-
         int y = 10;
         int lineHeight = 12;
 
@@ -49,15 +42,6 @@ public class BiomeHUDHandler {
         y += lineHeight;
 
         drawText(mc, event, "Hardiness Zone: " + zone, 10, y);
-        y += lineHeight;
-
-        drawText(mc, event, "Summer Heat: " + summerHeat, 10, y);
-        y += lineHeight;
-
-        drawText(mc, event, String.format("Biome Base Temperature: %.2f", baseTemp), 10, y);
-        y += lineHeight;
-
-        drawText(mc, event, String.format("Downfall: %.2f", downfall), 10, y);
         y += lineHeight;
 
         drawText(mc, event, "Day: " + (dayTime / 24000), 10, y);
