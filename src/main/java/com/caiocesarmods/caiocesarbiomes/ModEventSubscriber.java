@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
 import com.caiocesarmods.caiocesarbiomes.Util.BiomeHUDHandler;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -179,6 +178,15 @@ public class ModEventSubscriber {
                     Biome.TemperatureModifier.NONE,
                     0.8f
             ));
+
+            if (path.contains("dark")) {
+                System.out.println("[DEBUG] Overriding temperature for Dark Forest: " + id);
+                event.setClimate(new Biome.Climate(
+                        Biome.RainType.RAIN,
+                        0.79f,                          // hardiness zone 8
+                        Biome.TemperatureModifier.NONE,
+                        0.8f));
+            }
         }
 
         if (event.getCategory() == Biome.Category.DESERT) {
