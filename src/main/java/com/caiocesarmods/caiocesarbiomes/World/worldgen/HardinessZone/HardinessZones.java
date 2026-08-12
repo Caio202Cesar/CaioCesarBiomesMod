@@ -19,7 +19,7 @@ public class HardinessZones {
         if (baseTemp <= 0.39f) return 3; //Taiga
         if (baseTemp <= 0.49f) return 4; //Border continental temperate
         if (baseTemp <= 0.59f) return 5; //Continental temperate
-        if (baseTemp <= 0.69f) return 6; //Continental temperate
+        if (baseTemp <= 0.69f) return 6; //Warmer Continental temperate
         if (baseTemp <= 0.74f) return 7; //Colder Temperate
         if (baseTemp <= 0.79f) return 8; //Warmer Temperate
         if (baseTemp <= 0.84f) return 9; //Colder subtropical

@@ -2596,8 +2596,8 @@ public class TreeFeatures {
 
         protected static final BlockState EUCALYPTUS_LOG = TreeBlocks.EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState EUCALYPTUS_LEAVES = TreeBlocks.EUCALYPTUS_LEAVES.get().getDefaultState();
-        protected static final BlockState RUSTY_GUM_LOG = TreeBlocks.RUSTY_GUM_LOG.get().getDefaultState();
-        protected static final BlockState RUSTY_GUM_LEAVES = TreeBlocks.RUSTY_GUM_LEAVES.get().getDefaultState();
+        //protected static final BlockState RUSTY_GUM_LOG = TreeBlocks.RUSTY_GUM_LOG.get().getDefaultState();
+        //protected static final BlockState RUSTY_GUM_LEAVES = TreeBlocks.RUSTY_GUM_LEAVES.get().getDefaultState();
 
         protected static final BlockState CASUARINA_LOG = TreeBlocks.CASUARINA_LOG.get().getDefaultState();
         protected static final BlockState CASUARINA_LEAVES = TreeBlocks.CASUARINA_LEAVES.get().getDefaultState();
