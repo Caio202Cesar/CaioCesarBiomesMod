@@ -12,7 +12,7 @@ public class ComposterHandler {
     public static void onCommonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             CompostingHelper.registerCompostable(ModItems.AVOCADO.get(), 0.65F);
-            CompostingHelper.registerCompostable(ModItems.FIGFRUIT.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.FIG.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.WHITE_FIG.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.SYCAMORE_FIG.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.POMEGRANATE.get(), 0.65F);

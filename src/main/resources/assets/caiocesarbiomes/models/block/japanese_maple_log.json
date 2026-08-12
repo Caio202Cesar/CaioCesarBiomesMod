@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "caiocesarbiomes:block/japanese_maple_log_top",
-    "side": "caiocesarbiomes:block/japanese_maple_log"
-  }
-}

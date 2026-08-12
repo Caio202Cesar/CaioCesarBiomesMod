@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/western_hemlock_planks"
-  }
-}

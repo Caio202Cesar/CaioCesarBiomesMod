@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "caiocesarbiomes:block/tea_log_top",
+    "side": "caiocesarbiomes:block/tea_log"
+  }
+}

@@ -31,7 +31,7 @@ public class ModItemGroup {
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.FIGFRUIT.get());
+            return new ItemStack(ModItems.FIG.get());
         }
 
     };

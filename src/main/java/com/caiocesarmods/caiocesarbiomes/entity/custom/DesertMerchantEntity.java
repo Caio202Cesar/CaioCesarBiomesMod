@@ -122,7 +122,7 @@ public class DesertMerchantEntity extends AbstractVillagerEntity {
 
         offers.add(new MerchantOffer(
                 new ItemStack(Items.CACTUS, 15),
-                new ItemStack(ModItems.FIGFRUIT.get(), 35),
+                new ItemStack(ModItems.FIG.get(), 35),
                 5, 2, 0.4F
         ));
 

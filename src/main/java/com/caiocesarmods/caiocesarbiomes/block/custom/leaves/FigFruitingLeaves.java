@@ -54,7 +54,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -71,7 +71,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -88,7 +88,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -106,7 +106,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -123,7 +123,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -140,7 +140,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -160,7 +160,7 @@ public class FigFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.FIGFRUIT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FIG.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);

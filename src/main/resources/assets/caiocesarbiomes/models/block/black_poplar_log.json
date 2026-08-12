@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "caiocesarbiomes:block/poplar_log_top",
-    "side": "caiocesarbiomes:block/poplar_log"
-  }
-}

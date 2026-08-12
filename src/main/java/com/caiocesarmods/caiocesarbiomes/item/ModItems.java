@@ -24,7 +24,7 @@ public class ModItems {
     //Fruits and Vegetables
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.AVOCADO)));
-    public static final RegistryObject<Item> FIGFRUIT = ITEMS.register("figfruit",
+    public static final RegistryObject<Item> FIG = ITEMS.register("fig",
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.FIG)));
     public static final RegistryObject<Item> WHITE_FIG = ITEMS.register("white_fig",
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.WHITE_FIG)));

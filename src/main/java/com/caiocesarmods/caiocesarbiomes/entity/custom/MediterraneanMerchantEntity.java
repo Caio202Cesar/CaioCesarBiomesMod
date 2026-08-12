@@ -69,7 +69,7 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
         ///Fig
         // 64 Fig -> 5 Iron Ingot
         offers.add(new MerchantOffer(
-                new ItemStack(ModItems.FIGFRUIT.get(), 64),
+                new ItemStack(ModItems.FIG.get(), 64),
                 new ItemStack(Items.IRON_INGOT, 5),
                 10, 5, 0.2F
         ));
@@ -110,7 +110,7 @@ public class MediterraneanMerchantEntity extends AbstractVillagerEntity {
 
         offers.add(new MerchantOffer(
                 new ItemStack(Items.CACTUS, 15),
-                new ItemStack(ModItems.FIGFRUIT.get(), 35),
+                new ItemStack(ModItems.FIG.get(), 35),
                 5, 2, 0.4F
         ));
 
