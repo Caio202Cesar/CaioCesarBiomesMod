@@ -19,10 +19,24 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.SAND.getDefaultState()
             )));
 
+    public static ConfiguredSurfaceBuilder<?> MEDITERRANEAN_LIMESTONE_SURFACE = register("mediterranean_limestone_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.GRASS_BLOCK.getDefaultState(),
+                    MiscBlocks.LIMESTONE.get().getDefaultState(), //under material
+                    Blocks.SAND.getDefaultState()
+            )));
+
     public static ConfiguredSurfaceBuilder<?> MEDITERRANEAN_STONY_SHORE_SURFACE = register("mediterranean_stony_shore_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
                     Blocks.COBBLESTONE.getBlock().getDefaultState(), //top material
                     Blocks.COARSE_DIRT.getBlock().getDefaultState(), //under material
+                    Blocks.SAND.getBlock().getDefaultState() //underwater material
+            )));
+
+    public static ConfiguredSurfaceBuilder<?> MEDITERRANEAN_LIMESTONE_SHORE_SURFACE = register("mediterranean_limestone_shore_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    MiscBlocks.LIME_COBBLESTONE.get().getDefaultState(),
+                    MiscBlocks.LIMESTONE.get().getDefaultState(), //under material
                     Blocks.SAND.getBlock().getDefaultState() //underwater material
             )));
 

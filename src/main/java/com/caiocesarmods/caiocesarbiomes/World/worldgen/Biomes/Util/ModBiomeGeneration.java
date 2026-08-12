@@ -29,13 +29,15 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 public class ModBiomeGeneration {
     public static void generateBiomes() {
         ///Mediterranean
-        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, CONIFEROUS);
+        addBiome(MediterraneanConiferSavannaBiome.MEDITERRANEAN_CONIFER_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE,
+                CONIFEROUS, PLATEAU);
         addBiome(OliveGroveBiome.OLIVE_GROVE.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, SPARSE);
         addBiome(MediterraneanOakWoodlandBiome.MEDITERRANEAN_OAK_WOODLAND.get(), BiomeManager.BiomeType.WARM, 25, DENSE, OVERWORLD);
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE);
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY, SAVANNA);
-        addBiome(MediterraneanPineForestBiome.MEDITERRANEAN_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, DRY, DENSE);
+        addBiome(MediterraneanPineForestBiome.MEDITERRANEAN_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, DRY,
+                DENSE, PLATEAU);
 
         ///Humid Subtropical
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);

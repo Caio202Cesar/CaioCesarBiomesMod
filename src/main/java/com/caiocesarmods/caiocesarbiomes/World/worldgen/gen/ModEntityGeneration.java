@@ -24,7 +24,7 @@ public class ModEntityGeneration {
         if (event.getName() == null) return;
 
         // Mediterranean Merchant
-        if (event.getName().equals(MediterraneanConiferSavannaBiomeBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get().getRegistryName())) {
+        if (event.getName().equals(MediterraneanConiferLimestoneBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.MEDITERRANEAN_MERCHANT.get().getClassification()
@@ -72,7 +72,7 @@ public class ModEntityGeneration {
             ));
         }
 
-        if (event.getName().equals(MediterraneanConiferSavannaBiomeBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get().getRegistryName())) {
+        if (event.getName().equals(MediterraneanConiferLimestoneBeach.MEDITERRANEAN_CONIFER_SAVANNA_BEACH.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.MEDITERRANEAN_MERCHANT.get().getClassification()

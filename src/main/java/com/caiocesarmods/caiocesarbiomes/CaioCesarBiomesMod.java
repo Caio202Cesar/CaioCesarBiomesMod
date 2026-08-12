@@ -140,7 +140,7 @@ public class CaioCesarBiomesMod
         EucalyptusSavanna.register(eventBus);
         TropicalDesertBiome.register(eventBus);
         GinkgoForestBiome.register(eventBus);
-        MediterraneanConiferSavannaBiomeBeach.register(eventBus);
+        MediterraneanConiferLimestoneBeach.register(eventBus);
         TemperateDesert.register(eventBus);
         TemperateDesertOasis.register(eventBus);
         TemperateDesertRiver.register(eventBus);

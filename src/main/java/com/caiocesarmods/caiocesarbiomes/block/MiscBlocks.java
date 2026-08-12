@@ -32,6 +32,14 @@ public class MiscBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SNOW).
                     setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.NETHERRACK)));
 
+    public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).
+                    setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> LIME_COBBLESTONE = registerBlock("lime_cobblestone",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).
+                    setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
             () -> new ToasterBlock(AbstractBlock.Properties.create(Material.ANVIL).notSolid()));
 
