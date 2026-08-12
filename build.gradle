@@ -77,6 +77,8 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
     }
+
+    maven {url = uri("C:/Users/ADM/IdeaProjects/CaioClimates-1.16.5/mcmodsrepo")}
 }
 
 dependencies {
@@ -88,6 +90,7 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.153")
 
+    implementation fg.deobf("com.caiocesarmods:caioclimates:1.0.0")
 }
 
 
