@@ -1595,31 +1595,50 @@ public class TreeBlocks {
     public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
             ModLogs::new);
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_LEAVES = registerBlock("oleander_dark_pink_leaves",
-            ModLeaves::new);
+            () -> new OleanderDarkPinkLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_DARK_PINK_DIEBACK_LEAVES));
+    public static final RegistryObject<Block> OLEANDER_DARK_PINK_DIEBACK_LEAVES = registerBlock("oleander_dark_pink_dieback_leaves",
+            () -> new OleanderDarkPinkDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_DARK_PINK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_SAPLING = registerBlock("oleander_dark_pink_sapling",
             DarkPinkOleanderSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_OLEANDER_DARK_PINK_SAPLING = BLOCKS.register("potted_oleander_dark_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_DARK_PINK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_PINK_LEAVES = registerBlock("oleander_pink_leaves",
-            ModLeaves::new);
+            () -> new OleanderPinkLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_PINK_DIEBACK_LEAVES));
+    public static final RegistryObject<Block> OLEANDER_PINK_DIEBACK_LEAVES = registerBlock("oleander_pink_dieback_leaves",
+            () -> new OleanderPinkDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_PINK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_PINK_SAPLING = registerBlock("oleander_pink_sapling",
             PinkOleanderSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_OLEANDER_PINK_SAPLING = BLOCKS.register("potted_oleander_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_PINK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
-            ModLeaves::new);
+            () -> new OleanderRedLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_RED_DIEBACK_LEAVES));
+    public static final RegistryObject<Block> OLEANDER_RED_DIEBACK_LEAVES = registerBlock("oleander_red_dieback_leaves",
+            () -> new OleanderRedDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_RED_LEAVES));
     public static final RegistryObject<Block> OLEANDER_RED_SAPLING = registerBlock("oleander_red_sapling",
             RedOleanderSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_OLEANDER_RED_SAPLING = BLOCKS.register("potted_oleander_red_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_RED_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_WHITE_LEAVES = registerBlock("oleander_white_leaves",
-            ModLeaves::new);
+            () -> new OleanderWhiteLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_WHITE_DIEBACK_LEAVES));
+    public static final RegistryObject<Block> OLEANDER_WHITE_DIEBACK_LEAVES = registerBlock("oleander_white_dieback_leaves",
+            () -> new OleanderWhiteDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_WHITE_LEAVES));
     public static final RegistryObject<Block> OLEANDER_WHITE_SAPLING = registerBlock("oleander_white_sapling",
             WhiteOleanderSapling::new);
     @SuppressWarnings("deprecation")
