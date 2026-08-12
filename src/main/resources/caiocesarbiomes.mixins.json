@@ -7,8 +7,7 @@
     "LayerUtilMixin",
     "BambooFeatureMixin",
     "BiomeAmbienceMixin",
-    "BiomeMixin",
-    "BirchLeavesRandomTickMixin"
+    "BiomeMixin"
   ],
   "client": [],
   "server": [],
