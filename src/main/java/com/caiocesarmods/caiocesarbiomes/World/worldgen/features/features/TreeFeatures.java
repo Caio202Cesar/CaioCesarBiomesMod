@@ -2194,12 +2194,13 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setIgnoreVines().build()));
 
+    /*
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUSTY_GUM_TREE = register("rusty_gum_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.RUSTY_GUM_LOG),
                     new SimpleBlockStateProvider(States.RUSTY_GUM_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
     //Laurel Forest
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHAMPAK_TREE = register("champak_tree",

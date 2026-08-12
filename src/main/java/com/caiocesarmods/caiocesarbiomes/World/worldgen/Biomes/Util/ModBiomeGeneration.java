@@ -1,6 +1,19 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.CoastalSubtropicalDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.CookPineIslandBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSahelBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSavanna;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.MonsoonFicusTropicalForest;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.GravelTundraBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.LushSouthernTundraBiome;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;

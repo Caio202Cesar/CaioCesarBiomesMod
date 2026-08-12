@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.InactiveVolcanicSiteBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.VolcanicSiteBiome;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
@@ -9,7 +9,6 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.Dimension;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.BasaltDeltasFeature;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
