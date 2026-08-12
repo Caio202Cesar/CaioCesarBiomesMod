@@ -278,6 +278,7 @@ public class ModFoods {
             .effect(new EffectInstance(Effects.NAUSEA, 500, 6), 1.0F)
             .effect(new EffectInstance(Effects.HUNGER, 500, 6), 1.0F)
             .effect(new EffectInstance(Effects.BLINDNESS, 500, 6), 1.0F).build();
+    public static final Food LILLY_PILLIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();

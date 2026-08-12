@@ -20,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class LillyPillyFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public LoquatFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public LillyPillyFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -45,11 +45,11 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LILLY_PILLIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -66,7 +66,7 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LILLY_PILLIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -83,7 +83,7 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LILLY_PILLIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -103,12 +103,12 @@ public class LoquatFruitingLeaves extends LeavesBlock implements IForgeShearable
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.LOQUAT.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.LILLY_PILLIES.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreeBlocks.LOQUAT_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

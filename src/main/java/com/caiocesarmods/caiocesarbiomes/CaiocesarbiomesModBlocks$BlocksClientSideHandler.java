@@ -232,5 +232,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         BlackwoodAcaciaSapling.registerRenderLayer();
         CoastLiveOakSapling.registerRenderLayer();
         SandLaurelOakSapling.registerRenderLayer();
+        LillyPillySapling.registerRenderLayer();
     }
 }

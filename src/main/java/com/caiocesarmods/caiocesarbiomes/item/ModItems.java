@@ -190,7 +190,9 @@ public class ModItems {
             () -> new BlockItem(ModItems.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.CROPS)));
     public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
             () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
-    
+    public static final RegistryObject<Item> LILLY_PILLIES = ITEMS.register("lilly_pillies",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.LILLY_PILLIES)));
+
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.SALTY_MANGO)));
