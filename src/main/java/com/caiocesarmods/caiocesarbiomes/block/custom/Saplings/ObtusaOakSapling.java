@@ -1,13 +1,11 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
+import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeat;
+import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
