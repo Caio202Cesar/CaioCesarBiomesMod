@@ -1,9 +1,9 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildDesertBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
@@ -18,58 +18,50 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MonsoonFicusTropicalForest {
+public class CoastalSubtropicalDesertLomas {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> MONSOON_FICUS_FOREST = BIOMES.register("monsoon_ficus_tropical_forest",
-            () -> makeMonsoonFicusTropicalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
+    public static final RegistryObject<Biome> COAST_SUBTROPICAL_DESERT_LOMAS = BIOMES.register("coastal_subtropical_desert_lomas",
+            () -> makeCoastalSubtropicalLomasBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.3f, 0.5f));
 
 
-    private static Biome makeMonsoonFicusTropicalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeCoastalSubtropicalLomasBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-        DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.LLAMA, 10, 5, 7));
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-        biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.DESERT_PYRAMID);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalCitrusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalJungleFruitTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withIndianCoralTrees(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.OIL_PALM_TREE);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        //Hardiness zone 12 - TROPICAL: +0.95F
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(7842047).withFoliageColor(4110351)
-                        .withGrassColor(5877296).setFogColor(7907327)
+        //Hardiness zone 11: 0.9F - 0.94F
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
+                .temperature(0.9F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(13882323).withFoliageColor(5216810)
+                        .withGrassColor(6604607).setFogColor(13882323)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
@@ -80,4 +72,3 @@ public class MonsoonFicusTropicalForest {
         BIOMES.register(eventBus);
     }
 }
-

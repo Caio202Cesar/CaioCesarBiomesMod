@@ -17,29 +17,26 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class EucalyptusSahelBiome {
+public class SocotraTropicalDryland {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<Biome> EUCALYPTUS_SAHEL = BIOMES.register("eucalyptus_sahel",
-            () -> makeSahelBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.1f, 0.126f));
+    public static final RegistryObject<Biome> SOCOTRA_DRYLAND = BIOMES.register("socotra_dryland",
+            () -> makeSocotraBiome(() -> ModConfiguredSurfaceBuilders.STEEPE_SURFACE, 0.125f, 0.5f));
 
-    private static Biome makeSahelBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeSocotraBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
         DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
                 new MobSpawnInfo.Spawners(EntityType.HUSK, 100, 7, 10));
-        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
-                new MobSpawnInfo.Spawners(EntityType.DONKEY, 40, 4, 7));
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
         biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
@@ -54,18 +51,15 @@ public class EucalyptusSahelBiome {
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSocotraTrees(biomegenerationsettings$builder);
 
-        //Hardiness zone 12 - TROPICAL: +0.95F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.9F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(13494015)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
-                        .build())
-                .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
+                        .build()).withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
     }
 
     public static void register(IEventBus eventBus) {

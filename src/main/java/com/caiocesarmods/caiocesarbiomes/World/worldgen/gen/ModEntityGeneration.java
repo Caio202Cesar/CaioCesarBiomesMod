@@ -1,10 +1,13 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateDesert;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSahelBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.SahelBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.TropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraftforge.event.world.BiomeLoadingEvent;

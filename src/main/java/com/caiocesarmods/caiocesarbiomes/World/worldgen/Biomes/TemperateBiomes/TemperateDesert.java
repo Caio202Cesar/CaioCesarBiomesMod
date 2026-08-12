@@ -1,7 +1,7 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
@@ -17,59 +17,54 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class EucalyptusSavanna {
+public class TemperateDesert {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
-    //Replace savanna flora with native eucalyptus savannas in Australia
-    public static final RegistryObject<Biome> EUCALYPTUS_SAVANNA = BIOMES.register("eucalyptus_savanna",
-            () -> makeGenericSavannaBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
+    public static final RegistryObject<Biome> TEMPERATE_DESERT = BIOMES.register("temperate_desert",
+            () -> makeTemperateDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.126f));
 
-    private static Biome makeGenericSavannaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeTemperateDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-        DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
+        DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-        DefaultBiomeFeatures.withSpawnsWithHorseAndDonkey(mobspawninfo$builder);
-
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-        biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.DESERT_PYRAMID);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withNormalGrassPatch(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPlainsEucalyptusTrees(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSavannaPlants(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
+
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TEMPERATE_DESERT_TREES);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(329011).withSkyColor(7907327).withFoliageColor(9218863)
-                        .withGrassColor(12564309).setFogColor(12638463)
+        //Hardiness zone 8: 0.75F - 0.79F
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
+                .temperature(0.79F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
+                        .withGrassColor(12564309).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
     }
+
 
     public static void register(IEventBus eventBus) {
         BIOMES.register(eventBus);

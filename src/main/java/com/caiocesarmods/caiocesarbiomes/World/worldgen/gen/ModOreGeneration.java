@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.VolcanicSiteBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.VolcanicSiteBiome;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;

@@ -1,19 +1,21 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.CoastalSubtropicalDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildDesertBiomes.CoastalSubtropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.VolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.CookPineIslandBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSahelBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSavanna;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.MonsoonFicusTropicalForest;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.MagellanicSubpolarForestBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateDesert;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateRainforest;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.GravelTundraBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.LushSouthernTundraBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.TussockTundraBiome;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -33,7 +35,7 @@ public class ModBiomeGeneration {
         addBiome(MediterraneanScrublandBiome.MEDITERRANEAN_SCRUBLAND.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE);
         addBiome(OleanderGardensBiome.OLEANDER_GARDENS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE);
         addBiome(CorkOakSavannaBiome.CORK_OAK_SAVANNA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, DRY, SAVANNA);
-        addBiome(SubtropicalPineDryForestBiome.MEDITERRANEAN_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, DRY, DENSE);
+        addBiome(MediterraneanPineForestBiome.MEDITERRANEAN_PINE_FOREST.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, FOREST, DRY, DENSE);
 
         ///Humid Subtropical
         addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
@@ -74,7 +76,7 @@ public class ModBiomeGeneration {
         ///Cold temperate
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, FOREST, LUSH, COLD);
         addBiome(HemiborealForestBiome.HEMIBOREAL_FOREST.get(), BiomeManager.BiomeType.COOL, 25, OVERWORLD, COLD);
-        addBiome(SouthernBeechForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, COLD);
+        addBiome(MagellanicSubpolarForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, COLD);
         addBiome(GinkgoForestBiome.GINKGO_FOREST.get(), BiomeManager.BiomeType.COOL, 18, OVERWORLD, FOREST, LUSH);
 
         /// Warm temperate
