@@ -25,8 +25,7 @@ public class HardinessZones {
         if (baseTemp <= 0.84f) return 9; //Colder subtropical
         if (baseTemp <= 0.89f) return 10; //Warmer Subtropical
         if (baseTemp <= 0.94f) return 11;//Border tropical
-        if (baseTemp <= 1.6f) return 12;//Tropical
-        return 13; //Schorching
+        return 12;//Tropical
     }
 
     private static final Map<ResourceLocation, String> SAPLING_ZONES = new HashMap<>();
