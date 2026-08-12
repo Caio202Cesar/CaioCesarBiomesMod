@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
-import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeat;import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeatHelper;
+import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeat;
+import com.caiocesarmods.caioclimates.Climate.SummerHeat.SummerHeatHelper;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

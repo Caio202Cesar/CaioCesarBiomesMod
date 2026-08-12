@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.Seasons.SeasonalPhase;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.HardinessZone.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.util.math.BlockPos;

@@ -1,6 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.HardinessZone.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.VineBlock;
@@ -17,7 +17,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 
 import javax.annotation.Nullable;
 import java.util.List;
