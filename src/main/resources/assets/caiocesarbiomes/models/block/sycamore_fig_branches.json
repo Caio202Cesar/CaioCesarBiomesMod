@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/sycamore_fig_branches",
-    "particle": "caiocesarbiomes:block/sycamore_fig_branches"
-  }
-}
