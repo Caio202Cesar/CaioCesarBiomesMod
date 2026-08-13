@@ -42,7 +42,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ASPEN_FALL_LEAVES = registerBlock("aspen_fall_leaves",
             () -> new AspenFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_WINTER_BRANCHES));
-    public static final RegistryObject<Block> ASPEN_WINTER_BRANCHES = registerBlock("aspen_winter_branches",
+    public static final RegistryObject<Block> ASPEN_WINTER_BRANCHES = registerBlock("aspen_branches",
             () -> new AspenWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ASPEN_LEAVES));
     public static final RegistryObject<Block> ASPEN_SAPLING = registerBlock("aspen_sapling",
@@ -140,7 +140,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> JAPANESE_MAPLE_LEAVES = registerBlock("japanese_maple_leaves",
             () -> new JapaneseMapleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.JAPANESE_MAPLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> JAPANESE_MAPLE_WINTER_BRANCHES = registerBlock("japanese_maple_winter_branches",
+    public static final RegistryObject<Block> JAPANESE_MAPLE_WINTER_BRANCHES = registerBlock("japanese_maple_branches",
             () -> new JapaneseMapleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.JAPANESE_MAPLE_LEAVES));
     public static final RegistryObject<Block> JAPANESE_MAPLE_SAPLING = registerBlock("japanese_maple_sapling",
@@ -168,7 +168,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CHERRY_PLUM_FALL_LEAVES = registerBlock("cherry_plum_fall_leaves",
             () -> new CherryPlumFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CHERRY_PLUM_WINTER_BRANCHES));
-    public static final RegistryObject<Block> CHERRY_PLUM_WINTER_BRANCHES = registerBlock("cherry_plum_winter_branches",
+    public static final RegistryObject<Block> CHERRY_PLUM_WINTER_BRANCHES = registerBlock("cherry_plum_branches",
             () -> new CherryPlumWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> CHERRY_PLUM_SAPLING = registerBlock("cherry_plum_sapling",
@@ -184,7 +184,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PEACH_FALL_LEAVES = registerBlock("peach_fall_leaves",
             () -> new PeachFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PEACH_WINTER_BRANCHES = registerBlock("peach_winter_branches",
+    public static final RegistryObject<Block> PEACH_WINTER_BRANCHES = registerBlock("peach_branches",
             () -> new PeachWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PEACH_BLOSSOM));
     public static final RegistryObject<Block> PEACH_BLOSSOM = registerBlock("peach_blossom",
@@ -206,7 +206,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ALMOND_FALL_LEAVES = registerBlock("almond_fall_leaves",
             () -> new AlmondFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_WINTER_BRANCHES));
-    public static final RegistryObject<Block> ALMOND_WINTER_BRANCHES = registerBlock("almond_winter_branches",
+    public static final RegistryObject<Block> ALMOND_WINTER_BRANCHES = registerBlock("almond_branches",
             () -> new AlmondWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ALMOND_BLOSSOM));
     public static final RegistryObject<Block> ALMOND_BLOSSOM = registerBlock("almond_blossom",
@@ -468,7 +468,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PINK_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_pink_fall_leaves",
             () -> new PinkCrabappleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRABAPPLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PINK_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_pink_winter_branches",
+    public static final RegistryObject<Block> PINK_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_pink_branches",
             () -> new PinkCrabappleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRABAPPLE_BLOSSOM));
     public static final RegistryObject<Block> PINK_CRABAPPLE_SAPLING = registerBlock("crabapple_pink_sapling",
@@ -489,7 +489,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_red_fall_leaves",
             () -> new RedCrabappleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> RED_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_red_winter_branches",
+    public static final RegistryObject<Block> RED_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_red_branches",
             () -> new RedCrabappleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRABAPPLE_BLOSSOM));
     public static final RegistryObject<Block> RED_CRABAPPLE_SAPLING = registerBlock("crabapple_red_sapling",
@@ -510,7 +510,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WHITE_CRABAPPLE_FALL_LEAVES = registerBlock("crabapple_white_fall_leaves",
             () -> new WhiteCrabappleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> WHITE_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_white_winter_branches",
+    public static final RegistryObject<Block> WHITE_CRABAPPLE_WINTER_BRANCHES = registerBlock("crabapple_white_branches",
             () -> new WhiteCrabappleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRABAPPLE_BLOSSOM));
     public static final RegistryObject<Block> WHITE_CRABAPPLE_SAPLING = registerBlock("crabapple_white_sapling",
@@ -535,10 +535,10 @@ public class TreeBlocks {
     public static final RegistryObject<Block> HAWTHORN_FALL_FRUITING_LEAVES = registerBlock("hawthorn_fall_fruiting_leaves",
             () -> new HawthornFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> HAWTHORN_WINTER_BRANCHES = registerBlock("hawthorn_winter_branches",
+    public static final RegistryObject<Block> HAWTHORN_WINTER_BRANCHES = registerBlock("hawthorn_branches",
             () -> new HawthornWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> HAWTHORN_WINTER_FRUITING_BRANCHES = registerBlock("hawthorn_winter_fruiting_branches",
+    public static final RegistryObject<Block> HAWTHORN_WINTER_FRUITING_BRANCHES = registerBlock("hawthorn_fruiting_branches",
             () -> new HawthornWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAWTHORN_FLOWERING_LEAVES));
     public static final RegistryObject<Block> HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
@@ -580,7 +580,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BLACK_POPLAR_FALL_LEAVES = registerBlock("black_poplar_fall_leaves",
             () -> new BlackPoplarFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POPLAR_WINTER_BRANCHES));
-    public static final RegistryObject<Block> BLACK_POPLAR_WINTER_BRANCHES = registerBlock("black_poplar_winter_branches",
+    public static final RegistryObject<Block> BLACK_POPLAR_WINTER_BRANCHES = registerBlock("black_poplar_branches",
             () -> new BlackPoplarWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BLACK_POPLAR_LEAVES));
     public static final RegistryObject<Block> BLACK_POPLAR_SAPLING = registerBlock("black_poplar_sapling",
@@ -596,7 +596,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FREMONT_POPLAR_FALL_LEAVES = registerBlock("fremont_poplar_fall_leaves",
             () -> new FremontPoplarAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_WINTER_BRANCHES));
-    public static final RegistryObject<Block> FREMONT_POPLAR_WINTER_BRANCHES = registerBlock("fremont_poplar_winter_branches",
+    public static final RegistryObject<Block> FREMONT_POPLAR_WINTER_BRANCHES = registerBlock("fremont_poplar_branches",
             () -> new FremontPoplarWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FREMONT_POPLAR_LEAVES));
     public static final RegistryObject<Block> FREMONT_POPLAR_SAPLING = registerBlock("fremont_poplar_sapling",
@@ -655,7 +655,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BALD_CYPRESS_AUTUMN_LEAVES = registerBlock("bald_cypress_autumn_leaves",
             () -> new BaldCypressAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_WINTER_LEAVES));
-    public static final RegistryObject<Block> BALD_CYPRESS_WINTER_LEAVES = registerBlock("bald_cypress_winter_leaves",
+    public static final RegistryObject<Block> BALD_CYPRESS_WINTER_LEAVES = registerBlock("bald_cypress_leaves",
             () -> new BaldCypressWinterLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_LEAVES));
     public static final RegistryObject<Block> BALD_CYPRESS_AERIAL_ROOT_LARGE = registerBlock("bald_cypress_aerial_root_large",
@@ -710,7 +710,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COOPER_BEECH_FALL_LEAVES = registerBlock("cooper_beech_fall_leaves",
             () -> new CooperBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COOPER_BEECH_WINTER_BRANCHES));
-    public static final RegistryObject<Block> COOPER_BEECH_WINTER_BRANCHES = registerBlock("cooper_beech_winter_branches",
+    public static final RegistryObject<Block> COOPER_BEECH_WINTER_BRANCHES = registerBlock("cooper_beech_branches",
             () -> new CooperBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COOPER_BEECH_LEAVES));
 
@@ -969,7 +969,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_red_fall_leaves",
             () -> new RedCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRAPE_MYRTLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> RED_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_red_winter_branches",
+    public static final RegistryObject<Block> RED_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_red_branches",
             () -> new RedCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_CRAPE_MYRTLE_SPRING_LEAVES));
     public static final RegistryObject<Block> RED_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_red_sapling",
@@ -988,7 +988,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_white_fall_leaves",
             () -> new WhiteCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRAPE_MYRTLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_white_winter_branches",
+    public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_white_branches",
             () -> new WhiteCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES));
     public static final RegistryObject<Block> WHITE_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_white_sapling",
@@ -1007,7 +1007,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_purple_fall_leaves",
             () -> new PurpleCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_CRAPE_MYRTLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_purple_winter_branches",
+    public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_purple_branches",
             () -> new PurpleCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_CRAPE_MYRTLE_SPRING_LEAVES));
     public static final RegistryObject<Block> PURPLE_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_purple_sapling",
@@ -1026,7 +1026,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_FALL_LEAVES = registerBlock("crape_myrtle_pink_fall_leaves",
             () -> new PinkCrapeMyrtleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRAPE_MYRTLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_pink_winter_branches",
+    public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_WINTER_BRANCHES = registerBlock("crape_myrtle_pink_branches",
             () -> new PinkCrapeMyrtleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES));
     public static final RegistryObject<Block> PINK_CRAPE_MYRTLE_SAPLING = registerBlock("crape_myrtle_pink_sapling",
@@ -1159,7 +1159,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ELDERBERRY_FALL_FRUITING_LEAVES = registerBlock("elderberry_fall_fruiting_leaves",
             () -> new ElderberryFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_WINTER_BRANCHES));
-    public static final RegistryObject<Block> ELDERBERRY_WINTER_BRANCHES = registerBlock("elderberry_winter_branches",
+    public static final RegistryObject<Block> ELDERBERRY_WINTER_BRANCHES = registerBlock("elderberry_branches",
             () -> new ElderberryWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ELDERBERRY_LEAVES));
     public static final RegistryObject<Block> ELDERBERRY_SAPLING = registerBlock("elderberry_sapling",
@@ -1177,7 +1177,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> INDIAN_CORAL_LEAVES = registerBlock("indian_coral_leaves",
             () -> new IndianCoralLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.INDIAN_CORAL_DRIED_BRANCHES));
-    public static final RegistryObject<Block> INDIAN_CORAL_DRIED_BRANCHES = registerBlock("indian_coral_dried_branches",
+    public static final RegistryObject<Block> INDIAN_CORAL_DRIED_BRANCHES = registerBlock("indian_coral_branches",
             () -> new IndianCoralDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.INDIAN_CORAL_LEAVES));
     public static final RegistryObject<Block> INDIAN_CORAL_SAPLING = registerBlock("indian_coral_sapling",
@@ -1202,7 +1202,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FIG_FALL_LEAVES = registerBlock("fig_fall_leaves",
             () -> new FigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_WINTER_BRANCHES));
-    public static final RegistryObject<Block> FIG_WINTER_BRANCHES = registerBlock("fig_winter_branches",
+    public static final RegistryObject<Block> FIG_WINTER_BRANCHES = registerBlock("fig_branches",
             () -> new FigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
 
@@ -1215,7 +1215,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WHITE_FIG_FALL_LEAVES = registerBlock("fig_white_fall_leaves",
             () -> new WhiteFigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_WINTER_BRANCHES));
-    public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("fig_white_winter_branches",
+    public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("fig_white_branches",
             () -> new WhiteFigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
@@ -1281,7 +1281,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> GINKGO_FALL_LEAVES = registerBlock("ginkgo_fall_leaves",
             () -> new GinkgoFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GINKGO_WINTER_BRANCHES));
-    public static final RegistryObject<Block> GINKGO_WINTER_BRANCHES = registerBlock("ginkgo_winter_branches",
+    public static final RegistryObject<Block> GINKGO_WINTER_BRANCHES = registerBlock("ginkgo_branches",
             () -> new GinkgoWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GINKGO_LEAVES));
 
@@ -1309,7 +1309,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> HAZELNUT_FALL_LEAVES = registerBlock("hazelnut_fall_leaves",
             () -> new HazelnutFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_WINTER_BRANCHES));
-    public static final RegistryObject<Block> HAZELNUT_WINTER_BRANCHES = registerBlock("hazelnut_winter_branches",
+    public static final RegistryObject<Block> HAZELNUT_WINTER_BRANCHES = registerBlock("hazelnut_branches",
             () -> new HazelnutWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HAZELNUT_SPRING_BLOOM));
     public static final RegistryObject<Block> HAZELNUT_SPRING_BLOOM = registerBlock("hazelnut_spring_bloom",
@@ -1371,7 +1371,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
             () -> new FicusRootsPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BROWN).tickRandomly().
                     doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.VINE)));
-
+    //Weeping Fig
     public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
             UrostigmaLeaves::new);
     public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
@@ -1380,7 +1380,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_WEEPING_FIG_SAPLING = BLOCKS.register("potted_weeping_fig_sapling",
             () -> new FlowerPotBlock(TreeBlocks.WEEPING_FIG_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Indian laurel
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
             UrostigmaLeaves::new);
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
@@ -1389,7 +1389,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_INDIAN_LAUREL_SAPLING = BLOCKS.register("potted_indian_laurel_sapling",
             () -> new FlowerPotBlock(TreeBlocks.INDIAN_LAUREL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Rubber tree
     public static final RegistryObject<Block> RUBBER_TREE_LEAVES = registerBlock("rubber_tree_leaves",
             UrostigmaLeaves::new);
     public static final RegistryObject<Block> RUBBER_TREE_SAPLING = registerBlock("rubber_tree_sapling",
@@ -1416,7 +1416,7 @@ public class TreeBlocks {
 
 
 
-///K
+    ///K
 
 
 
@@ -1450,11 +1450,10 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_FALL_LEAVES));
     public static final RegistryObject<Block> LARCH_FALL_LEAVES = registerBlock("larch_fall_leaves",
             () -> new LarchFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_WINTER_LEAVES));
-    public static final RegistryObject<Block> LARCH_WINTER_BRANCHES = registerBlock("larch_winter_branches",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_WINTER_BRANCHES));
+    public static final RegistryObject<Block> LARCH_WINTER_BRANCHES = registerBlock("larch_branches",
             () -> new LarchWinterLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LARCH_LEAVES));
-
     public static final RegistryObject<Block> LARCH_SAPLING = registerBlock("larch_sapling",
             LarchSapling::new);
     @SuppressWarnings("deprecation")
@@ -1499,7 +1498,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MARULA_FRUITING_LEAVES = registerBlock("marula_fruiting_leaves",
             () -> new MarulaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
-    public static final RegistryObject<Block> MARULA_DRIED_BRANCHES = registerBlock("marula_dried_branches",
+    public static final RegistryObject<Block> MARULA_DRIED_BRANCHES = registerBlock("marula_branches",
             () -> new MarulaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MARULA_LEAVES));
 
@@ -1523,7 +1522,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MESQUITE_LEAVES = registerBlock("mesquite_leaves",
             () -> new MesquiteLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_winter_branches",
+    public static final RegistryObject<Block> MESQUITE_WINTER_BRANCHES = registerBlock("mesquite_branches",
             () -> new MesquiteWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MESQUITE_LEAVES));
     public static final RegistryObject<Block> MESQUITE_SAPLING = registerBlock("mesquite_sapling",
@@ -1566,7 +1565,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> MULBERRY_FALL_LEAVES = registerBlock("mulberry_fall_leaves",
             () -> new MulberryFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MULBERRY_WINTER_BRANCHES)); //Only subtropical - temperate climate
-    public static final RegistryObject<Block> MULBERRY_WINTER_BRANCHES = registerBlock("mulberry_winter_branches",
+    public static final RegistryObject<Block> MULBERRY_WINTER_BRANCHES = registerBlock("mulberry_branches",
             () -> new MulberryWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MULBERRY_LEAVES));
     public static final RegistryObject<Block> MULBERRY_SAPLING = registerBlock("mulberry_sapling",
@@ -1602,7 +1601,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> SOUTHERN_BEECH_FALL_LEAVES = registerBlock("southern_beech_fall_leaves",
             () -> new SouthernBeechFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_WINTER_BRANCHES));
-    public static final RegistryObject<Block> SOUTHERN_BEECH_WINTER_BRANCHES = registerBlock("southern_beech_winter_branches",
+    public static final RegistryObject<Block> SOUTHERN_BEECH_WINTER_BRANCHES = registerBlock("southern_beech_branches",
             () -> new SouthernBeechWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SOUTHERN_BEECH_LEAVES));
 
@@ -1721,7 +1720,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PECAN_FALL_LEAVES = registerBlock("pecan_fall_leaves",
             () -> new PecanFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PECAN_WINTER_BRANCHES = registerBlock("pecan_winter_branches",
+    public static final RegistryObject<Block> PECAN_WINTER_BRANCHES = registerBlock("pecan_branches",
             () -> new PecanWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PECAN_LEAVES));
     public static final RegistryObject<Block> PECAN_SAPLING = registerBlock("pecan_sapling",
@@ -1753,10 +1752,10 @@ public class TreeBlocks {
             () -> new PersimmonFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PERSIMMON_WINTER_FRUITING_BRANCHES));
 
-    public static final RegistryObject<Block> PERSIMMON_WINTER_BRANCHES = registerBlock("persimmon_winter_branches",
+    public static final RegistryObject<Block> PERSIMMON_WINTER_BRANCHES = registerBlock("persimmon_branches",
             () -> new PersimmonWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PERSIMMON_LEAVES));
-    public static final RegistryObject<Block> PERSIMMON_WINTER_FRUITING_BRANCHES = registerBlock("persimmon_winter_fruiting_branches",
+    public static final RegistryObject<Block> PERSIMMON_WINTER_FRUITING_BRANCHES = registerBlock("persimmon_fruiting_branches",
             () -> new PersimmonWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PERSIMMON_WINTER_BRANCHES));
 
@@ -1787,7 +1786,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PISTACHIO_FRUITING_LEAVES = registerBlock("pistachio_fruiting_leaves",
             () -> new PistachioFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
-    public static final RegistryObject<Block> PISTACHIO_WINTER_BRANCHES = registerBlock("pistachio_winter_branches",
+    public static final RegistryObject<Block> PISTACHIO_WINTER_BRANCHES = registerBlock("pistachio_branches",
             () -> new PistachioWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PISTACHIO_LEAVES));
     public static final RegistryObject<Block> PISTACHIO_SAPLING = registerBlock("pistachio_sapling",
@@ -1807,7 +1806,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PLANE_FALL_LEAVES = registerBlock("plane_fall_leaves",
             () -> new PlaneFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PLANE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> PLANE_WINTER_BRANCHES = registerBlock("plane_winter_branches",
+    public static final RegistryObject<Block> PLANE_WINTER_BRANCHES = registerBlock("plane_branches",
             () -> new PlaneWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PLANE_LEAVES));
 
@@ -1853,10 +1852,10 @@ public class TreeBlocks {
             () -> new PomegranateFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_FRUITING_BRANCHES));
 
-    public static final RegistryObject<Block> POMEGRANATE_WINTER_BRANCHES = registerBlock("pomegranate_winter_branches",
+    public static final RegistryObject<Block> POMEGRANATE_WINTER_BRANCHES = registerBlock("pomegranate_branches",
             () -> new PomegranateWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_LEAVES));
-    public static final RegistryObject<Block> POMEGRANATE_WINTER_FRUITING_BRANCHES = registerBlock("pomegranate_winter_fruiting_branches",
+    public static final RegistryObject<Block> POMEGRANATE_WINTER_FRUITING_BRANCHES = registerBlock("pomegranate_fruiting_branches",
             () -> new PomegranateWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.POMEGRANATE_WINTER_BRANCHES)); //Pomegranate actually drop most of their fruit in fall.
 
@@ -1885,7 +1884,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_KAPOK_LEAVES = registerBlock("red_kapok_leaves",
             () -> new RedKapokLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_WINTER_BRANCHES));
-    public static final RegistryObject<Block> RED_KAPOK_WINTER_BRANCHES = registerBlock("red_kapok_winter_branches",
+    public static final RegistryObject<Block> RED_KAPOK_WINTER_BRANCHES = registerBlock("red_kapok_branches",
             () -> new RedKapokWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_KAPOK_FLOWERING_BRANCHES));
     public static final RegistryObject<Block> RED_KAPOK_FLOWERING_BRANCHES = registerBlock("red_kapok_flowering_branches",
@@ -1909,7 +1908,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_OAK_FALL_LEAVES = registerBlock("red_oak_fall_leaves",
             () -> new RedOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_OAK_WINTER_BRANCHES));
-    public static final RegistryObject<Block> RED_OAK_WINTER_BRANCHES = registerBlock("red_oak_winter_branches",
+    public static final RegistryObject<Block> RED_OAK_WINTER_BRANCHES = registerBlock("red_oak_branches",
             () -> new RedOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_OAK_LEAVES));
     public static final RegistryObject<Block> RED_OAK_SAPLING = registerBlock("red_oak_sapling",
@@ -1927,7 +1926,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_MAPLE_FALL_LEAVES = registerBlock("red_maple_fall_leaves",
             () -> new RedMapleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_MAPLE_WINTER_BRANCHES));
-    public static final RegistryObject<Block> RED_MAPLE_WINTER_BRANCHES = registerBlock("red_maple_winter_branches",
+    public static final RegistryObject<Block> RED_MAPLE_WINTER_BRANCHES = registerBlock("red_maple_branches",
             () -> new RedMapleWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_MAPLE_LEAVES));
 
@@ -1961,10 +1960,10 @@ public class TreeBlocks {
             () -> new RowanFallFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
 
-    public static final RegistryObject<Block> ROWAN_WINTER_BRANCHES = registerBlock("rowan_winter_branches",
+    public static final RegistryObject<Block> ROWAN_WINTER_BRANCHES = registerBlock("rowan_branches",
             () -> new RowanWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> ROWAN_WINTER_FRUITING_BRANCHES = registerBlock("rowan_winter_fruiting_branches",
+    public static final RegistryObject<Block> ROWAN_WINTER_FRUITING_BRANCHES = registerBlock("rowan_fruiting_branches",
             () -> new RowanWinterFruitingBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ROWAN_FLOWERING_LEAVES));
 
@@ -2146,7 +2145,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> SWEET_CHESTNUT_FALL_LEAVES = registerBlock("sweet_chestnut_fall_leaves",
             () -> new SweetChestnutFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SWEET_CHESTNUT_WINTER_BRANCHES));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_WINTER_BRANCHES = registerBlock("sweet_chestnut_winter_branches",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_WINTER_BRANCHES = registerBlock("sweet_chestnut_branches",
             () -> new SweetChestnutWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SWEET_CHESTNUT_LEAVES));
 
@@ -2190,7 +2189,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> TROPICAL_ALMOND_FALL_LEAVES = registerBlock("tropical_almond_fall_leaves",
             () -> new TropicalAlmondFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_DRIED_BRANCHES));
-    public static final RegistryObject<Block> TROPICAL_ALMOND_DRIED_BRANCHES = registerBlock("tropical_almond_dried_branches",
+    public static final RegistryObject<Block> TROPICAL_ALMOND_DRIED_BRANCHES = registerBlock("tropical_almond_branches",
             () -> new TropicalAlmondDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TROPICAL_ALMOND_NEW_LEAVES));
 
@@ -2220,7 +2219,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WALNUT_FALL_LEAVES = registerBlock("walnut_fall_leaves",
             () -> new WalnutFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WALNUT_WINTER_BRANCHES));
-    public static final RegistryObject<Block> WALNUT_WINTER_BRANCHES = registerBlock("walnut_winter_branches",
+    public static final RegistryObject<Block> WALNUT_WINTER_BRANCHES = registerBlock("walnut_branches",
             () -> new WalnutWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WALNUT_LEAVES));
 
@@ -2316,7 +2315,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> RED_PLUMERIA_LEAVES = registerBlock("plumeria_red_leaves",
             () -> new RedPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_DRIED_BRANCHES));
-    public static final RegistryObject<Block> RED_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_red_dried_branches",
+    public static final RegistryObject<Block> RED_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_red_branches",
             () -> new RedPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> RED_PLUMERIA_SAPLING = registerBlock("plumeria_red_sapling",
@@ -2329,7 +2328,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WHITE_PLUMERIA_LEAVES = registerBlock("plumeria_white_leaves",
             () -> new WhitePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_DRIED_BRANCHES));
-    public static final RegistryObject<Block> WHITE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_white_dried_branches",
+    public static final RegistryObject<Block> WHITE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_white_branches",
             () -> new WhitePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> WHITE_PLUMERIA_SAPLING = registerBlock("plumeria_white_sapling",
@@ -2342,7 +2341,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> YELLOW_PLUMERIA_LEAVES = registerBlock("plumeria_yellow_leaves",
             () -> new YellowPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_DRIED_BRANCHES));
-    public static final RegistryObject<Block> YELLOW_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_yellow_dried_branches",
+    public static final RegistryObject<Block> YELLOW_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_yellow_branches",
             () -> new YellowPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> YELLOW_PLUMERIA_SAPLING = registerBlock("plumeria_yellow_sapling",
@@ -2355,7 +2354,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PINK_PLUMERIA_LEAVES = registerBlock("plumeria_pink_leaves",
             () -> new PinkPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_DRIED_BRANCHES));
-    public static final RegistryObject<Block> PINK_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_pink_dried_branches",
+    public static final RegistryObject<Block> PINK_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_pink_branches",
             () -> new PinkPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> PINK_PLUMERIA_SAPLING = registerBlock("plumeria_pink_sapling",
@@ -2368,7 +2367,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ORANGE_PLUMERIA_LEAVES = registerBlock("plumeria_orange_leaves",
             () -> new OrangePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_DRIED_BRANCHES));
-    public static final RegistryObject<Block> ORANGE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_orange_dried_branches",
+    public static final RegistryObject<Block> ORANGE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_orange_branches",
             () -> new OrangePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_LEAVES));
 
@@ -2396,7 +2395,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PINK_IVORY_FRUITING_LEAVES = registerBlock("pink_ivory_fruiting_leaves",
             () -> new PinkIvoryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
-    public static final RegistryObject<Block> PINK_IVORY_DRIED_BRANCHES = registerBlock("pink_ivory_dried_branches",
+    public static final RegistryObject<Block> PINK_IVORY_DRIED_BRANCHES = registerBlock("pink_ivory_branches",
             () -> new PinkIvoryDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_IVORY_LEAVES));
 
@@ -2416,7 +2415,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ORCHID_TREE_LEAVES = registerBlock("orchid_tree_leaves",
             () -> new OrchidTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> ORCHID_TREE_WINTER_BRANCHES = registerBlock("orchid_tree_winter_branches",
+    public static final RegistryObject<Block> ORCHID_TREE_WINTER_BRANCHES = registerBlock("orchid_tree_branches",
             () -> new OrchidTreeDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES));
     public static final RegistryObject<Block> ORCHID_TREE_FLOWERING_BRANCHES = registerBlock("orchid_tree_flowering_branches",
@@ -2462,7 +2461,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> TEAK_FALL_LEAVES = registerBlock("teak_fall_leaves",
             () -> new TeakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_DRIED_BRANCHES));
-    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_dried_branches",
+    public static final RegistryObject<Block> TEAK_DRIED_BRANCHES = registerBlock("teak_branches",
             () -> new TeakDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEAK_LEAVES));
 
@@ -2626,7 +2625,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> LENGA_FALL_LEAVES = registerBlock("lenga_fall_leaves",
             () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_WINTER_BRANCHES));
-    public static final RegistryObject<Block> LENGA_WINTER_BRANCHES = registerBlock("lenga_winter_branches",
+    public static final RegistryObject<Block> LENGA_WINTER_BRANCHES = registerBlock("lenga_branches",
             () -> new LengaWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_LEAVES));
     public static final RegistryObject<Block> LENGA_SAPLING = registerBlock("lenga_sapling",
@@ -2741,7 +2740,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> OBTUSA_OAK_FALL_LEAVES = registerBlock("obtusa_oak_fall_leaves",
             () -> new ObtusaOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_WINTER_BRANCHES));
-    public static final RegistryObject<Block> OBTUSA_OAK_WINTER_BRANCHES = registerBlock("obtusa_oak_winter_branches",
+    public static final RegistryObject<Block> OBTUSA_OAK_WINTER_BRANCHES = registerBlock("obtusa_oak_branches",
             () -> new ObtusaOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_LEAVES));
     public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",

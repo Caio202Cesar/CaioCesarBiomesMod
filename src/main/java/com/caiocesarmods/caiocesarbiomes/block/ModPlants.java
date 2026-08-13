@@ -96,7 +96,7 @@ public class ModPlants {
             KiwiFloweringVine::new);
     public static final RegistryObject<Block> KIWI_FRUITING_VINE = registerBlock("kiwi_fruiting_vine",
             KiwiFruitingVine::new);
-    public static final RegistryObject<Block> KIWI_WINTER_DRY_VINE = registerBlock("kiwi_winter_dry_vine",
+    public static final RegistryObject<Block> KIWI_WINTER_DRY_VINE = registerBlock("kiwi_dry_vine",
             KiwiWinterDryVine::new);
 
     public static final RegistryObject<Block> KIWI_GOLD_VINE = registerBlock("kiwi_gold_vine",
@@ -105,7 +105,7 @@ public class ModPlants {
             KiwiGoldFloweringVine::new);
     public static final RegistryObject<Block> KIWI_GOLD_FRUITING_VINE = registerBlock("kiwi_gold_fruiting_vine",
             KiwiGoldFruitingVine::new);
-    public static final RegistryObject<Block> KIWI_GOLD_WINTER_DRY_VINE = registerBlock("kiwi_gold_winter_dry_vine",
+    public static final RegistryObject<Block> KIWI_GOLD_WINTER_DRY_VINE = registerBlock("kiwi_gold_dry_vine",
             KiwiGoldWinterDryVine::new);
 
     public static final RegistryObject<Block> PEPPERCORN_VINE = registerBlock("peppercorn_vine",

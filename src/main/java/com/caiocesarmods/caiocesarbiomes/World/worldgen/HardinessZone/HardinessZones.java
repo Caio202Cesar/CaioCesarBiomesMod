@@ -244,11 +244,11 @@ public class HardinessZones {
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_vine"), "HZ(min) 7, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_flowering_vine"), "HZ(min) 7, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_fruiting_vine"), "HZ(min) 7, HZ(max) 9");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_winter_dry_vine"), "HZ(min) 7, HZ(max) 9");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_dry_vine"), "HZ(min) 7, HZ(max) 9");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_gold_vine"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_gold_flowering_vine"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_gold_fruiting_vine"), "HZ(min) 8, HZ(max) 10");
-        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_gold_winter_dry_vine"), "HZ(min) 8, HZ(max) 10");
+        SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "kiwi_gold_dry_vine"), "HZ(min) 8, HZ(max) 10");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_vine"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_fruiting_vine"), "HZ(min) 10, HZ(max) 12");
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "peppercorn_ripe_fruiting_vine"), "HZ(min) 10, HZ(max) 12");
