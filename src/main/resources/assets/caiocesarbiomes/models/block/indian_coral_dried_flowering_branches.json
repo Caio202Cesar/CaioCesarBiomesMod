@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/indian_coral_dried_flowering_branches",
-    "particle": "caiocesarbiomes:block/indian_coral_dried_flowering_branches"
-  }
-}
