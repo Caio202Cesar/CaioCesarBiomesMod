@@ -36,13 +36,11 @@ public class ModWood {
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
 
+    //Lythraceae woods, including pomegranate
     public static final RegistryObject<Block> CRAPE_MYRTLE_PLANKS = registerBlock("crape_myrtle_planks",
-            ModPlanks::new);
+            ModPlanks::new); //Pomegranate planks too
 
     public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
-            ModPlanks::new);
-
-    public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
             ModPlanks::new);
 
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
