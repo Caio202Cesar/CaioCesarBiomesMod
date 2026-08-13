@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "caiocesarbiomes:block/kiwi_winter_dry_vine",
-    "vine": "caiocesarbiomes:block/kiwi_winter_dry_vine"
+    "particle": "caiocesarbiomes:block/kiwi_dry_vine",
+    "vine": "caiocesarbiomes:block/kiwi_dry_vine"
   },
   "elements": [
     {   "from": [ 0, 15.2, 0 ],

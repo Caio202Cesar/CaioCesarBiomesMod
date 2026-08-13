@@ -1,0 +1,12 @@
+{
+  "variants":{
+    "":[
+      {
+        "model": "caiocesarbiomes:block/indian_coral_branches"
+      },
+      {
+        "model": "caiocesarbiomes:block/indian_coral_flowering_branches"
+      }
+    ]
+  }
+}
