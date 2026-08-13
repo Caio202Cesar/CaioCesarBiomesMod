@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/bald_cypress_winter_leaves",
-    "particle": "caiocesarbiomes:block/bald_cypress_winter_leaves"
-  }
-}
