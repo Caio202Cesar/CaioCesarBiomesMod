@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:pecan_winter_branches"
+      "item": "caiocesarbiomes:pecan_branches"
     }
   ],
   "result": {

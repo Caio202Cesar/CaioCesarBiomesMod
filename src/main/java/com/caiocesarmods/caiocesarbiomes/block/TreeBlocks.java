@@ -1206,16 +1206,16 @@ public class TreeBlocks {
             () -> new FigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.FIG_LEAVES));
 
-    public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("white_fig_leaves",
+    public static final RegistryObject<Block> WHITE_FIG_LEAVES = registerBlock("fig_white_leaves",
             () -> new WhiteFigLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> WHITE_FIG_FRUITING_LEAVES = registerBlock("white_fig_fruiting_leaves",
+    public static final RegistryObject<Block> WHITE_FIG_FRUITING_LEAVES = registerBlock("fig_white_fruiting_leaves",
             () -> new WhiteFigFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
-    public static final RegistryObject<Block> WHITE_FIG_FALL_LEAVES = registerBlock("white_fig_fall_leaves",
+    public static final RegistryObject<Block> WHITE_FIG_FALL_LEAVES = registerBlock("fig_white_fall_leaves",
             () -> new WhiteFigFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_WINTER_BRANCHES));
-    public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("white_fig_winter_branches",
+    public static final RegistryObject<Block> WHITE_FIG_WINTER_BRANCHES = registerBlock("fig_white_winter_branches",
             () -> new WhiteFigWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_FIG_LEAVES));
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",

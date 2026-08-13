@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/southern_beech_winter_branches",
-    "particle": "caiocesarbiomes:block/southern_beech_winter_branches"
-  }
-}

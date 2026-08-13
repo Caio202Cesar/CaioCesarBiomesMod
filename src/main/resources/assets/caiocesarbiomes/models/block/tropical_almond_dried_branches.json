@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "caiocesarbiomes:block/tropical_almond_dried_branches",
-    "particle": "caiocesarbiomes:block/tropical_almond_dried_branches"
-  }
-}
