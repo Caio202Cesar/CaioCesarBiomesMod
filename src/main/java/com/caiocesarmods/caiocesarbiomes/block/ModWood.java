@@ -38,9 +38,10 @@ public class ModWood {
 
     //Lythraceae woods, including pomegranate
     public static final RegistryObject<Block> CRAPE_MYRTLE_PLANKS = registerBlock("crape_myrtle_planks",
-            ModPlanks::new); //Pomegranate planks too
+            ModPlanks::new);
 
-    public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
+    //Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log
+    public static final RegistryObject<Block> MILKWOOD_PLANKS = registerBlock("milkwood_planks",
             ModPlanks::new);
 
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
@@ -173,9 +174,6 @@ public class ModWood {
             ModLogs::new);
 
     public static final RegistryObject<Block> ACEROLA_PLANKS = registerBlock("acerola_planks",
-            ModLogs::new);
-
-    public static final RegistryObject<Block> PLUMERIA_PLANKS = registerBlock("plumeria_planks",
             ModLogs::new);
 
     public static final RegistryObject<Block> LYCHEE_PLANKS = registerBlock("lychee_planks",
