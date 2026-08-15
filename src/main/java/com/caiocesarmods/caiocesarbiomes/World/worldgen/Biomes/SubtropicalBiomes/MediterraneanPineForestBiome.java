@@ -26,7 +26,7 @@ public class MediterraneanPineForestBiome {
     //mediterranean_pine_forest
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MEDITERRANEAN_PINE_FOREST = BIOMES.register("subtropical_pine_dry_forest",
-            () -> makeMediterraneanPineForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_LIMESTONE_SURFACE, 1.5F, 0.025F));
+            () -> makeMediterraneanPineForestBiome(() -> ModConfiguredSurfaceBuilders.MEDITERRANEAN_LIMESTONE_SURFACE, 1.0F, 0.025F));
 
     private static Biome makeMediterraneanPineForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
