@@ -643,8 +643,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> SULPHUR = ITEMS.register("sulphur",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
-    public static final RegistryObject<Item> HARDINESS_ZONE_SCANNER = ITEMS.register("hardiness_zone_scanner",
-            () -> new HardinessZoneScannerItem(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> SALTPETER = ITEMS.register("saltpeter",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> MALABAR_SILK_FLOSS = ITEMS.register("malabar_silk_cotton",

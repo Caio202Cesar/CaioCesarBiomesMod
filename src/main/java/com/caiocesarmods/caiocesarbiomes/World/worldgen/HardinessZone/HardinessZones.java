@@ -31,14 +31,6 @@ public class HardinessZones {
     private static final Map<ResourceLocation, String> SAPLING_ZONES = new HashMap<>();
 
     static {
-        // VANILLA
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "birch_sapling"), "HZ(min) 2, HZ(max) 7");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "spruce_sapling"), "HZ(min) 0 (-0.7f), HZ(max) 7");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "jungle_sapling"), "HZ(min) 11, HZ(max) 12");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "acacia_sapling"), "HZ(min) 9, HZ(max) 13 (2F)");
-        SAPLING_ZONES.put(new ResourceLocation("minecraft", "dark_oak_sapling"), "HZ(min) 4, HZ(max) 10");
-
-
         // CAIO CESAR BIOMES MOD
         SAPLING_ZONES.put(new ResourceLocation("caiocesarbiomes", "acerola_sapling"),
                 "''Malpighia emarginata''" +
