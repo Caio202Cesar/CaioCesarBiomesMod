@@ -53,16 +53,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
     ///Araucaria
-    public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_LOG = registerBlock("stripped_araucaria_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_WOOD = registerBlock("stripped_araucaria_wood",
-            ModLogs::new);
     //Cook Pine
     public static final RegistryObject<Block> COOK_PINE_LEAVES = registerBlock("cook_pine_leaves",
             ModLeaves::new);
@@ -107,15 +98,7 @@ public class TreeBlocks {
 
 
 
-    /// Cypress
-    public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ITALIAN_CYPRESS_WOOD = registerBlock("italian_cypress_wood",
-            ModLogs::new);
+    /// Cypress = Cypress log
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LEAVES = registerBlock("italian_cypress_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_SAPLING = registerBlock("italian_cypress_sapling",
@@ -128,14 +111,6 @@ public class TreeBlocks {
 
 
     /// Maple
-    public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MAPLE_WOOD = registerBlock("maple_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
-            ModLogs::new);
     //Japanese Maple
     public static final RegistryObject<Block> JAPANESE_MAPLE_LEAVES = registerBlock("japanese_maple_leaves",
             () -> new JapaneseMapleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -153,8 +128,6 @@ public class TreeBlocks {
 
 
     ///Prunus
-    public static final RegistryObject<Block> PRUNUS_LOG = registerBlock("prunus_log",
-            ModLogs::new);
     //Cherry Plum
     public static final RegistryObject<Block> CHERRY_PLUM_LEAVES = registerBlock("cherry_plum_leaves",
             () -> new CherryPlumLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -227,14 +200,6 @@ public class TreeBlocks {
 
 
     ///Myrtaceae-based trees
-    public static final RegistryObject<Block> MYRTACEAE_LOG = registerBlock("myrtaceae_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_LOG = registerBlock("stripped_myrtaceae_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MYRTACEAE_WOOD = registerBlock("myrtaceae_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_WOOD = registerBlock("stripped_myrtaceae_wood",
-            ModLogs::new);
     //Pohutukawa
     public static final RegistryObject<Block> POHUTUKAWA_LEAVES = registerBlock("pohutukawa_leaves",
             () -> new PohutukawaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -266,20 +231,12 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LILLY_PILLY_LEAVES));
     public static final RegistryObject<Block> LILLY_PILLY_SAPLING = registerBlock("lilly_pilly_sapling",
             LillyPillySapling::new);
-    //Callistemon and melaleuca
-    public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
-            ModLogs::new);
+    //Callistemon
     public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
             CallistemonSapling::new);
     //Eucalyptus
-    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
-            EucalyptusLog::new);
-    public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
-            EucalyptusLog::new);
     public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
             EucalyptusLeaves::new);
     public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
@@ -290,14 +247,6 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
     ///Milkwood = Apocynaceae
-    public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MILKWOOD_LOG = registerBlock("stripped_milkwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MILKWOOD_WOOD = registerBlock("stripped_milkwood_wood",
-            ModLogs::new);
     //Plumeria
     public static final RegistryObject<Block> RED_PLUMERIA_LEAVES = registerBlock("plumeria_red_leaves",
             () -> new RedPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -427,7 +376,7 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    ///Laureaceae laurel-based trees (camphor is actually an exception)
+    ///Lauraceae laurel-based trees (camphor is actually an exception)
     public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",

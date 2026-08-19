@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.ModPlanks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
@@ -24,14 +25,41 @@ public class ModWood {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
     //Planks
+    public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_LOG = registerBlock("stripped_araucaria_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ARAUCARIA_WOOD = registerBlock("stripped_araucaria_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
+            ModPlanks::new);
+
+
+
+
+
     public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
             ModPlanks::new);
 
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             ModPlanks::new);
 
+
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ITALIAN_CYPRESS_WOOD = registerBlock("italian_cypress_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("cypress_planks",
             ModPlanks::new);
+
+
+
 
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
@@ -40,9 +68,7 @@ public class ModWood {
     public static final RegistryObject<Block> CRAPE_MYRTLE_PLANKS = registerBlock("crape_myrtle_planks",
             ModPlanks::new);
 
-    //Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log
-    public static final RegistryObject<Block> MILKWOOD_PLANKS = registerBlock("milkwood_planks",
-            ModPlanks::new);
+
 
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
             ModPlanks::new);
@@ -72,8 +98,18 @@ public class ModWood {
     public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
             ModPlanks::new);
 
+
+    public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MAPLE_WOOD = registerBlock("maple_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> MAPLE_PLANKS = registerBlock("maple_planks",
             ModPlanks::new);
+
 
     public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
             ModPlanks::new);
@@ -84,11 +120,18 @@ public class ModWood {
     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
             ModPlanks::new);
 
-    public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
-            ModPlanks::new);
 
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
+
+
+    public static final RegistryObject<Block> PRUNUS_LOG = registerBlock("prunus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
+            ModPlanks::new);
+
+
+
 
     public static final RegistryObject<Block> TEA_PLANKS = registerBlock("tea_planks",
             ModPlanks::new);
@@ -99,8 +142,7 @@ public class ModWood {
     public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
             ModPlanks::new);
 
-    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
-            ModPlanks::new);
+
 
     public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("citrus_planks",
             ModPlanks::new);
@@ -218,11 +260,43 @@ public class ModWood {
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks",
             ModLogs::new);
 
+    /// Myrtaceae
+    public static final RegistryObject<Block> MYRTACEAE_LOG = registerBlock("myrtaceae_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_LOG = registerBlock("stripped_myrtaceae_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MYRTACEAE_WOOD = registerBlock("myrtaceae_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_WOOD = registerBlock("stripped_myrtaceae_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
+            ModLogs::new); //Callistemon and melaleuca
+    public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
+            EucalyptusLog::new);
+    public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
+            EucalyptusLog::new);
     public static final RegistryObject<Block> MYRTACEAE_PLANKS = registerBlock("myrtaceae_planks",
             ModLogs::new);
 
+
+    /// Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
+    public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MILKWOOD_LOG = registerBlock("stripped_milkwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MILKWOOD_WOOD = registerBlock("stripped_milkwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> MILKWOOD_PLANKS = registerBlock("milkwood_planks",
+            ModPlanks::new);
+
+    /// Bayberry (Myrica)
     public static final RegistryObject<Block> BAYBERRY_PLANKS = registerBlock("bayberry_planks",
             ModLogs::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
