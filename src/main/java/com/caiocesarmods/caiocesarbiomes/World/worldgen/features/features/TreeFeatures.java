@@ -126,25 +126,25 @@ public class TreeFeatures {
 
     //Oleander Shrubs
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_OLEANDER_SHRUB = register("red_oleander_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.RED_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(2, 1, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_OLEANDER_SHRUB = register("white_oleander_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.WHITE_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(2, 1, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_OLEANDER_SHRUB = register("pink_oleander_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.PINK_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(2, 1, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DARK_PINK_OLEANDER_SHRUB = register("dark_pink_oleander_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.DARK_PINK_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(2, 1, 0),
@@ -347,28 +347,28 @@ public class TreeFeatures {
 
     //Crape Myrtle Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_CRAPE_MYRTLE_TREE = register("red_crape_myrtle_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CRAPE_MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.RED_CRAPE_MYRTLE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_CRAPE_MYRTLE_TREE = register("purple_crape_myrtle_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CRAPE_MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_CRAPE_MYRTLE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_CRAPE_MYRTLE_TREE = register("white_crape_myrtle_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CRAPE_MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.WHITE_CRAPE_MYRTLE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_CRAPE_MYRTLE_TREE = register("pink_crape_myrtle_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CRAPE_MYRTLE_LOG),
                     new SimpleBlockStateProvider(States.PINK_CRAPE_MYRTLE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -884,13 +884,13 @@ public class TreeFeatures {
 
     //Black Poplar Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOMBARDY_POPLAR_TREE = register("lombardy_poplar_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_POPLAR_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COTTONWOOD_LOG),
                     new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(1, 0), FeatureSpread.create(2, 2), FeatureSpread.create(2, 0)),
                     new StraightTrunkPlacer(12, 2, 1),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_POPLAR_FANCY_TREE = register("black_poplar_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.COTTONWOOD_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -1097,21 +1097,21 @@ public class TreeFeatures {
 
     //Western Hemlock Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_TREE = register("western_hemlock_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_TREE_TALL = register("western_hemlock_tall_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(14, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_WITH_IVY = register("western_hemlock_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(17, 2, 10),
@@ -1247,7 +1247,7 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CANARY_DATE_PALM_TREE = register("canary_date_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANARY_DATE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.DATE_LOG),
                     new SimpleBlockStateProvider(States.CANARY_DATE_LEAVES),
                     new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(13, 4, 0),
@@ -1586,8 +1586,8 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.DURIAN_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setIgnoreVines()
+                    new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
@@ -1656,14 +1656,14 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOUNTAIN_HEMLOCK_TREE = register("mountain_hemlock_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.MOUNTAIN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOUNTAIN_HEMLOCK_TREE_TALL = register("mountain_hemlock_tall_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.MOUNTAIN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(14, 2, 14),
@@ -1671,14 +1671,14 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUBALPINE_FIR = register("subalpine_fir",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SUBALPINE_FIR_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIR_LOG),
                     new SimpleBlockStateProvider(States.SUBALPINE_FIR_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(17, 2)),
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_FIR = register("white_fir_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SUBALPINE_FIR_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIR_LOG),
                     new SimpleBlockStateProvider(States.WHITE_FIR_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(17, 2)),
                     new StraightTrunkPlacer(17, 2, 10),
@@ -1765,7 +1765,7 @@ public class TreeFeatures {
 
     //Fremont Poplar
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FREMONT_POPLAR_TREE = register("fremont_poplar_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BLACK_POPLAR_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.COTTONWOOD_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.FREMONT_POPLAR_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -1873,13 +1873,13 @@ public class TreeFeatures {
 
     //Yellow Oleander
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_OLEANDER_TREE = register("yellow_oleander_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.YELLOW_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_OLEANDER_TREE = register("orange_oleander_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OLEANDER_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ORANGE_OLEANDER_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -1906,31 +1906,31 @@ public class TreeFeatures {
 
     //Plumeria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_RED_TREE = register("plumeria_red_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.RED_PLUMERIA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_WHITE_TREE = register("plumeria_white_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.WHITE_PLUMERIA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_PINK_TREE = register("plumeria_pink_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.PINK_PLUMERIA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_YELLOW_TREE = register("plumeria_yellow_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.YELLOW_PLUMERIA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(3, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PLUMERIA_ORANGE_TREE = register("plumeria_orange_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PLUMERIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MILKWOOD_LOG),
                     new SimpleBlockStateProvider(States.ORANGE_PLUMERIA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(3, 2, 2),
@@ -2320,12 +2320,18 @@ public class TreeFeatures {
         protected static final BlockState ORCHID_TREE_LEAVES = TreeBlocks.ORCHID_TREE_LEAVES.get().getDefaultState();
         protected static final BlockState ORCHID_TREE_FLOWERING_BRANCHES = TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get().getDefaultState();
 
-        protected static final BlockState PLUMERIA_LOG = TreeBlocks.PLUMERIA_LOG.get().getDefaultState();
+        protected static final BlockState MILKWOOD_LOG = TreeBlocks.MILKWOOD_LOG.get().getDefaultState();
         protected static final BlockState RED_PLUMERIA_LEAVES = TreeBlocks.RED_PLUMERIA_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_PLUMERIA_LEAVES = TreeBlocks.WHITE_PLUMERIA_LEAVES.get().getDefaultState();
         protected static final BlockState YELLOW_PLUMERIA_LEAVES = TreeBlocks.YELLOW_PLUMERIA_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_PLUMERIA_LEAVES = TreeBlocks.PINK_PLUMERIA_LEAVES.get().getDefaultState();
         protected static final BlockState ORANGE_PLUMERIA_LEAVES = TreeBlocks.ORANGE_PLUMERIA_LEAVES.get().getDefaultState();
+        protected static final BlockState RED_OLEANDER_LEAVES = TreeBlocks.OLEANDER_RED_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_OLEANDER_LEAVES = TreeBlocks.OLEANDER_WHITE_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_PINK_LEAVES.get().getDefaultState();
+        protected static final BlockState DARK_PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_DARK_PINK_LEAVES.get().getDefaultState();
+        protected static final BlockState ORANGE_OLEANDER_LEAVES = TreeBlocks.ORANGE_OLEANDER_LEAVES.get().getDefaultState();
+        protected static final BlockState YELLOW_OLEANDER_LEAVES = TreeBlocks.YELLOW_OLEANDER_LEAVES.get().getDefaultState();
 
         protected static final BlockState BANANA_LOG = TreeBlocks.BANANA_LOG.get().getDefaultState();
         protected static final BlockState BANANA_LEAVES = TreeBlocks.BANANA_LEAVES.get().getDefaultState();
@@ -2341,20 +2347,20 @@ public class TreeFeatures {
 
         protected static final BlockState LARCH_LOG = TreeBlocks.LARCH_LOG.get().getDefaultState();
         protected static final BlockState LARCH_LEAVES = TreeBlocks.LARCH_LEAVES.get().getDefaultState();
-        protected static final BlockState LARCH_TAIGA_SPRING_BRANCHES = TreeBlocks.LARCH_WINTER_LEAVES.get().getDefaultState();
+        protected static final BlockState LARCH_TAIGA_SPRING_BRANCHES = TreeBlocks.LARCH_WINTER_BRANCHES.get().getDefaultState();
 
         protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
         protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
         protected static final BlockState JACKALBERRY_LEAVES = TreeBlocks.JACKALBERRY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SUBALPINE_FIR_LOG = TreeBlocks.SUBALPINE_FIR_LOG.get().getDefaultState();
+        protected static final BlockState FIR_LOG = TreeBlocks.FIR_LOG.get().getDefaultState();
         protected static final BlockState SUBALPINE_FIR_LEAVES = TreeBlocks.SUBALPINE_FIR_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIR_LEAVES = TreeBlocks.WHITE_FIR_LEAVES.get().getDefaultState();
 
         protected static final BlockState MUGO_PINE_LOG = TreeBlocks.MUGO_PINE_LOG.get().getDefaultState();
         protected static final BlockState MUGO_PINE_LEAVES = TreeBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SLASH_PINE_LOG = TreeBlocks.SLASH_PINE_LOG.get().getDefaultState();
+        protected static final BlockState YELLOW_PINE_LOG = TreeBlocks.YELLOW_PINE_LOG.get().getDefaultState();
         protected static final BlockState SLASH_PINE_LEAVES = TreeBlocks.SLASH_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState LOBLOLLY_PINE_LEAVES = TreeBlocks.LOBLOLLY_PINE_LEAVES.get().getDefaultState();
 
@@ -2430,7 +2436,6 @@ public class TreeFeatures {
 
         protected static final BlockState DATE_LOG = TreeBlocks.DATE_LOG.get().getDefaultState();
         protected static final BlockState DATE_LEAVES = TreeBlocks.DATE_LEAVES.get().getDefaultState();
-        protected static final BlockState CANARY_DATE_LOG = TreeBlocks.CANARY_DATE_LOG.get().getDefaultState();
         protected static final BlockState CANARY_DATE_LEAVES = TreeBlocks.CANARY_DATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOCOTRA_CUCUMBER_LOG = TreeBlocks.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
@@ -2451,7 +2456,7 @@ public class TreeFeatures {
         protected static final BlockState BEECH_LOG = TreeBlocks.BEECH_LOG.get().getDefaultState();
         protected static final BlockState COOPER_BEECH_LEAVES = TreeBlocks.COOPER_BEECH_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WESTERN_HEMLOCK_LOG = TreeBlocks.WESTERN_HEMLOCK_LOG.get().getDefaultState();
+        protected static final BlockState HEMLOCK_LOG = TreeBlocks.HEMLOCK_LOG.get().getDefaultState();
         protected static final BlockState WESTERN_HEMLOCK_LEAVES = TreeBlocks.WESTERN_HEMLOCK_LEAVES.get().getDefaultState();
         protected static final BlockState MOUNTAIN_HEMLOCK_LEAVES = TreeBlocks.MOUNTAIN_HEMLOCK_LEAVES.get().getDefaultState();
 
@@ -2481,14 +2486,6 @@ public class TreeFeatures {
         protected static final BlockState OBTUSA_OAK_LOG = TreeBlocks.OBTUSA_OAK_LOG.get().getDefaultState();
         protected static final BlockState OBTUSA_OAK_LEAVES = TreeBlocks.OBTUSA_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OLEANDER_LOG = TreeBlocks.OLEANDER_LOG.get().getDefaultState();
-        protected static final BlockState RED_OLEANDER_LEAVES = TreeBlocks.OLEANDER_RED_LEAVES.get().getDefaultState();
-        protected static final BlockState WHITE_OLEANDER_LEAVES = TreeBlocks.OLEANDER_WHITE_LEAVES.get().getDefaultState();
-        protected static final BlockState PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_PINK_LEAVES.get().getDefaultState();
-        protected static final BlockState DARK_PINK_OLEANDER_LEAVES = TreeBlocks.OLEANDER_DARK_PINK_LEAVES.get().getDefaultState();
-        protected static final BlockState ORANGE_OLEANDER_LEAVES = TreeBlocks.ORANGE_OLEANDER_LEAVES.get().getDefaultState();
-        protected static final BlockState YELLOW_OLEANDER_LEAVES = TreeBlocks.YELLOW_OLEANDER_LEAVES.get().getDefaultState();
-
         protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState MESQUITE_LEAVES = TreeBlocks.MESQUITE_LEAVES.get().getDefaultState();
 
@@ -2512,19 +2509,20 @@ public class TreeFeatures {
         protected static final BlockState SOUTHERN_MAGNOLIA_LOG = TreeBlocks.SOUTHERN_MAGNOLIA_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_MAGNOLIA_LEAVES = TreeBlocks.SOUTHERN_MAGNOLIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState POMEGRANATE_LOG = TreeBlocks.POMEGRANATE_LOG.get().getDefaultState();
-        protected static final BlockState POMEGRANATE_LEAVES = TreeBlocks.POMEGRANATE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MYRTLE_LOG = TreeBlocks.MYRTLE_LOG.get().getDefaultState();
+        protected static final BlockState CRAPE_MYRTLE_LOG = TreeBlocks.CRAPE_MYRTLE_LOG.get().getDefaultState();
         protected static final BlockState RED_CRAPE_MYRTLE_LEAVES = TreeBlocks.RED_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState PURPLE_CRAPE_MYRTLE_LEAVES = TreeBlocks.PURPLE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
 
+        protected static final BlockState POMEGRANATE_LOG = TreeBlocks.POMEGRANATE_LOG.get().getDefaultState();
+        protected static final BlockState POMEGRANATE_LEAVES = TreeBlocks.POMEGRANATE_LEAVES.get().getDefaultState();
+
         protected static final BlockState BAYBERRY_LOG = TreeBlocks.BAYBERRY_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_WAX_MYRTLE_LEAVES = TreeBlocks.SOUTHERN_WAX_MYRTLE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState STONE_PINE_LOG = TreeBlocks.STONE_PINE_LOG.get().getDefaultState();
+        protected static final BlockState STONE_PINE_LOG = TreeBlocks.MEDITERRANEAN_PINE_LOG.get().getDefaultState();
         protected static final BlockState STONE_PINE_LEAVES = TreeBlocks.STONE_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState ALEPPO_PINE_LEAVES = TreeBlocks.ALEPPO_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState MARITIME_PINE_LEAVES = TreeBlocks.MARITIME_PINE_LEAVES.get().getDefaultState();
@@ -2603,13 +2601,13 @@ public class TreeFeatures {
         protected static final BlockState CASUARINA_LOG = TreeBlocks.CASUARINA_LOG.get().getDefaultState();
         protected static final BlockState CASUARINA_LEAVES = TreeBlocks.CASUARINA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PLUM_LOG = TreeBlocks.PLUM_LOG.get().getDefaultState();
+        protected static final BlockState PLUM_LOG = TreeBlocks.PRUNUS_LOG.get().getDefaultState();
         protected static final BlockState CHERRY_PLUM_FLOWERING_LEAVES = TreeBlocks.CHERRY_PLUM_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState PEACH_BLOSSOM = TreeBlocks.PEACH_BLOSSOM.get().getDefaultState();
         protected static final BlockState CHERRY_PLUM_LEAVES = TreeBlocks.CHERRY_PLUM_LEAVES.get().getDefaultState();
         protected static final BlockState PEACH_LEAVES = TreeBlocks.PEACH_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_POPLAR_LOG = TreeBlocks.BLACK_POPLAR_LOG.get().getDefaultState();
+        protected static final BlockState COTTONWOOD_LOG = TreeBlocks.COTTONWOOD_LOG.get().getDefaultState();
         protected static final BlockState BLACK_POPLAR_LEAVES = TreeBlocks.BLACK_POPLAR_LEAVES.get().getDefaultState();
         protected static final BlockState FREMONT_POPLAR_LEAVES = TreeBlocks.FREMONT_POPLAR_LEAVES.get().getDefaultState();
 
