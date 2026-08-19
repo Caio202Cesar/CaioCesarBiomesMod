@@ -233,30 +233,34 @@ public class ModWood {
     public static final RegistryObject<Block> CASTANOPSIS_PLANKS = registerBlock("castanopsis_planks",
             ModLogs::new);
 
+    ///Baobab
     public static final RegistryObject<Block> BAOBAB_PLANKS = registerBlock("baobab_planks",
             ModLogs::new);
 
-    public static final RegistryObject<Block> OBTUSA_OAK_PLANKS = registerBlock("obtusa_oak_planks",
-            ModLogs::new);
-
+    ///Champak
     public static final RegistryObject<Block> CHAMPAK_PLANKS = registerBlock("champak_planks",
             ModLogs::new);
 
+    ///Agathis
     public static final RegistryObject<Block> AGATHIS_PLANKS = registerBlock("agathis_planks",
             ModLogs::new);
 
-    public static final RegistryObject<Block> BAMBOOLEAF_OAK_PLANKS = registerBlock("bambooleaf_oak_planks",
-            ModLogs::new);
+    //public static final RegistryObject<Block> BAMBOOLEAF_OAK_PLANKS = registerBlock("bambooleaf_oak_planks", ModLogs::new);
+    //public static final RegistryObject<Block> OBTUSA_OAK_PLANKS = registerBlock("obtusa_oak_planks", ModLogs::new);
 
+    ///Liquidambar
     public static final RegistryObject<Block> LIQUIDAMBAR_PLANKS = registerBlock("liquidambar_planks",
             ModLogs::new);
 
+    ///Laurel
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModLogs::new);
 
+    ///Podocarpus
     public static final RegistryObject<Block> PODOCARPUS_PLANKS = registerBlock("podocarpus_planks",
             ModLogs::new);
 
+    ///Willow
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks",
             ModLogs::new);
 
