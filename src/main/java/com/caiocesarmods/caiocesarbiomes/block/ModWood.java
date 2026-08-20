@@ -119,8 +119,6 @@ public class ModWood {
 
     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
             ModPlanks::new);
-
-
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
 
@@ -227,6 +225,7 @@ public class ModWood {
     public static final RegistryObject<Block> CAMPHOR_PLANKS = registerBlock("camphor_planks",
             ModLogs::new);
 
+
     public static final RegistryObject<Block> STONE_OAK_PLANKS = registerBlock("stone_oak_planks",
             ModLogs::new);
 
@@ -253,6 +252,14 @@ public class ModWood {
             ModLogs::new);
 
     ///Laurel
+    public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LAUREL_WOOD = registerBlock("laurel_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModLogs::new);
 

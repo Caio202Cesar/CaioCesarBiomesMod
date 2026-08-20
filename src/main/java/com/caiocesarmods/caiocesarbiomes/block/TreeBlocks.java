@@ -377,14 +377,6 @@ public class TreeBlocks {
 
 
     ///Lauraceae laurel-based trees (camphor is actually an exception)
-    public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> LAUREL_WOOD = registerBlock("laurel_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
-            ModLogs::new);
     //Avocado
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
             () -> new AvocadoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
