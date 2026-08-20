@@ -842,17 +842,13 @@ public class TreeBlocks {
 
 
 
-    //Carob
-    public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CAROB_LOG = registerBlock("stripped_carob_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CAROB_WOOD = registerBlock("carob_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CAROB_WOOD = registerBlock("stripped_carob_wood",
-            ModLogs::new);
+    ///Carob
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
-            CarobLeaves::new);
+            () -> new CarobFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CAROB_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CAROB_FRUITING_LEAVES = registerBlock("carob_fruiting_leaves",
+            () -> new CarobLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CAROB_LEAVES));
     public static final RegistryObject<Block> CAROB_SAPLING = registerBlock("carob_sapling",
             CarobSapling::new);
     @SuppressWarnings("deprecation")

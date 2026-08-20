@@ -109,6 +109,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MAPLE_PLANKS = registerBlock("maple_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MAPLE_SLAB = registerBlock("maple_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MAPLE_STAIRS = registerBlock("maple_stairs",
+            () -> new StairsBlock(() -> MAPLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MAPLE_FENCE = registerBlock("maple_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
@@ -184,12 +196,26 @@ public class ModWood {
     public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
             ModLogs::new);
 
+
+    /// Carob
+    public static final RegistryObject<Block> CAROB_LOG = registerBlock("carob_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAROB_LOG = registerBlock("stripped_carob_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAROB_WOOD = registerBlock("carob_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAROB_WOOD = registerBlock("stripped_carob_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CAROB_PLANKS = registerBlock("carob_planks",
             ModLogs::new);
 
+
+    /// Hazelnut
     public static final RegistryObject<Block> HAZELNUT_PLANKS = registerBlock("hazelnut_planks",
             ModLogs::new);
 
+
+    /// Sausage Tree
     public static final RegistryObject<Block> SAUSAGE_TREE_PLANKS = registerBlock("sausage_tree_planks",
             ModLogs::new);
 
