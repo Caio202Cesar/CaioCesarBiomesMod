@@ -6,9 +6,11 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.ModPlanks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,8 +37,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
             ModPlanks::new);
-
-
 
 
 
@@ -157,8 +157,29 @@ public class ModWood {
     public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
             ModPlanks::new);
 
+    /// Ilex/Hollies
+    public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ILEX_LOG = registerBlock("stripped_ilex_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ILEX_WOOD = registerBlock("stripped_ilex_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> ILEX_SLAB = registerBlock("ilex_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ILEX_STAIRS = registerBlock("ilex_stairs",
+            () -> new StairsBlock(() -> ILEX_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> ILEX_FENCE = registerBlock("ilex_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ILEX_FENCE_GATE = registerBlock("ilex_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
     public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
             ModLogs::new);

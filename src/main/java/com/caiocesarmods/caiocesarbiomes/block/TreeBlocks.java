@@ -1454,14 +1454,6 @@ public class TreeBlocks {
 
 
     //Holly
-    public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ILEX_LOG = registerBlock("stripped_ilex_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ILEX_WOOD = registerBlock("stripped_ilex_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> HOLLY_SAPLING = registerBlock("holly_sapling",
