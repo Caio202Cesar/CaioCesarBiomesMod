@@ -1036,6 +1036,14 @@ public class TreeFeatures {
                     new TwoLayerFeature(2, 0, 2))
                     .setIgnoreVines().setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(
                             new SimpleBlockStateProvider(States.PODZOL)))).build())));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_YEW_TREE = register("big_yew_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
+                    new SimpleBlockStateProvider(States.YEW_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_YEW_TREE = register("ancient_yew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YEW_LOG),
                     new SimpleBlockStateProvider(States.YEW_LEAVES),
