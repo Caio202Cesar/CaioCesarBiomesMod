@@ -622,7 +622,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> APPLE_BLOSSOM = registerBlock("apple_blossom",
             () -> new AppleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-    public static final RegistryObject<Block> APPLE_FRUITING_LEAVES = registerBlock("crabapple_white_fruiting_leaves",
+    public static final RegistryObject<Block> APPLE_FRUITING_LEAVES = registerBlock("apple_fruiting_leaves",
             () -> new AppleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.APPLE_FALL_LEAVES));
     public static final RegistryObject<Block> APPLE_FALL_LEAVES = registerBlock("apple_fall_leaves",
