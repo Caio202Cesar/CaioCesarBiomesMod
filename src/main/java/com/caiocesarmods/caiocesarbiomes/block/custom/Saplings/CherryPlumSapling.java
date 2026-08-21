@@ -125,9 +125,9 @@ public class CherryPlumSapling extends SaplingBlock {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 5) {
-                return TreeFeatures.SAPLING_CHERRY_PLUM_TREE;
+                return TreeFeatures.CHERRY_PLUM_TREE;
             } else {
-                return TreeFeatures.SAPLING_CHERRY_PLUM_FANCY_TREE;
+                return TreeFeatures.CHERRY_PLUM_FANCY_TREE;
             }
         }
     }
