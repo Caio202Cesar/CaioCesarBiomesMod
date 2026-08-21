@@ -123,7 +123,7 @@ public class HazelnutSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-                return TreeFeatures.SAPLING_HAZELNUT_TREE;
+                return TreeFeatures.HAZELNUT_TREE;
             }
         }
 }

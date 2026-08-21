@@ -183,7 +183,7 @@ public class AlmondSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-                return TreeFeatures.SAPLING_ALMOND_TREE;
+                return TreeFeatures.ALMOND_TREE;
         }
     }
 }

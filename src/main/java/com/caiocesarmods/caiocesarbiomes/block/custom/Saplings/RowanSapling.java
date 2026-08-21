@@ -144,7 +144,7 @@ public class RowanSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-                return TreeFeatures.ROWAN_TREE1;
+                return TreeFeatures.ROWAN_TREE;
 
         }
     }
