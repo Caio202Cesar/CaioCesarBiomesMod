@@ -57,6 +57,10 @@ public class ModWood {
 
 
     /// Fig
+    public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
+            ModLogs::new);
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             ModPlanks::new);
 
@@ -98,6 +102,9 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Oaks
+    public static final RegistryObject<Block> HOLM_OAK_LOG = registerBlock("holm_oak_log",
+            ModLogs::new);
     public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
@@ -273,6 +280,8 @@ public class ModWood {
     /// Sweet Chestnut
     public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
             ModLogs::new);
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
+            ModLogs::new);
 
 
     /// Carob
@@ -286,11 +295,29 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_PLANKS = registerBlock("carob_planks",
             ModLogs::new);
+    public static final RegistryObject<Block> CAROB_SLAB = registerBlock("carob_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CAROB_STAIRS = registerBlock("carob_stairs",
+            () -> new StairsBlock(() -> CAROB_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> CAROB_FENCE = registerBlock("carob_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CAROB_FENCE_GATE = registerBlock("carob_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Hazelnut
     public static final RegistryObject<Block> HAZELNUT_PLANKS = registerBlock("hazelnut_planks",
             ModLogs::new);
+
+
+
+    public static final RegistryObject<Block> FIR_LOG = registerBlock("fir_log",
+            ModLogs::new);
+
 
 
     /// Sausage Tree
