@@ -41,6 +41,8 @@ public class PistachioSapling extends SaplingBlock {
 
     }
 
+    ///Keep this as a old model (preservar para eventuais consultas)
+    /*
     //Hardy from zone 7 to 11 (however, it only fruits in zones 7 and 8, being purely ornamental from zone 9 to above)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
@@ -58,7 +60,7 @@ public class PistachioSapling extends SaplingBlock {
 
         boolean isDry = biome.getPrecipitation() != Biome.RainType.RAIN;
 
-        // 🌱 Growth logic
+        //Growth logic
         if (validTemp && isDry && suitableHumidity) {
             super.randomTick(state, world, pos, random);
         }
@@ -141,7 +143,7 @@ public class PistachioSapling extends SaplingBlock {
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
-    }
+    }*/
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 
