@@ -170,6 +170,7 @@
     "caiocesarbiomes:plane_fall_leaves",
     "caiocesarbiomes:plane_branches",
     "caiocesarbiomes:carob_leaves",
+    "caiocesarbiomes:carob_fruiting_leaves",
     "caiocesarbiomes:pinyon_leaves",
     "caiocesarbiomes:ponderosa_pine_leaves",
     "caiocesarbiomes:juniper_leaves",
@@ -350,7 +351,11 @@
     "caiocesarbiomes:lilly_pilly_leaves",
     "caiocesarbiomes:lilly_pilly_flowering_leaves",
     "caiocesarbiomes:lilly_pilly_fruiting_leaves",
-    "caiocesarbiomes:carob_fruiting_leaves"
+    "caiocesarbiomes:apple_leaves",
+    "caiocesarbiomes:apple_blossom",
+    "caiocesarbiomes:apple_fruiting_leaves",
+    "caiocesarbiomes:apple_fall_leaves",
+    "caiocesarbiomes:apple_branches"
   ]
 }
 
