@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/araucaria_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/araucaria_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/araucaria_slab_top"
+    }
+  }
+}
