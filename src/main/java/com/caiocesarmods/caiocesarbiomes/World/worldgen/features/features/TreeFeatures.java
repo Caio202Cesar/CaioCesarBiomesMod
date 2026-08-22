@@ -2041,9 +2041,9 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.KIWI_VINE_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).setIgnoreVines().build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OBTUSA_OAK_TREE = register("obtusa_oak_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OBTUSA_OAK_LOG),
-                    new SimpleBlockStateProvider(States.OBTUSA_OAK_LEAVES),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LAUREL_OAK_TREE = register("laurel_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_OAK_LOG),
+                    new SimpleBlockStateProvider(States.LAUREL_OAK_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
@@ -2448,8 +2448,8 @@ public class TreeFeatures {
         protected static final BlockState COAST_LIVE_OAK_LOG = TreeBlocks.COAST_LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState COAST_LIVE_OAK_LEAVES = TreeBlocks.COAST_LIVE_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OBTUSA_OAK_LOG = TreeBlocks.OBTUSA_OAK_LOG.get().getDefaultState();
-        protected static final BlockState OBTUSA_OAK_LEAVES = TreeBlocks.OBTUSA_OAK_LEAVES.get().getDefaultState();
+        protected static final BlockState LAUREL_OAK_LOG = TreeBlocks.LAUREL_OAK_LOG.get().getDefaultState();
+        protected static final BlockState LAUREL_OAK_LEAVES = TreeBlocks.LAUREL_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState MESQUITE_LEAVES = TreeBlocks.MESQUITE_LEAVES.get().getDefaultState();

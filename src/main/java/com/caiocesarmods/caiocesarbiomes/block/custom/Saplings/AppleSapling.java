@@ -45,9 +45,9 @@ public class AppleSapling extends SaplingBlock {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.APPLE_TREE1;
-            } else {
                 return TreeFeatures.APPLE_TREE2;
+            } else {
+                return TreeFeatures.APPLE_TREE1;
             }
         }
     }

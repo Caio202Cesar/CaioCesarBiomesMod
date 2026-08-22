@@ -2510,19 +2510,10 @@ public class TreeBlocks {
             BrutiaPineSapling::new);
 
     //Subtropical Oak Forest
-    public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STONE_OAK_WOOD = registerBlock("stone_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_STONE_OAK_LOG = registerBlock("stripped_stone_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_STONE_OAK_WOOD = registerBlock("stripped_stone_oak_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> STONE_OAK_LEAVES = registerBlock("stone_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> STONE_OAK_SAPLING = registerBlock("stone_oak_sapling",
             StoneOakSapling::new); //Hardy from zone 7 to 10
-
    /* public static final RegistryObject<Block> HENRY_STONE_OAK_LEAVES = registerBlock("henry_stone_oak_leaves",
             () -> new HenryStoneOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.HENRY_STONE_OAK_FLOWERING_LEAVES));
@@ -2532,36 +2523,20 @@ public class TreeBlocks {
     public static final RegistryObject<Block> HENRY_STONE_OAK_SAPLING = registerBlock("henry_stone_oak_sapling",
             CastanopsisSapling::new);*/
 
-    public static final RegistryObject<Block> RING_CUPPED_OAK_LOG = registerBlock("ring_cupped_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> RING_CUPPED_OAK_WOOD = registerBlock("ring_cupped_oak_wood",
-            ModLogs::new);
+    /// Ring Cupped Oak
     public static final RegistryObject<Block> RING_CUPPED_OAK_LEAVES = registerBlock("ring_cupped_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> RING_CUPPED_OAK_SAPLING = registerBlock("ring_cupped_oak_sapling",
             RingCuppedOakSapling::new); //Hardy from zone 7 to 9
 
-    public static final RegistryObject<Block> BAMBOOLEAF_OAK_LOG = registerBlock("bambooleaf_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BAMBOOLEAF_OAK_WOOD = registerBlock("bambooleaf_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_LOG = registerBlock("stripped_bambooleaf_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_WOOD = registerBlock("stripped_bambooleaf_oak_wood",
-            ModLogs::new);
+
+
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_LEAVES = registerBlock("bambooleaf_oak_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_SAPLING = registerBlock("bambooleaf_oak_sapling",
             RingCuppedOakSapling::new);
 
-    public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CASTANOPSIS_WOOD = registerBlock("castanopsis_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CASTANOPSIS_LOG = registerBlock("stripped_castanopsis_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CASTANOPSIS_WOOD = registerBlock("stripped_castanopsis_wood",
-            ModLogs::new);
+
     public static final RegistryObject<Block> CASTANOPSIS_LEAVES = registerBlock("castanopsis_leaves",
             () -> new CastanopsisLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CASTANOPSIS_FLOWERING_LEAVES));
@@ -2571,25 +2546,18 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CASTANOPSIS_SAPLING = registerBlock("castanopsis_sapling",
             CastanopsisSapling::new); //Hardy from zone 7 to 10
 
-    public static final RegistryObject<Block> OBTUSA_OAK_LOG = registerBlock("obtusa_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_LOG = registerBlock("stripped_obtusa_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> OBTUSA_OAK_WOOD = registerBlock("obtusa_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_OBTUSA_OAK_WOOD = registerBlock("stripped_obtusa_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> OBTUSA_OAK_LEAVES = registerBlock("obtusa_oak_leaves",
-            () -> new ObtusaOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_FALL_LEAVES));
-    public static final RegistryObject<Block> OBTUSA_OAK_FALL_LEAVES = registerBlock("obtusa_oak_fall_leaves",
-            () -> new ObtusaOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_WINTER_BRANCHES));
-    public static final RegistryObject<Block> OBTUSA_OAK_WINTER_BRANCHES = registerBlock("obtusa_oak_branches",
-            () -> new ObtusaOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OBTUSA_OAK_LEAVES));
-    public static final RegistryObject<Block> OBTUSA_OAK_SAPLING = registerBlock("obtusa_oak_sapling",
-            ObtusaOakSapling::new); //Hardy from zone 7 to 11
+
+    public static final RegistryObject<Block> LAUREL_OAK_LEAVES = registerBlock("laurel_oak_leaves",
+            () -> new LaurelOakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LAUREL_OAK_FALL_LEAVES));
+    public static final RegistryObject<Block> LAUREL_OAK_FALL_LEAVES = registerBlock("laurel_oak_fall_leaves",
+            () -> new LaurelOakFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LAUREL_OAK_WINTER_BRANCHES));
+    public static final RegistryObject<Block> LAUREL_OAK_WINTER_BRANCHES = registerBlock("laurel_oak_branches",
+            () -> new LaurelOakWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LAUREL_OAK_LEAVES));
+    public static final RegistryObject<Block> LAUREL_OAK_SAPLING = registerBlock("laurel_oak_sapling",
+            LaurelOakSapling::new); //Hardy from zone 7 to 11
 
     //Tropical Australian Pine Rainforest
     public static final RegistryObject<Block> AGATHIS_LEAVES = registerBlock("agathis_leaves",

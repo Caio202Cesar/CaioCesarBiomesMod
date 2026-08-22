@@ -143,7 +143,7 @@ public class DefaultBiomeTreeFeatures {
                             ELDERBERRY_TREE.withChance(0.3F), MULBERRY_TREE.withChance(0.1F),
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F),
                             PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
-                            SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), OBTUSA_OAK_TREE.withChance(0.4F),
+                            SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), LAUREL_OAK_TREE.withChance(0.4F),
                             PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F),
                             WEEPING_WILLOW_FANCY.withChance(0.3F)),
@@ -365,7 +365,7 @@ public class DefaultBiomeTreeFeatures {
                             RING_CUPPED_OAK_TREE.withChance(0.12F), FANCY_OAK.withChance(0.3F), OAK.withChance(0.35F), OAK_BEES_002.withChance(0.04F),
                             OAK_TREE_WITH_KIWI.withChance(0.087F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.2F),
                             PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            SPRING_HAWTHORN_TREE.withChance(0.2F), OBTUSA_OAK_TREE.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F),
+                            SPRING_HAWTHORN_TREE.withChance(0.2F), LAUREL_OAK_TREE.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F),
                             PLANE_TREE.withChance(0.3F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)), OAK_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));

@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "caiocesarbiomes:obtusa_oak_log"
+      "item": "caiocesarbiomes:laurel_oak_log"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:obtusa_oak_wood",
+    "item": "caiocesarbiomes:laurel_oak_wood",
     "count": 3
   }
 }
