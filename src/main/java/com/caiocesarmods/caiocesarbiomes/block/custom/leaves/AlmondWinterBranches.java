@@ -8,6 +8,7 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -40,7 +41,11 @@ public class AlmondWinterBranches extends LeavesBlock implements IForgeShearable
         String currentSeason = Season.getSeason(worldIn.getDayTime());
         String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
-        if ("LATE_WINTER".equals(phase) && nextStage != null && random.nextInt(15) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Early blooms only in zone 7 to above
+        if (temp >= 0.7F && "LATE_WINTER".equals(phase) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -51,7 +56,7 @@ public class AlmondWinterBranches extends LeavesBlock implements IForgeShearable
 
         }
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
