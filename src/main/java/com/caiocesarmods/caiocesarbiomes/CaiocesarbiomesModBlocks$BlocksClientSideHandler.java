@@ -20,8 +20,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 )
 
 public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
-    public CaiocesarbiomesModBlocks$BlocksClientSideHandler() {
-    }
+    public CaiocesarbiomesModBlocks$BlocksClientSideHandler() {}
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
