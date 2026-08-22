@@ -1077,21 +1077,13 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(17, 2, 10),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_TREE_TALL = register("western_hemlock_tall_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GIANT_WESTERN_HEMLOCK_TREE = register("mega_western_hemlock",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
                     new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new StraightTrunkPlacer(14, 2, 14),
+                    new GiantTrunkPlacer(15, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WESTERN_HEMLOCK_WITH_IVY = register("western_hemlock_with_ivy",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HEMLOCK_LOG),
-                    new SimpleBlockStateProvider(States.WESTERN_HEMLOCK_LEAVES),
-                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new StraightTrunkPlacer(17, 2, 10),
-                    new TwoLayerFeature(1, 1, 2)))
-                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE,
-                            new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
     //Cooper Beech Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOPER_BEECH_TREE = register("cooper_beech_tree",

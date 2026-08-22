@@ -1147,8 +1147,6 @@ public class TreeBlocks {
 
 
     //Douglas Fir
-    public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
-            ModLogs::new);
     public static final RegistryObject<Block> DOUGLAS_FIR_LEAVES = registerBlock("douglas_fir_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> DOUGLAS_FIR_SAPLING = registerBlock("douglas_fir_sapling",

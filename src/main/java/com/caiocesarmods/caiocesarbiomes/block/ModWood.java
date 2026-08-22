@@ -401,7 +401,6 @@ public class ModWood {
     public static final RegistryObject<Block> PECAN_PLANKS = registerBlock("pecan_planks",
             ModLogs::new);
 
-
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
 
@@ -421,6 +420,11 @@ public class ModWood {
 
     /// Plane
     public static final RegistryObject<Block> PLANE_PLANKS = registerBlock("plane_planks",
+            ModLogs::new);
+
+
+    ///
+    public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
             ModLogs::new);
 
 
