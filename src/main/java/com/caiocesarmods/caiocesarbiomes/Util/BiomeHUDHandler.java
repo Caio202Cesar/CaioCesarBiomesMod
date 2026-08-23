@@ -25,23 +25,14 @@ public class BiomeHUDHandler {
         BlockPos pos = player.getPosition();
         Biome biome = world.getBiome(pos);
 
-        String subSeason = String.valueOf(SeasonalPhase.getPhase(dayTime)); // if you create this
         String biomeName = new TranslationTextComponent(
                 "biome." + biome.getRegistryName().getNamespace() + "." + biome.getRegistryName().getPath()
         ).getString();
 
-        int zone = HardinessZones.getZone(world, pos);
-
         int y = 10;
         int lineHeight = 12;
 
-        drawText(mc, event, "Phase: " + subSeason, 10, y);
-        y += lineHeight;
-
         drawText(mc, event, "Biome: " + biomeName, 10, y);
-        y += lineHeight;
-
-        drawText(mc, event, "Hardiness Zone: " + zone, 10, y);
         y += lineHeight;
 
         drawText(mc, event, "Day: " + (dayTime / 24000), 10, y);

@@ -809,7 +809,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_SORBUS_WOOD = registerBlock("stripped_sorbus_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("bayberry_planks",
+    public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("sorbus_planks",
             ModPlanks::new);
 
 
