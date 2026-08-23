@@ -839,10 +839,10 @@ public class TreeBlocks {
 
     ///Carob
     public static final RegistryObject<Block> CAROB_LEAVES = registerBlock("carob_leaves",
-            () -> new CarobFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new CarobLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CAROB_FRUITING_LEAVES));
     public static final RegistryObject<Block> CAROB_FRUITING_LEAVES = registerBlock("carob_fruiting_leaves",
-            () -> new CarobLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new CarobFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.CAROB_LEAVES));
     public static final RegistryObject<Block> CAROB_SAPLING = registerBlock("carob_sapling",
             CarobSapling::new);

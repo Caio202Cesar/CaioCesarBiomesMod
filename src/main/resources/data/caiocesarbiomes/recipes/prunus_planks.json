@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:plum_log"
+      "item": "caiocesarbiomes:prunus_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:plum_planks",
+    "item": "caiocesarbiomes:prunus_planks",
     "count": 4
   }
 }
