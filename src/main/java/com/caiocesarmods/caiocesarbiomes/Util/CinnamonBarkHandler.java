@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.Util;
 
+import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
@@ -33,7 +34,7 @@ public class CinnamonBarkHandler {
         BlockState state = world.getBlockState(pos);
 
         // Check cinnamon log
-        if (state.getBlock() != TreeBlocks.CINNAMON_LOG.get())
+        if (state.getBlock() != ModWood.CINNAMON_LOG.get())
             return;
 
 
@@ -50,7 +51,7 @@ public class CinnamonBarkHandler {
             // Replace with stripped log
             world.setBlockState(
                     pos,
-                    Blocks.STRIPPED_JUNGLE_LOG
+                    ModWood.STRIPPED_LAUREL_LOG.get()
                             .getDefaultState()
             );
 
@@ -63,7 +64,7 @@ public class CinnamonBarkHandler {
         }
 
         // Check cinnamon wood
-        if (state.getBlock() != TreeBlocks.CINNAMON_WOOD.get())
+        if (state.getBlock() != ModWood.CINNAMON_WOOD.get())
             return;
 
         if (!world.isRemote) {
@@ -79,7 +80,7 @@ public class CinnamonBarkHandler {
             // Replace with stripped log
             world.setBlockState(
                     pos,
-                    Blocks.STRIPPED_JUNGLE_WOOD
+                    ModWood.STRIPPED_LAUREL_WOOD.get()
                             .getDefaultState()
             );
 

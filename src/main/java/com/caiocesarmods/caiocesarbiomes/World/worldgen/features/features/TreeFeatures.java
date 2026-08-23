@@ -2208,7 +2208,7 @@ public class TreeFeatures {
 
 
     public static final class States {
-        protected static final BlockState ACEROLA_LOG = TreeBlocks.ACEROLA_LOG.get().getDefaultState();
+        protected static final BlockState ACEROLA_LOG = ModWood.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
 
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
@@ -2220,54 +2220,54 @@ public class TreeFeatures {
         protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
         protected static final BlockState OCOTEA_LEAVES = TreeBlocks.OCOTEA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState AGATHIS_LOG = TreeBlocks.AGATHIS_LOG.get().getDefaultState();
+        protected static final BlockState AGATHIS_LOG = ModWood.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACKWOOD_ACACIA_LOG = TreeBlocks.BLACKWOOD_ACACIA_LOG.get().getDefaultState();
+        protected static final BlockState BLACKWOOD_ACACIA_LOG = ModWood.BLACKWOOD_ACACIA_LOG.get().getDefaultState();
         protected static final BlockState BLACKWOOD_ACACIA_LEAVES = TreeBlocks.BLACKWOOD_ACACIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState STONE_OAK_LOG = TreeBlocks.STONE_OAK_LOG.get().getDefaultState();
+        protected static final BlockState STONE_OAK_LOG = ModWood.STONE_OAK_LOG.get().getDefaultState();
         protected static final BlockState STONE_OAK_LEAVES = TreeBlocks.STONE_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState RING_CUPPED_OAK_LOG = TreeBlocks.RING_CUPPED_OAK_LOG.get().getDefaultState();
+        protected static final BlockState RING_CUPPED_OAK_LOG = ModWood.RING_CUPPED_OAK_LOG.get().getDefaultState();
         protected static final BlockState RING_CUPPED_OAK_LEAVES = TreeBlocks.RING_CUPPED_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SAND_LAUREL_OAK_LOG = TreeBlocks.SAND_LAUREL_OAK_LOG.get().getDefaultState();
+        protected static final BlockState SAND_LAUREL_OAK_LOG = ModWood.SAND_LAUREL_OAK_LOG.get().getDefaultState();
         protected static final BlockState SAND_LAUREL_OAK_LEAVES = TreeBlocks.SAND_LAUREL_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState RAINBOW_EUCALYPTUS_LOG = TreeBlocks.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
+        protected static final BlockState RAINBOW_EUCALYPTUS_LOG = ModWood.RAINBOW_EUCALYPTUS_LOG.get().getDefaultState();
         protected static final BlockState RAINBOW_EUCALYPTUS_LEAVES = TreeBlocks.RAINBOW_EUCALYPTUS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAMPHOR_LOG = TreeBlocks.CAMPHOR_LOG.get().getDefaultState();
+        protected static final BlockState CAMPHOR_LOG = ModWood.CAMPHOR_LOG.get().getDefaultState();
         protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
 
         protected static final BlockState PAPERBARK_LOG = ModWood.PAPERBARK_LOG.get().getDefaultState();
         protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LYCHEE_LOG = TreeBlocks.LYCHEE_LOG.get().getDefaultState();
+        protected static final BlockState LYCHEE_LOG = ModWood.LYCHEE_LOG.get().getDefaultState();
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PRIVET_LOG = TreeBlocks.PRIVET_LOG.get().getDefaultState();
+        protected static final BlockState PRIVET_LOG = ModWood.PRIVET_LOG.get().getDefaultState();
         protected static final BlockState PRIVET_LEAVES = TreeBlocks.WAX_LEAF_PRIVET_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CINNAMON_LOG = TreeBlocks.CINNAMON_LOG.get().getDefaultState();
+        protected static final BlockState CINNAMON_LOG = ModWood.CINNAMON_LOG.get().getDefaultState();
         protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CASTANOPSIS_LOG = TreeBlocks.CASTANOPSIS_LOG.get().getDefaultState();
+        protected static final BlockState CASTANOPSIS_LOG = ModWood.CASTANOPSIS_LOG.get().getDefaultState();
         protected static final BlockState CASTANOPSIS_LEAVES = TreeBlocks.CASTANOPSIS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CHUSQUEA_BAMBOO_LOG = TreeBlocks.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
+        protected static final BlockState CHUSQUEA_BAMBOO_LOG = ModWood.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
         protected static final BlockState CHUSQUEA_BAMBOO_LEAVES = TreeBlocks.CHUSQUEA_BAMBOO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PATAGONIAN_CYPRESS_LOG = TreeBlocks.PATAGONIAN_CYPRESS_LOG.get().getDefaultState();
+        protected static final BlockState PATAGONIAN_CYPRESS_LOG = ModWood.PATAGONIAN_CYPRESS_LOG.get().getDefaultState();
         protected static final BlockState PATAGONIAN_CYPRESS_LEAVES = TreeBlocks.PATAGONIAN_CYPRESS_LEAVES.get().getDefaultState();
 
         protected static final BlockState TEAK_LEAVES = TreeBlocks.TEAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PINK_IVORY_LOG = TreeBlocks.PINK_IVORY_LOG.get().getDefaultState();
+        protected static final BlockState PINK_IVORY_LOG = ModWood.PINK_IVORY_LOG.get().getDefaultState();
         protected static final BlockState PINK_IVORY_LEAVES = TreeBlocks.PINK_IVORY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ORCHID_TREE_LOG = TreeBlocks.ORCHID_TREE_LOG.get().getDefaultState();
+        protected static final BlockState ORCHID_TREE_LOG = ModWood.ORCHID_TREE_LOG.get().getDefaultState();
         protected static final BlockState ORCHID_TREE_LEAVES = TreeBlocks.ORCHID_TREE_LEAVES.get().getDefaultState();
         protected static final BlockState ORCHID_TREE_FLOWERING_BRANCHES = TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get().getDefaultState();
 
@@ -2287,7 +2287,7 @@ public class TreeFeatures {
         protected static final BlockState BANANA_LOG = TreeBlocks.BANANA_LOG.get().getDefaultState();
         protected static final BlockState BANANA_LEAVES = TreeBlocks.BANANA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CHAMPAK_LOG = TreeBlocks.CHAMPAK_LOG.get().getDefaultState();
+        protected static final BlockState CHAMPAK_LOG = ModWood.CHAMPAK_LOG.get().getDefaultState();
         protected static final BlockState CHAMPAK_LEAVES = TreeBlocks.CHAMPAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState PLUM_LOG = ModWood.PRUNUS_LOG.get().getDefaultState();
@@ -2298,32 +2298,32 @@ public class TreeFeatures {
         protected static final BlockState BALD_CYPRESS_LOG = ModWood.BALD_CYPRESS_LOG.get().getDefaultState();
         protected static final BlockState BALD_CYPRESS_LEAVES = TreeBlocks.BALD_CYPRESS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LARCH_LOG = TreeBlocks.LARCH_LOG.get().getDefaultState();
+        protected static final BlockState LARCH_LOG = ModWood.LARCH_LOG.get().getDefaultState();
         protected static final BlockState LARCH_LEAVES = TreeBlocks.LARCH_LEAVES.get().getDefaultState();
         protected static final BlockState LARCH_TAIGA_SPRING_BRANCHES = TreeBlocks.LARCH_WINTER_BRANCHES.get().getDefaultState();
 
-        protected static final BlockState PERSIMMON_LOG = TreeBlocks.PERSIMMON_LOG.get().getDefaultState();
+        protected static final BlockState PERSIMMON_LOG = ModWood.PERSIMMON_LOG.get().getDefaultState();
         protected static final BlockState PERSIMMON_LEAVES = TreeBlocks.PERSIMMON_LEAVES.get().getDefaultState();
         protected static final BlockState JACKALBERRY_LEAVES = TreeBlocks.JACKALBERRY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState FIR_LOG = TreeBlocks.FIR_LOG.get().getDefaultState();
+        protected static final BlockState FIR_LOG = ModWood.FIR_LOG.get().getDefaultState();
         protected static final BlockState SUBALPINE_FIR_LEAVES = TreeBlocks.SUBALPINE_FIR_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIR_LEAVES = TreeBlocks.WHITE_FIR_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MUGO_PINE_LOG = TreeBlocks.MUGO_PINE_LOG.get().getDefaultState();
+        protected static final BlockState MUGO_PINE_LOG = ModWood.MUGO_PINE_LOG.get().getDefaultState();
         protected static final BlockState MUGO_PINE_LEAVES = TreeBlocks.MUGO_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState YELLOW_PINE_LOG = ModWood.YELLOW_PINE_LOG.get().getDefaultState();
         protected static final BlockState SLASH_PINE_LEAVES = TreeBlocks.SLASH_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState LOBLOLLY_PINE_LEAVES = TreeBlocks.LOBLOLLY_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OIL_PALM_LOG = TreeBlocks.OIL_PALM_LOG.get().getDefaultState();
+        protected static final BlockState OIL_PALM_LOG = ModWood.OIL_PALM_LOG.get().getDefaultState();
         protected static final BlockState OIL_PALM_LEAVES = TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WEEPING_WILLOW_LOG = TreeBlocks.WEEPING_WILLOW_LOG.get().getDefaultState();
+        protected static final BlockState WEEPING_WILLOW_LOG = ModWood.WEEPING_WILLOW_LOG.get().getDefaultState();
         protected static final BlockState WEEPING_WILLOW_LEAVES = TreeBlocks.WEEPING_WILLOW_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BAOBAB_LOG = TreeBlocks.BAOBAB_LOG.get().getDefaultState();
+        protected static final BlockState BAOBAB_LOG = ModWood.BAOBAB_LOG.get().getDefaultState();
         protected static final BlockState BAOBAB_LEAVES = TreeBlocks.BAOBAB_LEAVES.get().getDefaultState();
 
         protected static final BlockState BIRCH_LOG = Blocks.BIRCH_LOG.getDefaultState();
@@ -2333,13 +2333,13 @@ public class TreeFeatures {
         protected static final BlockState BISMARCK_PALM_LOG = ModWood.BISMARCK_PALM_LOG.get().getDefaultState();
         protected static final BlockState BISMARCK_PALM_LEAVES = TreeBlocks.BISMARCK_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MARULA_LOG = TreeBlocks.MARULA_LOG.get().getDefaultState();
+        protected static final BlockState MARULA_LOG = ModWood.MARULA_LOG.get().getDefaultState();
         protected static final BlockState MARULA_LEAVES = TreeBlocks.MARULA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState HAZELNUT_LOG = TreeBlocks.HAZELNUT_LOG.get().getDefaultState();
+        protected static final BlockState HAZELNUT_LOG = ModWood.HAZELNUT_LOG.get().getDefaultState();
         protected static final BlockState HAZELNUT_BRANCHES = TreeBlocks.HAZELNUT_WINTER_BRANCHES.get().getDefaultState();
 
-        protected static final BlockState SAUSAGE_TREE_LOG = TreeBlocks.SAUSAGE_TREE_LOG.get().getDefaultState();
+        protected static final BlockState SAUSAGE_TREE_LOG = ModWood.SAUSAGE_TREE_LOG.get().getDefaultState();
         protected static final BlockState SAUSAGE_TREE_LEAVES = TreeBlocks.SAUSAGE_TREE_LEAVES.get().getDefaultState();
 
         protected static final BlockState BREADFRUIT_LEAVES = TreeBlocks.BREADFRUIT_LEAVES.get().getDefaultState();
@@ -2358,16 +2358,16 @@ public class TreeFeatures {
 
 
 
-        protected static final BlockState JUNIPER_LOG = TreeBlocks.JUNIPER_LOG.get().getDefaultState();
+        protected static final BlockState JUNIPER_LOG = ModWood.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = TreeBlocks.JUNIPER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PONDEROSA_PINE_LOG = TreeBlocks.PONDEROSA_PINE_LOG.get().getDefaultState();
+        protected static final BlockState PONDEROSA_PINE_LOG = ModWood.PONDEROSA_PINE_LOG.get().getDefaultState();
         protected static final BlockState PONDEROSA_PINE_LEAVES = TreeBlocks.PONDEROSA_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState DOUGLAS_FIR_LOG = TreeBlocks.DOUGLAS_FIR_LOG.get().getDefaultState();
+        protected static final BlockState DOUGLAS_FIR_LOG = ModWood.DOUGLAS_FIR_LOG.get().getDefaultState();
         protected static final BlockState DOUGLAS_FIR_LEAVES = TreeBlocks.DOUGLAS_FIR_LEAVES.get().getDefaultState();
 
-        protected static final BlockState GINKGO_LOG = TreeBlocks.GINKGO_LOG.get().getDefaultState();
+        protected static final BlockState GINKGO_LOG = ModWood.GINKGO_LOG.get().getDefaultState();
         protected static final BlockState GINKGO_LEAVES = TreeBlocks.GINKGO_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINYON_LOG = ModWood.PINYON_LOG.get().getDefaultState();
@@ -2376,44 +2376,44 @@ public class TreeFeatures {
         protected static final BlockState CAROB_LOG = ModWood.CAROB_LOG.get().getDefaultState();
         protected static final BlockState CAROB_LEAVES = TreeBlocks.CAROB_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PLANE_LOG = TreeBlocks.PLANE_LOG.get().getDefaultState();
+        protected static final BlockState PLANE_LOG = ModWood.PLANE_LOG.get().getDefaultState();
         protected static final BlockState PLANE_LEAVES = TreeBlocks.PLANE_LEAVES.get().getDefaultState();
 
         protected static final BlockState SWEET_CHESTNUT_LOG = ModWood.SWEET_CHESTNUT_LOG.get().getDefaultState();
         protected static final BlockState SWEET_CHESTNUT_LEAVES = TreeBlocks.SWEET_CHESTNUT_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SABAL_LOG = TreeBlocks.SABAL_LOG.get().getDefaultState();
+        protected static final BlockState SABAL_LOG = ModWood.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = TreeBlocks.SABAL_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PISTACHIO_LOG = TreeBlocks.PISTACHIO_LOG.get().getDefaultState();
+        protected static final BlockState PISTACHIO_LOG = ModWood.PISTACHIO_LOG.get().getDefaultState();
         protected static final BlockState PISTACHIO_LEAVES = TreeBlocks.PISTACHIO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COCONUT_LOG = TreeBlocks.COCONUT_LOG.get().getDefaultState();
+        protected static final BlockState COCONUT_LOG = ModWood.COCONUT_LOG.get().getDefaultState();
         protected static final BlockState COCONUT_LEAVES = TreeBlocks.COCONUT_LEAVES.get().getDefaultState();
 
         protected static final BlockState DATE_LOG = ModWood.DATE_LOG.get().getDefaultState();
         protected static final BlockState DATE_LEAVES = TreeBlocks.DATE_LEAVES.get().getDefaultState();
         protected static final BlockState CANARY_DATE_LEAVES = TreeBlocks.CANARY_DATE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SOCOTRA_CUCUMBER_LOG = TreeBlocks.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
+        protected static final BlockState SOCOTRA_CUCUMBER_LOG = ModWood.SOCOTRA_CUCUMBER_LOG.get().getDefaultState();
         protected static final BlockState SOCOTRA_CUCUMBER_LEAVES = TreeBlocks.SOCOTRA_CUCUMBER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState YEW_LOG = TreeBlocks.YEW_LOG.get().getDefaultState();
+        protected static final BlockState YEW_LOG = ModWood.YEW_LOG.get().getDefaultState();
         protected static final BlockState YEW_LEAVES = TreeBlocks.YEW_LEAVES.get().getDefaultState();
 
         protected static final BlockState JAPANESE_PINE_LOG = ModWood.JAPANESE_PINE_LOG.get().getDefaultState();
         protected static final BlockState JAPANESE_PINE_LEAVES = TreeBlocks.JAPANESE_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState DRAGON_BLOOD_LOG = TreeBlocks.DRAGON_BLOOD_LOG.get().getDefaultState();
+        protected static final BlockState DRAGON_BLOOD_LOG = ModWood.DRAGON_BLOOD_LOG.get().getDefaultState();
         protected static final BlockState DRAGON_BLOOD_LEAVES = TreeBlocks.DRAGON_BLOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState DESERT_ROSE_LOG = TreeBlocks.SOCOTRA_DESERT_ROSE_LOG.get().getDefaultState();
+        protected static final BlockState DESERT_ROSE_LOG = ModWood.SOCOTRA_DESERT_ROSE_LOG.get().getDefaultState();
         protected static final BlockState DESERT_ROSE_LEAVES = TreeBlocks.SOCOTRA_DESERT_ROSE_LEAVES.get().getDefaultState();
 
         protected static final BlockState BEECH_LOG = ModWood.BEECH_LOG.get().getDefaultState();
         protected static final BlockState COOPER_BEECH_LEAVES = TreeBlocks.COOPER_BEECH_LEAVES.get().getDefaultState();
 
-        protected static final BlockState HEMLOCK_LOG = TreeBlocks.HEMLOCK_LOG.get().getDefaultState();
+        protected static final BlockState HEMLOCK_LOG = ModWood.HEMLOCK_LOG.get().getDefaultState();
         protected static final BlockState WESTERN_HEMLOCK_LEAVES = TreeBlocks.WESTERN_HEMLOCK_LEAVES.get().getDefaultState();
         protected static final BlockState MOUNTAIN_HEMLOCK_LEAVES = TreeBlocks.MOUNTAIN_HEMLOCK_LEAVES.get().getDefaultState();
 
@@ -2424,59 +2424,59 @@ public class TreeFeatures {
         protected static final BlockState BUNYA_PINE_LEAVES = TreeBlocks.BUNYA_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState HOOP_PINE_LEAVES = TreeBlocks.HOOP_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JUNGLE_FIG_LOG = TreeBlocks.JUNGLE_FIG_LOG.get().getDefaultState();
+        protected static final BlockState JUNGLE_FIG_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
         protected static final BlockState WEEPING_FIG_LEAVES = TreeBlocks.WEEPING_FIG_LEAVES.get().getDefaultState();
         protected static final BlockState INDIAN_LAUREL_LEAVES = TreeBlocks.INDIAN_LAUREL_LEAVES.get().getDefaultState();
         protected static final BlockState RUBBER_TREE_LEAVES = TreeBlocks.RUBBER_TREE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState HOLM_OAK_LOG = TreeBlocks.HOLM_OAK_LOG.get().getDefaultState();
+        protected static final BlockState HOLM_OAK_LOG = ModWood.HOLM_OAK_LOG.get().getDefaultState();
         protected static final BlockState HOLM_OAK_LEAVES = TreeBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState RED_OAK_LEAVES = TreeBlocks.RED_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CORK_OAK_LOG = TreeBlocks.CORK_OAK_LOG.get().getDefaultState();
+        protected static final BlockState CORK_OAK_LOG = ModWood.CORK_OAK_LOG.get().getDefaultState();
         protected static final BlockState CORK_OAK_LEAVES = TreeBlocks.CORK_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COAST_LIVE_OAK_LOG = TreeBlocks.COAST_LIVE_OAK_LOG.get().getDefaultState();
+        protected static final BlockState COAST_LIVE_OAK_LOG = ModWood.COAST_LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState COAST_LIVE_OAK_LEAVES = TreeBlocks.COAST_LIVE_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LAUREL_OAK_LOG = TreeBlocks.LAUREL_OAK_LOG.get().getDefaultState();
+        protected static final BlockState LAUREL_OAK_LOG = ModWood.LAUREL_OAK_LOG.get().getDefaultState();
         protected static final BlockState LAUREL_OAK_LEAVES = TreeBlocks.LAUREL_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
+        protected static final BlockState MESQUITE_LOG = ModWood.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState MESQUITE_LEAVES = TreeBlocks.MESQUITE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COAST_COTTONWOOD_LOG = TreeBlocks.COAST_COTTONWOOD_LOG.get().getDefaultState();
+        protected static final BlockState COAST_COTTONWOOD_LOG = ModWood.COAST_COTTONWOOD_LOG.get().getDefaultState();
         protected static final BlockState COAST_COTTONWOOD_LEAVES = TreeBlocks.COAST_COTTONWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState FIG_LOG = TreeBlocks.FIG_LOG.get().getDefaultState();
+        protected static final BlockState FIG_LOG = ModWood.FIG_LOG.get().getDefaultState();
         protected static final BlockState FIG_LEAVES = TreeBlocks.FIG_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIG_LEAVES = TreeBlocks.WHITE_FIG_LEAVES.get().getDefaultState();
         protected static final BlockState SYCAMORE_FIG_LEAVES = TreeBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OLIVE_LOG = TreeBlocks.OLIVE_LOG.get().getDefaultState();
+        protected static final BlockState OLIVE_LOG = ModWood.OLIVE_LOG.get().getDefaultState();
         protected static final BlockState OLIVE_LEAVES = TreeBlocks.OLIVE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ERYTHRINA_LOG = TreeBlocks.ERYTHRINA_LOG.get().getDefaultState();
+        protected static final BlockState ERYTHRINA_LOG = ModWood.ERYTHRINA_LOG.get().getDefaultState();
         protected static final BlockState INDIAN_CORAL_LEAVES = TreeBlocks.INDIAN_CORAL_LEAVES.get().getDefaultState();
 
-        protected static final BlockState TROPICAL_ALMOND_LOG = TreeBlocks.TROPICAL_ALMOND_LOG.get().getDefaultState();
+        protected static final BlockState TROPICAL_ALMOND_LOG = ModWood.TROPICAL_ALMOND_LOG.get().getDefaultState();
         protected static final BlockState TROPICAL_ALMOND_LEAVES = TreeBlocks.TROPICAL_ALMOND_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOUTHERN_MAGNOLIA_LOG = ModWood.SOUTHERN_MAGNOLIA_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_MAGNOLIA_LEAVES = TreeBlocks.SOUTHERN_MAGNOLIA_LEAVES.get().getDefaultState();
 
 
-        protected static final BlockState CRAPE_MYRTLE_LOG = TreeBlocks.CRAPE_MYRTLE_LOG.get().getDefaultState();
+        protected static final BlockState CRAPE_MYRTLE_LOG = ModWood.CRAPE_MYRTLE_LOG.get().getDefaultState();
         protected static final BlockState RED_CRAPE_MYRTLE_LEAVES = TreeBlocks.RED_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState PURPLE_CRAPE_MYRTLE_LEAVES = TreeBlocks.PURPLE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_CRAPE_MYRTLE_LEAVES = TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_CRAPE_MYRTLE_LEAVES = TreeBlocks.PINK_CRAPE_MYRTLE_SPRING_LEAVES.get().getDefaultState();
 
-        protected static final BlockState POMEGRANATE_LOG = TreeBlocks.POMEGRANATE_LOG.get().getDefaultState();
+        protected static final BlockState POMEGRANATE_LOG = ModWood.POMEGRANATE_LOG.get().getDefaultState();
         protected static final BlockState POMEGRANATE_LEAVES = TreeBlocks.POMEGRANATE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BAYBERRY_LOG = TreeBlocks.BAYBERRY_LOG.get().getDefaultState();
+        protected static final BlockState BAYBERRY_LOG = ModWood.BAYBERRY_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_WAX_MYRTLE_LEAVES = TreeBlocks.SOUTHERN_WAX_MYRTLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState STONE_PINE_LOG = ModWood.MEDITERRANEAN_PINE_LOG.get().getDefaultState();
@@ -2512,17 +2512,17 @@ public class TreeFeatures {
         protected static final BlockState JAPANESE_MAPLE_LEAVES = TreeBlocks.JAPANESE_MAPLE_LEAVES.get().getDefaultState();
         protected static final BlockState RED_MAPLE_LEAVES = TreeBlocks.RED_MAPLE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MULBERRY_LOG = TreeBlocks.MULBERRY_LOG.get().getDefaultState();
+        protected static final BlockState MULBERRY_LOG = ModWood.MULBERRY_LOG.get().getDefaultState();
         protected static final BlockState MULBERRY_LEAVES = TreeBlocks.MULBERRY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState STARFRUIT_LOG = TreeBlocks.STARFRUIT_LOG.get().getDefaultState();
+        protected static final BlockState STARFRUIT_LOG = ModWood.STARFRUIT_LOG.get().getDefaultState();
         protected static final BlockState STARFRUIT_LEAVES = TreeBlocks.STARFRUIT_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAMELLIA_LOG = ModWood.TEA_LOG.get().getDefaultState();
         protected static final BlockState CAMELLIA_LEAVES = TreeBlocks.CAMELLIA_LEAVES.get().getDefaultState();
         protected static final BlockState TEA_LEAVES = TreeBlocks.TEA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CITRUS_LOG = TreeBlocks.CITRUS_LOG.get().getDefaultState();
+        protected static final BlockState CITRUS_LOG = ModWood.CITRUS_LOG.get().getDefaultState();
         protected static final BlockState ORANGE_LEAVES = TreeBlocks.ORANGE_LEAVES.get().getDefaultState();
         protected static final BlockState LEMON_LEAVES = TreeBlocks.LEMON_LEAVES.get().getDefaultState();
         protected static final BlockState MANDARIN_LEAVES = TreeBlocks.MANDARIN_LEAVES.get().getDefaultState();
@@ -2531,7 +2531,7 @@ public class TreeFeatures {
         protected static final BlockState BUDDAH_HAND_LEAVES = TreeBlocks.BUDDHA_HAND_LEAVES.get().getDefaultState();
         protected static final BlockState GRAPEFRUIT_LEAVES = TreeBlocks.GRAPEFRUIT_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LIVE_OAK_LOG = TreeBlocks.LIVE_OAK_LOG.get().getDefaultState();
+        protected static final BlockState LIVE_OAK_LOG = ModWood.LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState LIVE_OAK_LEAVES = TreeBlocks.LIVE_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState ROYAL_POINCIANA_LOG = TreeBlocks.ROYAL_POINCIANA_LOG.get().getDefaultState();
@@ -2545,7 +2545,7 @@ public class TreeFeatures {
         //protected static final BlockState RUSTY_GUM_LOG = ModWood.RUSTY_GUM_LOG.get().getDefaultState();
         //protected static final BlockState RUSTY_GUM_LEAVES = TreeBlocks.RUSTY_GUM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CASUARINA_LOG = TreeBlocks.CASUARINA_LOG.get().getDefaultState();
+        protected static final BlockState CASUARINA_LOG = ModWood.CASUARINA_LOG.get().getDefaultState();
         protected static final BlockState CASUARINA_LEAVES = TreeBlocks.CASUARINA_LEAVES.get().getDefaultState();
 
 
@@ -2553,7 +2553,7 @@ public class TreeFeatures {
         protected static final BlockState BLACK_POPLAR_LEAVES = TreeBlocks.BLACK_POPLAR_LEAVES.get().getDefaultState();
         protected static final BlockState FREMONT_POPLAR_LEAVES = TreeBlocks.FREMONT_POPLAR_LEAVES.get().getDefaultState();
 
-        protected static final BlockState NOTHOFAGUS_LOG = TreeBlocks.NOTHOFAGUS_LOG.get().getDefaultState();
+        protected static final BlockState NOTHOFAGUS_LOG = ModWood.NOTHOFAGUS_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_BEECH_LEAVES = TreeBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
         protected static final BlockState COIHUE_LEAVES = TreeBlocks.COIHUE_LEAVES.get().getDefaultState();
         protected static final BlockState LENGA_LEAVES = TreeBlocks.LENGA_LEAVES.get().getDefaultState();
@@ -2561,13 +2561,13 @@ public class TreeFeatures {
         protected static final BlockState ILEX_LOG = ModWood.ILEX_LOG.get().getDefaultState();
         protected static final BlockState HOLLY_LEAVES = TreeBlocks.HOLLY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PECAN_LOG = TreeBlocks.PECAN_LOG.get().getDefaultState();
+        protected static final BlockState PECAN_LOG = ModWood.PECAN_LOG.get().getDefaultState();
         protected static final BlockState PECAN_LEAVES = TreeBlocks.PECAN_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MANGO_LOG = TreeBlocks.MANGO_LOG.get().getDefaultState();
+        protected static final BlockState MANGO_LOG = ModWood.MANGO_LOG.get().getDefaultState();
         protected static final BlockState MANGO_LEAVES = TreeBlocks.MANGO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WALNUT_LOG = TreeBlocks.WALNUT_LOG.get().getDefaultState();
+        protected static final BlockState WALNUT_LOG = ModWood.WALNUT_LOG.get().getDefaultState();
         protected static final BlockState WALNUT_LEAVES = TreeBlocks.WALNUT_LEAVES.get().getDefaultState();
 
         protected static final BlockState CANARY_PINE_LOG = ModWood.CANARY_PINE_LOG.get().getDefaultState();

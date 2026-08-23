@@ -59,8 +59,7 @@ public class SubtropicalEucalyptusForestBiome {
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withEucalyptusTrees(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 

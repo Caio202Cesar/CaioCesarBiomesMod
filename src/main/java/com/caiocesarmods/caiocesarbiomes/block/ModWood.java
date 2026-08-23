@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.CinnamonSapling;
+import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.ModLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.ModPlanks;
@@ -74,13 +76,17 @@ public class ModWood {
 
 
     /// Cypress
-    public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
             ModLogs::new);
     public static final RegistryObject<Block> ITALIAN_CYPRESS_WOOD = registerBlock("italian_cypress_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_LOG = registerBlock("patagonian_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PATAGONIAN_CYPRESS_WOOD = registerBlock("patagonian_cypress_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("cypress_planks",
             ModPlanks::new);
@@ -97,12 +103,14 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SABAL_LOG = registerBlock("sabal_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             ModLogs::new);
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     /// Mesquite
@@ -162,12 +170,9 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Pine
-    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
-            ModPlanks::new);
-
-
     /// Olive
+    public static final RegistryObject<Block> OLIVE_LOG = registerBlock("olive_log",
+            ModLogs::new);
     public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
             ModPlanks::new);
 
@@ -230,10 +235,10 @@ public class ModWood {
             ModPlanks::new);
 
 
-
-
     public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
             ModPlanks::new);
+
+
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
 
@@ -242,7 +247,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
             ModPlanks::new);
-
 
 
     ///Tea
@@ -318,11 +322,15 @@ public class ModWood {
 
 
     /// Hemlock
+    public static final RegistryObject<Block> HEMLOCK_LOG = registerBlock("hemlock_log",
+            ModLogs::new);
     public static final RegistryObject<Block> HEMLOCK_PLANKS = registerBlock("hemlock_planks",
             ModPlanks::new);
 
 
     /// Yew
+    public static final RegistryObject<Block> YEW_LOG = registerBlock("yew_log",
+            ModLogs::new);
     public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
             ModPlanks::new);
 
@@ -353,10 +361,10 @@ public class ModWood {
 
 
     /// Sweet Chestnut
-    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
-            ModLogs::new);
     public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
+            ModPlanks::new);
 
 
     /// Carob
@@ -369,7 +377,7 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_CAROB_WOOD = registerBlock("stripped_carob_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CAROB_PLANKS = registerBlock("carob_planks",
-            ModLogs::new);
+            ModPlanks::new);
     public static final RegistryObject<Block> CAROB_SLAB = registerBlock("carob_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -388,12 +396,14 @@ public class ModWood {
     public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> HAZELNUT_PLANKS = registerBlock("hazelnut_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
 
     public static final RegistryObject<Block> FIR_LOG = registerBlock("fir_log",
             ModLogs::new);
+
+
 
 
     public static final RegistryObject<Block> GINKGO_LOG = registerBlock("ginkgo_log",
@@ -404,7 +414,7 @@ public class ModWood {
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_PLANKS = registerBlock("sausage_tree_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
@@ -415,45 +425,55 @@ public class ModWood {
     public static final RegistryObject<Block> LARCH_LOG = registerBlock("larch_log",
             ModLogs::new);
     public static final RegistryObject<Block> LARCH_PLANKS = registerBlock("larch_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> MANGO_LOG = registerBlock("mango_log",
             ModLogs::new);
     public static final RegistryObject<Block> MANGO_PLANKS = registerBlock("mango_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
             ModLogs::new);
-
-
     public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
             ModLogs::new);
     public static final RegistryObject<Block> MARULA_PLANKS = registerBlock("marula_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> JUNIPER_LOG = registerBlock("juniper_log",
             ModLogs::new);
     public static final RegistryObject<Block> JUNIPER_PLANKS = registerBlock("juniper_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
     ///
     public static final RegistryObject<Block> DOUGLAS_FIR_LOG = registerBlock("douglas_fir_log",
             ModLogs::new);
     public static final RegistryObject<Block> DOUGLAS_FIR_PLANKS = registerBlock("douglas_fir_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
             ModLogs::new);
-
-
     public static final RegistryObject<Block> WALNUT_PLANKS = registerBlock("walnut_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
-    public static final RegistryObject<Block> PECAN_PLANKS = registerBlock("pecan_planks",
+
+    ///Pecan
+    public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PECAN_PLANKS = registerBlock("pecan_planks",
+            ModPlanks::new);
+
 
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
             ModLogs::new);
+
 
     /// Live Oak
     public static final RegistryObject<Block> LIVE_OAK_LOG = registerBlock("live_oak_log",
@@ -465,8 +485,12 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_LIVE_OAK_WOOD = registerBlock("stripped_live_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> LIVE_OAK_PLANKS = registerBlock("lie_oak_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
+    public static final RegistryObject<Block> COAST_LIVE_OAK_LOG = registerBlock("coast_live_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> COAST_LIVE_OAK_WOOD = registerBlock("coast_live_oak_wood",
+            ModLogs::new);
 
     ///Bald Cypress
     public static final RegistryObject<Block> BALD_CYPRESS_LOG = registerBlock("bald_cypress_log",
@@ -478,36 +502,75 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_BALD_CYPRESS_WOOD = registerBlock("stripped_bald_cypress_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BALD_CYPRESS_PLANKS = registerBlock("bald_cypress_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     /// Plane
-    public static final RegistryObject<Block> PLANE_PLANKS = registerBlock("plane_planks",
+    public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
             ModLogs::new);
-
-
-
+    public static final RegistryObject<Block> PLANE_PLANKS = registerBlock("plane_planks",
+            ModPlanks::new);
 
 
     /// Pistachio
+    public static final RegistryObject<Block> PISTACHIO_LOG = registerBlock("pistachio_log",
+            ModLogs::new);
     public static final RegistryObject<Block> PISTACHIO_PLANKS = registerBlock("pistachio_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> ORCHID_TREE_LOG = registerBlock("orchid_tree_log",
             ModLogs::new);
 
 
     /// Pink Ivory
+    public static final RegistryObject<Block> PINK_IVORY_LOG = registerBlock("pink_ivory_log",
+            ModLogs::new);
     public static final RegistryObject<Block> PINK_IVORY_PLANKS = registerBlock("pink_ivory_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
+
+    public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
+            ModLogs::new);
     public static final RegistryObject<Block> ACEROLA_PLANKS = registerBlock("acerola_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
+
+    public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LYCHEE_LOG = registerBlock("stripped_lychee_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LYCHEE_WOOD = registerBlock("lychee_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LYCHEE_WOOD = registerBlock("stripped_lychee_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> LYCHEE_PLANKS = registerBlock("lychee_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
-    public static final RegistryObject<Block> PRIVET_PLANKS = registerBlock("privet_planks",
+
+    public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PRIVET_LOG = registerBlock("stripped_privet_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_WOOD = registerBlock("privet_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PRIVET_WOOD = registerBlock("stripped_privet_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_PLANKS = registerBlock("privet_planks",
+            ModPlanks::new);
+
 
     public static final RegistryObject<Block> CAMPHOR_PLANKS = registerBlock("camphor_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
+            ModLogs::new);
+
+
+    public static final RegistryObject<Block> JACARANDA_LOG = registerBlock("jacaranda_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JACARANDA_LOG = registerBlock("stripped_jacaranda_log",
             ModLogs::new);
 
 
@@ -516,6 +579,9 @@ public class ModWood {
     public static final RegistryObject<Block> RING_CUPPED_OAK_WOOD = registerBlock("ring_cupped_oak_wood",
             ModLogs::new);
 
+
+    public static final RegistryObject<Block> TROPICAL_ALMOND_LOG = registerBlock("tropical_almond_log",
+            ModLogs::new);
 
     /// Stone Oak
     public static final RegistryObject<Block> STONE_OAK_LOG = registerBlock("stone_oak_log",
@@ -527,7 +593,7 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_STONE_OAK_WOOD = registerBlock("stripped_stone_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STONE_OAK_PLANKS = registerBlock("stone_oak_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
     /// Castanopsis
     public static final RegistryObject<Block> CASTANOPSIS_LOG = registerBlock("castanopsis_log",
@@ -539,22 +605,43 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_CASTANOPSIS_WOOD = registerBlock("stripped_castanopsis_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CASTANOPSIS_PLANKS = registerBlock("castanopsis_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
     ///Baobab
-
-    public static final RegistryObject<Block> BAOBAB_PLANKS = registerBlock("baobab_planks",
+    public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BAOBAB_WOOD = registerBlock("baobab_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAOBAB_LOG = registerBlock("stripped_baobab_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BAOBAB_WOOD = registerBlock("stripped_baobab_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BAOBAB_PLANKS = registerBlock("baobab_planks",
+            ModPlanks::new);
 
     ///Champak
-
-    public static final RegistryObject<Block> CHAMPAK_PLANKS = registerBlock("champak_planks",
+    public static final RegistryObject<Block> CHAMPAK_LOG = registerBlock("champak_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CHAMPAK_LOG = registerBlock("stripped_champak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHAMPAK_WOOD = registerBlock("champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CHAMPAK_WOOD = registerBlock("stripped_champak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CHAMPAK_PLANKS = registerBlock("champak_planks",
+            ModPlanks::new);
 
     ///Agathis
-
-    public static final RegistryObject<Block> AGATHIS_PLANKS = registerBlock("agathis_planks",
+    public static final RegistryObject<Block> AGATHIS_LOG = registerBlock("agathis_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AGATHIS_LOG = registerBlock("stripped_agathis_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> AGATHIS_WOOD = registerBlock("agathis_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_AGATHIS_WOOD = registerBlock("stripped_agathis_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> AGATHIS_PLANKS = registerBlock("agathis_planks",
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_LOG = registerBlock("bambooleaf_oak_log",
@@ -566,7 +653,7 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_BAMBOOLEAF_OAK_WOOD = registerBlock("stripped_bambooleaf_oak_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_PLANKS = registerBlock("bambooleaf_oak_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
     public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
             ModLogs::new);
@@ -576,13 +663,38 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LAUREL_OAK_WOOD = registerBlock("stripped_laurel_oak_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> LAUREL_OAK_PLANKS = registerBlock("laurel_oak_planks",
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_LOG = registerBlock("sand_laurel_oak_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SAND_LAUREL_OAK_WOOD = registerBlock("sand_laurel_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> LAUREL_OAK_PLANKS = registerBlock("laurel_oak_planks",
+            ModPlanks::new);
+
+
+    /// Podocarpus
+    public static final RegistryObject<Block> PODOCARPUS_LOG = registerBlock("podocarpus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_LOG = registerBlock("stripped_podocarpus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_WOOD = registerBlock("podocarpus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_WOOD = registerBlock("stripped_podocarpus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_PLANKS = registerBlock("podocarpus_planks",
+            ModPlanks::new);
 
 
     ///Liquidambar
-    public static final RegistryObject<Block> LIQUIDAMBAR_PLANKS = registerBlock("liquidambar_planks",
+    public static final RegistryObject<Block> LIQUIDAMBAR_LOG = registerBlock("liquidambar_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_liquidambar_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> LIQUIDAMBAR_WOOD = registerBlock("liquidambar_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_WOOD = registerBlock("stripped_liquidambar_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> LIQUIDAMBAR_PLANKS = registerBlock("liquidambar_planks",
+            ModPlanks::new);
 
 
     ///Laurel
@@ -594,19 +706,44 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
             ModLogs::new);
+    //Cinnamon
+    public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CINNAMON_WOOD = registerBlock("cinnamon_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
+            ModPlanks::new);
+    //Camphor (different log and wood)
+    public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMPHOR_LOG = registerBlock("stripped_camphor_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAMPHOR_WOOD = registerBlock("camphor_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMPHOR_WOOD = registerBlock("stripped_camphor_wood",
             ModLogs::new);
 
 
-    ///Podocarpus
 
-    public static final RegistryObject<Block> PODOCARPUS_PLANKS = registerBlock("podocarpus_planks",
-            ModLogs::new);
 
 
     ///Willow
-
+    public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> WEEPING_WILLOW_WOOD = registerBlock("weeping_willow_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks",
+            ModPlanks::new);
+
+
+    /// Acacia
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_LOG = registerBlock("blackwood_acacia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACKWOOD_ACACIA_WOOD = registerBlock("blackwood_acacia_wood",
             ModLogs::new);
 
 
@@ -627,8 +764,12 @@ public class ModWood {
             EucalyptusLog::new);
     public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
             EucalyptusLog::new);
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
+            EucalyptusLog::new);
+    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOOD = registerBlock("rainbow_eucalyptus_wood",
+            EucalyptusLog::new);
     public static final RegistryObject<Block> MYRTACEAE_PLANKS = registerBlock("myrtaceae_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     /// Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
@@ -656,7 +797,7 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_BAYBERRY_WOOD = registerBlock("stripped_bayberry_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BAYBERRY_PLANKS = registerBlock("bayberry_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     /// Sorbus
@@ -669,7 +810,7 @@ public class ModWood {
     public static final RegistryObject<Block> STRIPPED_SORBUS_WOOD = registerBlock("stripped_sorbus_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("bayberry_planks",
-            ModLogs::new);
+            ModPlanks::new);
 
 
     /// Pine (Pinus)
@@ -701,10 +842,16 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MUGO_PINE_WOOD = registerBlock("mugo_pine_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> PONDEROSA_PINE_LOG = registerBlock("ponderosa_pine_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PONDEROSA_PINE_WOOD = registerBlock("ponderosa_pine_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
+            ModPlanks::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
