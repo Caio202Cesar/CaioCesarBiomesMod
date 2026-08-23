@@ -114,7 +114,7 @@ tasks.named('jar', Jar).configure {
         attributes([
                 'Specification-Title'     : "caiocesarbiomes",
                 'Specification-Vendor'    : "caiocesarmods",
-                'Specification-Version'   : '2', // We are version 2 of ourselves
+                'Specification-Version'   : '2.0.0', // We are version 2 of ourselves
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
