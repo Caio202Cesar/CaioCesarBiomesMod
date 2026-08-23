@@ -400,12 +400,13 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> TREES_TEMPERATE_RAINFOREST = register("trees_temperate_rainforest",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(COOPER_BEECH_TREE.withChance(0.3F),
                             COOPER_BEECH_BIG_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.19F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
+                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), FANCY_OAK.withChance(0.41F), OAK.withChance(0.21F),
+                            OAK_BEES_002.withChance(0.089F), FANCY_OAK_BEES_005.withChance(0.2F),
                             RED_OAK_FANCY_TREE.withChance(0.3F), HAZELNUT_TREE.withChance(0.23F),
                             RED_MAPLE_TREE.withChance(0.2F),
                             OAK_TREE_WITH_KIWI.withChance(0.031F), RED_MAPLE_FANCY_TREE.withChance(0.2F),
-                            YOUNG_YEW_TREE.withChance(0.4F),
-                            HAWTHORN_TREE.withChance(0.3F), JAPANESE_MAPLE_TREE.withChance(0.053F),
+                            YOUNG_YEW_TREE.withChance(0.4F), ANCIENT_YEW_TREE.withChance(0.14F),
+                            HAWTHORN_TREE.withChance(0.2F), JAPANESE_MAPLE_TREE.withChance(0.053F),
                             ROWAN_TREE.withChance(0.2F)), RED_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
