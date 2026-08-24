@@ -405,7 +405,7 @@ public class DefaultBiomeTreeFeatures {
                             RED_OAK_FANCY_TREE.withChance(0.3F), HAZELNUT_TREE.withChance(0.23F),
                             RED_MAPLE_TREE.withChance(0.2F),
                             OAK_TREE_WITH_KIWI.withChance(0.031F), RED_MAPLE_FANCY_TREE.withChance(0.2F),
-                            YOUNG_YEW_TREE.withChance(0.4F), ANCIENT_YEW_TREE.withChance(0.14F),
+                            YOUNG_YEW_TREE.withChance(0.4F), ANCIENT_YEW_TREE.withChance(0.34F),
                             HAWTHORN_TREE.withChance(0.2F), JAPANESE_MAPLE_TREE.withChance(0.053F),
                             ROWAN_TREE.withChance(0.2F)), RED_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

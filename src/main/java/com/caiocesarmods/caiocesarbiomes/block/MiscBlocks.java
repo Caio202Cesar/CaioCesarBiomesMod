@@ -35,10 +35,18 @@ public class MiscBlocks {
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).
                     setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.STONE)));
-
     public static final RegistryObject<Block> LIME_COBBLESTONE = registerBlock("lime_cobblestone",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).
                     setRequiresTool().hardnessAndResistance(0.4F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).setRequiresTool()
+                    .hardnessAndResistance(1.5F, 6.0F)));
+    public static final RegistryObject<Block> SMOOTH_LIMESTONE = registerBlock("smooth_limestone",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).setRequiresTool()
+                    .hardnessAndResistance(2.0F, 6.0F)));
+    public static final RegistryObject<Block> CHISELED_LIMESTONE_BRICKS = registerBlock("chiseled_limestone_bricks",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).setRequiresTool()
+                    .hardnessAndResistance(1.5F, 6.0F)));
 
     public static final RegistryObject<Block> TOASTER = registerBlock("toaster",
             () -> new ToasterBlock(AbstractBlock.Properties.create(Material.ANVIL).notSolid()));
