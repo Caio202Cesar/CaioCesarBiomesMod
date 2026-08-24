@@ -25,7 +25,7 @@ public class DryTropicalBeachBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> DRY_TROPICAL_BEACH = BIOMES.register("dry_tropical_beach",
+    public static final RegistryObject<Biome> TROPICAL_SAVANNA_BEACH = BIOMES.register("dry_tropical_beach",
             () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
     //Savanna Beach
