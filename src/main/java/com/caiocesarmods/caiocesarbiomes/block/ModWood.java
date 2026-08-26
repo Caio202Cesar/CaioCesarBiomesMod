@@ -336,7 +336,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Ilex/Hollies
+    /// Ilex (hollies)
     public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_ILEX_LOG = registerBlock("stripped_ilex_log",
@@ -473,7 +473,7 @@ public class ModWood {
 
 
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = registerBlock("dragon_blood_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
 
 
     /// Live Oak
@@ -531,12 +531,14 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Acerols
     public static final RegistryObject<Block> ACEROLA_LOG = registerBlock("acerola_log",
             ModLogs::new);
     public static final RegistryObject<Block> ACEROLA_PLANKS = registerBlock("acerola_planks",
             ModPlanks::new);
 
 
+    /// Lychee
     public static final RegistryObject<Block> LYCHEE_LOG = registerBlock("lychee_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LYCHEE_LOG = registerBlock("stripped_lychee_log",
@@ -549,6 +551,7 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Privet
     public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PRIVET_LOG = registerBlock("stripped_privet_log",
@@ -775,15 +778,15 @@ public class ModWood {
 
     /// Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
     public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             SuculentTreeLog::new);
     public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> STRIPPED_MILKWOOD_LOG = registerBlock("stripped_milkwood_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> STRIPPED_MILKWOOD_WOOD = registerBlock("stripped_milkwood_wood",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> MILKWOOD_PLANKS = registerBlock("milkwood_planks",
             ModPlanks::new);
 
