@@ -69,9 +69,9 @@ public class ModWood {
 
     /// Fig
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             ModPlanks::new);
 
