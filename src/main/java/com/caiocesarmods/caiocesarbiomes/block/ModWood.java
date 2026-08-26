@@ -5,6 +5,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.CinnamonSapling;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.ModLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
+import com.caiocesarmods.caiocesarbiomes.block.custom.logs.SuculentTreeLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.ModPlanks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -418,7 +419,7 @@ public class ModWood {
 
 
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
 
 
 
@@ -609,7 +610,7 @@ public class ModWood {
 
     ///Baobab
     public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> BAOBAB_WOOD = registerBlock("baobab_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BAOBAB_LOG = registerBlock("stripped_baobab_log",
@@ -776,7 +777,7 @@ public class ModWood {
     public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
-            ModLogs::new);
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_MILKWOOD_LOG = registerBlock("stripped_milkwood_log",
