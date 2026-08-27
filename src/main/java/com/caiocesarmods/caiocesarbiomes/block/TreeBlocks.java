@@ -746,7 +746,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> BALD_CYPRESS_LEAVES = registerBlock("bald_cypress_leaves",
             () -> new BaldCypressLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_AUTUMN_LEAVES));
-    public static final RegistryObject<Block> BALD_CYPRESS_AUTUMN_LEAVES = registerBlock("bald_cypress_autumn_leaves",
+    public static final RegistryObject<Block> BALD_CYPRESS_AUTUMN_LEAVES = registerBlock("bald_cypress_fall_leaves",
             () -> new BaldCypressAutumnLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.BALD_CYPRESS_WINTER_LEAVES));
     public static final RegistryObject<Block> BALD_CYPRESS_WINTER_LEAVES = registerBlock("bald_cypress_branches",
