@@ -83,6 +83,11 @@ public class ModBiomes {
     public static final ResourceLocation MONTANE_CLOUD_JUNGLE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_cloud_jungle");
 
+    public static final ResourceLocation JUNGLE_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "jungle_river");
+    public static final ResourceLocation JUNGLE_EDGE_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "jungle_edge_river");
+
     /// Tundra
     //Tussock tundra
     public static final ResourceLocation TUSSOCK_TUNDRA =
