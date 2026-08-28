@@ -197,7 +197,8 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.5F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.5F),
+                            OCOTEA_FOREST_TREE.withChance(0.5F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
@@ -206,7 +207,7 @@ public class DefaultBiomeTreeFeatures {
                             BIG_WEEPING_FIG_TREE.withChance(0.25F), BIG_INDIAN_LAUREL_TREE.withChance(0.26F), RUBBER_TREE.withChance(0.26F),
                             WEEPING_FIG_TREE.withChance(0.15F), INDIAN_LAUREL_TREE.withChance(0.15F), BIG_CAMPHOR_TREE.withChance(0.23F),
                             OCOTEA_JUNGLE_TREE.withChance(0.5F), AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F),
-                            HOOP_PINE_TREE.withChance(0.23F), BUNYA_PINE_TREE2.withChance(0.2F), BUNYA_PINE_TREE.withChance(0.16F)),
+                            HOOP_PINE_TREE.withChance(0.23F), BUNYA_PINE_TREE2.withChance(0.23F), BUNYA_PINE_TREE.withChance(0.16F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 

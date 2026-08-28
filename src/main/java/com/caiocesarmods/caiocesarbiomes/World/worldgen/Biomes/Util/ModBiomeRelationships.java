@@ -153,6 +153,19 @@ public class ModBiomeRelationships {
                 ModBiomes.TROPICAL_ISLAND,
                 ModBiomes.TROPICAL_WET_BEACH);
 
+        //Montane Cloud Jungle
+        BiomeRelationshipRegistry.register(
+                ModBiomes.MONTANE_CLOUD_JUNGLE,
+                Biomes.JUNGLE_HILLS,
+                RelationshipType.EDGE,
+                4,
+                15,
+                6,
+                0,
+                false,
+                false,
+                null);
+
         ///Subtropical
         //Laurel Forest
         BiomeRelationshipRegistry.registerBeach(
