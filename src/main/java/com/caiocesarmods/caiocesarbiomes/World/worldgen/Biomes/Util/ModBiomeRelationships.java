@@ -123,6 +123,7 @@ public class ModBiomeRelationships {
                 ModBiomes.TROPICAL_SAVANNA_BEACH);
 
         //Jungle
+
         BiomeRelationshipRegistry.registerBeach(
                 Biomes.JUNGLE,
                 ModBiomes.TROPICAL_WET_BEACH);
@@ -136,7 +137,7 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 Biomes.JUNGLE_EDGE,
                 ModBiomes.JUNGLE_EDGE_RIVER);
-
+/*
         BiomeRelationshipRegistry.registerBeach(
                 Biomes.JUNGLE_HILLS,
                 ModBiomes.TROPICAL_WET_BEACH);
@@ -151,12 +152,13 @@ public class ModBiomeRelationships {
                 Biomes.MODIFIED_JUNGLE,
                 ModBiomes.JUNGLE_RIVER);
 
+
         BiomeRelationshipRegistry.registerBeach(
                 Biomes.MODIFIED_JUNGLE_EDGE,
                 ModBiomes.TROPICAL_SAVANNA_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 Biomes.MODIFIED_JUNGLE_EDGE,
-                ModBiomes.JUNGLE_EDGE_RIVER);
+                ModBiomes.JUNGLE_EDGE_RIVER);*/
 
         BiomeRelationshipRegistry.registerBeach(
                 Biomes.BAMBOO_JUNGLE,
@@ -184,12 +186,8 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 null);
-        BiomeRelationshipRegistry.registerBeach(
-                ModBiomes.MONTANE_CLOUD_JUNGLE,
-                ModBiomes.TROPICAL_WET_BEACH);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.MONTANE_CLOUD_JUNGLE,
-                ModBiomes.JUNGLE_RIVER);
+        //BiomeRelationshipRegistry.registerBeach(ModBiomes.MONTANE_CLOUD_JUNGLE, ModBiomes.TROPICAL_WET_BEACH);
+        //BiomeRelationshipRegistry.registerRiver(ModBiomes.MONTANE_CLOUD_JUNGLE, ModBiomes.JUNGLE_RIVER);
 
         //Tropical islands
         BiomeRelationshipRegistry.registerBeach(

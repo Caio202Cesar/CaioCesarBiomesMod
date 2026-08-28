@@ -23,7 +23,7 @@ public class MontaneCloudJungle {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MONTANE_CLOUD_JUNGLE = BIOMES.register("montane_cloud_jungle",
-            () -> makeMontaneCloudJungle(() -> ConfiguredSurfaceBuilders.GRASS,  1.5f, 0.4f));
+            () -> makeMontaneCloudJungle(() -> ConfiguredSurfaceBuilders.GRASS,  5f, 0.12f));
 
     private static Biome makeMontaneCloudJungle(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
@@ -59,7 +59,7 @@ public class MontaneCloudJungle {
         ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.1F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(15658734)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
