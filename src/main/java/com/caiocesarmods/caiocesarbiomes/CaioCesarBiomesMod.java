@@ -167,6 +167,7 @@ public class CaioCesarBiomesMod
         MontaneCloudJungle.register(eventBus);
         JungleRiver.register(eventBus);
         JungleEdgeRiver.register(eventBus);
+        JungleHighland.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

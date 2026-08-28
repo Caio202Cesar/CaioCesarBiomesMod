@@ -80,6 +80,8 @@ public class ModBiomes {
     public static final ResourceLocation TROPICAL_SAVANNA_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "dry_tropical_beach");
 
+    public static final ResourceLocation JUNGLE_HIGHLAND =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "jungle_highland");
     public static final ResourceLocation MONTANE_CLOUD_JUNGLE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_cloud_jungle");
 

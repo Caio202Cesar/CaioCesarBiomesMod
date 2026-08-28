@@ -177,10 +177,10 @@ public class ModBiomeRelationships {
         //Montane Cloud Jungle
         BiomeRelationshipRegistry.register(
                 ModBiomes.MONTANE_CLOUD_JUNGLE,
-                Biomes.JUNGLE_HILLS,
+                ModBiomes.JUNGLE_HIGHLAND,
                 RelationshipType.EDGE,
-                4,
-                15,
+                2,
+                25,
                 6,
                 0,
                 false,
