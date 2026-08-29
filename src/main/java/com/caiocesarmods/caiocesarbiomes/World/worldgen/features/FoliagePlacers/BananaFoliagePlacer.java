@@ -1,20 +1,22 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers;
 
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
 import java.util.Random;
 import java.util.Set;
 
+//Replace açai, jussara leaves in Brazillian Biomes
 public class BananaFoliagePlacer extends FoliagePlacer {
     public BananaFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
@@ -38,7 +40,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_(); // Position of the top foliage
 
         // Place a central leaf block at the top to connect fronds
-        placeLeafAt(world, center, leaves, boundingBox, random);
+        placeLeafAt(world, random, config, center, leaves, boundingBox);
 
         // Generate 4-6 fronds extending outward from the top
         int frondCount = 4 + random.nextInt(3);
@@ -73,16 +75,29 @@ public class BananaFoliagePlacer extends FoliagePlacer {
             }
 
             BlockPos leafPos = new BlockPos(x, y, z);
-            placeLeafAt(world, leafPos, leaves, boundingBox, random);
+            placeLeafAt(world, random, config, leafPos, leaves, boundingBox);
         }
     }
 
-    private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox, Random random) {
-        if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, TreeBlocks.BANANA_LEAVES.get().getDefaultState()
-                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
+    private void placeLeafAt(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            BlockPos pos,
+            Set<BlockPos> leaves,
+            MutableBoundingBox box) {
+
+        if (TreeFeature.isReplaceableAt(world, pos)) {
+
+            BlockState leafState = config.leavesProvider
+                    .getBlockState(random, pos)
+                    .with(LeavesBlock.PERSISTENT, true)
+                    .with(LeavesBlock.DISTANCE, 1);
+
+            world.setBlockState(pos, leafState, 19);
+
             leaves.add(pos);
-            boundingBox.expandTo(new MutableBoundingBox(pos, pos));
+            box.expandTo(new MutableBoundingBox(pos, pos));
         }
     }
 

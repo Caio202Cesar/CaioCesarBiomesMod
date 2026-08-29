@@ -926,7 +926,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> ROYAL_PALM_LEAVES = registerBlock("royal_palm_leaves",
             ModLeaves::new);
     //public static final RegistryObject<Block> ROYAL_PALM_SAPLING = registerBlock("royal_palm_sapling", RoyalPalmSapling::new);
-
+    //Wax Palm
+    public static final RegistryObject<Block> WAX_PALM_LEAVES = registerBlock("wax_palm_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WAX_PALM_SAPLING = registerBlock("wax_palm_sapling",
+            WaxPalmSapling::new);
 
     ///Casuarina
     public static final RegistryObject<Block> CASUARINA_LEAVES = registerBlock("casuarina_leaves",

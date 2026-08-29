@@ -106,6 +106,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
             ModLogs::new);
+    public static final RegistryObject<Block> WAX_PALM_LOG = registerBlock("wax_palm_log",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",

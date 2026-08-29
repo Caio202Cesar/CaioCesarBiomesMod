@@ -2205,6 +2205,13 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
 
+    //Wax Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WAX_PALM_TREE = register("wax_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WAX_PALM_LOG),
+                    new SimpleBlockStateProvider(States.WAX_PALM_LEAVES),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(20, 20, 4),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {
         protected static final BlockState ACEROLA_LOG = ModWood.ACEROLA_LOG.get().getDefaultState();
@@ -2383,6 +2390,9 @@ public class TreeFeatures {
 
         protected static final BlockState SABAL_LOG = ModWood.SABAL_LOG.get().getDefaultState();
         protected static final BlockState SABAL_LEAVES = TreeBlocks.SABAL_LEAVES.get().getDefaultState();
+
+        protected static final BlockState WAX_PALM_LOG = ModWood.WAX_PALM_LOG.get().getDefaultState();
+        protected static final BlockState WAX_PALM_LEAVES = TreeBlocks.WAX_PALM_LEAVES.get().getDefaultState();
 
         protected static final BlockState PISTACHIO_LOG = ModWood.PISTACHIO_LOG.get().getDefaultState();
         protected static final BlockState PISTACHIO_LEAVES = TreeBlocks.PISTACHIO_LEAVES.get().getDefaultState();

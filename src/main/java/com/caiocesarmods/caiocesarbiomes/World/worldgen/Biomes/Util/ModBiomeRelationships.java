@@ -356,15 +356,9 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 null);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_RAINFOREST_EDGE,
-                ModBiomes.AMAZON_VARZEA_FOREST);
        BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.AMAZON_VARZEA_FOREST);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.AMAZON_RAINFOREST,
-                ModBiomes.BLACK_AMAZON_RIVER);
 
         //Restinga
         BiomeRelationshipRegistry.registerBeach(
