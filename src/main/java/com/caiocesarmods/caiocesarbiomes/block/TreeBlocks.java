@@ -426,9 +426,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
             CinnamonSapling::new);
     //Cinnamon
-    public static final RegistryObject<Block> CALIFORNIA_LAUREL_LEAVES = registerBlock("cinnamon_leaves",
+    public static final RegistryObject<Block> CALIFORNIA_LAUREL_LEAVES = registerBlock("california_laurel_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> CALIFORNIA_LAUREL_SAPLING = registerBlock("cinnamon_sapling",
+    public static final RegistryObject<Block> CALIFORNIA_LAUREL_SAPLING = registerBlock("california_laurel_sapling",
             CaliforniaLaurelSapling::new);
 
     /// Camphor (has its own log)
