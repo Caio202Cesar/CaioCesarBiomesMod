@@ -420,10 +420,18 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MACHILLUS_LEAVES));
     public static final RegistryObject<Block> MACHILLUS_SAPLING = registerBlock("machillus_sapling",
             MachillusSapling::new);
+    //Cinnamon
     public static final RegistryObject<Block> CINNAMON_LEAVES = registerBlock("cinnamon_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CINNAMON_SAPLING = registerBlock("cinnamon_sapling",
             CinnamonSapling::new);
+    //Cinnamon
+    public static final RegistryObject<Block> CALIFORNIA_LAUREL_LEAVES = registerBlock("cinnamon_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CALIFORNIA_LAUREL_SAPLING = registerBlock("cinnamon_sapling",
+            CaliforniaLaurelSapling::new);
+
+    /// Camphor (has its own log)
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",

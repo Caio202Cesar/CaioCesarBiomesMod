@@ -2213,6 +2213,29 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(20, 20, 8),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //California Laurel
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALIFORNIA_LAUREL_TREE = register("california_laurel_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.CALIFORNIA_LAUREL_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALIFORNIA_LAUREL_FANCY_TREE = register("california_laurel_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.CALIFORNIA_LAUREL_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_CALIFORNIA_LAUREL_TREE = register("ancient_california_laurel_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.CALIFORNIA_LAUREL_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
+                    .setIgnoreVines().build()));
+
+
     public static final class States {
         protected static final BlockState ACEROLA_LOG = ModWood.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
@@ -2225,6 +2248,7 @@ public class TreeFeatures {
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
         protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
         protected static final BlockState OCOTEA_LEAVES = TreeBlocks.OCOTEA_LEAVES.get().getDefaultState();
+        protected static final BlockState CALIFORNIA_LAUREL_LEAVES = TreeBlocks.CALIFORNIA_LAUREL_LEAVES.get().getDefaultState();
 
         protected static final BlockState AGATHIS_LOG = ModWood.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
