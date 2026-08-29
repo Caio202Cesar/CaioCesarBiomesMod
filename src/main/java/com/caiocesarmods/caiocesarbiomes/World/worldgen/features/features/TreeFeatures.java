@@ -159,7 +159,7 @@ public class TreeFeatures {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
-                    ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT, Features.Placements.BEES_0002_PLACEMENT
+                            Features.Placements.BEES_0002_PLACEMENT
                             , ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_TREE = register("forest_ocotea_tree",
@@ -169,7 +169,6 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
-                            ModFeatures.Placements.GOLDEN_KIWI_VINE_PLACEMENT,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OCOTEA_FOREST_FANCY_TREE_WITH_IVY = register("forest_ocotea_fancy_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),

@@ -23,7 +23,7 @@ public class MontaneCloudJungle {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> MONTANE_CLOUD_JUNGLE = BIOMES.register("montane_cloud_jungle",
-            () -> makeMontaneCloudJungle(() -> ConfiguredSurfaceBuilders.GRASS,  5f, 0.12f));
+            () -> makeMontaneCloudJungle(() -> ConfiguredSurfaceBuilders.GRASS,  4.2f, 0.12f));
 
     private static Biome makeMontaneCloudJungle(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
