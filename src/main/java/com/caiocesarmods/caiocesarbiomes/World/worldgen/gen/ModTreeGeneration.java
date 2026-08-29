@@ -77,7 +77,7 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_HILLS_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
                             new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
