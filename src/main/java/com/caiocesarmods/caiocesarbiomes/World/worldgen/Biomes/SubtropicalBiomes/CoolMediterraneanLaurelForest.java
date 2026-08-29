@@ -1,5 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes;
 
-//California Laurel Forest
+//California Laurel Forest (Csb climate)
 public class CoolMediterraneanLaurelForest {
 }
