@@ -2210,7 +2210,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WAX_PALM_LOG),
                     new SimpleBlockStateProvider(States.WAX_PALM_LEAVES),
                     new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(20, 20, 4),
+                    new StraightTrunkPlacer(20, 20, 8),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {

@@ -58,8 +58,8 @@ public class MontaneCloudJungle {
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
-        ModDefaultBiomeFeatures.withJungleOcoteaTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withLaurelJungleTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMontaneCloudJungleTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.WAX_PALM_TREE);
 

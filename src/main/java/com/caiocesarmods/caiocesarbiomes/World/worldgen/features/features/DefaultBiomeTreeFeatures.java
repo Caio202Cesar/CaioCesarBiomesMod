@@ -196,9 +196,10 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
-    public static final ConfiguredFeature<?, ?> JUNGLE_OCOTEA_TREES = register("jungle_ocotea_trees",
+    public static final ConfiguredFeature<?, ?> MONTANE_CLOUD_JUNGLE_TREES = register("montane_cloud_jungle_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.5F),
-                            OCOTEA_FOREST_TREE.withChance(0.5F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F), AVOCADO_TREE.withChance(0.3F)),
+                            OCOTEA_FOREST_TREE.withChance(0.5F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F), AVOCADO_TREE.withChance(0.3F),
+                            AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F), HIGHLAND_OCOTEA_TREE.withChance(0.16F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
@@ -213,8 +214,7 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_LAURACEAE = register("subtropical_forest_lauraceae",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_FOREST_TREE.withChance(0.5F),
-                            OCOTEA_FOREST_FANCY_TREE_WITH_IVY.withChance(0.35F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CAMPHOR_TREE.withChance(0.5F), BIG_CAMPHOR_TREE.withChance(0.25F), AVOCADO_TREE.withChance(0.34F),
                             IVY_AVOCADO_TREE.withChance(0.12F), MACHILLUS_TREE.withChance(0.34F), IVY_MACHILLUS_TREE.withChance(0.13F)),
                             ANCIENT_CAMPHOR_TREE))

@@ -26,9 +26,10 @@ public class JungleHighland {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> JUNGLE_HIGHLAND = BIOMES.register("jungle_highland",
-            () -> makeMontaneCloudJungle(() -> ConfiguredSurfaceBuilders.GRASS,  1.6f, 0.9f));
+            () -> makeMontaneCloudJungleFoothills(() -> ConfiguredSurfaceBuilders.GRASS,  1.6f, 0.9f));
 
-    private static Biome makeMontaneCloudJungle(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    //Montane Cloud Jungle Foothills
+    private static Biome makeMontaneCloudJungleFoothills(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
 
@@ -59,6 +60,8 @@ public class JungleHighland {
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withJungleTrees(biomegenerationsettings$builder);
+
+        ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                 DefaultBiomeTreeFeatures.JUNGLE_HILLS_EXTRA_VEGETATION);
