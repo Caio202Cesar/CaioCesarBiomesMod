@@ -192,6 +192,12 @@ public class ModItems {
             () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
     public static final RegistryObject<Item> LILLY_PILLIES = ITEMS.register("lilly_pillies",
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.LILLY_PILLIES)));
+    public static final RegistryObject<Item> CALIFORNIA_LAUREL_FRUIT = ITEMS.register("california_laurel_fruit",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS)));
+    public static final RegistryObject<Item> CALIFORNIA_LAUREL_NUT = ITEMS.register("california_laurel_nut",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS)));
+    public static final RegistryObject<Item> CALIFORNIA_LAUREL_ROASTED_NUT = ITEMS.register("california_laurel_roasted_nut",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.CALIFORNIA_LAUREL_NUT)));
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
