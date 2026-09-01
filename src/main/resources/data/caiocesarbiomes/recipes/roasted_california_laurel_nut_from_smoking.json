@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "caiocesarbiomes:california_laurel_nut"
+  },
+  "result": "caiocesarbiomes:california_laurel_roasted_nut",
+  "experience": 0.35,
+  "cookingtime": 200
+}
