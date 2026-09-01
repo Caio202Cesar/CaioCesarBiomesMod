@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:california_laurel_fruit"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:california_laurel_nut"
+  }
+}

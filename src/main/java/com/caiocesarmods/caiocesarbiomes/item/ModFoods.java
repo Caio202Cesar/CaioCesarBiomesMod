@@ -279,6 +279,11 @@ public class ModFoods {
             .effect(new EffectInstance(Effects.HUNGER, 500, 6), 1.0F)
             .effect(new EffectInstance(Effects.BLINDNESS, 500, 6), 1.0F).build();
     public static final Food LILLY_PILLIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food CALIFORNIA_LAUREL_NUT = (new Food.Builder()).hunger(2).saturation(0.1F)
+            .effect(new EffectInstance(Effects.HASTE, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 3), 1.0F)
+            .effect(new EffectInstance(Effects.SPEED, 100, 3), 1.0F).build();
 
     private static Food buildStew(int hunger) {
         return (new Food.Builder()).hunger(hunger).saturation(0.6F).build();
