@@ -51,6 +51,7 @@ public class BiomeRelationship {
     public Set<ResourceLocation> getRequiredNeighbours() {
         return requiredNeighbours;
     }
+
     public ResourceLocation getParent() {
         return parent;
     }
