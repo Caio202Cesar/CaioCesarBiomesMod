@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/santa_barbara_ceanothus_sapling",
+    "particle": "caiocesarbiomes:block/santa_barbara_ceanothus_sapling"
+  }
+}

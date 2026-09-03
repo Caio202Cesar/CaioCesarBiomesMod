@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/santa_barbara_ceanothus_leaves",
+    "particle": "caiocesarbiomes:block/santa_barbara_ceanothus_leaves"
+  }
+}
