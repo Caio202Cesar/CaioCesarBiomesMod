@@ -1,11 +1,8 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
 
 import net.minecraft.world.biome.Biomes;
 
-import java.util.Set;
-
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.MatchMode.ANY;
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.ARAUCARIA_PLATEAU;
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.MatchMode.ANY;
 
 public class ModBiomeRelationships {
     public static void register() {

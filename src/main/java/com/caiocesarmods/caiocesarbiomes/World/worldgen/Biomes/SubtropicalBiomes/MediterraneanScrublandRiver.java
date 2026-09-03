@@ -2,7 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiome
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;

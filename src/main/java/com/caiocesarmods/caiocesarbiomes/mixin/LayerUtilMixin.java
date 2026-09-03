@@ -1,6 +1,8 @@
 package com.caiocesarmods.caiocesarbiomes.mixin;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.Layers.BeachReplacementLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.Layers.RelationshipLayer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.Layers.RiverRelationshipLayer;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
 import net.minecraft.world.gen.area.IArea;
 import net.minecraft.world.gen.area.IAreaFactory;

@@ -1,18 +1,12 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
 
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.INoiseRandom;
-import net.minecraft.world.gen.layer.LayerUtil;
 
-import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
-
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModBiomes.*;
 
 public enum RelationshipType {
 

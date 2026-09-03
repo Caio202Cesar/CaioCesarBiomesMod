@@ -1,7 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.ModConfiguredSurfaceBuilders;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;

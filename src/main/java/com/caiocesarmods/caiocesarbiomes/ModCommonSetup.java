@@ -1,13 +1,12 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.VanillaBiomeTweaks;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.VanillaBiomeTweaks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.potion.Potions;
-import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;

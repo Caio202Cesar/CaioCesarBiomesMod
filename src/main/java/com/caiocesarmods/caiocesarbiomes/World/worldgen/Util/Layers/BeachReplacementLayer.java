@@ -1,7 +1,8 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.Layers;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationship;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationshipRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationship;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationshipRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.RelationshipType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
@@ -12,7 +13,7 @@ import net.minecraft.world.gen.layer.traits.IDimOffset0Transformer;
 
 import java.util.Optional;
 
-public enum RiverRelationshipLayer implements IAreaTransformer2, IDimOffset0Transformer {
+public enum BeachReplacementLayer implements IAreaTransformer2, IDimOffset0Transformer {
 
     INSTANCE;
 
@@ -32,7 +33,7 @@ public enum RiverRelationshipLayer implements IAreaTransformer2, IDimOffset0Tran
                 getOffsetX(x),
                 getOffsetZ(z));
 
-        // Vanilla didn't generate a river.
+        // Vanilla did not generate a beach
         if (before == after)
             return after;
 
@@ -49,38 +50,32 @@ public enum RiverRelationshipLayer implements IAreaTransformer2, IDimOffset0Tran
             return after;
 
         Optional<BiomeRelationship> relationship =
-                BiomeRelationshipRegistry.getRiverRelationship(id);
-
-        Biome afterBiome = WorldGenRegistries.BIOME.getByValue(after);
-
-        ResourceLocation afterId =
-                afterBiome == null
-                        ? null
-                        : WorldGenRegistries.BIOME.getKey(afterBiome);
+                BiomeRelationshipRegistry.getRelationship(
+                        id,
+                        RelationshipType.BEACH);
 
         System.out.println(
-                "[River]"
-                        + " before=" + before
-                        + " (" + id + ")"
-                        + " after=" + after
-                        + " (" + afterId + ")");
+                "[Beach] before=" + id +
+                        " after=" + WorldGenRegistries.BIOME.getKey(
+                        WorldGenRegistries.BIOME.getByValue(after)));
 
         if (!relationship.isPresent())
             return after;
 
+        Integer replacement =
+                RelationshipType.BEACH.apply(
+                        relationship.get(),
+                        random,
+                        before,
+                        before,
+                        before,
+                        before,
+                        after);
+
         System.out.println(
-                "[River] Replacing with " +
+                "[Beach] Replacing with " +
                         relationship.get().getChild());
 
-        System.out.println(
-                "[River] replacing "
-                        + afterId
-                        + " -> "
-                        + relationship.get().getChild());
-
-        return WorldGenRegistries.BIOME
-                .getOptional(relationship.get().getChild())
-                .map(WorldGenRegistries.BIOME::getId)
-                .orElse(after);
+        return replacement == null ? after : replacement;
     }
 }

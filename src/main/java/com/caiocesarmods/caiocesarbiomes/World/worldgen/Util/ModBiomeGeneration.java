@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;

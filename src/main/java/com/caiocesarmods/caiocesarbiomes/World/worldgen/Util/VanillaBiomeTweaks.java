@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
 
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.Util.MutableBiomeAmbience;

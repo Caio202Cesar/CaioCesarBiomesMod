@@ -1,9 +1,8 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.Layers;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.Layers;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeFamilyRegistry;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationship;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.BiomeRelationshipRegistry;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.Util.RelationshipType;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationship;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationshipRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.RelationshipType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
