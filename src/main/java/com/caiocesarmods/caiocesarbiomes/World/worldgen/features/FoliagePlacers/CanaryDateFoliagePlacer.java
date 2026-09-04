@@ -4,12 +4,14 @@ import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
@@ -94,16 +96,29 @@ public class CanaryDateFoliagePlacer extends FoliagePlacer {
             int z = (int) Math.round(trunkCenterZ + i * Math.sin(angle));
             int y = trunkBase.getY() - (i / 2);
             BlockPos leafPos = new BlockPos(x, y, z);
-            placeLeafAt(world, leafPos, leaves, boundingBox);
+            placeLeafAt(world, random, config, leafPos, leaves, boundingBox);
         }
     }
 
-    private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
-        if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, TreeBlocks.CANARY_DATE_LEAVES.get().getDefaultState()
-                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
+    private void placeLeafAt(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            BlockPos pos,
+            Set<BlockPos> leaves,
+            MutableBoundingBox box) {
+
+        if (TreeFeature.isReplaceableAt(world, pos)) {
+
+            BlockState leafState = config.leavesProvider
+                    .getBlockState(random, pos)
+                    .with(LeavesBlock.PERSISTENT, true)
+                    .with(LeavesBlock.DISTANCE, 1);
+
+            world.setBlockState(pos, leafState, 19);
+
             leaves.add(pos);
-            boundingBox.expandTo(new MutableBoundingBox(pos, pos));
+            box.expandTo(new MutableBoundingBox(pos, pos));
         }
     }
 
