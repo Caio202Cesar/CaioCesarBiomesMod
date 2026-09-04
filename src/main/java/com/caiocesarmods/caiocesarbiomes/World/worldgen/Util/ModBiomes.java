@@ -73,6 +73,9 @@ public class ModBiomes {
     public static final ResourceLocation TROPICAL_ISLAND =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_island");
 
+    public static final ResourceLocation FICUS_JUNGLE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "ficus_jungle");
+
     public static final ResourceLocation TROPICAL_WET_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_beach");
     public static final ResourceLocation BAMBOO_TROPICAL_WET_BEACH =

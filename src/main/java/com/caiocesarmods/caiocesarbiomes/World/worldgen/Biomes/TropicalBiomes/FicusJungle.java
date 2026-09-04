@@ -18,12 +18,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class MonsoonFicusTropicalForest {
+public class FicusJungle {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> MONSOON_FICUS_FOREST = BIOMES.register("monsoon_ficus_tropical_forest",
+    public static final RegistryObject<Biome> FICUS_JUNGLE = BIOMES.register("ficus_jungle",
             () -> makeMonsoonFicusTropicalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 

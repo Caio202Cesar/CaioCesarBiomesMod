@@ -126,7 +126,7 @@ public class CaioCesarBiomesMod
         StonyMediterraneanShoreBiome.register(eventBus);
         CookPineIslandBiome.register(eventBus);
         PewenConiferousGrove.register(eventBus);
-        MonsoonFicusTropicalForest.register(eventBus);
+        FicusJungle.register(eventBus);
         HemiborealSteppeBiome.register(eventBus);
         TemperateRainforest.register(eventBus);
         HemiborealForestBiome.register(eventBus);
