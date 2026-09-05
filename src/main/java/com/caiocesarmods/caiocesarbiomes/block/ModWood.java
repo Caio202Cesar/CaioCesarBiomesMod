@@ -840,6 +840,11 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Ceanothus
+    public static final RegistryObject<Block> CEANOTHUS_LOG = registerBlock("ceanothus_log",
+            ModLogs::new);
+
+
     /// Pine (Pinus)
     public static final RegistryObject<Block> CANARY_PINE_LOG = registerBlock("canary_pine_log",
             ModLogs::new);

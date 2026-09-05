@@ -2292,6 +2292,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> COAST_LIVE_OAK_SAPLING = registerBlock("coast_live_oak_sapling",
             CoastLiveOakSapling::new);
 
+    public static final RegistryObject<Block> SANTA_BARBARA_CEANOTHUS_LEAVES = registerBlock("santa_barbara_ceanothus_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SANTA_BARBARA_CEANOTHUS_SAPLING = registerBlock("santa_barbara_ceanothus_sapling",
+            CoastLiveOakSapling::new);
+
     //Hot temperate forest
     public static final RegistryObject<Block> LIQUIDAMBAR_LEAVES = registerBlock("liquidambar_leaves",
             ModLeaves::new);
@@ -2303,6 +2308,8 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SAND_LAUREL_OAK_SAPLING = registerBlock("sand_laurel_oak_sapling",
             SandLaurelOakSapling::new);
+
+
 
 
 
