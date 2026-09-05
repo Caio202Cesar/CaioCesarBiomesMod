@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/black_walnut_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/black_walnut_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/black_walnut_slab_top"
+    }
+  }
+}
