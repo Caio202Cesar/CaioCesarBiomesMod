@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_side",
   "textures": {
-    "texture": "caiocesarbiomes:block/algarrobillo_planks"
+    "texture": "caiocesarbiomes:block/black_walnut_planks"
   }
 }
