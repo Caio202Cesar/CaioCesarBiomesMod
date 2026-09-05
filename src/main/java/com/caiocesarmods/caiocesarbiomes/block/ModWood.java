@@ -467,8 +467,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-    public static final RegistryObject<Block> BLACK_WALNUT_LOG = registerBlock("black_walnut_log",
-            ModLogs::new);
+    //public static final RegistryObject<Block> BLACK_WALNUT_LOG = registerBlock("black_walnut_log", ModLogs::new);
     public static final RegistryObject<Block> BLACK_WALNUT_PLANKS = registerBlock("black_walnut_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> STRIPPED_BLACK_WALNUT_LOG = registerBlock("stripped_black_walnut_log",
