@@ -467,6 +467,28 @@ public class ModWood {
             ModPlanks::new);
 
 
+    public static final RegistryObject<Block> BLACK_WALNUT_LOG = registerBlock("black_walnut_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_WALNUT_PLANKS = registerBlock("black_walnut_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> STRIPPED_BLACK_WALNUT_LOG = registerBlock("stripped_black_walnut_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BLACK_WALNUT_WOOD = registerBlock("stripped_black_walnut_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_WALNUT_SLAB = registerBlock("black_walnut_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> BLACK_WALNUT_STAIRS = registerBlock("black_walnut_stairs",
+            () -> new StairsBlock(() -> BLACK_WALNUT_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> BLACK_WALNUT_FENCE = registerBlock("black_walnut_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> BLACK_WALNUT_FENCE_GATE = registerBlock("black_walnut_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
     ///Pecan
     public static final RegistryObject<Block> PECAN_LOG = registerBlock("pecan_log",
             ModLogs::new);
