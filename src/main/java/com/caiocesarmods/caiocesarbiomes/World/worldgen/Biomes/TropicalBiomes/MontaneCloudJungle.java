@@ -60,6 +60,7 @@ public class MontaneCloudJungle {
 
         ModDefaultBiomeFeatures.withMontaneCloudJungleTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withRainforestFern(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.WAX_PALM_TREE);
 

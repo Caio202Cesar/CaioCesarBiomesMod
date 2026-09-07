@@ -86,27 +86,36 @@ public class ModFeatures implements IFeatureConfig {
 });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> BADLANDS_TALL_PLANTS = ImmutableList.of(() -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANZANITA_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANZANITA_BUSH),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MAGELLANIC_TALL_PLANTS = ImmutableList.of(() -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.HARDY_FURSCHIA), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.HARDY_FURSCHIA),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> RAINFOREST_FERN_PATCH = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARGE_FERN),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> TEMPERATE_TALL_PLANTS_LIST = ImmutableList.of(() -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SWAMP_TALL_PLANTS_LIST = ImmutableList.of(() -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
-    }, () -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
-    }, () -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_YELLOW), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
-    }, () -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
-    }, () -> {
-        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_PURPLE_RED), new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLUEBERRY_BUSH),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());}, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SPIDER_LILY),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());}, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_YELLOW),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());}, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_RED),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());}, () -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CANNA_LILY_PURPLE_RED),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> DESERT_TALL_PLANTS_LIST = ImmutableList.of(() -> {
@@ -192,6 +201,10 @@ public class ModFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> PATCH_TROPICAL_DRYLAND_TALL_PLANTS = register("tropical_dryland_tall_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAHEL_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> RAINFOREST_TALL_FERN = register("rainforest_tall_fern",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(RAINFOREST_FERN_PATCH)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(35));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
@@ -449,6 +462,7 @@ public class ModFeatures implements IFeatureConfig {
         protected static final BlockState CHILEAN_GUAVA_FLOWERING_BUSH = ModPlants.CHILEAN_GUAVA_FLOWERING_BUSH.get().getDefaultState();
         protected static final BlockState CHILEAN_GUAVA_FRUITING_BUSH = ModPlants.CHILEAN_GUAVA_FRUITING_BUSH.get().getDefaultState();
         protected static final BlockState HARDY_FURSCHIA = ModPlants.HARDY_FURSCHIA.get().getDefaultState();
+        protected static final BlockState LARGE_FERN = Blocks.LARGE_FERN.getDefaultState();
 
     }
 }
