@@ -96,17 +96,31 @@ public class ModWood {
     /// Palm woods
     public static final RegistryObject<Block> DATE_LOG = registerBlock("date_log",
             ModLogs::new);
+    public static final RegistryObject<Block> DATE_WOOD = registerBlock("date_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BISMARCK_PALM_LOG = registerBlock("bismarck_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BISMARCK_PALM_WOOD = registerBlock("bismarck_palm_wood",
             ModLogs::new);
     public static final RegistryObject<Block> COCONUT_LOG = registerBlock("coconut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> COCONUT_WOOD = registerBlock("coconut_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> OIL_PALM_LOG = registerBlock("oil_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> OIL_PALM_WOOD = registerBlock("oil_palm_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SABAL_LOG = registerBlock("sabal_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SABAL_WOOD = registerBlock("sabal_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> ROYAL_PALM_LOG = registerBlock("royal_palm_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_PALM_WOOD = registerBlock("royal_palm_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> WAX_PALM_LOG = registerBlock("wax_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> WAX_PALM_WOOD = registerBlock("wax_palm_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
             ModLogs::new);

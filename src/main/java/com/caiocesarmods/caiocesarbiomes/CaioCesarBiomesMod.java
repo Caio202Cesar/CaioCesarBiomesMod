@@ -257,6 +257,20 @@ public class CaioCesarBiomesMod
                     .put(ModWood.COAST_COTTONWOOD_WOOD.get(), ModWood.STRIPPED_COAST_COTTONWOOD_WOOD.get())
                     .put(ModWood.CORK_OAK_LOG.get(), ModWood.STRIPPED_CORK_OAK_LOG.get())
                     .put(ModWood.CORK_OAK_WOOD.get(), ModWood.STRIPPED_CORK_OAK_WOOD.get())
+                    .put(ModWood.DATE_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.DATE_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.BISMARCK_PALM_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.BISMARCK_PALM_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.COCONUT_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.COCONUT_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.OIL_PALM_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.OIL_PALM_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.SABAL_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.SABAL_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.ROYAL_PALM_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.ROYAL_PALM_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
+                    .put(ModWood.WAX_PALM_LOG.get(), ModWood.STRIPPED_PALM_LOG.get())
+                    .put(ModWood.WAX_PALM_WOOD.get(), ModWood.STRIPPED_PALM_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
