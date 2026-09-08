@@ -204,7 +204,7 @@ public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> RAINFOREST_TALL_FERN = register("rainforest_tall_fern",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(RAINFOREST_FERN_PATCH)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(35));
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(160));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
