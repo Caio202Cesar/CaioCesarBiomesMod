@@ -1713,13 +1713,13 @@ public class TreeFeatures {
 
     //Aspen
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ASPEN_TREE = register("aspen_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAMBOO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ASPEN_LOG),
                     new SimpleBlockStateProvider(States.ASPEN_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(10, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TAIGA_ASPEN_TREE = register("taiga_aspen_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAMBOO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ASPEN_LOG),
                     new SimpleBlockStateProvider(States.ASPEN_TAIGA_SPRING_BRANCHES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
                     new StraightTrunkPlacer(10, 3, 0),
@@ -2236,6 +2236,21 @@ public class TreeFeatures {
                     .setIgnoreVines().build()));
 
 
+    //Bamboo
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BAMBOO_TREE = register("bamboo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAMBOO_LOG),
+                    new SimpleBlockStateProvider(States.BAMBOO_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(10, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_BAMBOO_TREE = register("tall_bamboo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BAMBOO_LOG),
+                    new SimpleBlockStateProvider(States.BAMBOO_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(16, 5, 2),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+
     public static final class States {
         protected static final BlockState ACEROLA_LOG = ModWood.ACEROLA_LOG.get().getDefaultState();
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
@@ -2356,10 +2371,10 @@ public class TreeFeatures {
         protected static final BlockState BAOBAB_LOG = ModWood.BAOBAB_LOG.get().getDefaultState();
         protected static final BlockState BAOBAB_LEAVES = TreeBlocks.BAOBAB_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BIRCH_LOG = Blocks.BIRCH_LOG.getDefaultState();
         protected static final BlockState BAMBOO_LOG = Blocks.BAMBOO.getDefaultState();
+        protected static final BlockState BAMBOO_LEAVES = TreeBlocks.BAMBOO_LEAVES.get().getDefaultState();
 
-
+        protected static final BlockState ASPEN_LOG = ModWood.ASPEN_LOG.get().getDefaultState();
         protected static final BlockState ASPEN_LEAVES = TreeBlocks.ASPEN_LEAVES.get().getDefaultState();
         protected static final BlockState ASPEN_TAIGA_SPRING_BRANCHES = TreeBlocks.ASPEN_WINTER_BRANCHES.get().getDefaultState();
 
