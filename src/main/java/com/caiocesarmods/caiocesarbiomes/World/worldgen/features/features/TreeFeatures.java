@@ -2372,7 +2372,7 @@ public class TreeFeatures {
         protected static final BlockState BAOBAB_LEAVES = TreeBlocks.BAOBAB_LEAVES.get().getDefaultState();
 
         protected static final BlockState BAMBOO_LOG = Blocks.BAMBOO.getDefaultState();
-        protected static final BlockState BAMBOO_LEAVES = TreeBlocks.BAMBOO_LEAVES.get().getDefaultState();
+        //protected static final BlockState BAMBOO_LEAVES = TreeBlocks.BAMBOO_LEAVES.get().getDefaultState();
 
         protected static final BlockState ASPEN_LOG = ModWood.ASPEN_LOG.get().getDefaultState();
         protected static final BlockState ASPEN_LEAVES = TreeBlocks.ASPEN_LEAVES.get().getDefaultState();

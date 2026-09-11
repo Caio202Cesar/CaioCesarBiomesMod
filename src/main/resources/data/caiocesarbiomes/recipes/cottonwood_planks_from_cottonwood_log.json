@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "caiocesarbiomes:cottonwood_log"
+    }
+  ],
+  "result": {
+    "item": "caiocesarbiomes:cottonwood_planks",
+    "count": 4
+  }
+}

@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:cottonwood_log"
+      "item": "caiocesarbiomes:aspen_log"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:black_poplar_planks",
+    "item": "caiocesarbiomes:cottonwood_planks",
     "count": 4
   }
 }

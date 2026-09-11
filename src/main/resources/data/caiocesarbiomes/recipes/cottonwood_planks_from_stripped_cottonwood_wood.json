@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "caiocesarbiomes:hawthorn_log"
+      "item": "caiocesarbiomes:stripped_cottonwood_wood"
     }
   ],
   "result": {
-    "item": "caiocesarbiomes:hawthorn_planks",
+    "item": "caiocesarbiomes:cottonwood_planks",
     "count": 4
   }
 }
