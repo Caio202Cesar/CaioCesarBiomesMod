@@ -9,6 +9,8 @@ import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.*;
+import static com.caiocesarmods.caioclimates.Features.TreeFeatures.BAMBOO_TREE;
+import static com.caiocesarmods.caioclimates.Features.TreeFeatures.TALL_BAMBOO_TREE;
 import static net.minecraft.world.gen.feature.Features.*;
 import static net.minecraft.world.gen.feature.Features.ACACIA;
 import static net.minecraft.world.gen.feature.Features.FANCY_OAK;
@@ -544,6 +546,11 @@ public class DefaultBiomeTreeFeatures {
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SMALL_COCONUT_PALM_TREE.withChance(0.43F)),
                     COCONUT_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.3F, 1))));
+
+    public static final ConfiguredFeature<?, ?> BAMBOO_GROVE = register("bamboo_grove", Feature.RANDOM_SELECTOR
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BAMBOO.withChance(0.43F), BAMBOO_TREE.withChance(0.8F)),
+                    TALL_BAMBOO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(50, 0.5F, 5))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_BEACH_TREES = register("tropical_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TROPICAL_ALMOND_TREE.withChance(0.1F),

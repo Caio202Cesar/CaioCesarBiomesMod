@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caioclimates.Features.ModFeatures;
@@ -60,7 +61,7 @@ public class TropicalBambooBeachBiome {
         ModDefaultBiomeFeatures.withTropicalBeachTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BAMBOO_VEGETATION_NO_OAK);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.BAMBOO_GROVE);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
