@@ -118,6 +118,8 @@ public class ModBiomes {
 
     public static final ResourceLocation SUBTROPICAL_EXTREME_HILLS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_extreme_hills");
+    public static final ResourceLocation BAMBOO_SUBTROPICAL_EXTREME_HILLS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_extreme_hills");
 
     public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");

@@ -247,6 +247,18 @@ public class ModBiomeRelationships {
                 ModBiomes.SUBTROPICAL_EXTREME_HILLS,
                 ModBiomes.LAUREL_FOREST_RIVER);
 
+        BiomeRelationshipRegistry.register(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.BAMBOO_SUBTROPICAL_EXTREME_HILLS,
+                RelationshipType.SUB_BIOME,
+                3,
+                0,
+                1,
+                2,
+                false,
+                false,
+                null);
+
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_BEACH);
