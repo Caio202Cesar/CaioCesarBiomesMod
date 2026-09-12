@@ -177,13 +177,12 @@ public class ModPlantGeneration {
                             new AtSurfaceWithExtraConfig(12, 0.25f, 2))));
         }
 
+
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE_EDGE.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE_HILLS.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE_HILLS.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_JUNGLE.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_JUNGLE_EDGE.getLocation()))))))))) {
+                    || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE_HILLS.getLocation()))
+                    || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE.getLocation()))
+                    || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE_HILLS.getLocation()))
+                    || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_JUNGLE.getLocation()))))))) {
 
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
