@@ -547,7 +547,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_BEACH_TREES = register("tropical_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TROPICAL_ALMOND_TREE.withChance(0.1F),
-                            TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F),
+                            TROPICAL_ALMOND_BIG_TREE.withChance(0.2F), TROPICAL_ALMOND_FANCY_TREE.withChance(0.2F), ROYAL_POINCIANA_TREE.withChance(0.1F),
+                            ROYAL_POINCIANA_BIG_TREE.withChance(0.1F),
                             COAST_COTTONWOOD_FANCY_TREE.withChance(0.16F), BIG_COAST_COTTONWOOD_TREE.withChance(0.2F),
                             COAST_COTTONWOOD_TREE.withChance(0.15F), COCONUT_PALM_TREE.withChance(0.1F), ORCHID_TREE2.withChance(0.23F),
                             ORCHID_TREE1.withChance(0.01F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F)), SMALL_COCONUT_PALM_TREE))

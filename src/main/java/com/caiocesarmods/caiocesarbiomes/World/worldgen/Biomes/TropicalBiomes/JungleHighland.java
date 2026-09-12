@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -63,7 +64,7 @@ public class JungleHighland {
         ModDefaultBiomeFeatures.withJungleHighlandVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
 
-        //biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JUNGLE_NO_OAK);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TREES_JUNGLE_NO_OAK);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

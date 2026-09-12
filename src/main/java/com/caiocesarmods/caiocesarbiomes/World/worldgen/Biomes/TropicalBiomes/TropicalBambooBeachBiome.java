@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -55,15 +56,14 @@ public class TropicalBambooBeachBiome {
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withBambooVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalBeachTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ROYAL_POINCIANA_TREE);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BAMBOO_VEGETATION_NO_OAK);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
+                .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
                         .setWaterFogColor(270131).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(5877296).setFogColor(13028309)
                         .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())

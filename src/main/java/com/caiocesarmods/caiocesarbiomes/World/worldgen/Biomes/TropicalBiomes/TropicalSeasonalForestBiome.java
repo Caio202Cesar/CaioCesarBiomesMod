@@ -67,7 +67,7 @@ public class TropicalSeasonalForestBiome {
       biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
       return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-              .temperature(1.2F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+              .temperature(1.0F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(7842047).withFoliageColor(6862863)
                       .withGrassColor(8832831).setFogColor(7907327)
                       .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

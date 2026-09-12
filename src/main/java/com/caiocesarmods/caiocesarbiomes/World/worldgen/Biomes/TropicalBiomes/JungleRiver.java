@@ -3,6 +3,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -55,12 +56,11 @@ public class JungleRiver {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withJungleTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SOUTHERN_WAX_MYRTLE_SHRUB);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TREES_JUNGLE_NO_OAK);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
                 .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

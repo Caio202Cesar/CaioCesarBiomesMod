@@ -67,7 +67,7 @@ public class FicusJungle {
 
         //Hardiness zone 12 - TROPICAL: +0.95F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7842047).withFoliageColor(4110351)
                         .withGrassColor(5877296).setFogColor(7907327)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

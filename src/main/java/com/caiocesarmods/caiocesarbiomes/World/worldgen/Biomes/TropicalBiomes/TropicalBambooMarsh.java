@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -58,10 +59,10 @@ public class TropicalBambooMarsh {
         ModDefaultBiomeFeatures.withTropicalPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalTallPlants(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.BAMBOO);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BAMBOO_VEGETATION_NO_OAK);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(13028309)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

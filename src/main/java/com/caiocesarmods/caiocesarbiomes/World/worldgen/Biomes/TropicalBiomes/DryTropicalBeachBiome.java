@@ -66,7 +66,7 @@ public class DryTropicalBeachBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ROYAL_POINCIANA_TREE);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(8103167).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(7907327)
                         .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())

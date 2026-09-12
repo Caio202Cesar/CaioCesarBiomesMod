@@ -3,11 +3,13 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -52,13 +54,14 @@ public class SahelBiome {
         DefaultBiomeFeatures.withBadlandsGrassAndBush(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalDrylandTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTropicalSteepeTrees(biomegenerationsettings$builder);
 
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TREES_SAVANNA_NO_OAK);
+
         //Hardiness zone 12 - TROPICAL: +0.95F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
-                .temperature(1.6F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(13494015)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

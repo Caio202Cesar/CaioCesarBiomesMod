@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caioclimates.Features.ModFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
@@ -49,7 +50,6 @@ public class EucalyptusSavanna {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalGrassPatch(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSavannaTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
@@ -62,7 +62,7 @@ public class EucalyptusSavanna {
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(1.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(329011).withSkyColor(7907327).withFoliageColor(9218863)
                         .withGrassColor(12564309).setFogColor(12638463)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
