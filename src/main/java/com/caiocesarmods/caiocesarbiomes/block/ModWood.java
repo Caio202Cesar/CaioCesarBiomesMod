@@ -315,9 +315,13 @@ public class ModWood {
     /// Cottonwood
     public static final RegistryObject<Block> COTTONWOOD_LOG = registerBlock("cottonwood_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ASPEN_LOG = registerBlock("aspen_log",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_COTTONWOOD_LOG = registerBlock("stripped_cottonwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> COTTONWOOD_WOOD = registerBlock("cottonwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ASPEN_WOOD = registerBlock("aspen_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_COTTONWOOD_WOOD = registerBlock("stripped_cottonwood_wood",
             ModLogs::new);

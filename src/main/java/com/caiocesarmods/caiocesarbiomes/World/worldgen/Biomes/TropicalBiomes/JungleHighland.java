@@ -59,12 +59,11 @@ public class JungleHighland {
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withJungleTrees(biomegenerationsettings$builder);
 
+        ModDefaultBiomeFeatures.withJungleHighlandVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                DefaultBiomeTreeFeatures.JUNGLE_HILLS_EXTRA_VEGETATION);
+        //biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JUNGLE_NO_OAK);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

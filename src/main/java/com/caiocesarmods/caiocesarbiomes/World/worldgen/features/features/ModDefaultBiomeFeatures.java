@@ -59,6 +59,9 @@ public class ModDefaultBiomeFeatures {
     public static void withCasuarinaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.CASUARINA_TREES);
     }
+    public static void withJungleHighlandVegetation(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JUNGLE_HIGHLAND_EXTRA_VEGETATION);
+    }
     public static void withJapaneseGroveFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.JAPANESE_GROVE_FLOWERS);
     }

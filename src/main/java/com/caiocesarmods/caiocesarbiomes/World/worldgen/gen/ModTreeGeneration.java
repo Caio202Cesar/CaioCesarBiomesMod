@@ -47,7 +47,7 @@ public class ModTreeGeneration {
         }
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE.getLocation()))
-                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE.getLocation()))
+                || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE_HILLS.getLocation()))
                 || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.MODIFIED_JUNGLE.getLocation()))))) {
 
             List<Supplier<ConfiguredFeature<?, ?>>> base =
@@ -71,18 +71,17 @@ public class ModTreeGeneration {
                             new AtSurfaceWithExtraConfig(2, 0.1f, 1))));
         }
 
-        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.JUNGLE_HILLS.getLocation()))
+        if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE.getLocation()))
                 || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.BAMBOO_JUNGLE_HILLS.getLocation())))) {
 
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> DefaultBiomeTreeFeatures.JUNGLE_EXTRA_VEGETATION
+            base.add(() -> DefaultBiomeTreeFeatures.BAMBOO_JUNGLE_EXTRA_VEGETATION
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(
-                            new AtSurfaceWithExtraConfig(5, 0.25f, 2))));
+                            new AtSurfaceWithExtraConfig(2, 0.1f, 1))));
         }
-
 
         if (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.DARK_FOREST.getLocation()))
                 || (key.equals(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, Biomes.DARK_FOREST_HILLS.getLocation())))) {
