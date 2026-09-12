@@ -471,7 +471,7 @@ public class DefaultBiomeTreeFeatures {
                             ORCHID_TREE1.withChance(0.2F), ORCHID_TREE2.withChance(0.23F), RUBBER_TREE.withChance(0.2F),
                             PEPPERCORN_JUNGLE_TREE.withChance(0.28F), RAINBOW_EUCALYPTUS_TREE.withChance(0.2F)),
                             INDIAN_LAUREL_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1f, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> JUNGLE_HIGHLAND_EXTRA_VEGETATION = register("jungle_highland_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WEEPING_FIG_TREE.withChance(0.2F),
