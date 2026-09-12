@@ -9,8 +9,7 @@ import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.*;
-import static com.caiocesarmods.caioclimates.Features.TreeFeatures.BAMBOO_TREE;
-import static com.caiocesarmods.caioclimates.Features.TreeFeatures.TALL_BAMBOO_TREE;
+import static com.caiocesarmods.caioclimates.Features.TreeFeatures.*;
 import static net.minecraft.world.gen.feature.Features.*;
 import static net.minecraft.world.gen.feature.Features.ACACIA;
 import static net.minecraft.world.gen.feature.Features.FANCY_OAK;
@@ -201,7 +200,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MONTANE_CLOUD_JUNGLE_TREES = register("montane_cloud_jungle_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.5F),
                             OCOTEA_FOREST_TREE.withChance(0.5F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F), AVOCADO_TREE.withChance(0.3F),
-                            AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F), HIGHLAND_OCOTEA_TREE.withChance(0.16F)),
+                            AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F), HIGHLAND_OCOTEA_TREE.withChance(0.16F), WAX_PALM_TREE.withChance(0.42F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
@@ -481,7 +480,7 @@ public class DefaultBiomeTreeFeatures {
                             MANGO_TREE.withChance(0.15F), LEMON_TREE.withChance(0.2F),
                             BUDDHA_HAND_TREE.withChance(0.12F), CITRON_TREE.withChance(0.2F),
                             TAHITI_LIME_TREE.withChance(0.2F), OIL_PALM_TREE.withChance(0.12F), GLORIOSA_JUNGLE_TREE.withChance(0.03F),
-                            BREADFRUIT_TREE.withChance(0.25F), ORCHID_TREE2.withChance(0.23F),
+                            ORCHID_TREE2.withChance(0.23F),
                             BIG_INDIAN_LAUREL_TREE.withChance(0.2F), BANANA_TREE.withChance(0.4F),
                             AVOCADO_TREE.withChance(0.4F), STARFRUIT_TREE.withChance(0.26F), RED_KAPOK_TREE.withChance(0.3F),
                             PEPPERCORN_JUNGLE_TREE.withChance(0.28F), BUNYA_PINE_TREE.withChance(0.4F),
@@ -542,15 +541,20 @@ public class DefaultBiomeTreeFeatures {
                     COOK_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> BAMBOO_MARSH_JUNGLE_TREES = register("bamboo_marsh_jungle_trees", Feature.RANDOM_SELECTOR
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUNGLE_TREE_NO_CACAO.withChance(0.3F)),
+                    MEGA_JUNGLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 5))));
+
     public static final ConfiguredFeature<?, ?> COCONUT_TREES = register("coconut_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SMALL_COCONUT_PALM_TREE.withChance(0.43F)),
                     COCONUT_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
             .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.3F, 1))));
 
     public static final ConfiguredFeature<?, ?> BAMBOO_GROVE = register("bamboo_grove", Feature.RANDOM_SELECTOR
-            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BAMBOO.withChance(0.43F), BAMBOO_TREE.withChance(0.8F)),
+            .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BAMBOO.withChance(0.0043F), BAMBOO_TREE.withChance(0.8F)),
                     TALL_BAMBOO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-            .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(50, 0.5F, 5))));
+            .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(50, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_BEACH_TREES = register("tropical_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TROPICAL_ALMOND_TREE.withChance(0.1F),

@@ -113,8 +113,9 @@ public class ModDefaultBiomeFeatures {
     public static void withHumidSubtropicalPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.HUMID_SUBTROPICAL_PLANTS);
     }
-    public static void withRainforestFern(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.RAINFOREST_TALL_FERN);
+    public static void withTropicalBambooMarshVegetation(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.BAMBOO_GROVE);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.BAMBOO_MARSH_JUNGLE_TREES);
     }
     public static void withJapaneseMapleTree(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.JAPANESE_MAPLE);
@@ -125,8 +126,8 @@ public class ModDefaultBiomeFeatures {
     public static void withTropicalSteepeTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_STEEPE_TREES);
     }
-    public static void withHumidSubtropicalBeachVegetation(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_BEACH_VEGETATION);
+    public static void withCloudForestLargeFern(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_CLOUD_FOREST_LARGE_FERN);
     }
     public static void withMediterraneanOakShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.MEDITERRANEAN_OAK_SHRUBS);

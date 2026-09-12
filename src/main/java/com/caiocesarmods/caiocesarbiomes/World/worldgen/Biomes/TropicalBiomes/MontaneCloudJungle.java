@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -56,13 +57,11 @@ public class MontaneCloudJungle {
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
         ModDefaultBiomeFeatures.withMontaneCloudJungleTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withRainforestFern(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.WAX_PALM_TREE);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_CLOUD_FOREST_LARGE_FERN);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

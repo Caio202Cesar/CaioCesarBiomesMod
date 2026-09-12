@@ -59,8 +59,8 @@ public class JungleHighland {
         DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
+        ModDefaultBiomeFeatures.withCloudForestLargeFern(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleHighlandVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withJungleFicuses(biomegenerationsettings$builder);
 

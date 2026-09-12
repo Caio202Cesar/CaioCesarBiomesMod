@@ -186,6 +186,17 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(ModBiomes.MONTANE_CLOUD_JUNGLE, ModBiomes.JUNGLE_RIVER);
 
         //MCJ Foothills
+        BiomeRelationshipRegistry.register(
+                ModBiomes.JUNGLE_HIGHLAND,
+                Biomes.JUNGLE,
+                RelationshipType.EDGE,
+                2,
+                25,
+                6,
+                0,
+                false,
+                false,
+                null);
         BiomeRelationshipRegistry.registerBeach(ModBiomes.JUNGLE_HIGHLAND, ModBiomes.TROPICAL_WET_BEACH);
         BiomeRelationshipRegistry.registerRiver(ModBiomes.JUNGLE_HIGHLAND, ModBiomes.JUNGLE_RIVER);
 

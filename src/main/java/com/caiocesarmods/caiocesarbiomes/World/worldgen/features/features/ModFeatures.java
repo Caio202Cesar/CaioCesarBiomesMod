@@ -202,9 +202,10 @@ public class ModFeatures implements IFeatureConfig {
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SAHEL_TALL_PLANTS_LIST)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
-    public static final ConfiguredFeature<?, ?> RAINFOREST_TALL_FERN = register("rainforest_tall_fern",
-            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(RAINFOREST_FERN_PATCH)).countSpread(FeatureSpread.create(-3, 4))
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(160));
+    public static final ConfiguredFeature<?, ?> PATCH_CLOUD_FOREST_LARGE_FERN = register("patch_cloud_forest_large_fern",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.LARGE_FERN),
+                    new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(100));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
