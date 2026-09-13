@@ -59,7 +59,8 @@ public class ModBiomeGeneration {
         addBiome(TropicalIslandBiome.TROPICAL_ISLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD);
         addBiome(FicusJungle.FICUS_JUNGLE.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, FOREST, JUNGLE, WET, LUSH, DENSE);
         addBiome(TropicalBambooMarsh.TROPICAL_BAMBOO_MARSH.get(), BiomeManager.BiomeType.DESERT, 20, HOT, OVERWORLD, WET, DENSE, LUSH, SWAMP);
-        addBiome(MontaneCloudJungle.MONTANE_CLOUD_JUNGLE.get(), BiomeManager.BiomeType.DESERT, 20, HOT, JUNGLE, OVERWORLD, WET, DENSE, LUSH, MOUNTAIN);
+        addBiome(MontaneCloudJungle.MONTANE_CLOUD_JUNGLE.get(), BiomeManager.BiomeType.DESERT, 20, JUNGLE, OVERWORLD, WET, DENSE, LUSH, MOUNTAIN);
+        addBiome(JungleHighland.JUNGLE_HIGHLAND.get(), BiomeManager.BiomeType.DESERT, 20, HOT, JUNGLE, OVERWORLD, WET, DENSE, LUSH, MOUNTAIN);
 
         /// Arid
         addBiome(CoastalSubtropicalDesertBiome.COAST_SUBTROPICAL_DESERT.get(), BiomeManager.BiomeType.DESERT, 20, OVERWORLD, SANDY, DRY, SPOOKY);

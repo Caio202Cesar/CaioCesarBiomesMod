@@ -418,6 +418,11 @@ public class ModBiomeRelationships {
                 ModBiomes.ATLANTIC_FOREST,
                 ModBiomes.ATLANTIC_FOREST_RIVER);
 
+        //Araucaria Forest
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.ARAUCARIA_PLATEAU,
+                ModBiomes.SERRA_DO_MAR_COASTAL_FOREST);
+
         //Pampas
         BiomeRelationshipRegistry.register(
                 ModBiomes.PAMPAS_COASTAL_FIELDS,

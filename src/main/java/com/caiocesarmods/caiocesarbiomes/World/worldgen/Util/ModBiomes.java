@@ -157,8 +157,6 @@ public class ModBiomes {
             new ResourceLocation("brbiomesmod", "amazon_rainforest_edge");
     public static final ResourceLocation AMAZON_VARZEA_FOREST =
             new ResourceLocation("brbiomesmod", "amazon_varzea_forest");
-    public static final ResourceLocation BLACK_AMAZON_RIVER =
-            new ResourceLocation("brbiomesmod", "black_amazon_river");
 
     public static final ResourceLocation ARAUCARIA_PLATEAU =
             new ResourceLocation("brbiomesmod", "araucaria_plateau"); //Edge Southern Alto Parana Forest
@@ -166,7 +164,9 @@ public class ModBiomes {
     public static final ResourceLocation ATLANTIC_FOREST =
             new ResourceLocation("brbiomesmod", "atlantic_forest");
     public static final ResourceLocation SERRA_DO_MAR_FOREST =
-            new ResourceLocation("brbiomesmod", "atlantic_forest_hills");
+            new ResourceLocation("brbiomesmod", "serra_do_mar_highland_forest");
+    public static final ResourceLocation SERRA_DO_MAR_COASTAL_FOREST =
+            new ResourceLocation("brbiomesmod", "serra_do_mar_coastal_forest");
     public static final ResourceLocation ATLANTIC_FOREST_BEACH =
             new ResourceLocation("brbiomesmod", "atlantic_forest_beach");
     public static final ResourceLocation ATLANTIC_FOREST_RIVER =
