@@ -237,6 +237,18 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LILLY_PILLY_LEAVES));
     public static final RegistryObject<Block> LILLY_PILLY_SAPLING = registerBlock("lilly_pilly_sapling",
             LillyPillySapling::new);
+    //Common Myrtle
+    public static final RegistryObject<Block> COMMON_MYRTLE_LEAVES = registerBlock("common_myrtle_leaves",
+            () -> new CommonMyrtleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COMMON_MYRTLE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> COMMON_MYRTLE_FLOWERING_LEAVES = registerBlock("common_myrtle_flowering_leaves",
+            () -> new CommonMyrtleFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COMMON_MYRTLE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> COMMON_MYRTLE_FRUITING_LEAVES = registerBlock("common_myrtle_fruiting_leaves",
+            () -> new CommonMyrtleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COMMON_MYRTLE_LEAVES));
+    public static final RegistryObject<Block> COMMON_MYRTLE_SAPLING = registerBlock("common_myrtle_sapling",
+            CommonMyrtleSapling::new);
     //Callistemon
     public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
             ModLeaves::new);
