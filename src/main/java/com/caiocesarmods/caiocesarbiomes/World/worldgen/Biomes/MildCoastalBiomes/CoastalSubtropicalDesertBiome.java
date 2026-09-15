@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildDesertBiomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;

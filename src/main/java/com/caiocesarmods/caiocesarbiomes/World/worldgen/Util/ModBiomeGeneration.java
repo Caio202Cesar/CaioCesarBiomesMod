@@ -4,7 +4,8 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemper
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildDesertBiomes.CoastalSubtropicalDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.CoastalSubtropicalDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.MontaneLaurelGroveBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.VolcanicSiteBiome;
