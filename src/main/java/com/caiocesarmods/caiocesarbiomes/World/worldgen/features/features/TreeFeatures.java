@@ -117,6 +117,12 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOCK_PRIVET_SHRUB = register("mock_privet_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PRIVET_LOG),
+                    new SimpleBlockStateProvider(States.MOCK_PRIVET_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(2, 1, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_SHRUB = register("oak_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.OAK_LEAVES),
