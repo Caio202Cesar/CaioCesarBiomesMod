@@ -36,7 +36,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_SHRUBS = register("mediterranean_oak_shrubs",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                    COMMON_MYRTLE_SHRUB.withChance(0.3F), MOCK_PRIVET_SHRUB.withChance(0.3F)),
+                    COMMON_MYRTLE_SHRUB.withChance(0.3F), MOCK_PRIVET_SHRUB.withChance(0.3F), SCRUB_OAK_SHRUB.withChance(0.3F),
+                    MEDITERRANEAN_JUNIPER_SHRUB.withChance(0.24F), MASTIC_SHRUB.withChance(0.24F)),
                     KERMES_OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
