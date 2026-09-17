@@ -22,7 +22,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.Tuss
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModBiomeRelationships;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;
 import com.caiocesarmods.caiocesarbiomes.block.MiscBlocks;
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
@@ -100,7 +100,7 @@ public class CaioCesarBiomesMod
         OleanderGardensBiome.register(eventBus);
         OliveGroveBiome.register(eventBus);
         CorkOakSavannaBiome.register(eventBus);
-        SubtropicalSeasonalForestBiome.register(eventBus);
+        SubtropicalEvergreenOakForestBiome.register(eventBus);
         TropicalSeasonalForestBiome.register(eventBus);
         SubtropicalLaurelForestBiome.register(eventBus);
         SubtropicalLaurelJungleBiome.register(eventBus);
@@ -168,6 +168,7 @@ public class CaioCesarBiomesMod
         JungleEdgeRiver.register(eventBus);
         JungleHighland.register(eventBus);
         BambooSubtropicalExtremeHillsBiome.register(eventBus);
+        HotTemperateForestBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

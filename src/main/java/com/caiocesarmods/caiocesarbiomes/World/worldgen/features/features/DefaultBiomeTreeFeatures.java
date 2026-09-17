@@ -355,20 +355,19 @@ public class DefaultBiomeTreeFeatures {
 
     //No birch, southern USA pine trees, liquidambar and crape myrtles. This forest has, like the average forest, a base hardiness zone of 8 to 7 (based on factors like altitude and latitude)
     public static final ConfiguredFeature<?, ?> HOT_TEMPERATE_FOREST_VEGETATION = register("hot_summer_temperate_forest_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.12F),
-                            WHITE_CRABAPPLE_TREE.withChance(0.1F), RED_CRABAPPLE_TREE.withChance(0.077F), JAPANESE_MAPLE_TREE.withChance(0.07F),
-                            MULBERRY_TREE.withChance(0.2F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_FANCY_TREE.withChance(0.15F),
-                            ELDERBERRY_TREE.withChance(0.2F), PEACH_TREE.withChance(0.2F), SOUTHERN_MAGNOLIA_TREE.withChance(0.1F),
-                            PLANE_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.05F), BLACK_POPLAR_FANCY_TREE.withChance(0.091F),
-                            PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.3F), CAMELLIA_TREE.withChance(0.087F),
-                            WAX_LEAF_PRIVET_TREE.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.02F), RING_CUPPED_OAK_FANCY_TREE.withChance(0.12F),
-                            RING_CUPPED_OAK_TREE.withChance(0.12F), FANCY_OAK.withChance(0.3F), OAK.withChance(0.35F), OAK_BEES_002.withChance(0.04F),
-                            OAK_TREE_WITH_KIWI.withChance(0.087F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.2F),
-                            PECAN_FANCY_TREE.withChance(0.3F), OAK_TREE_WITH_IVY.withChance(0.19F), FANCY_OAK_TREE_WITH_IVY.withChance(0.3F),
-                            HAWTHORN_TREE.withChance(0.2F), LAUREL_OAK_TREE.withChance(0.15F), HAZELNUT_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.38F),
-                            APPLE_TREE2.withChance(0.38F),
-                            PLANE_TREE.withChance(0.3F), CHERRY_PLUM_FANCY_TREE.withChance(0.4F), CHERRY_PLUM_TREE.withChance(0.34F)), OAK_SHRUB))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_CRABAPPLE_TREE.withChance(0.2F),
+                            WHITE_CRABAPPLE_TREE.withChance(0.2F), RED_CRABAPPLE_TREE.withChance(0.2F), JAPANESE_MAPLE_TREE.withChance(0.2F),
+                            MULBERRY_TREE.withChance(0.2F), RED_MAPLE_TREE.withChance(0.2F), RED_MAPLE_FANCY_TREE.withChance(0.2F),
+                            ELDERBERRY_TREE.withChance(0.2F), PEACH_TREE.withChance(0.2F), SOUTHERN_MAGNOLIA_TREE.withChance(0.2F),
+                            PLANE_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.2F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F),
+                            PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.2F), WALNUT_FANCY_TREE.withChance(0.2F), CAMELLIA_TREE.withChance(0.2F),
+                            WAX_LEAF_PRIVET_TREE.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.2F), RING_CUPPED_OAK_FANCY_TREE.withChance(0.2F),
+                            RING_CUPPED_OAK_TREE.withChance(0.2F), FANCY_OAK.withChance(0.2F), OAK.withChance(0.2F), OAK_BEES_002.withChance(0.2F),
+                            OAK_TREE_WITH_KIWI.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F), BIG_LIVE_OAK_TREE.withChance(0.2F),
+                            PECAN_FANCY_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.2F), FANCY_OAK_TREE_WITH_IVY.withChance(0.2F),
+                            HAWTHORN_TREE.withChance(0.2F), LAUREL_OAK_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
+                            APPLE_TREE2.withChance(0.2F), PLANE_TREE.withChance(0.2F), CHERRY_PLUM_FANCY_TREE.withChance(0.2F),
+                            CHERRY_PLUM_TREE.withChance(0.2F)), OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WESTERN_HEMLOCK_TREES = register("western_hemlock_trees",

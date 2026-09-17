@@ -1,4 +1,4 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
@@ -10,6 +10,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.Ina
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.VolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.HotTemperateForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.MagellanicSubpolarForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateDesert;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateRainforest;
@@ -41,7 +42,7 @@ public class ModBiomeGeneration {
                 DENSE, PLATEAU);
 
         ///Humid Subtropical
-        addBiome(SubtropicalSeasonalForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
+        addBiome(SubtropicalEvergreenOakForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
         addBiome(MontaneLaurelGroveBiome.MONTANE_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
@@ -84,8 +85,9 @@ public class ModBiomeGeneration {
         addBiome(MagellanicSubpolarForestBiome.SOUTHERN_BEECH_FOREST.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, COLD);
         addBiome(GinkgoForestBiome.GINKGO_FOREST.get(), BiomeManager.BiomeType.COOL, 18, OVERWORLD, FOREST, LUSH);
 
-        /// Warm temperate
+        /// Temperate
         addBiome(TemperateRainforest.TEMPERATE_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH);
+        addBiome(HotTemperateForestBiome.HOT_TEMPERATE_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, FOREST, LUSH);
 
         /// Volcanic
         addBiome(VolcanicSiteBiome.VOLCANIC_SITE.get(), BiomeManager.BiomeType.DESERT_LEGACY, 18, OVERWORLD, WASTELAND, SPOOKY, MOUNTAIN);

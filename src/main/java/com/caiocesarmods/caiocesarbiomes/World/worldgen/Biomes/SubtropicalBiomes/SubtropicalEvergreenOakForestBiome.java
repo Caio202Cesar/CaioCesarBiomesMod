@@ -17,7 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SubtropicalSeasonalForestBiome {
+public class SubtropicalEvergreenOakForestBiome {
    public static final DeferredRegister<Biome> BIOMES
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
