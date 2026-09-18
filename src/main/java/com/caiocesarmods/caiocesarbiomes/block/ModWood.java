@@ -272,6 +272,10 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_TAMARIND_LOG = registerBlock("stripped_tamarind_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_TAMARIND_WOOD = registerBlock("stripped_tamarind_wood",
@@ -451,12 +455,6 @@ public class ModWood {
             ModLogs::new);
 
 
-    /// Sausage Tree
-    public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> SAUSAGE_TREE_PLANKS = registerBlock("sausage_tree_planks",
-            ModPlanks::new);
-
 
     public static final RegistryObject<Block> SOCOTRA_CUCUMBER_LOG = registerBlock("socotra_cucumber_log",
             SuculentTreeLog::new);
@@ -581,6 +579,7 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Orchid Tree/Bauhinia/Mountain Ebony
     public static final RegistryObject<Block> ORCHID_TREE_LOG = registerBlock("orchid_tree_log",
             ModLogs::new);
 
