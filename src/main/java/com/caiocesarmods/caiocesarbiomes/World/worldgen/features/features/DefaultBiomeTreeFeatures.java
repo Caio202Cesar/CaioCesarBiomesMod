@@ -368,7 +368,7 @@ public class DefaultBiomeTreeFeatures {
                             HAWTHORN_TREE.withChance(0.2F), LAUREL_OAK_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
                             APPLE_TREE2.withChance(0.2F), PLANE_TREE.withChance(0.2F), CHERRY_PLUM_FANCY_TREE.withChance(0.2F),
                             CHERRY_PLUM_TREE.withChance(0.2F)), OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> WESTERN_HEMLOCK_TREES = register("western_hemlock_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(GIANT_WESTERN_HEMLOCK_TREE.withChance(0.3F)),
