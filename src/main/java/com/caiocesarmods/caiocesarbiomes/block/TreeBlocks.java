@@ -1572,6 +1572,7 @@ public class TreeBlocks {
 
 
     ///Bayberry
+    //Southern Wax Myrtle
     public static final RegistryObject<Block> SOUTHERN_WAX_MYRTLE_LEAVES = registerBlock("southern_wax_myrtle_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SOUTHERN_WAX_MYRTLE_SAPLING = registerBlock("southern_wax_myrtle_sapling",
@@ -1580,6 +1581,21 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_SOUTHERN_WAX_MYRTLE_SAPLING = BLOCKS.register("potted_southern_wax_myrtle_sapling",
             () -> new FlowerPotBlock(TreeBlocks.SOUTHERN_WAX_MYRTLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    //Yum Berry (subtropical laurel and oak forests)
+    public static final RegistryObject<Block> YUM_BERRY_LEAVES = registerBlock("yum_berry_leaves",
+            () -> new MulberryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> YUM_BERRY_FRUITING_LEAVES = registerBlock("yum_berry_fruiting_leaves",
+            () -> new MulberryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> YUM_BERRY_SAPLING = registerBlock("yum_berry_sapling",
+            SouthernWaxMyrtleSapling::new);
+    //Faya
+    public static final RegistryObject<Block> FAYA_LEAVES = registerBlock("faya_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> FAYA_SAPLING = registerBlock("faya_sapling",
+            SouthernWaxMyrtleSapling::new);
+
 
 
     ///Mulberry
