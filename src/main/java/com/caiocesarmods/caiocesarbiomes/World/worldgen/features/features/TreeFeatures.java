@@ -1873,7 +1873,7 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEAK_TALL_TREE = register("teak_tall_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TEAK_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
@@ -1881,7 +1881,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEAK_FANCY_TREE = register("teak_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.TEAK_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -1889,7 +1889,7 @@ public class TreeFeatures {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_TEAK_TREE = register("mega_teak_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TEAK_LOG),
                     new SimpleBlockStateProvider(States.TEAK_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new MegaJungleTrunkPlacer(10, 2, 19),
@@ -2295,6 +2295,7 @@ public class TreeFeatures {
         protected static final BlockState PATAGONIAN_CYPRESS_LOG = ModWood.PATAGONIAN_CYPRESS_LOG.get().getDefaultState();
         protected static final BlockState PATAGONIAN_CYPRESS_LEAVES = TreeBlocks.PATAGONIAN_CYPRESS_LEAVES.get().getDefaultState();
 
+        protected static final BlockState TEAK_LOG = ModWood.TEAK_LOG.get().getDefaultState();
         protected static final BlockState TEAK_LEAVES = TreeBlocks.TEAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINK_IVORY_LOG = ModWood.PINK_IVORY_LOG.get().getDefaultState();
@@ -2302,7 +2303,6 @@ public class TreeFeatures {
 
         protected static final BlockState ORCHID_TREE_LOG = ModWood.ORCHID_TREE_LOG.get().getDefaultState();
         protected static final BlockState ORCHID_TREE_LEAVES = TreeBlocks.ORCHID_TREE_LEAVES.get().getDefaultState();
-        protected static final BlockState ORCHID_TREE_FLOWERING_BRANCHES = TreeBlocks.ORCHID_TREE_FLOWERING_BRANCHES.get().getDefaultState();
 
         protected static final BlockState MILKWOOD_LOG = ModWood.MILKWOOD_LOG.get().getDefaultState();
         protected static final BlockState RED_PLUMERIA_LEAVES = TreeBlocks.RED_PLUMERIA_LEAVES.get().getDefaultState();
@@ -2567,10 +2567,10 @@ public class TreeFeatures {
         protected static final BlockState LIVE_OAK_LOG = ModWood.LIVE_OAK_LOG.get().getDefaultState();
         protected static final BlockState LIVE_OAK_LEAVES = TreeBlocks.LIVE_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ROYAL_POINCIANA_LOG = TreeBlocks.ROYAL_POINCIANA_LOG.get().getDefaultState();
+        protected static final BlockState ROYAL_POINCIANA_LOG = ModWood.ROYAL_POINCIANA_LOG.get().getDefaultState();
         protected static final BlockState ROYAL_POINCIANA_LEAVES = TreeBlocks.ROYAL_POINCIANA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState TAMARIND_LOG = TreeBlocks.TAMARIND_LOG.get().getDefaultState();
+        protected static final BlockState TAMARIND_LOG = ModWood.TAMARIND_LOG.get().getDefaultState();
         protected static final BlockState TAMARIND_LEAVES = TreeBlocks.TAMARIND_LEAVES.get().getDefaultState();
 
         protected static final BlockState EUCALYPTUS_LOG = ModWood.EUCALYPTUS_LOG.get().getDefaultState();

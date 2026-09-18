@@ -1,8 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.block.custom.Saplings.CinnamonSapling;
-import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.ModLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.SuculentTreeLog;
@@ -206,6 +204,19 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Teak
+    public static final RegistryObject<Block> TEAK_LOG = registerBlock("teak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> TEAK_WOOD = registerBlock("teak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TEAK_LOG = registerBlock("stripped_teak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TEAK_WOOD = registerBlock("stripped_teak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> TEAK_PLANKS = registerBlock("teak_planks",
+            ModPlanks::new);
+
+
     /// Strawberry Tree
     public static final RegistryObject<Block> STRAWBERRY_TREE_LOG = registerBlock("strawberry_tree_log",
             ModLogs::new);
@@ -252,10 +263,19 @@ public class ModWood {
             ModPlanks::new);
 
 
-    public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("royal_poinciana_planks",
-            ModPlanks::new);
-
-
+    /// Tamarind (includes royal poinciana)
+    public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> TAMARIND_WOOD = registerBlock("tamarind_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TAMARIND_LOG = registerBlock("stripped_tamarind_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TAMARIND_WOOD = registerBlock("stripped_tamarind_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
 

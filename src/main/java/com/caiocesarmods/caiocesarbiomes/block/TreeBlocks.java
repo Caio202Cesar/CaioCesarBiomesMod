@@ -1851,8 +1851,6 @@ public class TreeBlocks {
 
 
     //Royal Poinciana
-    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
-            ModLogs::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_LEAVES = registerBlock("royal_poinciana_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_SAPLING = registerBlock("royal_poinciana_sapling",
@@ -1997,8 +1995,6 @@ public class TreeBlocks {
 
 
     ///Tamarind
-    public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
-            ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_LEAVES = registerBlock("tamarind_leaves",
             () -> new TamarindLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TAMARIND_FRUITING_LEAVES));
