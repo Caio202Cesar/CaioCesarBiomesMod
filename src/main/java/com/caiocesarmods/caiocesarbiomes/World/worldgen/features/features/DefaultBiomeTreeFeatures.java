@@ -377,11 +377,10 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> PLAINS_EXTRA_VEGETATION = register("plains_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.2F),
-                            BLACK_POPLAR_FANCY_TREE.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.3F), PLANE_TREE.withChance(0.2F),
-                            PLANE_TREE.withChance(0.2F), PECAN_TREE.withChance(0.15F), WALNUT_TREE.withChance(0.15F), WALNUT_FANCY_TREE.withChance(0.2F),
-                            APPLE_TREE1.withChance(0.18F),
-                            APPLE_TREE2.withChance(0.12F),
-                            OAK_SHRUB.withChance(0.2F)), ELDERBERRY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            BLACK_POPLAR_FANCY_TREE.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.2F), PLANE_TREE.withChance(0.2F),
+                            PLANE_TREE.withChance(0.2F), PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.2F), WALNUT_FANCY_TREE.withChance(0.2F),
+                            APPLE_TREE1.withChance(0.2F), APPLE_TREE2.withChance(0.2F), OAK_SHRUB.withChance(0.2F)), ELDERBERRY_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
 
     public static final ConfiguredFeature<?, ?> HOLLY_TREES = register("holly_trees",
