@@ -190,37 +190,36 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> MONTANE_CLOUD_JUNGLE_TREES = register("montane_cloud_jungle_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.5F),
-                            OCOTEA_FOREST_TREE.withChance(0.5F), OCOTEA_FOREST_FANCY_TREE.withChance(0.45F), AVOCADO_TREE.withChance(0.3F),
-                            AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F), HIGHLAND_OCOTEA_TREE.withChance(0.16F), WAX_PALM_TREE.withChance(0.42F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.2F),
+                            OCOTEA_FOREST_TREE.withChance(0.2F), OCOTEA_FOREST_FANCY_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F),
+                            AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.2F), HIGHLAND_OCOTEA_TREE.withChance(0.2F), WAX_PALM_TREE.withChance(0.2F)),
                             OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> LAUREL_JUNGLE_TREES = register("laurel_jungle_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ANCIENT_CAMPHOR_TREE.withChance(0.25F),
-                            BIG_WEEPING_FIG_TREE.withChance(0.25F), BIG_INDIAN_LAUREL_TREE.withChance(0.26F), RUBBER_TREE.withChance(0.26F),
-                            WEEPING_FIG_TREE.withChance(0.15F), INDIAN_LAUREL_TREE.withChance(0.15F), BIG_CAMPHOR_TREE.withChance(0.23F),
-                            OCOTEA_JUNGLE_TREE.withChance(0.5F), AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.23F),
-                            HOOP_PINE_TREE.withChance(0.23F), AVOCADO_TREE.withChance(0.3F), BUNYA_PINE_TREE2.withChance(0.23F),
-                            BUNYA_PINE_TREE.withChance(0.46F)),
-                            OCOTEA_JUNGLE_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ANCIENT_CAMPHOR_TREE.withChance(0.2F),
+                            BIG_WEEPING_FIG_TREE.withChance(0.2F), BIG_INDIAN_LAUREL_TREE.withChance(0.2F), RUBBER_TREE.withChance(0.2F),
+                            WEEPING_FIG_TREE.withChance(0.2F), INDIAN_LAUREL_TREE.withChance(0.2F), BIG_CAMPHOR_TREE.withChance(0.2F),
+                            OCOTEA_JUNGLE_TREE.withChance(0.2F), AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.2F),
+                            HOOP_PINE_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F), BUNYA_PINE_TREE2.withChance(0.2F),
+                            BUNYA_PINE_TREE.withChance(0.2F)), CAMPHOR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_LAURACEAE = register("subtropical_forest_lauraceae",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            CAMPHOR_TREE.withChance(0.5F), BIG_CAMPHOR_TREE.withChance(0.25F), AVOCADO_TREE.withChance(0.34F),
-                            IVY_AVOCADO_TREE.withChance(0.12F), MACHILLUS_TREE.withChance(0.34F), IVY_MACHILLUS_TREE.withChance(0.13F)),
+                            CAMPHOR_TREE.withChance(0.2F), BIG_CAMPHOR_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F),
+                            IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F), IVY_MACHILLUS_TREE.withChance(0.2F)),
                             ANCIENT_CAMPHOR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_OAK_FOREST_TREES = register("subtropical_oak_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.3F),
-                            CASTANOPSIS_TREE.withChance(0.3F), STONE_OAK_TREE.withChance(0.3F), RING_CUPPED_OAK_TREE.withChance(0.3F),
-                            RING_CUPPED_OAK_FANCY_TREE.withChance(0.3F), OAK.withChance(0.3F), OAK_BEES_002.withChance(0.065641026F),
-                            FANCY_OAK.withChance(0.30769232F), FANCY_OAK_BEES_002.withChance(0.03333334F), SOUTHERN_LIVE_OAK_TREE.withChance(0.3F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.32F), OAK_TREE_WITH_KIWI.withChance(0.078F),
-                            BIG_LIVE_OAK_TREE.withChance(0.25F)), OAK_TREE_WITH_IVY))
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.2F),
+                            CASTANOPSIS_TREE.withChance(0.2F), STONE_OAK_TREE.withChance(0.2F), RING_CUPPED_OAK_TREE.withChance(0.2F),
+                            RING_CUPPED_OAK_FANCY_TREE.withChance(0.2F), OAK.withChance(0.2F), OAK_BEES_002.withChance(0.2F),
+                            FANCY_OAK.withChance(0.2F), FANCY_OAK_BEES_002.withChance(0.2F), SOUTHERN_LIVE_OAK_TREE.withChance(0.2F),
+                            FANCY_OAK_TREE_WITH_IVY.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.2F),
+                            BIG_LIVE_OAK_TREE.withChance(0.2F)), OAK_TREE_WITH_KIWI))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
