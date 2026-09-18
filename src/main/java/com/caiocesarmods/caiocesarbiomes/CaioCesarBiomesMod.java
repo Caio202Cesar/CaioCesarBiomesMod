@@ -280,6 +280,8 @@ public class CaioCesarBiomesMod
                     .put(ModWood.ROYAL_POINCIANA_WOOD.get(), ModWood.STRIPPED_TAMARIND_WOOD.get())
                     .put(ModWood.SAUSAGE_TREE_LOG.get(), ModWood.STRIPPED_TAMARIND_LOG.get())
                     .put(ModWood.SAUSAGE_TREE_WOOD.get(), ModWood.STRIPPED_TAMARIND_WOOD.get())
+                    .put(ModWood.JACARANDA_LOG.get(), ModWood.STRIPPED_TAMARIND_LOG.get())
+                    .put(ModWood.JACARANDA_WOOD.get(), ModWood.STRIPPED_TAMARIND_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
