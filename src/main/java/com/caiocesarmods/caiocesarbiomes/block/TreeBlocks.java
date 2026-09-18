@@ -1620,6 +1620,12 @@ public class TreeBlocks {
 
 
 
+    /// Casca-de-anta/Winterbark
+    //Drimys brasiliensis/winterii (added to Megellanic Subpolar Forest, Valdivian Temperate Forest and also to Araucaria Plateau in BrazillianBiomes).
+    public static final RegistryObject<Block> WINTERBARK_LEAVES = registerBlock("winterbark_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> WINTERBARK_SAPLING = registerBlock("winterbark_sapling",
+            SouthernWaxMyrtleSapling::new);
 
 
 
