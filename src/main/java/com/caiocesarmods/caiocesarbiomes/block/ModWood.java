@@ -284,6 +284,7 @@ public class ModWood {
             ModPlanks::new);
 
 
+    /// Prunus
     public static final RegistryObject<Block> PRUNUS_LOG = registerBlock("prunus_log",
             ModLogs::new);
     public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
@@ -624,10 +625,6 @@ public class ModWood {
             ModPlanks::new);
 
 
-    public static final RegistryObject<Block> CAMPHOR_PLANKS = registerBlock("camphor_planks",
-            ModPlanks::new);
-
-
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
             ModLogs::new);
 
@@ -777,7 +774,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModPlanks::new);
-    //Camphor (different log and wood)
+    //Camphor (laurel wood with special properties)
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAMPHOR_LOG = registerBlock("stripped_camphor_log",
@@ -786,10 +783,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAMPHOR_WOOD = registerBlock("stripped_camphor_wood",
             ModLogs::new);
-
-
-
-
+    public static final RegistryObject<Block> CAMPHOR_PLANKS = registerBlock("camphor_planks",
+            ModLogs::new);
 
     ///Willow
     public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
