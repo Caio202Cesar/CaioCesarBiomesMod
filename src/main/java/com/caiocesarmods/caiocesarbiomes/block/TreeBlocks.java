@@ -1248,8 +1248,6 @@ public class TreeBlocks {
 
 
     ///Elderberry
-    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
-            ModLogs::new);
     public static final RegistryObject<Block> ELDERBERRY_LEAVES = registerBlock("elderberry_leaves",
             () -> new ElderberryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));

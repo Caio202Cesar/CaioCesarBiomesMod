@@ -208,6 +208,22 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> TEA_LOG = registerBlock("tea_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> TEA_WOOD = registerBlock("tea_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PRIVET_WOOD = registerBlock("privet_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CEANOTHUS_LOG = registerBlock("ceanothus_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CEANOTHUS_WOOD = registerBlock("ceanothus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
@@ -309,19 +325,6 @@ public class ModWood {
     public static final RegistryObject<Block> PRUNUS_LOG = registerBlock("prunus_log",
             ModLogs::new);
     public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
-            ModPlanks::new);
-
-
-    ///Tea
-    public static final RegistryObject<Block> TEA_LOG = registerBlock("tea_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TEA_LOG = registerBlock("stripped_tea_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> TEA_WOOD = registerBlock("tea_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TEA_WOOD = registerBlock("stripped_tea_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> TEA_PLANKS = registerBlock("tea_planks",
             ModPlanks::new);
 
 
@@ -608,17 +611,8 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Privet
-    public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PRIVET_LOG = registerBlock("stripped_privet_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PRIVET_WOOD = registerBlock("privet_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PRIVET_WOOD = registerBlock("stripped_privet_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> PRIVET_PLANKS = registerBlock("privet_planks",
-            ModPlanks::new);
+
+
 
 
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
@@ -862,10 +856,6 @@ public class ModWood {
     public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("sorbus_planks",
             ModPlanks::new);
 
-
-    /// Ceanothus
-    public static final RegistryObject<Block> CEANOTHUS_LOG = registerBlock("ceanothus_log",
-            ModLogs::new);
 
 
     /// Pine (Pinus)
