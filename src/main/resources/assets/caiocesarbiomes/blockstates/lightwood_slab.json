@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/lightwood_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/lightwood_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/lightwood_slab_top"
+    }
+  }
+}
