@@ -199,7 +199,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-
+    /// Whitewood (starfruit, elderberry, privet, ilex, tea, ceanothus, hydrangea)
     public static final RegistryObject<Block> ELDERBERRY_PLANKS = registerBlock("elderberry_planks",
             ModPlanks::new);
 
