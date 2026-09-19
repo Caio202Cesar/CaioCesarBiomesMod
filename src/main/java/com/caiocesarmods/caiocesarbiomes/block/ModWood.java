@@ -200,8 +200,32 @@ public class ModWood {
 
 
     /// Lightwood (starfruit, elderberry, privet, ilex, tea, ceanothus, hydrangea)
+    public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STARFRUIT_WOOD = registerBlock("starfruit_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> LIGHTWOOD_PLANKS = registerBlock("lightwood_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> ILEX_SLAB = registerBlock("ilex_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ILEX_STAIRS = registerBlock("ilex_stairs",
+            () -> new StairsBlock(() -> ILEX_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> ILEX_FENCE = registerBlock("ilex_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ILEX_FENCE_GATE = registerBlock("ilex_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Teak
@@ -253,13 +277,6 @@ public class ModWood {
     public static final RegistryObject<Block> MULBERRY_LOG = registerBlock("mulberry_log",
             ModLogs::new);
     public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
-            ModPlanks::new);
-
-
-    /// Starfruit
-    public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
             ModPlanks::new);
 
 
@@ -383,31 +400,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> YEW_PLANKS = registerBlock("yew_planks",
             ModPlanks::new);
-
-
-    /// Ilex (hollies)
-    public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ILEX_LOG = registerBlock("stripped_ilex_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ILEX_WOOD = registerBlock("stripped_ilex_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> ILEX_PLANKS = registerBlock("ilex_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> ILEX_SLAB = registerBlock("ilex_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> ILEX_STAIRS = registerBlock("ilex_stairs",
-            () -> new StairsBlock(() -> ILEX_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ILEX_FENCE = registerBlock("ilex_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> ILEX_FENCE_GATE = registerBlock("ilex_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
 
 
     /// Sweet Chestnut
