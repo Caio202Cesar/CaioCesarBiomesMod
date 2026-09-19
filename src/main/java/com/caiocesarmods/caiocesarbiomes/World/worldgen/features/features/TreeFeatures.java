@@ -445,6 +445,19 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).setIgnoreVines().build()));
 
+    //Schima Tree (laurel and oak forests)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SCHIMA_TREE_TALL = register("schima_tree_tall",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.TEA_LOG),
+                    new SimpleBlockStateProvider(States.SCHIMA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SCHIMA_TREE = register("schima_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TEA_LOG),
+                    new SimpleBlockStateProvider(States.SCHIMA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Indian Coral Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_CORAL_TREE = register("indian_coral_tree",
@@ -634,7 +647,7 @@ public class TreeFeatures {
 
     //Camellia Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMELLIA_TREE = register("camellia_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMELLIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TEA_LOG),
                     new SimpleBlockStateProvider(States.CAMELLIA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -642,7 +655,7 @@ public class TreeFeatures {
 
     //Tea Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEA_TREE = register("tea_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMELLIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.TEA_LOG),
                     new SimpleBlockStateProvider(States.TEA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(2, 2, 0),
@@ -2551,9 +2564,10 @@ public class TreeFeatures {
         protected static final BlockState STARFRUIT_LOG = ModWood.STARFRUIT_LOG.get().getDefaultState();
         protected static final BlockState STARFRUIT_LEAVES = TreeBlocks.STARFRUIT_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAMELLIA_LOG = ModWood.TEA_LOG.get().getDefaultState();
+        protected static final BlockState TEA_LOG = ModWood.TEA_LOG.get().getDefaultState();
         protected static final BlockState CAMELLIA_LEAVES = TreeBlocks.CAMELLIA_LEAVES.get().getDefaultState();
         protected static final BlockState TEA_LEAVES = TreeBlocks.TEA_LEAVES.get().getDefaultState();
+        protected static final BlockState SCHIMA_LEAVES = TreeBlocks.SCHIMA_LEAVES.get().getDefaultState();
 
         protected static final BlockState CITRUS_LOG = ModWood.CITRUS_LOG.get().getDefaultState();
         protected static final BlockState ORANGE_LEAVES = TreeBlocks.ORANGE_LEAVES.get().getDefaultState();

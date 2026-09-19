@@ -280,11 +280,11 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> JACARANDA_WOOD = registerBlock("jacaranda_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TAMARIND_LOG = registerBlock("stripped_tamarind_log",
+    public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_LOG = registerBlock("stripped_tamarind_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TAMARIND_WOOD = registerBlock("stripped_tamarind_wood",
+    public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_WOOD = registerBlock("stripped_tamarind_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
+    public static final RegistryObject<Block> LIGHT_YELLOW_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
 
 
