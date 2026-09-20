@@ -329,7 +329,8 @@ public class DefaultBiomeTreeFeatures {
                             OAK_TREE_WITH_IVY.withChance(0.2F), FANCY_OAK_TREE_WITH_IVY.withChance(0.2F), SWEET_CHESTNUT_TREE.withChance(0.2F),
                             HAWTHORN_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), PLANE_TREE.withChance(0.2F),
                             CHERRY_PLUM_FANCY_TREE.withChance(0.2F), CHERRY_PLUM_TREE.withChance(0.2F), COOPER_BEECH_BIG_TREE.withChance(0.2F),
-                            COOPER_BEECH_TREE.withChance(0.2F), YOUNG_YEW_TREE.withChance(0.2F), RED_OAK_SHRUB.withChance(0.2F),
+                            COOPER_BEECH_TREE.withChance(0.2F), YOUNG_YEW_TREE.withChance(0.2F), BIG_YEW_TREE.withChance(0.2F),
+                            BIG_YEW_TREE_WITH_IVY.withChance(0.2F), RED_OAK_SHRUB.withChance(0.2F),
                             HOLLY_TREE1.withChance(0.2F), HOLLY_TREE2.withChance(0.2F), ROWAN_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
                             APPLE_TREE2.withChance(0.2F), RED_OAK_FANCY_TREE.withChance(0.2F), RED_OAK_TREE.withChance(0.2F), OAK_SHRUB.withChance(0.2F),
                             RED_OAK_FANCY_TREE_WITH_IVY.withChance(0.2F), RED_OAK_TREE_WITH_IVY.withChance(0.2F)),
@@ -346,6 +347,7 @@ public class DefaultBiomeTreeFeatures {
                             COOPER_BEECH_BIG_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
                             APPLE_TREE2.withChance(0.2F), RED_OAK_TREE.withChance(0.2F), RED_MAPLE_TREE.withChance(0.2F),
                             RED_MAPLE_FANCY_TREE.withChance(0.2F), ROWAN_TREE.withChance(0.2F), YOUNG_YEW_TREE.withChance(0.2F),
+                            BIG_YEW_TREE.withChance(0.2F), BIG_YEW_TREE_WITH_IVY.withChance(0.2F),
                             ANCIENT_YEW_TREE.withChance(0.2F), DARK_OAK_WITH_IVY.withChance(0.2F), CHERRY_PLUM_FANCY_TREE.withChance(0.2F),
                             CHERRY_PLUM_TREE.withChance(0.2F), COOPER_BEECH_TREE.withChance(0.2F)), ANCIENT_YEW_TREE_WITH_IVY))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -397,16 +399,17 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> TREES_TEMPERATE_RAINFOREST = register("trees_temperate_rainforest",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(COOPER_BEECH_TREE.withChance(0.3F),
-                            COOPER_BEECH_BIG_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.19F),
-                            FANCY_OAK_TREE_WITH_IVY.withChance(0.3F), FANCY_OAK.withChance(0.41F), OAK.withChance(0.21F),
-                            OAK_BEES_002.withChance(0.089F), FANCY_OAK_BEES_005.withChance(0.2F),
-                            RED_OAK_FANCY_TREE.withChance(0.3F), HAZELNUT_TREE.withChance(0.23F),
-                            RED_MAPLE_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.38F),
-                            APPLE_TREE2.withChance(0.38F),
-                            OAK_TREE_WITH_KIWI.withChance(0.031F), RED_MAPLE_FANCY_TREE.withChance(0.2F),
-                            YOUNG_YEW_TREE.withChance(0.4F), ANCIENT_YEW_TREE.withChance(0.34F),
-                            HAWTHORN_TREE.withChance(0.2F), JAPANESE_MAPLE_TREE.withChance(0.053F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(COOPER_BEECH_TREE.withChance(0.2F),
+                            COOPER_BEECH_BIG_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.2F),
+                            FANCY_OAK_TREE_WITH_IVY.withChance(0.2F), FANCY_OAK.withChance(0.2F), OAK.withChance(0.2F),
+                            OAK_BEES_002.withChance(0.2F), FANCY_OAK_BEES_005.withChance(0.2F),
+                            RED_OAK_FANCY_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F),
+                            RED_MAPLE_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
+                            APPLE_TREE2.withChance(0.2F), BIG_YEW_TREE.withChance(0.2F),
+                            BIG_YEW_TREE_WITH_IVY.withChance(0.2F),
+                            OAK_TREE_WITH_KIWI.withChance(0.2F), RED_MAPLE_FANCY_TREE.withChance(0.2F),
+                            YOUNG_YEW_TREE.withChance(0.2F), ANCIENT_YEW_TREE.withChance(0.2F),
+                            HAWTHORN_TREE.withChance(0.2F), JAPANESE_MAPLE_TREE.withChance(0.2F),
                             ROWAN_TREE.withChance(0.2F)), RED_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
