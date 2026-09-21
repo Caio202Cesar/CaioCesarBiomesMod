@@ -497,6 +497,7 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_002_PLACEMENT)).build()));
+    //Machillus
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MACHILLUS_TREE = register("machillus_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
@@ -507,6 +508,23 @@ public class TreeFeatures {
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
                             ModFeatures.Placements.RESURRECTION_FERN_PLACEMENT045))
                     .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_MACHILLUS_TREE = register("big_machillus_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_MACHILLUS_TREE = register("ancient_machillus_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IVY_MACHILLUS_TREE = register("machillus_tree_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.MACHILLUS_LEAVES),
@@ -820,7 +838,7 @@ public class TreeFeatures {
 
     //Pohutukawa
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> POHUTUKAWA_TREE = register("pohutukawa_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -829,7 +847,7 @@ public class TreeFeatures {
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA = register("ancient_pohutukawa",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 6),
@@ -2265,9 +2283,11 @@ public class TreeFeatures {
         protected static final BlockState ACEROLA_LEAVES = TreeBlocks.ACEROLA_LEAVES.get().getDefaultState();
 
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
-        protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
         protected static final BlockState LILLY_PILLY_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
         protected static final BlockState COMMON_MYRTLE_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
+
+        protected static final BlockState POHUTUKAWA_LOG = ModWood.POHUTUKAWA_LOG.get().getDefaultState();
+        protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
 
         protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();

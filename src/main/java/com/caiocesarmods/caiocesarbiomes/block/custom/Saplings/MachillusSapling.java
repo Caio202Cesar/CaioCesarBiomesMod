@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -121,11 +122,21 @@ public class MachillusSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class MachillusTree extends Tree {
+    private static class MachillusTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.MACHILLUS_TREE;
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            if (rand.nextInt(10) == 0) {
+                return TreeFeatures.ANCIENT_MACHILLUS_TREE;
+            } else {
+                return TreeFeatures.BIG_MACHILLUS_TREE;
+            }
         }
     }
 }

@@ -43,10 +43,10 @@ public class AgathisSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 6) {
-                return TreeFeatures.AGATHIS_TREE1;
-            } else {
+            if (random.nextInt(10) == 0) {
                 return TreeFeatures.AGATHIS_TREE2;
+            } else {
+                return TreeFeatures.AGATHIS_TREE1;
             }
         }
     }
