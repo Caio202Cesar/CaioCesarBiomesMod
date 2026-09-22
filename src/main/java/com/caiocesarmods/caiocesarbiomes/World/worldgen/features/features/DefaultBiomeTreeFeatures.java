@@ -200,7 +200,7 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ANCIENT_CAMPHOR_TREE.withChance(0.2F),
                             BIG_WEEPING_FIG_TREE.withChance(0.2F), BIG_INDIAN_LAUREL_TREE.withChance(0.2F), RUBBER_TREE.withChance(0.2F),
                             WEEPING_FIG_TREE.withChance(0.2F), INDIAN_LAUREL_TREE.withChance(0.2F), BIG_CAMPHOR_TREE.withChance(0.2F),
-                            OCOTEA_JUNGLE_TREE.withChance(0.2F), AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.2F),
+                            SCHIMA_TREE_TALL.withChance(0.2F), AGATHIS_TREE1.withChance(0.2F), AGATHIS_TREE2.withChance(0.2F),
                             HOOP_PINE_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F), BUNYA_PINE_TREE2.withChance(0.2F),
                             BUNYA_PINE_TREE.withChance(0.2F)), CAMPHOR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
@@ -209,7 +209,7 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CAMPHOR_TREE.withChance(0.2F), BIG_CAMPHOR_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F),
                             IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F), IVY_MACHILLUS_TREE.withChance(0.2F),
-                            BIG_MACHILLUS_TREE.withChance(0.2F), ANCIENT_MACHILLUS_TREE.withChance(0.2F)),
+                            BIG_MACHILLUS_TREE.withChance(0.2F), ANCIENT_MACHILLUS_TREE.withChance(0.2F), SCHIMA_TREE.withChance(0.2F)),
                             ANCIENT_CAMPHOR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));

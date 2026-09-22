@@ -21,8 +21,9 @@ public class MontaneLaurelGroveBiome {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
+//Macaronesian based species - edge biome: Dry Macaronesian Scrub (canary island, canary dragon tree)
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> MONTANE_LAUREL_GROVE = BIOMES.register("montane_laurel_grove",
+public static final RegistryObject<Biome> MONTANE_MACARONESIAN_LAUREL_GROVE = BIOMES.register("montane_macaronesian_laurel_grove",
         () -> makeMontaneLaurelGroveBiome(() -> ConfiguredSurfaceBuilders.GRASS, 1.2f, 0.55f));
 
 //Laurel Forest highland
@@ -61,10 +62,10 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
     DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
-    //Hardiness zone 10: 0.85F - 0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
+    //Hardiness zone 11 (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
     //    //Y = your current height in blocks; 64 = sea level height.
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(depth).scale(scale)
-            .temperature(0.9F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+            .temperature(0.94F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                     .withGrassColor(8762696).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
