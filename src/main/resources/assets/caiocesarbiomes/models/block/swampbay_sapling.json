@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/swampbay_sapling",
+    "particle": "caiocesarbiomes:block/swampbay_sapling"
+  }
+}
