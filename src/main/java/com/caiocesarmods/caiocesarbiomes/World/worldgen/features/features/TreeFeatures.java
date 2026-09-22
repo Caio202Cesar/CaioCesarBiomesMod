@@ -253,6 +253,33 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
+    //Red and swampbay
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBAY_FANCY_TREE = register("redbay_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.REDBAY_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
+                            Features.Placements.BEES_0002_PLACEMENT, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBAY_TREE = register("redbay_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.REDBAY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SWAMPBAY_TREE = register("swampbay_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SWAMPBAY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
+
     //Mesquite Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MESQUITE_FANCY_TREE = register("mesquite_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MESQUITE_LOG),
@@ -2294,6 +2321,8 @@ public class TreeFeatures {
         protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
         protected static final BlockState OCOTEA_LEAVES = TreeBlocks.OCOTEA_LEAVES.get().getDefaultState();
         protected static final BlockState CALIFORNIA_LAUREL_LEAVES = TreeBlocks.CALIFORNIA_LAUREL_LEAVES.get().getDefaultState();
+        protected static final BlockState REDBAY_LEAVES = TreeBlocks.REDBAY_LEAVES.get().getDefaultState();
+        protected static final BlockState SWAMPBAY_LEAVES = TreeBlocks.SWAMPBAY_LEAVES.get().getDefaultState();
 
         protected static final BlockState AGATHIS_LOG = ModWood.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();

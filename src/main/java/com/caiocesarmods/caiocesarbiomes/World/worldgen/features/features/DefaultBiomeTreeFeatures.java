@@ -208,11 +208,12 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_LAURACEAE = register("subtropical_forest_lauraceae",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CAMPHOR_TREE.withChance(0.2F), BIG_CAMPHOR_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F),
+                            SWAMPBAY_TREE.withChance(0.2F), REDBAY_TREE.withChance(0.2F), REDBAY_FANCY_TREE.withChance(0.2F),
                             IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F), IVY_MACHILLUS_TREE.withChance(0.2F),
                             BIG_MACHILLUS_TREE.withChance(0.2F), ANCIENT_MACHILLUS_TREE.withChance(0.2F), SCHIMA_TREE.withChance(0.2F)),
                             ANCIENT_CAMPHOR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_OAK_FOREST_TREES = register("subtropical_oak_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.2F),
