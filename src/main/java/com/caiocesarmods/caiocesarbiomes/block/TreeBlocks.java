@@ -456,7 +456,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> PHOEBE_ZHENNAN_LEAVES = registerBlock("phoebe_zhennan_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PHOEBE_ZHENNAN_SAPLING = registerBlock("phoebe_zhennan_sapling",
-            ZhennanSapling::new);
+            PhoebeZhennanSapling::new);
     //Camphor
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
             ModLeaves::new);

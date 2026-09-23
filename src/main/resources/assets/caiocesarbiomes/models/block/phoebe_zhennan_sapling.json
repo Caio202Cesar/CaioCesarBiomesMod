@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/phoebe_zhennan_sapling",
+    "particle": "caiocesarbiomes:block/aphoebe_zhennan_sapling"
+  }
+}

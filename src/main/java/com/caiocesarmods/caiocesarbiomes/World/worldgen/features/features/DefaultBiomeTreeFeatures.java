@@ -209,7 +209,7 @@ public class DefaultBiomeTreeFeatures {
                             PHOEBE_ZHENNAN_TREE.withChance(0.2F), MEGA_PHOEBE_ZHENNAN_TREE2.withChance(0.2F), MEGA_PHOEBE_ZHENNAN_TREE.withChance(0.2F),
                             MEGA_PHOEBE_ZHENNAN_TREE2_WITH_IVY.withChance(0.2F), MEGA_PHOEBE_ZHENNAN_TREE_WITH_IVY.withChance(0.2F)),
                             RUBBER_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_JUNGLE_CONIFERS = register("subtropical_jungle_conifers",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(

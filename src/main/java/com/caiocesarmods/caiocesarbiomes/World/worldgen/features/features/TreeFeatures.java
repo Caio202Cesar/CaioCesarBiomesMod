@@ -254,7 +254,7 @@ public class TreeFeatures {
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     // Phoebe Zhennan (Laurel Jungle Tree)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PHOEBE_ZHENNAN_TREE = register("lophantera_tree2",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PHOEBE_ZHENNAN_TREE = register("phoebe_zhennan_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.PHOEBE_ZHENNAN_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(3), FeatureSpread.create(6)),
@@ -263,7 +263,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE = register("mega_phoebe_zhennan_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
@@ -279,7 +279,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE_WITH_IVY = register("ivy_mega_phoebe_zhennan_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(8, 16, 8),
                     new TwoLayerFeature(2, 0, 1)))
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
