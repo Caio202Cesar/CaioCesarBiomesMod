@@ -273,7 +273,25 @@ public class TreeFeatures {
                             new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new GiantTrunkPlacer(18, 2, 14),
-                    new TwoLayerFeature(1, 1, 2))).build()));
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE_WITH_IVY = register("ivy_mega_phoebe_zhennan_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1)))
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE2_WITH_IVY = register("ivy_mega_phoebe_zhennan_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(18, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     //Red and swampbay
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBAY_FANCY_TREE = register("redbay_fancy_tree",
