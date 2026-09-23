@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -30,7 +31,7 @@ import java.util.Random;
 
 public class CastanopsisSapling extends SaplingBlock {
     public CastanopsisSapling() {
-        super(new CastanopsisSapling.LiveOakTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+        super(new CastanopsisTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -121,7 +122,7 @@ public class CastanopsisSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class LiveOakTree extends Tree {
+    private static class CastanopsisTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
@@ -130,6 +131,12 @@ public class CastanopsisSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.CASTANOPSIS_TREE;
             }
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.MEGA_CASTANOPSIS_TREE;
         }
     }
 }

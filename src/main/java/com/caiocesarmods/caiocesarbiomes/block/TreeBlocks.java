@@ -452,7 +452,12 @@ public class TreeBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SWAMPBAY_SAPLING = registerBlock("swamp_sapling",
             SwampbaySapling::new);
-    /// Camphor (has its own log)
+    //Phoebe Zhennan (Laurel Jungle Tree)
+    public static final RegistryObject<Block> PHOEBE_ZHENNAN_LEAVES = registerBlock("phoebe_zhennan_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PHOEBE_ZHENNAN_SAPLING = registerBlock("phoebe_zhennan_sapling",
+            ZhennanSapling::new);
+    //Camphor
     public static final RegistryObject<Block> CAMPHOR_LEAVES = registerBlock("camphor_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAMPHOR_SAPLING = registerBlock("camphor_sapling",

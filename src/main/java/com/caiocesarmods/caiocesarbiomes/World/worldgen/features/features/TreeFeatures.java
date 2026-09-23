@@ -253,6 +253,28 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(IvyTrunkDecorator.INSTANCE, IvyLeavesDecorator.INSTANCE,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
+    // Phoebe Zhennan (Laurel Jungle Tree)
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PHOEBE_ZHENNAN_TREE = register("lophantera_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.PHOEBE_ZHENNAN_LEAVES),
+                    new SpruceFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(3), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(5, 7, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE = register("mega_phoebe_zhennan_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_PHOEBE_ZHENNAN_TREE2 = register("mega_phoebe_zhennan_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                            new SimpleBlockStateProvider(TreeFeatures.States.PHOEBE_ZHENNAN_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(18, 2, 14),
+                    new TwoLayerFeature(1, 1, 2))).build()));
+
     //Red and swampbay
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBAY_FANCY_TREE = register("redbay_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
@@ -2091,6 +2113,14 @@ public class TreeFeatures {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CASTANOPSIS_TREE = register("mega_castanopsis_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASTANOPSIS_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.CASTANOPSIS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1)))
+                    .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT075, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
+                            Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> STONE_OAK_TREE = register("stone_oak_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.STONE_OAK_LOG),
@@ -2323,6 +2353,7 @@ public class TreeFeatures {
         protected static final BlockState CALIFORNIA_LAUREL_LEAVES = TreeBlocks.CALIFORNIA_LAUREL_LEAVES.get().getDefaultState();
         protected static final BlockState REDBAY_LEAVES = TreeBlocks.REDBAY_LEAVES.get().getDefaultState();
         protected static final BlockState SWAMPBAY_LEAVES = TreeBlocks.SWAMPBAY_LEAVES.get().getDefaultState();
+        protected static final BlockState PHOEBE_ZHENNAN_LEAVES = TreeBlocks.PHOEBE_ZHENNAN_LEAVES.get().getDefaultState();
 
         protected static final BlockState AGATHIS_LOG = ModWood.AGATHIS_LOG.get().getDefaultState();
         protected static final BlockState AGATHIS_LEAVES = TreeBlocks.AGATHIS_LEAVES.get().getDefaultState();
