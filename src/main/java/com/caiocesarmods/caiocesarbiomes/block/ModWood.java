@@ -621,9 +621,6 @@ public class ModWood {
 
 
 
-
-
-
     public static final RegistryObject<Block> CHUSQUEA_BAMBOO_BLOCK = registerBlock("chusquea_bamboo_block",
             ModLogs::new);
 
@@ -634,7 +631,7 @@ public class ModWood {
     public static final RegistryObject<Block> RING_CUPPED_OAK_WOOD = registerBlock("ring_cupped_oak_wood",
             ModLogs::new);
 
-
+    /// Tropical Almond
     public static final RegistryObject<Block> TROPICAL_ALMOND_LOG = registerBlock("tropical_almond_log",
             ModLogs::new);
 
@@ -709,6 +706,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> BAMBOOLEAF_OAK_PLANKS = registerBlock("bambooleaf_oak_planks",
             ModPlanks::new);
+
 
     public static final RegistryObject<Block> LAUREL_OAK_LOG = registerBlock("laurel_oak_log",
             ModLogs::new);
