@@ -224,6 +224,12 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
+            SuculentTreeLog::new); // Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
+    public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
+            SuculentTreeLog::new);
+    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
@@ -774,6 +780,7 @@ public class ModWood {
     public static final RegistryObject<Block> CAMPHOR_PLANKS = registerBlock("camphor_planks",
             ModLogs::new);
 
+
     ///Willow
     public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
             ModLogs::new);
@@ -823,21 +830,6 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
-    public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> STRIPPED_MILKWOOD_LOG = registerBlock("stripped_milkwood_log",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> STRIPPED_MILKWOOD_WOOD = registerBlock("stripped_milkwood_wood",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> MILKWOOD_PLANKS = registerBlock("milkwood_planks",
-            ModPlanks::new);
-
-
     /// Bayberry (Myrica)
     public static final RegistryObject<Block> BAYBERRY_LOG = registerBlock("bayberry_log",
             ModLogs::new);
@@ -862,7 +854,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("sorbus_planks",
             ModPlanks::new);
-
 
 
     /// Pine (Pinus)

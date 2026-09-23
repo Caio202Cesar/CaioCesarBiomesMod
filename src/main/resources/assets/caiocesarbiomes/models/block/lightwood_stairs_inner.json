@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "caiocesarbiomes:block/lightwood_planks",
+    "top": "caiocesarbiomes:block/lightwood_planks",
+    "side": "caiocesarbiomes:block/lightwood_planks"
+  }
+}
