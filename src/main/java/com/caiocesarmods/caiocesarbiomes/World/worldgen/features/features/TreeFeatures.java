@@ -2106,7 +2106,7 @@ public class TreeFeatures {
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WAX_LEAF_PRIVET_TREE = register("wax_leaf_privet_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PRIVET_LOG),
-                    new SimpleBlockStateProvider(States.PRIVET_LEAVES),
+                    new SimpleBlockStateProvider(States.WAX_LEAF_PRIVET_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
@@ -2401,7 +2401,8 @@ public class TreeFeatures {
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
 
         protected static final BlockState PRIVET_LOG = ModWood.PRIVET_LOG.get().getDefaultState();
-        protected static final BlockState PRIVET_LEAVES = TreeBlocks.WAX_LEAF_PRIVET_LEAVES.get().getDefaultState();
+        protected static final BlockState WAX_LEAF_PRIVET_LEAVES = TreeBlocks.WAX_LEAF_PRIVET_LEAVES.get().getDefaultState();
+        protected static final BlockState MOCK_PRIVET_LEAVES = TreeBlocks.MOCK_PRIVET_LEAVES.get().getDefaultState();
 
         protected static final BlockState CINNAMON_LOG = ModWood.CINNAMON_LOG.get().getDefaultState();
         protected static final BlockState CINNAMON_LEAVES = TreeBlocks.CINNAMON_LEAVES.get().getDefaultState();

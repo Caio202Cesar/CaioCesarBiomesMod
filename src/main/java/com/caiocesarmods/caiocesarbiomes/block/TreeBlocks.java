@@ -2231,6 +2231,15 @@ public class TreeBlocks {
     public static final RegistryObject<Block> WAX_LEAF_PRIVET_SAPLING = registerBlock("wax_leaf_privet_sapling",
             WaxLeafPrivetSapling::new);
 
+    public static final RegistryObject<Block> MOCK_PRIVET_LEAVES = registerBlock("mock_privet_leaves",
+            () -> new PrivetLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MOCK_PRIVET_FRUITING_LEAVES));
+    public static final RegistryObject<Block> MOCK_PRIVET_FRUITING_LEAVES = registerBlock("mock_privet_fruiting_leaves",
+            () -> new PrivetFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.MOCK_PRIVET_LEAVES));
+    public static final RegistryObject<Block> MOCK_PRIVET_SAPLING = registerBlock("mock_privet_sapling",
+            MockPrivetSapling::new);
+
 
     //Subtropical Laurel Forest
     public static final RegistryObject<Block> LYCHEE_LEAVES = registerBlock("lychee_leaves",
