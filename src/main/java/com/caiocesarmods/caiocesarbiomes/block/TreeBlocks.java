@@ -773,7 +773,11 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_TEA_SAPLING = BLOCKS.register("potted_tea_sapling",
             () -> new FlowerPotBlock(TreeBlocks.TEA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Schima
+    public static final RegistryObject<Block> SCHIMA_LEAVES = registerBlock("schima_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SCHIMA_SAPLING = registerBlock("schima_sapling",
+            SchimaSapling::new);
 
 
     ///Bald Cypress
@@ -1467,6 +1471,16 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.HOLM_OAK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> KERMES_OAK_LEAVES = registerBlock("kermes_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> KERMES_OAK_SAPLING = registerBlock("kermes_oak_sapling",
+            KermesOakSapling::new);
+
+    /*
+    public static final RegistryObject<Block> SCRUB_OAK_LEAVES = registerBlock("scrub_oak_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SCRUB_OAK_SAPLING = registerBlock("scrub_oak_sapling",
+            ScrubOakSapling::new);*/
 
     ///Hollies/Ilexes
     public static final RegistryObject<Block> HOLLY_LEAVES = registerBlock("holly_leaves",

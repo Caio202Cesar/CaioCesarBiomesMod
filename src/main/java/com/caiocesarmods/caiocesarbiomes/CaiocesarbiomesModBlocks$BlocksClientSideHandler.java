@@ -239,5 +239,7 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         PhoebeZhennanSapling.registerRenderLayer();
         CommonMyrtleSapling.registerRenderLayer();
         MockPrivetSapling.registerRenderLayer();
+        SchimaSapling.registerRenderLayer();
+        KermesOakSapling.registerRenderLayer();
     }
 }

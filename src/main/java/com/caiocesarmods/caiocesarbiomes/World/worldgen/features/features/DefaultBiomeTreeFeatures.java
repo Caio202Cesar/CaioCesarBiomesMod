@@ -23,7 +23,8 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_OAK_TREES = register("mediterranean_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CORK_OAK_TREE.withChance(0.3F),
                             HOLM_OAK_FANCY_TREE.withChance(0.3F), CORK_OAK_FANCY_TREE.withChance(0.3F), OAK.withChance(0.2F),
-                            FANCY_OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            FANCY_OAK.withChance(0.3F), KERMES_OAK_TREE.withChance(0.2F), KERMES_OAK_SHRUB.withChance(0.2F), OAK_SHRUB.withChance(0.2F)),
+                            HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_RIPARIAN_TREES = register("mediterranean_riparian_trees",
@@ -44,7 +45,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SPARSE_OAK_TREES = register("mediterranean_sparse_oak_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CORK_OAK_TREE.withChance(0.3F),
                             HOLM_OAK_FANCY_TREE.withChance(0.095F), CORK_OAK_FANCY_TREE.withChance(0.095F), FANCY_OAK.withChance(0.078F),
-                            OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            KERMES_OAK_TREE.withChance(0.2F), OAK.withChance(0.3F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_PINE_FOREST_CONIFERS = register("mediterranean_pine_forest_conifers",
@@ -85,7 +86,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> MEDITERRANEAN_SAVANNA_SMALL_TREES = register("mediterranean_savanna_small_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OLIVE_TREE.withChance(0.1F),
                             CANARY_DATE_PALM_TREE.withChance(0.089F), CAROB_TREE.withChance(0.25F), ALMOND_TREE.withChance(0.073F),
-                            FORKY_FIG_TREE.withChance(0.3F), POMEGRANATE_TREE.withChance(0.2F),
+                            FORKY_FIG_TREE.withChance(0.3F), POMEGRANATE_TREE.withChance(0.2F), KERMES_OAK_TREE.withChance(0.2F),
                             CORK_OAK_TREE.withChance(0.3F), STRAWBERRY_TREE1.withChance(0.16F), WHITE_FIG_TREE.withChance(0.000015F),
                             STRAWBERRY_TREE2.withChance(0.2F)), HOLM_OAK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0F, 0))));

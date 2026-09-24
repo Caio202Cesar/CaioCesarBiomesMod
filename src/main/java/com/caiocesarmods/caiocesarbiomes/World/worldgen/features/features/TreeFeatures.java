@@ -103,6 +103,12 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KERMES_OAK_TREE = register("kermes_oak_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.HOLM_OAK_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.KERMES_OAK_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COMMON_MYRTLE_SHRUB = register("common_myrtle_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.COMMON_MYRTLE_LEAVES),
@@ -110,13 +116,15 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    /*
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SCRUB_OAK_SHRUB = register("scrub_oak_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WHITE_OAK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.SCRUB_OAK_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));*/
+
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOCK_PRIVET_SHRUB = register("mock_privet_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PRIVET_LOG),
                     new SimpleBlockStateProvider(States.MOCK_PRIVET_LEAVES),
@@ -2585,6 +2593,9 @@ public class TreeFeatures {
 
         protected static final BlockState HOLM_OAK_LOG = ModWood.HOLM_OAK_LOG.get().getDefaultState();
         protected static final BlockState HOLM_OAK_LEAVES = TreeBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
+        protected static final BlockState KERMES_OAK_LEAVES = TreeBlocks.KERMES_OAK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SCRUB_OAK_LEAVES = TreeBlocks.SCRUB_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState RED_OAK_LEAVES = TreeBlocks.RED_OAK_LEAVES.get().getDefaultState();
 
@@ -2643,7 +2654,7 @@ public class TreeFeatures {
         protected static final BlockState CHINESE_RED_PINE_LEAVES = TreeBlocks.CHINESE_RED_PINE_LEAVES.get().getDefaultState();
 
 
-        protected static final BlockState ELDERBERRY_LOG = TreeBlocks.ELDERBERRY_LOG.get().getDefaultState();
+        protected static final BlockState ELDERBERRY_LOG = ModWood.ELDERBERRY_LOG.get().getDefaultState();
         protected static final BlockState ELDERBERRY_LEAVES = TreeBlocks.ELDERBERRY_LEAVES.get().getDefaultState();
 
         protected static final BlockState STRAWBERRY_TREE_LOG = ModWood.STRAWBERRY_TREE_LOG.get().getDefaultState();
