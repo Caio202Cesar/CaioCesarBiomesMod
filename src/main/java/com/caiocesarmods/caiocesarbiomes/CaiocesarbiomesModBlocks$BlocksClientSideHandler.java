@@ -236,5 +236,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         CaliforniaLaurelSapling.registerRenderLayer();
         RedbaySapling.registerRenderLayer();
         SwampbaySapling.registerRenderLayer();
+        PhoebeZhennanSapling.registerRenderLayer();
     }
 }

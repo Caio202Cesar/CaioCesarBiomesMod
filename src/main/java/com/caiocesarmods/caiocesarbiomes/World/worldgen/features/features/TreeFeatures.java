@@ -2359,7 +2359,7 @@ public class TreeFeatures {
 
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
         protected static final BlockState LILLY_PILLY_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
-        protected static final BlockState COMMON_MYRTLE_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
+        protected static final BlockState COMMON_MYRTLE_LEAVES = TreeBlocks.COMMON_MYRTLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState POHUTUKAWA_LOG = ModWood.POHUTUKAWA_LOG.get().getDefaultState();
         protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
