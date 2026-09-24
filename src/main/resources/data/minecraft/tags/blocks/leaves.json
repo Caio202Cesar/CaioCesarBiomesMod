@@ -363,8 +363,10 @@
     "caiocesarbiomes:schima_leaves",
     "caiocesarbiomes:redbay_leaves",
     "caiocesarbiomes:swampbay_leaves",
-    "caiocesarbiomes:phoebe_zhennan_leaves"
-
+    "caiocesarbiomes:phoebe_zhennan_leaves",
+    "caiocesarbiomes:common_myrtle_leaves",
+    "caiocesarbiomes:common_myrtle_flowering_leaves",
+    "caiocesarbiomes:common_myrtle_fruiting_leaves"
   ]
 }
 

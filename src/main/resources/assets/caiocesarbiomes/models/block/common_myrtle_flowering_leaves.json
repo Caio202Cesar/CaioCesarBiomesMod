@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/common_myrtle_flowering_leaves",
+    "particle": "caiocesarbiomes:block/common_myrtle_flowering_leaves"
+  }
+}
