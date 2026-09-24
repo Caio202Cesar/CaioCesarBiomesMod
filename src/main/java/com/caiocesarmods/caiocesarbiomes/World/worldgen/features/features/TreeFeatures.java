@@ -2595,8 +2595,6 @@ public class TreeFeatures {
         protected static final BlockState HOLM_OAK_LEAVES = TreeBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
         protected static final BlockState KERMES_OAK_LEAVES = TreeBlocks.KERMES_OAK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SCRUB_OAK_LEAVES = TreeBlocks.SCRUB_OAK_LEAVES.get().getDefaultState();
-
         protected static final BlockState RED_OAK_LEAVES = TreeBlocks.RED_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState CORK_OAK_LOG = ModWood.CORK_OAK_LOG.get().getDefaultState();
