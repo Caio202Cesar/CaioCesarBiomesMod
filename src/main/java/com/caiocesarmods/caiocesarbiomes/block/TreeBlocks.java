@@ -450,7 +450,7 @@ public class TreeBlocks {
     //Swampbay
     public static final RegistryObject<Block> SWAMPBAY_LEAVES = registerBlock("swampbay_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> SWAMPBAY_SAPLING = registerBlock("swamp_sapling",
+    public static final RegistryObject<Block> SWAMPBAY_SAPLING = registerBlock("swampbay_sapling",
             SwampbaySapling::new);
     //Phoebe Zhennan (Laurel Jungle Tree)
     public static final RegistryObject<Block> PHOEBE_ZHENNAN_LEAVES = registerBlock("phoebe_zhennan_leaves",
