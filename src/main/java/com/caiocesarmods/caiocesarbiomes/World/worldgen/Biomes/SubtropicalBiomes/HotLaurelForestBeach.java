@@ -21,12 +21,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class LaurelForestSubtropicalBeach {
+public class HotLaurelForestBeach {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> LAUREL_FOREST_SUBTROPICAL_BEACH = BIOMES.register("humid_subtropical_beach",
+    public static final RegistryObject<Biome> HOT_LAUREL_FOREST_BEACH = BIOMES.register("hot_laurel_forest_beach",
             () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
     //Subtropical Oak Beach

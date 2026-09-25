@@ -102,7 +102,7 @@ public class CaioCesarBiomesMod
         CorkOakSavannaBiome.register(eventBus);
         SubtropicalEvergreenOakForestBiome.register(eventBus);
         TropicalSeasonalForestBiome.register(eventBus);
-        SubtropicalLaurelForestBiome.register(eventBus);
+        HotLaurelSubtropicalForestBiome.register(eventBus);
         SubtropicalLaurelJungleBiome.register(eventBus);
         BambooSubtropicalLaurelJungleBiome.register(eventBus);
         CoastalSubtropicalDesertBiome.register(eventBus);
@@ -119,7 +119,7 @@ public class CaioCesarBiomesMod
         EucalyptusPlainsBeach.register(eventBus);
         EucalyptusPlainsRiver.register(eventBus);
         HotMediterraneanBeachBiome.register(eventBus);
-        LaurelForestSubtropicalBeach.register(eventBus);
+        HotLaurelForestBeach.register(eventBus);
         EucalyptusSahelBiome.register(eventBus);
         MagellanicSubpolarForestBiome.register(eventBus);
         LushSouthernTundraBiome.register(eventBus);
@@ -161,7 +161,7 @@ public class CaioCesarBiomesMod
         SubtropicalEvergreenOakForestBeach.register(eventBus);
         SubtropicalEvergreenOakForestRiver.register(eventBus);
         MediterraneanSavannaRiver.register(eventBus);
-        LaurelForestRiver.register(eventBus);
+        HotLaurelForestRiver.register(eventBus);
         LaurelJungleSubtropicalBeach.register(eventBus);
         MontaneCloudJungle.register(eventBus);
         JungleRiver.register(eventBus);

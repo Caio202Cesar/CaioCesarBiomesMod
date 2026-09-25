@@ -43,7 +43,7 @@ public class ModBiomeGeneration {
 
         ///Humid Subtropical
         addBiome(SubtropicalEvergreenOakForestBiome.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
-        addBiome(SubtropicalLaurelForestBiome.SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
+        addBiome(HotLaurelSubtropicalForestBiome.HOT_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
         addBiome(MontaneLaurelGroveBiome.MONTANE_MACARONESIAN_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalExtremeHillsBiome.SUBTROPICAL_EXTREME_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
