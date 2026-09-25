@@ -121,7 +121,11 @@ public class OliveSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.OLIVE_FANCY_TREE;
+            } else {
                 return TreeFeatures.OLIVE_TREE;
+            }
         }
 
         /**
