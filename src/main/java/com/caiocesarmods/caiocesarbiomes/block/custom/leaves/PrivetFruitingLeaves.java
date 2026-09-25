@@ -97,6 +97,7 @@ public class PrivetFruitingLeaves extends LeavesBlock implements IForgeShearable
         }
     }
 
+     /*
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
@@ -113,8 +114,25 @@ public class PrivetFruitingLeaves extends LeavesBlock implements IForgeShearable
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
+
+
+        if (!worldIn.isRemote && state == TreeBlocks.MOCK_PRIVET_FRUITING_LEAVES.get().getDefaultState()) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.PRIVET_BERRIES.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            worldIn.setBlockState(pos, TreeBlocks.MOCK_PRIVET_LEAVES.get().getDefaultState());
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+        }
+
         return ActionResultType.SUCCESS;
-    }
+    }*/
 
 
 
