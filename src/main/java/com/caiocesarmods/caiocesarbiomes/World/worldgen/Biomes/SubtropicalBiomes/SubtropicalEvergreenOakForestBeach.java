@@ -72,7 +72,7 @@ public class SubtropicalEvergreenOakForestBeach {
 
       //Hardiness zone 9: 0.8F - 0.84F
       return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-              .temperature(0.84F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+              .temperature(0.84F).downfall(0.82F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                       .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                       .withGrassColor(2791997).setFogColor(7907327)
                       .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
