@@ -138,9 +138,9 @@ public class DefaultBiomeTreeFeatures {
                             PLANE_FANCY_TREE.withChance(0.15F), RED_MAPLE_TREE.withChance(0.04F),
                             PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
                             SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), LAUREL_OAK_TREE.withChance(0.4F),
-                            PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F),
+                            PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F), SWAMPBAY_TREE.withChance(0.2F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F),
-                            WEEPING_WILLOW_FANCY.withChance(0.3F)),
+                            WEEPING_WILLOW_FANCY.withChance(0.3F), MEGA_BALD_CYPRESS.withChance(0.2F)),
                             BALD_CYPRESS))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
@@ -215,8 +215,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> LAUREL_JUNGLE_CANOPY_TREES = register("laurel_jungle_canopy_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                    MEGA_PHOEBE_ZHENNAN_TREE2.withChance(0.2F), MEGA_PHOEBE_ZHENNAN_TREE.withChance(0.2F)),
-                            SCHIMA_TREE_TALL)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SCHIMA_TREE_TALL.withChance(0.2F), MEGA_PHOEBE_ZHENNAN_TREE.withChance(0.2F)),
+                            MEGA_PHOEBE_ZHENNAN_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(40, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_JUNGLE_CONIFERS = register("subtropical_jungle_conifers",

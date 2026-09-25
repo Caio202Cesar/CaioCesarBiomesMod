@@ -326,6 +326,7 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT045,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
                             Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     //Mesquite Tree
