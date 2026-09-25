@@ -278,13 +278,13 @@ public class ModBiomeRelationships {
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
                 ModBiomes.HOT_LAUREL_FOREST_RIVER);
 
-        //Lucidophyllous oak forest
+        //Evergreen oak forest
         BiomeRelationshipRegistry.registerBeach(
-                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
-                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH);
+                ModBiomes.SUBTROPICAL_EVERGREEN_OAK_FOREST,
+                ModBiomes.SUBTROPICAL_EVERGREEN_OAK_FOREST_BEACH);
         BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST,
-                ModBiomes.SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER);
+                ModBiomes.SUBTROPICAL_EVERGREEN_OAK_FOREST,
+                ModBiomes.SUBTROPICAL_EVERGREEN_OAK_FOREST_RIVER);
 
         //Humid subtropical pine forest
         BiomeRelationshipRegistry.registerBeach(

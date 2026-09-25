@@ -22,7 +22,7 @@ public class SubtropicalEvergreenOakForestBiome {
            = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
    private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-   public static final RegistryObject<Biome> SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST = BIOMES.register("subtropical_seasonal_forest",
+   public static final RegistryObject<Biome> SUBTROPICAL_EVERGREEN_OAK_FOREST = BIOMES.register("subtropical_evergreen_oak_forest",
            () -> makeSubtropicalEvergreenOakForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1F, 0.2F));
 
 

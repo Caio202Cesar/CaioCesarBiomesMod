@@ -115,23 +115,24 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_laurel_jungle");
     public static final ResourceLocation MONTANE_LAUREL_GROVE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
-
-    public static final ResourceLocation LAUREL_JUNGLE_SUBTROPICAL_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_jungle_beach");
-
-    //Cool (temperate oceanic) laurel jungle with tawa trees.
-
     public static final ResourceLocation SUBTROPICAL_EXTREME_HILLS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_extreme_hills");
     public static final ResourceLocation BAMBOO_SUBTROPICAL_EXTREME_HILLS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_extreme_hills");
+    public static final ResourceLocation LAUREL_JUNGLE_SUBTROPICAL_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_jungle_beach");
+    //Cool (temperate oceanic) laurel jungle with tawa trees.
 
-    public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_FOREST =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_seasonal_forest");
-    public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_BEACH =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_lucidophyll_oak_forest_beach");
-    public static final ResourceLocation SUBTROPICAL_LUCIDOPHYLLOUS_OAK_RIVER =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_lucidophyll_oak_forest_river");
+
+
+
+    //Subtropical Evergreen Oak Forest
+    public static final ResourceLocation SUBTROPICAL_EVERGREEN_OAK_FOREST =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_evergreen_oak_forest");
+    public static final ResourceLocation SUBTROPICAL_EVERGREEN_OAK_FOREST_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_evergreen_oak_forest_beach");
+    public static final ResourceLocation SUBTROPICAL_EVERGREEN_OAK_FOREST_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_evergreen_oak_forest_river");
 
     public static final ResourceLocation SUBTROPICAL_PINE_FOREST =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "humid_subtropical_pine_forest");
