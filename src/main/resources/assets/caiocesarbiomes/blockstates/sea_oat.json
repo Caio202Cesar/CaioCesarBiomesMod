@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "caiocesarbiomes:block/sea_oat_top"
+    },
+    "half=lower": {
+      "model": "caiocesarbiomes:block/sea_oat_bottom"
+    }
+  }
+}

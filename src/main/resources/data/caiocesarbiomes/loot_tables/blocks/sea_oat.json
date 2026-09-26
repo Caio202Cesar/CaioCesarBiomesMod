@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "caiocesarbiomes:blocks/sea_oat",
+  "pools": [
+    {
+      "rolls": 3.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caiocesarbiomes:sea_oat",
+          "conditions": [
+            {
+              "block": "caiocesarbiomes:sea_oat",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
