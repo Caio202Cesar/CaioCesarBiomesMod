@@ -52,6 +52,8 @@ public class ModPlants {
             ModTallPlant::new);
     public static final RegistryObject<Block> HARDY_FURSCHIA = registerBlock("hardy_furschia",
             ModTallPlant::new);
+    public static final RegistryObject<Block> SEA_OAT = registerBlock("sea_oat",
+            ModTallPlant::new);
 
     //Vines
     public static final RegistryObject<Block> CREEPING_FIG_VINE = registerBlock("creeping_fig_vine",

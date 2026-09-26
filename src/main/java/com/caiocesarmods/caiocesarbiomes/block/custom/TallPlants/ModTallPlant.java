@@ -37,7 +37,7 @@ public class ModTallPlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(ModPlants.CANNA_LILY_YELLOW.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.PALM_LILY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModPlants.HARDY_FURSCHIA.get(), RenderType.getCutout());
-
+        RenderTypeLookup.setRenderLayer(ModPlants.SEA_OAT.get(), RenderType.getCutout());
 
     }
 

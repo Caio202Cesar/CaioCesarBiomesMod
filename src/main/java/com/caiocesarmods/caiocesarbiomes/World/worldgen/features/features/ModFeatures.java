@@ -90,6 +90,11 @@ public class ModFeatures implements IFeatureConfig {
                 new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
     });
 
+    private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> SEA_OAT_PATCH = ImmutableList.of(() -> {
+        return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.SEA_OAT),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+    });
+
     private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> MAGELLANIC_TALL_PLANTS = ImmutableList.of(() -> {
         return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.HARDY_FURSCHIA),
                 new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
@@ -176,6 +181,10 @@ public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> BADLANDS_TALL_VEGETATION = register("badlands_tall_vegetation",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(BADLANDS_TALL_PLANTS)).countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
+
+    public static final ConfiguredFeature<?, ?> PLAINS_BEACH_TALL_VEGETATION = register("plains_beach_tall_vegetation",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(SEA_OAT_PATCH)).countSpread(FeatureSpread.create(-3, 4))
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_TALL_PLANTS_VEGETATION = register("temperate_tall_plants_vegetation",
@@ -464,6 +473,7 @@ public class ModFeatures implements IFeatureConfig {
         protected static final BlockState CHILEAN_GUAVA_FRUITING_BUSH = ModPlants.CHILEAN_GUAVA_FRUITING_BUSH.get().getDefaultState();
         protected static final BlockState HARDY_FURSCHIA = ModPlants.HARDY_FURSCHIA.get().getDefaultState();
         protected static final BlockState LARGE_FERN = Blocks.LARGE_FERN.getDefaultState();
+        protected static final BlockState SEA_OAT = ModPlants.SEA_OAT.get().getDefaultState();
 
     }
 }
