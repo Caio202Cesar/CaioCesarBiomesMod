@@ -170,6 +170,9 @@ public class CaioCesarBiomesMod
         BambooSubtropicalExtremeHillsBiome.register(eventBus);
         HotTemperateForestBiome.register(eventBus);
 
+        PlainsRiver.register(eventBus);
+        PlainsBeach.register(eventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
