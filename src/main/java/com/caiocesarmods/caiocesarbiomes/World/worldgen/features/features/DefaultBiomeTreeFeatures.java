@@ -140,8 +140,8 @@ public class DefaultBiomeTreeFeatures {
                             SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), LAUREL_OAK_TREE.withChance(0.4F),
                             PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F), SWAMPBAY_TREE.withChance(0.2F),
                             PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F),
-                            WEEPING_WILLOW_FANCY.withChance(0.3F), MEGA_BALD_CYPRESS.withChance(0.2F)),
-                            BALD_CYPRESS))
+                            WEEPING_WILLOW_FANCY.withChance(0.3F), MEGA_BALD_CYPRESS.withChance(0.2F),
+                            BALD_CYPRESS.withChance(0.2F)), BIG_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
