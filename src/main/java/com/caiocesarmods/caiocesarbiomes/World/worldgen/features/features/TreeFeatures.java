@@ -1412,6 +1412,14 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MASTIC_SHRUB = register("mastic_shrub",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PISTACHIO_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.MASTIC_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setIgnoreVines()
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+
     //Oak with Ivy
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_IVY = register("oak_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),
