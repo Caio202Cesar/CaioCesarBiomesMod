@@ -109,7 +109,10 @@ public class CaioCesarBiomesMod
         CoastalSubtropicalDesertLomas.register(eventBus);
         MontaneLaurelGroveBiome.register(eventBus);
         GravelTundraBiome.register(eventBus);
+
         SahelBiome.register(eventBus);
+        SahelRiver.register(eventBus);
+
         TropicalBeachBiome.register(eventBus);
         TropicalEucalyptusDryForestBiome.register(eventBus);
         JapaneseMapleGroveBiome.register(eventBus);
@@ -169,6 +172,8 @@ public class CaioCesarBiomesMod
         JungleHighland.register(eventBus);
         BambooSubtropicalExtremeHillsBiome.register(eventBus);
         HotTemperateForestBiome.register(eventBus);
+
+        SubtropicalDesertRiver.register(eventBus);
 
         PlainsRiver.register(eventBus);
         PlainsBeach.register(eventBus);

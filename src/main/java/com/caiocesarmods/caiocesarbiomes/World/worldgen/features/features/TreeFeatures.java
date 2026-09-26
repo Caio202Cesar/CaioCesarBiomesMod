@@ -1405,6 +1405,13 @@ public class TreeFeatures {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TEREBINTH_TREE = register("terebinth_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PISTACHIO_LOG),
+                    new SimpleBlockStateProvider(States.TEREBINTH_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     //Oak with Ivy
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OAK_TREE_WITH_IVY = register("oak_with_ivy",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OAK_LOG),

@@ -279,6 +279,12 @@ public class DefaultBiomeTreeFeatures {
                             BAOBAB_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> TROPICAL_DESERT_RIVER_TREES = register("tropical_desert_river_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MESQUITE_TREE.withChance(0.2F),
+                            MESQUITE_FANCY_TREE.withChance(0.2F), DATE_PALM_TREE.withChance(0.2F), ACACIA_SHRUB.withChance(0.2F)),
+                            ACACIA)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(16, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
                             ACACIA.withChance(0.2F), MESQUITE_TREE.withChance(0.2F), MESQUITE_FANCY_TREE.withChance(0.2F), DATE_PALM_TREE.withChance(0.2F)),

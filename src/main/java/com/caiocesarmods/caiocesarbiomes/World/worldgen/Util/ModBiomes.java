@@ -46,18 +46,25 @@ public class ModBiomes {
     public static final ResourceLocation CONIFEROUS_MEDITERRANEAN_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "mediterranean_conifer_savanna_beach");
 
-    //Desert
+    ///Arid
+    //Temperate Desert
     public static final ResourceLocation TEMPERATE_DESERT =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert");
     public static final ResourceLocation TEMPERATE_DESERT_OASIS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_oasis");
     public static final ResourceLocation TEMPERATE_DESERT_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "temperate_desert_river");
-
+    //Coastal Subtropical Desert
     public static final ResourceLocation COASTAL_SUBTROPICAL_DESERT =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert");
     public static final ResourceLocation FOG_OASIS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "coastal_subtropical_desert_lomas");
+    //Subtropical Desert
+    public static final ResourceLocation SUBTROPICAL_DESERT_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_river");
+    //Sahel
+    public static final ResourceLocation SAHEL_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "sahel_river");
 
     //Tropical domain
     public static final ResourceLocation TROPICAL_BAMBOO_MARSH =
