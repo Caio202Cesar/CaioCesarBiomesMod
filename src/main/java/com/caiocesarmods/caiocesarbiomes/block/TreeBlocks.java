@@ -1792,6 +1792,19 @@ public class TreeBlocks {
             () -> new FlowerPotBlock(TreeBlocks.PISTACHIO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> TEREBINTH_LEAVES = registerBlock("terebinth_leaves",
+            () -> new TerebinthLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FRUITING_LEAVES));
+    public static final RegistryObject<Block> TEREBINTH_FRUITING_LEAVES = registerBlock("terebinth_fruiting_leaves",
+            () -> new TerebinthFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FALL_LEAVES));
+    public static final RegistryObject<Block> TEREBINTH_FALL_LEAVES = registerBlock("terebinth_fall_leaves",
+            () -> new TerebinthFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_BRANCHES));
+    public static final RegistryObject<Block> TEREBINTH_BRANCHES = registerBlock("terebinth_branches",
+            () -> new TerebinthFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_LEAVES));
+
     ///Plane
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
             () -> new PlaneLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

@@ -1410,7 +1410,7 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.TEREBINTH_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1))).build()));//Desert biome
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MASTIC_SHRUB = register("mastic_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PISTACHIO_LOG),
@@ -2573,6 +2573,8 @@ public class TreeFeatures {
 
         protected static final BlockState PISTACHIO_LOG = ModWood.PISTACHIO_LOG.get().getDefaultState();
         protected static final BlockState PISTACHIO_LEAVES = TreeBlocks.PISTACHIO_LEAVES.get().getDefaultState();
+        protected static final BlockState MASTIC_LEAVES = TreeBlocks.MASTIC_LEAVES.get().getDefaultState();
+        protected static final BlockState TEREBINTH_LEAVES = TreeBlocks.TEREBINTH_LEAVES.get().getDefaultState();
 
         protected static final BlockState COCONUT_LOG = ModWood.COCONUT_LOG.get().getDefaultState();
         protected static final BlockState COCONUT_LEAVES = TreeBlocks.COCONUT_LEAVES.get().getDefaultState();
