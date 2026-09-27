@@ -1791,7 +1791,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PISTACHIO_SAPLING = BLOCKS.register("potted_pistachio_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PISTACHIO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Terebinth
     public static final RegistryObject<Block> TEREBINTH_LEAVES = registerBlock("terebinth_leaves",
             () -> new TerebinthLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FRUITING_LEAVES));
@@ -1809,7 +1809,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_LEAVES));
     public static final RegistryObject<Block> TEREBINTH_SAPLING = registerBlock("terebinth_sapling",
             TerebinthSapling::new);
-
+    //Mastic
     public static final RegistryObject<Block> MASTIC_LEAVES = registerBlock("mastic_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MASTIC_SAPLING = registerBlock("mastic_sapling",
