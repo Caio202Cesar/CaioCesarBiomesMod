@@ -1802,8 +1802,20 @@ public class TreeBlocks {
             () -> new TerebinthFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_BRANCHES));
     public static final RegistryObject<Block> TEREBINTH_BRANCHES = registerBlock("terebinth_branches",
-            () -> new TerebinthFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TerebinthBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FLOWERING_BRANCHES));
+    public static final RegistryObject<Block> TEREBINTH_FLOWERING_BRANCHES = registerBlock("terebinth_branches",
+            () -> new TerebinthFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_LEAVES));
+    public static final RegistryObject<Block> TEREBINTH_SAPLING = registerBlock("terebinth_sapling",
+            TerebinthSapling::new);
+
+    public static final RegistryObject<Block> MASTIC_LEAVES = registerBlock("mastic_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MASTIC_SAPLING = registerBlock("mastic_sapling",
+            MasticSapling::new);
+
+
 
     ///Plane
     public static final RegistryObject<Block> PLANE_LEAVES = registerBlock("plane_leaves",
@@ -1821,7 +1833,6 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PLANE_SAPLING = BLOCKS.register("potted_plane_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PLANE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
 

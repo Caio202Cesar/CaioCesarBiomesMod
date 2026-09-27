@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/mastic_leaves"},
+      {"model": "caiocesarbiomes:block/mastic_fruiting_leaves"}
+    ]
+  }}
