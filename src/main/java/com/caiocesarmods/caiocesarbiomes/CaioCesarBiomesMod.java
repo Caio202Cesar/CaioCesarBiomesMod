@@ -145,9 +145,14 @@ public class CaioCesarBiomesMod
         TropicalDesertBiome.register(eventBus);
         GinkgoForestBiome.register(eventBus);
         MediterraneanConiferLimestoneBeach.register(eventBus);
+
         TemperateDesert.register(eventBus);
         TemperateDesertOasis.register(eventBus);
         TemperateDesertRiver.register(eventBus);
+
+        SubtropicalDesertOasis.register(eventBus);
+        SubtropicalDesertRiver.register(eventBus);
+
         HumidSubtropicalPineForest.register(eventBus);
         HumidSubtropicalPineBeach.register(eventBus);
         HumidSubtropicalPineRiver.register(eventBus);
@@ -173,7 +178,6 @@ public class CaioCesarBiomesMod
         BambooSubtropicalExtremeHillsBiome.register(eventBus);
         HotTemperateForestBiome.register(eventBus);
 
-        SubtropicalDesertRiver.register(eventBus);
 
         PlainsRiver.register(eventBus);
         PlainsBeach.register(eventBus);
