@@ -19,7 +19,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.Grav
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.LushSouthernTundraBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.TussockTundraBeach;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.TussockTundraBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.ModBiomeRelationships;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ModBiomeRelationships;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.ModFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TreeDecorators.ModTreeDecorators;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.gen.ModBiomeGeneration;

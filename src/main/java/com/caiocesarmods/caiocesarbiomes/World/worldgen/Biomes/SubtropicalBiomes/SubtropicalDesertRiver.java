@@ -24,10 +24,10 @@ public class SubtropicalDesertRiver {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
-    public static final RegistryObject<Biome> SAHEL_RIVER = BIOMES.register("sahel_river",
-            () -> makeSahelRiver(() -> ConfiguredSurfaceBuilders.GRASS, -0.5F, 0.0f));
+    public static final RegistryObject<Biome> HOT_DESERT_RIVER = BIOMES.register("subtropical_desert_river",
+            () -> makeDesertRiver(() -> ConfiguredSurfaceBuilders.GRASS, -0.5F, 0.0f));
 
-    private static Biome makeSahelRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makeDesertRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -42,7 +42,7 @@ public class SubtropicalDesertRiver {
         biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_DESERT);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
@@ -58,7 +58,7 @@ public class SubtropicalDesertRiver {
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_DESERT_RIVER_TREES);
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.RIVER).depth(depth).scale(scale)
                 .temperature(0.89F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                         .withGrassColor(12564309).setFogColor(13494015)

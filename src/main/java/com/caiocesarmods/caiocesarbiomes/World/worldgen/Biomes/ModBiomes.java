@@ -1,8 +1,7 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.WorldGenRegistries;
 
 public class ModBiomes {
 
@@ -62,7 +61,11 @@ public class ModBiomes {
     //Subtropical Desert
     public static final ResourceLocation SUBTROPICAL_DESERT_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_river");
+    public static final ResourceLocation SUBTROPICAL_DESERT_OASIS =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_oasis");
     //Sahel
+    public static final ResourceLocation SAHEL =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "sahel");
     public static final ResourceLocation SAHEL_RIVER =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "sahel_river");
 

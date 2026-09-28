@@ -1,5 +1,9 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Util;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes;
 
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationship;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.BiomeRelationshipRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.MatchMode;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.RelationshipType;
 import net.minecraft.world.biome.Biomes;
 
 import static com.caiocesarmods.caiocesarbiomes.World.worldgen.Util.MatchMode.ANY;
@@ -337,10 +341,42 @@ public class ModBiomeRelationships {
                 false,
                 false,
                 null);
-
+        //Subtropical Coastal Desert
         BiomeRelationshipRegistry.register(
                 ModBiomes.COASTAL_SUBTROPICAL_DESERT,
                 ModBiomes.FOG_OASIS,
+                RelationshipType.RARE,
+                15,
+                15,
+                2,
+                3,
+                false,
+                false,
+                null);
+        //Subtropical (vanilla) Desert
+        BiomeRelationshipRegistry.registerRiver(
+                Biomes.DESERT,
+                ModBiomes.SUBTROPICAL_DESERT_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                Biomes.DESERT_HILLS,
+                ModBiomes.SUBTROPICAL_DESERT_RIVER);
+        BiomeRelationshipRegistry.registerRiver(
+                Biomes.DESERT_LAKES,
+                ModBiomes.SUBTROPICAL_DESERT_RIVER);
+        BiomeRelationshipRegistry.register(
+                Biomes.DESERT,
+                ModBiomes.SUBTROPICAL_DESERT_OASIS,
+                RelationshipType.RARE,
+                15,
+                15,
+                2,
+                3,
+                false,
+                false,
+                null);
+        BiomeRelationshipRegistry.register(
+                Biomes.DESERT_HILLS,
+                ModBiomes.SUBTROPICAL_DESERT_OASIS,
                 RelationshipType.RARE,
                 15,
                 15,
