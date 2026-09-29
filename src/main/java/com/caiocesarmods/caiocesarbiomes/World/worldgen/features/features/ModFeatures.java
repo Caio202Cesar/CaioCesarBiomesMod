@@ -392,7 +392,7 @@ public class ModFeatures implements IFeatureConfig {
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT075 =
                 new ResurrectionFernTreeDecorator(0.75F, 70);
         public static final ResurrectionFernTreeDecorator RESURRECTION_FERN_PLACEMENT095 =
-                new ResurrectionFernTreeDecorator(0.95F, 70);
+                new ResurrectionFernTreeDecorator(1.00F, 150);
     }
 
     public static final class States {
