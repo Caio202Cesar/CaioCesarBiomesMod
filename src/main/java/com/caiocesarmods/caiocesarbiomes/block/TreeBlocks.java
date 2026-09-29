@@ -1804,7 +1804,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> TEREBINTH_BRANCHES = registerBlock("terebinth_branches",
             () -> new TerebinthBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FLOWERING_BRANCHES));
-    public static final RegistryObject<Block> TEREBINTH_FLOWERING_BRANCHES = registerBlock("terebinth_branches",
+    public static final RegistryObject<Block> TEREBINTH_FLOWERING_BRANCHES = registerBlock("terebinth_flowering_branches",
             () -> new TerebinthFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_LEAVES));
     public static final RegistryObject<Block> TEREBINTH_SAPLING = registerBlock("terebinth_sapling",
