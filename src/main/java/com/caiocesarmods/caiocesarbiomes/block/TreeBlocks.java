@@ -1794,10 +1794,10 @@ public class TreeBlocks {
     //Terebinth
     public static final RegistryObject<Block> TEREBINTH_LEAVES = registerBlock("terebinth_leaves",
             () -> new TerebinthLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FALL_LEAVES));
     public static final RegistryObject<Block> TEREBINTH_FRUITING_LEAVES = registerBlock("terebinth_fruiting_leaves",
             () -> new TerebinthFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FRUITING_FALL_LEAVES));
     public static final RegistryObject<Block> TEREBINTH_FALL_LEAVES = registerBlock("terebinth_fall_leaves",
             () -> new TerebinthFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_BRANCHES));
@@ -1806,7 +1806,7 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FLOWERING_BRANCHES));
     public static final RegistryObject<Block> TEREBINTH_FLOWERING_BRANCHES = registerBlock("terebinth_flowering_branches",
             () -> new TerebinthFloweringBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.TEREBINTH_FRUITING_LEAVES));
     public static final RegistryObject<Block> TEREBINTH_SAPLING = registerBlock("terebinth_sapling",
             TerebinthSapling::new);
     //Mastic
