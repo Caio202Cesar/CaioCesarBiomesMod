@@ -4,7 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateDesert;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.TemperateDesert;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.EucalyptusSahelBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.SahelBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.TropicalDesertBiome;

@@ -221,48 +221,18 @@ public class ModBiomeRelationships {
         //Laurel Forest
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.HOT_LAUREL_FOREST,
-                ModBiomes.LAUREL_FOREST_SUBTROPICAL_BEACH);
+                ModBiomes.HOT_LAUREL_FOREST_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.HOT_LAUREL_FOREST,
                 ModBiomes.HOT_LAUREL_FOREST_RIVER);
 
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
-                ModBiomes.LAUREL_JUNGLE,
-                RelationshipType.EDGE,
-                4,
-                15,
-                6,
-                0,
-                false,
-                false,
-                null);
-        BiomeRelationshipRegistry.registerBeach(
-                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
-                ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_BEACH);
-        BiomeRelationshipRegistry.registerRiver(
-                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
-                ModBiomes.LAUREL_JUNGLE_RIVER);
-
-        BiomeRelationshipRegistry.register(
-                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
-                ModBiomes.BAMBOO_SUBTROPICAL_EXTREME_HILLS,
-                RelationshipType.SUB_BIOME,
-                3,
-                0,
-                1,
-                2,
-                false,
-                false,
-                null);
-
+        //Laurel jungle
         BiomeRelationshipRegistry.registerBeach(
                 ModBiomes.LAUREL_JUNGLE,
                 ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.LAUREL_JUNGLE,
-                ModBiomes.HOT_LAUREL_FOREST_RIVER);
+                ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_RIVER);
 
         BiomeRelationshipRegistry.register(
                 ModBiomes.LAUREL_JUNGLE,
@@ -280,7 +250,36 @@ public class ModBiomeRelationships {
                 ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_BEACH);
         BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.BAMBOO_SUBTROPICAL_LAUREL_JUNGLE,
-                ModBiomes.HOT_LAUREL_FOREST_RIVER);
+                ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_RIVER);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_JUNGLE,
+                RelationshipType.EDGE,
+                4,
+                15,
+                6,
+                0,
+                false,
+                false,
+                null);
+        BiomeRelationshipRegistry.registerBeach(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_BEACH);
+        BiomeRelationshipRegistry.registerRiver(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.LAUREL_JUNGLE_SUBTROPICAL_RIVER);
+        BiomeRelationshipRegistry.register(
+                ModBiomes.SUBTROPICAL_EXTREME_HILLS,
+                ModBiomes.BAMBOO_SUBTROPICAL_EXTREME_HILLS,
+                RelationshipType.SUB_BIOME,
+                3,
+                0,
+                1,
+                2,
+                false,
+                false,
+                null);
 
         //Evergreen oak forest
         BiomeRelationshipRegistry.registerBeach(
@@ -363,6 +362,15 @@ public class ModBiomeRelationships {
         BiomeRelationshipRegistry.registerRiver(
                 Biomes.DESERT_LAKES,
                 ModBiomes.SUBTROPICAL_DESERT_RIVER);
+        BiomeRelationshipRegistry.registerBeach(
+                Biomes.DESERT,
+                ModBiomes.SUBTROPICAL_DESERT_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
+                Biomes.DESERT_HILLS,
+                ModBiomes.SUBTROPICAL_DESERT_BEACH);
+        BiomeRelationshipRegistry.registerBeach(
+                Biomes.DESERT_LAKES,
+                ModBiomes.SUBTROPICAL_DESERT_BEACH);
         BiomeRelationshipRegistry.register(
                 Biomes.DESERT,
                 ModBiomes.SUBTROPICAL_DESERT_OASIS,

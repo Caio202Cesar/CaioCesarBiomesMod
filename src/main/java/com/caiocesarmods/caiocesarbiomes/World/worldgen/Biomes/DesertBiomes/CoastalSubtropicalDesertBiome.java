@@ -1,7 +1,7 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
@@ -17,15 +17,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SubtropicalDesertOasis {
+public class CoastalSubtropicalDesertBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> HOT_SUBTROPICAL_DESERT_OASIS = BIOMES.register("subtropical_desert_oasis",
-            () -> makeDesertOasis(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, -0.4F, 0.0f));
+    public static final RegistryObject<Biome> COAST_SUBTROPICAL_DESERT = BIOMES.register("coastal_subtropical_desert",
+            () -> makeCoastalSubtropicalDesertBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.01f, 0.112f));
 
-    private static Biome makeDesertOasis(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+
+    private static Biome makeCoastalSubtropicalDesertBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withDesertMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
@@ -48,24 +49,27 @@ public class SubtropicalDesertOasis {
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMelonPatchesAndVines(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_DESERT_RIVER_TREES);
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_WATER);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CANARY_DATE_PALM_TREE);
 
-        //Hardiness zone 10: 0.75F - 0.79F
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+
+        //Hardiness zone 11: 0.9F - 0.94F
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
-                        .withGrassColor(12564309).setFogColor(14807295)
+                .temperature(0.9F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(5216810)
+                        .withGrassColor(6604607).setFogColor(15658734)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
     }
-
 
     public static void register(IEventBus eventBus) {
         BIOMES.register(eventBus);

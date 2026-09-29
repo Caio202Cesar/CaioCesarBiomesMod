@@ -4,7 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemper
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.CoastalSubtropicalDesertBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.CoastalSubtropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.MontaneLaurelGroveBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.SaltDesertBiome;
@@ -12,7 +12,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.Vol
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.HotTemperateForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.MagellanicSubpolarForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateDesert;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.TemperateDesert;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TemperateBiomes.TemperateRainforest;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TropicalBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.TundraBiomes.GravelTundraBiome;
@@ -44,7 +44,7 @@ public class ModBiomeGeneration {
         ///Humid Subtropical
         addBiome(SubtropicalEvergreenOakForestBiome.SUBTROPICAL_EVERGREEN_OAK_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
         addBiome(HotLaurelSubtropicalForestBiome.HOT_SUBTROPICAL_LAUREL_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, LUSH, DENSE);
-        addBiome(SubtropicalLaurelJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
+        addBiome(LaurelSubtropicalJungleBiome.SUBTROPICAL_LAUREL_JUNGLE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, LUSH, DENSE, JUNGLE, WET);
         addBiome(MontaneLaurelGroveBiome.MONTANE_MACARONESIAN_LAUREL_GROVE.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalExtremeHillsBiome.SUBTROPICAL_EXTREME_HILLS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, MOUNTAIN, LUSH, HILLS);
         addBiome(SubtropicalEucalyptusForestBiome.SUBTROPICAL_EUCALYPTUS_FOREST.get(), BiomeManager.BiomeType.WARM, 23, OVERWORLD, FOREST, DRY, DENSE);

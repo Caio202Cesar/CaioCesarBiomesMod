@@ -63,6 +63,8 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_river");
     public static final ResourceLocation SUBTROPICAL_DESERT_OASIS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_oasis");
+    public static final ResourceLocation SUBTROPICAL_DESERT_BEACH =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_desert_beach");
     //Sahel
     public static final ResourceLocation SAHEL =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "sahel");
@@ -123,14 +125,21 @@ public class ModBiomes {
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_jungle");
     public static final ResourceLocation BAMBOO_SUBTROPICAL_LAUREL_JUNGLE =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_laurel_jungle");
-    public static final ResourceLocation MONTANE_LAUREL_GROVE =
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
     public static final ResourceLocation SUBTROPICAL_EXTREME_HILLS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_extreme_hills");
     public static final ResourceLocation BAMBOO_SUBTROPICAL_EXTREME_HILLS =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "bamboo_subtropical_extreme_hills");
+    public static final ResourceLocation LAUREL_JUNGLE_SUBTROPICAL_RIVER =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_laurel_jungle_river");
     public static final ResourceLocation LAUREL_JUNGLE_SUBTROPICAL_BEACH =
             new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "laurel_jungle_beach");
+    //Macaronesian laurel forest
+    public static final ResourceLocation MONTANE_LAUREL_GROVE =
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "montane_laurel_grove");
+
+
+
+
     //Cool (temperate oceanic) laurel jungle with tawa trees.
 
 
