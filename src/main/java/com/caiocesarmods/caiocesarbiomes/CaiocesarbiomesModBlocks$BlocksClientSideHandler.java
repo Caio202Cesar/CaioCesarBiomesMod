@@ -242,5 +242,6 @@ public class CaiocesarbiomesModBlocks$BlocksClientSideHandler {
         SchimaSapling.registerRenderLayer();
         KermesOakSapling.registerRenderLayer();
         MasticSapling.registerRenderLayer();
+        TerebinthSapling.registerRenderLayer();
     }
 }
