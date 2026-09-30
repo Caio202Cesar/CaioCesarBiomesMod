@@ -233,7 +233,7 @@ public class DefaultBiomeTreeFeatures {
                             REDBAY_FANCY_TREE.withChance(0.2F), IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F),
                             SCHIMA_TREE.withChance(0.2F)), IVY_MACHILLUS_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.2F, 2))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(30, 0.6F, 6))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_OAK_FOREST_TREES = register("subtropical_oak_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASTANOPSIS_FANCY_TREE.withChance(0.2F),
@@ -243,7 +243,7 @@ public class DefaultBiomeTreeFeatures {
                             FANCY_OAK_TREE_WITH_IVY.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.2F),
                             BIG_LIVE_OAK_TREE.withChance(0.2F)), OAK_TREE_WITH_KIWI))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(30, 0.6F, 6))));
 
 
     /// Desert and drylands
@@ -395,6 +395,7 @@ public class DefaultBiomeTreeFeatures {
                             PECAN_FANCY_TREE.withChance(0.2F), OAK_TREE_WITH_IVY.withChance(0.2F), FANCY_OAK_TREE_WITH_IVY.withChance(0.2F),
                             HAWTHORN_TREE.withChance(0.2F), LAUREL_OAK_TREE.withChance(0.2F), HAZELNUT_TREE.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
                             APPLE_TREE2.withChance(0.2F), PLANE_TREE.withChance(0.2F), CHERRY_PLUM_FANCY_TREE.withChance(0.2F),
+                            CASTANOPSIS_FANCY_TREE.withChance(0.2F), CASTANOPSIS_TREE.withChance(0.2F),
                             CHERRY_PLUM_TREE.withChance(0.2F)), OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
