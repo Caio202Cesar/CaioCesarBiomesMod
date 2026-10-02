@@ -9,6 +9,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -147,7 +148,7 @@ public class MangoSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class BlackPoplarTree extends Tree {
+    private static class BlackPoplarTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
@@ -156,6 +157,12 @@ public class MangoSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.MANGO_FANCY_TREE;
             }
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.LARGE_MANGO_TREE;
         }
     }
 }
