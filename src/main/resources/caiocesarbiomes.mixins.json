@@ -6,8 +6,7 @@
   "mixins": [
     "LayerUtilMixin",
     "BambooFeatureMixin",
-    "BiomeAmbienceMixin",
-    "BiomeMixin"
+    "BiomeAmbienceMixin"
   ],
   "client": [],
   "server": [],

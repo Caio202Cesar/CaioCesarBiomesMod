@@ -20,10 +20,7 @@ public class VanillaBiomeTweaks {
 
             System.out.println("Found forest!");
 
-            MutableBiomeEffects mutable =
-                    (MutableBiomeEffects)(Object) biome;
-
-            BiomeAmbience ambience = mutable.getEffects();
+            BiomeAmbience ambience = biome.getAmbience();
 
             MutableBiomeAmbience mutableAmbience =
                     (MutableBiomeAmbience)(Object) ambience;
@@ -38,10 +35,7 @@ public class VanillaBiomeTweaks {
 
             System.out.println("Found beach!");
 
-            MutableBiomeEffects mutable =
-                    (MutableBiomeEffects)(Object) biome;
-
-            BiomeAmbience ambience = mutable.getEffects();
+            BiomeAmbience ambience = biome.getAmbience();
 
             MutableBiomeAmbience mutableAmbience =
                     (MutableBiomeAmbience)(Object) ambience;
