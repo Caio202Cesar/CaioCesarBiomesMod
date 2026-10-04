@@ -3,7 +3,7 @@ package com.caiocesarmods.caiocesarbiomes;
 import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealForestBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.MixedContinentalForestBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.*;
@@ -137,7 +137,7 @@ public class CaioCesarBiomesMod
         FicusJungle.register(eventBus);
         HemiborealSteppeBiome.register(eventBus);
         TemperateRainforest.register(eventBus);
-        HemiborealForestBiome.register(eventBus);
+        MixedContinentalForestBiome.register(eventBus);
         SocotraTropicalDryland.register(eventBus);
         TropicalBambooMarsh.register(eventBus);
         SubtropicalExtremeHillsBiome.register(eventBus);

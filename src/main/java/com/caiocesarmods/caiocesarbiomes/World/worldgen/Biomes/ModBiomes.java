@@ -140,7 +140,7 @@ public class ModBiomes {
 
 
 
-    //Cool (temperate oceanic) laurel jungle with tawa trees.
+    //Cool (temperate subtropical) laurel jungle with tawa trees (zone 10-9).
 
 
 

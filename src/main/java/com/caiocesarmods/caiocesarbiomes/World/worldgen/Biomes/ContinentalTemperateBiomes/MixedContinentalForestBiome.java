@@ -20,12 +20,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 //Eucalyptus subtropical plains
-public class HemiborealForestBiome {
+public class MixedContinentalForestBiome {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> HEMIBOREAL_FOREST = BIOMES.register("hemiboreal_forest",
+    public static final RegistryObject<Biome> MIXED_CONTINENTAL_FOREST = BIOMES.register("mixed_continental_forest",
             () -> makeForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 
@@ -60,14 +60,14 @@ public class HemiborealForestBiome {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTaigaVegetation(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withHemiborealForestVegetation(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withMixedContinentalForestVegetation(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.55F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.6F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(5877296)
                         .withGrassColor(7979098).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
