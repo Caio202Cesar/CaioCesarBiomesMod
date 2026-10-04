@@ -318,7 +318,9 @@ public class DefaultBiomeTreeFeatures {
                             ROWAN_TREE.withChance(0.2F), HOLLY_TREE2.withChance(0.2F), APPLE_TREE1.withChance(0.2F),
                             APPLE_TREE2.withChance(0.2F), COOPER_BEECH_TREE.withChance(0.2F), COOPER_BEECH_BIG_TREE.withChance(0.2F),
                             HOLLY_TREE1.withChance(0.2F), BLACK_POPLAR_FANCY_TREE.withChance(0.2F), LOMBARDY_POPLAR_TREE.withChance(0.2F),
-                            JUNIPER_SHRUB.withChance(0.2F), ELDERBERRY_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F)), HAZELNUT_TREE))
+                            JUNIPER_SHRUB.withChance(0.2F), ELDERBERRY_TREE.withChance(0.2F), HAWTHORN_TREE.withChance(0.2F),
+                            ANCIENT_YEW_TREE.withChance(0.2F), YOUNG_YEW_TREE.withChance(0.2F), BIG_YEW_TREE.withChance(0.2F),
+                            ANCIENT_YEW_TREE_WITH_IVY.withChance(0.2F), BIG_YEW_TREE_WITH_IVY.withChance(0.2F)), HAZELNUT_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
