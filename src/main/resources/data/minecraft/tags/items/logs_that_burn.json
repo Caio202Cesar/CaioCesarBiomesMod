@@ -92,13 +92,11 @@
     "caiocesarbiomes:laurel_log",
     "caiocesarbiomes:podocarpus_log",
     "caiocesarbiomes:myrtaceae_log",
-    "caiocesarbiomes:paperbark_log",
     "caiocesarbiomes:bayberry_log",
     "caiocesarbiomes:sorbus_log",
-    "caiocesarbiomes:wax_palm_log",
+    "caiocesarbiomes:wax_palm_leaves",
     "caiocesarbiomes:ceanothus_log",
     "caiocesarbiomes:aspen_log"
-
 
   ]
 }

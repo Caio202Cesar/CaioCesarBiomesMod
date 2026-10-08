@@ -230,8 +230,6 @@ public class CaioCesarBiomesMod
                     .put(ModWood.LAUREL_OAK_WOOD.get(), ModWood.STRIPPED_LAUREL_OAK_WOOD.get())
                     .put(ModWood.CHAMPAK_LOG.get(), ModWood.STRIPPED_CHAMPAK_LOG.get())
                     .put(ModWood.CHAMPAK_WOOD.get(), ModWood.STRIPPED_CHAMPAK_WOOD.get())
-                    .put(ModWood.PAPERBARK_LOG.get(), ModWood.STRIPPED_MYRTACEAE_LOG.get())
-                    .put(ModWood.PAPERBARK_WOOD.get(), ModWood.STRIPPED_MYRTACEAE_WOOD.get())
                     .put(ModWood.AGATHIS_LOG.get(), ModWood.STRIPPED_AGATHIS_LOG.get())
                     .put(ModWood.AGATHIS_WOOD.get(), ModWood.STRIPPED_AGATHIS_WOOD.get())
                     .put(ModWood.RING_CUPPED_OAK_LOG.get(), Blocks.STRIPPED_OAK_LOG)

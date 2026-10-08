@@ -804,10 +804,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MYRTACEAE_WOOD = registerBlock("myrtaceae_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
-            ModLogs::new); //Melaleuca
-    public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
             EucalyptusLog::new);
     public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
