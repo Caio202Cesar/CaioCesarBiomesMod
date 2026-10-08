@@ -1,6 +1,5 @@
 package com.caiocesarmods.caiocesarbiomes;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.SetSeasonCommand;
 import com.caiocesarmods.caiocesarbiomes.Util.BiomeHUDHandler;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
@@ -14,7 +13,6 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -23,7 +21,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.SaplingGrowTreeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -39,11 +36,6 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
         BiomeHUDHandler.onRenderGameOverlay(event);
-    }
-
-    @SubscribeEvent
-    public static void onRegisterCommands(RegisterCommandsEvent event) {
-        SetSeasonCommand.register(event.getDispatcher());
     }
 
     @SubscribeEvent
