@@ -802,14 +802,10 @@ public class ModWood {
     /// Myrtaceae
     public static final RegistryObject<Block> MYRTACEAE_LOG = registerBlock("myrtaceae_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_LOG = registerBlock("stripped_myrtaceae_log",
-            ModLogs::new);
     public static final RegistryObject<Block> MYRTACEAE_WOOD = registerBlock("myrtaceae_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_WOOD = registerBlock("stripped_myrtaceae_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> PAPERBARK_LOG = registerBlock("paperbark_log",
-            ModLogs::new); //Callistemon and melaleuca
+            ModLogs::new); //Melaleuca
     public static final RegistryObject<Block> PAPERBARK_WOOD = registerBlock("paperbark_wood",
             ModLogs::new);
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
@@ -820,9 +816,9 @@ public class ModWood {
             EucalyptusLog::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOOD = registerBlock("rainbow_eucalyptus_wood",
             EucalyptusLog::new);
-    public static final RegistryObject<Block> POHUTUKAWA_LOG = registerBlock("pohutukawa_log",
+    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_LOG = registerBlock("stripped_myrtaceae_log",
             ModLogs::new);
-    public static final RegistryObject<Block> POHUTUKAWA_WOOD = registerBlock("pohutukawa_wood",
+    public static final RegistryObject<Block> STRIPPED_MYRTACEAE_WOOD = registerBlock("stripped_myrtaceae_wood",
             ModLogs::new);
     public static final RegistryObject<Block> MYRTACEAE_PLANKS = registerBlock("myrtaceae_planks",
             ModPlanks::new);

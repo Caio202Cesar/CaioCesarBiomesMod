@@ -248,8 +248,6 @@ public class CaioCesarBiomesMod
                     .put(ModWood.WEEPING_WILLOW_WOOD.get(), ModWood.STRIPPED_WILLOW_WOOD.get())
                     .put(ModWood.MYRTACEAE_LOG.get(), ModWood.STRIPPED_MYRTACEAE_LOG.get())
                     .put(ModWood.MYRTACEAE_WOOD.get(), ModWood.STRIPPED_MYRTACEAE_WOOD.get())
-                    .put(ModWood.POHUTUKAWA_LOG.get(), ModWood.STRIPPED_MYRTACEAE_LOG.get())
-                    .put(ModWood.POHUTUKAWA_WOOD.get(), ModWood.STRIPPED_MYRTACEAE_WOOD.get())
                     .put(ModWood.ARAUCARIA_LOG.get(), ModWood.STRIPPED_ARAUCARIA_LOG.get())
                     .put(ModWood.ARAUCARIA_WOOD.get(), ModWood.STRIPPED_ARAUCARIA_WOOD.get())
                     .put(ModWood.MESQUITE_LOG.get(), ModWood.STRIPPED_MESQUITE_LOG.get())

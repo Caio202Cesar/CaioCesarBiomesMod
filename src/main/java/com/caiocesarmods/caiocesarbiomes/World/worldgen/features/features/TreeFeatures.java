@@ -922,7 +922,7 @@ public class TreeFeatures {
 
     //Pohutukawa
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> POHUTUKAWA_TREE = register("pohutukawa_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -931,7 +931,7 @@ public class TreeFeatures {
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA = register("ancient_pohutukawa",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.POHUTUKAWA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new AncientMetrosiderosTrunkPlacer(6, 3, 1, 7, 6),
@@ -2259,7 +2259,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE1 = register("callistemon_tree1",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PAPERBARK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -2267,7 +2267,7 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
                     .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE2 = register("callistemon_tree2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PAPERBARK_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(6, 2, 0),
@@ -2399,9 +2399,11 @@ public class TreeFeatures {
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
         protected static final BlockState LILLY_PILLY_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
         protected static final BlockState COMMON_MYRTLE_LEAVES = TreeBlocks.COMMON_MYRTLE_LEAVES.get().getDefaultState();
-
-        protected static final BlockState POHUTUKAWA_LOG = ModWood.POHUTUKAWA_LOG.get().getDefaultState();
         protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
+        protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PAPERBARK_LOG = ModWood.PAPERBARK_LOG.get().getDefaultState();
+
 
         protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
@@ -2433,8 +2435,7 @@ public class TreeFeatures {
         protected static final BlockState CAMPHOR_LOG = ModWood.CAMPHOR_LOG.get().getDefaultState();
         protected static final BlockState CAMPHOR_LEAVES = TreeBlocks.CAMPHOR_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PAPERBARK_LOG = ModWood.PAPERBARK_LOG.get().getDefaultState();
-        protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
+
 
         protected static final BlockState LYCHEE_LOG = ModWood.LYCHEE_LOG.get().getDefaultState();
         protected static final BlockState LYCHEE_LEAVES = TreeBlocks.LYCHEE_LEAVES.get().getDefaultState();
