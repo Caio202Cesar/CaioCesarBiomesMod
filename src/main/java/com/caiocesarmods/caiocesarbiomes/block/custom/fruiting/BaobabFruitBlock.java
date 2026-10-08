@@ -1,7 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.fruiting;
 
-import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caioclimates.Seasons.Season;import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
