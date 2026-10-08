@@ -275,8 +275,9 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> TROPICAL_STEEPE_TREES = register("tropical_steepe_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TAMARIND_TREE.withChance(0.2F),
-                            MESQUITE_TREE.withChance(0.2F), MESQUITE_FANCY_TREE.withChance(0.2F), DATE_PALM_TREE.withChance(0.2F)),
-                            BAOBAB_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            MESQUITE_TREE.withChance(0.2F), MESQUITE_FANCY_TREE.withChance(0.2F), ANCIENT_SYCAMORE_FIG.withChance(0.2F),
+                            SYCAMORE_FIG_TREE.withChance(0.2F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F), UMBRELLA_ANCIENT_SYCAMORE_FIG.withChance(0.2F),
+                            DATE_PALM_TREE.withChance(0.2F)), BAOBAB_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TROPICAL_DESERT_RIVER_TREES = register("tropical_desert_river_trees",
@@ -286,9 +287,10 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(16, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_DESERT_TREES = register("subtropical_desert_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POMEGRANATE_TREE.withChance(0.2F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(ANCIENT_SYCAMORE_FIG.withChance(0.2F),
+                            SYCAMORE_FIG_TREE.withChance(0.2F), SYCAMORE_FIG_FANCY_TREE.withChance(0.2F), UMBRELLA_ANCIENT_SYCAMORE_FIG.withChance(0.2F),
                             ACACIA.withChance(0.2F), MESQUITE_TREE.withChance(0.2F), MESQUITE_FANCY_TREE.withChance(0.2F), DATE_PALM_TREE.withChance(0.2F)),
-                            ANCIENT_SYCAMORE_FIG)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            POMEGRANATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.3F, 5))));
 
     /// Taiga

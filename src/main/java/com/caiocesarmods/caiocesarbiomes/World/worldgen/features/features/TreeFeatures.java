@@ -1261,7 +1261,7 @@ public class TreeFeatures {
                     new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT))
-                    .setIgnoreVines().build())); //This variant is much rarer.
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBRELLA_ANCIENT_SYCAMORE_FIG = register("umbrella_ancient_sycamore_fig",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.SYCAMORE_FIG_LEAVES),
