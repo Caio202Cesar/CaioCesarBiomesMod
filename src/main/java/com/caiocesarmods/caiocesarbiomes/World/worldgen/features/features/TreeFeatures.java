@@ -2402,9 +2402,6 @@ public class TreeFeatures {
         protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
         protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PAPERBARK_LOG = ModWood.PAPERBARK_LOG.get().getDefaultState();
-
-
         protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
         protected static final BlockState MACHILLUS_LEAVES = TreeBlocks.MACHILLUS_LEAVES.get().getDefaultState();
