@@ -71,7 +71,10 @@ public class CropLeavesBlock extends LeavesBlock implements IGrowable {
         }
 
         else if (fruitSeason.isFruitRipeSeason(worldIn)) {
-            return this.getMaxAge();
+            if(!isMaxAge(state)) {
+                worldIn.setBlockState(pos, withAge(state, getMaxAge()), 2);
+            }
+            return;
         }
 
         else if (fruitSeason.isFruitRipeSeason(worldIn) && nextStage != null) {
