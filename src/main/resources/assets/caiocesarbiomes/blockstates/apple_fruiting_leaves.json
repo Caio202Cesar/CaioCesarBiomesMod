@@ -1,10 +1,172 @@
 {
   "variants": {
-    "": {
-      "age=0,distance=1,persistent=false": { "model": "caiocesarbiomes:block/crabapple_leaves" },
-      "age=1,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves1" },
-      "age=2,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves2" },
-      "age=3,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves3" }
+    "age=0,distance=1,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=1,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=2,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=2,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=3,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=3,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=4,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=4,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=5,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=5,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=6,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=6,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=7,persistent=false": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=0,distance=7,persistent=true": {
+      "model": "caiocesarbiomes:block/crabapple_leaves"
+    },
+    "age=1,distance=1,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=1,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=2,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=2,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=3,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=3,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=4,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=4,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=5,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=5,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=6,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=6,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=7,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=1,distance=7,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves1"
+    },
+    "age=2,distance=1,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=1,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=2,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=2,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=3,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=3,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=4,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=4,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=5,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=5,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=6,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=6,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=7,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=2,distance=7,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves2"
+    },
+    "age=3,distance=1,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=1,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=2,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=2,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=3,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=3,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=4,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=4,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=5,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=5,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=6,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=6,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=7,persistent=false": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
+    },
+    "age=3,distance=7,persistent=true": {
+      "model": "caiocesarbiomes:block/apple_fruiting_leaves3"
     }
   }
 }
