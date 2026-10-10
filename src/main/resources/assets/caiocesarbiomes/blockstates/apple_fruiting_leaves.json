@@ -1,7 +1,10 @@
 {
   "variants": {
     "": {
-      "model": "caiocesarbiomes:block/apple_fruiting_leaves"
+      "age=0,distance=1,persistent=false": { "model": "caiocesarbiomes:block/crabapple_leaves" },
+      "age=1,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves1" },
+      "age=2,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves2" },
+      "age=3,distance=1,persistent=false": { "model": "caiocesarbiomes:block/apple_fruiting_leaves3" }
     }
   }
 }
