@@ -13,11 +13,14 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.BaldCypressAerialRoot;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
+import com.caiocesarmods.caioclimates.Seasons.FruitSeason;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.CropLeavesBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -707,8 +710,8 @@ public class TreeBlocks {
             () -> new AppleBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> APPLE_FRUITING_LEAVES = registerBlock("apple_fruiting_leaves",
-            () -> new AppleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.APPLE_FALL_LEAVES));
+            () -> new CropLeavesBlock(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), FruitSeason.APPLE, TreeBlocks.APPLE_LEAVES, () -> Items.APPLE));
     public static final RegistryObject<Block> APPLE_FALL_LEAVES = registerBlock("apple_fall_leaves",
             () -> new AppleFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.APPLE_WINTER_BRANCHES));
