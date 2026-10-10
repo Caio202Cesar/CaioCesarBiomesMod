@@ -10,6 +10,11 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
 
+//Stage 0 = normal leaves
+//Stage 1 = fruit start growing/appears small and green on tree
+//Stage 2 = green fruit
+//Stage 3 = ripe fruit
+
 public class CropLeavesBlock extends LeavesBlock implements IGrowable {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_3;
 
