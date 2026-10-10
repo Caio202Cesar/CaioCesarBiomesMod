@@ -54,15 +54,38 @@ public enum FruitSeason {
         return harvestPhase;
     }
 
+    //Fruit ripening season = here, all the fruit reaches maturity.
+    public boolean isFruitRipeSeason(ServerWorld world) {
+
+        Season currentSeason = Season.valueOf(Season.getSeason(world.getDayTime()));
+        SeasonalPhase currentPhase = SeasonalPhase.valueOf(SeasonalPhase.getPhase(world.getDayTime()));
+
+        return currentSeason == fruitRipeSeason && currentPhase == fruitRipePhase;
+    }
+
+    //Season where the fruit drop from the tree (or the fruiting block random ticks to another, like to autumn or winter ones)
     public boolean isHarvestSeason(ServerWorld world) {
-        return getHarvestPhase();
+
+        Season currentSeason = Season.valueOf(Season.getSeason(world.getDayTime()));
+        SeasonalPhase currentPhase = SeasonalPhase.valueOf(SeasonalPhase.getPhase(world.getDayTime()));
+
+        return currentSeason == harvestSeason && currentPhase == harvestPhase;
     }
 
     public boolean canGrow(ServerWorld world) {
-    ...
+
+        SeasonalPhase currentPhase = SeasonalPhase.valueOf(SeasonalPhase.getPhase(world.getDayTime()));
+
+        return currentPhase.ordinal() >= fruitGrowPhase.ordinal()
+                && currentPhase.ordinal() < fruitRipePhase.ordinal();
+
     }
 
     public float getGrowthChance(ServerWorld world) {
-    ...
+        if (!canGrow(world)) {
+            return 0.0F;
+        }
+
+        return 1.0F;
     }
 }

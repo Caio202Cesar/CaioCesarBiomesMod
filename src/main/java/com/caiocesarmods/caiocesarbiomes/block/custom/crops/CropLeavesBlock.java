@@ -60,21 +60,28 @@ public class CropLeavesBlock extends LeavesBlock implements IGrowable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random); // keeps leaf decay working
 
-        if (!isHarvestSeason) {
-            if (worldIn.isAreaLoaded(pos, 1)) {
-                int age = state.get(AGE);
+        int age = state.get(AGE);
 
-                if (age < getMaxAge()) {
-                    float chance = getGrowthChance(worldIn, pos);
+        if (fruitSeason.canGrow(worldIn) && age < getMaxAge()) {
+            float chance = fruitSeason.getGrowthChance(worldIn);
 
-                    if (chance > 0.0F &&
-                            random.nextInt((int) (20.0F / chance) + 1) == 0) {
-                        worldIn.setBlockState(pos, withAge(state, age + 1), 2);
-                    }
-                }
+            if (chance > 0.0F && random.nextInt((int)(20.0F / chance) + 1) == 0) {
+                worldIn.setBlockState(pos, withAge(state, age + 1), 2);
             }
         }
-        //If (isHarvestingSeason --> randomTick to normal leaves and drop the fruit)
+
+        else if (fruitSeason.isFruitRipeSeason(worldIn)) {
+            return this.getMaxAge();
+        }
+
+        else if (fruitSeason.isFruitRipeSeason(worldIn) && nextStage != null) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+        }
     }
 
     public void grow(World worldIn, BlockPos pos, BlockState state) {
@@ -89,10 +96,6 @@ public class CropLeavesBlock extends LeavesBlock implements IGrowable {
 
     protected int getBonemealAgeIncrease(World worldIn) {
         return MathHelper.nextInt(worldIn.rand, 2, 5);
-    }
-
-    protected float getGrowthChance(ServerWorld worldIn, BlockPos pos) {
-        return 1.0F;
     }
 
     @Override
