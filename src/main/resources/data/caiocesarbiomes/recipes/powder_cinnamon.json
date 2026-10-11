@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:mortar_and_pleste"
+    },
+    "X": {
+      "item": "caiocesarbiomes:cinnamon"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:powder_cinnamon",
+    "count": 1
+  }
+}

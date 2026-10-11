@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:mortar_and_pleste"
+    },
+    "X": {
+      "item": "caiocesarbiomes:black_pepper"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:powder_peeper",
+    "count": 1
+  }
+}
