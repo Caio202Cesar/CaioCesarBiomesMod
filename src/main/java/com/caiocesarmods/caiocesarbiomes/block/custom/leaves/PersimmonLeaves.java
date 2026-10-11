@@ -41,7 +41,7 @@ public class PersimmonLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_FLOWERING_LEAVES.get()
+            worldIn.setBlockState(pos, TreeBlocks.PERSIMMON_FRUITING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
             return;
         }
