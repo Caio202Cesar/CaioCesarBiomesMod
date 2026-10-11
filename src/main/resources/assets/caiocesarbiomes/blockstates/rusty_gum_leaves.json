@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/rusty_gum_leaves",
+        "weight": 7},
+      {"model": "caiocesarbiomes:block/rusty_gum_flowering_leaves",
+        "weight": 1}
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "caiocesarbiomes:block/rusty_gum_sapling",
+    "particle": "caiocesarbiomes:block/rusty_gum_sapling"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "caiocesarbiomes:block/rusty_gum_flowering_leaves",
+    "particle": "caiocesarbiomes:block/rusty_gum_flowering_leaves"
+  }
+}
