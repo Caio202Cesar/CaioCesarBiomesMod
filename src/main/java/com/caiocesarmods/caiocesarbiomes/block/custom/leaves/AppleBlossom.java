@@ -35,7 +35,7 @@ public class AppleBlossom extends LeavesBlock implements IForgeShearable {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
         String currentPhase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
-        if ("LATE_SPRING".equals(currentPhase) && random.nextInt(45) == 0) {
+        if ("LATE_SPRING".equals(currentPhase) && random.nextInt(35) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
