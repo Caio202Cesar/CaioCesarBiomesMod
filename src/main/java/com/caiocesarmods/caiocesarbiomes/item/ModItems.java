@@ -641,7 +641,13 @@ public class ModItems {
             () -> new BreadKnifeItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(238)));
     public static final RegistryObject<Item> NUTCRACKER = ITEMS.register("nutcracker",
             () -> new NutcrackerItem(new Item.Properties().group(ModItemGroup.CULINARY).maxDamage(238)));
-    
+    public static final RegistryObject<Item> MORTAR_AND_PLESTE = ITEMS.register("mortar_and_pleste",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> POWDER_PEEPER = ITEMS.register("powder_peeper",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> POWDER_CINNAMON = ITEMS.register("powder_cinnamon",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));

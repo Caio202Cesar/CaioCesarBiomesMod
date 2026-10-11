@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bowl"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:mortar_and_pleste",
+    "count": 1
+  }
+}
