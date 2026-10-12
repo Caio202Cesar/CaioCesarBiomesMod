@@ -265,9 +265,9 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
             () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
+    public static final RegistryObject<Block> RUSTY_GUM_LEAVES = registerBlock("rusty_gum_leaves",
             EucalyptusLeaves::new);
-    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
+    public static final RegistryObject<Block> RUSTY_GUM_SAPLING = registerBlock("rusty_gum_sapling",
             EucalyptusSapling::new);
 
     ///Milkwood = Apocynaceae

@@ -477,7 +477,7 @@ public class DefaultBiomeTreeFeatures {
                             PEPPERCORN_JUNGLE_TREE.withChance(0.2F), RAINBOW_EUCALYPTUS_TREE.withChance(0.2F)),
                             BUDDHA_HAND_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(7, 0.3F, 0))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(40, 0.3F, 2))));
 
     public static final ConfiguredFeature<?, ?> BAMBOO_JUNGLE_EXTRA_VEGETATION = register("bamboo_jungle_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
