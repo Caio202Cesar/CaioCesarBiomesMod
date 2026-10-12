@@ -26,7 +26,7 @@ public class TreeFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, CaioCesarBiomesMod.MOD_ID);
 
     //Weeping Willow
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_WILLOW_BIG = register("big_weeping_willow",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_WEEPING_WILLOW = register("big_weeping_willow",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WEEPING_WILLOW_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_WILLOW_LEAVES),
                     new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),

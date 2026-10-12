@@ -139,7 +139,7 @@ public class DefaultBiomeTreeFeatures {
                             PERSIMMON_TREE.withChance(0.12F), PERSIMMON_FANCY_TREE.withChance(0.25F),
                             SOUTHERN_LIVE_OAK_TREE.withChance(0.4F), LAUREL_OAK_TREE.withChance(0.4F),
                             PLANE_FANCY_TREE_WITH_IVY.withChance(0.07F), SWAMPBAY_TREE.withChance(0.2F),
-                            PLANE_TREE_WITH_IVY.withChance(0.09F), WEEPING_WILLOW_BIG.withChance(0.3F),
+                            PLANE_TREE_WITH_IVY.withChance(0.09F), ANCIENT_WEEPING_WILLOW.withChance(0.3F),
                             WEEPING_WILLOW_FANCY.withChance(0.3F), MEGA_BALD_CYPRESS.withChance(0.2F),
                             BALD_CYPRESS.withChance(0.2F)), BIG_LIVE_OAK_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)

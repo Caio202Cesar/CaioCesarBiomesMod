@@ -808,6 +808,10 @@ public class ModWood {
             EucalyptusLog::new);
     public static final RegistryObject<Block> EUCALYPTUS_WOOD = registerBlock("eucalyptus_wood",
             EucalyptusLog::new);
+    public static final RegistryObject<Block> RUSTY_GUM_LOG = registerBlock("rusty_gum_log",
+            EucalyptusLog::new);
+    public static final RegistryObject<Block> RUSTY_GUM_WOOD = registerBlock("rusty_gum_wood",
+            EucalyptusLog::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_LOG = registerBlock("rainbow_eucalyptus_log",
             EucalyptusLog::new);
     public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOOD = registerBlock("rainbow_eucalyptus_wood",
