@@ -252,7 +252,6 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.COMMON_MYRTLE_LEAVES));
     public static final RegistryObject<Block> COMMON_MYRTLE_SAPLING = registerBlock("common_myrtle_sapling",
             CommonMyrtleSapling::new);
-    //Callistemon
     public static final RegistryObject<Block> CALLISTEMON_LEAVES = registerBlock("callistemon_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CALLISTEMON_SAPLING = registerBlock("callistemon_sapling",
@@ -266,6 +265,10 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_EUCALYPTUS_SAPLING = BLOCKS.register("potted_eucalyptus_sapling",
             () -> new FlowerPotBlock(TreeBlocks.EUCALYPTUS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> EUCALYPTUS_LEAVES = registerBlock("eucalyptus_leaves",
+            EucalyptusLeaves::new);
+    public static final RegistryObject<Block> EUCALYPTUS_SAPLING = registerBlock("eucalyptus_sapling",
+            EucalyptusSapling::new);
 
     ///Milkwood = Apocynaceae
     //Plumeria

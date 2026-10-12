@@ -676,8 +676,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_EUCALYPTUS_FOREST_TREES = register("humid_subtropical_eucalyptus_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LILLY_PILLY_TREE.withChance(0.2F),
                     CALLISTEMON_TREE1.withChance(0.2F), CALLISTEMON_TREE2.withChance(0.23F), BLACKWOOD_ACACIA_TREE.withChance(0.2F),
-                    BLACKWOOD_ACACIA_FANCY_TREE.withChance(0.2F)),
-                    //RUSTY_GUM_TREE.withChance(0.24F),
+                    BLACKWOOD_ACACIA_FANCY_TREE.withChance(0.2F), RUSTY_GUM_TREE.withChance(0.24F)),
                     //COACHWOOD_TREE.withChance(0.23F)),
                     LILLY_PILLY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
