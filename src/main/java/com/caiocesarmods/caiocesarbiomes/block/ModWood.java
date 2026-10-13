@@ -151,7 +151,10 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
             ModLogs::new);
-
+    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_LOG = registerBlock("sweetbay_magnolia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_WOOD = registerBlock("sweetbay_magnolia_wood",
+            ModLogs::new);
 
 
     /// Southern Magnolia
