@@ -141,7 +141,8 @@ public class ModWood {
             ModPlanks::new);
 
 
-    ///Lythraceae
+
+    ///BIRCH WOODSET
     public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
             ModLogs::new);
     public static final RegistryObject<Block> CRAPE_MYRTLE_WOOD = registerBlock("crape_myrtle_wood",
@@ -150,12 +151,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CRAPE_MYRTLE_LOG = registerBlock("stripped_crape_myrtle_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CRAPE_MYRTLE_WOOD = registerBlock("stripped_crape_myrtle_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CRAPE_MYRTLE_PLANKS = registerBlock("crape_myrtle_planks",
-            ModPlanks::new);
+
 
 
     /// Southern Magnolia
