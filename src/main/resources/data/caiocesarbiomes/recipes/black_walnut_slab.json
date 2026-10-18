@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:black_walnut_planks"
+      "item": "caiocesarbiomes:black_walnut_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:black_walnut_slab",
+    "item": "caiocesarbiomes:black_walnut_slab",
     "count": 6
   }
 }

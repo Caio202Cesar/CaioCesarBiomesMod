@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:black_walnut_planks"
+      "item": "caiocesarbiomes:black_walnut_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:black_walnut_fence",
+    "item": "caiocesarbiomes:black_walnut_fence",
     "count": 3
   }
 }
