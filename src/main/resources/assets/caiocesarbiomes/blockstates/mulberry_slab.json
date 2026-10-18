@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/mulberry_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/mulberry_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/mulberry_slab_top"
+    }
+  }
+}

@@ -297,11 +297,29 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
-    /// Mulberry
+    /// Mulberry woodset
     public static final RegistryObject<Block> MULBERRY_LOG = registerBlock("mulberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MULBERRY_WOOD = registerBlock("mulberry_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MULBERRY_LOG = registerBlock("stripped_mulberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MULBERRY_WOOD = registerBlock("stripped_mulberry_wood",
             ModLogs::new);
     public static final RegistryObject<Block> MULBERRY_PLANKS = registerBlock("mulberry_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MULBERRY_SLAB = registerBlock("mulberry_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MULBERRY_STAIRS = registerBlock("mulberry_stairs",
+            () -> new StairsBlock(() -> MULBERRY_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MULBERRY_FENCE = registerBlock("mulberry_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MULBERRY_FENCE_GATE = registerBlock("mulberry_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Tamarind (includes royal poinciana)
