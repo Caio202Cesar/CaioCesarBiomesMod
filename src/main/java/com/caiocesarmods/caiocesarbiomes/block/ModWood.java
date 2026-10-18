@@ -268,8 +268,26 @@ public class ModWood {
     /// Strawberry Tree
     public static final RegistryObject<Block> STRAWBERRY_TREE_LOG = registerBlock("strawberry_tree_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRAWBERRY_TREE_WOOD = registerBlock("strawberry_tree_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_STRAWBERRY_TREE_LOG = registerBlock("stripped_strawberry_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_STRAWBERRY_TREE_WOOD = registerBlock("stripped_strawberry_tree_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> STRAWBERRY_TREE_PLANKS = registerBlock("strawberry_tree_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> STRAWBERRY_TREE_SLAB = registerBlock("strawberry_tree_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> STRAWBERRY_TREE_STAIRS = registerBlock("strawberry_tree_stairs",
+            () -> new StairsBlock(() -> STRAWBERRY_TREE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> STRAWBERRY_TREE_FENCE = registerBlock("strawberry_tree_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> STRAWBERRY_TREE_FENCE_GATE = registerBlock("strawberry_tree_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Maple
