@@ -30,12 +30,12 @@ import com.caiocesarmods.caiocesarbiomes.client.renderer.entity.DesertMerchantRe
 import com.caiocesarmods.caiocesarbiomes.client.renderer.entity.MediterraneanMerchantRenderer;
 import com.caiocesarmods.caiocesarbiomes.container.ModContainers;
 import com.caiocesarmods.caiocesarbiomes.data.recipes.ModRecipeTypes;
+import com.caiocesarmods.caiocesarbiomes.effect.ModEffects;
 import com.caiocesarmods.caiocesarbiomes.entity.ModEntityTypes;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
-import com.caiocesarmods.caioclimates.effect.ModEffects;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
