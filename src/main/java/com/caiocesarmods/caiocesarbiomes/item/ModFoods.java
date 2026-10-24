@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item;
 
+import com.caiocesarmods.caiocesarbiomes.effect.ModEffects;
 import net.minecraft.item.Food;
 import net.minecraft.item.Foods;
 import net.minecraft.potion.EffectInstance;
@@ -89,7 +90,7 @@ public class ModFoods {
     public static final Food BLUEBERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food MARULA = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food RIPE_MARULA = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.NAUSEA, 400, 5), 1.0F).build();
+            .effect(new EffectInstance(ModEffects.DRUNKNESS.get(), 400, 5), 1.0F).build();
     public static final Food ROWAN_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food HAWTHORN_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food DURIAN = (new Food.Builder()).hunger(5).saturation(0.6F)
