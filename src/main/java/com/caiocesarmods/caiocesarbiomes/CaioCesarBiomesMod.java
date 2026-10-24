@@ -35,6 +35,7 @@ import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caiocesarbiomes.screen.ButterMixerScreen;
 import com.caiocesarmods.caiocesarbiomes.screen.ToasterScreen;
 import com.caiocesarmods.caiocesarbiomes.tileentity.ModTileEntities;
+import com.caiocesarmods.caioclimates.effect.ModEffects;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -80,6 +81,7 @@ public class CaioCesarBiomesMod
         MiscBlocks.register(eventBus);
         ModTreeDecorators.register(eventBus);
 
+        ModEffects.register(eventBus);
         ModPotions.register(eventBus);
 
         ModTileEntities.register(eventBus);
