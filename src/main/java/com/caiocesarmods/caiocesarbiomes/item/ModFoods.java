@@ -168,11 +168,11 @@ public class ModFoods {
     public static final Food CRABAPPLES = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food PEACH = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food MARULA_DRINK = (new Food.Builder()).hunger(2).saturation(0.3F)
-            .effect(new EffectInstance(Effects.NAUSEA, 250, 4), 1.0F)
             .effect(new EffectInstance(Effects.STRENGTH, 400, 3), 1.0F)
             .effect(new EffectInstance(Effects.HASTE, 350, 5), 1.0F)
             .effect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 350, 5), 1.0F)
-            .effect(new EffectInstance(Effects.LUCK, 400, 5), 1.0F).build();
+            .effect(new EffectInstance(Effects.LUCK, 400, 5), 1.0F)
+            .effect(() -> new EffectInstance(ModEffects.DRUNKNESS.get(), 400, 2), 0.5F).build();
     public static final Food PEACH_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food PEACH_PIE = (new Food.Builder()).hunger(8).saturation(0.3F).build();
     public static final Food CANDIED_CITRON = (new Food.Builder()).hunger(2).saturation(0.1F).build();
