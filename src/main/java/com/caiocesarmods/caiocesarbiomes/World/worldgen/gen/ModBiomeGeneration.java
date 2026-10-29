@@ -1,9 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.World.worldgen.gen;
 
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.MixedContinentalForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.CoastalSubtropicalDesertBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.MontaneLaurelGroveBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
@@ -78,6 +75,9 @@ public class ModBiomeGeneration {
         addBiome(GravelTundraBiome.GRAVEL_TUNDRA.get(), BiomeManager.BiomeType.ICY, 25, OVERWORLD, COLD, DRY);
         addBiome(TussockTundraBiome.TUSSOCK_TUNDRA.get(), BiomeManager.BiomeType.ICY, 25, OVERWORLD, COLD, DRY);
         addBiome(LushSouthernTundraBiome.LUSH_SOUTHERN_TUNDRA.get(), BiomeManager.BiomeType.ICY, 20, OVERWORLD, COLD);
+
+        ///Boreal
+        addBiome(AspenForest.ASPEN_FOREST.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, FOREST, DRY, COLD);
 
         ///Cold temperate
         addBiome(JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE.get(), BiomeManager.BiomeType.COOL, 20, OVERWORLD, FOREST, LUSH, COLD);

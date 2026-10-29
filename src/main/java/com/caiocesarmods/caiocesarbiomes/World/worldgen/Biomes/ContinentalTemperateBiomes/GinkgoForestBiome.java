@@ -67,7 +67,7 @@ public class GinkgoForestBiome {
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                isGiantVariant ? DefaultBiomeTreeFeatures.GIANT_GINKGO_FOREST_TRESS : DefaultBiomeTreeFeatures.GINKGO_FOREST_TRESS);
+                isGiantVariant ? DefaultBiomeTreeFeatures.GIANT_GINKGO_FOREST_TRESS : DefaultBiomeTreeFeatures.GINKGO_FOREST_TREES);
 
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 

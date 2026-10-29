@@ -2,10 +2,7 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.Potions.ModPotions;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.GinkgoForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.MixedContinentalForestBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.HemiborealSteppeBiome;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.JapaneseMapleGroveBiome;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.ContinentalTemperateBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.DesertBiomes.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.MildCoastalBiomes.MontaneLaurelGroveBiome;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SpecialBiomes.InactiveVolcanicSiteBiome;
@@ -191,6 +188,8 @@ public class CaioCesarBiomesMod
 
         PlainsRiver.register(eventBus);
         PlainsBeach.register(eventBus);
+
+        AspenForest.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
