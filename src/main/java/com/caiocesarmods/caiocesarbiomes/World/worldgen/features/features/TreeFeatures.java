@@ -933,7 +933,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA = register("ancient_pohutukawa",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 7),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
