@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
-import com.caiocesarmods.caioclimates.Seasons.Season;import net.minecraft.block.Block;
+import com.caiocesarmods.caioclimates.Seasons.Season;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -50,6 +51,17 @@ public class PurpleCrapeMyrtleWinterBranches extends LeavesBlock implements IFor
         }
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
