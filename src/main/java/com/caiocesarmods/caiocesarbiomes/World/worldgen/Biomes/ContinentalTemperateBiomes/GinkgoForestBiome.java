@@ -10,6 +10,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
@@ -25,9 +26,12 @@ public class GinkgoForestBiome {
             = DeferredRegister.create(ForgeRegistries.BIOMES, CaioCesarBiomesMod.MOD_ID);
 
     public static final RegistryObject<Biome> GINKGO_FOREST = BIOMES.register("ginkgo_forest",
-            () -> makeGinkgoForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1F, 0.2F));
+            () -> makeGinkgoForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1F, 0.2F, false));
 
-    private static Biome makeGinkgoForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    public static final RegistryObject<Biome> GIANT_GINKGO_FOREST = BIOMES.register("giant_ginkgo_forest",
+            () -> makeGinkgoForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1F, 0.2F, true));
+
+    private static Biome makeGinkgoForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale, boolean isGiantVariant) {
 
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
@@ -62,7 +66,8 @@ public class GinkgoForestBiome {
         ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.GINKGO_FOREST_TRESS);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                isGiantVariant ? DefaultBiomeTreeFeatures.GIANT_GINKGO_FOREST_TRESS : DefaultBiomeTreeFeatures.GINKGO_FOREST_TRESS);
 
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 

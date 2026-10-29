@@ -10,6 +10,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
@@ -29,42 +30,35 @@ public class AspenForest {
             () -> makeAspenForestBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1F, 0.2F));
 
     private static Biome makeAspenForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
-
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
-        DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PANDA, 10, 5, 7));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.WOLF, 8, 4, 4));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.RABBIT, 4, 2, 3));
+        mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.FOX, 8, 2, 4));
+        DefaultBiomeFeatures.withBats(mobspawninfo$builder);
+        DefaultBiomeFeatures.withHostileMobs(mobspawninfo$builder, 100, 25, 100);
 
         BiomeGenerationSettings.Builder biomegenerationsettings$builder =
                 (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-        biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.JUNGLE_PYRAMID);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
-        biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
-
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
-
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withDefaultFlowers(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withGiantTaigaGrassVegetation(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withAllForestFlowerGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTemperateRainforestPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTemperateTallPlants(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTemperateRainforestShrubs(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSparseBerries(biomegenerationsettings$builder);
 
-        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.GINKGO_TRESS);
-
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ASPEN_FOREST_TRES);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         //Hardiness zone 4: 0.4F - 0.49F
