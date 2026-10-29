@@ -933,13 +933,12 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_POHUTUKAWA = register("ancient_pohutukawa",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
-                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new AncientMetrosiderosTrunkPlacer(6, 3, 1, 7, 6),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 7),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            ModFeatures.Placements.POHUTUKAWA_BEARD_PLACEMENT, ModFeatures.Placements.SPANISH_MOSS_PLACEMENT,
-                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.POHUTUKAWA_BEARD_PLACEMENT,
+                            ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).setIgnoreVines().build()));
 
     //Cherry Plum Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CHERRY_PLUM_TREE = register("cherry_plum_tree",
@@ -2577,7 +2576,7 @@ public class TreeFeatures {
         protected static final BlockState WHITE_CRABAPPLE_SPRING = TreeBlocks.WHITE_CRABAPPLE_BLOSSOM.get().getDefaultState();
         protected static final BlockState RED_CRABAPPLE_SPRING = TreeBlocks.RED_CRABAPPLE_BLOSSOM.get().getDefaultState();
         protected static final BlockState LOQUAT_LEAVES = TreeBlocks.LOQUAT_LEAVES.get().getDefaultState();
-        protected static final BlockState APPLE_LEAVES = TreeBlocks.APPLE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState APPLE_SPRING = TreeBlocks.APPLE_BLOSSOM.get().getDefaultState();
 
         protected static final BlockState JUNIPER_LOG = ModWood.JUNIPER_LOG.get().getDefaultState();
         protected static final BlockState JUNIPER_LEAVES = TreeBlocks.JUNIPER_LEAVES.get().getDefaultState();
