@@ -1,6 +1,7 @@
 package com.caiocesarmods.caiocesarbiomes.block.custom.leaves;
 
 import com.caiocesarmods.caioclimates.Seasons.Season;import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -33,52 +34,98 @@ public class WhiteCrapeMyrtleLeaves extends LeavesBlock implements IForgeShearab
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String currentPhase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for  tropical biomes
-        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        //Pattern for zone 12 biomes
+        if (temp > 0.95F) {
+            if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_WINTER_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_WINTER_BRANCHES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
         }
 
-        // Pattern for subtropical biomes
-        if (temp <= 0.89F && temp >= 0.8F && "FALL".equals(currentSeason) && random.nextInt(35) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        //Pattern for zone 11 biomes
+        if (temp > 0.89F && temp < 0.95) {
+            if ("WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
         }
 
-        if (temp <= 0.89F && temp >= 0.8F && "WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        // Pattern for subtropical biomes (zones 9 and 10)
+        if (temp < 0.89F && temp > 0.8F) {
+            if ("MID_FALL".equals(currentPhase) && random.nextInt(75) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
+
+            if ("LATE_FALL".equals(currentPhase) && random.nextInt(35) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
+
+            if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
+
+            if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
         }
 
-        // Pattern for temperate biomes
-        if (temp <= 0.79F && "FALL".equals(currentSeason) && random.nextInt(25) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        // Pattern for temperate biomes (zones 8 to bellow)
+        if (temp < 0.79F) {
+            if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
 
-        if (temp <= 0.79F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+            if ("WINTER".equals(currentSeason) && random.nextInt(2) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_FALL_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
+
+            if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreeBlocks.WHITE_CRAPE_MYRTLE_SPRING_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
         }
     }
 
