@@ -1065,6 +1065,12 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_FIG_FANCY_TREE = register("weeping_fig_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.WEEPING_FIG_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_WEEPING_FIG_TREE = register("weeping_fig_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
@@ -1083,6 +1089,12 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT,
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_FANCY_TREE = register("indian_laurel_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.INDIAN_LAUREL_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_INDIAN_LAUREL_TREE = register("indian_laurel_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),

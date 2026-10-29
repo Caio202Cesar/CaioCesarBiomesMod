@@ -188,8 +188,12 @@ public class WeepingFigSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.WEEPING_FIG_FANCY_TREE;
+            } else {
                 return TreeFeatures.WEEPING_FIG_TREE;
             }
+        }
 
         /**
          * Get a {@link ConfiguredFeature} of the huge variant of this tree

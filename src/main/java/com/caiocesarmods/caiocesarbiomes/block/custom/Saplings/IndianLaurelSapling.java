@@ -126,7 +126,11 @@ public class IndianLaurelSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.INDIAN_LAUREL_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.INDIAN_LAUREL_FANCY_TREE;
+            } else {
+                return TreeFeatures.INDIAN_LAUREL_TREE;
+            }
         }
 
         /**
