@@ -989,6 +989,13 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_BLACK_POPLAR_TREE = register("ancient_black_poplar_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COTTONWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_POPLAR_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Araucaria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COOK_PINE_TREE = register("cook_pine_tree",
@@ -1870,6 +1877,13 @@ public class TreeFeatures {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_FREMONT_POPLAR_TREE = register("ancient_fremont_poplar_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COTTONWOOD_LOG),
+                    new SimpleBlockStateProvider(States.FREMONT_POPLAR_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Aspen
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ASPEN_TREE = register("aspen_tree",
