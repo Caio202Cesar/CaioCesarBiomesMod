@@ -1529,21 +1529,29 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CONIC_GINKGO_TREE = register("conic_ginkgo_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
                     new SimpleBlockStateProvider(States.GINKGO_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(8, 3, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLOB_GINKGO_TREE = register("ginkgo_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new SpruceFoliagePlacer(FeatureSpread.create(2, 1),
+                            FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
+                    new StraightTrunkPlacer(5, 5, 1),
+                    new TwoLayerFeature(2, 0, 2))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GINKGO_FANCY_TREE = register("ginkgo_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.GINKGO_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LARGE_CONIC_GINKGO_TREE = register("large_conic_ginkgo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
+                    new SimpleBlockStateProvider(States.GINKGO_LEAVES),
+                    new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_GINKGO_TREE = register("ancient_ginkgo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GINKGO_LOG),
+                    new SimpleBlockStateProvider(States.GINKGO_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Red Maple Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_MAPLE_TREE = register("tall_red_maple_tree",

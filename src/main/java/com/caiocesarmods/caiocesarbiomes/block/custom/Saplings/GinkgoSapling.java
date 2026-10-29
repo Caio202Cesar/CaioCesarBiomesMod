@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -119,7 +120,7 @@ public class GinkgoSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class GinkgoTree extends Tree {
+    private static class GinkgoTree extends BigTree {
         @Nullable
         @Override
             protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
@@ -129,5 +130,15 @@ public class GinkgoSapling extends SaplingBlock {
                     return TreeFeatures.CONIC_GINKGO_TREE;
                 }
             }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            if (rand.nextInt(10) == 0) {
+                return TreeFeatures.ANCIENT_GINKGO_TREE;
+            } else {
+                return TreeFeatures.LARGE_CONIC_GINKGO_TREE;
+            }
+        }
     }
 }

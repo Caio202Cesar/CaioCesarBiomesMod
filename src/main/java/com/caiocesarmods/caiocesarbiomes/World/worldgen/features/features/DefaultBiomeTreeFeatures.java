@@ -305,9 +305,15 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
 
     /// Temperate
-    public static final ConfiguredFeature<?, ?> GINKGO_TRESS = register("ginkgo_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(GINKGO_FANCY_TREE.withChance(0.25F),
-                            BLOB_GINKGO_TREE.withChance(0.09F)), CONIC_GINKGO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+    public static final ConfiguredFeature<?, ?> GIANT_GINKGO_FOREST_TRESS = register("giant_ginkgo_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(GINKGO_FANCY_TREE.withChance(0.2F),
+                            ANCIENT_GINKGO_TREE.withChance(0.2F), LARGE_CONIC_GINKGO_TREE.withChance(0.2F)),
+                            CONIC_GINKGO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> GINKGO_FOREST_TRESS = register("giant_ginkgo_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CONIC_GINKGO_TREE.withChance(0.2F)),
+                            GINKGO_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> RAINFOREST_CHESTNUT_TREES = register("rainforest_chestnut",
