@@ -422,7 +422,8 @@ public class DefaultBiomeTreeFeatures {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOMBARDY_POPLAR_TREE.withChance(0.2F),
                             BLACK_POPLAR_FANCY_TREE.withChance(0.2F), PECAN_FANCY_TREE.withChance(0.2F), PLANE_TREE.withChance(0.2F),
                             PLANE_TREE.withChance(0.2F), PECAN_TREE.withChance(0.2F), WALNUT_TREE.withChance(0.2F), WALNUT_FANCY_TREE.withChance(0.2F),
-                            APPLE_TREE1.withChance(0.2F), APPLE_TREE2.withChance(0.2F), OAK_SHRUB.withChance(0.2F)), ELDERBERRY_TREE))
+                            APPLE_TREE1.withChance(0.2F), APPLE_TREE2.withChance(0.2F), OAK_SHRUB.withChance(0.2F), ELDERBERRY_TREE.withChance(0.2F)),
+                            ANCIENT_BLACK_POPLAR_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 5))));
 
@@ -432,8 +433,9 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> HEMIBOREAL_PRAIRIE_TREES = register("hemiboreal_prairie_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.5F),
-                            ALMOND_TREE.withChance(0.4F), APPLE_TREE1.withChance(0.008F), APPLE_TREE2.withChance(0.0078F)), LOMBARDY_POPLAR_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_POPLAR_FANCY_TREE.withChance(0.2F),
+                            ANCIENT_BLACK_POPLAR_TREE.withChance(0.2F), ALMOND_TREE.withChance(0.2F)), LOMBARDY_POPLAR_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> TEMPERATE_RAINFOREST_SHRUBS = register("temperate_rainforest_shrubs",
