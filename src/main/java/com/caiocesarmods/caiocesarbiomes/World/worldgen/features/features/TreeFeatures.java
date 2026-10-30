@@ -934,7 +934,7 @@ public class TreeFeatures {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.POHUTUKAWA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 7),
+                    new AncientMetrosiderosTrunkPlacer(4, 2, 1, 7, 8),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
                             ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.POHUTUKAWA_BEARD_PLACEMENT,
