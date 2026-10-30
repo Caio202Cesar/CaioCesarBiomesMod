@@ -682,7 +682,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> EUCALYPTUS_TREES = register("eucalyptus_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F)),
                     EUCALYPTUS_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(40, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CASUARINA_TREES = register("casuarina_trees", Feature.RANDOM_SELECTOR.withConfiguration(
                     new MultipleRandomFeatureConfig((ImmutableList.of(CASUARINA_FANCY_TREE.withChance(0.4F))), PINE_LIKE_CASUARINA_TREE))
@@ -700,7 +700,7 @@ public class DefaultBiomeTreeFeatures {
                     BLACKWOOD_ACACIA_FANCY_TREE.withChance(0.2F), RUSTY_GUM_TREE.withChance(0.24F)),
                     //COACHWOOD_TREE.withChance(0.23F)),
                     LILLY_PILLY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(13, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(37, 0.4F, 5))));
 
     public static final ConfiguredFeature<?, ?> PLAINS_EUCALYPTUS_TREES = register("plains_eucalyptus_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(EUCALYPTUS_TALL_TREE.withChance(0.5F)),
