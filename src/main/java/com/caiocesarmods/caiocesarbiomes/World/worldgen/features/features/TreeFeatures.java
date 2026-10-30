@@ -1687,6 +1687,28 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
 
+    //Guava
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUAVA_TREE = register("guava_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.GUAVA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_GUAVA_TREE = register("purple_guava_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.PURPLE_GUAVA_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+
+    //Sugar Apple
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUGAR_APPLE_TREE = register("sugar_apple_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANNONA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SUGAR_APPLE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(2, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+
     //Hawthorn
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HAWTHORN_TREE = register("hawthorn_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SORBUS_LOG),
