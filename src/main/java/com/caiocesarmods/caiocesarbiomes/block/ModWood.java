@@ -694,6 +694,15 @@ public class ModWood {
     public static final RegistryObject<Block> CASTANOPSIS_PLANKS = registerBlock("castanopsis_planks",
             ModPlanks::new);
 
+
+    public static final RegistryObject<Block> JAPANESE_EVERGREEN_OAK_LOG = registerBlock("japanese_evergreen_oak_log",
+            ModLogs::new);
+
+
+    public static final RegistryObject<Block> ANNONA_LOG = registerBlock("annona_log",
+            ModLogs::new);
+
+
     ///Baobab
     public static final RegistryObject<Block> BAOBAB_LOG = registerBlock("baobab_log",
             SuculentTreeLog::new);
