@@ -53,14 +53,15 @@ public class HotTemperateForestBiome {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withForestGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLightBambooVegetation(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withHotTemperateForestOaks(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HOT_TEMPERATE_FOREST_VEGETATION);
-
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+        DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
 
         //Hardiness zone 7-8: 0.7F - 0.79F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-                .temperature(0.75F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.76F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(5216810)
                         .withGrassColor(2791997).setFogColor(7907327)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

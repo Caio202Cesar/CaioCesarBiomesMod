@@ -210,5 +210,8 @@ public class ModDefaultBiomeFeatures {
     public static void withPlainsEucalyptusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.PLAINS_EUCALYPTUS_TREES);
     }
+    public static void withHotTemperateForestOaks(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HOT_TEMPERATE_FOREST_OAKS);
+    }
 }
 
