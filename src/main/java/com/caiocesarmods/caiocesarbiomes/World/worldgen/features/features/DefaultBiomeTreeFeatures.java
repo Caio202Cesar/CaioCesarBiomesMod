@@ -118,10 +118,11 @@ public class DefaultBiomeTreeFeatures {
                             HIGHLAND_OCOTEA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.3F, 3))));
 
+    //Add formosan alder
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EXTREME_HILLS_VEGETATION = register("subtropical_extreme_hills_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CHINESE_RED_PINE_TREE.withChance(0.8F),
-                    AVOCADO_TREE.withChance(0.08F), IVY_AVOCADO_TREE.withChance(0.054F), TEA_TREE.withChance(0.12F), CAMELLIA_TREE.withChance(0.14F)),
-                    OAK_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    AVOCADO_TREE.withChance(0.08F), TEA_TREE.withChance(0.12F), CAMELLIA_TREE.withChance(0.14F)),
+                    IVY_AVOCADO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     //Common to both laurel and oak forest
