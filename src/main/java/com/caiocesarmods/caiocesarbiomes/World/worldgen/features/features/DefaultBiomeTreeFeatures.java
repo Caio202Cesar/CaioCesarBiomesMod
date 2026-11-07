@@ -128,7 +128,7 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> SABAL_PALMS = register("sabal_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SABAL_PALM_FANCY_TREE.withChance(0.5F)),
                             SABAL_PALM_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(14, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> SWAMP_EXTRA_VEGETATION = register("swamp_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
@@ -148,23 +148,24 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_CITRUS_TREES = register("subtropical_citrus_trees", Feature.RANDOM_SELECTOR
             .withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANDARIN_TREE.withChance(0.5F), GRAPEFRUIT_TREE.withChance(0.5F)),
                     ORANGE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(15, 0.1F, 1))));
 
     //Miscellaneous trees found both in subtropical laurel forest and subtropical evergreen oak forest
     public static final ConfiguredFeature<?, ?> HUMID_SUBTROPICAL_FOREST_MISCELLANEOUS_TREES = register(
             "humid_subtropical_forest_misc_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            LOQUAT_TREE.withChance(0.3F), WAX_LEAF_PRIVET_TREE.withChance(0.3F), BANANA_TREE.withChance(0.25F),
-                            STARFRUIT_TREE.withChance(0.4F), MULBERRY_TREE.withChance(0.4F), ELDERBERRY_TREE.withChance(0.3F),
-                            PERSIMMON_TREE.withChance(0.4F), PERSIMMON_FANCY_TREE.withChance(0.35F),
-                            PLANE_TREE.withChance(0.098F), PLANE_FANCY_TREE.withChance(0.098F), PLANE_TREE_WITH_IVY.withChance(0.098F),
-                            PLANE_FANCY_TREE_WITH_IVY.withChance(0.098F), RED_MAPLE_FANCY_TREE_WITH_IVY.withChance(0.098F),
-                            TALL_RED_MAPLE_TREE_WITH_IVY.withChance(0.098F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.21F),
-                            RED_MAPLE_FANCY_TREE.withChance(0.098F), RED_MAPLE_TREE.withChance(0.098F),
-                            PEACH_TREE.withChance(0.25F), SABAL_PALM_TREE.withChance(0.5F), SABAL_PALM_FANCY_TREE.withChance(0.45F),
-                            TEA_TREE.withChance(0.45F), CAMELLIA_TREE.withChance(0.45F)), SOUTHERN_MAGNOLIA_TREE))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+                            LOQUAT_TREE.withChance(0.2F), WAX_LEAF_PRIVET_TREE.withChance(0.2F), BANANA_TREE.withChance(0.2F),
+                            STARFRUIT_TREE.withChance(0.2F), MULBERRY_TREE.withChance(0.2F), ELDERBERRY_TREE.withChance(0.2F),
+                            PERSIMMON_TREE.withChance(0.2F), PERSIMMON_FANCY_TREE.withChance(0.2F), WHITE_CRAPE_MYRTLE_TREE.withChance(0.1F),
+                            PINK_CRAPE_MYRTLE_TREE.withChance(0.3F), RED_CRAPE_MYRTLE_TREE.withChance(0.3F), PURPLE_CRAPE_MYRTLE_TREE.withChance(0.2F),
+                            PLANE_TREE.withChance(0.2F), PLANE_FANCY_TREE.withChance(0.2F), PLANE_TREE_WITH_IVY.withChance(0.2F),
+                            PLANE_FANCY_TREE_WITH_IVY.withChance(0.2F), RED_MAPLE_FANCY_TREE_WITH_IVY.withChance(0.2F),
+                            TALL_RED_MAPLE_TREE_WITH_IVY.withChance(0.2F), SOUTHERN_WAX_MYRTLE_SHRUB.withChance(0.2F),
+                            RED_MAPLE_FANCY_TREE.withChance(0.2F), RED_MAPLE_TREE.withChance(0.2F), SCHIMA_TREE.withChance(0.2F),
+                            PEACH_TREE.withChance(0.2F), SABAL_PALM_TREE.withChance(0.2F), SABAL_PALM_FANCY_TREE.withChance(0.2F),
+                            TEA_TREE.withChance(0.2F), CAMELLIA_TREE.withChance(0.2F), SOUTHERN_MAGNOLIA_TREE.withChance(0.2F)),
+                            JAPANESE_MAPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(20, 0.2F, 2))));
 
     //Miscellaneous (non-lauraceae) subtropical trees from laurel forest only (zone 10 exclusives or not)
     public static final ConfiguredFeature<?, ?> LAUREL_FOREST_MISCELLANEOUS_TREES = register("laurel_forest_misc_trees",
@@ -173,7 +174,7 @@ public class DefaultBiomeTreeFeatures {
                             CINNAMON_TREE.withChance(0.45F), YELLOW_OLEANDER_TREE.withChance(0.12F), ORANGE_OLEANDER_TREE.withChance(0.12F)),
                             CINNAMON_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(20, 0.2F, 2))));
 
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_EVERGREEN_OAK_BEACH_TREES = register("subtropical_evergreen_oak_beach_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(POHUTUKAWA_TREE.withChance(0.36F),
@@ -190,7 +191,7 @@ public class DefaultBiomeTreeFeatures {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.2F, 2))));
 
-    //Add also the montane evergreen oaks
+    //Add also the montane evergreen oaks from central america
     public static final ConfiguredFeature<?, ?> MONTANE_CLOUD_JUNGLE_TREES = register("montane_cloud_jungle_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(OCOTEA_JUNGLE_TREE.withChance(0.2F),
                             OCOTEA_FOREST_TREE.withChance(0.2F), OCOTEA_FOREST_FANCY_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F),
@@ -232,8 +233,8 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> SUBTROPICAL_FOREST_LAURACEAE = register("subtropical_forest_lauraceae",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CAMPHOR_TREE.withChance(0.2F), AVOCADO_TREE.withChance(0.2F), SWAMPBAY_TREE.withChance(0.2F), REDBAY_TREE.withChance(0.2F),
-                            REDBAY_FANCY_TREE.withChance(0.2F), IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F),
-                            SCHIMA_TREE.withChance(0.2F)), IVY_MACHILLUS_TREE))
+                            REDBAY_FANCY_TREE.withChance(0.2F), IVY_AVOCADO_TREE.withChance(0.2F), MACHILLUS_TREE.withChance(0.2F)),
+                            IVY_MACHILLUS_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(30, 0.6F, 6))));
 
@@ -717,6 +718,6 @@ public class DefaultBiomeTreeFeatures {
     public static final ConfiguredFeature<?, ?> CRAPE_MYRTLE_TREES = register("crape_myrtle_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_CRAPE_MYRTLE_TREE.withChance(0.1F),
                             PINK_CRAPE_MYRTLE_TREE.withChance(0.3F), RED_CRAPE_MYRTLE_TREE.withChance(0.3F)), PURPLE_CRAPE_MYRTLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 5))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.4F, 5))));
 
 }

@@ -63,8 +63,6 @@ public class LaurelSubtropicalJungleBiome {
       ModDefaultBiomeFeatures.withSubtropicalForestLauraceae(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withLaurelJungleTrees(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withLaurelJungleCanopyTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
-      ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
 
       ModDefaultBiomeFeatures.withHumidSubtropicalPlants(biomegenerationsettings$builder);
       ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);

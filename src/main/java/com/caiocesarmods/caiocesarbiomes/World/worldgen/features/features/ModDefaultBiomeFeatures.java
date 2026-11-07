@@ -88,6 +88,8 @@ public class ModDefaultBiomeFeatures {
     }
     public static void withSubtropicalForestMiscTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_FOREST_MISCELLANEOUS_TREES);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SABAL_PALMS);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_CITRUS_TREES);
     }
     public static void withSubtropicalLaurelForestMiscTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.LAUREL_FOREST_MISCELLANEOUS_TREES);
@@ -170,9 +172,6 @@ public class ModDefaultBiomeFeatures {
     }
     public static void withTropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TROPICAL_FOREST_CITRUS_TREES);
-    }
-    public static void withSubtropicalCitrusTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.SUBTROPICAL_FOREST_CITRUS_TREES);
     }
     public static void withTeakTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, DefaultBiomeTreeFeatures.TEAK_TREES);
