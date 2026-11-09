@@ -89,18 +89,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("cypress_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> COCKSPUR_CORAL_SLAB = registerBlock("cockspur_coral_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_STAIRS = registerBlock("cockspur_coral_stairs",
-            () -> new StairsBlock(() -> COCKSPUR_CORAL_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE = registerBlock("cockspur_coral_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE_GATE = registerBlock("cockspur_coral_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
 
 
     /// Palm woods
@@ -138,6 +126,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> PALM_SLAB = registerBlock("palm_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PALM_STAIRS = registerBlock("palm_stairs",
+            () -> new StairsBlock(() -> PALM_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> PALM_FENCE = registerBlock("palm_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PALM_FENCE_GATE = registerBlock("palm_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Mesquite
