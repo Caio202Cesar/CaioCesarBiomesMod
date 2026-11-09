@@ -89,6 +89,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("cypress_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_SLAB = registerBlock("cockspur_coral_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_STAIRS = registerBlock("cockspur_coral_stairs",
+            () -> new StairsBlock(() -> COCKSPUR_CORAL_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE = registerBlock("cockspur_coral_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE_GATE = registerBlock("cockspur_coral_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Palm woods
@@ -191,14 +203,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Erythrina
-    public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ERYTHRINA_PLANKS = registerBlock("erythrina_planks",
-            ModPlanks::new);
-
-
-    /// Lightwood (starfruit, elderberry, privet, ilex, tea, ceanothus, hydrangea, spondias)
+    /// Lightwood (starfruit, elderberry, privet, ilex, tea, ceanothus, hydrangea, spondias, erythrina)
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
             ModLogs::new);
     public static final RegistryObject<Block> STARFRUIT_WOOD = registerBlock("starfruit_wood",
@@ -229,6 +234,8 @@ public class ModWood {
             SuculentTreeLog::new);
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             SuculentTreeLog::new);
+    public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
+            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
