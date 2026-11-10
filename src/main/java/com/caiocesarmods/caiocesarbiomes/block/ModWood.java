@@ -255,6 +255,10 @@ public class ModWood {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
+    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
+            ModPlanks::new);
 
     /// Ipe
 
@@ -524,12 +528,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
-            ModPlanks::new);
-
-
+    /// Marula
     public static final RegistryObject<Block> MARULA_LOG = registerBlock("marula_log",
             ModLogs::new);
     public static final RegistryObject<Block> MARULA_PLANKS = registerBlock("marula_planks",
