@@ -155,21 +155,30 @@ public class ModWood {
 
 
     ///BIRCH WOODSET
+    //Crape Myrtle
     public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
             ModLogs::new);
     public static final RegistryObject<Block> CRAPE_MYRTLE_WOOD = registerBlock("crape_myrtle_wood",
             ModLogs::new);
+    //Pomegranate
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             ModLogs::new);
     public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
             ModLogs::new);
+    //Sweetbay Magnolia
     public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_LOG = registerBlock("sweetbay_magnolia_log",
             ModLogs::new);
     public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_WOOD = registerBlock("sweetbay_magnolia_wood",
             ModLogs::new);
+    //Elderberry
     public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
             ModLogs::new);
     public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
+            ModLogs::new);
+    //Royal Poinciana
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
             ModLogs::new);
 
 
@@ -367,10 +376,6 @@ public class ModWood {
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_WOOD = registerBlock("tamarind_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
