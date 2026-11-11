@@ -60,7 +60,7 @@ public class AspenForest {
 
         //Hardiness zone 4: 0.4F - 0.49F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.TAIGA).depth(depth).scale(scale)
-                .temperature(0.4F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.45F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(8960871)
                         .withGrassColor(11713383).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
