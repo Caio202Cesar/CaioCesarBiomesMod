@@ -207,6 +207,8 @@ public class CaioCesarBiomesMod
                     .put(ModWood.LYCHEE_WOOD.get(), ModWood.STRIPPED_LYCHEE_WOOD.get())
                     .put(ModWood.LAUREL_LOG.get(), ModWood.STRIPPED_LAUREL_LOG.get())
                     .put(ModWood.LAUREL_WOOD.get(), ModWood.STRIPPED_LAUREL_WOOD.get())
+                    .put(ModWood.TEAK_LOG.get(), ModWood.STRIPPED_LAUREL_LOG.get())
+                    .put(ModWood.TEAK_WOOD.get(), ModWood.STRIPPED_LAUREL_WOOD.get())
                     .put(ModWood.CINNAMON_LOG.get(),  ModWood.STRIPPED_LAUREL_LOG.get())
                     .put(ModWood.CINNAMON_WOOD.get(), ModWood.STRIPPED_LAUREL_WOOD.get())
                     .put(ModWood.PRIVET_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())

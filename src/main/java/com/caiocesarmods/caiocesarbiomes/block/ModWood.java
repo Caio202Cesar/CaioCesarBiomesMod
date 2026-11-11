@@ -280,21 +280,7 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
-
     /// Ipe
-
-
-    /// Teak
-    public static final RegistryObject<Block> TEAK_LOG = registerBlock("teak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> TEAK_WOOD = registerBlock("teak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TEAK_LOG = registerBlock("stripped_teak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_TEAK_WOOD = registerBlock("stripped_teak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> TEAK_PLANKS = registerBlock("teak_planks",
-            ModPlanks::new);
 
 
     /// Strawberry Tree
@@ -820,16 +806,22 @@ public class ModWood {
     ///Laurel
     public static final RegistryObject<Block> LAUREL_LOG = registerBlock("laurel_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",
-            ModLogs::new);
     public static final RegistryObject<Block> LAUREL_WOOD = registerBlock("laurel_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
             ModLogs::new);
     //Cinnamon
     public static final RegistryObject<Block> CINNAMON_LOG = registerBlock("cinnamon_log",
             ModLogs::new);
     public static final RegistryObject<Block> CINNAMON_WOOD = registerBlock("cinnamon_wood",
+            ModLogs::new);
+    //Teak
+    public static final RegistryObject<Block> TEAK_LOG = registerBlock("teak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> TEAK_WOOD = registerBlock("teak_wood",
+            ModLogs::new);
+    //Stripped
+    public static final RegistryObject<Block> STRIPPED_LAUREL_LOG = registerBlock("stripped_laurel_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LAUREL_WOOD = registerBlock("stripped_laurel_wood",
             ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModPlanks::new);
