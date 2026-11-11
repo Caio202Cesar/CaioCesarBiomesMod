@@ -208,34 +208,50 @@ public class ModWood {
 
 
     /// Lightwood (starfruit, elderberry, privet, ilex, tea, ceanothus, hydrangea, spondias, erythrina)
+    //Starfruit
     public static final RegistryObject<Block> STARFRUIT_LOG = registerBlock("starfruit_log",
             ModLogs::new);
     public static final RegistryObject<Block> STARFRUIT_WOOD = registerBlock("starfruit_wood",
             ModLogs::new);
+    //Ilex
     public static final RegistryObject<Block> ILEX_LOG = registerBlock("ilex_log",
             ModLogs::new);
     public static final RegistryObject<Block> ILEX_WOOD = registerBlock("ilex_wood",
             ModLogs::new);
+    //Tea
     public static final RegistryObject<Block> TEA_LOG = registerBlock("tea_log",
             ModLogs::new);
     public static final RegistryObject<Block> TEA_WOOD = registerBlock("tea_wood",
             ModLogs::new);
+    //Privet
     public static final RegistryObject<Block> PRIVET_LOG = registerBlock("privet_log",
             ModLogs::new);
     public static final RegistryObject<Block> PRIVET_WOOD = registerBlock("privet_wood",
             ModLogs::new);
+    //Ceanothus
     public static final RegistryObject<Block> CEANOTHUS_LOG = registerBlock("ceanothus_log",
             ModLogs::new);
     public static final RegistryObject<Block> CEANOTHUS_WOOD = registerBlock("ceanothus_wood",
             ModLogs::new);
+    //Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander)
     public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
-            SuculentTreeLog::new); // Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
+            SuculentTreeLog::new);
     public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
             SuculentTreeLog::new);
+    //Socotra Desert Rose
     public static final RegistryObject<Block> SOCOTRA_DESERT_ROSE_LOG = registerBlock("socotra_desert_rose_log",
             SuculentTreeLog::new);
+    //Erythrina
     public static final RegistryObject<Block> ERYTHRINA_LOG = registerBlock("erythrina_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ERYTHRINA_WOOD = registerBlock("erythrina_wood",
+            ModLogs::new);
+    //Persimmon
+    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PERSIMMON_WOOD = registerBlock("persimmon_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
@@ -255,10 +271,8 @@ public class ModWood {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> PERSIMMON_LOG = registerBlock("persimmon_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PERSIMMON_PLANKS = registerBlock("persimmon_planks",
-            ModPlanks::new);
+
+
 
     /// Ipe
 
