@@ -251,7 +251,6 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PERSIMMON_WOOD = registerBlock("persimmon_wood",
             ModLogs::new);
-
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
@@ -270,7 +269,6 @@ public class ModWood {
     public static final RegistryObject<Block> LIGHTWOOD_FENCE_GATE = registerBlock("lightwood_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
 
 
 
