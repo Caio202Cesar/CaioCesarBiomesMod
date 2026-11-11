@@ -874,7 +874,7 @@ public class TreeFeatures {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 6),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT, ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> EUCALYPTUS_FANCY_TREE = register("eucalyptus_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUCALYPTUS_LOG),
                     new SimpleBlockStateProvider(States.EUCALYPTUS_LEAVES),
