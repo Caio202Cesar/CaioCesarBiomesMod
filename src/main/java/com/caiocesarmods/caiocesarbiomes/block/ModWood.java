@@ -167,6 +167,10 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_WOOD = registerBlock("sweetbay_magnolia_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
+            ModLogs::new);
 
 
     /// Southern Magnolia
@@ -223,10 +227,6 @@ public class ModWood {
     public static final RegistryObject<Block> CEANOTHUS_LOG = registerBlock("ceanothus_log",
             ModLogs::new);
     public static final RegistryObject<Block> CEANOTHUS_WOOD = registerBlock("ceanothus_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
             ModLogs::new);
     public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
             SuculentTreeLog::new); // Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander = all use plumeria log texture, while desert rose has its own bark texture, but same log)
