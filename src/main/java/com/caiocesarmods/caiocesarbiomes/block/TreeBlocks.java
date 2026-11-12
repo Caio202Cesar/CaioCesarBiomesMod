@@ -1678,17 +1678,42 @@ public class TreeBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
     //Lenga
-    public static final RegistryObject<Block> LENGA_LEAVES = registerBlock("lenga_leaves",
+    public static final RegistryObject<Block> RED_LENGA_LEAVES = registerBlock("red_lenga_leaves",
             () -> new LengaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_FALL_LEAVES));
-    public static final RegistryObject<Block> LENGA_FALL_LEAVES = registerBlock("lenga_fall_leaves",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_LENGA_FALL_LEAVES));
+    public static final RegistryObject<Block> RED_LENGA_FALL_LEAVES = registerBlock("red_lenga_fall_leaves",
             () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_WINTER_BRANCHES));
-    public static final RegistryObject<Block> LENGA_WINTER_BRANCHES = registerBlock("lenga_branches",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_LENGA_WINTER_BRANCHES));
+    public static final RegistryObject<Block> RED_LENGA_WINTER_BRANCHES = registerBlock("red_lenga_branches",
             () -> new LengaWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.LENGA_LEAVES));
-    public static final RegistryObject<Block> LENGA_SAPLING = registerBlock("lenga_sapling",
-            LengaSapling::new);
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_LENGA_LEAVES));
+    public static final RegistryObject<Block> RED_LENGA_SAPLING = registerBlock("red_lenga_sapling",
+            RedLengaSapling::new);
+
+    public static final RegistryObject<Block> ORANGE_LENGA_LEAVES = registerBlock("orange_lenga_leaves",
+            () -> new LengaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_LENGA_FALL_LEAVES));
+    public static final RegistryObject<Block> ORANGE_LENGA_FALL_LEAVES = registerBlock("orange_lenga_fall_leaves",
+            () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_LENGA_WINTER_BRANCHES));
+    public static final RegistryObject<Block> ORANGE_LENGA_WINTER_BRANCHES = registerBlock("orange_lenga_branches",
+            () -> new LengaWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_LENGA_LEAVES));
+    public static final RegistryObject<Block> ORANGE_LENGA_SAPLING = registerBlock("orange_lenga_sapling",
+            OrangeLengaSapling::new);
+
+    public static final RegistryObject<Block> YELLOW_LENGA_LEAVES = registerBlock("yellow_lenga_leaves",
+            () -> new LengaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_LENGA_FALL_LEAVES));
+    public static final RegistryObject<Block> YELLOW_LENGA_FALL_LEAVES = registerBlock("yellow_lenga_fall_leaves",
+            () -> new LengaFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_LENGA_WINTER_BRANCHES));
+    public static final RegistryObject<Block> YELLOW_LENGA_WINTER_BRANCHES = registerBlock("yellow_lenga_branches",
+            () -> new LengaWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_LENGA_LEAVES));
+    public static final RegistryObject<Block> YELLOW_LENGA_SAPLING = registerBlock("yellow_lenga_sapling",
+            YellowLengaSapling::new);
+
     //Coihue
     public static final RegistryObject<Block> COIHUE_LEAVES = registerBlock("coihue_leaves",
             ModLeaves::new);

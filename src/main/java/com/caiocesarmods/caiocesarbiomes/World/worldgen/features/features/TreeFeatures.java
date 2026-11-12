@@ -2133,7 +2133,7 @@ public class TreeFeatures {
                     ModFeatures.Placements.WHITE_BELLFLOWER_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LENGA_BEECH_TREE = register("lenga_beech_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_AUTUMNAL_LENGA_BEECH_TREE = register("red_lenga_beech_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
                     new SimpleBlockStateProvider(States.LENGA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
