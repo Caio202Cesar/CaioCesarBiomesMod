@@ -2411,13 +2411,24 @@ public class TreeBlocks {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_LEAVES));
     public static final RegistryObject<Block> PURPLE_GUAVA_LEAVES = registerBlock("purple_guava_leaves",
             () -> new OrangeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_GUAVA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> PURPLE_GUAVA_FLOWERING_LEAVES = registerBlock("purple_guava_flowering_leaves",
             () -> new OrangeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_GUAVA_FRUITING_LEAVES));
     public static final RegistryObject<Block> PURPLE_GUAVA_FRUITING_LEAVES = registerBlock("purple_guava_fruiting_leaves",
             () -> new OrangeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PURPLE_GUAVA_LEAVES));
+
+
+    public static final RegistryObject<Block> SUGAR_APPLE_LEAVES = registerBlock("sugar_apple_leaves",
+            () -> new TeakLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> SUGAR_APPLE_FRUITING_LEAVES = registerBlock("sugar_apple_fruiting_leaves",
+            () -> new TeakFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SUGAR_APPLE_LEAVES));
+    public static final RegistryObject<Block> SUGAR_APPLE_WILT_FRUITING_LEAVES = registerBlock("sugar_apple_wilt_fruiting_leaves",
+            () -> new TeakFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.SUGAR_APPLE_LEAVES));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
