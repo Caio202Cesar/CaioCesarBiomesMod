@@ -30,15 +30,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class LengaSapling extends SaplingBlock {
-    public LengaSapling() {
+public class RedLengaSapling extends SaplingBlock {
+    public RedLengaSapling() {
         super(new LengaTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreeBlocks.LENGA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreeBlocks.RED_LENGA_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -143,7 +143,7 @@ public class LengaSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-                return TreeFeatures.LENGA_BEECH_TREE;
+                return TreeFeatures.RED_AUTUMN_LENGA_TREE;
         }
     }
 }

@@ -2133,9 +2133,21 @@ public class TreeFeatures {
                     ModFeatures.Placements.WHITE_BELLFLOWER_PLACEMENT)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_AUTUMNAL_LENGA_BEECH_TREE = register("red_lenga_beech_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RED_AUTUMN_LENGA_TREE = register("red_autumn_lenga_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
-                    new SimpleBlockStateProvider(States.LENGA_LEAVES),
+                    new SimpleBlockStateProvider(States.RED_AUTUMN_LENGA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_AUTUMN_LENGA_TREE = register("yellow_autumn_lenga_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.YELLOW_AUTUMN_LENGA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ORANGE_AUTUMN_LENGA_TREE = register("orange_autumn_lenga_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.NOTHOFAGUS_LOG),
+                    new SimpleBlockStateProvider(States.RED_AUTUMN_LENGA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
@@ -2816,7 +2828,9 @@ public class TreeFeatures {
         protected static final BlockState NOTHOFAGUS_LOG = ModWood.NOTHOFAGUS_LOG.get().getDefaultState();
         protected static final BlockState SOUTHERN_BEECH_LEAVES = TreeBlocks.SOUTHERN_BEECH_LEAVES.get().getDefaultState();
         protected static final BlockState COIHUE_LEAVES = TreeBlocks.COIHUE_LEAVES.get().getDefaultState();
-        protected static final BlockState LENGA_LEAVES = TreeBlocks.LENGA_LEAVES.get().getDefaultState();
+        protected static final BlockState RED_AUTUMN_LENGA_LEAVES = TreeBlocks.RED_LENGA_LEAVES.get().getDefaultState();
+        protected static final BlockState ORANGE_AUTUMN_LENGA_LEAVES = TreeBlocks.ORANGE_LENGA_LEAVES.get().getDefaultState();
+        protected static final BlockState YELLOW_AUTUMN_LENGA_LEAVES = TreeBlocks.YELLOW_LENGA_LEAVES.get().getDefaultState();
 
         protected static final BlockState ILEX_LOG = ModWood.ILEX_LOG.get().getDefaultState();
         protected static final BlockState HOLLY_LEAVES = TreeBlocks.HOLLY_LEAVES.get().getDefaultState();
