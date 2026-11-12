@@ -53,7 +53,6 @@ private static Biome makeMontaneLaurelGroveBiome(final Supplier<ConfiguredSurfac
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withRainforestChestnuts(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withHighlandOcoteaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withSubtropicalTallPlants(biomegenerationsettings$builder);

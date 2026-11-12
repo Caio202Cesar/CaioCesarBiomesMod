@@ -1,7 +1,8 @@
-package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.UnusedBiomes;
+package com.caiocesarmods.caiocesarbiomes.World.worldgen.Biomes.SubtropicalBiomes;
 
 import com.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.DefaultBiomeTreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModDefaultBiomeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -45,30 +46,35 @@ public class SubtropicalEucalyptusDryForestBiomeBeach {
         biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withWarmFlowers(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withBadlandsGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withSugarCaneAndPumpkins(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCrapeMyrtles(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withEucalyptusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withSubtropicalCitrusTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withMediterraneanShrubs(biomegenerationsettings$builder);
+
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                DefaultBiomeTreeFeatures.HUMID_SUBTROPICAL_EUCALYPTUS_FOREST_TREES);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
         //Hardiness zone 10: 0.85F - 0.89F
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.89F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
-                        .setWaterFogColor(4159204).withSkyColor(12634835).withFoliageColor(7441937)
-                        .withGrassColor(12564309).setFogColor(15658734)
-                        .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
+                .temperature(0.86F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                        .setWaterFogColor(4159204).withSkyColor(7907327).withFoliageColor(9218863)
+                        .withGrassColor(7979098).setFogColor(14807295)
+                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
