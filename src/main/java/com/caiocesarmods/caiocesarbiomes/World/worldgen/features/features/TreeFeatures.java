@@ -2453,9 +2453,11 @@ public class TreeFeatures {
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
         protected static final BlockState LILLY_PILLY_LEAVES = TreeBlocks.LILLY_PILLY_LEAVES.get().getDefaultState();
         protected static final BlockState COMMON_MYRTLE_LEAVES = TreeBlocks.COMMON_MYRTLE_LEAVES.get().getDefaultState();
+        protected static final BlockState GUAVA_LEAVES = TreeBlocks.GUAVA_LEAVES.get().getDefaultState();
+        protected static final BlockState PURPLE_GUAVA_LEAVES = TreeBlocks.PURPLE_GUAVA_LEAVES.get().getDefaultState();
+
         protected static final BlockState POHUTUKAWA_LEAVES = TreeBlocks.POHUTUKAWA_LEAVES.get().getDefaultState();
         protected static final BlockState CALLISTEMON_LEAVES = TreeBlocks.CALLISTEMON_LEAVES.get().getDefaultState();
-        protected static final BlockState GUAVA_LEAVES = TreeBlocks.GUAVA_LEAVES.get().getDefaultState();
 
         protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState AVOCADO_LEAVES = TreeBlocks.AVOCADO_LEAVES.get().getDefaultState();
@@ -2502,12 +2504,12 @@ public class TreeFeatures {
         protected static final BlockState CASTANOPSIS_LOG = ModWood.CASTANOPSIS_LOG.get().getDefaultState();
         protected static final BlockState CASTANOPSIS_LEAVES = TreeBlocks.CASTANOPSIS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JAPANESE_EVERGREEN_OAK_LOG = ModWood.JAPANESE_EVERGREEN_OAK_LOG.get().getDefaultState();
-        protected static final BlockState JAPANESE_EVERGREEN_OAK_LEAVES = TreeBlocks.JAPANESE_EVERGREEN_OAK_LEAVES.get().getDefaultState();
+        //protected static final BlockState JAPANESE_EVERGREEN_OAK_LOG = ModWood.JAPANESE_EVERGREEN_OAK_LOG.get().getDefaultState();
+        //protected static final BlockState JAPANESE_EVERGREEN_OAK_LEAVES = TreeBlocks.JAPANESE_EVERGREEN_OAK_LEAVES.get().getDefaultState();
 
         protected static final BlockState ANNONA_LOG = ModWood.ANNONA_LOG.get().getDefaultState();
         protected static final BlockState SUGAR_APPLE_LEAVES = TreeBlocks.SUGAR_APPLE_LEAVES.get().getDefaultState();
-        protected static final BlockState PAWPAW_LEAVES = TreeBlocks.PAWPAW_LEAVES.get().getDefaultState();
+        //protected static final BlockState PAWPAW_LEAVES = TreeBlocks.PAWPAW_LEAVES.get().getDefaultState();
 
         protected static final BlockState CHUSQUEA_BAMBOO_LOG = ModWood.CHUSQUEA_BAMBOO_BLOCK.get().getDefaultState();
         protected static final BlockState CHUSQUEA_BAMBOO_LEAVES = TreeBlocks.CHUSQUEA_BAMBOO_LEAVES.get().getDefaultState();

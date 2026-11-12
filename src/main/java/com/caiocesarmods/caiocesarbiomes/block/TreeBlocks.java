@@ -8,8 +8,6 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.SocotraCucumberLeave
 import com.caiocesarmods.caiocesarbiomes.block.custom.fruiting.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.BananaLog;
-import com.caiocesarmods.caiocesarbiomes.block.custom.logs.EucalyptusLog;
-import com.caiocesarmods.caiocesarbiomes.block.custom.logs.ModLogs;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.BaldCypressAerialRoot;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
@@ -2402,7 +2400,24 @@ public class TreeBlocks {
             SandLaurelOakSapling::new);
 
 
-
+    public static final RegistryObject<Block> GUAVA_LEAVES = registerBlock("guava_leaves",
+            () -> new OrangeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> GUAVA_FLOWERING_LEAVES = registerBlock("guava_flowering_leaves",
+            () -> new OrangeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> GUAVA_FRUITING_LEAVES = registerBlock("guava_fruiting_leaves",
+            () -> new OrangeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_LEAVES));
+    public static final RegistryObject<Block> PURPLE_GUAVA_LEAVES = registerBlock("purple_guava_leaves",
+            () -> new OrangeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PURPLE_GUAVA_FLOWERING_LEAVES = registerBlock("purple_guava_flowering_leaves",
+            () -> new OrangeFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PURPLE_GUAVA_FRUITING_LEAVES = registerBlock("purple_guava_fruiting_leaves",
+            () -> new OrangeFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.GUAVA_LEAVES));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
