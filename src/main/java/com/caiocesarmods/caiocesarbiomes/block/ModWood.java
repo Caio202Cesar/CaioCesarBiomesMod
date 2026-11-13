@@ -52,19 +52,6 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
-    /// Coast Cottonwood
-    public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_WOOD = registerBlock("coast_cottonwood_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_COAST_COTTONWOOD_LOG = registerBlock("stripped_coast_cottonwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_COAST_COTTONWOOD_WOOD = registerBlock("stripped_coast_cottonwood_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> COAST_COTTONWOOD_PLANKS = registerBlock("coast_cottonwood_planks",
-            ModPlanks::new);
-
-
     /// Fig
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             SuculentTreeLog::new);
@@ -242,7 +229,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> CEANOTHUS_WOOD = registerBlock("ceanothus_wood",
             ModLogs::new);
-    //Milkwood (Apocynaceae, like oleander, plumaeria, yellow oleander)
+    //Milkwood (apocynaceae, like oleander, plumaeria, yellow oleander)
     public static final RegistryObject<Block> MILKWOOD_LOG = registerBlock("milkwood_log",
             SuculentTreeLog::new);
     public static final RegistryObject<Block> MILKWOOD_WOOD = registerBlock("milkwood_wood",
@@ -260,6 +247,12 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PERSIMMON_WOOD = registerBlock("persimmon_wood",
             ModLogs::new);
+    //Coast Cottonwood
+    public static final RegistryObject<Block> COAST_COTTONWOOD_LOG = registerBlock("coast_cottonwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> COAST_COTTONWOOD_WOOD = registerBlock("coast_cottonwood_wood",
+            ModLogs::new);
+    //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_WOOD = registerBlock("stripped_lightwood_wood",
