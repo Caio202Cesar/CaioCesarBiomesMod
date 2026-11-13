@@ -140,7 +140,6 @@ public class ModWood {
             ModPlanks::new);
 
 
-
     ///BIRCH WOODSET
     //Crape Myrtle
     public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
