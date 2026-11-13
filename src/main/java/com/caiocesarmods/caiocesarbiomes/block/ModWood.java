@@ -52,6 +52,31 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
+    /// Oaks
+    //Holm Oak
+    public static final RegistryObject<Block> HOLM_OAK_LOG = registerBlock("holm_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> HOLM_OAK_WOOD = registerBlock("holm_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_HOLM_OAK_LOG = registerBlock("stripped_holm_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_HOLM_OAK_WOOD = registerBlock("stripped_holm_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
+            ModPlanks::new);
+    //Cork Oak
+    public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CORK_OAK_WOOD = registerBlock("cork_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CORK_OAK_LOG = registerBlock("stripped_cork_oak_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CORK_OAK_WOOD = registerBlock("stripped_cork_oak_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
+            ModPlanks::new);
+
+
     /// Fig
     public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             SuculentTreeLog::new);
@@ -175,24 +200,7 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Holm Oak
-    public static final RegistryObject<Block> HOLM_OAK_LOG = registerBlock("holm_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
-            ModPlanks::new);
 
-
-    /// Cork Oak
-    public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CORK_OAK_WOOD = registerBlock("cork_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CORK_OAK_LOG = registerBlock("stripped_cork_oak_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CORK_OAK_WOOD = registerBlock("stripped_cork_oak_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CORK_OAK_PLANKS = registerBlock("cork_oak_planks",
-            ModPlanks::new);
 
 
     /// Olive
