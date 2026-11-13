@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "caiocesarbiomes:callistemon_log"
+      "item": "caiocesarbiomes:bottlebrush_log"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:callistemon_wood",
+    "item": "caiocesarbiomes:bottlebrush_wood",
     "count": 3
   }
 }

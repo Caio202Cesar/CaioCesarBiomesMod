@@ -863,9 +863,9 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MYRTACEAE_WOOD = registerBlock("myrtaceae_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> CALLISTEMON_LOG = registerBlock("callistemon_log",
+    public static final RegistryObject<Block> BOTTLEBRUSH_LOG = registerBlock("bottlebrush_log",
             ModLogs::new); //Pohutukawa, callistemon, melaleuca
-    public static final RegistryObject<Block> CALLISTEMON_WOOD = registerBlock("callistemon_wood",
+    public static final RegistryObject<Block> BOTTLEBRUSH_WOOD = registerBlock("bottlebrush_wood",
             ModLogs::new);
     public static final RegistryObject<Block> EUCALYPTUS_LOG = registerBlock("eucalyptus_log",
             EucalyptusLog::new);
