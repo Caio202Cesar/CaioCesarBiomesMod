@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/willow_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/willow_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/willow_slab_top"
+    }
+  }
+}

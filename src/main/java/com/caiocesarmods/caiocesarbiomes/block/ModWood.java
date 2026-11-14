@@ -849,6 +849,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> SAPUCAIA_SLAB = registerBlock("willow_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SAPUCAIA_STAIRS = registerBlock("willow_stairs",
+            () -> new StairsBlock(() -> SAPUCAIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SAPUCAIA_FENCE = registerBlock("willow_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SAPUCAIA_FENCE_GATE = registerBlock("willow_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Acacia
