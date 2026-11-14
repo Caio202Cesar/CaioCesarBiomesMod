@@ -863,7 +863,7 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
-    /// Acacia
+    /// ACACIA woodset
     public static final RegistryObject<Block> BLACKWOOD_ACACIA_LOG = registerBlock("blackwood_acacia_log",
             ModLogs::new);
     public static final RegistryObject<Block> BLACKWOOD_ACACIA_WOOD = registerBlock("blackwood_acacia_wood",
@@ -897,6 +897,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MYRTACEAE_PLANKS = registerBlock("myrtaceae_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MYRTACEAE_SLAB = registerBlock("myrtaceae_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MYRTACEAE_STAIRS = registerBlock("myrtaceae_stairs",
+            () -> new StairsBlock(() -> MYRTACEAE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MYRTACEAE_FENCE = registerBlock("myrtaceae_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MYRTACEAE_FENCE_GATE = registerBlock("myrtaceae_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Bayberry (Myrica)

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/myrtaceae_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/myrtaceae_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/myrtaceae_slab_top"
+    }
+  }
+}
