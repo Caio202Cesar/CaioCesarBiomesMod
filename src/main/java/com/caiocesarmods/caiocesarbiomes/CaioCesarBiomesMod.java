@@ -307,8 +307,10 @@ public class CaioCesarBiomesMod
                     .put(ModWood.ROYAL_POINCIANA_WOOD.get(), Blocks.STRIPPED_BIRCH_WOOD)
                     .put(ModWood.SAUSAGE_TREE_LOG.get(), ModWood.STRIPPED_LIGHT_YELLOW_LOG.get())
                     .put(ModWood.SAUSAGE_TREE_WOOD.get(), ModWood.STRIPPED_LIGHT_YELLOW_WOOD.get())
-                    .put(ModWood.JACARANDA_LOG.get(), ModWood.STRIPPED_LIGHT_YELLOW_LOG.get())
-                    .put(ModWood.JACARANDA_WOOD.get(), ModWood.STRIPPED_LIGHT_YELLOW_WOOD.get())
+                    .put(ModWood.JACARANDA_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(ModWood.JACARANDA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
+                    .put(ModWood.SORBUS_LOG.get(), ModWood.STRIPPED_SORBUS_LOG.get())
+                    .put(ModWood.SORBUS_WOOD.get(), ModWood.STRIPPED_SORBUS_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();

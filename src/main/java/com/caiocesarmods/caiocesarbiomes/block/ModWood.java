@@ -259,6 +259,11 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> COAST_COTTONWOOD_WOOD = registerBlock("coast_cottonwood_wood",
             ModLogs::new);
+    //Jacaranda
+    public static final RegistryObject<Block> JACARANDA_LOG = registerBlock("jacaranda_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JACARANDA_WOOD = registerBlock("jacaranda_wood",
+            ModLogs::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
@@ -358,7 +363,7 @@ public class ModWood {
                     .hardnessAndResistance(3f)));
 
 
-    /// Tamarind (includes royal poinciana)
+    /// Tamarind
     public static final RegistryObject<Block> TAMARIND_LOG = registerBlock("tamarind_log",
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_WOOD = registerBlock("tamarind_wood",
@@ -366,10 +371,6 @@ public class ModWood {
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> JACARANDA_LOG = registerBlock("jacaranda_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JACARANDA_WOOD = registerBlock("jacaranda_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_LOG = registerBlock("stripped_tamarind_log",
             ModLogs::new);
@@ -935,6 +936,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("sorbus_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MYRTACEAE_SLAB = registerBlock("myrtaceae_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MYRTACEAE_STAIRS = registerBlock("myrtaceae_stairs",
+            () -> new StairsBlock(() -> MYRTACEAE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MYRTACEAE_FENCE = registerBlock("myrtaceae_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MYRTACEAE_FENCE_GATE = registerBlock("myrtaceae_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Pine (Pinus)
