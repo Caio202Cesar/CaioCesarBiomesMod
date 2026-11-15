@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "caiocesarbiomes:block/algarrobillo_planks",
-    "top": "caiocesarbiomes:block/algarrobillo_planks",
-    "side": "caiocesarbiomes:block/algarrobillo_planks"
-  }
-}
