@@ -27,13 +27,13 @@ public class TreeFeatures {
 
     //Weeping Willow
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_WEEPING_WILLOW = register("big_weeping_willow",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WEEPING_WILLOW_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.WILLOW_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_WILLOW_LEAVES),
                     new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 3, 1),
                     new TwoLayerFeature(1, 0, 2)).setIgnoreVines().build())));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_WILLOW_FANCY = register("weeping_willow_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.WEEPING_WILLOW_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.WILLOW_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.WEEPING_WILLOW_LEAVES),
                     new WeepingFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -2588,7 +2588,7 @@ public class TreeFeatures {
         protected static final BlockState OIL_PALM_LOG = ModWood.OIL_PALM_LOG.get().getDefaultState();
         protected static final BlockState OIL_PALM_LEAVES = TreeBlocks.OIL_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WEEPING_WILLOW_LOG = ModWood.WEEPING_WILLOW_LOG.get().getDefaultState();
+        protected static final BlockState WILLOW_LOG = ModWood.WILLOW_LOG.get().getDefaultState();
         protected static final BlockState WEEPING_WILLOW_LEAVES = TreeBlocks.WEEPING_WILLOW_LEAVES.get().getDefaultState();
 
         protected static final BlockState BAOBAB_LOG = ModWood.BAOBAB_LOG.get().getDefaultState();

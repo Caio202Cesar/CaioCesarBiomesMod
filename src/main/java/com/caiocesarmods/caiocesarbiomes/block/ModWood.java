@@ -853,9 +853,9 @@ public class ModWood {
 
 
     ///Willow
-    public static final RegistryObject<Block> WEEPING_WILLOW_LOG = registerBlock("weeping_willow_log",
+    public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log",
             ModLogs::new);
-    public static final RegistryObject<Block> WEEPING_WILLOW_WOOD = registerBlock("weeping_willow_wood",
+    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
             ModLogs::new);
