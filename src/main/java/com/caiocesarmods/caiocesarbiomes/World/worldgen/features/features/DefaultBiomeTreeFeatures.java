@@ -676,8 +676,8 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SOUTHERN_BEECHES = register("southern_beeches",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOUTHERN_BEECH_SHRUB.withChance(0.1F),
-                            LENGA_BEECH_TREE.withChance(0.4F), COIHUE_TREE.withChance(0.4F)),
-                            SOUTHERN_BEECH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            RED_AUTUMN_LENGA_TREE.withChance(0.4F), ORANGE_AUTUMN_LENGA_TREE.withChance(0.4F), YELLOW_AUTUMN_LENGA_TREE.withChance(0.4F),
+                            COIHUE_TREE.withChance(0.4F)), SOUTHERN_BEECH_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> LUSH_SOUTHERN_TUNDRA_VEGETATION = register("lush_southern_tundra_vegetation",
