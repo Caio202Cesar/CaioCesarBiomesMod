@@ -936,16 +936,16 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SORBUS_PLANKS = registerBlock("sorbus_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> MYRTACEAE_SLAB = registerBlock("myrtaceae_slab",
+    public static final RegistryObject<Block> SORBUS_SLAB = registerBlock("sorbus_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MYRTACEAE_STAIRS = registerBlock("myrtaceae_stairs",
-            () -> new StairsBlock(() -> MYRTACEAE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> SORBUS_STAIRS = registerBlock("sorbus_stairs",
+            () -> new StairsBlock(() -> SORBUS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> MYRTACEAE_FENCE = registerBlock("myrtaceae_fence",
+    public static final RegistryObject<Block> SORBUS_FENCE = registerBlock("sorbus_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MYRTACEAE_FENCE_GATE = registerBlock("myrtaceae_fence_gate",
+    public static final RegistryObject<Block> SORBUS_FENCE_GATE = registerBlock("sorbus_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
