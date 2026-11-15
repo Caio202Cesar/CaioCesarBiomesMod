@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/laurel_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/laurel_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/laurel_slab_top"
+    }
+  }
+}
