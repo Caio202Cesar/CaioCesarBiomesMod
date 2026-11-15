@@ -163,7 +163,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
-    //Já tem modelos de bloco de escada, cerca, laje
+    public static final RegistryObject<Block> MESQUITE_SLAB = registerBlock("mesquite_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MESQUITE_STAIRS = registerBlock("mesquite_stairs",
+            () -> new StairsBlock(() -> MESQUITE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MESQUITE_FENCE = registerBlock("mesquite_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MESQUITE_FENCE_GATE = registerBlock("mesquite_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     ///BIRCH WOODSET
