@@ -163,6 +163,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> MESQUITE_PLANKS = registerBlock("mesquite_planks",
             ModPlanks::new);
+    //Já tem modelos de bloco de escada, cerca, laje
 
 
     ///BIRCH WOODSET
