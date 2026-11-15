@@ -311,6 +311,18 @@ public class CaioCesarBiomesMod
                     .put(ModWood.JACARANDA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .put(ModWood.SORBUS_LOG.get(), ModWood.STRIPPED_SORBUS_LOG.get())
                     .put(ModWood.SORBUS_WOOD.get(), ModWood.STRIPPED_SORBUS_WOOD.get())
+                    .put(ModWood.PINYON_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.PINYON_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.JAPANESE_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.JAPANESE_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.MEDITERRANEAN_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.MEDITERRANEAN_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.YELLOW_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.YELLOW_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.MUGO_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.MUGO_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.PONDEROSA_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
+                    .put(ModWood.PONDEROSA_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
