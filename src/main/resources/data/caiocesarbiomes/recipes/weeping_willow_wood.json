@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "caiocesarbiomes:weeping_willow_log"
+      "item": "caiocesarbiomes:willow_log"
     }
   },
   "result": {
-    "item": "caiocesarbiomes:weeping_willow_wood",
+    "item": "caiocesarbiomes:willow_wood",
     "count": 3
   }
 }
