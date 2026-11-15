@@ -265,6 +265,11 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> JACARANDA_WOOD = registerBlock("jacaranda_wood",
             ModLogs::new);
+    //Hazelnut
+    public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> HAZELNUT_WOOD = registerBlock("hazelnut_wood",
+            ModLogs::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
@@ -496,12 +501,6 @@ public class ModWood {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-
-    /// Hazelnut
-    public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> HAZELNUT_PLANKS = registerBlock("hazelnut_planks",
-            ModPlanks::new);
 
 
 
