@@ -827,9 +827,19 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModPlanks::new);
-
-
-    //Camphor (laurel wood with special properties)
+    public static final RegistryObject<Block> LAUREL_SLAB = registerBlock("laurel_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> LAUREL_STAIRS = registerBlock("laurel_stairs",
+            () -> new StairsBlock(() -> LAUREL_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> LAUREL_FENCE = registerBlock("laurel_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> LAUREL_FENCE_GATE = registerBlock("laurel_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    //Camphor (laurel wood with special properties of repeling creepers)
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAMPHOR_LOG = registerBlock("stripped_camphor_log",
