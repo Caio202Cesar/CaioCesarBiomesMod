@@ -826,6 +826,8 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> LAUREL_PLANKS = registerBlock("laurel_planks",
             ModPlanks::new);
+
+
     //Camphor (laurel wood with special properties)
     public static final RegistryObject<Block> CAMPHOR_LOG = registerBlock("camphor_log",
             ModLogs::new);
