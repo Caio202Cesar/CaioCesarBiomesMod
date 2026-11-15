@@ -989,6 +989,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> PINE_SLAB = registerBlock("pine_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PINE_STAIRS = registerBlock("pine_stairs",
+            () -> new StairsBlock(() -> PINE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> PINE_FENCE = registerBlock("pine_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PINE_FENCE_GATE = registerBlock("pine_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
