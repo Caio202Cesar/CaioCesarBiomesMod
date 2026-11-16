@@ -30,6 +30,13 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(UmbrellaTrunkPlacer.CODEC)
             );
 
+    public static final TrunkPlacerType<ThinUmbrellaTrunkPlacer> THIN_UMBRELLA =
+            Registry.register(
+                    Registry.TRUNK_REPLACER,
+                    "caiocesarbiomes:thin_umbrella_trunk",
+                    new TrunkPlacerType<>(ThinUmbrellaTrunkPlacer.CODEC)
+            );
+
     public static final TrunkPlacerType<AncientMetrosiderosTrunkPlacer> ANCIENT_METROSIDEROS =
             Registry.register(
                     Registry.TRUNK_REPLACER,
