@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/mesquite_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/mesquite_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/mesquite_slab_top"
+    }
+  }
+}
