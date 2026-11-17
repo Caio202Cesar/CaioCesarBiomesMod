@@ -402,7 +402,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> PRUNUS_PLANKS = registerBlock("prunus_planks",
             ModPlanks::new);
-
+    public static final RegistryObject<Block> PRUNUS_SLAB = registerBlock("prunus_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PRUNUS_STAIRS = registerBlock("prunus_stairs",
+            () -> new StairsBlock(() -> PRUNUS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> PRUNUS_FENCE = registerBlock("prunus_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PRUNUS_FENCE_GATE = registerBlock("prunus_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
     /// Casuarina
     public static final RegistryObject<Block> CASUARINA_LOG = registerBlock("casuarina_log",
