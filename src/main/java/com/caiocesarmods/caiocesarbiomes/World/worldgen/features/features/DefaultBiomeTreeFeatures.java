@@ -556,7 +556,7 @@ public class DefaultBiomeTreeFeatures {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_EXTRA_VEGETATION = register("savanna_extra_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
-                            SAUSAGE_TREE.withChance(0.13F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F),
+                            SAUSAGE_TREE1.withChance(0.13F), SAUSAGE_TREE2.withChance(0.13F), INDIAN_CORAL_FANCY_TREE.withChance(0.19F),
                             INDIAN_CORAL_TREE.withChance(0.089F), TAMARIND_TREE.withChance(0.19F), MARULA_TREE.withChance(0.24F),
                             TALL_BISMARCK_PALM.withChance(0.32F), ACACIA_TREE_WITH_GLORIOSA.withChance(0.08F),
                             BISMARCK_PALM.withChance(0.3F), JACKALBERRY_TREE.withChance(0.3F), PLUMERIA_ORANGE_TREE.withChance(0.071F),

@@ -1678,7 +1678,15 @@ public class TreeFeatures {
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Sausage Tree (savanna)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAUSAGE_TREE = register("sausage_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAUSAGE_TREE1 = register("sausage_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAUSAGE_TREE_LOG),
+                    new SimpleBlockStateProvider(States.SAUSAGE_TREE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new ForkyTrunkPlacer(6, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
+                            ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAUSAGE_TREE2 = register("sausage_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAUSAGE_TREE_LOG),
                     new SimpleBlockStateProvider(States.SAUSAGE_TREE_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
@@ -1693,13 +1701,17 @@ public class TreeFeatures {
                     new SimpleBlockStateProvider(States.GUAVA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
+                    ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_GUAVA_TREE = register("purple_guava_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_GUAVA_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT,
+                    ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT)).setIgnoreVines().build()));
 
     //Sugar Apple
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUGAR_APPLE_TREE = register("sugar_apple_tree",

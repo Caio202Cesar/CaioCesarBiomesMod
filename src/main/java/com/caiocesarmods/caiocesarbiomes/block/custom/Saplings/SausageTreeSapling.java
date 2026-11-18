@@ -127,7 +127,11 @@ public class SausageTreeSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.SAUSAGE_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.SAUSAGE_TREE2;
+            } else {
+                return TreeFeatures.SAUSAGE_TREE1;
+            }
         }
     }
 }
