@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/white_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/white_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/white_slab_top"
+    }
+  }
+}
