@@ -212,9 +212,6 @@ public class ModWood {
             ModPlanks::new);
 
 
-
-
-
     /// Olive
     public static final RegistryObject<Block> OLIVE_LOG = registerBlock("olive_log",
             ModLogs::new);
@@ -280,6 +277,11 @@ public class ModWood {
     public static final RegistryObject<Block> HAZELNUT_LOG = registerBlock("hazelnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> HAZELNUT_WOOD = registerBlock("hazelnut_wood",
+            ModLogs::new);
+    //Sausage Tree
+    public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
             ModLogs::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
@@ -385,21 +387,24 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_WOOD = registerBlock("tamarind_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TAMARIND_LOG = registerBlock("stripped_tamarind_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_TAMARIND_WOOD = registerBlock("stripped_tamarind_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
             ModPlanks::new);
-
-
-
-
-    public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_LOG = registerBlock("stripped_tamarind_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_WOOD = registerBlock("stripped_tamarind_wood",
-            ModLogs::new);
-
+    public static final RegistryObject<Block> TAMARIND_SLAB = registerBlock("tamarind_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> TAMARIND_STAIRS = registerBlock("tamarind_stairs",
+            () -> new StairsBlock(() -> TAMARIND_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> TAMARIND_FENCE = registerBlock("tamarind_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> TAMARIND_FENCE_GATE = registerBlock("tamarind_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Prunus
