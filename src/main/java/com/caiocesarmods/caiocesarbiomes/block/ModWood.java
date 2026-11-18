@@ -385,6 +385,12 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> TAMARIND_WOOD = registerBlock("tamarind_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> TAMARIND_PLANKS = registerBlock("tamarind_planks",
+            ModPlanks::new);
+
+
+
+
     public static final RegistryObject<Block> SAUSAGE_TREE_LOG = registerBlock("sausage_tree_log",
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
@@ -393,8 +399,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIGHT_YELLOW_WOOD = registerBlock("stripped_tamarind_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> LIGHT_YELLOW_PLANKS = registerBlock("tamarind_planks",
-            ModPlanks::new);
+
 
 
     /// Prunus
