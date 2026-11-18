@@ -27,6 +27,37 @@ public class ModWood {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, CaioCesarBiomesMod.MOD_ID);
 
+
+    ///BIRCH WOODSET
+    //Crape Myrtle
+    public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CRAPE_MYRTLE_WOOD = registerBlock("crape_myrtle_wood",
+            ModLogs::new);
+    //Pomegranate
+    public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
+            ModLogs::new);
+    //Sweetbay Magnolia
+    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_LOG = registerBlock("sweetbay_magnolia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_WOOD = registerBlock("sweetbay_magnolia_wood",
+            ModLogs::new);
+    //Elderberry
+    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
+            ModLogs::new);
+    //Royal Poinciana
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
+            ModLogs::new);
+
+
+
+
     ///Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
@@ -187,34 +218,6 @@ public class ModWood {
     public static final RegistryObject<Block> MESQUITE_FENCE_GATE = registerBlock("mesquite_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-
-    ///BIRCH WOODSET
-    //Crape Myrtle
-    public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CRAPE_MYRTLE_WOOD = registerBlock("crape_myrtle_wood",
-            ModLogs::new);
-    //Pomegranate
-    public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
-            ModLogs::new);
-    //Sweetbay Magnolia
-    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_LOG = registerBlock("sweetbay_magnolia_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> SWEETBAY_MAGNOLIA_WOOD = registerBlock("sweetbay_magnolia_wood",
-            ModLogs::new);
-    //Elderberry
-    public static final RegistryObject<Block> ELDERBERRY_LOG = registerBlock("elderberry_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ELDERBERRY_WOOD = registerBlock("elderberry_wood",
-            ModLogs::new);
-    //Royal Poinciana
-    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
-            ModLogs::new);
 
 
     /// Southern Magnolia
@@ -675,8 +678,11 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Orchid Tree/Bauhinia/Mountain Ebony
+    ///JUNGLE woodset
+    //Orchid Tree
     public static final RegistryObject<Block> ORCHID_TREE_LOG = registerBlock("orchid_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ORCHID_TREE_WOOD = registerBlock("orchid_tree_wood",
             ModLogs::new);
 
 
