@@ -101,6 +101,18 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> CYPRESS_PLANKS = registerBlock("cypress_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> CYPRESS_SLAB = registerBlock("cypress_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CYPRESS_STAIRS = registerBlock("cypress_stairs",
+            () -> new StairsBlock(() -> CYPRESS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> CYPRESS_FENCE = registerBlock("cypress_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CYPRESS_FENCE_GATE = registerBlock("cypress_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Palm woods
@@ -302,9 +314,6 @@ public class ModWood {
     public static final RegistryObject<Block> LIGHTWOOD_FENCE_GATE = registerBlock("lightwood_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-
-    /// Ipe
 
 
     /// Strawberry Tree
