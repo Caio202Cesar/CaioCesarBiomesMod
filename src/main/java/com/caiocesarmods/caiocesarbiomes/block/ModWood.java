@@ -1094,6 +1094,7 @@ public class ModWood {
     public static final RegistryObject<Block> LIGHT_GRAY_FENCE_GATE = registerBlock("light_gray_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    //
     //Cyan
     public static final RegistryObject<Block> CYAN_PLANKS = registerBlock("cyan_planks",
             ModPlanks::new);
