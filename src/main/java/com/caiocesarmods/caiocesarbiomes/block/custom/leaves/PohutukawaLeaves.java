@@ -37,23 +37,25 @@ public class PohutukawaLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for tropical biomes
-        if (temp >= 0.9F && random.nextInt(175) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        if ("SUMMER".equals(currentSeason)) {
+            //Pattern for tropical biomes
+            if (temp >= 0.9F && random.nextInt(175) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
+                worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+                return;
+            }
+
+            //Pattern for subtropical biomes
+            if (temp <= 0.89F && random.nextInt(15) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-            return;
-        }
-
-        //Pattern for subtropical biomes
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreeBlocks.POHUTUKAWA_SPARSE_FLOWERING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
         }
     }
 
