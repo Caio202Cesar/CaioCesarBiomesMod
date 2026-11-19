@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "food",
+  "group": "planks",
   "pattern": [
     "###",
     "#W#",
