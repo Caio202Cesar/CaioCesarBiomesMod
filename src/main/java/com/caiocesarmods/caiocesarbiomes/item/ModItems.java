@@ -667,7 +667,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.YEW_JAM_TOAST)));
     public static final RegistryObject<Item> BOILED_MILK_BUCKET = ITEMS.register("boiled_milk_bucket",
             () -> new BoiledMilkBucketItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.CULINARY)
-                    .food(ModFoods.BOILED_MILK)));
+                    .food(ModFoods.BOILED_MILK), +1, -2, 350));
     public static final RegistryObject<Item> SWEET_BERRY_JUICE = ITEMS.register("sweet_berry_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.CULINARY).maxStackSize(1).food(ModFoods.SWEET_BERRY_JUICE)));
     public static final RegistryObject<Item> WATERMELON_JUICE = ITEMS.register("watermelon_juice",

@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
+import com.caiocesarmods.caioclimates.item.ThermalFoodItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,9 +13,9 @@ import net.minecraft.util.DrinkHelper;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-public class BoiledMilkBucketItem extends Item {
-    public BoiledMilkBucketItem(Properties properties) {
-        super(properties);
+public class BoiledMilkBucketItem extends ThermalFoodItem {
+    public BoiledMilkBucketItem(Properties properties, int heatChange, int coldChange, int effectDuration) {
+        super(properties, heatChange, coldChange, effectDuration);
     }
 
     /**
