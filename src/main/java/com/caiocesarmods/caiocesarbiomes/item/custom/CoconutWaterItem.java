@@ -1,5 +1,6 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
+import com.caiocesarmods.caioclimates.item.ThermalFoodItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,9 +10,9 @@ import net.minecraft.util.DrinkHelper;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-public class CoconutWaterItem extends Item {
-    public CoconutWaterItem(Properties builder) {
-        super(builder);
+public class CoconutWaterItem extends ThermalFoodItem {
+    public CoconutWaterItem(Properties properties, int heatChange, int coldChange, int effectDuration) {
+        super(properties, heatChange, coldChange, effectDuration);
     }
     /**
      * How long it takes to use or consume an item

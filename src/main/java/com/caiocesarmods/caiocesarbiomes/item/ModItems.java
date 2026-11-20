@@ -205,7 +205,8 @@ public class ModItems {
     public static final RegistryObject<Item> STARFRUIT_SLICE = ITEMS.register("starfruit_slice",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.STARFRUIT_SLICE)));
     public static final RegistryObject<Item> COCONUT_WATER = ITEMS.register("coconut_water",
-            () -> new CoconutWaterItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COCONUT_WATER)));
+            () -> new CoconutWaterItem(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.COCONUT_WATER),
+                    -1, 0, 400));
     public static final RegistryObject<Item> WALNUT_BREAD = ITEMS.register("walnut_bread",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.WALNUT_BREAD)));
     public static final RegistryObject<Item> PECAN_BREAD = ITEMS.register("pecan_bread",
