@@ -1,9 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.item.custom;
 
+import com.caiocesarmods.caioclimates.item.ThermalFoodItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -11,9 +11,9 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class ChorusIceCream extends Item {
-    public ChorusIceCream(Item.Properties builder) {
-        super(builder);
+public class ChorusIceCream extends ThermalFoodItem {
+    public ChorusIceCream(Properties properties, int heatChange, int coldChange, int effectDuration) {
+        super(properties, heatChange, coldChange, effectDuration);
     }
 
     /**
