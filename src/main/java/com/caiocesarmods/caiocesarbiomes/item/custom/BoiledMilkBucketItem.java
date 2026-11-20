@@ -14,8 +14,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class BoiledMilkBucketItem extends ThermalFoodItem {
-    public BoiledMilkBucketItem(Properties properties, int heatChange, int coldChange, int effectDuration) {
-        super(properties, heatChange, coldChange, effectDuration);
+    public BoiledMilkBucketItem(Properties properties, int heatChange, int coldChange) {
+        super(properties, heatChange, coldChange);
     }
 
     /**

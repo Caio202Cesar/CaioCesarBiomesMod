@@ -12,8 +12,8 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class ChorusIceCream extends ThermalFoodItem {
-    public ChorusIceCream(Properties properties, int heatChange, int coldChange, int effectDuration) {
-        super(properties, heatChange, coldChange, effectDuration);
+    public ChorusIceCream(Properties properties, int heatChange, int coldChange) {
+        super(properties, heatChange, coldChange);
     }
 
     /**

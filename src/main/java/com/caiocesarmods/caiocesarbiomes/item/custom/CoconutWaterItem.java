@@ -11,8 +11,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class CoconutWaterItem extends ThermalFoodItem {
-    public CoconutWaterItem(Properties properties, int heatChange, int coldChange, int effectDuration) {
-        super(properties, heatChange, coldChange, effectDuration);
+    public CoconutWaterItem(Properties properties, int heatChange, int coldChange) {
+        super(properties, heatChange, coldChange);
     }
     /**
      * How long it takes to use or consume an item
