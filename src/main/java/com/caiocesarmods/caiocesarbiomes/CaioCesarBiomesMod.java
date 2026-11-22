@@ -331,6 +331,8 @@ public class CaioCesarBiomesMod
                     .put(ModWood.FIG_WOOD.get(), ModWood.STRIPPED_FIG_WOOD.get())
                     .put(ModWood.JUNGLE_FIG_LOG.get(), ModWood.STRIPPED_FIG_LOG.get())
                     .put(ModWood.JUNGLE_FIG_WOOD.get(), ModWood.STRIPPED_FIG_WOOD.get())
+                    .put(ModWood.LIQUIDAMBAR_LOG.get(), ModWood.STRIPPED_LIQUIDAMBAR_LOG.get())
+                    .put(ModWood.LIQUIDAMBAR_WOOD.get(), ModWood.STRIPPED_LIQUIDAMBAR_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();

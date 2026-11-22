@@ -872,9 +872,9 @@ public class ModWood {
     ///Liquidambar
     public static final RegistryObject<Block> LIQUIDAMBAR_LOG = registerBlock("liquidambar_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_liquidambar_log",
-            ModLogs::new);
     public static final RegistryObject<Block> LIQUIDAMBAR_WOOD = registerBlock("liquidambar_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_LOG = registerBlock("stripped_liquidambar_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LIQUIDAMBAR_WOOD = registerBlock("stripped_liquidambar_wood",
             ModLogs::new);
