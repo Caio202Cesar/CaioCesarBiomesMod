@@ -332,6 +332,11 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> SAUSAGE_TREE_WOOD = registerBlock("sausage_tree_wood",
             ModLogs::new);
+    // Bayberry (Myrica/Morella)
+    public static final RegistryObject<Block> BAYBERRY_LOG = registerBlock("bayberry_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BAYBERRY_WOOD = registerBlock("bayberry_wood",
+            ModLogs::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);
@@ -993,19 +998,6 @@ public class ModWood {
     public static final RegistryObject<Block> MYRTACEAE_FENCE_GATE = registerBlock("myrtaceae_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-
-    /// Bayberry (Myrica)
-    public static final RegistryObject<Block> BAYBERRY_LOG = registerBlock("bayberry_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BAYBERRY_WOOD = registerBlock("bayberry_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAYBERRY_LOG = registerBlock("stripped_bayberry_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BAYBERRY_WOOD = registerBlock("stripped_bayberry_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> BAYBERRY_PLANKS = registerBlock("bayberry_planks",
-            ModPlanks::new);
 
 
     /// Sorbus

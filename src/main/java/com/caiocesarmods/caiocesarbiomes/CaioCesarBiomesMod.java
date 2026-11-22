@@ -309,8 +309,14 @@ public class CaioCesarBiomesMod
                     .put(ModWood.ROYAL_POINCIANA_WOOD.get(), Blocks.STRIPPED_BIRCH_WOOD)
                     .put(ModWood.SAUSAGE_TREE_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
                     .put(ModWood.SAUSAGE_TREE_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
+                    .put(ModWood.HAZELNUT_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(ModWood.HAZELNUT_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .put(ModWood.JACARANDA_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
                     .put(ModWood.JACARANDA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
+                    .put(ModWood.PERSIMMON_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(ModWood.PERSIMMON_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
+                    .put(ModWood.ERYTHRINA_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(ModWood.ERYTHRINA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .put(ModWood.SORBUS_LOG.get(), ModWood.STRIPPED_SORBUS_LOG.get())
                     .put(ModWood.SORBUS_WOOD.get(), ModWood.STRIPPED_SORBUS_WOOD.get())
                     .put(ModWood.PINYON_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
@@ -333,6 +339,10 @@ public class CaioCesarBiomesMod
                     .put(ModWood.JUNGLE_FIG_WOOD.get(), ModWood.STRIPPED_FIG_WOOD.get())
                     .put(ModWood.LIQUIDAMBAR_LOG.get(), ModWood.STRIPPED_LIQUIDAMBAR_LOG.get())
                     .put(ModWood.LIQUIDAMBAR_WOOD.get(), ModWood.STRIPPED_LIQUIDAMBAR_WOOD.get())
+                    .put(ModWood.MULBERRY_LOG.get(), ModWood.STRIPPED_MULBERRY_LOG.get())
+                    .put(ModWood.MULBERRY_WOOD.get(), ModWood.STRIPPED_MULBERRY_WOOD.get())
+                    .put(ModWood.MAPLE_LOG.get(), ModWood.STRIPPED_MAPLE_LOG.get())
+                    .put(ModWood.MAPLE_WOOD.get(), ModWood.STRIPPED_MAPLE_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
