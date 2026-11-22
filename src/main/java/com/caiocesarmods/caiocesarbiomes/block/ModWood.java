@@ -63,8 +63,6 @@ public class ModWood {
             ModLogs::new);
 
 
-
-
     ///Araucaria
     public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
             ModLogs::new);
