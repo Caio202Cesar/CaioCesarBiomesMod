@@ -230,8 +230,26 @@ public class ModWood {
     /// Southern Magnolia
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_LOG = registerBlock("southern_magnolia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_WOOD = registerBlock("southern_magnolia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SOUTHERN_MAGNOLIA_LOG = registerBlock("stripped_southern_magnolia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SOUTHERN_MAGNOLIA_WOOD = registerBlock("stripped_southern_magnolia_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_PLANKS = registerBlock("southern_magnolia_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_SLAB = registerBlock("southern_magnolia_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_STAIRS = registerBlock("southern_magnolia_stairs",
+            () -> new StairsBlock(() -> SOUTHERN_MAGNOLIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_FENCE = registerBlock("southern_magnolia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SOUTHERN_MAGNOLIA_FENCE_GATE = registerBlock("southern_magnolia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     /// Olive
