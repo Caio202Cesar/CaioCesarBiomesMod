@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate_open",
   "textures": {
-    "texture": "brbiomesmod:block/southern_magnolia_planks"
+    "texture": "caiocesarbiomes:block/southern_magnolia_planks"
   }
 }
