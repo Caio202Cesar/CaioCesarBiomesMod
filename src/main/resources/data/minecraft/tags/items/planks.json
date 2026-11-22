@@ -21,7 +21,6 @@
     "caiocesarbiomes:yew_planks",
     "caiocesarbiomes:hemlock_planks",
     "caiocesarbiomes:beech_planks",
-    "caiocesarbiomes:lightwood_planks",
     "caiocesarbiomes:sweet_chestnut_planks",
     "caiocesarbiomes:carob_planks",
     "caiocesarbiomes:larch_planks",
@@ -48,7 +47,24 @@
     "caiocesarbiomes:podocarpus_planks",
     "caiocesarbiomes:myrtaceae_planks",
     "caiocesarbiomes:bayberry_planks",
-    "caiocesarbiomes:black_walnut_planks"
+    "caiocesarbiomes:lightwood_planks",
+    "caiocesarbiomes:black_walnut_planks",
+    "caiocesarbiomes:black_planks",
+    "caiocesarbiomes:blue_planks",
+    "caiocesarbiomes:brown_planks",
+    "caiocesarbiomes:cyan_planks",
+    "caiocesarbiomes:gray_planks",
+    "caiocesarbiomes:green_planks",
+    "caiocesarbiomes:light_blue_planks",
+    "caiocesarbiomes:light_gray_planks",
+    "caiocesarbiomes:lime_planks",
+    "caiocesarbiomes:magenta_planks",
+    "caiocesarbiomes:orange_planks",
+    "caiocesarbiomes:pink_planks",
+    "caiocesarbiomes:purple_planks",
+    "caiocesarbiomes:red_planks",
+    "caiocesarbiomes:white_planks",
+    "caiocesarbiomes:yellow_planks"
 
   ]
 }

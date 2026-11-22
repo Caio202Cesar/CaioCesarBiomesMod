@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "planks",
+  "pattern": [
+    "###",
+    "#W#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:lightwood_planks"
+    },
+    "W": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:yellow_planks",
+    "count": 8
+  }
+}
