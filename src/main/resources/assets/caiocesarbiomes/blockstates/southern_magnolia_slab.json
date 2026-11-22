@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "brbiomesmod:block/southern_magnolia_slab"
+      "model": "caiocesarbiomes:block/southern_magnolia_slab"
     },
     "type=double": {
-      "model": "brbiomesmod:block/southern_magnolia_planks"
+      "model": "caiocesarbiomes:block/southern_magnolia_planks"
     },
     "type=top": {
-      "model": "brbiomesmod:block/southern_magnolia_slab_top"
+      "model": "caiocesarbiomes:block/southern_magnolia_slab_top"
     }
   }
 }
