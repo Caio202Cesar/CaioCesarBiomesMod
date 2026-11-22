@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "log",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:southern_magnolia_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:southern_magnolia_wood",
+    "count": 3
+  }
+}
