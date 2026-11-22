@@ -325,6 +325,8 @@ public class CaioCesarBiomesMod
                     .put(ModWood.MUGO_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
                     .put(ModWood.PONDEROSA_PINE_LOG.get(), ModWood.STRIPPED_PINE_LOG.get())
                     .put(ModWood.PONDEROSA_PINE_WOOD.get(), ModWood.STRIPPED_PINE_WOOD.get())
+                    .put(ModWood.SOUTHERN_MAGNOLIA_LOG.get(), ModWood.STRIPPED_SOUTHERN_MAGNOLIA_LOG.get())
+                    .put(ModWood.SOUTHERN_MAGNOLIA_WOOD.get(), ModWood.STRIPPED_SOUTHERN_MAGNOLIA_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
