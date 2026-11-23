@@ -118,6 +118,7 @@ public class FigSapling extends SaplingBlock {
     }
 
     private static class FigTree extends Tree {
+
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
