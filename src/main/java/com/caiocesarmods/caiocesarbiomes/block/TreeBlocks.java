@@ -13,6 +13,8 @@ import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caioclimates.Seasons.FruitSeason;
 import com.caiocesarmods.caioclimates.block.SeasonalLeaves.CropLeavesBlock;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousBranches;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousLeaves;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -271,10 +273,10 @@ public class TreeBlocks {
     ///Milkwood = Apocynaceae
     //Plumeria
     public static final RegistryObject<Block> RED_PLUMERIA_LEAVES = registerBlock("plumeria_red_leaves",
-            () -> new RedPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_DRIED_BRANCHES));
     public static final RegistryObject<Block> RED_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_red_branches",
-            () -> new RedPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.RED_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> RED_PLUMERIA_SAPLING = registerBlock("plumeria_red_sapling",
             RedPlumeriaSapling::new);
@@ -282,11 +284,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_RED_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_red_sapling",
             () -> new FlowerPotBlock(TreeBlocks.RED_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> WHITE_PLUMERIA_LEAVES = registerBlock("plumeria_white_leaves",
-            () -> new WhitePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_DRIED_BRANCHES));
     public static final RegistryObject<Block> WHITE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_white_branches",
-            () -> new WhitePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.WHITE_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> WHITE_PLUMERIA_SAPLING = registerBlock("plumeria_white_sapling",
             WhitePlumeriaSapling::new);
@@ -294,11 +297,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_WHITE_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_white_sapling",
             () -> new FlowerPotBlock(TreeBlocks.WHITE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> YELLOW_PLUMERIA_LEAVES = registerBlock("plumeria_yellow_leaves",
-            () -> new YellowPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_DRIED_BRANCHES));
     public static final RegistryObject<Block> YELLOW_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_yellow_branches",
-            () -> new YellowPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.YELLOW_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> YELLOW_PLUMERIA_SAPLING = registerBlock("plumeria_yellow_sapling",
             YellowPlumeriaSapling::new);
@@ -306,11 +310,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_YELLOW_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_yellow_sapling",
             () -> new FlowerPotBlock(TreeBlocks.YELLOW_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> PINK_PLUMERIA_LEAVES = registerBlock("plumeria_pink_leaves",
-            () -> new PinkPlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_DRIED_BRANCHES));
     public static final RegistryObject<Block> PINK_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_pink_branches",
-            () -> new PinkPlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.PINK_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> PINK_PLUMERIA_SAPLING = registerBlock("plumeria_pink_sapling",
             PinkPlumeriaSapling::new);
@@ -318,11 +323,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_PINK_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.PINK_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> ORANGE_PLUMERIA_LEAVES = registerBlock("plumeria_orange_leaves",
-            () -> new OrangePlumeriaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_DRIED_BRANCHES));
     public static final RegistryObject<Block> ORANGE_PLUMERIA_DRIED_BRANCHES = registerBlock("plumeria_orange_branches",
-            () -> new OrangePlumeriaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.ORANGE_PLUMERIA_LEAVES));
     public static final RegistryObject<Block> ORANGE_PLUMERIA_SAPLING = registerBlock("plumeria_orange_sapling",
             OrangePlumeriaSapling::new);
@@ -330,6 +336,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_ORANGE_PLUMERIA_SAPLING = BLOCKS.register("potted_plumeria_orange_sapling",
             () -> new FlowerPotBlock(TreeBlocks.ORANGE_PLUMERIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Oleander
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_LEAVES = registerBlock("oleander_dark_pink_leaves",
             () -> new OleanderDarkPinkLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
