@@ -12,9 +12,7 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.plants.BaldCypressAerialRo
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import com.caiocesarmods.caioclimates.Seasons.FruitSeason;
-import com.caiocesarmods.caioclimates.block.SeasonalLeaves.CropLeavesBlock;
-import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousBranches;
-import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousLeaves;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -339,10 +337,10 @@ public class TreeBlocks {
 
     //Oleander
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_LEAVES = registerBlock("oleander_dark_pink_leaves",
-            () -> new OleanderDarkPinkLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_DARK_PINK_DIEBACK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_DIEBACK_LEAVES = registerBlock("oleander_dark_pink_dieback_leaves",
-            () -> new OleanderDarkPinkDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_DARK_PINK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_SAPLING = registerBlock("oleander_dark_pink_sapling",
             DarkPinkOleanderSapling::new);
@@ -350,11 +348,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OLEANDER_DARK_PINK_SAPLING = BLOCKS.register("potted_oleander_dark_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_DARK_PINK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_PINK_LEAVES = registerBlock("oleander_pink_leaves",
-            () -> new OleanderPinkLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_PINK_DIEBACK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_PINK_DIEBACK_LEAVES = registerBlock("oleander_pink_dieback_leaves",
-            () -> new OleanderPinkDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_PINK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_PINK_SAPLING = registerBlock("oleander_pink_sapling",
             PinkOleanderSapling::new);
@@ -362,11 +361,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OLEANDER_PINK_SAPLING = BLOCKS.register("potted_oleander_pink_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_PINK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
-            () -> new OleanderRedLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_RED_DIEBACK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_RED_DIEBACK_LEAVES = registerBlock("oleander_red_dieback_leaves",
-            () -> new OleanderRedDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_RED_LEAVES));
     public static final RegistryObject<Block> OLEANDER_RED_SAPLING = registerBlock("oleander_red_sapling",
             RedOleanderSapling::new);
@@ -374,11 +374,12 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OLEANDER_RED_SAPLING = BLOCKS.register("potted_oleander_red_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_RED_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> OLEANDER_WHITE_LEAVES = registerBlock("oleander_white_leaves",
-            () -> new OleanderWhiteLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_WHITE_DIEBACK_LEAVES));
     public static final RegistryObject<Block> OLEANDER_WHITE_DIEBACK_LEAVES = registerBlock("oleander_white_dieback_leaves",
-            () -> new OleanderWhiteDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new OleanderDiebackLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreeBlocks.OLEANDER_WHITE_LEAVES));
     public static final RegistryObject<Block> OLEANDER_WHITE_SAPLING = registerBlock("oleander_white_sapling",
             WhiteOleanderSapling::new);
@@ -386,6 +387,7 @@ public class TreeBlocks {
     public static final RegistryObject<Block> POTTED_OLEANDER_WHITE_SAPLING = BLOCKS.register("potted_oleander_white_sapling",
             () -> new FlowerPotBlock(TreeBlocks.OLEANDER_WHITE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     //Yellow oleander
     public static final RegistryObject<Block> YELLOW_OLEANDER_LEAVES = registerBlock("yellow_oleander_leaves",
             ModLeaves::new);
