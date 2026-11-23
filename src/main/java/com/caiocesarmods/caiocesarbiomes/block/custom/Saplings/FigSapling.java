@@ -2,6 +2,7 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Saplings;
 
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caioclimates.block.ClimaticTree;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
@@ -117,12 +118,30 @@ public class FigSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class FigTree extends Tree {
+    private static class FigTree extends ClimaticTree {
 
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getClimaticTreeFeature(Random random, boolean b, World world, BlockPos blockPos) {
+            
+            Biome biome = world.getBiome(blockPos);
+            float temp = biome.getTemperature(blockPos);
+            
+            if (temp < 0.74F) {
+                if (random.nextInt(10) == 0) {
+                    return TreeFeatures.WHITE_FIG_BUSH;
+                } else {
+                    return TreeFeatures.FIG_BUSH;
+                }
+            }
+
+            return getTreeFeature(random, b);
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            if (randomIn.nextInt(10) == 0) {
                 return TreeFeatures.WHITE_FIG_TREE;
             } else {
                 return TreeFeatures.FORKY_FIG_TREE;
