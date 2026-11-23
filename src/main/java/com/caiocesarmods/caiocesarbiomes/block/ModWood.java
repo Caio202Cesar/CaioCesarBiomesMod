@@ -114,22 +114,6 @@ public class ModWood {
             ModPlanks::new);
 
 
-    /// Fig
-    public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> JUNGLE_FIG_WOOD = registerBlock("jungle_fig_wood",
-            SuculentTreeLog::new);
-    public static final RegistryObject<Block> STRIPPED_FIG_LOG = registerBlock("stripped_fig_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_FIG_WOOD = registerBlock("stripped_fig_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
-            ModPlanks::new);
-
 
     /// Cypress
     public static final RegistryObject<Block> ITALIAN_CYPRESS_LOG = registerBlock("italian_cypress_log",
@@ -335,6 +319,11 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> BAYBERRY_WOOD = registerBlock("bayberry_wood",
             ModLogs::new);
+    //Fig
+    public static final RegistryObject<Block> FICUS_LOG = registerBlock("ficus_log",
+            SuculentTreeLog::new);
+    public static final RegistryObject<Block> FICUS_WOOD = registerBlock("ficus_wood",
+            SuculentTreeLog::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
             ModLogs::new);

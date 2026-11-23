@@ -1069,7 +1069,7 @@ public class TreeFeatures {
 
     //Jungle Fig Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_FIG_TREE = register("weeping_fig_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -1077,13 +1077,13 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.PEPPERCORN_VINE_PLACEMENT,
                             ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WEEPING_FIG_FANCY_TREE = register("weeping_fig_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.WEEPING_FIG_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_WEEPING_FIG_TREE = register("weeping_fig_big_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.WEEPING_FIG_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
@@ -1093,7 +1093,7 @@ public class TreeFeatures {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_TREE = register("indian_laurel_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -1101,13 +1101,13 @@ public class TreeFeatures {
                     .setDecorators(ImmutableList.of(ModFeatures.Placements.GLORIOSA_VINE_PLACEMENT,
                             ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> INDIAN_LAUREL_FANCY_TREE = register("indian_laurel_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.INDIAN_LAUREL_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_INDIAN_LAUREL_TREE = register("indian_laurel_big_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.INDIAN_LAUREL_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
@@ -1117,7 +1117,7 @@ public class TreeFeatures {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RUBBER_TREE = register("rubber_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUNGLE_FIG_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.FIG_LOG),
                     new SimpleBlockStateProvider(States.RUBBER_TREE_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(7, 4, 2),
@@ -2718,11 +2718,6 @@ public class TreeFeatures {
         protected static final BlockState BUNYA_PINE_LEAVES = TreeBlocks.BUNYA_PINE_LEAVES.get().getDefaultState();
         protected static final BlockState HOOP_PINE_LEAVES = TreeBlocks.HOOP_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JUNGLE_FIG_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
-        protected static final BlockState WEEPING_FIG_LEAVES = TreeBlocks.WEEPING_FIG_LEAVES.get().getDefaultState();
-        protected static final BlockState INDIAN_LAUREL_LEAVES = TreeBlocks.INDIAN_LAUREL_LEAVES.get().getDefaultState();
-        protected static final BlockState RUBBER_TREE_LEAVES = TreeBlocks.RUBBER_TREE_LEAVES.get().getDefaultState();
-
         protected static final BlockState HOLM_OAK_LOG = ModWood.HOLM_OAK_LOG.get().getDefaultState();
         protected static final BlockState HOLM_OAK_LEAVES = TreeBlocks.HOLM_OAK_LEAVES.get().getDefaultState();
         protected static final BlockState KERMES_OAK_LEAVES = TreeBlocks.KERMES_OAK_LEAVES.get().getDefaultState();
@@ -2748,6 +2743,9 @@ public class TreeFeatures {
         protected static final BlockState FIG_LEAVES = TreeBlocks.FIG_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_FIG_LEAVES = TreeBlocks.WHITE_FIG_LEAVES.get().getDefaultState();
         protected static final BlockState SYCAMORE_FIG_LEAVES = TreeBlocks.SYCAMORE_FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState WEEPING_FIG_LEAVES = TreeBlocks.WEEPING_FIG_LEAVES.get().getDefaultState();
+        protected static final BlockState INDIAN_LAUREL_LEAVES = TreeBlocks.INDIAN_LAUREL_LEAVES.get().getDefaultState();
+        protected static final BlockState RUBBER_TREE_LEAVES = TreeBlocks.RUBBER_TREE_LEAVES.get().getDefaultState();
 
         protected static final BlockState OLIVE_LOG = ModWood.OLIVE_LOG.get().getDefaultState();
         protected static final BlockState OLIVE_LEAVES = TreeBlocks.OLIVE_LEAVES.get().getDefaultState();
