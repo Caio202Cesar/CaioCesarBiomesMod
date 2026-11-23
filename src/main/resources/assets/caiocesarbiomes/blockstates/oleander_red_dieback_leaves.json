@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "caiocesarbiomes:block/oleander_dieback_leaves"
+      "model": "caioclimates:block/scorched_oleander_leaves"
     }
   }
 }
