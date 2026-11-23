@@ -320,9 +320,9 @@ public class ModWood {
     public static final RegistryObject<Block> BAYBERRY_WOOD = registerBlock("bayberry_wood",
             ModLogs::new);
     //Fig
-    public static final RegistryObject<Block> FICUS_LOG = registerBlock("ficus_log",
+    public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
             SuculentTreeLog::new);
-    public static final RegistryObject<Block> FICUS_WOOD = registerBlock("ficus_wood",
+    public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood",
             SuculentTreeLog::new);
     //Stripped
     public static final RegistryObject<Block> STRIPPED_LIGHTWOOD_LOG = registerBlock("stripped_lightwood_log",
