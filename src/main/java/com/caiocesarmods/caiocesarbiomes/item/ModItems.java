@@ -704,7 +704,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> CHUSQUEA_BAMBOO = ITEMS.register("chusquea_bamboo",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
-
+    public static final RegistryObject<Item> FICUS_LATEX = ITEMS.register("ficus_latex",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",

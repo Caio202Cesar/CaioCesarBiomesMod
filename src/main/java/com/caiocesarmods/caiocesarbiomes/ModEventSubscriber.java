@@ -2,9 +2,6 @@ package com.caiocesarmods.caiocesarbiomes;
 
 import com.caiocesarmods.caiocesarbiomes.Util.BiomeHUDHandler;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -13,22 +10,20 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.IServerWorld;
+import net.minecraft.world.LightType;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.world.SaplingGrowTreeEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Mod.EventBusSubscriber(modid = CaioCesarBiomesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventSubscriber {
@@ -39,7 +34,7 @@ public class ModEventSubscriber {
     }
 
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event, IServerWorld worldIn, BlockPos pos, Random randomIn) {
         if (event.phase != TickEvent.Phase.END) return;
 
         PlayerEntity player = event.player;
@@ -59,6 +54,13 @@ public class ModEventSubscriber {
             }
         }
 
+        boolean isPlayerUnderSun = isValidLightLevel(worldIn, pos, randomIn);
+
+        //Get burn from sun by holding ficus latex.
+        if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.FICUS_LATEX.get() && isPlayerUnderSun) {
+            player.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
+        }
+
         if (!player.world.isRemote) {
             for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
                 ItemStack stack = player.inventory.getStackInSlot(i);
@@ -74,6 +76,15 @@ public class ModEventSubscriber {
                     }
                 }
             }
+        }
+    }
+
+    public static boolean isValidLightLevel(IServerWorld worldIn, BlockPos pos, Random randomIn) {
+        if (worldIn.getLightFor(LightType.SKY, pos) > randomIn.nextInt(32)) {
+            return false;
+        } else {
+            int i = worldIn.getWorld().isThundering() ? worldIn.getNeighborAwareLightSubtracted(pos, 10) : worldIn.getLight(pos);
+            return i <= randomIn.nextInt(8);
         }
     }
 
