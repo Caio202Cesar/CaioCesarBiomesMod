@@ -105,22 +105,23 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack itemStack = new ItemStack(ModItems.RIPE_CREEPING_FIG.get());
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
+            ItemStack fruit = new ItemStack(ModItems.RIPE_CREEPING_FIG.get() && ModItems.FICUS_LATEX.get());
 
-            worldIn.addEntity(itemEntity);
+            ItemEntity fruitEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, fruit);
 
-            BlockState currentState = state;
+            worldIn.addEntity(fruitEntity);
+
             BlockState newState = ModPlants.CREEPING_FIG_VINE.get().getDefaultState();
 
-            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
-                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+            newState = newState.with(VineBlock.NORTH, state.get(VineBlock.NORTH)).with(VineBlock.EAST, state.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, state.get(VineBlock.SOUTH)).with(VineBlock.WEST, state.get(VineBlock.WEST));
 
             worldIn.setBlockState(pos, newState, 3);
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
+
         return ActionResultType.SUCCESS;
     }
 
