@@ -2360,7 +2360,7 @@ public class TreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CALLISTEMON_TREE2 = register("callistemon_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BOTTLEBRUSH_LOG),
                     new SimpleBlockStateProvider(States.CALLISTEMON_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(6, 3, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))
