@@ -55,6 +55,15 @@
                 }
               ],
               "name": "caiocesarbiomes:ripe_creeping_fig"
+            },
+            {
+              "rolls": 2,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "caiocesarbiomes:ficus_latex"
+                }
+              ]
             }
           ]
         }
