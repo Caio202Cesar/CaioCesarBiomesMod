@@ -14,6 +14,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IServerWorld;
 import net.minecraft.world.LightType;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.TickEvent;
@@ -33,12 +34,27 @@ public class ModEventSubscriber {
         BiomeHUDHandler.onRenderGameOverlay(event);
     }
 
+    public static boolean isValidLightLevel(IServerWorld worldIn, BlockPos pos, Random randomIn) {
+        if (worldIn.getLightFor(LightType.SKY, pos) > randomIn.nextInt(32)) {
+            return false;
+        } else {
+            int i = worldIn.getWorld().isThundering() ? worldIn.getNeighborAwareLightSubtracted(pos, 10) : worldIn.getLight(pos);
+            return i <= randomIn.nextInt(8);
+        }
+    }
+
+
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event, IServerWorld worldIn, BlockPos pos, Random randomIn) {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
 
         PlayerEntity player = event.player;
-        ItemStack heldItem = player.getHeldItemMainhand(); // or getHeldItemOffhand()
+        ItemStack heldItem = player.getHeldItemMainhand();
+
+        BlockPos pos = player.getPosition();
+        World world = player.world;
+
+        boolean exposedToSun = world.isDaytime() && world.canSeeSky(pos) && !world.isRainingAt(pos);
 
         if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.DURIAN.get()) {
             // Apply nausea effect if not already present
@@ -53,11 +69,9 @@ public class ModEventSubscriber {
                 player.addPotionEffect(new EffectInstance(Effects.NAUSEA, 200, 100, false, false));
             }
         }
-
-        boolean isPlayerUnderSun = isValidLightLevel(worldIn, pos, randomIn);
-
+        
         //Get burn from sun by holding ficus latex.
-        if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.FICUS_LATEX.get() && isPlayerUnderSun) {
+        if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.FICUS_LATEX.get() && exposedToSun) {
             player.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
         }
 
@@ -78,16 +92,7 @@ public class ModEventSubscriber {
             }
         }
     }
-
-    public static boolean isValidLightLevel(IServerWorld worldIn, BlockPos pos, Random randomIn) {
-        if (worldIn.getLightFor(LightType.SKY, pos) > randomIn.nextInt(32)) {
-            return false;
-        } else {
-            int i = worldIn.getWorld().isThundering() ? worldIn.getNeighborAwareLightSubtracted(pos, 10) : worldIn.getLight(pos);
-            return i <= randomIn.nextInt(8);
-        }
-    }
-
+    
     @SubscribeEvent
     public static void onServerTick(TickEvent.ServerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;

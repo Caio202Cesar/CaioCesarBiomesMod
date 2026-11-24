@@ -34,7 +34,6 @@ public class ModWood {
     public static final RegistryObject<Block> BLACKWOOD_ACACIA_WOOD = registerBlock("blackwood_acacia_wood",
             ModLogs::new);
 
-
     ///BIRCH woodset
     //Crape Myrtle
     public static final RegistryObject<Block> CRAPE_MYRTLE_LOG = registerBlock("crape_myrtle_log",
@@ -61,6 +60,9 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> ROYAL_POINCIANA_WOOD = registerBlock("royal_poinciana_wood",
             ModLogs::new);
+
+    /// JUNGLE woodset
+
 
 
     ///Araucaria
