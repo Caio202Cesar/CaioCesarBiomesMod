@@ -1,11 +1,9 @@
 package com.caiocesarmods.caiocesarbiomes.Util;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
@@ -16,7 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = "caiocesarbiomes", bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class CinnamonBarkHandler {
+public class ItemGivingBarkHandler {
 
     @SubscribeEvent
     public static void onRightClickLog(PlayerInteractEvent.RightClickBlock event) {
@@ -81,6 +79,64 @@ public class CinnamonBarkHandler {
             world.setBlockState(
                     pos,
                     ModWood.STRIPPED_LAUREL_WOOD.get()
+                            .getDefaultState()
+            );
+
+
+            // Damage axe
+            if (!player.isCreative()) {
+                held.damageItem(1, player,
+                        p -> p.sendBreakAnimation(event.getHand()));
+            }
+        }
+
+        // Check fig log
+        if (state.getBlock() != ModWood.FIG_LOG.get())
+            return;
+
+        if (!world.isRemote) {
+
+            // Give ficus latex
+            Block.spawnAsEntity(
+                    world,
+                    pos,
+                    new ItemStack(ModItems.FICUS_LATEX.get())
+            );
+
+
+            // Replace with stripped log
+            world.setBlockState(
+                    pos,
+                    ModWood.STRIPPED_LIGHTWOOD_LOG.get()
+                            .getDefaultState()
+            );
+
+
+            // Damage axe
+            if (!player.isCreative()) {
+                held.damageItem(1, player,
+                        p -> p.sendBreakAnimation(event.getHand()));
+            }
+        }
+
+        // Check milkwood log
+        if (state.getBlock() != ModWood.MILKWOOD_LOG.get())
+            return;
+
+        if (!world.isRemote) {
+
+            // Give ficus latex
+            Block.spawnAsEntity(
+                    world,
+                    pos,
+                    new ItemStack(ModItems.POISON_SAP.get())
+            );
+
+
+            // Replace with stripped log
+            world.setBlockState(
+                    pos,
+                    ModWood.STRIPPED_LIGHTWOOD_LOG.get()
                             .getDefaultState()
             );
 

@@ -98,12 +98,14 @@ public class SycamoreFigFruitingBranches extends LeavesBlock implements IForgeSh
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 1;
+            ItemStack fruit = new ItemStack(ModItems.SYCAMORE_FIG.get());
+            ItemStack latex = new ItemStack(ModItems.FICUS_LATEX.get());
 
-            ItemStack itemStack = new ItemStack(ModItems.SYCAMORE_FIG.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+            ItemEntity fruitEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, fruit);
+            ItemEntity latexEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, latex);
 
-            worldIn.addEntity(itemEntity);
+            worldIn.addEntity(fruitEntity);
+            worldIn.addEntity(latexEntity);
 
             worldIn.setBlockState(pos, TreeBlocks.SYCAMORE_FIG_BRANCHES.get().getDefaultState());
 
