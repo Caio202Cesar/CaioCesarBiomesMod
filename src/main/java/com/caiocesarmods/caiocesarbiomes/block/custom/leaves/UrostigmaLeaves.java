@@ -40,7 +40,21 @@ public class UrostigmaLeaves extends LeavesBlock {
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
-        return heat == SummerHeat.WARM || heat == SummerHeat.MILD;
+        return heat == SummerHeat.VERY_HOT || heat == SummerHeat.HOT || heat == SummerHeat.MILD;
+    }
+
+    public static float getAerialRootGrowChance(Biome biome, BlockPos pos, World world) {
+        float downfall = biome.getDownfall();
+        float minDownfall = 0.7f;
+        float maxDownfall = 1.0f;
+
+        float aerialRootGrowthChance;
+
+        if (downfall < minDownfall) {
+            aerialRootGrowthChance = 0.0F;
+        } else {
+            float normalized = (minDownfall + downfall) /
+        }
     }
 
     @Override
@@ -49,15 +63,15 @@ public class UrostigmaLeaves extends LeavesBlock {
         BlockPos down = pos.down();
         Biome biome = world.getBiome(pos);
 
-        float downfall = biome.getDownfall();
-        float minDownfall = 0.7f;
-        float maxDownfall = 1.0f;
+
 
         float temperature = biome.getTemperature(pos);
         float minTemperature = 0.8f;
 
+        boolean isSummerSuitable = isSummerAllowed(world, pos);
+
         //Only in subtropical/tropical and wet climates
-        if (world.isAirBlock(down) && temperature > minTemperature) {
+        if (world.isAirBlock(down) && temperature > minTemperature && isSummerSuitable) {
             if (downfall random.nextInt(20) == 0) {
 
                 BlockPos belowPos = pos.down();
