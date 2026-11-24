@@ -706,6 +706,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
     public static final RegistryObject<Item> FICUS_LATEX = ITEMS.register("ficus_latex",
             () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP)));
+    public static final RegistryObject<Item> STICKY_LATEX = ITEMS.register("sticky_latex",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CCB_GROUP))); //Sharinga, euphorbias
 
     //Combat
     public static final RegistryObject<Item> POISONED_SWORD_WOOD = ITEMS.register("wood_poisoned_sword",

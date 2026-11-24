@@ -2,8 +2,10 @@
   "replace": false,
   "values": [
     "caiocesarbiomes:poison_sap",
-    "caiocesarbiomes:ficus_latex"
-    ],
+    "caiocesarbiomes:ficus_latex",
+    "caiocesarbiomes:sticky_latex"
+
+  ],
     "optional": [
 
     ]
