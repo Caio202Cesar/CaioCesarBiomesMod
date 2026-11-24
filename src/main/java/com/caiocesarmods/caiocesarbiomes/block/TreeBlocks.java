@@ -7,6 +7,8 @@ import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.PohutukawaBeardBlock
 import com.caiocesarmods.caiocesarbiomes.block.custom.Vines.SocotraCucumberLeavesVineBlock;
 import com.caiocesarmods.caiocesarbiomes.block.custom.fruiting.*;
 import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.*;
+import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.OleanderDiebackLeaves;
+import com.caiocesarmods.caiocesarbiomes.block.custom.leaves.OleanderLeaves;
 import com.caiocesarmods.caiocesarbiomes.block.custom.logs.BananaLog;
 import com.caiocesarmods.caiocesarbiomes.block.custom.plants.BaldCypressAerialRoot;
 import com.caiocesarmods.caiocesarbiomes.item.ModItemGroup;
