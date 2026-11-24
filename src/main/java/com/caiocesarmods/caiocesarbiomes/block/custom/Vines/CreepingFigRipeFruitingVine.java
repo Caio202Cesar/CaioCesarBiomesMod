@@ -105,11 +105,14 @@ public class CreepingFigRipeFruitingVine extends VineBlock implements IForgeShea
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack fruit = new ItemStack(ModItems.RIPE_CREEPING_FIG.get() && ModItems.FICUS_LATEX.get());
+            ItemStack fruit = new ItemStack(ModItems.RIPE_CREEPING_FIG.get());
+            ItemStack latex = new ItemStack(ModItems.FICUS_LATEX.get());
 
             ItemEntity fruitEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, fruit);
+            ItemEntity latexEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, latex);
 
             worldIn.addEntity(fruitEntity);
+            worldIn.addEntity(latexEntity);
 
             BlockState newState = ModPlants.CREEPING_FIG_VINE.get().getDefaultState();
 
