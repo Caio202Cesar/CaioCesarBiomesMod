@@ -36,63 +36,36 @@ public class UrostigmaLeaves extends LeavesBlock {
         Biome biome = world.getBiome(pos);
         DroughtPattern pattern = DroughtPatternRegistry.get(biome);
         return pattern == DroughtPattern.SEMI_ARID || pattern == DroughtPattern.ARID;
-    }*/
+    }
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
         SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.VERY_HOT || heat == SummerHeat.HOT || heat == SummerHeat.MILD;
-    }
+    }*/
 
-    public static float getAerialRootGrowChance(Biome biome, BlockPos pos, World world) {
-        float downfall = biome.getDownfall();
-        float minDownfall = 0.7f;
-        float maxDownfall = 1.0f;
-
-        float aerialRootGrowthChance;
-
-        if (downfall < minDownfall) {
-            aerialRootGrowthChance = 0.0F;
-        } else {
-            float normalized = (minDownfall + downfall) /
-        }
-    }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-
         BlockPos down = pos.down();
         Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+        float downfall = biome.getDownfall();
+        DroughtPattern droughtPattern = DroughtPatternRegistry.get(biome);
 
+        //Only in tropical/subtropical and wet climates
+        if (world.isAirBlock(down) && temp > 0.8F && downfall > 0.7F && random.nextFloat() < 0.001F) {
+            //1% chance to grow
+            world.setBlockState(down, this.getDefaultState(), 2);
 
+        }
 
-        float temperature = biome.getTemperature(pos);
-        float minTemperature = 0.8f;
+        if (random.nextFloat() < 0.78f) {
+            BlockPos belowPos = pos.down();
+            BlockState belowState = world.getBlockState(belowPos);
 
-        boolean isSummerSuitable = isSummerAllowed(world, pos);
-
-        //Only in subtropical/tropical and wet climates
-        if (world.isAirBlock(down) && temperature > minTemperature && isSummerSuitable) {
-            if (downfall random.nextInt(20) == 0) {
-
-                BlockPos belowPos = pos.down();
-                BlockState belowState = world.getBlockState(belowPos);
-
-                // Check if the space below is air
-                if (belowState.isAir()) {
-                    world.setBlockState(belowPos, TreeBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
-                }
-            }
-
-            if (biome.getPrecipitation() == Biome.RainType.NONE && !isDroughtUnsuitable(world, pos)
-                    && random.nextFloat() < 0.38F) {
-
-                BlockPos belowPos = pos.down();
-                BlockState belowState = world.getBlockState(belowPos);
-
-                // Check if the space below is air
-                if (belowState.isAir()) {
-                    world.setBlockState(belowPos, TreeBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
-                }
+            // Check if the space below is air
+            if (belowState.isAir()) {
+                world.setBlockState(belowPos, TreeBlocks.FICUS_ROOTS_PLANT.get().getDefaultState(), 2);
             }
         }
     }

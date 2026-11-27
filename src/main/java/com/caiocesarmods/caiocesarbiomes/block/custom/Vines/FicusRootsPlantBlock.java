@@ -2,6 +2,8 @@ package com.caiocesarmods.caiocesarbiomes.block.custom.Vines;
 
 import com.caiocesarmods.caiocesarbiomes.block.ModPlants;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPattern;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPatternRegistry;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,6 +18,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class FicusRootsPlantBlock extends Block implements IGrowable {
@@ -28,15 +31,14 @@ public class FicusRootsPlantBlock extends Block implements IGrowable {
         BlockPos down = pos.down();
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
+        float downfall = biome.getDownfall();
+        DroughtPattern droughtPattern = DroughtPatternRegistry.get(biome);
 
-        //Only in tropical and wet climates
-        if (world.isAirBlock(down) && temp >= 0.9F && biome.getPrecipitation() == Biome.RainType.RAIN
-                && random.nextFloat() < 0.001F) { //1% chance to grow
+        //Only in tropical/subtropical and wet climates
+        if (world.isAirBlock(down) && temp > 0.8F && downfall > 0.7F && random.nextFloat() < 0.001F) {
+            //1% chance to grow
             world.setBlockState(down, this.getDefaultState(), 2);
-        }
 
-        if (temp <= 0.89F || biome.getPrecipitation() == Biome.RainType.NONE) {
-            world.destroyBlock(pos, false); // no drop
         }
 
         if (random.nextFloat() < 0.78f) {
