@@ -1,7 +1,10 @@
 {
-  "variants": {
-    "": {
-      "model": "caiocesarbiomes:block/plumeria_branches"
-    }
+  "variants":{
+    "":[
+      {"model": "caiocesarbiomes:block/plumeria_red_branches",
+        "weight": 5},
+      {"model": "caiocesarbiomes:block/plumeria_branches",
+        "weight": 3}
+    ]
   }
 }
