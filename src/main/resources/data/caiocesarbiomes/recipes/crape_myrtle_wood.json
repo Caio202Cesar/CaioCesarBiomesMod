@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caiocesarbiomes:crape_myrtle_log"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:crape_myrtle_wood",
+    "count": 3
+  }
+}
