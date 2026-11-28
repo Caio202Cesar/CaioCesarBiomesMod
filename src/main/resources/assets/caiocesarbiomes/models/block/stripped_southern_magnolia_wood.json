@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "caiocesarbiomes:block/stripped_parana_southern_magnolia_log",
-    "side": "caiocesarbiomes:block/stripped_parana_southern_magnolia_log"
+    "end": "caiocesarbiomes:block/stripped_southern_magnolia_log",
+    "side": "caiocesarbiomes:block/stripped_southern_magnolia_log"
   }
 }
