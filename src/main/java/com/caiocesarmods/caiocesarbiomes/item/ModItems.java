@@ -197,8 +197,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS)));
     public static final RegistryObject<Item> CALIFORNIA_LAUREL_NUT = ITEMS.register("california_laurel_nut",
             () -> new Item(new Item.Properties().group(ModItemGroup.CROPS)));
-    public static final RegistryObject<Item> CALIFORNIA_LAUREL_ROASTED_NUT = ITEMS.register("california_laurel_roasted_nut",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.CALIFORNIA_LAUREL_NUT)));
+
 
     //Culinary
     public static final RegistryObject<Item> SALTED_GREEN_MANGO = ITEMS.register("salted_green_mango",
@@ -438,7 +437,7 @@ public class ModItems {
     public static final RegistryObject<Item> CANDIED_CITRON = ITEMS.register("candied_citron",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CANDIED_CITRON)));
     public static final RegistryObject<Item> ROASTED_ALMOND = ITEMS.register("roasted_almond",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CROPS).food(ModFoods.ROASTED_ALMOND)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.ROASTED_ALMOND)));
     public static final RegistryObject<Item> MACARONS = ITEMS.register("macarons",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.MACARONS)));
     public static final RegistryObject<Item> SPICED_SALMON = ITEMS.register("spiced_salmon",
@@ -690,6 +689,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
     public static final RegistryObject<Item> POWDER_CINNAMON = ITEMS.register("powder_cinnamon",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY)));
+    public static final RegistryObject<Item> CALIFORNIA_LAUREL_ROASTED_NUT = ITEMS.register("california_laurel_roasted_nut",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULINARY).food(ModFoods.CALIFORNIA_LAUREL_NUT)));
 
     //MISC
     public static final RegistryObject<Item> DRAGON_BLOOD_RESIN = ITEMS.register("dragon_blood_resin",
