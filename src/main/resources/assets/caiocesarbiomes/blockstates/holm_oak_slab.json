@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caiocesarbiomes:block/holm_oak_slab"
+    },
+    "type=double": {
+      "model": "caiocesarbiomes:block/holm_oak_planks"
+    },
+    "type=top": {
+      "model": "caiocesarbiomes:block/holm_oak_slab_top"
+    }
+  }
+}

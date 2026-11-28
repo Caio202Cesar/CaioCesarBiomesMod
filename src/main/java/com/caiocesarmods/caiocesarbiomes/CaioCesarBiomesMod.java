@@ -284,6 +284,9 @@ public class CaioCesarBiomesMod
                     .put(ModWood.ARAUCARIA_LOG.get(), ModWood.STRIPPED_ARAUCARIA_LOG.get())
                     .put(ModWood.ARAUCARIA_WOOD.get(), ModWood.STRIPPED_ARAUCARIA_WOOD.get())
 
+                    .put(ModWood.HOLM_OAK_LOG.get(), ModWood.STRIPPED_HOLM_OAK_LOG.get())
+                    .put(ModWood.HOLM_OAK_WOOD.get(), ModWood.STRIPPED_HOLM_OAK_WOOD.get())
+
                     .put(ModWood.MESQUITE_LOG.get(), ModWood.STRIPPED_MESQUITE_LOG.get())
                     .put(ModWood.MESQUITE_WOOD.get(), ModWood.STRIPPED_MESQUITE_WOOD.get())
 
