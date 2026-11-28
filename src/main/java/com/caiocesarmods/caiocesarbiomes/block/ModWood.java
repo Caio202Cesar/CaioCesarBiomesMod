@@ -102,6 +102,19 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> HOLM_OAK_PLANKS = registerBlock("holm_oak_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> HOLM_OAK_SLAB = registerBlock("holm_oak_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> HOLM_OAK_STAIRS = registerBlock("holm_oak_stairs",
+            () -> new StairsBlock(() -> HOLM_OAK_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> HOLM_OAK_FENCE = registerBlock("holm_oak_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> HOLM_OAK_FENCE_GATE = registerBlock("holm_oak_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     //Cork Oak
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
@@ -673,6 +686,7 @@ public class ModWood {
             ModLogs::new);
     public static final RegistryObject<Block> LIVE_OAK_PLANKS = registerBlock("lie_oak_planks",
             ModPlanks::new);
+
 
     public static final RegistryObject<Block> COAST_LIVE_OAK_LOG = registerBlock("coast_live_oak_log",
             ModLogs::new);
