@@ -247,13 +247,21 @@
   "block.caiocesarbiomes.monkey_puzzle_sapling": "Monkey Puzzle Sapling",
 
   "block.caiocesarbiomes.mulberry_log": "Mulberry Log",
-
+  "block.caiocesarbiomes.stripped_mulberry_log": "Stripped Mulberry Log",
+  "block.caiocesarbiomes.mulberry_wood": "Mulberry Wood",
+  "block.caiocesarbiomes.stripped_mulberry_wood": "Stripped Mulberry Wood",
+  "block.caiocesarbiomes.mulberry_planks": "Mulberry Planks",
+  "block.caiocesarbiomes.mulberry_slab": "Mulberry Slab",
+  "block.caiocesarbiomes.mulberry_stairs": "Mulberry Stairs",
+  "block.caiocesarbiomes.mulberry_fence": "Mulberry Fence",
+  "block.caiocesarbiomes.mulberry_fence_gate": "Mulberry Fence Gate",
   "block.caiocesarbiomes.mulberry_leaves": "Mulberry Leaves",
   "block.caiocesarbiomes.mulberry_fruiting_leaves": "Mulberry Fruiting Leaves",
   "block.caiocesarbiomes.mulberry_sapling": "Mulberry Sapling",
-  "block.caiocesarbiomes.mulberry_planks": "Mulberry Planks",
+
   "block.caiocesarbiomes.nothofagus_log": "Nothofagus Log",
   "block.caiocesarbiomes.nothofagus_planks": "Nothofagus Planks",
+
   "block.caiocesarbiomes.ocotea_forest_sapling": "Ocotea Sapling",
   "block.caiocesarbiomes.ocotea_leaves": "Ocotea Leaves",
   "block.caiocesarbiomes.oleander_dark_pink_leaves": "Dark Pink Oleander Leaves",
