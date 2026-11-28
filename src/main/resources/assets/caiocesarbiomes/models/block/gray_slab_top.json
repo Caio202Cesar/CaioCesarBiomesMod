@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "caiocesarbiomes:block/gray_planks",
+    "top": "caiocesarbiomes:block/gray_planks",
+    "side": "caiocesarbiomes:block/gray_planks"
+  }
+}

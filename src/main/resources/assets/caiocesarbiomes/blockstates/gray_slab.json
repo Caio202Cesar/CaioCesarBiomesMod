@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": ":block/gray_slab"
+    },
+    "type=double": {
+      "model": ":block/gray_planks"
+    },
+    "type=top": {
+      "model": ":block/gray_slab_top"
+    }
+  }
+}
